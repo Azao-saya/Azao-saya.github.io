@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_ezdnzsotqc.css">
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1569778274439">
+  <link rel="stylesheet" href="/css/style.css?v=1569807372866">
    <!-- 爆炸红心效果 -->
 
  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
@@ -58,7 +58,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>2</div>
+        <div><span>文章</span>3</div>
         <div><span>标签</span>0</div>
         <div><span>分类</span>2</div>
     </div>
@@ -115,7 +115,7 @@
 
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/PAT练习/">PAT练习</a>
-          <span class="category-list-count">1</span>
+          <span class="category-list-count">2</span>
         </li>
 
         
@@ -158,6 +158,89 @@
         <section class="nexmoe-posts" id="brand-waterfall">
     
     <div class="nexmoe-post">
+        <a href="/2019/09/30/1002-NowCoder数列/">
+            <div class="nexmoe-post-cover mdui-ripple"> 
+                
+                    <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg" alt="1002-NowCoder数列">
+                
+                <h1>1002-NowCoder数列</h1>
+            </div>
+        </a>
+        <div class="nexmoe-post-meta">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2019年09月30日</a>
+            <a><i class="nexmoefont icon-areachart"></i>327 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
+            
+                <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
+            
+            
+        </div>
+        <article>
+            
+            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
+<p>NowCoder最近在研究一个数列：<br></p>
+<ul>
+<li>F(0) = 7<br></li>
+<li>F(1) = 11<br></li>
+<li>F(n) = F(n-1) + F(n-2) (n≥2)<br><br>他称之为NowCoder数列。请你帮忙确认一下数列中第n个数是否是3的倍数。<br></li>
+</ul>
+</blockquote>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
+<p>输入包含多组数据。<br><br>每组数据包含一个整数n，(0≤n≤1000000)。<br></p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><p>对应每一组输入有一行输出。<br><br>如果F(n)是3的倍数，则输出“Yes”；否则输出“No”。<br></p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><blockquote>
+<p>0<br><br>1<br><br>2<br><br>3<br><br>4<br><br>5<br></p>
+</blockquote>
+<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><blockquote>
+<p>No<br><br>No<br><br>Yes<br><br>No<br><br>No<br><br>No<br></p>
+</blockquote>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
+<ul>
+<li>F(n) = F(n-1) + F(n-2) (n≥2)</li>
+<li>F(0) = 7  &#8195;&#8195;&#8195;&#8195;&#8195;&#8195;余1</li>
+<li>F(1) = 11 &#8195;&#8195;&#8195;&#8195;&#8195;&ensp;余2</li>
+<li>F(2) = F(1)+F(0) = 18 余0</li>
+<li>F(3) = 29 &#8195;&#8195;&#8195;&#8195;&#8195;&ensp;余2</li>
+<li>F(4) = 47 &#8195;&#8195;&#8195;&#8195;&#8195;&ensp;余2</li>
+<li>F(5) = 76 &#8195;&#8195;&#8195;&#8195;&#8195;&ensp;余1</li>
+<li>F(6) = 123 &#8195;&#8195;&#8195;&#8195;&ensp;&ensp;余0</li>
+<li>F(7) = 199 &#8195;&#8195;&#8195;&#8195;&ensp;&ensp;余1</li>
+<li>F(8) = 322 &#8195;&#8195;&#8195;&#8195;&ensp;&ensp;余1</li>
+<li>F(9) = 521 &#8195;&#8195;&#8195;&#8195;&ensp;&ensp;余2</li>
+<li>F(10)= 843&#8195;&#8195;&#8195;&#8195;&ensp;&ensp;余0<br>&#8195;<br></li>
+<li>凑就完事了嗷 n =2,6,10,14….能被3整除</li>
+<li>即 n % 4 ==2 时</li>
+<li>然而这题是难在java使用超时，加了一条略过0,1判断使我勉强在6000ms的时间内，最后的用时是5787ms。<br>&#8195;</li>
+</ul>
+</blockquote>
+<hr>
+<hr>
+<pre><code>import java.io.BufferedInputStream;
+import java.util.Scanner;
+
+public class second_1002 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(new BufferedInputStream(System.in));
+        while(sc.hasNext()){
+            int input = sc.nextInt();
+            if( input == 0 || input == 1){
+                System.out.println(&quot;No&quot;);
+            }else{
+                if (input % 4 == 2){
+                    System.out.println(&quot;Yes&quot;);
+                }else {
+                    System.out.println(&quot;No&quot;);
+                }
+            }
+        }
+    }
+}</code></pre>
+            
+        </article>
+    </div>
+    
+    <div class="nexmoe-post">
         <a href="/2019/09/30/1001-采花生/">
             <div class="nexmoe-post-cover mdui-ripple"> 
                 
@@ -197,7 +280,9 @@
 <h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
 <p>37</p>
 </blockquote>
-<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><p>我傻了<br><br>&#8195;</p>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
+<li>我傻了<br><br>&#8195;</li>
+</ul>
 <hr>
 <hr>
 <br>
@@ -328,7 +413,7 @@ class Node {
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1569778274445"></script>
+<script src="/js/app.js?v=1569807372872"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
