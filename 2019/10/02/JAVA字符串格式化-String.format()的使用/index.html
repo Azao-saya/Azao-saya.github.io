@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  
+  <title>JAVA字符串格式化-String.format()的使用 - 正在建设的小窝</title>
+  <meta charset="UTF-8">
+  <meta name="description" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+
+  <link rel="shortcut icon" href="https://i.loli.net/2019/09/30/VRahYDQ5gXNKzoj.jpg" type="image/jpg">
+  <meta name="description" content="常规类型的格式化 String类的format()方法用于创建格式化的字符串以及连接多个字符串对象。熟悉C语言的同学应该记得C语言的sprintf()方法，两者有类似之处。format()方法有两种重载形式。format(String format, Object… args) 新字符串使用本地语言环境，制定字符串格式和参数生成格式化的新字符串。format(Locale locale, Stri">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JAVA字符串格式化-String.format()的使用">
+<meta property="og:url" content="http://yoursite.com/2019/10/02/JAVA字符串格式化-String.format()的使用/index.html">
+<meta property="og:site_name" content="正在建设的小窝">
+<meta property="og:description" content="常规类型的格式化 String类的format()方法用于创建格式化的字符串以及连接多个字符串对象。熟悉C语言的同学应该记得C语言的sprintf()方法，两者有类似之处。format()方法有两种重载形式。format(String format, Object… args) 新字符串使用本地语言环境，制定字符串格式和参数生成格式化的新字符串。format(Locale locale, Stri">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-02T14:56:28.999Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JAVA字符串格式化-String.format()的使用">
+<meta name="twitter:description" content="常规类型的格式化 String类的format()方法用于创建格式化的字符串以及连接多个字符串对象。熟悉C语言的同学应该记得C语言的sprintf()方法，两者有类似之处。format()方法有两种重载形式。format(String format, Object… args) 新字符串使用本地语言环境，制定字符串格式和参数生成格式化的新字符串。format(Locale locale, Stri">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_ezdnzsotqc.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
+  <link rel="stylesheet" href="/css/style.css?v=1570028204245">
+   <!-- 爆炸红心效果 -->
+
+ <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
+ 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+ 
+<script type="text/javascript" src="/js/firework.js"></script>
+</head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://i.loli.net/2019/01/13/5c3aec85a4343.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="A_zao" class="mdui-btn mdui-btn-icon"><img src="https://i.loli.net/2019/09/30/57LtVReQg2ANsaX.jpg"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="A_zao">
+            <img src="https://i.loli.net/2019/09/30/57LtVReQg2ANsaX.jpg" alt="A_zao">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>12</div>
+        <div><span>标签</span>0</div>
+        <div><span>分类</span>3</div>
+    </div>
+    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </ul>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">社交按钮</h3>
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/20238211" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/nexmoe/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/PAT练习/">PAT练习</a>
+          <span class="category-list-count">5</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/小工具/">小工具</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/生活感悟/">生活感悟</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+  
+  
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2019 A_zao
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    <div class="nexmoe-post-cover"> 
+        
+            <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg">
+        
+        <h1>JAVA字符串格式化-String.format()的使用</h1>
+    </div>
+  <div class="nexmoe-post-meta">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年10月02日</a>
+    <a><i class="nexmoefont icon-areachart"></i>798 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
+    
+      <a class="nexmoefont icon-appstore-fill -link" href="/categories/小工具/">小工具</a>
+    
+    
+  </div>
+  <article>
+    <h1 id="常规类型的格式化"><a href="#常规类型的格式化" class="headerlink" title="常规类型的格式化"></a>常规类型的格式化</h1><blockquote>
+<p>String类的format()方法用于创建格式化的字符串以及连接多个字符串对象。熟悉C语言的同学应该记得C语言的sprintf()方法，两者有类似之处。format()方法有两种重载形式。<br><br>format(String format, Object… args) 新字符串使用本地语言环境，制定字符串格式和参数生成格式化的新字符串。<br><br>format(Locale locale, String format, Object… args) 使用指定的语言环境，制定字符串格式和参数生成格式化的字符串。<br><br>显示不同转换符实现不同数据类型到字符串的转换，如图所示<br></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>转换符</strong></th>
+<th align="center"><strong>说明</strong></th>
+<th align="center"><strong>示例</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">%s</td>
+<td align="center">字符串类型</td>
+<td align="center">“mingrisoft”</td>
+</tr>
+<tr>
+<td align="center">%c</td>
+<td align="center">字符类型</td>
+<td align="center">‘m’</td>
+</tr>
+<tr>
+<td align="center">%b</td>
+<td align="center">布尔类型</td>
+<td align="center">true</td>
+</tr>
+<tr>
+<td align="center">%d</td>
+<td align="center">整数类型（十进制）</td>
+<td align="center">99</td>
+</tr>
+<tr>
+<td align="center">%x</td>
+<td align="center">整数类型（十六进制）</td>
+<td align="center">FF</td>
+</tr>
+<tr>
+<td align="center">%o</td>
+<td align="center">整数类型（八进制）</td>
+<td align="center">77</td>
+</tr>
+<tr>
+<td align="center">%f</td>
+<td align="center">浮点类型</td>
+<td align="center">99.99</td>
+</tr>
+<tr>
+<td align="center">%a</td>
+<td align="center">十六进制浮点类型</td>
+<td align="center">FF.35AE</td>
+</tr>
+<tr>
+<td align="center">%e</td>
+<td align="center">指数类型</td>
+<td align="center">9.38e+5</td>
+</tr>
+<tr>
+<td align="center">%g</td>
+<td align="center">通用浮点类型（f和e类型中较短的）</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">%h</td>
+<td align="center">散列码</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">%%</td>
+<td align="center">百分比类型</td>
+<td align="center">％</td>
+</tr>
+<tr>
+<td align="center">%n</td>
+<td align="center">换行符</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">%tx</td>
+<td align="center">日期与时间类型（x代表不同的日期与时间转换符</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h2 id="输入内容"><a href="#输入内容" class="headerlink" title="输入内容"></a>输入内容</h2><pre><code>public static void main(String[] args) {  
+    String str=null;  
+    str=String.format(&quot;Hi,%s&quot;, &quot;王力&quot;);  
+    System.out.println(str);  
+    str=String.format(&quot;Hi,%s:%s.%s&quot;, &quot;王南&quot;,&quot;王力&quot;,&quot;王张&quot;);            
+    System.out.println(str);                           
+    System.out.printf(&quot;字母a的大写是：%c %n&quot;, &#39;A&#39;);  
+    System.out.printf(&quot;3&gt;7的结果是：%b %n&quot;, 3&gt;7);  
+    System.out.printf(&quot;100的一半是：%d %n&quot;, 100/2);  
+    System.out.printf(&quot;100的16进制数是：%x %n&quot;, 100);  
+    System.out.printf(&quot;100的8进制数是：%o %n&quot;, 100);  
+    System.out.printf(&quot;50元的书打8.5折扣是：%f 元%n&quot;, 50*0.85);  
+    System.out.printf(&quot;上面价格的16进制数是：%a %n&quot;, 50*0.85);  
+    System.out.printf(&quot;上面价格的指数表示：%e %n&quot;, 50*0.85);  
+    System.out.printf(&quot;上面价格的指数和浮点数结果的长度较短的是：%g %n&quot;, 50*0.85);  
+    System.out.printf(&quot;上面的折扣是%d%% %n&quot;, 85);  
+    System.out.printf(&quot;字母A的散列码是：%h %n&quot;, &#39;A&#39;);  
+}</code></pre><h2 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h2><pre><code>Hi,王力  
+Hi,王南:王力.王张  
+字母a的大写是：A   
+3&gt;7的结果是：false   
+100的一半是：50   
+100的16进制数是：64   
+100的8进制数是：144   
+50元的书打8.5折扣是：42.500000 元  
+上面价格的16进制数是：0x1.54p5   
+上面价格的指数表示：4.250000e+01   
+上面价格的指数和浮点数结果的长度较短的是：42.5000   
+上面的折扣是85%   
+字母A的散列码是：41</code></pre><h1 id="搭配转换符的标志"><a href="#搭配转换符的标志" class="headerlink" title="搭配转换符的标志"></a>搭配转换符的标志</h1><h1 id="日期和事件字符串格式化"><a href="#日期和事件字符串格式化" class="headerlink" title="日期和事件字符串格式化"></a>日期和事件字符串格式化</h1><blockquote>
+<p>在程序界面中经常需要显示时间和日期，但是其显示的 格式经常不尽人意，需要编写大量的代码经过各种算法才得到理想的日期与时间格式。字符串格式中还有%tx转换符没有详细介绍，它是专门用来格式化日期和时 间的。%tx转换符中的x代表另外的处理日期和时间格式的转换符，它们的组合能够将日期和时间格式化成多种格式。<br>常见日期和时间组合的格式，如图所示。</p>
+</blockquote>
+
+  </article>
+  
+    
+<div class="nexmoe-post-copyright">
+<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+<strong>本文作者：</strong>A_zao<br>
+<strong>本文链接：</strong><a href="http://yoursite.com/2019/10/02/JAVA字符串格式化-String.format()的使用/" title="http://yoursite.com/2019/10/02/JAVA字符串格式化-String.format()的使用/" target="_blank" rel="noopener">http://yoursite.com/2019/10/02/JAVA字符串格式化-String.format()的使用/</a><br>
+
+  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+</div>
+
+
+  
+  <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'nexmoe.github.io',
+        owner: 'nexmoe',
+        admin: 'nexmoe'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+ 
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-for-websites@1.4.9/SmoothScroll.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="/js/app.js?v=1570028204257"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+
+  
+
+
+
+
+
+</body>
+
+</html>

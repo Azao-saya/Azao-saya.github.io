@@ -3,7 +3,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
   
-  <title>1004-客似云来 - 正在建设的小窝</title>
+  <title>1008-童年生活二三事 - 正在建设的小窝</title>
   <meta charset="UTF-8">
   <meta name="description" content>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -11,17 +11,20 @@
   
 
   <link rel="shortcut icon" href="https://i.loli.net/2019/09/30/VRahYDQ5gXNKzoj.jpg" type="image/jpg">
-  <meta name="description" content="题目描述 NowCoder开了一家早餐店，这家店的客人都有个奇怪的癖好：他们只要来这家店吃过一次早餐，就会每天都过来；并且，所有人在这家店吃了两天早餐后，接下来每天都会带一位新朋友一起来品尝。于是，这家店的客人从最初一个人发展成浩浩荡荡成百上千人：1、1、2、3、5……现在，NowCoder想请你帮忙统计一下，某一段时间范围那他总共卖出多少份早餐（假设每位客人只吃一份早餐）。  输入描述: 测试数">
+  <meta name="description" content="题目描述 nowcoder利用业余时间养了一窝蜜蜂，因为空间比较小，蜂房只有两排，如下图所示：如你所见，蜜蜂的蜂房是正六边形，假设蜜蜂只会从左往右爬，即从1号蜂房能爬到2号和3号；从6号蜂房能爬到7号和8号……现给出两个蜂房的编号a和b，要求计算蜂房a的蜜蜂爬到蜂房b有几条不同路线。  输入描述:  输入的第一行是一个整数n 接下来n行数据，每行一组测试用例 每组测试用例包含两个正整数a和b，(0">
 <meta property="og:type" content="article">
-<meta property="og:title" content="1004-客似云来">
-<meta property="og:url" content="http://yoursite.com/2019/09/30/1004-客似云来/index.html">
+<meta property="og:title" content="1008-童年生活二三事">
+<meta property="og:url" content="http://yoursite.com/2019/10/02/1009-蜜蜂寻路/index.html">
 <meta property="og:site_name" content="正在建设的小窝">
-<meta property="og:description" content="题目描述 NowCoder开了一家早餐店，这家店的客人都有个奇怪的癖好：他们只要来这家店吃过一次早餐，就会每天都过来；并且，所有人在这家店吃了两天早餐后，接下来每天都会带一位新朋友一起来品尝。于是，这家店的客人从最初一个人发展成浩浩荡荡成百上千人：1、1、2、3、5……现在，NowCoder想请你帮忙统计一下，某一段时间范围那他总共卖出多少份早餐（假设每位客人只吃一份早餐）。  输入描述: 测试数">
+<meta property="og:description" content="题目描述 nowcoder利用业余时间养了一窝蜜蜂，因为空间比较小，蜂房只有两排，如下图所示：如你所见，蜜蜂的蜂房是正六边形，假设蜜蜂只会从左往右爬，即从1号蜂房能爬到2号和3号；从6号蜂房能爬到7号和8号……现给出两个蜂房的编号a和b，要求计算蜂房a的蜜蜂爬到蜂房b有几条不同路线。  输入描述:  输入的第一行是一个整数n 接下来n行数据，每行一组测试用例 每组测试用例包含两个正整数a和b，(0">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-30T09:43:54.591Z">
+<meta property="og:image" content="https://i.loli.net/2019/10/02/Siw31H65TWM7sne.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/10/02/N7BrKhXTJMs8mQp.png">
+<meta property="og:updated_time" content="2019-10-02T14:52:43.124Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="1004-客似云来">
-<meta name="twitter:description" content="题目描述 NowCoder开了一家早餐店，这家店的客人都有个奇怪的癖好：他们只要来这家店吃过一次早餐，就会每天都过来；并且，所有人在这家店吃了两天早餐后，接下来每天都会带一位新朋友一起来品尝。于是，这家店的客人从最初一个人发展成浩浩荡荡成百上千人：1、1、2、3、5……现在，NowCoder想请你帮忙统计一下，某一段时间范围那他总共卖出多少份早餐（假设每位客人只吃一份早餐）。  输入描述: 测试数">
+<meta name="twitter:title" content="1008-童年生活二三事">
+<meta name="twitter:description" content="题目描述 nowcoder利用业余时间养了一窝蜜蜂，因为空间比较小，蜂房只有两排，如下图所示：如你所见，蜜蜂的蜂房是正六边形，假设蜜蜂只会从左往右爬，即从1号蜂房能爬到2号和3号；从6号蜂房能爬到7号和8号……现给出两个蜂房的编号a和b，要求计算蜂房a的蜜蜂爬到蜂房b有几条不同路线。  输入描述:  输入的第一行是一个整数n 接下来n行数据，每行一组测试用例 每组测试用例包含两个正整数a和b，(0">
+<meta name="twitter:image" content="https://i.loli.net/2019/10/02/Siw31H65TWM7sne.jpg">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
    
@@ -31,7 +34,7 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_ezdnzsotqc.css">
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1570028204275">
+  <link rel="stylesheet" href="/css/style.css?v=1570028204261">
    <!-- 爆炸红心效果 -->
 
  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
@@ -171,12 +174,12 @@
         
             <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg">
         
-        <h1>1004-客似云来</h1>
+        <h1>1008-童年生活二三事</h1>
     </div>
   <div class="nexmoe-post-meta">
-    <a><i class="nexmoefont icon-calendar-fill"></i>2019年09月30日</a>
-    <a><i class="nexmoefont icon-areachart"></i>436 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年10月02日</a>
+    <a><i class="nexmoefont icon-areachart"></i>313 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
     
       <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
     
@@ -184,50 +187,47 @@
   </div>
   <article>
     <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>NowCoder开了一家早餐店，这家店的客人都有个奇怪的癖好：他们只要来这家店吃过一次早餐，就会每天都过来；并且，所有人在这家店吃了两天早餐后，接下来每天都会带一位新朋友一起来品尝。<br>于是，这家店的客人从最初一个人发展成浩浩荡荡成百上千人：1、1、2、3、5……<br>现在，NowCoder想请你帮忙统计一下，某一段时间范围那他总共卖出多少份早餐（假设每位客人只吃一份早餐）。</p>
+<p>nowcoder利用业余时间养了一窝蜜蜂，因为空间比较小，蜂房只有两排，如下图所示：<br><img src="https://i.loli.net/2019/10/02/Siw31H65TWM7sne.jpg" alt="路线" title="路线"><br><br>如你所见，蜜蜂的蜂房是正六边形，假设蜜蜂只会从左往右爬，即从1号蜂房能爬到2号和3号；从6号蜂房能爬到7号和8号……<br><br>现给出两个蜂房的编号a和b，要求计算蜂房a的蜜蜂爬到蜂房b有几条不同路线。</p>
 </blockquote>
 <h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
-<p>测试数据包括多组。<br><br>每组数据包含两个整数from和to(1≤from≤to≤80)，分别代表开店的第from天和第to天。</p>
+<ol>
+<li>输入的第一行是一个整数n</li>
+<li>接下来n行数据，每行一组测试用例</li>
+<li>每组测试用例包含两个正整数a和b，(0 &lt; a &lt; b &lt; 2^31)</li>
+</ol>
 </blockquote>
 <h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>对应每一组输入，输出从from到to这些天里（包含from和to两天），需要做多少份早餐。</p>
+<p>每组用例的结果单独输出一行。输出数据结果范围是 [0, 2^63)。</p>
 </blockquote>
-<h2 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h2><blockquote>
-<p>1 &ensp;10<br><br>2 &#8195;8<br><br>36 80<br></p>
-</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><p>3<br><br>1 2<br><br>3 6<br><br>99 100<br></p>
+<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><p>1<br><br>3<br><br>1</p>
 <h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
 <ul>
-<li>牛客网也太喜欢斐波那契数列了吧</li>
-<li>虽然感觉能轻松拿下，但实际还是留了一下坑，我也想了一段时间。</li>
-<li>因为斐波那契数列从第三项才能使用公式F(2)=1, F(n)=F(n-1)+F(n-2)</li>
-<li>结果也看到在循环外给第一项，第二项赋值就行了</li>
+<li>又双叒来了</li>
+<li><img src="https://i.loli.net/2019/10/02/N7BrKhXTJMs8mQp.png" alt="抽象图解" title="抽象图解"><br></li>
 </ul>
 </blockquote>
-<hr>
-<hr>
 <pre><code>import java.io.BufferedInputStream;
 import java.util.Scanner;
 
-public class Second_1004 {
+public class Second_1009 {
     public static void main(String[] args) {
-        long[] arr = new long[80];
-        arr[0] = 1;
-        arr[1] = 1;
-        for(int i = 0;i &lt; arr.length;i++) {
-            //判断：当打印第三个数前，给第三个数赋值
-            if(i &gt; 1) {
-                arr[i] = arr[i - 2] + arr[i - 1];
-            }
-        }
         Scanner sc = new Scanner(new BufferedInputStream(System.in));
-        while(sc.hasNext()){
-            int from = sc.nextInt();
-            int to = sc.nextInt();
-            long breakfastNum = 0;
-            for (int day = from-1;day &lt; to;day++ ){
-                breakfastNum += arr[day];
-            }
-            System.out.println(breakfastNum);
+        long[] fibo = new long[10000];
+        fibo[1] = 1;
+        fibo[2] = 2;
+        double max = Math.pow(2,63);
+        for (int i = 3; i &lt; 10000 ; i++) {
+            fibo[i] = fibo[i-1]+fibo[i-2];
+        }
+        int n = sc.nextInt();
+        int count =0;
+        while(count &lt; n){
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            int distance = b - a;
+            count++;
+            System.out.println(fibo[distance]);
         }
     }
 }</code></pre>
@@ -237,7 +237,7 @@ public class Second_1004 {
 <div class="nexmoe-post-copyright">
 <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
 <strong>本文作者：</strong>A_zao<br>
-<strong>本文链接：</strong><a href="http://yoursite.com/2019/09/30/1004-客似云来/" title="http://yoursite.com/2019/09/30/1004-客似云来/" target="_blank" rel="noopener">http://yoursite.com/2019/09/30/1004-客似云来/</a><br>
+<strong>本文链接：</strong><a href="http://yoursite.com/2019/10/02/1009-蜜蜂寻路/" title="http://yoursite.com/2019/10/02/1009-蜜蜂寻路/" target="_blank" rel="noopener">http://yoursite.com/2019/10/02/1009-蜜蜂寻路/</a><br>
 
   <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
 
@@ -277,7 +277,7 @@ public class Second_1004 {
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1570028204281"></script>
+<script src="/js/app.js?v=1570028204272"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 

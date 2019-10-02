@@ -3,7 +3,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
   
-  <title>1004-客似云来 - 正在建设的小窝</title>
+  <title>正在建设的小窝</title>
   <meta charset="UTF-8">
   <meta name="description" content>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -11,17 +11,17 @@
   
 
   <link rel="shortcut icon" href="https://i.loli.net/2019/09/30/VRahYDQ5gXNKzoj.jpg" type="image/jpg">
-  <meta name="description" content="题目描述 NowCoder开了一家早餐店，这家店的客人都有个奇怪的癖好：他们只要来这家店吃过一次早餐，就会每天都过来；并且，所有人在这家店吃了两天早餐后，接下来每天都会带一位新朋友一起来品尝。于是，这家店的客人从最初一个人发展成浩浩荡荡成百上千人：1、1、2、3、5……现在，NowCoder想请你帮忙统计一下，某一段时间范围那他总共卖出多少份早餐（假设每位客人只吃一份早餐）。  输入描述: 测试数">
+  <meta name="description" content="title: 1005-斐波那契凤尾date: 2019-10-2 8:53:52 categories: PAT练习题目描述 NowCoder号称自己已经记住了1-100000之间所有的斐波那契数。为了考验他，我们随便出一个数n，让他说出第n个斐波那契数。当然，斐波那契数会很大。因此，如果第n个斐波那契数不到6位，则说出该数；否则只说出最后6位。  输入描述: 输入有多组数据。每组数据一行，包">
 <meta property="og:type" content="article">
-<meta property="og:title" content="1004-客似云来">
-<meta property="og:url" content="http://yoursite.com/2019/09/30/1004-客似云来/index.html">
+<meta property="og:title" content="正在建设的小窝">
+<meta property="og:url" content="http://yoursite.com/2019/10/02/1005-斐波那契凤尾/index.html">
 <meta property="og:site_name" content="正在建设的小窝">
-<meta property="og:description" content="题目描述 NowCoder开了一家早餐店，这家店的客人都有个奇怪的癖好：他们只要来这家店吃过一次早餐，就会每天都过来；并且，所有人在这家店吃了两天早餐后，接下来每天都会带一位新朋友一起来品尝。于是，这家店的客人从最初一个人发展成浩浩荡荡成百上千人：1、1、2、3、5……现在，NowCoder想请你帮忙统计一下，某一段时间范围那他总共卖出多少份早餐（假设每位客人只吃一份早餐）。  输入描述: 测试数">
+<meta property="og:description" content="title: 1005-斐波那契凤尾date: 2019-10-2 8:53:52 categories: PAT练习题目描述 NowCoder号称自己已经记住了1-100000之间所有的斐波那契数。为了考验他，我们随便出一个数n，让他说出第n个斐波那契数。当然，斐波那契数会很大。因此，如果第n个斐波那契数不到6位，则说出该数；否则只说出最后6位。  输入描述: 输入有多组数据。每组数据一行，包">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-30T09:43:54.591Z">
+<meta property="og:updated_time" content="2019-10-02T14:19:01.124Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="1004-客似云来">
-<meta name="twitter:description" content="题目描述 NowCoder开了一家早餐店，这家店的客人都有个奇怪的癖好：他们只要来这家店吃过一次早餐，就会每天都过来；并且，所有人在这家店吃了两天早餐后，接下来每天都会带一位新朋友一起来品尝。于是，这家店的客人从最初一个人发展成浩浩荡荡成百上千人：1、1、2、3、5……现在，NowCoder想请你帮忙统计一下，某一段时间范围那他总共卖出多少份早餐（假设每位客人只吃一份早餐）。  输入描述: 测试数">
+<meta name="twitter:title" content="正在建设的小窝">
+<meta name="twitter:description" content="title: 1005-斐波那契凤尾date: 2019-10-2 8:53:52 categories: PAT练习题目描述 NowCoder号称自己已经记住了1-100000之间所有的斐波那契数。为了考验他，我们随便出一个数n，让他说出第n个斐波那契数。当然，斐波那契数会很大。因此，如果第n个斐波那契数不到6位，则说出该数；否则只说出最后6位。  输入描述: 输入有多组数据。每组数据一行，包">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
    
@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_ezdnzsotqc.css">
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1570028204275">
+  <link rel="stylesheet" href="/css/style.css?v=1570028204233">
    <!-- 爆炸红心效果 -->
 
  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
@@ -171,63 +171,71 @@
         
             <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg">
         
-        <h1>1004-客似云来</h1>
+        <h1></h1>
     </div>
   <div class="nexmoe-post-meta">
-    <a><i class="nexmoefont icon-calendar-fill"></i>2019年09月30日</a>
-    <a><i class="nexmoefont icon-areachart"></i>436 字</a>
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年10月02日</a>
+    <a><i class="nexmoefont icon-areachart"></i>398 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
-    
-      <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
     
     
   </div>
   <article>
-    <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>NowCoder开了一家早餐店，这家店的客人都有个奇怪的癖好：他们只要来这家店吃过一次早餐，就会每天都过来；并且，所有人在这家店吃了两天早餐后，接下来每天都会带一位新朋友一起来品尝。<br>于是，这家店的客人从最初一个人发展成浩浩荡荡成百上千人：1、1、2、3、5……<br>现在，NowCoder想请你帮忙统计一下，某一段时间范围那他总共卖出多少份早餐（假设每位客人只吃一份早餐）。</p>
+    <hr>
+<p>title: 1005-斐波那契凤尾<br>date: 2019-10-2 8:53:52</p>
+<h2 id="categories-PAT练习"><a href="#categories-PAT练习" class="headerlink" title="categories: PAT练习"></a>categories: PAT练习</h2><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
+<p>NowCoder号称自己已经记住了1-100000之间所有的斐波那契数。<br><br>为了考验他，我们随便出一个数n，让他说出第n个斐波那契数。<br>当然，斐波那契数会很大。因此，如果第n个斐波那契数不到6位，则说出该数；否则只说出最后6位。<br></p>
 </blockquote>
 <h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
-<p>测试数据包括多组。<br><br>每组数据包含两个整数from和to(1≤from≤to≤80)，分别代表开店的第from天和第to天。</p>
+<p>输入有多组数据。<br><br>每组数据一行，包含一个整数n (1≤n≤100000)。</p>
 </blockquote>
 <h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>对应每一组输入，输出从from到to这些天里（包含from和to两天），需要做多少份早餐。</p>
+<p>对应每一组输入，输出第n个斐波那契数的最后6位。</p>
 </blockquote>
-<h2 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h2><blockquote>
-<p>1 &ensp;10<br><br>2 &#8195;8<br><br>36 80<br></p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><blockquote>
+<p>1<br><br>2<br><br>3<br><br>4<br><br>100000<br></p>
+</blockquote>
+<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><blockquote>
+<p>1<br><br>2<br><br>3<br><br>5<br><br>537501<br></p>
 </blockquote>
 <h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
+<p>熟悉的斐波那契数列，不过每题都有些不一样的坑<br><br>别的都没什么，取余之后如果前几位都是0，输出的时候就会不足6位<br><br>使用String.format(“%06d”,fibo[n])，若不足6位则在数字前面添加0直到为6位数<br></p>
 <ul>
-<li>牛客网也太喜欢斐波那契数列了吧</li>
-<li>虽然感觉能轻松拿下，但实际还是留了一下坑，我也想了一段时间。</li>
-<li>因为斐波那契数列从第三项才能使用公式F(2)=1, F(n)=F(n-1)+F(n-2)</li>
-<li>结果也看到在循环外给第一项，第二项赋值就行了</li>
+<li>%0：添加零<br></li>
+<li>6：要加到几位<br></li>
+<li>d:整数类型（十进制）<br></li>
+<li>fibo[n]:想要更改的数 </li>
 </ul>
 </blockquote>
-<hr>
-<hr>
 <pre><code>import java.io.BufferedInputStream;
 import java.util.Scanner;
 
-public class Second_1004 {
+public class Second_1005_2 {
     public static void main(String[] args) {
-        long[] arr = new long[80];
-        arr[0] = 1;
-        arr[1] = 1;
-        for(int i = 0;i &lt; arr.length;i++) {
-            //判断：当打印第三个数前，给第三个数赋值
-            if(i &gt; 1) {
-                arr[i] = arr[i - 2] + arr[i - 1];
-            }
-        }
         Scanner sc = new Scanner(new BufferedInputStream(System.in));
-        while(sc.hasNext()){
-            int from = sc.nextInt();
-            int to = sc.nextInt();
-            long breakfastNum = 0;
-            for (int day = from-1;day &lt; to;day++ ){
-                breakfastNum += arr[day];
+        int[] fibo = new int[100001];
+        fibo[0] = 1;
+        fibo[1] = 1;
+        int count =0;
+        for (int i = 2; i &lt; 100001; i++) {
+            if ((fibo[i - 1] + fibo[i - 2] + &quot;&quot;).length() &gt; 6) {
+                if (count == 0){
+                    fibo[i] = (fibo[i - 1] + fibo[i - 2]) % 1000000;
+                    count = i;
+                    continue;
+                }
+                fibo[i] = (fibo[i - 1] + fibo[i - 2]) % 1000000;
+                continue;
             }
-            System.out.println(breakfastNum);
+            fibo[i] = fibo[i - 1] + fibo[i - 2];
+        }
+        while (sc.hasNext()) {
+            int n = sc.nextInt();
+            if (n &lt; count){
+                System.out.println(fibo[n]);
+            }else {
+                System.out.println(String.format(&quot;%06d&quot;,fibo[n]));
+            }
         }
     }
 }</code></pre>
@@ -237,7 +245,7 @@ public class Second_1004 {
 <div class="nexmoe-post-copyright">
 <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
 <strong>本文作者：</strong>A_zao<br>
-<strong>本文链接：</strong><a href="http://yoursite.com/2019/09/30/1004-客似云来/" title="http://yoursite.com/2019/09/30/1004-客似云来/" target="_blank" rel="noopener">http://yoursite.com/2019/09/30/1004-客似云来/</a><br>
+<strong>本文链接：</strong><a href="http://yoursite.com/2019/10/02/1005-斐波那契凤尾/" title="http://yoursite.com/2019/10/02/1005-斐波那契凤尾/" target="_blank" rel="noopener">http://yoursite.com/2019/10/02/1005-斐波那契凤尾/</a><br>
 
   <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
 
@@ -277,7 +285,7 @@ public class Second_1004 {
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1570028204281"></script>
+<script src="/js/app.js?v=1570028204240"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
