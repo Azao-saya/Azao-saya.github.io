@@ -3,7 +3,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
   
-  <title>1007-母牛的故事 - 正在建设的小窝</title>
+  <title>B1003-我要通过！ - 正在建设的小窝</title>
   <meta charset="UTF-8">
   <meta name="description" content>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -13,14 +13,14 @@
   <link rel="shortcut icon" href="https://i.loli.net/2019/09/30/VRahYDQ5gXNKzoj.jpg" type="image/jpg">
   <meta name="description" content="题目描述">
 <meta property="og:type" content="article">
-<meta property="og:title" content="1007-母牛的故事">
-<meta property="og:url" content="http://yoursite.com/2019/10/02/1007-母牛的故事/index.html">
+<meta property="og:title" content="B1003-我要通过！">
+<meta property="og:url" content="http://yoursite.com/2019/10/08/B1003-我要通过/index.html">
 <meta property="og:site_name" content="正在建设的小窝">
 <meta property="og:description" content="题目描述">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-08T11:07:33.721Z">
+<meta property="og:updated_time" content="2019-10-08T13:33:29.336Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="1007-母牛的故事">
+<meta name="twitter:title" content="B1003-我要通过！">
 <meta name="twitter:description" content="题目描述">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_ezdnzsotqc.css">
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1570551353893">
+  <link rel="stylesheet" href="/css/style.css?v=1570551353720">
    <!-- 爆炸红心效果 -->
 
  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
@@ -169,14 +169,14 @@
         <div class="nexmoe-post">
     <div class="nexmoe-post-cover"> 
         
-            <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg">
+        <img src="https://i.loli.net/2019/10/08/GEdnA7ogfhbWcuk.jpg">
         
-        <h1>1007-母牛的故事</h1>
+        <h1>B1003-我要通过！</h1>
     </div>
   <div class="nexmoe-post-meta">
-    <a><i class="nexmoefont icon-calendar-fill"></i>2019年10月02日</a>
-    <a><i class="nexmoefont icon-areachart"></i>327 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年10月08日</a>
+    <a><i class="nexmoefont icon-areachart"></i>522 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
     
       <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
     
@@ -184,45 +184,86 @@
   </div>
   <article>
     <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><blockquote>
-<p>有一头母牛，它每年年初生一头小母牛。每头小母牛从第四个年头开始，每年年初也生一头小母牛。请编程实现在第n年的时候，共有多少头母牛？</p>
+<p>“<strong>答案正确</strong>”是自动判题系统给出的最令人欢喜的回复。本题属于 PAT 的“<strong>答案正确</strong>”大派送 —— 只要读入的字符串满足下列条件，系统就输出“<strong>答案正确</strong>”，否则输出“<strong>答案错误</strong>”。</p>
+<p>得到“<strong>答案正确</strong>”的条件是：</p>
+<ol>
+<li><p>字符串中必须仅有 <code>P</code>、 <code>A</code>、 <code>T</code>这三种字符，不可以包含其它字符；</p>
+</li>
+<li><p>任意形如 <code>xPATx</code> 的字符串都可以获得“<strong>答案正确</strong>”，其中 <code>x</code> 或者是空字符串，或者是仅由字母 <code>A</code> 组成的字符串；</p>
+</li>
+<li><p>如果 <code>aPbTc</code> 是正确的，那么 <code>aPbATca</code> 也是正确的，其中 <code>a</code>、 <code>b</code>、 <code>c</code> 均或者是空字符串，或者是仅由字母 <code>A</code> 组成的字符串。</p>
+<p>现在就请你为 PAT 写一个自动裁判程序，判定哪些字符串是可以获得“<strong>答案正确</strong>”的。</p>
+</li>
+</ol>
 </blockquote>
 <h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
-<p>输入数据由多个测试实例组成，每个测试实例占一行，包括一个整数n(0&lt;n&lt;55)，n的含义如题目中描述。</p>
+<p>每个测试输入包含 1 个测试用例，即给出自然数 <em>n</em> 的值。这里保证 <em>n</em> 小于 10100。</p>
 </blockquote>
 <h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>对于每个测试实例，输出在第n年的时候母牛的数量。<br><br>每个输出占一行。</p>
+<p>每个字符串的检测结果占一行，如果该字符串可以获得“<strong>答案正确</strong>”，则输出 <code>YES</code>，否则输出 <code>NO</code>。</p>
 </blockquote>
 <h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><blockquote>
-<p>2<br><br>4<br><br>5</p>
+<pre><code class="in">8
+PAT
+PAAT
+AAPATAA
+AAPAATAAAA
+xPATx
+PT
+Whatever
+APAAATAA</code></pre>
 </blockquote>
 <h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><blockquote>
-<p>2<br><br>4<br><br>6</p>
+<pre><code class="out">YES
+YES
+YES
+YES
+NO
+NO
+NO
+NO</code></pre>
+<p>解题思路</p>
 </blockquote>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<ul>
-<li>又来了</li>
-<li>做牛客网的题，不用想。先把前面几次结果算出来，然后找规律。</li>
-<li>然后发现这个题目很蠢，按照他的说法，如果num[5]是输出6，新生的牛直接算进去的话</li>
-<li>num[1]应该是两头，然后虽然他错了，但还是有公式的f(n) = f(n-1)+f(n-3) (n&gt;3)</li>
-<li>硬算出来的。</li>
-</ul>
+<blockquote>
+<p>通过看别人的代码了解了正则表达式这个概念，题目很容易就解出来了</p>
+<p>+号为一个或多个，*号为零个或多个</p>
+<p>条件123都是在满足前置条件的扩展，一开始也是没转过弯来</p>
 </blockquote>
 <pre><code>import java.io.BufferedInputStream;
 import java.util.Scanner;
 
-public class Second_1007 {
-    public static void main(String[] args){
+public class PAT_B1003 {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(new BufferedInputStream(System.in));
-        int[] num=new int[55];
-        num[1]=1;
-        num[2]=2;
-        num[3]=3;
-        while(sc.hasNext()){
-            int n=sc.nextInt();
-            for(int i=4;i&lt;55;i++){
-                num[i]=num[i-1]+num[i-3];
+        int n = Integer.parseInt(sc.nextLine());
+        String[] str = new String[11];
+        for (int i = 0; i &lt; n; i++) {
+            str[i] = sc.next();
+        }
+        for (String s : str) {
+            judge(s);
+        }
+    }
+    public static void judge(String s) {
+        String pattern = &quot;A*PA+TA*&quot;;
+        String pattern1 = &quot;PA+T&quot;;
+        if (s.matches(pattern)) {
+            if (s.matches(pattern1)) {
+                System.out.println(&quot;YES&quot;);
+            } else {
+                String temp[] = s.split(&quot;P|T&quot;);
+                int aLength = temp[0].length();
+                int bLength = temp[1].length();
+                int cLength = temp[2].length();
+                if ((cLength - aLength) / aLength == (bLength - 1)) {
+                    System.out.println(&quot;YES&quot;);
+                } else {
+                    System.out.println(&quot;NO&quot;);
+                }
+
             }
-            System.out.println(num[n]);
+        } else {
+            System.out.println(&quot;NO&quot;);
         }
     }
 }</code></pre>
@@ -232,7 +273,7 @@ public class Second_1007 {
 <div class="nexmoe-post-copyright">
 <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
 <strong>本文作者：</strong>A_zao<br>
-<strong>本文链接：</strong><a href="http://yoursite.com/2019/10/02/1007-母牛的故事/" title="http://yoursite.com/2019/10/02/1007-母牛的故事/" target="_blank" rel="noopener">http://yoursite.com/2019/10/02/1007-母牛的故事/</a><br>
+<strong>本文链接：</strong><a href="http://yoursite.com/2019/10/08/B1003-我要通过/" title="http://yoursite.com/2019/10/08/B1003-我要通过/" target="_blank" rel="noopener">http://yoursite.com/2019/10/08/B1003-我要通过/</a><br>
 
   <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
 
@@ -272,7 +313,7 @@ public class Second_1007 {
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1570551353903"></script>
+<script src="/js/app.js?v=1570551353737"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 

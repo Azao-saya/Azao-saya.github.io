@@ -11,14 +11,17 @@
   
 
   <link rel="shortcut icon" href="https://i.loli.net/2019/09/30/VRahYDQ5gXNKzoj.jpg" type="image/jpg">
-  <meta property="og:type" content="article">
+  <meta name="description" content="题目描述">
+<meta property="og:type" content="article">
 <meta property="og:title" content="B1001-害死人不偿命的(3n+1)猜想">
 <meta property="og:url" content="http://yoursite.com/2019/10/08/B1001-害死人不偿命的(3n+1)猜想/index.html">
 <meta property="og:site_name" content="正在建设的小窝">
+<meta property="og:description" content="题目描述">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-08T10:37:54.131Z">
+<meta property="og:updated_time" content="2019-10-08T13:02:18.839Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="B1001-害死人不偿命的(3n+1)猜想">
+<meta name="twitter:description" content="题目描述">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
    
@@ -28,7 +31,7 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_ezdnzsotqc.css">
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1570533010205">
+  <link rel="stylesheet" href="/css/style.css?v=1570551353798">
    <!-- 爆炸红心效果 -->
 
  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
@@ -59,7 +62,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>13</div>
+        <div><span>文章</span>19</div>
         <div><span>标签</span>0</div>
         <div><span>分类</span>3</div>
     </div>
@@ -116,7 +119,7 @@
 
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/PAT练习/">PAT练习</a>
-          <span class="category-list-count">10</span>
+          <span class="category-list-count">16</span>
         </li>
 
         
@@ -166,13 +169,13 @@
         <div class="nexmoe-post">
     <div class="nexmoe-post-cover"> 
         
-            <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg">
+        <img src="https://i.loli.net/2019/10/08/GEdnA7ogfhbWcuk.jpg">
         
         <h1>B1001-害死人不偿命的(3n+1)猜想</h1>
     </div>
   <div class="nexmoe-post-meta">
     <a><i class="nexmoefont icon-calendar-fill"></i>2019年10月08日</a>
-    <a><i class="nexmoefont icon-areachart"></i>0 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>346 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
     
       <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
@@ -180,8 +183,48 @@
     
   </div>
   <article>
-    <a id="more"></a>
+    <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><blockquote>
+<p>卡拉兹(Callatz)猜想：</p>
+<p>对任何一个正整数 <em>n</em>，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把 (3<em>n</em>+1) 砍掉一半。这样一直反复砍下去，最后一定在某一步得到 <em>n</em>=1。卡拉兹在 1950 年的世界数学家大会上公布了这个猜想，传说当时耶鲁大学师生齐动员，拼命想证明这个貌似很傻很天真的命题，结果闹得学生们无心学业，一心只证 (3<em>n</em>+1)，以至于有人说这是一个阴谋，卡拉兹是在蓄意延缓美国数学界教学与科研的进展……</p>
+<p>我们今天的题目不是证明卡拉兹猜想，而是对给定的任一不超过 1000 的正整数 <em>n</em>，简单地数一下，需要多少步（砍几下）才能得到 <em>n</em>=1？</p>
+</blockquote>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
+<p>每个测试输入包含 1 个测试用例，即给出正整数 <em>n</em> 的值。</p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p>输出从 <em>n</em> 计算到 1 需要的步数。</p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><blockquote>
+<p>3</p>
+</blockquote>
+<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><blockquote>
+<p>5</p>
+</blockquote>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
+<p>给信心题</p>
+</blockquote>
+<pre><code>import java.io.BufferedInputStream;
+import java.util.Scanner;
 
+public class PAT_B1001 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(new BufferedInputStream(System.in));
+        while(sc.hasNext()){
+            int n = sc.nextInt();
+            int count = 0;
+            while(n !=1){
+                if (n % 2 == 0){
+                    n =n/2;
+                    count++;
+                }else {
+                    n = (3*n+1)/2;
+                    count++;
+                }
+            }
+            System.out.println(count);
+        }
+    }
+}</code></pre>
   </article>
   
     
@@ -228,7 +271,7 @@
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1570533010252"></script>
+<script src="/js/app.js?v=1570551353809"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 

@@ -3,7 +3,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
   
-  <title>1007-母牛的故事 - 正在建设的小窝</title>
+  <title>B1002-写出这个数 - 正在建设的小窝</title>
   <meta charset="UTF-8">
   <meta name="description" content>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -13,14 +13,14 @@
   <link rel="shortcut icon" href="https://i.loli.net/2019/09/30/VRahYDQ5gXNKzoj.jpg" type="image/jpg">
   <meta name="description" content="题目描述">
 <meta property="og:type" content="article">
-<meta property="og:title" content="1007-母牛的故事">
-<meta property="og:url" content="http://yoursite.com/2019/10/02/1007-母牛的故事/index.html">
+<meta property="og:title" content="B1002-写出这个数">
+<meta property="og:url" content="http://yoursite.com/2019/10/08/B1002-写出这个数/index.html">
 <meta property="og:site_name" content="正在建设的小窝">
 <meta property="og:description" content="题目描述">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-08T11:07:33.721Z">
+<meta property="og:updated_time" content="2019-10-08T13:23:36.004Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="1007-母牛的故事">
+<meta name="twitter:title" content="B1002-写出这个数">
 <meta name="twitter:description" content="题目描述">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_ezdnzsotqc.css">
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1570551353893">
+  <link rel="stylesheet" href="/css/style.css?v=1570551353743">
    <!-- 爆炸红心效果 -->
 
  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
@@ -169,14 +169,14 @@
         <div class="nexmoe-post">
     <div class="nexmoe-post-cover"> 
         
-            <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg">
+        <img src="https://i.loli.net/2019/10/08/GEdnA7ogfhbWcuk.jpg">
         
-        <h1>1007-母牛的故事</h1>
+        <h1>B1002-写出这个数</h1>
     </div>
   <div class="nexmoe-post-meta">
-    <a><i class="nexmoefont icon-calendar-fill"></i>2019年10月02日</a>
-    <a><i class="nexmoefont icon-areachart"></i>327 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年10月08日</a>
+    <a><i class="nexmoefont icon-areachart"></i>369 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
     
       <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
     
@@ -184,46 +184,70 @@
   </div>
   <article>
     <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><blockquote>
-<p>有一头母牛，它每年年初生一头小母牛。每头小母牛从第四个年头开始，每年年初也生一头小母牛。请编程实现在第n年的时候，共有多少头母牛？</p>
+<p>读入一个正整数 <em>n</em>，计算其各位数字之和，用汉语拼音写出和的每一位数字。</p>
 </blockquote>
 <h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
-<p>输入数据由多个测试实例组成，每个测试实例占一行，包括一个整数n(0&lt;n&lt;55)，n的含义如题目中描述。</p>
+<p>每个测试输入包含 1 个测试用例，即给出自然数 <em>n</em> 的值。这里保证 <em>n</em> 小于 10100。</p>
 </blockquote>
 <h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>对于每个测试实例，输出在第n年的时候母牛的数量。<br><br>每个输出占一行。</p>
+<p>在一行内输出 <em>n</em> 的各位数字之和的每一位，拼音数字间有 1 空格，但一行中最后一个拼音数字后没有空格。</p>
 </blockquote>
 <h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><blockquote>
-<p>2<br><br>4<br><br>5</p>
+<p>1234567890987654321123456789</p>
 </blockquote>
 <h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><blockquote>
-<p>2<br><br>4<br><br>6</p>
+<p>yi san wu</p>
 </blockquote>
 <h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<ul>
-<li>又来了</li>
-<li>做牛客网的题，不用想。先把前面几次结果算出来，然后找规律。</li>
-<li>然后发现这个题目很蠢，按照他的说法，如果num[5]是输出6，新生的牛直接算进去的话</li>
-<li>num[1]应该是两头，然后虽然他错了，但还是有公式的f(n) = f(n-1)+f(n-3) (n&gt;3)</li>
-<li>硬算出来的。</li>
-</ul>
+<p>因为缺乏数学思维一时间没读懂，计算其各位数字之和是啥意思<br>想通了就是个位十位百位就是把每一个单个数字相加<br>就算不是因为数字非常庞大10^100,也是应该用字符串接受，不然读取挺麻烦的</p>
 </blockquote>
-<pre><code>import java.io.BufferedInputStream;
-import java.util.Scanner;
+<pre><code>import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
-public class Second_1007 {
-    public static void main(String[] args){
-        Scanner sc = new Scanner(new BufferedInputStream(System.in));
-        int[] num=new int[55];
-        num[1]=1;
-        num[2]=2;
-        num[3]=3;
-        while(sc.hasNext()){
-            int n=sc.nextInt();
-            for(int i=4;i&lt;55;i++){
-                num[i]=num[i-1]+num[i-3];
-            }
-            System.out.println(num[n]);
+public class PAT_B1002 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        String n = bufferedReader.readLine();
+        int sum =0;
+        for (int i = 0; i &lt; n.length() ; i++) {
+            sum += Integer.valueOf(String.valueOf(n.charAt(i)));
         }
+//        int num = (sum+&quot;&quot;).length();
+        String as = String.valueOf(sum);
+        char[] m = as.toCharArray();
+        for(int i=0;i&lt;m.length;i++){
+            if (i == m.length-1){
+                System.out.print(getSplitResult(Integer.parseInt(String.valueOf(m[i]))));
+                break;
+            }
+            System.out.print(getSplitResult(Integer.parseInt(String.valueOf(m[i])))+&quot; &quot;);
+        }
+    }
+    public static String getSplitResult(int i) {
+        switch (i) {
+            case 0:
+                return &quot;ling&quot;;
+            case 1:
+                return &quot;yi&quot;;
+            case 2:
+                return &quot;er&quot;;
+            case 3:
+                return &quot;san&quot;;
+            case 4:
+                return &quot;si&quot;;
+            case 5:
+                return &quot;wu&quot;;
+            case 6:
+                return &quot;liu&quot;;
+            case 7:
+                return &quot;qi&quot;;
+            case 8:
+                return &quot;ba&quot;;
+            case 9:
+                return &quot;jiu&quot;;
+        }
+        return null;
     }
 }</code></pre>
   </article>
@@ -232,7 +256,7 @@ public class Second_1007 {
 <div class="nexmoe-post-copyright">
 <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
 <strong>本文作者：</strong>A_zao<br>
-<strong>本文链接：</strong><a href="http://yoursite.com/2019/10/02/1007-母牛的故事/" title="http://yoursite.com/2019/10/02/1007-母牛的故事/" target="_blank" rel="noopener">http://yoursite.com/2019/10/02/1007-母牛的故事/</a><br>
+<strong>本文链接：</strong><a href="http://yoursite.com/2019/10/08/B1002-写出这个数/" title="http://yoursite.com/2019/10/08/B1002-写出这个数/" target="_blank" rel="noopener">http://yoursite.com/2019/10/08/B1002-写出这个数/</a><br>
 
   <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
 
@@ -272,7 +296,7 @@ public class Second_1007 {
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1570551353903"></script>
+<script src="/js/app.js?v=1570551353769"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
