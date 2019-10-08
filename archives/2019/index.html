@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_ezdnzsotqc.css">
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1570028746039">
+  <link rel="stylesheet" href="/css/style.css?v=1570530559438">
    <!-- 爆炸红心效果 -->
 
  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
@@ -58,7 +58,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>12</div>
+        <div><span>文章</span>13</div>
         <div><span>标签</span>0</div>
         <div><span>分类</span>3</div>
     </div>
@@ -115,7 +115,7 @@
 
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/PAT练习/">PAT练习</a>
-          <span class="category-list-count">5</span>
+          <span class="category-list-count">9</span>
         </li>
 
         
@@ -165,59 +165,26 @@
         <section class="nexmoe-posts" id="brand-waterfall">
     
     <div class="nexmoe-post">
-        <a href="/2019/10/02/1008-童年生活二三事/">
+        <a href="/2019/10/08/B1001-害死人不偿命的(3n+1)猜想/">
             <div class="nexmoe-post-cover mdui-ripple"> 
                 
-                    <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg" alt>
+                    <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg" alt="B1001-害死人不偿命的(3n+1)猜想">
                 
-                <h1></h1>
+                <h1>B1001-害死人不偿命的(3n+1)猜想</h1>
             </div>
         </a>
         <div class="nexmoe-post-meta">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2019年10月02日</a>
-            <a><i class="nexmoefont icon-areachart"></i>238 字</a>
+            <a><i class="nexmoefont icon-calendar-fill"></i>2019年10月08日</a>
+            <a><i class="nexmoefont icon-areachart"></i>0 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+            
+                <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
             
             
         </div>
         <article>
             
-            <hr>
-<p>title: 1008-童年生活二三事<br>date: 2019-10-2 11:53:52</p>
-<h2 id="categories-PAT练习"><a href="#categories-PAT练习" class="headerlink" title="categories: PAT练习"></a>categories: PAT练习</h2><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>NowCoder小时候走路喜欢蹦蹦跳跳，他最喜欢在楼梯上跳来跳去。<br><br> 但年幼的他一次只能走上一阶或者一下子蹦上两阶。<br><br> 现在一共有N阶台阶，请你计算一下NowCoder从第0阶到第N阶共有几种走法。<br></p>
-</blockquote>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
-<p>输入包括多组数据。每组数据包括一个整数n, (1≤n≤90)。</p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>对应每个输入包括一个输出。<br><br>为redraiment到达第n阶不同走法的数量。</p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><p>1<br><br>2</p>
-<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><p>1<br><br>2</p>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<ul>
-<li>又双来了</li>
-</ul>
-</blockquote>
-<pre><code>import java.io.BufferedInputStream;
-import java.util.Scanner;
-
-public class Second_1008 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(new BufferedInputStream(System.in));
-        long[] steps = new long[91];
-        steps[1] =1;
-        steps[2] =2;
-        for (int i = 3; i &lt;91 ; i++) {
-            steps[i] = steps[i-1]+ steps[i-2];
-        }
-        while (sc.hasNext()){
-            int n = sc.nextInt();
-            System.out.println(steps[n]);
-        }
-    }
-}</code></pre>
+            
             
         </article>
     </div>
@@ -282,179 +249,6 @@ public class Second_1007 {
                 num[i]=num[i-1]+num[i-3];
             }
             System.out.println(num[n]);
-        }
-    }
-}</code></pre>
-            
-        </article>
-    </div>
-    
-    <div class="nexmoe-post">
-        <a href="/2019/10/02/1006-星际密码/">
-            <div class="nexmoe-post-cover mdui-ripple"> 
-                
-                    <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg" alt>
-                
-                <h1></h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2019年10月02日</a>
-            <a><i class="nexmoefont icon-areachart"></i>460 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
-            
-            
-        </div>
-        <article>
-            
-            <hr>
-<p>title: 1006-星际密码<br>date: 2019-10-2 9:53:52</p>
-<h2 id="categories-PAT练习"><a href="#categories-PAT练习" class="headerlink" title="categories: PAT练习"></a>categories: PAT练习</h2><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>星际战争开展了100年之后，NowCoder终于破译了外星人的密码！他们的密码是一串整数，通过一张表里的信息映射成最终4位密码。表的规则是：n对应的值是矩阵X的n次方的左上角，如果这个数不足4位则用0填充，如果大于4位的则只输出最后4位。</p>
-</blockquote>
-<blockquote>
-<p>|1 1|^n =&gt; |Xn ..|</p>
-</blockquote>
-<blockquote>
-<p>|1 0|      |.. ..|</p>
-</blockquote>
-<blockquote>
-<p>例如n=2时，</p>
-</blockquote>
-<blockquote>
-<p>|1 1|^2 =&gt; |1 1| * |1 1| =&gt; |2 1|</p>
-</blockquote>
-<blockquote>
-<p>|1 0|      |1 0|   |1 0|    |1 1|</p>
-</blockquote>
-<blockquote>
-<p>即2对应的数是“0002”。</p>
-</blockquote>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
-<p>输入有多组数据。<br><br>每组数据两行：第一行包含一个整数n (1≤n≤100)；第二行包含n个正整数Xi (1≤Xi≤10000)</p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>对应每一组输入，输出一行相应的密码。</p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><blockquote>
-<p>6<br><br>18 15 21 13 25 27<br><br>5<br><br>1 10 100 1000 10000<br></p>
-</blockquote>
-<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><blockquote>
-<p>418109877711037713937811<br><br>00010089410135017501</p>
-</blockquote>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<ul>
-<li>这道题目的描述一塌糊涂，如果不是看输出例子和斐波那契数列看多了，我是绝对不会知道该怎么做的</li>
-<li>思路为先整一个数组存储斐波那契数列，因为数字非常大。在存储阶段就进行取余，int的大小也绝对够用。</li>
-<li>然后用到StringBuilder连接要输出的内容和String.format(“%04d”,n）补足4位。</li>
-<li>都连接好了之后toString()输出</li>
-</ul>
-</blockquote>
-<pre><code>import java.io.BufferedInputStream;
-import java.util.Scanner;
-
-public class Second_1006 {
-
-    public static int fibo[] = new int[10001];
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(new BufferedInputStream(System.in));
-        fibo[0]=1;
-        fibo[1]=1;
-        for (int i = 2; i &lt; 10001; i++) {
-            fibo[i] = fibo[i - 1] + fibo[i - 2];
-            if (fibo[i] &gt; 9999){
-                fibo[i] = fibo[i] % 10000;
-            }
-        }
-        while (sc.hasNext()){
-            int n = sc.nextInt();
-            StringBuilder sb = new StringBuilder();
-            for (int i = 0; i &lt;n ; i++) {
-                int num = sc.nextInt();
-                sb.append(String.format(&quot;%04d&quot;,fibo[num]));
-            }
-            System.out.println(sb.toString());
-        }
-    }
-}</code></pre>
-            
-        </article>
-    </div>
-    
-    <div class="nexmoe-post">
-        <a href="/2019/10/02/1005-斐波那契凤尾/">
-            <div class="nexmoe-post-cover mdui-ripple"> 
-                
-                    <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg" alt>
-                
-                <h1></h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2019年10月02日</a>
-            <a><i class="nexmoefont icon-areachart"></i>398 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
-            
-            
-        </div>
-        <article>
-            
-            <hr>
-<p>title: 1005-斐波那契凤尾<br>date: 2019-10-2 8:53:52</p>
-<h2 id="categories-PAT练习"><a href="#categories-PAT练习" class="headerlink" title="categories: PAT练习"></a>categories: PAT练习</h2><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>NowCoder号称自己已经记住了1-100000之间所有的斐波那契数。<br><br>为了考验他，我们随便出一个数n，让他说出第n个斐波那契数。<br>当然，斐波那契数会很大。因此，如果第n个斐波那契数不到6位，则说出该数；否则只说出最后6位。<br></p>
-</blockquote>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
-<p>输入有多组数据。<br><br>每组数据一行，包含一个整数n (1≤n≤100000)。</p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>对应每一组输入，输出第n个斐波那契数的最后6位。</p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><blockquote>
-<p>1<br><br>2<br><br>3<br><br>4<br><br>100000<br></p>
-</blockquote>
-<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><blockquote>
-<p>1<br><br>2<br><br>3<br><br>5<br><br>537501<br></p>
-</blockquote>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<p>熟悉的斐波那契数列，不过每题都有些不一样的坑<br><br>别的都没什么，取余之后如果前几位都是0，输出的时候就会不足6位<br><br>使用String.format(“%06d”,fibo[n])，若不足6位则在数字前面添加0直到为6位数<br></p>
-<ul>
-<li>%0：添加零<br></li>
-<li>6：要加到几位<br></li>
-<li>d:整数类型（十进制）<br></li>
-<li>fibo[n]:想要更改的数 </li>
-</ul>
-</blockquote>
-<pre><code>import java.io.BufferedInputStream;
-import java.util.Scanner;
-
-public class Second_1005_2 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(new BufferedInputStream(System.in));
-        int[] fibo = new int[100001];
-        fibo[0] = 1;
-        fibo[1] = 1;
-        int count =0;
-        for (int i = 2; i &lt; 100001; i++) {
-            if ((fibo[i - 1] + fibo[i - 2] + &quot;&quot;).length() &gt; 6) {
-                if (count == 0){
-                    fibo[i] = (fibo[i - 1] + fibo[i - 2]) % 1000000;
-                    count = i;
-                    continue;
-                }
-                fibo[i] = (fibo[i - 1] + fibo[i - 2]) % 1000000;
-                continue;
-            }
-            fibo[i] = fibo[i - 1] + fibo[i - 2];
-        }
-        while (sc.hasNext()) {
-            int n = sc.nextInt();
-            if (n &lt; count){
-                System.out.println(fibo[n]);
-            }else {
-                System.out.println(String.format(&quot;%06d&quot;,fibo[n]));
-            }
         }
     }
 }</code></pre>
@@ -671,6 +465,237 @@ public class Second_1009 {
     </div>
     
     <div class="nexmoe-post">
+        <a href="/2019/10/02/1008-童年生活二三事/">
+            <div class="nexmoe-post-cover mdui-ripple"> 
+                
+                    <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg" alt="1008-童年生活二三事">
+                
+                <h1>1008-童年生活二三事</h1>
+            </div>
+        </a>
+        <div class="nexmoe-post-meta">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2019年10月02日</a>
+            <a><i class="nexmoefont icon-areachart"></i>218 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+            
+                <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
+            
+            
+        </div>
+        <article>
+            
+            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
+<p>NowCoder小时候走路喜欢蹦蹦跳跳，他最喜欢在楼梯上跳来跳去。<br><br> 但年幼的他一次只能走上一阶或者一下子蹦上两阶。<br><br> 现在一共有N阶台阶，请你计算一下NowCoder从第0阶到第N阶共有几种走法。<br></p>
+</blockquote>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
+<p>输入包括多组数据。每组数据包括一个整数n, (1≤n≤90)。</p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p>对应每个输入包括一个输出。<br><br>为redraiment到达第n阶不同走法的数量。</p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><p>1<br><br>2</p>
+<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><p>1<br><br>2</p>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
+<ul>
+<li>又双来了</li>
+</ul>
+</blockquote>
+<pre><code>import java.io.BufferedInputStream;
+import java.util.Scanner;
+
+public class Second_1008 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(new BufferedInputStream(System.in));
+        long[] steps = new long[91];
+        steps[1] =1;
+        steps[2] =2;
+        for (int i = 3; i &lt;91 ; i++) {
+            steps[i] = steps[i-1]+ steps[i-2];
+        }
+        while (sc.hasNext()){
+            int n = sc.nextInt();
+            System.out.println(steps[n]);
+        }
+    }
+}</code></pre>
+            
+        </article>
+    </div>
+    
+    <div class="nexmoe-post">
+        <a href="/2019/10/02/1006-星际密码/">
+            <div class="nexmoe-post-cover mdui-ripple"> 
+                
+                    <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg" alt="1006-星际密码">
+                
+                <h1>1006-星际密码</h1>
+            </div>
+        </a>
+        <div class="nexmoe-post-meta">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2019年10月02日</a>
+            <a><i class="nexmoefont icon-areachart"></i>443 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
+            
+                <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
+            
+            
+        </div>
+        <article>
+            
+            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
+<p>星际战争开展了100年之后，NowCoder终于破译了外星人的密码！他们的密码是一串整数，通过一张表里的信息映射成最终4位密码。表的规则是：n对应的值是矩阵X的n次方的左上角，如果这个数不足4位则用0填充，如果大于4位的则只输出最后4位。</p>
+</blockquote>
+<blockquote>
+<p>|1 1|^n =&gt; |Xn ..|</p>
+</blockquote>
+<blockquote>
+<p>|1 0|      |.. ..|</p>
+</blockquote>
+<blockquote>
+<p>例如n=2时，</p>
+</blockquote>
+<blockquote>
+<p>|1 1|^2 =&gt; |1 1| * |1 1| =&gt; |2 1|</p>
+</blockquote>
+<blockquote>
+<p>|1 0|      |1 0|   |1 0|    |1 1|</p>
+</blockquote>
+<blockquote>
+<p>即2对应的数是“0002”。</p>
+</blockquote>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
+<p>输入有多组数据。<br><br>每组数据两行：第一行包含一个整数n (1≤n≤100)；第二行包含n个正整数Xi (1≤Xi≤10000)</p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p>对应每一组输入，输出一行相应的密码。</p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><blockquote>
+<p>6<br><br>18 15 21 13 25 27<br><br>5<br><br>1 10 100 1000 10000<br></p>
+</blockquote>
+<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><blockquote>
+<p>418109877711037713937811<br><br>00010089410135017501</p>
+</blockquote>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
+<ul>
+<li>这道题目的描述一塌糊涂，如果不是看输出例子和斐波那契数列看多了，我是绝对不会知道该怎么做的</li>
+<li>思路为先整一个数组存储斐波那契数列，因为数字非常大。在存储阶段就进行取余，int的大小也绝对够用。</li>
+<li>然后用到StringBuilder连接要输出的内容和String.format(“%04d”,n）补足4位。</li>
+<li>都连接好了之后toString()输出</li>
+</ul>
+</blockquote>
+<pre><code>import java.io.BufferedInputStream;
+import java.util.Scanner;
+
+public class Second_1006 {
+
+    public static int fibo[] = new int[10001];
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(new BufferedInputStream(System.in));
+        fibo[0]=1;
+        fibo[1]=1;
+        for (int i = 2; i &lt; 10001; i++) {
+            fibo[i] = fibo[i - 1] + fibo[i - 2];
+            if (fibo[i] &gt; 9999){
+                fibo[i] = fibo[i] % 10000;
+            }
+        }
+        while (sc.hasNext()){
+            int n = sc.nextInt();
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i &lt;n ; i++) {
+                int num = sc.nextInt();
+                sb.append(String.format(&quot;%04d&quot;,fibo[num]));
+            }
+            System.out.println(sb.toString());
+        }
+    }
+}</code></pre>
+            
+        </article>
+    </div>
+    
+    <div class="nexmoe-post">
+        <a href="/2019/10/02/1005-斐波那契凤尾/">
+            <div class="nexmoe-post-cover mdui-ripple"> 
+                
+                    <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg" alt="1005-斐波那契凤尾">
+                
+                <h1>1005-斐波那契凤尾</h1>
+            </div>
+        </a>
+        <div class="nexmoe-post-meta">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2019年10月02日</a>
+            <a><i class="nexmoefont icon-areachart"></i>379 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
+            
+                <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
+            
+            
+        </div>
+        <article>
+            
+            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
+<p>NowCoder号称自己已经记住了1-100000之间所有的斐波那契数。<br><br>为了考验他，我们随便出一个数n，让他说出第n个斐波那契数。<br>当然，斐波那契数会很大。因此，如果第n个斐波那契数不到6位，则说出该数；否则只说出最后6位。<br></p>
+</blockquote>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
+<p>输入有多组数据。<br><br>每组数据一行，包含一个整数n (1≤n≤100000)。</p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p>对应每一组输入，输出第n个斐波那契数的最后6位。</p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><blockquote>
+<p>1<br><br>2<br><br>3<br><br>4<br><br>100000<br></p>
+</blockquote>
+<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><blockquote>
+<p>1<br><br>2<br><br>3<br><br>5<br><br>537501<br></p>
+</blockquote>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
+<p>熟悉的斐波那契数列，不过每题都有些不一样的坑<br><br>别的都没什么，取余之后如果前几位都是0，输出的时候就会不足6位<br><br>使用String.format(“%06d”,fibo[n])，若不足6位则在数字前面添加0直到为6位数<br></p>
+<ul>
+<li>%0：添加零<br></li>
+<li>6：要加到几位<br></li>
+<li>d:整数类型（十进制）<br></li>
+<li>fibo[n]:想要更改的数 </li>
+</ul>
+</blockquote>
+<pre><code>import java.io.BufferedInputStream;
+import java.util.Scanner;
+
+public class Second_1005_2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(new BufferedInputStream(System.in));
+        int[] fibo = new int[100001];
+        fibo[0] = 1;
+        fibo[1] = 1;
+        int count =0;
+        for (int i = 2; i &lt; 100001; i++) {
+            if ((fibo[i - 1] + fibo[i - 2] + &quot;&quot;).length() &gt; 6) {
+                if (count == 0){
+                    fibo[i] = (fibo[i - 1] + fibo[i - 2]) % 1000000;
+                    count = i;
+                    continue;
+                }
+                fibo[i] = (fibo[i - 1] + fibo[i - 2]) % 1000000;
+                continue;
+            }
+            fibo[i] = fibo[i - 1] + fibo[i - 2];
+        }
+        while (sc.hasNext()) {
+            int n = sc.nextInt();
+            if (n &lt; count){
+                System.out.println(fibo[n]);
+            }else {
+                System.out.println(String.format(&quot;%06d&quot;,fibo[n]));
+            }
+        }
+    }
+}</code></pre>
+            
+        </article>
+    </div>
+    
+    <div class="nexmoe-post">
         <a href="/2019/09/30/Markdown语法整理/">
             <div class="nexmoe-post-cover mdui-ripple"> 
                 
@@ -836,89 +861,6 @@ public class second_1003 {
         </article>
     </div>
     
-    <div class="nexmoe-post">
-        <a href="/2019/09/30/1002-NowCoder数列/">
-            <div class="nexmoe-post-cover mdui-ripple"> 
-                
-                    <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg" alt="1002-NowCoder数列">
-                
-                <h1>1002-NowCoder数列</h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2019年09月30日</a>
-            <a><i class="nexmoefont icon-areachart"></i>327 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
-            
-                <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
-            
-            
-        </div>
-        <article>
-            
-            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>NowCoder最近在研究一个数列：<br></p>
-<ul>
-<li>F(0) = 7<br></li>
-<li>F(1) = 11<br></li>
-<li>F(n) = F(n-1) + F(n-2) (n≥2)<br><br>他称之为NowCoder数列。请你帮忙确认一下数列中第n个数是否是3的倍数。<br></li>
-</ul>
-</blockquote>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
-<p>输入包含多组数据。<br><br>每组数据包含一个整数n，(0≤n≤1000000)。<br></p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><p>对应每一组输入有一行输出。<br><br>如果F(n)是3的倍数，则输出“Yes”；否则输出“No”。<br></p>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><blockquote>
-<p>0<br><br>1<br><br>2<br><br>3<br><br>4<br><br>5<br></p>
-</blockquote>
-<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><blockquote>
-<p>No<br><br>No<br><br>Yes<br><br>No<br><br>No<br><br>No<br></p>
-</blockquote>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<ul>
-<li>F(n) = F(n-1) + F(n-2) (n≥2)</li>
-<li>F(0) = 7  &#8195;&#8195;&#8195;&#8195;&#8195;&#8195;余1</li>
-<li>F(1) = 11 &#8195;&#8195;&#8195;&#8195;&#8195;&ensp;余2</li>
-<li>F(2) = F(1)+F(0) = 18 余0</li>
-<li>F(3) = 29 &#8195;&#8195;&#8195;&#8195;&#8195;&ensp;余2</li>
-<li>F(4) = 47 &#8195;&#8195;&#8195;&#8195;&#8195;&ensp;余2</li>
-<li>F(5) = 76 &#8195;&#8195;&#8195;&#8195;&#8195;&ensp;余1</li>
-<li>F(6) = 123 &#8195;&#8195;&#8195;&#8195;&ensp;&ensp;余0</li>
-<li>F(7) = 199 &#8195;&#8195;&#8195;&#8195;&ensp;&ensp;余1</li>
-<li>F(8) = 322 &#8195;&#8195;&#8195;&#8195;&ensp;&ensp;余1</li>
-<li>F(9) = 521 &#8195;&#8195;&#8195;&#8195;&ensp;&ensp;余2</li>
-<li>F(10)= 843&#8195;&#8195;&#8195;&#8195;&ensp;&ensp;余0<br>&#8195;<br></li>
-<li>凑就完事了嗷 n =2,6,10,14….能被3整除</li>
-<li>即 n % 4 ==2 时</li>
-<li>然而这题是难在java使用超时，加了一条略过0,1判断使我勉强在6000ms的时间内，最后的用时是5787ms。<br>&#8195;</li>
-</ul>
-</blockquote>
-<hr>
-<hr>
-<pre><code>import java.io.BufferedInputStream;
-import java.util.Scanner;
-
-public class second_1002 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(new BufferedInputStream(System.in));
-        while(sc.hasNext()){
-            int input = sc.nextInt();
-            if( input == 0 || input == 1){
-                System.out.println(&quot;No&quot;);
-            }else{
-                if (input % 4 == 2){
-                    System.out.println(&quot;Yes&quot;);
-                }else {
-                    System.out.println(&quot;No&quot;);
-                }
-            }
-        }
-    }
-}</code></pre>
-            
-        </article>
-    </div>
-    
 </section>
 
     <nav class="nexmoe-page-nav">
@@ -940,7 +882,7 @@ public class second_1002 {
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1570028746069"></script>
+<script src="/js/app.js?v=1570530559456"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
