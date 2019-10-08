@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_ezdnzsotqc.css">
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1570531152753">
+  <link rel="stylesheet" href="/css/style.css?v=1570533011705">
    <!-- 爆炸红心效果 -->
 
  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
@@ -210,54 +210,9 @@
         </div>
         <article>
             
-            <a id="more"></a>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>nowcoder利用业余时间养了一窝蜜蜂，因为空间比较小，蜂房只有两排，如下图所示：<br><img src="https://i.loli.net/2019/10/02/Siw31H65TWM7sne.jpg" alt="路线" title="路线"><br><br>如你所见，蜜蜂的蜂房是正六边形，假设蜜蜂只会从左往右爬，即从1号蜂房能爬到2号和3号；从6号蜂房能爬到7号和8号……<br><br>现给出两个蜂房的编号a和b，要求计算蜂房a的蜜蜂爬到蜂房b有几条不同路线。</p>
-</blockquote>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
-<ol>
-<li>输入的第一行是一个整数n</li>
-<li>接下来n行数据，每行一组测试用例</li>
-<li>每组测试用例包含两个正整数a和b，(0 &lt; a &lt; b &lt; 2^31)</li>
-</ol>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>每组用例的结果单独输出一行。输出数据结果范围是 [0, 2^63)。</p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><p>3<br><br>1 2<br><br>3 6<br><br>99 100<br></p>
-<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><p>1<br><br>3<br><br>1</p>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<ul>
-<li>又双叒来了</li>
-<li><img src="https://i.loli.net/2019/10/02/N7BrKhXTJMs8mQp.png" alt="抽象图解" title="抽象图解"><br></li>
-</ul>
-</blockquote>
-<pre><code>import java.io.BufferedInputStream;
-import java.util.Scanner;
-
-public class Second_1009 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(new BufferedInputStream(System.in));
-        long[] fibo = new long[1001];
-        fibo[1] = 1;
-        fibo[2] = 2;
-        double max = Math.pow(2,63);
-        for (int i = 3; i &lt; 1001 ; i++) {
-            fibo[i] = fibo[i-1]+fibo[i-2];
-        }
-        int n = sc.nextInt();
-        int count =0;
-        while(count &lt; n){
-            int a = sc.nextInt();
-            int b = sc.nextInt();
-            int distance = b - a;
-            count++;
-            System.out.println(fibo[distance]);
-        }
-    }
-}</code></pre>
+            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述
             
-        </article>
+        </h2></article>
     </div>
     
     <div class="nexmoe-post">
@@ -280,43 +235,9 @@ public class Second_1009 {
         </div>
         <article>
             
-            <a id="more"></a>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>NowCoder小时候走路喜欢蹦蹦跳跳，他最喜欢在楼梯上跳来跳去。<br><br> 但年幼的他一次只能走上一阶或者一下子蹦上两阶。<br><br> 现在一共有N阶台阶，请你计算一下NowCoder从第0阶到第N阶共有几种走法。<br></p>
-</blockquote>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
-<p>输入包括多组数据。每组数据包括一个整数n, (1≤n≤90)。</p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>对应每个输入包括一个输出。<br><br>为redraiment到达第n阶不同走法的数量。</p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><p>1<br><br>2</p>
-<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><p>1<br><br>2</p>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<ul>
-<li>又双来了</li>
-</ul>
-</blockquote>
-<pre><code>import java.io.BufferedInputStream;
-import java.util.Scanner;
-
-public class Second_1008 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(new BufferedInputStream(System.in));
-        long[] steps = new long[91];
-        steps[1] =1;
-        steps[2] =2;
-        for (int i = 3; i &lt;91 ; i++) {
-            steps[i] = steps[i-1]+ steps[i-2];
-        }
-        while (sc.hasNext()){
-            int n = sc.nextInt();
-            System.out.println(steps[n]);
-        }
-    }
-}</code></pre>
+            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述
             
-        </article>
+        </h2></article>
     </div>
     
     <div class="nexmoe-post">
@@ -339,52 +260,9 @@ public class Second_1008 {
         </div>
         <article>
             
-            <a id="more"></a>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>有一头母牛，它每年年初生一头小母牛。每头小母牛从第四个年头开始，每年年初也生一头小母牛。请编程实现在第n年的时候，共有多少头母牛？</p>
-</blockquote>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
-<p>输入数据由多个测试实例组成，每个测试实例占一行，包括一个整数n(0&lt;n&lt;55)，n的含义如题目中描述。</p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>对于每个测试实例，输出在第n年的时候母牛的数量。<br><br>每个输出占一行。</p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><blockquote>
-<p>2<br><br>4<br><br>5</p>
-</blockquote>
-<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><blockquote>
-<p>2<br><br>4<br><br>6</p>
-</blockquote>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<ul>
-<li>又来了</li>
-<li>做牛客网的题，不用想。先把前面几次结果算出来，然后找规律。</li>
-<li>然后发现这个题目很蠢，按照他的说法，如果num[5]是输出6，新生的牛直接算进去的话</li>
-<li>num[1]应该是两头，然后虽然他错了，但还是有公式的f(n) = f(n-1)+f(n-3) (n&gt;3)</li>
-<li>硬算出来的。</li>
-</ul>
-</blockquote>
-<pre><code>import java.io.BufferedInputStream;
-import java.util.Scanner;
-
-public class Second_1007 {
-    public static void main(String[] args){
-        Scanner sc = new Scanner(new BufferedInputStream(System.in));
-        int[] num=new int[55];
-        num[1]=1;
-        num[2]=2;
-        num[3]=3;
-        while(sc.hasNext()){
-            int n=sc.nextInt();
-            for(int i=4;i&lt;55;i++){
-                num[i]=num[i-1]+num[i-3];
-            }
-            System.out.println(num[n]);
-        }
-    }
-}</code></pre>
+            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述
             
-        </article>
+        </h2></article>
     </div>
     
     <div class="nexmoe-post">
@@ -407,79 +285,9 @@ public class Second_1007 {
         </div>
         <article>
             
-            <a id="more"></a>
-
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>星际战争开展了100年之后，NowCoder终于破译了外星人的密码！他们的密码是一串整数，通过一张表里的信息映射成最终4位密码。表的规则是：n对应的值是矩阵X的n次方的左上角，如果这个数不足4位则用0填充，如果大于4位的则只输出最后4位。</p>
-</blockquote>
-<blockquote>
-<p>|1 1|^n =&gt; |Xn ..|</p>
-</blockquote>
-<blockquote>
-<p>|1 0|      |.. ..|</p>
-</blockquote>
-<blockquote>
-<p>例如n=2时，</p>
-</blockquote>
-<blockquote>
-<p>|1 1|^2 =&gt; |1 1| * |1 1| =&gt; |2 1|</p>
-</blockquote>
-<blockquote>
-<p>|1 0|      |1 0|   |1 0|    |1 1|</p>
-</blockquote>
-<blockquote>
-<p>即2对应的数是“0002”。</p>
-</blockquote>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
-<p>输入有多组数据。<br><br>每组数据两行：第一行包含一个整数n (1≤n≤100)；第二行包含n个正整数Xi (1≤Xi≤10000)</p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>对应每一组输入，输出一行相应的密码。</p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><blockquote>
-<p>6<br><br>18 15 21 13 25 27<br><br>5<br><br>1 10 100 1000 10000<br></p>
-</blockquote>
-<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><blockquote>
-<p>418109877711037713937811<br><br>00010089410135017501</p>
-</blockquote>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<ul>
-<li>这道题目的描述一塌糊涂，如果不是看输出例子和斐波那契数列看多了，我是绝对不会知道该怎么做的</li>
-<li>思路为先整一个数组存储斐波那契数列，因为数字非常大。在存储阶段就进行取余，int的大小也绝对够用。</li>
-<li>然后用到StringBuilder连接要输出的内容和String.format(“%04d”,n）补足4位。</li>
-<li>都连接好了之后toString()输出</li>
-</ul>
-</blockquote>
-<pre><code>import java.io.BufferedInputStream;
-import java.util.Scanner;
-
-public class Second_1006 {
-
-    public static int fibo[] = new int[10001];
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(new BufferedInputStream(System.in));
-        fibo[0]=1;
-        fibo[1]=1;
-        for (int i = 2; i &lt; 10001; i++) {
-            fibo[i] = fibo[i - 1] + fibo[i - 2];
-            if (fibo[i] &gt; 9999){
-                fibo[i] = fibo[i] % 10000;
-            }
-        }
-        while (sc.hasNext()){
-            int n = sc.nextInt();
-            StringBuilder sb = new StringBuilder();
-            for (int i = 0; i &lt;n ; i++) {
-                int num = sc.nextInt();
-                sb.append(String.format(&quot;%04d&quot;,fibo[num]));
-            }
-            System.out.println(sb.toString());
-        }
-    }
-}</code></pre>
+            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述
             
-        </article>
+        </h2></article>
     </div>
     
     <div class="nexmoe-post">
@@ -502,65 +310,9 @@ public class Second_1006 {
         </div>
         <article>
             
-            <a id="more"></a>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>NowCoder号称自己已经记住了1-100000之间所有的斐波那契数。<br><br>为了考验他，我们随便出一个数n，让他说出第n个斐波那契数。<br>当然，斐波那契数会很大。因此，如果第n个斐波那契数不到6位，则说出该数；否则只说出最后6位。<br></p>
-</blockquote>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
-<p>输入有多组数据。<br><br>每组数据一行，包含一个整数n (1≤n≤100000)。</p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>对应每一组输入，输出第n个斐波那契数的最后6位。</p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><blockquote>
-<p>1<br><br>2<br><br>3<br><br>4<br><br>100000<br></p>
-</blockquote>
-<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><blockquote>
-<p>1<br><br>2<br><br>3<br><br>5<br><br>537501<br></p>
-</blockquote>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<p>熟悉的斐波那契数列，不过每题都有些不一样的坑<br><br>别的都没什么，取余之后如果前几位都是0，输出的时候就会不足6位<br><br>使用String.format(“%06d”,fibo[n])，若不足6位则在数字前面添加0直到为6位数<br></p>
-<ul>
-<li>%0：添加零<br></li>
-<li>6：要加到几位<br></li>
-<li>d:整数类型（十进制）<br></li>
-<li>fibo[n]:想要更改的数 </li>
-</ul>
-</blockquote>
-<pre><code>import java.io.BufferedInputStream;
-import java.util.Scanner;
-
-public class Second_1005_2 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(new BufferedInputStream(System.in));
-        int[] fibo = new int[100001];
-        fibo[0] = 1;
-        fibo[1] = 1;
-        int count =0;
-        for (int i = 2; i &lt; 100001; i++) {
-            if ((fibo[i - 1] + fibo[i - 2] + &quot;&quot;).length() &gt; 6) {
-                if (count == 0){
-                    fibo[i] = (fibo[i - 1] + fibo[i - 2]) % 1000000;
-                    count = i;
-                    continue;
-                }
-                fibo[i] = (fibo[i - 1] + fibo[i - 2]) % 1000000;
-                continue;
-            }
-            fibo[i] = fibo[i - 1] + fibo[i - 2];
-        }
-        while (sc.hasNext()) {
-            int n = sc.nextInt();
-            if (n &lt; count){
-                System.out.println(fibo[n]);
-            }else {
-                System.out.println(String.format(&quot;%06d&quot;,fibo[n]));
-            }
-        }
-    }
-}</code></pre>
+            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述
             
-        </article>
+        </h2></article>
     </div>
     
     <div class="nexmoe-post">
@@ -583,57 +335,9 @@ public class Second_1005_2 {
         </div>
         <article>
             
-            <a id="more"></a>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>NowCoder开了一家早餐店，这家店的客人都有个奇怪的癖好：他们只要来这家店吃过一次早餐，就会每天都过来；并且，所有人在这家店吃了两天早餐后，接下来每天都会带一位新朋友一起来品尝。<br>于是，这家店的客人从最初一个人发展成浩浩荡荡成百上千人：1、1、2、3、5……<br>现在，NowCoder想请你帮忙统计一下，某一段时间范围那他总共卖出多少份早餐（假设每位客人只吃一份早餐）。</p>
-</blockquote>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
-<p>测试数据包括多组。<br><br>每组数据包含两个整数from和to(1≤from≤to≤80)，分别代表开店的第from天和第to天。</p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>对应每一组输入，输出从from到to这些天里（包含from和to两天），需要做多少份早餐。</p>
-</blockquote>
-<h2 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h2><blockquote>
-<p>1 &ensp;10<br><br>2 &#8195;8<br><br>36 80<br></p>
-</blockquote>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<ul>
-<li>牛客网也太喜欢斐波那契数列了吧</li>
-<li>虽然感觉能轻松拿下，但实际还是留了一下坑，我也想了一段时间。</li>
-<li>因为斐波那契数列从第三项才能使用公式F(2)=1, F(n)=F(n-1)+F(n-2)</li>
-<li>结果也看到在循环外给第一项，第二项赋值就行了</li>
-</ul>
-</blockquote>
-<hr>
-<hr>
-<pre><code>import java.io.BufferedInputStream;
-import java.util.Scanner;
-
-public class Second_1004 {
-    public static void main(String[] args) {
-        long[] arr = new long[80];
-        arr[0] = 1;
-        arr[1] = 1;
-        for(int i = 0;i &lt; arr.length;i++) {
-            //判断：当打印第三个数前，给第三个数赋值
-            if(i &gt; 1) {
-                arr[i] = arr[i - 2] + arr[i - 1];
-            }
-        }
-        Scanner sc = new Scanner(new BufferedInputStream(System.in));
-        while(sc.hasNext()){
-            int from = sc.nextInt();
-            int to = sc.nextInt();
-            long breakfastNum = 0;
-            for (int day = from-1;day &lt; to;day++ ){
-                breakfastNum += arr[day];
-            }
-            System.out.println(breakfastNum);
-        }
-    }
-}</code></pre>
+            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述
             
-        </article>
+        </h2></article>
     </div>
     
     <div class="nexmoe-post">
@@ -656,52 +360,9 @@ public class Second_1004 {
         </div>
         <article>
             
-            <a id="more"></a>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>一只成熟的兔子每天能产下一胎兔子。每只小兔子的成熟期是一天。 某人领养了一只小兔子，请问第N天以后，他将会得到多少只兔子。<br></p>
-</blockquote>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
-<p>测试数据包括多组，每组一行，为整数n(1≤n≤90)。</p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>对应输出第n天有几只兔子(假设没有兔子死亡现象)。</p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><blockquote>
-<p>1<br><br>2<br></p>
-</blockquote>
-<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><blockquote>
-<p>1<br><br>2<br></p>
-</blockquote>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<ul>
-<li>斐波那契数列</li>
-<li>数列从第3项开始，每一项都等于前两项之和。</li>
-</ul>
-</blockquote>
-<hr>
-<hr>
-<pre><code>import java.io.BufferedInputStream;
-import java.util.Scanner;
-
-public class second_1003 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(new BufferedInputStream(System.in));
-        while(sc.hasNext()){
-            long adultRabbits = 0;
-            long youngRabbits = 1;
-            long sum =0;
-            int day = sc.nextInt();
-            for (int i = 0; i &lt;day ; i++) {
-                sum = adultRabbits + youngRabbits;
-                adultRabbits = youngRabbits;
-                youngRabbits = sum;
-            }
-            System.out.println(sum);
-        }
-    }
-}</code></pre>
+            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述
             
-        </article>
+        </h2></article>
     </div>
     
     <div class="nexmoe-post">
@@ -724,68 +385,9 @@ public class second_1003 {
         </div>
         <article>
             
-            <a id="more"></a>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>NowCoder最近在研究一个数列：<br></p>
-<ul>
-<li>F(0) = 7<br></li>
-<li>F(1) = 11<br></li>
-<li>F(n) = F(n-1) + F(n-2) (n≥2)<br><br>他称之为NowCoder数列。请你帮忙确认一下数列中第n个数是否是3的倍数。<br></li>
-</ul>
-</blockquote>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
-<p>输入包含多组数据。<br><br>每组数据包含一个整数n，(0≤n≤1000000)。<br></p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><p>对应每一组输入有一行输出。<br><br>如果F(n)是3的倍数，则输出“Yes”；否则输出“No”。<br></p>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><blockquote>
-<p>0<br><br>1<br><br>2<br><br>3<br><br>4<br><br>5<br></p>
-</blockquote>
-<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><blockquote>
-<p>No<br><br>No<br><br>Yes<br><br>No<br><br>No<br><br>No<br></p>
-</blockquote>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<ul>
-<li>F(n) = F(n-1) + F(n-2) (n≥2)</li>
-<li>F(0) = 7  &#8195;&#8195;&#8195;&#8195;&#8195;&#8195;余1</li>
-<li>F(1) = 11 &#8195;&#8195;&#8195;&#8195;&#8195;&ensp;余2</li>
-<li>F(2) = F(1)+F(0) = 18 余0</li>
-<li>F(3) = 29 &#8195;&#8195;&#8195;&#8195;&#8195;&ensp;余2</li>
-<li>F(4) = 47 &#8195;&#8195;&#8195;&#8195;&#8195;&ensp;余2</li>
-<li>F(5) = 76 &#8195;&#8195;&#8195;&#8195;&#8195;&ensp;余1</li>
-<li>F(6) = 123 &#8195;&#8195;&#8195;&#8195;&ensp;&ensp;余0</li>
-<li>F(7) = 199 &#8195;&#8195;&#8195;&#8195;&ensp;&ensp;余1</li>
-<li>F(8) = 322 &#8195;&#8195;&#8195;&#8195;&ensp;&ensp;余1</li>
-<li>F(9) = 521 &#8195;&#8195;&#8195;&#8195;&ensp;&ensp;余2</li>
-<li>F(10)= 843&#8195;&#8195;&#8195;&#8195;&ensp;&ensp;余0<br>&#8195;<br></li>
-<li>凑就完事了嗷 n =2,6,10,14….能被3整除</li>
-<li>即 n % 4 ==2 时</li>
-<li>然而这题是难在java使用超时，加了一条略过0,1判断使我勉强在6000ms的时间内，最后的用时是5787ms。<br>&#8195;</li>
-</ul>
-</blockquote>
-<hr>
-<hr>
-<pre><code>import java.io.BufferedInputStream;
-import java.util.Scanner;
-
-public class second_1002 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(new BufferedInputStream(System.in));
-        while(sc.hasNext()){
-            int input = sc.nextInt();
-            if( input == 0 || input == 1){
-                System.out.println(&quot;No&quot;);
-            }else{
-                if (input % 4 == 2){
-                    System.out.println(&quot;Yes&quot;);
-                }else {
-                    System.out.println(&quot;No&quot;);
-                }
-            }
-        }
-    }
-}</code></pre>
+            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述
             
-        </article>
+        </h2></article>
     </div>
     
     <div class="nexmoe-post">
@@ -808,115 +410,9 @@ public class second_1002 {
         </div>
         <article>
             
-            <a id="more"></a>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>鲁宾逊先生有一只宠物猴，名叫多多。这天，他们两个正沿着乡间小路散步，突然发现路边的告示牌上贴着一张小小的纸条：“欢迎免费品尝我种的花生！——熊字”。<br><br>鲁宾逊先生和多多都很开心，因为花生正是他们的最爱。在告示牌背后，路边真的有一块花生田，花生植株整齐地排列成矩形网格。有经验的多多一眼就能看出，每棵花生植株下的花生有多少。为了训练多多的算术，鲁宾逊先生说:“你先找出花生最多的植株，去采摘它的花生;然后再找出剩下的植株里花生最多的，去采摘它的花生;依此类推，不过你一定要在我限定的时间内回到路边。”<br><br>我们假定多多在每个单位时间内,可以做下列四件事情中的一件：<br></p>
-<ol>
-<li>从路边跳到最靠近路边（即第一行）的某棵花生植株；<br></li>
-<li>从一棵植株跳到前后左右与之相邻的另一棵植株；<br></li>
-<li>采摘一棵植株下的花生；<br></li>
-<li>从最靠近路边（即第一行）的某棵花生植株跳回路边。<br><br>现在给定一块花生田的大小和花生的分布，请问在限定时间内，多多最多可以采到多少个花生？<br></li>
-</ol>
-<p>注意可能只有部分植株下面长有花生，假设这些植株下的花生个数各不相同。例如花生田里只有位于(2, 5), (3, 7), (4, 2), (5, 4)的植株下长有花生，个数分别为 13, 7, 15, 9。多多在 21 个单位时间内，只能经过(4, 2)、(2, 5)、(5, 4)，最多可以采到 37 个花生。</p>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p>输入包含多组数据，每组数据第一行包括三个整数 M（1≤M≤20）、    n（1≤N≤20）和 K（0≤K≤1000），用空格隔开；表示花生田的大小为M * N，多多采花生的限定时间为 K个单位时间。<br>紧接着 M 行，每行包括 N 个自然数 P（0≤P≤500），用空格隔开；表 示花生田里植株下花生的数目，并且除了0（没有花生），其他所有植株下花生的数目都不相同。</p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>对应每一组数据，输出一个整数，即在限定时间内，多多最多可以采到花生的个数。</p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
-<p>6 7 21<br><br>0 0 0 0 0 0 0<br><br>0 0 0 0 13 0 0<br><br>0 0 0 0 0 0 7<br><br>0 15 0 0 0 0 0<br><br>0 0 0 9 0 0 0<br><br>0 0 0 0 0 0 0<br></p>
-</blockquote>
-<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
-<p>37</p>
-</blockquote>
-<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li>我傻了<br><br>&#8195;</li>
-</ul>
-<hr>
-<hr>
-<br>
-<!-- lang:java-->
-
-<pre><code>import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Scanner;
-import java.io.BufferedInputStream;
-
-public class second_1001_2 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(new BufferedInputStream(System.in)); //传说能降低scanner用时
-        while(sc.hasNext()){
-            int y = sc.nextInt(); //竖列
-            int x = sc.nextInt(); //横行
-            int totalTime = sc.nextInt(); //限定时间
-            //创建HashMap，存放花生田里有花生的植株信息
-            HashMap&lt;Integer, Node&gt; map = new HashMap&lt;Integer,Node&gt;();
-            //初始化花生田
-            for (int i = 0; i &lt; y; i++) {
-                for (int j =0;j &lt; x;j++){
-                    int num = sc.nextInt();
-                    if(num != 0){
-                        map.put(num,new Node(i,j,num));
-                    }
-                }
-            }
-            //定义排序规则，按照花生数量从多到少降序排序
-            Comparator&lt;Integer&gt; cmp = new Comparator&lt;Integer&gt;() {
-                @Override
-                public int compare(Integer o1, Integer o2) {
-                    return o2 - o1;
-                }
-            };
-            //从Hashmap集合中取出键-花生数量放入ArrayList数组中
-            ArrayList&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;(map.keySet());
-            if (list.isEmpty()) System.out.println(0);
-            else{
-                Collections.sort(list, cmp); //降序排序list
-                //定义list索引
-                int index = 0;
-                Node node = map.get(list.get(index++)); //获取零list索引的值，map中key对应的value，即y，x，num
-                // 定义移动时间，采摘时间，离开时间
-                int moveTime = node.y + 1;//第一次特化摘花生移动只用计算纵向距离，+1为计算机从零开始计算
-                int takeTime = 1, leavlTime = node.y + 1; //采摘消耗1单位时间，离开与第一次移动一样
-                int sum =0; //记录花生数量总和
-                //判断移动采摘返程是否超时
-                while (totalTime - moveTime - takeTime - leavlTime &gt;= 0) {
-                    //未超时，总时间减去移动和采摘所要花费的时间
-                    totalTime = totalTime - moveTime - takeTime;
-                    //累加花生数量
-                    sum += node.num;
-                    //判断有无下一植株,有则结束循环
-                    if (index &gt;= list.size()) break;
-                    //获取下一植株信息,结束后索引+1
-                    Node nextNode = map.get(list.get(index++));
-                    // 获取移动到下一植株的时间
-                    moveTime = Math.abs(node.y - nextNode.y)
-                            + Math.abs(node.x - nextNode.x); //绝对值
-                    // 获取从下一植株离开的时间
-                    leavlTime = nextNode.y + 1;
-                    node = nextNode; //下个植株标记为这个植株，进入下次循环
-                }
-                System.out.println(sum);
-            }
-        }
-    }
-}
-class Node {
-    int y;
-    int x;
-    int num;
-
-    public Node(int y, int x, int num){
-        super();
-        this.y = y;
-        this.x = x;
-        this.num = num;
-    }
-}</code></pre>
+            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述
             
-        </article>
+        </h2></article>
     </div>
     
 </section>
@@ -936,7 +432,7 @@ class Node {
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1570531152760"></script>
+<script src="/js/app.js?v=1570533011718"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 

@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_ezdnzsotqc.css">
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1570531152700">
+  <link rel="stylesheet" href="/css/style.css?v=1570533011406">
    <!-- 爆炸红心效果 -->
 
  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
@@ -210,124 +210,10 @@
         </div>
         <article>
             
-            <a id="more"></a>
-<h1 id="常规类型的格式化"><a href="#常规类型的格式化" class="headerlink" title="常规类型的格式化"></a>常规类型的格式化</h1><blockquote>
-<p>String类的format()方法用于创建格式化的字符串以及连接多个字符串对象。熟悉C语言的同学应该记得C语言的sprintf()方法，两者有类似之处。format()方法有两种重载形式。<br><br>format(String format, Object… args) 新字符串使用本地语言环境，制定字符串格式和参数生成格式化的新字符串。<br><br>format(Locale locale, String format, Object… args) 使用指定的语言环境，制定字符串格式和参数生成格式化的字符串。<br><br>显示不同转换符实现不同数据类型到字符串的转换，如图所示<br></p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th align="center"><strong>转换符</strong></th>
-<th align="center"><strong>说明</strong></th>
-<th align="center"><strong>示例</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">%s</td>
-<td align="center">字符串类型</td>
-<td align="center">“mingrisoft”</td>
-</tr>
-<tr>
-<td align="center">%c</td>
-<td align="center">字符类型</td>
-<td align="center">‘m’</td>
-</tr>
-<tr>
-<td align="center">%b</td>
-<td align="center">布尔类型</td>
-<td align="center">true</td>
-</tr>
-<tr>
-<td align="center">%d</td>
-<td align="center">整数类型（十进制）</td>
-<td align="center">99</td>
-</tr>
-<tr>
-<td align="center">%x</td>
-<td align="center">整数类型（十六进制）</td>
-<td align="center">FF</td>
-</tr>
-<tr>
-<td align="center">%o</td>
-<td align="center">整数类型（八进制）</td>
-<td align="center">77</td>
-</tr>
-<tr>
-<td align="center">%f</td>
-<td align="center">浮点类型</td>
-<td align="center">99.99</td>
-</tr>
-<tr>
-<td align="center">%a</td>
-<td align="center">十六进制浮点类型</td>
-<td align="center">FF.35AE</td>
-</tr>
-<tr>
-<td align="center">%e</td>
-<td align="center">指数类型</td>
-<td align="center">9.38e+5</td>
-</tr>
-<tr>
-<td align="center">%g</td>
-<td align="center">通用浮点类型（f和e类型中较短的）</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">%h</td>
-<td align="center">散列码</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">%%</td>
-<td align="center">百分比类型</td>
-<td align="center">％</td>
-</tr>
-<tr>
-<td align="center">%n</td>
-<td align="center">换行符</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">%tx</td>
-<td align="center">日期与时间类型（x代表不同的日期与时间转换符</td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<h2 id="输入内容"><a href="#输入内容" class="headerlink" title="输入内容"></a>输入内容</h2><pre><code>public static void main(String[] args) {  
-    String str=null;  
-    str=String.format(&quot;Hi,%s&quot;, &quot;王力&quot;);  
-    System.out.println(str);  
-    str=String.format(&quot;Hi,%s:%s.%s&quot;, &quot;王南&quot;,&quot;王力&quot;,&quot;王张&quot;);            
-    System.out.println(str);                           
-    System.out.printf(&quot;字母a的大写是：%c %n&quot;, &#39;A&#39;);  
-    System.out.printf(&quot;3&gt;7的结果是：%b %n&quot;, 3&gt;7);  
-    System.out.printf(&quot;100的一半是：%d %n&quot;, 100/2);  
-    System.out.printf(&quot;100的16进制数是：%x %n&quot;, 100);  
-    System.out.printf(&quot;100的8进制数是：%o %n&quot;, 100);  
-    System.out.printf(&quot;50元的书打8.5折扣是：%f 元%n&quot;, 50*0.85);  
-    System.out.printf(&quot;上面价格的16进制数是：%a %n&quot;, 50*0.85);  
-    System.out.printf(&quot;上面价格的指数表示：%e %n&quot;, 50*0.85);  
-    System.out.printf(&quot;上面价格的指数和浮点数结果的长度较短的是：%g %n&quot;, 50*0.85);  
-    System.out.printf(&quot;上面的折扣是%d%% %n&quot;, 85);  
-    System.out.printf(&quot;字母A的散列码是：%h %n&quot;, &#39;A&#39;);  
-}</code></pre><h2 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h2><pre><code>Hi,王力  
-Hi,王南:王力.王张  
-字母a的大写是：A   
-3&gt;7的结果是：false   
-100的一半是：50   
-100的16进制数是：64   
-100的8进制数是：144   
-50元的书打8.5折扣是：42.500000 元  
-上面价格的16进制数是：0x1.54p5   
-上面价格的指数表示：4.250000e+01   
-上面价格的指数和浮点数结果的长度较短的是：42.5000   
-上面的折扣是85%   
-字母A的散列码是：41</code></pre><h1 id="搭配转换符的标志"><a href="#搭配转换符的标志" class="headerlink" title="搭配转换符的标志"></a>搭配转换符的标志</h1><h1 id="日期和事件字符串格式化"><a href="#日期和事件字符串格式化" class="headerlink" title="日期和事件字符串格式化"></a>日期和事件字符串格式化</h1><blockquote>
-<p>在程序界面中经常需要显示时间和日期，但是其显示的 格式经常不尽人意，需要编写大量的代码经过各种算法才得到理想的日期与时间格式。字符串格式中还有%tx转换符没有详细介绍，它是专门用来格式化日期和时 间的。%tx转换符中的x代表另外的处理日期和时间格式的转换符，它们的组合能够将日期和时间格式化成多种格式。<br>常见日期和时间组合的格式，如图所示。</p>
-</blockquote>
-
+            <h1 id="常规类型的格式化"><a href="#常规类型的格式化" class="headerlink" title="常规类型的格式化"></a>常规类型的格式化</h1><blockquote>
+<p>String类的format()方法用于创建格式化的字符串以及连接多个字符串对象。
             
-        </article>
+        </p></blockquote></article>
     </div>
     
     <div class="nexmoe-post">
@@ -350,54 +236,9 @@ Hi,王南:王力.王张
         </div>
         <article>
             
-            <a id="more"></a>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>nowcoder利用业余时间养了一窝蜜蜂，因为空间比较小，蜂房只有两排，如下图所示：<br><img src="https://i.loli.net/2019/10/02/Siw31H65TWM7sne.jpg" alt="路线" title="路线"><br><br>如你所见，蜜蜂的蜂房是正六边形，假设蜜蜂只会从左往右爬，即从1号蜂房能爬到2号和3号；从6号蜂房能爬到7号和8号……<br><br>现给出两个蜂房的编号a和b，要求计算蜂房a的蜜蜂爬到蜂房b有几条不同路线。</p>
-</blockquote>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
-<ol>
-<li>输入的第一行是一个整数n</li>
-<li>接下来n行数据，每行一组测试用例</li>
-<li>每组测试用例包含两个正整数a和b，(0 &lt; a &lt; b &lt; 2^31)</li>
-</ol>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>每组用例的结果单独输出一行。输出数据结果范围是 [0, 2^63)。</p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><p>3<br><br>1 2<br><br>3 6<br><br>99 100<br></p>
-<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><p>1<br><br>3<br><br>1</p>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<ul>
-<li>又双叒来了</li>
-<li><img src="https://i.loli.net/2019/10/02/N7BrKhXTJMs8mQp.png" alt="抽象图解" title="抽象图解"><br></li>
-</ul>
-</blockquote>
-<pre><code>import java.io.BufferedInputStream;
-import java.util.Scanner;
-
-public class Second_1009 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(new BufferedInputStream(System.in));
-        long[] fibo = new long[1001];
-        fibo[1] = 1;
-        fibo[2] = 2;
-        double max = Math.pow(2,63);
-        for (int i = 3; i &lt; 1001 ; i++) {
-            fibo[i] = fibo[i-1]+fibo[i-2];
-        }
-        int n = sc.nextInt();
-        int count =0;
-        while(count &lt; n){
-            int a = sc.nextInt();
-            int b = sc.nextInt();
-            int distance = b - a;
-            count++;
-            System.out.println(fibo[distance]);
-        }
-    }
-}</code></pre>
+            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述
             
-        </article>
+        </h2></article>
     </div>
     
     <div class="nexmoe-post">
@@ -420,43 +261,9 @@ public class Second_1009 {
         </div>
         <article>
             
-            <a id="more"></a>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>NowCoder小时候走路喜欢蹦蹦跳跳，他最喜欢在楼梯上跳来跳去。<br><br> 但年幼的他一次只能走上一阶或者一下子蹦上两阶。<br><br> 现在一共有N阶台阶，请你计算一下NowCoder从第0阶到第N阶共有几种走法。<br></p>
-</blockquote>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
-<p>输入包括多组数据。每组数据包括一个整数n, (1≤n≤90)。</p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>对应每个输入包括一个输出。<br><br>为redraiment到达第n阶不同走法的数量。</p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><p>1<br><br>2</p>
-<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><p>1<br><br>2</p>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<ul>
-<li>又双来了</li>
-</ul>
-</blockquote>
-<pre><code>import java.io.BufferedInputStream;
-import java.util.Scanner;
-
-public class Second_1008 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(new BufferedInputStream(System.in));
-        long[] steps = new long[91];
-        steps[1] =1;
-        steps[2] =2;
-        for (int i = 3; i &lt;91 ; i++) {
-            steps[i] = steps[i-1]+ steps[i-2];
-        }
-        while (sc.hasNext()){
-            int n = sc.nextInt();
-            System.out.println(steps[n]);
-        }
-    }
-}</code></pre>
+            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述
             
-        </article>
+        </h2></article>
     </div>
     
     <div class="nexmoe-post">
@@ -479,52 +286,9 @@ public class Second_1008 {
         </div>
         <article>
             
-            <a id="more"></a>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>有一头母牛，它每年年初生一头小母牛。每头小母牛从第四个年头开始，每年年初也生一头小母牛。请编程实现在第n年的时候，共有多少头母牛？</p>
-</blockquote>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
-<p>输入数据由多个测试实例组成，每个测试实例占一行，包括一个整数n(0&lt;n&lt;55)，n的含义如题目中描述。</p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>对于每个测试实例，输出在第n年的时候母牛的数量。<br><br>每个输出占一行。</p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><blockquote>
-<p>2<br><br>4<br><br>5</p>
-</blockquote>
-<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><blockquote>
-<p>2<br><br>4<br><br>6</p>
-</blockquote>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<ul>
-<li>又来了</li>
-<li>做牛客网的题，不用想。先把前面几次结果算出来，然后找规律。</li>
-<li>然后发现这个题目很蠢，按照他的说法，如果num[5]是输出6，新生的牛直接算进去的话</li>
-<li>num[1]应该是两头，然后虽然他错了，但还是有公式的f(n) = f(n-1)+f(n-3) (n&gt;3)</li>
-<li>硬算出来的。</li>
-</ul>
-</blockquote>
-<pre><code>import java.io.BufferedInputStream;
-import java.util.Scanner;
-
-public class Second_1007 {
-    public static void main(String[] args){
-        Scanner sc = new Scanner(new BufferedInputStream(System.in));
-        int[] num=new int[55];
-        num[1]=1;
-        num[2]=2;
-        num[3]=3;
-        while(sc.hasNext()){
-            int n=sc.nextInt();
-            for(int i=4;i&lt;55;i++){
-                num[i]=num[i-1]+num[i-3];
-            }
-            System.out.println(num[n]);
-        }
-    }
-}</code></pre>
+            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述
             
-        </article>
+        </h2></article>
     </div>
     
     <div class="nexmoe-post">
@@ -547,79 +311,9 @@ public class Second_1007 {
         </div>
         <article>
             
-            <a id="more"></a>
-
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>星际战争开展了100年之后，NowCoder终于破译了外星人的密码！他们的密码是一串整数，通过一张表里的信息映射成最终4位密码。表的规则是：n对应的值是矩阵X的n次方的左上角，如果这个数不足4位则用0填充，如果大于4位的则只输出最后4位。</p>
-</blockquote>
-<blockquote>
-<p>|1 1|^n =&gt; |Xn ..|</p>
-</blockquote>
-<blockquote>
-<p>|1 0|      |.. ..|</p>
-</blockquote>
-<blockquote>
-<p>例如n=2时，</p>
-</blockquote>
-<blockquote>
-<p>|1 1|^2 =&gt; |1 1| * |1 1| =&gt; |2 1|</p>
-</blockquote>
-<blockquote>
-<p>|1 0|      |1 0|   |1 0|    |1 1|</p>
-</blockquote>
-<blockquote>
-<p>即2对应的数是“0002”。</p>
-</blockquote>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
-<p>输入有多组数据。<br><br>每组数据两行：第一行包含一个整数n (1≤n≤100)；第二行包含n个正整数Xi (1≤Xi≤10000)</p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>对应每一组输入，输出一行相应的密码。</p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><blockquote>
-<p>6<br><br>18 15 21 13 25 27<br><br>5<br><br>1 10 100 1000 10000<br></p>
-</blockquote>
-<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><blockquote>
-<p>418109877711037713937811<br><br>00010089410135017501</p>
-</blockquote>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<ul>
-<li>这道题目的描述一塌糊涂，如果不是看输出例子和斐波那契数列看多了，我是绝对不会知道该怎么做的</li>
-<li>思路为先整一个数组存储斐波那契数列，因为数字非常大。在存储阶段就进行取余，int的大小也绝对够用。</li>
-<li>然后用到StringBuilder连接要输出的内容和String.format(“%04d”,n）补足4位。</li>
-<li>都连接好了之后toString()输出</li>
-</ul>
-</blockquote>
-<pre><code>import java.io.BufferedInputStream;
-import java.util.Scanner;
-
-public class Second_1006 {
-
-    public static int fibo[] = new int[10001];
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(new BufferedInputStream(System.in));
-        fibo[0]=1;
-        fibo[1]=1;
-        for (int i = 2; i &lt; 10001; i++) {
-            fibo[i] = fibo[i - 1] + fibo[i - 2];
-            if (fibo[i] &gt; 9999){
-                fibo[i] = fibo[i] % 10000;
-            }
-        }
-        while (sc.hasNext()){
-            int n = sc.nextInt();
-            StringBuilder sb = new StringBuilder();
-            for (int i = 0; i &lt;n ; i++) {
-                int num = sc.nextInt();
-                sb.append(String.format(&quot;%04d&quot;,fibo[num]));
-            }
-            System.out.println(sb.toString());
-        }
-    }
-}</code></pre>
+            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述
             
-        </article>
+        </h2></article>
     </div>
     
     <div class="nexmoe-post">
@@ -642,65 +336,9 @@ public class Second_1006 {
         </div>
         <article>
             
-            <a id="more"></a>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>NowCoder号称自己已经记住了1-100000之间所有的斐波那契数。<br><br>为了考验他，我们随便出一个数n，让他说出第n个斐波那契数。<br>当然，斐波那契数会很大。因此，如果第n个斐波那契数不到6位，则说出该数；否则只说出最后6位。<br></p>
-</blockquote>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
-<p>输入有多组数据。<br><br>每组数据一行，包含一个整数n (1≤n≤100000)。</p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>对应每一组输入，输出第n个斐波那契数的最后6位。</p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><blockquote>
-<p>1<br><br>2<br><br>3<br><br>4<br><br>100000<br></p>
-</blockquote>
-<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><blockquote>
-<p>1<br><br>2<br><br>3<br><br>5<br><br>537501<br></p>
-</blockquote>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<p>熟悉的斐波那契数列，不过每题都有些不一样的坑<br><br>别的都没什么，取余之后如果前几位都是0，输出的时候就会不足6位<br><br>使用String.format(“%06d”,fibo[n])，若不足6位则在数字前面添加0直到为6位数<br></p>
-<ul>
-<li>%0：添加零<br></li>
-<li>6：要加到几位<br></li>
-<li>d:整数类型（十进制）<br></li>
-<li>fibo[n]:想要更改的数 </li>
-</ul>
-</blockquote>
-<pre><code>import java.io.BufferedInputStream;
-import java.util.Scanner;
-
-public class Second_1005_2 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(new BufferedInputStream(System.in));
-        int[] fibo = new int[100001];
-        fibo[0] = 1;
-        fibo[1] = 1;
-        int count =0;
-        for (int i = 2; i &lt; 100001; i++) {
-            if ((fibo[i - 1] + fibo[i - 2] + &quot;&quot;).length() &gt; 6) {
-                if (count == 0){
-                    fibo[i] = (fibo[i - 1] + fibo[i - 2]) % 1000000;
-                    count = i;
-                    continue;
-                }
-                fibo[i] = (fibo[i - 1] + fibo[i - 2]) % 1000000;
-                continue;
-            }
-            fibo[i] = fibo[i - 1] + fibo[i - 2];
-        }
-        while (sc.hasNext()) {
-            int n = sc.nextInt();
-            if (n &lt; count){
-                System.out.println(fibo[n]);
-            }else {
-                System.out.println(String.format(&quot;%06d&quot;,fibo[n]));
-            }
-        }
-    }
-}</code></pre>
+            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述
             
-        </article>
+        </h2></article>
     </div>
     
     <div class="nexmoe-post">
@@ -723,13 +361,9 @@ public class Second_1005_2 {
         </div>
         <article>
             
-            <a id="more"></a>
-
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>作为一个新进程序员，使用Markdown写文档的时间还不是很多，对很多语法也不是很熟悉，网上的教程也很纷杂，很多并不是很完整。为了方便自己下次有需求时使用，遂对自己了解到的Markdown语法进行整理。<br><br><strong><em>注</em></strong>:由于编辑器的不同，其对Markdown语法的支持程度也不尽相同，本文所使用的编辑器是Markdownpad2。</p>
-<p># </p>
-
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>作为一个新进程序员，
             
-        </article>
+        </p></article>
     </div>
     
     <div class="nexmoe-post">
@@ -752,57 +386,9 @@ public class Second_1005_2 {
         </div>
         <article>
             
-            <a id="more"></a>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>NowCoder开了一家早餐店，这家店的客人都有个奇怪的癖好：他们只要来这家店吃过一次早餐，就会每天都过来；并且，所有人在这家店吃了两天早餐后，接下来每天都会带一位新朋友一起来品尝。<br>于是，这家店的客人从最初一个人发展成浩浩荡荡成百上千人：1、1、2、3、5……<br>现在，NowCoder想请你帮忙统计一下，某一段时间范围那他总共卖出多少份早餐（假设每位客人只吃一份早餐）。</p>
-</blockquote>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
-<p>测试数据包括多组。<br><br>每组数据包含两个整数from和to(1≤from≤to≤80)，分别代表开店的第from天和第to天。</p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>对应每一组输入，输出从from到to这些天里（包含from和to两天），需要做多少份早餐。</p>
-</blockquote>
-<h2 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h2><blockquote>
-<p>1 &ensp;10<br><br>2 &#8195;8<br><br>36 80<br></p>
-</blockquote>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<ul>
-<li>牛客网也太喜欢斐波那契数列了吧</li>
-<li>虽然感觉能轻松拿下，但实际还是留了一下坑，我也想了一段时间。</li>
-<li>因为斐波那契数列从第三项才能使用公式F(2)=1, F(n)=F(n-1)+F(n-2)</li>
-<li>结果也看到在循环外给第一项，第二项赋值就行了</li>
-</ul>
-</blockquote>
-<hr>
-<hr>
-<pre><code>import java.io.BufferedInputStream;
-import java.util.Scanner;
-
-public class Second_1004 {
-    public static void main(String[] args) {
-        long[] arr = new long[80];
-        arr[0] = 1;
-        arr[1] = 1;
-        for(int i = 0;i &lt; arr.length;i++) {
-            //判断：当打印第三个数前，给第三个数赋值
-            if(i &gt; 1) {
-                arr[i] = arr[i - 2] + arr[i - 1];
-            }
-        }
-        Scanner sc = new Scanner(new BufferedInputStream(System.in));
-        while(sc.hasNext()){
-            int from = sc.nextInt();
-            int to = sc.nextInt();
-            long breakfastNum = 0;
-            for (int day = from-1;day &lt; to;day++ ){
-                breakfastNum += arr[day];
-            }
-            System.out.println(breakfastNum);
-        }
-    }
-}</code></pre>
+            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述
             
-        </article>
+        </h2></article>
     </div>
     
     <div class="nexmoe-post">
@@ -825,52 +411,9 @@ public class Second_1004 {
         </div>
         <article>
             
-            <a id="more"></a>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>一只成熟的兔子每天能产下一胎兔子。每只小兔子的成熟期是一天。 某人领养了一只小兔子，请问第N天以后，他将会得到多少只兔子。<br></p>
-</blockquote>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
-<p>测试数据包括多组，每组一行，为整数n(1≤n≤90)。</p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>对应输出第n天有几只兔子(假设没有兔子死亡现象)。</p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><blockquote>
-<p>1<br><br>2<br></p>
-</blockquote>
-<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><blockquote>
-<p>1<br><br>2<br></p>
-</blockquote>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<ul>
-<li>斐波那契数列</li>
-<li>数列从第3项开始，每一项都等于前两项之和。</li>
-</ul>
-</blockquote>
-<hr>
-<hr>
-<pre><code>import java.io.BufferedInputStream;
-import java.util.Scanner;
-
-public class second_1003 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(new BufferedInputStream(System.in));
-        while(sc.hasNext()){
-            long adultRabbits = 0;
-            long youngRabbits = 1;
-            long sum =0;
-            int day = sc.nextInt();
-            for (int i = 0; i &lt;day ; i++) {
-                sum = adultRabbits + youngRabbits;
-                adultRabbits = youngRabbits;
-                youngRabbits = sum;
-            }
-            System.out.println(sum);
-        }
-    }
-}</code></pre>
+            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述
             
-        </article>
+        </h2></article>
     </div>
     
 </section>
@@ -894,7 +437,7 @@ public class second_1003 {
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1570531152705"></script>
+<script src="/js/app.js?v=1570533011422"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
