@@ -3,7 +3,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
   
-  <title>1001-采花生 - 正在建设的小窝</title>
+  <title>B1010-一元多项式求导 - 正在建设的小窝</title>
   <meta charset="UTF-8">
   <meta name="description" content>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -13,14 +13,14 @@
   <link rel="shortcut icon" href="https://i.loli.net/2019/09/30/VRahYDQ5gXNKzoj.jpg" type="image/jpg">
   <meta name="description" content="题目描述">
 <meta property="og:type" content="article">
-<meta property="og:title" content="1001-采花生">
-<meta property="og:url" content="http://yoursite.com/2019/09/30/1001-采花生/index.html">
+<meta property="og:title" content="B1010-一元多项式求导">
+<meta property="og:url" content="http://yoursite.com/2019/10/16/B1010-一元多项式求导/index.html">
 <meta property="og:site_name" content="正在建设的小窝">
 <meta property="og:description" content="题目描述">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-08T11:05:39.993Z">
+<meta property="og:updated_time" content="2019-10-16T06:08:41.329Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="1001-采花生">
+<meta name="twitter:title" content="B1010-一元多项式求导">
 <meta name="twitter:description" content="题目描述">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_ezdnzsotqc.css">
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1571206567184">
+  <link rel="stylesheet" href="/css/style.css?v=1571206566982">
    <!-- 爆炸红心效果 -->
 
  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
@@ -169,124 +169,65 @@
         <div class="nexmoe-post">
     <div class="nexmoe-post-cover"> 
         
-            <img src="https://i.loli.net/2019/10/16/oufgsi8QvOhynt4.jpg">
+        <img src="https://i.loli.net/2019/10/16/iL2ucIkqVC5oeY4.jpg">
         
-        <h1>1001-采花生</h1>
+        <h1>B1010-一元多项式求导</h1>
     </div>
   <div class="nexmoe-post-meta">
-    <a><i class="nexmoefont icon-calendar-fill"></i>2019年09月30日</a>
-    <a><i class="nexmoefont icon-areachart"></i>1,205 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 5 分钟</a>
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年10月16日</a>
+    <a><i class="nexmoefont icon-areachart"></i>425 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
     
       <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
     
     
   </div>
   <article>
-    <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>鲁宾逊先生有一只宠物猴，名叫多多。这天，他们两个正沿着乡间小路散步，突然发现路边的告示牌上贴着一张小小的纸条：“欢迎免费品尝我种的花生！——熊字”。<br><br>鲁宾逊先生和多多都很开心，因为花生正是他们的最爱。在告示牌背后，路边真的有一块花生田，花生植株整齐地排列成矩形网格。有经验的多多一眼就能看出，每棵花生植株下的花生有多少。为了训练多多的算术，鲁宾逊先生说:“你先找出花生最多的植株，去采摘它的花生;然后再找出剩下的植株里花生最多的，去采摘它的花生;依此类推，不过你一定要在我限定的时间内回到路边。”<br><br>我们假定多多在每个单位时间内,可以做下列四件事情中的一件：<br></p>
-<ol>
-<li>从路边跳到最靠近路边（即第一行）的某棵花生植株；<br></li>
-<li>从一棵植株跳到前后左右与之相邻的另一棵植株；<br></li>
-<li>采摘一棵植株下的花生；<br></li>
-<li>从最靠近路边（即第一行）的某棵花生植株跳回路边。<br><br>现在给定一块花生田的大小和花生的分布，请问在限定时间内，多多最多可以采到多少个花生？<br></li>
-</ol>
-<p>注意可能只有部分植株下面长有花生，假设这些植株下的花生个数各不相同。例如花生田里只有位于(2, 5), (3, 7), (4, 2), (5, 4)的植株下长有花生，个数分别为 13, 7, 15, 9。多多在 21 个单位时间内，只能经过(4, 2)、(2, 5)、(5, 4)，最多可以采到 37 个花生。</p>
+    <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 设计函数求一元多项式的导数。（注：<em>x*</em>n<em>（</em>n<em>为整数）的一阶导数为</em>n<strong>x</strong>n*−1。） </p>
 <h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p>输入包含多组数据，每组数据第一行包括三个整数 M（1≤M≤20）、    n（1≤N≤20）和 K（0≤K≤1000），用空格隔开；表示花生田的大小为M * N，多多采花生的限定时间为 K个单位时间。<br>紧接着 M 行，每行包括 N 个自然数 P（0≤P≤500），用空格隔开；表 示花生田里植株下花生的数目，并且除了0（没有花生），其他所有植株下花生的数目都不相同。</p>
+<p> 以指数递降方式输入多项式非零项系数和指数（绝对值均为不超过 1000 的整数）。数字间以空格分隔。 </p>
 </blockquote>
 <h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>对应每一组数据，输出一个整数，即在限定时间内，多多最多可以采到花生的个数。</p>
+<p> 以与输入相同的格式输出导数多项式非零项的系数和指数。数字间以空格分隔，但结尾不能有多余空格。注意“零多项式”的指数和系数都是 0，但是表示为 <code>0 0</code>。 </p>
 </blockquote>
 <h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
-<p>6 7 21<br><br>0 0 0 0 0 0 0<br><br>0 0 0 0 13 0 0<br><br>0 0 0 0 0 0 7<br><br>0 15 0 0 0 0 0<br><br>0 0 0 9 0 0 0<br><br>0 0 0 0 0 0 0<br></p>
+<p>3 4 -5 2 6 1 -2 0</p>
 </blockquote>
 <h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
-<p>37</p>
+<p>12 3 -10 1 6 0</p>
 </blockquote>
 <h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li>我傻了<br><br>&#8195;</li>
+<li>注意“零多项式”的指数和系数都是 0，但是表示为 <code>0 0</code>。 </li>
+<li>其实没懂这句话的意思实际测下来就是 只读了两个数 两个数都是零的时候才输出零</li>
+<li>输出a*b 和b-1  3 *4 =12 ，4-1=3</li>
 </ul>
 <hr>
 <hr>
-<br>
-<!-- lang:java-->
+<pre><code>import java.util.Scanner;
 
-<pre><code>import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Scanner;
-import java.io.BufferedInputStream;
-
-public class second_1001_2 {
+public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(new BufferedInputStream(System.in)); //传说能降低scanner用时
-        while(sc.hasNext()){
-            int y = sc.nextInt(); //竖列
-            int x = sc.nextInt(); //横行
-            int totalTime = sc.nextInt(); //限定时间
-            //创建HashMap，存放花生田里有花生的植株信息
-            HashMap&lt;Integer, Node&gt; map = new HashMap&lt;Integer,Node&gt;();
-            //初始化花生田
-            for (int i = 0; i &lt; y; i++) {
-                for (int j =0;j &lt; x;j++){
-                    int num = sc.nextInt();
-                    if(num != 0){
-                        map.put(num,new Node(i,j,num));
-                    }
-                }
+        Scanner scanner = new Scanner(System.in);
+        String line = scanner.nextLine();
+        String numArray[] = line.split(&quot;\\s+&quot;); //切割有多个空格的内容
+        if(numArray.length==2 &amp;&amp; (numArray[1].equals(&quot;0&quot;)||numArray[0].equals(&quot;0&quot;)) ){
+            System.out.print(&quot;0 0&quot;);
+        }else {
+            StringBuilder sb = new StringBuilder();
+            for(int i=0; i&lt;numArray.length; i=i+2){
+                int a = Integer.parseInt(numArray[i])*Integer.parseInt(numArray[i+1]);
+                int b = Integer.parseInt(numArray[i+1])-1;
+                if(a==0) continue;
+                sb.append(a+&quot; &quot;+b+&quot; &quot;);
             }
-            //定义排序规则，按照花生数量从多到少降序排序
-            Comparator&lt;Integer&gt; cmp = new Comparator&lt;Integer&gt;() {
-                @Override
-                public int compare(Integer o1, Integer o2) {
-                    return o2 - o1;
-                }
-            };
-            //从Hashmap集合中取出键-花生数量放入ArrayList数组中
-            ArrayList&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;(map.keySet());
-            if (list.isEmpty()) System.out.println(0);
-            else{
-                Collections.sort(list, cmp); //降序排序list
-                //定义list索引
-                int index = 0;
-                Node node = map.get(list.get(index++)); //获取零list索引的值，map中key对应的value，即y，x，num
-                // 定义移动时间，采摘时间，离开时间
-                int moveTime = node.y + 1;//第一次特化摘花生移动只用计算纵向距离，+1为计算机从零开始计算
-                int takeTime = 1, leavlTime = node.y + 1; //采摘消耗1单位时间，离开与第一次移动一样
-                int sum =0; //记录花生数量总和
-                //判断移动采摘返程是否超时
-                while (totalTime - moveTime - takeTime - leavlTime &gt;= 0) {
-                    //未超时，总时间减去移动和采摘所要花费的时间
-                    totalTime = totalTime - moveTime - takeTime;
-                    //累加花生数量
-                    sum += node.num;
-                    //判断有无下一植株,有则结束循环
-                    if (index &gt;= list.size()) break;
-                    //获取下一植株信息,结束后索引+1
-                    Node nextNode = map.get(list.get(index++));
-                    // 获取移动到下一植株的时间
-                    moveTime = Math.abs(node.y - nextNode.y)
-                            + Math.abs(node.x - nextNode.x); //绝对值
-                    // 获取从下一植株离开的时间
-                    leavlTime = nextNode.y + 1;
-                    node = nextNode; //下个植株标记为这个植株，进入下次循环
-                }
-                System.out.println(sum);
-            }
-        }
-    }
-}
-class Node {
-    int y;
-    int x;
-    int num;
+            System.out.print(sb.substring(0,sb.length()-1));
+            /*
+            *去除最后空格也可以写成在句首添加boolean flag = false;
+            * 如果进入循环时为false就把flag转换为true，第一次进入不输出空格，下面每一次进入都会输入一个空格
+            * 这样如果没有还有输出的东西末尾就没有空格了。
+             */
 
-    public Node(int y, int x, int num){
-        super();
-        this.y = y;
-        this.x = x;
-        this.num = num;
+        }
     }
 }</code></pre>
   </article>
@@ -295,7 +236,7 @@ class Node {
 <div class="nexmoe-post-copyright">
 <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
 <strong>本文作者：</strong>A_zao<br>
-<strong>本文链接：</strong><a href="http://yoursite.com/2019/09/30/1001-采花生/" title="http://yoursite.com/2019/09/30/1001-采花生/" target="_blank" rel="noopener">http://yoursite.com/2019/09/30/1001-采花生/</a><br>
+<strong>本文链接：</strong><a href="http://yoursite.com/2019/10/16/B1010-一元多项式求导/" title="http://yoursite.com/2019/10/16/B1010-一元多项式求导/" target="_blank" rel="noopener">http://yoursite.com/2019/10/16/B1010-一元多项式求导/</a><br>
 
   <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
 
@@ -335,7 +276,7 @@ class Node {
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1571206567188"></script>
+<script src="/js/app.js?v=1571206566990"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
