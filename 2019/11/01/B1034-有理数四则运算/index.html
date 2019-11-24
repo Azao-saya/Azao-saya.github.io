@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  
+  <title>B1034-有理数四则运算 - 正在建设的小窝</title>
+  <meta charset="UTF-8">
+  <meta name="description" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+
+  <link rel="shortcut icon" href="https://i.loli.net/2019/09/30/VRahYDQ5gXNKzoj.jpg" type="image/jpg">
+  <meta name="description" content="题目描述">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B1034-有理数四则运算">
+<meta property="og:url" content="http://yoursite.com/2019/11/01/B1034-有理数四则运算/index.html">
+<meta property="og:site_name" content="正在建设的小窝">
+<meta property="og:description" content="题目描述">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-24T18:03:27.999Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B1034-有理数四则运算">
+<meta name="twitter:description" content="题目描述">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_ezdnzsotqc.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
+  <link rel="stylesheet" href="/css/style.css?v=1574630302147">
+   <!-- 爆炸红心效果 -->
+
+ <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
+ 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+ 
+<script type="text/javascript" src="/js/firework.js"></script>
+</head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://i.loli.net/2019/10/16/oufgsi8QvOhynt4.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="A_zao" class="mdui-btn mdui-btn-icon"><img src="https://i.loli.net/2019/09/30/57LtVReQg2ANsaX.jpg"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="A_zao">
+            <img src="https://i.loli.net/2019/09/30/57LtVReQg2ANsaX.jpg" alt="A_zao">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>53</div>
+        <div><span>标签</span>0</div>
+        <div><span>分类</span>3</div>
+    </div>
+    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </ul>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">社交按钮</h3>
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/20238211" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/nexmoe/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/PAT练习/">PAT练习</a>
+          <span class="category-list-count">50</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/小工具/">小工具</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/生活感悟/">生活感悟</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+  
+  
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2019 A_zao
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    <div class="nexmoe-post-cover"> 
+        
+        <img src="https://s2.ax1x.com/2019/10/16/KkZJG4.jpg">
+        
+        <h1>B1034-有理数四则运算</h1>
+    </div>
+  <div class="nexmoe-post-meta">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年11月01日</a>
+    <a><i class="nexmoefont icon-areachart"></i>797 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 4 分钟</a>
+    
+      <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
+    
+    
+  </div>
+  <article>
+    <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><ul>
+<li>本题要求编写程序，计算 2 个有理数的和、差、积、商。 </li>
+</ul>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<pre><code> 输入在一行中按照 `a1/b1 a2/b2` 的格式给出两个分数形式的有理数，其中分子和分母全是整型范围内的整数，负号只可能出现在分子前，分母不为 0。 </code></pre></blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<pre><code>分别在 4 行中按照 `有理数1 运算符 有理数2 = 结果` 的格式顺序输出 2 个有理数的和、差、积、商。注意输出的每个有理数必须是该有理数的最简形式 `k a/b`，其中 `k` 是整数部分，`a/b` 是最简分数部分；若为负数，则须加括号；若除法分母为 0，则输出 `Inf`。题目保证正确的输出中没有超过整型范围的整数。 </code></pre></blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入1"><a href="#输入1" class="headerlink" title="输入1"></a>输入1</h3><blockquote>
+<p>2/3 -4/2</p>
+</blockquote>
+<h3 id="输出1"><a href="#输出1" class="headerlink" title="输出1"></a>输出1</h3><blockquote>
+<p>2/3 + (-2) = (-1 1/3)<br>2/3 - (-2) = 2 2/3<br>2/3 * (-2) = (-1 1/3)<br>2/3 / (-2) = (-1/3)</p>
+</blockquote>
+<h3 id="输入2"><a href="#输入2" class="headerlink" title="输入2"></a>输入2</h3><blockquote>
+<p>5/3 0/6</p>
+</blockquote>
+<h3 id="输出2"><a href="#输出2" class="headerlink" title="输出2"></a>输出2</h3><blockquote>
+<p>1 2/3 + 0 = 1 2/3<br>1 2/3 - 0 = 1 2/3<br>1 2/3 * 0 = 0<br>1 2/3 / 0 = Inf</p>
+</blockquote>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
+<li>嗨这种数学的四则运算，就是没好好上学的我绝对短板了</li>
+<li>姑且记下别人四则运算方法和获取最大公约数的方法</li>
+</ul>
+<hr>
+<hr>
+<pre><code>import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class PAT_B1034 {
+
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] input = br.readLine().split(&quot; |/&quot;);
+        /**
+         * 1、\s代表正则表达式中的一个空白字符（可能是空格、制表符、其他空白）。
+         *2、\\s代表字符\和字符s，因为\在正则中有特殊意义，所有需要转义，写成了\\ 。
+         *也可写成String[] input = in.nextLine().split(&quot;[\\s/]&quot;);
+         * 大意为匹配/和空格具体用法不清楚，我还是用我自己看的懂的。
+         */
+        br.close();
+        long a1 = Integer.parseInt(input[0]);
+        long b1 = Integer.parseInt(input[1]);
+        long a2 = Integer.parseInt(input[2]);
+        long b2 = Integer.parseInt(input[3]);
+
+        if (b1 != 0 &amp;&amp; b2 != 0) {
+            add(a1, b1, a2, b2);
+            minus(a1, b1, a2, b2);
+            mutilply(a1, b1, a2, b2);
+            divide(a1, b1, a2, b2);
+        }
+    }
+
+    public static void tackle(long a, long b) {
+        if (a == 0) {
+            System.out.print(0);
+            return;
+        }
+
+        boolean isMinus = a &gt; 0 ? false : true;
+        if (isMinus) {
+            System.out.print(&quot;(-&quot;);
+            a = -a;
+        }
+
+        long gcd = getGcd(a, b);
+        a = a / gcd;
+        b = b / gcd;
+        if (a % b == 0) {
+            System.out.print(a / b);
+        } else if (Math.abs(a) &gt; b) {      //此处柳诺写法为(a % b) % b，不知道是为了考虑什么情况。测试例是都能通过
+            System.out.print(a / b + &quot; &quot; + (a % b) + &quot;/&quot; + b);
+        } else if (a == b) {
+            System.out.print(1);
+        } else {
+            System.out.print(a + &quot;/&quot; + b);
+        }
+
+        if (isMinus) {
+            System.out.print(&quot;)&quot;);
+        }
+
+    }
+
+    public static void divide(long a1, long b1, long a2, long b2) {
+        tackle(a1, b1);
+        System.out.print(&quot; / &quot;);
+        tackle(a2, b2);
+        System.out.print(&quot; = &quot;);
+        if (a2 == 0) {
+            System.out.print(&quot;Inf&quot;);
+        } else if (a2 &lt; 0) {
+            tackle(-1 * a1 * b2, -1 * a2 * b1);
+        } else {
+            tackle(a1 * b2, a2 * b1);
+        }
+    }
+
+    public static void mutilply(long a1, long b1, long a2, long b2) {
+        tackle(a1, b1);
+        System.out.print(&quot; * &quot;);
+        tackle(a2, b2);
+        System.out.print(&quot; = &quot;);
+        tackle(a1 * a2, b1 * b2);
+        System.out.println();
+    }
+
+    public static void minus(long a1, long b1, long a2, long b2) {
+        tackle(a1, b1);
+        System.out.print(&quot; - &quot;);
+        tackle(a2, b2);
+        System.out.print(&quot; = &quot;);
+        tackle(a1 * b2 - a2 * b1, b1 * b2);
+        System.out.println();
+    }
+
+    public static void add(long a1, long b1, long a2, long b2) {
+        tackle(a1, b1);
+        System.out.print(&quot; + &quot;);
+        tackle(a2, b2);
+        System.out.print(&quot; = &quot;);
+        tackle(a1 * b2 + a2 * b1, b1 * b2);
+        System.out.println();
+    }
+
+    public static long getGcd(long a, long b) {
+        while (a % b != 0) {
+            long temp = a % b;
+            a = b;
+            b = temp;
+        }
+        return b;
+    }
+}</code></pre>
+  </article>
+  
+    
+<div class="nexmoe-post-copyright">
+<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+<strong>本文作者：</strong>A_zao<br>
+<strong>本文链接：</strong><a href="http://yoursite.com/2019/11/01/B1034-有理数四则运算/" title="http://yoursite.com/2019/11/01/B1034-有理数四则运算/" target="_blank" rel="noopener">http://yoursite.com/2019/11/01/B1034-有理数四则运算/</a><br>
+
+  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+</div>
+
+
+  
+  <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'nexmoe.github.io',
+        owner: 'nexmoe',
+        admin: 'nexmoe'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+ 
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-for-websites@1.4.9/SmoothScroll.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="/js/app.js?v=1574630302153"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+
+  
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  
+  <title>B1035-插入与归并 - 正在建设的小窝</title>
+  <meta charset="UTF-8">
+  <meta name="description" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+
+  <link rel="shortcut icon" href="https://i.loli.net/2019/09/30/VRahYDQ5gXNKzoj.jpg" type="image/jpg">
+  <meta name="description" content="题目描述">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B1035-插入与归并">
+<meta property="og:url" content="http://yoursite.com/2019/11/01/B1035-插入与归并/index.html">
+<meta property="og:site_name" content="正在建设的小窝">
+<meta property="og:description" content="题目描述">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://s2.ax1x.com/2019/11/25/MXDJPI.gif">
+<meta property="og:updated_time" content="2019-11-24T19:46:31.281Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B1035-插入与归并">
+<meta name="twitter:description" content="题目描述">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/11/25/MXDJPI.gif">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_ezdnzsotqc.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
+  <link rel="stylesheet" href="/css/style.css?v=1574630302128">
+   <!-- 爆炸红心效果 -->
+
+ <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
+ 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+ 
+<script type="text/javascript" src="/js/firework.js"></script>
+</head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://i.loli.net/2019/10/16/oufgsi8QvOhynt4.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="A_zao" class="mdui-btn mdui-btn-icon"><img src="https://i.loli.net/2019/09/30/57LtVReQg2ANsaX.jpg"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="A_zao">
+            <img src="https://i.loli.net/2019/09/30/57LtVReQg2ANsaX.jpg" alt="A_zao">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>53</div>
+        <div><span>标签</span>0</div>
+        <div><span>分类</span>3</div>
+    </div>
+    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </ul>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">社交按钮</h3>
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/20238211" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/nexmoe/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/PAT练习/">PAT练习</a>
+          <span class="category-list-count">50</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/小工具/">小工具</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/生活感悟/">生活感悟</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+  
+  
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2019 A_zao
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    <div class="nexmoe-post-cover"> 
+        
+        <img src="https://s2.ax1x.com/2019/10/16/KkZJG4.jpg">
+        
+        <h1>B1035-插入与归并</h1>
+    </div>
+  <div class="nexmoe-post-meta">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年11月01日</a>
+    <a><i class="nexmoefont icon-areachart"></i>996 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 4 分钟</a>
+    
+      <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
+    
+    
+  </div>
+  <article>
+    <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><ul>
+<li><p>根据维基百科的定义：</p>
+<p><strong>插入排序</strong>是迭代算法，逐一获得输入数据，逐步产生有序的输出序列。每步迭代中，算法从输入序列中取出一元素，将之插入有序序列中正确的位置。如此迭代直到全部元素有序。</p>
+<p><strong>归并排序</strong>进行如下迭代操作：首先将原始序列看成 N 个只包含 1 个元素的有序子序列，然后每次迭代归并两个相邻的有序子序列，直到最后只剩下 1 个有序的序列。</p>
+<p>现给定原始序列和由某排序算法产生的中间序列，请你判断该算法究竟是哪种排序算法？ </p>
+</li>
+</ul>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<pre><code> 输入在第一行给出正整数 N (≤100)；随后一行给出原始序列的 N 个整数；最后一行给出由某排序算法产生的中间序列。这里假设排序的目标序列是升序。数字间以空格分隔。  </code></pre></blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<pre><code>首先在第 1 行中输出`Insertion Sort`表示插入排序、或`Merge Sort`表示归并排序；然后在第 2 行中输出用该排序算法再迭代一轮的结果序列。题目保证每组测试的结果是唯一的。数字间以空格分隔，且行首尾不得有多余空格。 </code></pre></blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入1"><a href="#输入1" class="headerlink" title="输入1"></a>输入1</h3><blockquote>
+<p>10<br>3 1 2 8 7 5 9 4 6 0<br>1 2 3 7 8 5 9 4 6 0</p>
+</blockquote>
+<h3 id="输出1"><a href="#输出1" class="headerlink" title="输出1"></a>输出1</h3><blockquote>
+<p>Insertion Sort<br>1 2 3 5 7 8 9 4 6 0</p>
+</blockquote>
+<h3 id="输入2"><a href="#输入2" class="headerlink" title="输入2"></a>输入2</h3><blockquote>
+<p>10<br>3 1 2 8 7 5 9 4 0 6<br>1 3 2 8 5 7 4 9 0 6</p>
+</blockquote>
+<h3 id="输出2"><a href="#输出2" class="headerlink" title="输出2"></a>输出2</h3><blockquote>
+<p>Merge Sort<br>1 2 3 8 4 5 7 9 0 6</p>
+</blockquote>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
+<li>真滴看不懂</li>
+<li>(<img src="https://s2.ax1x.com/2019/11/25/MXDJPI.gif" alt="img"> )</li>
+<li>不应该这样么</li>
+<li>好吧重新读了之后懂了只再迭代了一轮</li>
+<li>判断插入排序还是归并排序是条件是</li>
+<li>插入排序排序到中间序列时，在那一个结束升序之后的数字应该都是和原始数列是相同的</li>
+<li>插入排序在对i+1位数进行排序就直接输出，</li>
+<li>归并排序在数组等于题目给出的中间序列之后在进行一次归并操作，k乘2能自己再迭代 (读懂也不会写…..</li>
+</ul>
+<hr>
+<hr>
+<pre><code>import java.util.Arrays;
+import java.util.Scanner;
+public class PAT_B1035 {
+
+    public static void main(String[] args) throws Exception { //代码转载自熊仙森
+        Scanner inScanner = new Scanner(System.in);
+        int n =inScanner.nextInt();
+        int [] a =new int[n];
+        int [] b =new int[n];
+        for(int i=0;i&lt;n;i++)
+            a[i]=inScanner.nextInt();
+        for(int i=0;i&lt;n;i++)
+            b[i]=inScanner.nextInt();
+        inScanner.close();
+
+        int i = 0;
+        //判断排好序的位置
+        for (; b[i] &lt;= b[i + 1] &amp;&amp; i &lt; n; i++);
+        boolean isInsert = true;
+        for (int j = i + 1; j &lt; n; j++) {
+            //判断排好序的位置的后面开始，a与b是不是每一位都相同，若出现不相同，则不是插入排序
+            if (a[j] != b[j]) {
+                isInsert = false;
+                break;
+            }
+        }
+        if (isInsert) {
+            System.out.println(&quot;Insertion Sort&quot;);
+            //再加一个数字进行排序
+            sort(a, 0, i + 1);
+        } else {
+            System.out.println(&quot;Merge Sort&quot;);
+            //从a开始执行归并排序，当与b一样时，再执行一次
+            int k = 1;
+            boolean flag = false;
+            while (flag == false) {
+                //当a==b时，再执行一次，下一次判断时跳出
+                flag = Arrays.equals(a, b);
+                k = k * 2;
+                int p = 0;
+                for (p = 0; p &lt; n / k; p++)
+                    //p是分成的一个一个小组，k是每个组的成员个数
+                    //一组的起始是p * k，结束是下一组的开始位置减一
+                    sort(a, p * k, (p + 1) * k - 1);
+                //分完组后剩下的不够的做一次分组内的归并
+                //开始是 n / k * k（组数*长度），结束是到数组的最后
+                sort(a, n / k * k, n - 1);
+            }
+        }
+        for (int k = 0; k &lt; n ; k++) {
+            if(k!=0)
+                System.out.print(&quot; &quot;);
+            System.out.print(a[k]);
+        }
+    }
+    //自定义交换排序，也可用Arrays.sort，但是位置限制有点麻烦
+    public static void sort(int[] a, int from, int to) {
+        for (int i = from; i &lt; to; i++) {
+            for (int j = i + 1; j &lt;= to; j++) {
+                if (a[j] &lt; a[i]) {
+                    int temp = a[i];
+                    a[i] = a[j];
+                    a[j] = temp;
+                }
+            }
+        }
+    }
+}</code></pre>
+  </article>
+  
+    
+<div class="nexmoe-post-copyright">
+<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+<strong>本文作者：</strong>A_zao<br>
+<strong>本文链接：</strong><a href="http://yoursite.com/2019/11/01/B1035-插入与归并/" title="http://yoursite.com/2019/11/01/B1035-插入与归并/" target="_blank" rel="noopener">http://yoursite.com/2019/11/01/B1035-插入与归并/</a><br>
+
+  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+</div>
+
+
+  
+  <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'nexmoe.github.io',
+        owner: 'nexmoe',
+        admin: 'nexmoe'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+ 
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-for-websites@1.4.9/SmoothScroll.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="/js/app.js?v=1574630302136"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+
+  
+
+
+
+
+
+</body>
+
+</html>
