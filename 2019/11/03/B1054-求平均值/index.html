@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="正在建设的小窝">
 <meta property="og:description" content="题目描述">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-30T20:46:41.837Z">
+<meta property="og:updated_time" content="2019-12-02T01:26:16.486Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="B1054-求平均值">
 <meta name="twitter:description" content="题目描述">
@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_ezdnzsotqc.css">
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1575146837170">
+  <link rel="stylesheet" href="/css/style.css?v=1575585257842">
    <!-- 爆炸红心效果 -->
 
  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
@@ -163,7 +163,7 @@ setTimeout(function(){i()},100)
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>67</div>
+        <div><span>文章</span>83</div>
         <div><span>标签</span>0</div>
         <div><span>分类</span>3</div>
     </div>
@@ -220,7 +220,7 @@ setTimeout(function(){i()},100)
 
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/PAT练习/">PAT练习</a>
-          <span class="category-list-count">64</span>
+          <span class="category-list-count">80</span>
         </li>
 
         
@@ -276,7 +276,7 @@ setTimeout(function(){i()},100)
     </div>
   <div class="nexmoe-post-meta">
     <a><i class="nexmoefont icon-calendar-fill"></i>2019年11月03日</a>
-    <a><i class="nexmoefont icon-areachart"></i>620 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>581 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
     
       <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
@@ -284,29 +284,30 @@ setTimeout(function(){i()},100)
     
   </div>
   <article>
-    <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>在不打扰居民的前提下，统计住房空置率的一种方法是根据每户用电量的连续变化规律进行判断。判断方法如下：</p>
-<ul>
-<li>在观察期内，若存在超过一半的日子用电量低于某给定的阈值 <em>e</em>，则该住房为“可能空置”；</li>
-<li>若观察期超过某给定阈值 <em>D</em> 天，且满足上一个条件，则该住房为“空置”。</li>
-</ul>
-<p>现给定某居民区的住户用电量数据，请你统计“可能空置”的比率和“空置”比率，即以上两种状态的住房占居民区住房总套数的百分比。</p>
+    <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>本题的基本要求非常简单：给定 N 个实数，计算它们的平均值。但复杂的是有些输入数据可能是非法的。一个“合法”的输入是 [−1000,1000] 区间内的实数，并且最多精确到小数点后 2 位。当你计算平均值的时候，不能把那些非法的数据算在内。</p>
 <h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p>输入第一行给出正整数 <em>N</em>（≤1000），为居民区住房总套数；正实数 <em>e</em>，即低电量阈值；正整数 <em>D</em>，即观察期阈值。随后 <em>N</em> 行，每行按以下格式给出一套住房的用电量数据：</p>
-<p><em>K</em> <em>E</em>1 <em>E</em>2 … <em>E**K</em></p>
-<p>其中 <em>K</em> 为观察的天数，<em>E**i</em> 为第 <em>i</em> 天的用电量。</p>
+<p>输入第一行给出正整数 N（≤100）。随后一行给出 N 个实数，数字间以一个空格分隔。</p>
 </blockquote>
 <h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>在一行中输出“可能空置”的比率和“空置”比率的百分比值，其间以一个空格分隔，保留小数点后 1 位。 </p>
+<p>对每个非法输入，在一行中输出 <code>ERROR: X is not a legal number</code>，其中 <code>X</code> 是输入。最后在一行中输出结果：<code>The average of K numbers is Y</code>，其中 <code>K</code> 是合法输入的个数，<code>Y</code> 是它们的平均值，精确到小数点后 2 位。如果平均值无法计算，则用 <code>Undefined</code> 替换 <code>Y</code>。如果 <code>K</code> 为 1，则输出 <code>The average of 1 number is Y</code>。 </p>
 </blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
-<p>5 0.5 10<br>6 0.3 0.4 0.5 0.2 0.8 0.6<br>10 0.0 0.1 0.2 0.3 0.0 0.8 0.6 0.7 0.0 0.5<br>5 0.4 0.3 0.5 0.1 0.7<br>11 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1<br>11 2 2 2 1 1 0.1 1 0.1 0.1 0.1 0.1</p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入1"><a href="#输入1" class="headerlink" title="输入1"></a>输入1</h3><blockquote>
+<p>7<br>5 -3.2 aaa 9999 2.3.4 7.123 2.35</p>
 </blockquote>
-<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
-<p>40.0% 20.0%</p>
+<h3 id="输出1"><a href="#输出1" class="headerlink" title="输出1"></a>输出1</h3><blockquote>
+<p>ERROR: aaa is not a legal number<br>ERROR: 9999 is not a legal number<br>ERROR: 2.3.4 is not a legal number<br>ERROR: 7.123 is not a legal number<br>The average of 3 numbers is 1.38</p>
 </blockquote>
-<p> （样例解释：第2、3户为“可能空置”，第4户为“空置”，其他户不是空置。） </p>
+<h3 id="输入2"><a href="#输入2" class="headerlink" title="输入2"></a>输入2</h3><blockquote>
+<p>2<br>aaa -9999</p>
+</blockquote>
+<h3 id="输出2"><a href="#输出2" class="headerlink" title="输出2"></a>输出2</h3><blockquote>
+<p>ERROR: aaa is not a legal number<br>ERROR: -9999 is not a legal number<br>The average of 0 numbers is Undefined</p>
+</blockquote>
 <h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li>题目条件是低于不包含等于，判断为空置先要满足第一个条件。</li>
+<li>这里用trycatch处理异常来解决，读入的非数字</li>
+<li>如题意所示7.123也是一个非法输入，指小数超过两位的都是非法输入</li>
+<li>这里用String.format把数字转换成只保留两位小数的，在与原始数字进行比较。</li>
+<li>若差值超过0.001意为该数小数部分超过2位，同样抛出异常</li>
 </ul>
 <hr>
 <hr>
@@ -314,33 +315,34 @@ setTimeout(function(){i()},100)
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class PAT_B1053 {
-    public static void main(String[] args) throws IOException { //提交时出现一次一个测试点超时，再次提交已经全部通过。
+public class PAT_B1054 {
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String[] temp = br.readLine().split(&quot; &quot;);
-        int N = Integer.parseInt(temp[0]);
-        double e = Double.parseDouble(temp[1]);
-        int d = Integer.parseInt(temp[2]);
-        int maybeCount = 0,unoccupied = 0;
-        for (int i = 0; i &lt;N ; i++) {
-            String[] temp2 = br.readLine().split(&quot; &quot;);
-            int totalDay = Integer.parseInt(temp2[0]);
-            double[] powers = new double[totalDay];
-            int count = 0;
-            for (int j = 1; j &lt;=totalDay ; j++) {
-                powers[j-1] =Double.parseDouble(temp2[j]);
-                if (powers[j-1]&lt;e){
-                    count++;
+        int n = Integer.parseInt(br.readLine());
+        String[] str = br.readLine().split(&quot; &quot;);
+        int count = 0;
+        double total = 0.0;
+        for (int i = 0; i &lt;n ; i++) {
+            try{
+                double num = Double.parseDouble(str[i]);
+                double compare = Double.parseDouble(String.format(&quot;%.02f&quot;,num));
+                if (num&lt;-1000 || num&gt;1000 || Math.abs(num-compare)&gt;0.001){
+                    throw new NumberFormatException();
                 }
-            }
-            if (count&gt;totalDay/2 &amp;&amp; totalDay&gt;d){
-                unoccupied++;
-            }else if (count&gt;totalDay/2 ){
-                maybeCount++;
+                count++;
+                total += num;
+            }catch (NumberFormatException e){
+                System.out.println(&quot;ERROR: &quot;+ str[i]+&quot; is not a legal number&quot;);
             }
         }
-        System.out.printf(&quot;%.1f%% &quot;,(double)maybeCount/(double) N*100);
-        System.out.printf(&quot;%.1f%%&quot;,(double)unoccupied/(double) N*100);
+
+        if (count == 0){
+            System.out.println(&quot;The average of 0 numbers is Undefined&quot;);
+        }else if(count ==1){
+            System.out.printf(&quot;The average of 1 number is %.2f&quot;,total); //number少了一个s
+        }else {
+            System.out.printf(&quot;The average of %d numbers is %.2f&quot;,count,total/count);
+        }
     }
 }</code></pre>
   </article>
@@ -389,7 +391,7 @@ public class PAT_B1053 {
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1575146837175"></script>
+<script src="/js/app.js?v=1575585257850"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
