@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+
+  
+  <title>B1055-集体照 - 正在建设的小窝</title>
+  <meta charset="UTF-8">
+  <meta name="description" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+
+  <link rel="shortcut icon" href="https://i.loli.net/2019/09/30/VRahYDQ5gXNKzoj.jpg" type="image/jpg">
+  <meta name="description" content="题目描述">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B1055-集体照">
+<meta property="og:url" content="http://yoursite.com/2019/11/03/B1055-集体照/index.html">
+<meta property="og:site_name" content="正在建设的小窝">
+<meta property="og:description" content="题目描述">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-19T08:37:32.588Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B1055-集体照">
+<meta name="twitter:description" content="题目描述">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_ezdnzsotqc.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
+  <link rel="stylesheet" href="/css/style.css?v=1577102417326">
+   <!-- 爆炸红心效果 -->
+
+ <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
+ 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+ 
+<script type="text/javascript" src="/js/firework.js"></script>
+
+<script>document.addEventListener('visibilitychange',function(){if(document.visibilityState=='hidden'){normal_title=document.title;document.title='我在这呢~ ';}else{document.title=normal_title;}});</script>
+</head>
+<!--代码放置于</body>上方-->
+
+<script>
+
+!function(){
+
+function n(n,e,t){
+
+return n.getAttribute(e)||t
+
+}
+
+function e(n){
+
+return document.getElementsByTagName(n)
+
+}
+
+function t(){
+
+var t=e("script"),o=t.length,i=t[o-1];
+
+return{
+
+l:o,z:n(i,"zIndex",-1),o:n(i,"opacity",.5),c:n(i,"color","0,0,0"),n:n(i,"count",99)
+
+}
+
+}
+
+function o(){
+
+a=m.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,
+
+c=m.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight
+
+}
+
+function i(){
+
+r.clearRect(0,0,a,c);
+
+var n,e,t,o,m,l;
+
+s.forEach(function(i,x){
+
+for(i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>a||i.x<0?-1:1,i.ya*=i.y>c||i.y<0?-1:1,r.fillRect(i.x-.5,i.y-.5,1,1),e=x+1;e<u.length;e++)n=u[e],
+
+null!==n.x&&null!==n.y&&(o=i.x-n.x,m=i.y-n.y,
+
+l=o*o+m*m,l<n.max&&(n===y&&l>=n.max/2&&(i.x-=.03*o,i.y-=.03*m),
+
+t=(n.max-l)/n.max,r.beginPath(),r.lineWidth=t/2,r.strokeStyle="rgba("+d.c+","+(t+.2)+")",r.moveTo(i.x,i.y),r.lineTo(n.x,n.y),r.stroke()))
+
+}),
+
+x(i)
+
+}
+
+var a,c,u,m=document.createElement("canvas"),
+
+d=t(),l="c_n"+d.l,r=m.getContext("2d"),
+
+x=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||
+
+function(n){
+
+window.setTimeout(n,1e3/45)
+
+},
+
+w=Math.random,y={x:null,y:null,max:2e4};m.id=l,m.style.cssText="position:fixed;top:0;left:0;z-index:"+d.z+";opacity:"+d.o,e("body")[0].appendChild(m),o(),window.onresize=o,
+
+window.onmousemove=function(n){
+
+n=n||window.event,y.x=n.clientX,y.y=n.clientY
+
+},
+
+window.onmouseout=function(){
+
+y.x=null,y.y=null
+
+};
+
+for(var s=[],f=0;d.n>f;f++){
+
+var h=w()*a,g=w()*c,v=2*w()-1,p=2*w()-1;s.push({x:h,y:g,xa:v,ya:p,max:6e3})
+
+}
+
+u=s.concat([y]),
+
+setTimeout(function(){i()},100)
+
+}();
+
+</script>
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://s2.ax1x.com/2019/12/06/QY5QSK.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="A_zao" class="mdui-btn mdui-btn-icon"><img src="https://i.loli.net/2019/09/30/57LtVReQg2ANsaX.jpg"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="A_zao">
+            <img src="https://i.loli.net/2019/09/30/57LtVReQg2ANsaX.jpg" alt="A_zao">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>110</div>
+        <div><span>标签</span>0</div>
+        <div><span>分类</span>3</div>
+    </div>
+    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </ul>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">社交按钮</h3>
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/20238211" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/nexmoe/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/PAT练习/">PAT练习</a>
+          <span class="category-list-count">105</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/小工具/">小工具</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/生活感悟/">生活感悟</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+  
+  
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2019 A_zao
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    <div class="nexmoe-post-cover"> 
+        
+        <img src="https://s2.ax1x.com/2019/11/26/MxdOYR.jpg">
+        
+        <h1>B1055-集体照</h1>
+    </div>
+  <div class="nexmoe-post-meta">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年11月03日</a>
+    <a><i class="nexmoefont icon-areachart"></i>713 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
+    
+      <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
+    
+    
+  </div>
+  <article>
+    <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>拍集体照时队形很重要，这里对给定的 <em>N</em> 个人 <em>K</em> 排的队形设计排队规则如下：</p>
+<ul>
+<li>每排人数为 <em>N</em>/<em>K</em>（向下取整），多出来的人全部站在最后一排；</li>
+<li>后排所有人的个子都不比前排任何人矮；</li>
+<li>每排中最高者站中间（中间位置为 <em>m</em>/2+1，其中 <em>m</em> 为该排人数，除法向下取整）；</li>
+<li>每排其他人以中间人为轴，按身高非增序，先右后左交替入队站在中间人的两侧（例如5人身高为190、188、186、175、170，则队形为175、188、190、186、170。这里假设你面对拍照者，所以你的左边是中间人的右边）；</li>
+<li>若多人身高相同，则按名字的字典序升序排列。这里保证无重名。</li>
+</ul>
+<p>现给定一组拍照人，请编写程序输出他们的队形。</p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p> 每个输入包含 1 个测试用例。每个测试用例第 1 行给出两个正整数 <em>N</em>（≤104，总人数）和 <em>K</em>（≤10，总排数）。随后 <em>N</em> 行，每行给出一个人的名字（不包含空格、长度不超过 8 个英文字母）和身高（[30, 300] 区间内的整数）。 </p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p> 输出拍照的队形。即K排人名，其间以空格分隔，行末不得有多余空格。注意：假设你面对拍照者，后排的人输出在上方，前排输出在下方。 </p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
+<p>10 3<br>Tom 188<br>Mike 170<br>Eva 168<br>Tim 160<br>Joe 190<br>Ann 168<br>Bob 175<br>Nick 186<br>Amy 160<br>John 159</p>
+</blockquote>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
+<p>Bob Tom Joe Nick<br>Ann Mike Eva<br>Tim Amy John</p>
+</blockquote>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
+<li>按照柳神的思路</li>
+<li>输出示例为190、188、186、175、170，则队形为175、188、190、186、170。 </li>
+<li>讲数组升序排序后，输出最大值后一左一右输出剩下的值。</li>
+<li>再按照，每排中最高者站中间（中间位置为 <em>m</em>/2+1，其中 <em>m</em> 为该排人数，除法向下取整）； </li>
+<li>中间位置为当行人数除以2</li>
+<li>比如3除以2，得到1为中间位置，剩下为0和2。4除以2，得到2，剩下为0,1,3.</li>
+<li>第一行需要额外输出多余的人</li>
+</ul>
+<hr>
+<hr>
+<pre><code>import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class PAT_B1053 {
+    public static void main(String[] args) throws IOException { //提交时出现一次一个测试点超时，再次提交已经全部通过。
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] temp = br.readLine().split(&quot; &quot;);
+        int N = Integer.parseInt(temp[0]);
+        double e = Double.parseDouble(temp[1]);
+        int d = Integer.parseInt(temp[2]);
+        int maybeCount = 0,unoccupied = 0;
+        for (int i = 0; i &lt;N ; i++) {
+            String[] temp2 = br.readLine().split(&quot; &quot;);
+            int totalDay = Integer.parseInt(temp2[0]);
+            double[] powers = new double[totalDay];
+            int count = 0;
+            for (int j = 1; j &lt;=totalDay ; j++) {
+                powers[j-1] =Double.parseDouble(temp2[j]);
+                if (powers[j-1]&lt;e){
+                    count++;
+                }
+            }
+            if (count&gt;totalDay/2 &amp;&amp; totalDay&gt;d){
+                unoccupied++;
+            }else if (count&gt;totalDay/2 ){
+                maybeCount++;
+            }
+        }
+        System.out.printf(&quot;%.1f%% &quot;,(double)maybeCount/(double) N*100);
+        System.out.printf(&quot;%.1f%%&quot;,(double)unoccupied/(double) N*100);
+    }
+}</code></pre>
+  </article>
+  
+    
+<div class="nexmoe-post-copyright">
+<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+<strong>本文作者：</strong>A_zao<br>
+<strong>本文链接：</strong><a href="http://yoursite.com/2019/11/03/B1055-集体照/" title="http://yoursite.com/2019/11/03/B1055-集体照/" target="_blank" rel="noopener">http://yoursite.com/2019/11/03/B1055-集体照/</a><br>
+
+  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+</div>
+
+
+  
+  <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'nexmoe.github.io',
+        owner: 'nexmoe',
+        admin: 'nexmoe'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+ 
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-for-websites@1.4.9/SmoothScroll.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="/js/app.js?v=1577102417332"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+
+  
+
+
+
+
+
+</body>
+
+</html>

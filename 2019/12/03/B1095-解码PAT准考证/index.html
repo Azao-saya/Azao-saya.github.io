@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+
+  
+  <title>B1095-解码PAT准考证 - 正在建设的小窝</title>
+  <meta charset="UTF-8">
+  <meta name="description" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+
+  <link rel="shortcut icon" href="https://i.loli.net/2019/09/30/VRahYDQ5gXNKzoj.jpg" type="image/jpg">
+  <meta name="description" content="题目描述">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B1095-解码PAT准考证">
+<meta property="og:url" content="http://yoursite.com/2019/12/03/B1095-解码PAT准考证/index.html">
+<meta property="og:site_name" content="正在建设的小窝">
+<meta property="og:description" content="题目描述">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-23T11:57:27.753Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B1095-解码PAT准考证">
+<meta name="twitter:description" content="题目描述">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_ezdnzsotqc.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
+  <link rel="stylesheet" href="/css/style.css?v=1577102417122">
+   <!-- 爆炸红心效果 -->
+
+ <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
+ 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+ 
+<script type="text/javascript" src="/js/firework.js"></script>
+
+<script>document.addEventListener('visibilitychange',function(){if(document.visibilityState=='hidden'){normal_title=document.title;document.title='我在这呢~ ';}else{document.title=normal_title;}});</script>
+</head>
+<!--代码放置于</body>上方-->
+
+<script>
+
+!function(){
+
+function n(n,e,t){
+
+return n.getAttribute(e)||t
+
+}
+
+function e(n){
+
+return document.getElementsByTagName(n)
+
+}
+
+function t(){
+
+var t=e("script"),o=t.length,i=t[o-1];
+
+return{
+
+l:o,z:n(i,"zIndex",-1),o:n(i,"opacity",.5),c:n(i,"color","0,0,0"),n:n(i,"count",99)
+
+}
+
+}
+
+function o(){
+
+a=m.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,
+
+c=m.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight
+
+}
+
+function i(){
+
+r.clearRect(0,0,a,c);
+
+var n,e,t,o,m,l;
+
+s.forEach(function(i,x){
+
+for(i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>a||i.x<0?-1:1,i.ya*=i.y>c||i.y<0?-1:1,r.fillRect(i.x-.5,i.y-.5,1,1),e=x+1;e<u.length;e++)n=u[e],
+
+null!==n.x&&null!==n.y&&(o=i.x-n.x,m=i.y-n.y,
+
+l=o*o+m*m,l<n.max&&(n===y&&l>=n.max/2&&(i.x-=.03*o,i.y-=.03*m),
+
+t=(n.max-l)/n.max,r.beginPath(),r.lineWidth=t/2,r.strokeStyle="rgba("+d.c+","+(t+.2)+")",r.moveTo(i.x,i.y),r.lineTo(n.x,n.y),r.stroke()))
+
+}),
+
+x(i)
+
+}
+
+var a,c,u,m=document.createElement("canvas"),
+
+d=t(),l="c_n"+d.l,r=m.getContext("2d"),
+
+x=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||
+
+function(n){
+
+window.setTimeout(n,1e3/45)
+
+},
+
+w=Math.random,y={x:null,y:null,max:2e4};m.id=l,m.style.cssText="position:fixed;top:0;left:0;z-index:"+d.z+";opacity:"+d.o,e("body")[0].appendChild(m),o(),window.onresize=o,
+
+window.onmousemove=function(n){
+
+n=n||window.event,y.x=n.clientX,y.y=n.clientY
+
+},
+
+window.onmouseout=function(){
+
+y.x=null,y.y=null
+
+};
+
+for(var s=[],f=0;d.n>f;f++){
+
+var h=w()*a,g=w()*c,v=2*w()-1,p=2*w()-1;s.push({x:h,y:g,xa:v,ya:p,max:6e3})
+
+}
+
+u=s.concat([y]),
+
+setTimeout(function(){i()},100)
+
+}();
+
+</script>
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://s2.ax1x.com/2019/12/06/QY5QSK.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="A_zao" class="mdui-btn mdui-btn-icon"><img src="https://i.loli.net/2019/09/30/57LtVReQg2ANsaX.jpg"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="A_zao">
+            <img src="https://i.loli.net/2019/09/30/57LtVReQg2ANsaX.jpg" alt="A_zao">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>110</div>
+        <div><span>标签</span>0</div>
+        <div><span>分类</span>3</div>
+    </div>
+    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </ul>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">社交按钮</h3>
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/20238211" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/nexmoe/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/PAT练习/">PAT练习</a>
+          <span class="category-list-count">105</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/小工具/">小工具</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/生活感悟/">生活感悟</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+  
+  
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2019 A_zao
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    <div class="nexmoe-post-cover"> 
+        
+        <img src="https://i.loli.net/2019/12/22/NV4RGwIeSrKH6dl.jpg">
+        
+        <h1>B1095-解码PAT准考证</h1>
+    </div>
+  <div class="nexmoe-post-meta">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年12月03日</a>
+    <a><i class="nexmoefont icon-areachart"></i>1,263 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 6 分钟</a>
+    
+      <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
+    
+    
+  </div>
+  <article>
+    <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>PAT 准考证号由 4 部分组成：</p>
+<ul>
+<li>第 1 位是级别，即 <code>T</code> 代表顶级；<code>A</code> 代表甲级；<code>B</code> 代表乙级；</li>
+<li>第 2~4 位是考场编号，范围从 101 到 999；</li>
+<li>第 5~10 位是考试日期，格式为年、月、日顺次各占 2 位；</li>
+<li>最后 11~13 位是考生编号，范围从 000 到 999。</li>
+</ul>
+<p>现给定一系列考生的准考证号和他们的成绩，请你按照要求输出各种统计信息。</p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p> 输入首先在一行中给出两个正整数 N（≤10<br> 4<br>  ）和 M（≤100），分别为考生人数和统计要求的个数。</p>
+<p> 接下来 N 行，每行给出一个考生的准考证号和其分数（在区间 [0,100] 内的整数），其间以空格分隔。</p>
+<p> 考生信息之后，再给出 M 行，每行给出一个统计要求，格式为：类型 指令，其中</p>
+<p> 类型 为 1 表示要求按分数非升序输出某个指定级别的考生的成绩，对应的 指令 则给出代表指定级别的字母；<br> 类型 为 2 表示要求将某指定考场的考生人数和总分统计输出，对应的 指令 则给出指定考场的编号；<br> 类型 为 3 表示要求将某指定日期的考生人数分考场统计输出，对应的 指令 则给出指定日期，格式与准考证上日期相同。</p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述"></a>输出描述</h2><blockquote>
+<p>  对每项统计要求，首先在一行中输出 Case #: 要求，其中 # 是该项要求的编号，从 1 开始；要求 即复制输入给出的要求。随后输出相应的统计结果：</p>
+<p>  类型 为 1 的指令，输出格式与输入的考生信息格式相同，即 准考证号 成绩。对于分数并列的考生，按其准考证号的字典序递增输出（题目保证无重复准考证号）；<br>  类型 为 2 的指令，按 人数 总分 的格式输出；<br>  类型 为 3 的指令，输出按人数非递增顺序，格式为 考场编号 总人数。若人数并列则按考场编号递增顺序输出。<br>  如果查询结果为空，则输出 NA。</p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
+<p>8 4<br>B123180908127 99<br>B102180908003 86<br>A112180318002 98<br>T107150310127 62<br>A107180908108 100<br>T123180908010 78<br>B112160918035 88<br>A107180908021 98<br>1 A<br>2 107<br>3 180908<br>2 999</p>
+</blockquote>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
+<p>Case 1: 1 A<br>A107180908108 100<br>A107180908021 98<br>A112180318002 98<br>Case 2: 2 107<br>3 260<br>Case 3: 3 180908<br>107 2<br>123 2<br>102 1<br>Case 4: 2 999<br>NA</p>
+</blockquote>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
+<li>排序问题，按照3种不同的指令输出三种结果。</li>
+<li>类型1，分别有T、A、B三种输入。从map里取出准考证，在单独取出第一位字母判断是否与输入的字母相同。若相同则保存</li>
+<li>类型2，输入的为第2~4位的考场编号。取出准考证后用subString截取(1,4)位。若与输入相同则保存</li>
+<li>类型3也是一样。</li>
+<li>全部存入后按照题意排序。分数和人数是降序排序，若数字相同。则按其准考证号的字典序递增输出，compareTo能进行这个判断。</li>
+</ul>
+<hr>
+<hr>
+<pre><code>import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.*;
+
+/**
+ * 提交时间                 状态      分数     题目      编译器         耗时    用户
+ * 2019/11/24 02:17:26  部分正确   16    1095    Java (openjdk)     86 ms    決别
+ * Case 2,3,4:TLE
+ * 写出来就感觉要超时了，优化的话网上没找到别人的java代码，大概是止步于此了。
+ * 马上就是12月份的正式考试了，我很感谢这107道习题让我正式的入门了java。
+ * 我不知道是不是在就业的路上走偏了，但是这条路我没有退路也决不会放弃。
+ */
+public class PAT_B1095 {
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] temp = br.readLine().split(&quot; &quot;);
+        int n = Integer.parseInt(temp[0]);
+        int m = Integer.parseInt(temp[1]);
+        Map&lt;String,Integer&gt; map = new HashMap&lt;&gt;();
+
+        for (int i = 0; i &lt;n ; i++) {
+            String[] s = br.readLine().split(&quot; &quot;);
+            map.put(s[0],Integer.parseInt(s[1]));
+        }
+
+        for (int i = 0; i &lt;m ; i++) {
+            ArrayList&lt;Node3&gt; list = new ArrayList&lt;&gt;();
+            String[] s2 = br.readLine().split(&quot; &quot;);
+            int sum = 0,count = 0;
+            int number = Integer.parseInt(s2[0]);
+            if (number ==1){
+                char c = s2[1].toCharArray()[0];
+                for(Map.Entry&lt;String, Integer&gt; entry : map.entrySet()){
+                    String mapKey = entry.getKey();
+                    if (mapKey.charAt(0) == c){
+                        list.add(new Node3(mapKey,entry.getValue()));
+                    }
+                }
+                Collections.sort(list,new Node3CMP());
+            }else if(number == 2){
+                for(Map.Entry&lt;String, Integer&gt; entry : map.entrySet()){
+                    String mapKey = entry.getKey().substring(1,4);
+                    if (mapKey.equals(s2[1])){
+                        count++;
+                        sum += entry.getValue();
+                    }
+                }
+            }else {
+                Map&lt;String,Integer&gt; map2 = new HashMap&lt;&gt;();
+                for(Map.Entry&lt;String, Integer&gt; entry : map.entrySet()){
+                    String mapKeyT = entry.getKey();
+                    String mapKey1 = mapKeyT.substring(4,10);
+                    String mapKey2 = mapKeyT.substring(1,4);
+                    if (mapKey1.equals(s2[1])){
+                        if (map2.containsKey(mapKey2)){
+                            map2.put(mapKey2,map2.get(mapKey2)+1);
+                            continue;
+                        }
+                        map2.put(mapKey2,1);
+                    }
+                }
+                for(Map.Entry&lt;String, Integer&gt; entry : map2.entrySet()){
+                    list.add(new Node3(entry.getKey(),entry.getValue()));
+                }
+                Collections.sort(list,new Node3CMP());
+            }
+
+            System.out.printf(&quot;%s %d: %s %s\n&quot;,&quot;Case&quot;,i+1,s2[0],s2[1]);
+            if (list.size() == 0 &amp;&amp; count==0){
+                System.out.println(&quot;NA&quot;);
+            }else if (count !=0){
+                System.out.println(count+&quot; &quot;+sum);
+            }else {
+                for (Node3 n3 : list) {
+                    System.out.println(n3.id+&quot; &quot;+n3.value);
+                }
+            }
+        }
+    }
+}
+
+class Node3{
+    String id;
+    int value;
+    public Node3(String id,int value){
+        this.id = id;
+        this.value = value;
+    }
+}
+
+class Node3CMP implements Comparator&lt;Node3&gt; {
+    public int compare(Node3 o1,Node3 o2){
+        int x = o2.value - o1.value;
+        if (x == 0){
+            return o1.id.compareTo(o2.id);
+        }else {
+            return x;
+        }
+    }
+}</code></pre>
+  </article>
+  
+    
+<div class="nexmoe-post-copyright">
+<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+<strong>本文作者：</strong>A_zao<br>
+<strong>本文链接：</strong><a href="http://yoursite.com/2019/12/03/B1095-解码PAT准考证/" title="http://yoursite.com/2019/12/03/B1095-解码PAT准考证/" target="_blank" rel="noopener">http://yoursite.com/2019/12/03/B1095-解码PAT准考证/</a><br>
+
+  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+</div>
+
+
+  
+  <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'nexmoe.github.io',
+        owner: 'nexmoe',
+        admin: 'nexmoe'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+ 
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-for-websites@1.4.9/SmoothScroll.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="/js/app.js?v=1577102417130"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+
+  
+
+
+
+
+
+</body>
+
+</html>
