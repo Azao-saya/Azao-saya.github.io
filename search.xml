@@ -7189,6 +7189,54 @@ public class Main {
       </categories>
   </entry>
   <entry>
+    <title>B1009-说反话</title>
+    <url>/2019/10/16/B1009-%20%E8%AF%B4%E5%8F%8D%E8%AF%9D/</url>
+    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 给定一句英语，要求你编写程序，将句中所有单词的顺序颠倒输出。 </p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p> 测试输入包含一个测试用例，在一行内给出总长度不超过 80 的字符串。字符串由若干单词和若干空格组成，其中单词是由英文字母（大小写有区分）组成的字符串，单词之间用 1 个空格分开，输入保证句子末尾没有多余的空格。 </p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p> 每个测试用例的输出占一行，输出倒序后的句子。 </p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
+<p>Hello World Here I Come</p>
+</blockquote>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
+<p>Come I Here World Hello</p>
+</blockquote>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
+<li>从数组末尾开始输出</li>
+<li>list.size()-i</li>
+</ul>
+<hr>
+<hr>
+<pre><code>import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
+public class PAT_B1009 {
+    public static void main(String[] args) throws IOException {
+        ArrayList&lt;String&gt; list = new ArrayList&lt;String&gt;();
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        String[] s = br.readLine().split(&quot; &quot;);
+        for (String s1 : s) {
+            list.add(s1);
+        }
+        for (int i = 1; i &lt;=list.size() ; i++) { //是要输出零索引的,size是指有多少元素比length来说会+1
+            System.out.print(list.get(list.size()- i));
+            if (i == list.size()){
+                break;
+            }
+            System.out.print(&quot; &quot;);
+        }
+    }
+}</code></pre>]]></content>
+      <categories>
+        <category>PAT练习</category>
+      </categories>
+  </entry>
+  <entry>
     <title>B1008- 数组元素循环右移问题</title>
     <url>/2019/10/16/B1008-%20%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0%E5%BE%AA%E7%8E%AF%E5%8F%B3%E7%A7%BB%E9%97%AE%E9%A2%98%20/</url>
     <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>  一个数组<em>A</em>中存有<em>N</em>（&gt;0）个整数，在不允许使用另外数组的前提下，将每个整数循环向右移<em>M</em>（≥0）个位置，即将<em>A</em>中的数据由（<em>A</em>0<em>A</em>1⋯<em>A*</em>N<em>−1）变换为（</em>A<strong>N<em>−</em>M<em>⋯</em>A</strong>N<em>−1</em>A<em>0</em>A<em>1⋯</em>A*<em>N</em>−<em>M</em>−1）（最后<em>M</em>个数循环移至最前面的<em>M</em>个位置）。如果需要考虑程序移动数据的次数尽量少，要如何设计移动的方法？</p>
@@ -7232,54 +7280,6 @@ public class PAT_B1008 {
         for (int i = 0; i &lt; m ; i++) {
             System.out.print(num[i]);
             if (i == m-1){
-                break;
-            }
-            System.out.print(&quot; &quot;);
-        }
-    }
-}</code></pre>]]></content>
-      <categories>
-        <category>PAT练习</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>B1009-说反话</title>
-    <url>/2019/10/16/B1009-%20%E8%AF%B4%E5%8F%8D%E8%AF%9D/</url>
-    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 给定一句英语，要求你编写程序，将句中所有单词的顺序颠倒输出。 </p>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p> 测试输入包含一个测试用例，在一行内给出总长度不超过 80 的字符串。字符串由若干单词和若干空格组成，其中单词是由英文字母（大小写有区分）组成的字符串，单词之间用 1 个空格分开，输入保证句子末尾没有多余的空格。 </p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p> 每个测试用例的输出占一行，输出倒序后的句子。 </p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
-<p>Hello World Here I Come</p>
-</blockquote>
-<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
-<p>Come I Here World Hello</p>
-</blockquote>
-<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li>从数组末尾开始输出</li>
-<li>list.size()-i</li>
-</ul>
-<hr>
-<hr>
-<pre><code>import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-
-public class PAT_B1009 {
-    public static void main(String[] args) throws IOException {
-        ArrayList&lt;String&gt; list = new ArrayList&lt;String&gt;();
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        String[] s = br.readLine().split(&quot; &quot;);
-        for (String s1 : s) {
-            list.add(s1);
-        }
-        for (int i = 1; i &lt;=list.size() ; i++) { //是要输出零索引的,size是指有多少元素比length来说会+1
-            System.out.print(list.get(list.size()- i));
-            if (i == list.size()){
                 break;
             }
             System.out.print(&quot; &quot;);
