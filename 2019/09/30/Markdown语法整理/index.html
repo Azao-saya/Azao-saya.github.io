@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_ezdnzsotqc.css">
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1583652255073">
+  <link rel="stylesheet" href="/css/style.css?v=1583652815021">
    <!-- 爆炸红心效果 -->
 
  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
@@ -302,19 +302,19 @@ setTimeout(function(){i()},100)
 
   
   <section class="nexmoe-comment">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
-<div id="gitalk"></div>
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-    var gitalk = new Gitalk({
-        clientID: 'e499c36d0f44111ba83f',
-        clientSecret: '4b6117ffadebcd0f93bef97e4c0ded483e83ed12',
-        id: window.location.pathname,
-        repo: 'Blog',
-        owner: 'yinyuezaoQAQ555',
-        admin: 'Azao-saya'
-    })
-    gitalk.render('gitalk')
+    <div id="gitment"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+    owner: 'Azao-saya', // 你的 GitHub ID
+    repo: 'yinyuezaoQAQ555', // 存储评论的 repo
+    oauth: {
+        client_id: 'e499c36d0f44111ba83f', // 你的 client ID
+        client_secret: '4b6117ffadebcd0f93bef97e4c0ded483e83ed12' // 你的 client secret
+    },
+})
+gitment.render('gitment')
 </script>
 </section>
 </div>
@@ -333,7 +333,7 @@ setTimeout(function(){i()},100)
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1583652255081"></script>
+<script src="/js/app.js?v=1583652815027"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
