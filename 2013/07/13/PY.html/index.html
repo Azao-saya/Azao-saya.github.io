@@ -4,7 +4,7 @@
 <head><meta name="generator" content="Hexo 3.9.0">
 
   
-  <title>B1012-数字分类 - 正在建设的小窝</title>
+  <title>PY.html - 正在建设的小窝</title>
   <meta charset="UTF-8">
   <meta name="description" content>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -14,14 +14,14 @@
   <link rel="shortcut icon" href="https://i.loli.net/2019/09/30/VRahYDQ5gXNKzoj.jpg" type="image/jpg">
   <meta name="description" content="题目描述">
 <meta property="og:type" content="article">
-<meta property="og:title" content="B1012-数字分类">
-<meta property="og:url" content="http://yoursite.com/2019/10/16/B1012-数字分类/index.html">
+<meta property="og:title" content="PY.html">
+<meta property="og:url" content="http://yoursite.com/2013/07/13/PY.html/index.html">
 <meta property="og:site_name" content="正在建设的小窝">
 <meta property="og:description" content="题目描述">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-16T06:41:57.920Z">
+<meta property="og:updated_time" content="2020-03-08T09:53:32.097Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="B1012-数字分类">
+<meta name="twitter:title" content="PY.html">
 <meta name="twitter:description" content="题目描述">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_ezdnzsotqc.css">
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1583675096404">
+  <link rel="stylesheet" href="/css/style.css?v=1583675098976">
    <!-- 爆炸红心效果 -->
 
  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
@@ -255,163 +255,58 @@ setTimeout(function(){i()},100)
   </div>
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
-        <div class="nexmoe-post">
-    <div class="nexmoe-post-cover"> 
-        
-        <img src="https://i.loli.net/2019/10/16/iL2ucIkqVC5oeY4.jpg">
-        
-        <h1>B1012-数字分类</h1>
-    </div>
-  <div class="nexmoe-post-meta">
-    <a><i class="nexmoefont icon-calendar-fill"></i>2019年10月16日</a>
-    <a><i class="nexmoefont icon-areachart"></i>682 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
-    
-      <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
-    
-    
-  </div>
-  <article>
-    <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>给定一系列正整数，请按要求对数字进行分类，并输出以下 5 个数字：</p>
-<ul>
-<li><em>A</em>1 = 能被 5 整除的数字中所有偶数的和；</li>
-<li><em>A</em>2 = 将被 5 除后余 1 的数字按给出顺序进行交错求和，即计算 <em>n</em>1−<em>n</em>2+<em>n</em>3−<em>n</em>4⋯；</li>
-<li><em>A</em>3 = 被 5 除后余 2 的数字的个数；</li>
-<li><em>A</em>4 = 被 5 除后余 3 的数字的平均数，精确到小数点后 1 位；</li>
-<li><em>A</em>5 = 被 5 除后余 4 的数字中最大数字。</li>
-</ul>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p>   每个输入包含 1 个测试用例。每个测试用例先给出一个不超过 1000 的正整数 <em>N</em>，随后给出 <em>N</em> 个不超过 1000 的待分类的正整数。数字间以空格分隔。 </p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p> 对给定的 <em>N</em> 个正整数，按题目要求计算 <em>A</em>1~<em>A</em>5 并在一行中顺序输出。数字间以空格分隔，但行末不得有多余空格。</p>
-<p> 若其中某一类数字不存在，则在相应位置输出 <code>N</code>。</p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入1"><a href="#输入1" class="headerlink" title="输入1"></a>输入1</h3><blockquote>
-<p>13 1 2 3 4 5 6 7 8 9 10 20 16 18</p>
-</blockquote>
-<h3 id="输出1"><a href="#输出1" class="headerlink" title="输出1"></a>输出1</h3><blockquote>
-<p>30 11 2 9.7 9</p>
-</blockquote>
-<h3 id="输入2"><a href="#输入2" class="headerlink" title="输入2"></a>输入2</h3><blockquote>
-<p>8 1 2 4 5 6 7 9 16</p>
-</blockquote>
-<h3 id="输出2"><a href="#输出2" class="headerlink" title="输出2"></a>输出2</h3><blockquote>
-<p>N 11 2 N 9</p>
-</blockquote>
-<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li>很繁琐但实现没什么难度，有挺多地方可以优化的。不过运行时间挺短的也没啥必要。</li>
-</ul>
-<hr>
-<pre><code>import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-
-public class PAT_B1012 {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        String[] line1 = br.readLine().split(&quot; &quot;);
-        int n = Integer.parseInt(String.valueOf(line1[0]));
-        int[] line = new int[line1.length+1];
-        for (int i = 1; i &lt;line1.length ; i++) {
-            line[i] = Integer.parseInt(line1[i]);
-        }
-        ArrayList&lt;Integer&gt; a1 =new ArrayList&lt;&gt;();
-        ArrayList&lt;Integer&gt; a2 =new ArrayList&lt;&gt;();
-        ArrayList&lt;Integer&gt; a3 =new ArrayList&lt;&gt;();
-        ArrayList&lt;Integer&gt; a4 =new ArrayList&lt;&gt;();
-        ArrayList&lt;Integer&gt; a5 =new ArrayList&lt;&gt;();
-        for (int i =0;i &lt;line1.length;i++){
-            if (line[i] %5 ==0){
-                a1.add(line[i]);
-            }else if(line[i] % 5 ==1){
-                a2.add(line[i]);
-            }else if(line[i] % 5 ==2){
-                a3.add(line[i]);
-            }else if(line[i] % 5 ==3){
-                a4.add(line[i]);
-            }else if(line[i] % 5 ==4 ){
-                a5.add(line[i]);
-            }
-        }
-        int a1Sum = 0;
-        for (Integer i : a1) {
-            if (i %2 ==0){
-                a1Sum += i;
-            }
-        }
-        boolean flag = true;
-        int a2Sum = 0;
-        boolean isHaveInput = false;     //非常重要最后一个测试点总和为零，拿a2sum=0会判断没有过输入输出N，而实际应该为零
-        for (int i = 0; i &lt;a2.size() ; i++) {
-            if (i ==0){
-                a2Sum = a2.get(i);
-                isHaveInput = true;
-                continue;
-            }
-            if (flag){
-                a2Sum -= a2.get(i);
-                flag = false;
-                isHaveInput = true;
-            }else {
-                a2Sum += a2.get(i);
-                flag = true;
-                isHaveInput = true;
-            }
-        }
-        int a4Sum = 0;
-        for (Integer i : a4) {
-            a4Sum += i;
-        }
-        float a4Avg = (float)a4Sum/a4.size();
-        int a5Max = 0;
-        for (Integer i : a5) {
-            if (i &gt;a5Max){
-                a5Max = i;
-            }
-        }
-        if (a1Sum != 0){
-            System.out.print(a1Sum+&quot; &quot;);
-        }else {
-            System.out.print(&quot;N &quot;);
-        }
-        if (isHaveInput){
-            System.out.print(a2Sum+&quot; &quot;);
-        }else {
-            System.out.print(&quot;N &quot;);
-        }
-        if (a3.size() !=0){
-            System.out.print(a3.size()+&quot; &quot;);
-        }else {
-            System.out.print(&quot;N &quot;);
-        }
-        if (a4Sum != 0){
-            System.out.print(String.format(&quot;%.1f&quot;,a4Avg)+&quot; &quot;);
-        }else {
-            System.out.print(&quot;N &quot;);
-        }
-        if (a5Max !=0){
-            System.out.print(a5Max);
-        }else {
-            System.out.print(&quot;N&quot;);
-        }
+        <style>
+  article ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: -5px;
+  }
+  article ul li {
+    transition: all .03s;
+    width: calc(12.5% - 10px);
+    margin: 5px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    font-size: 0;
+    overflow: hidden;
+  }
+  article ul li > a::after {
+    font-size: 13px;
+    color: #606266;
+    -webkit-transition: none;
+    transition: none;
+    content: attr(title);
+    display: block;
+    position: relative;
+    width: 100%;
+    border: none;
+    padding: 3px 10px 5px 10px;
+    margin-top: -2px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  article ul li img {
+    width: 100%;
+    border-radius: 0;
+    border: none;
+  }
+  @media screen and (max-width: 768px) {
+    article ul li {
+      width: calc(33.3333333333% - 10px);
     }
-}</code></pre>
+}
+</style>
+
+<div class="nexmoe-post">
+  <article class="nexmoe-py">
+    <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>cover: <a href="https://i.loli.net/2020/03/08/5LxwFtR28aWpC7D.png" target="_blank" rel="noopener">https://i.loli.net/2020/03/08/5LxwFtR28aWpC7D.png</a></p>
+
   </article>
-  
-    
-<div class="nexmoe-post-copyright">
-<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
-<strong>本文作者：</strong>A_zao<br>
-<strong>本文链接：</strong><a href="http://yoursite.com/2019/10/16/B1012-数字分类/" title="http://yoursite.com/2019/10/16/B1012-数字分类/" target="_blank" rel="noopener">http://yoursite.com/2019/10/16/B1012-数字分类/</a><br>
-
-  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
-
-</div>
-
-
-  
   <section class="nexmoe-comment">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
 <div id="gitalk"></div>
@@ -444,7 +339,7 @@ public class PAT_B1012 {
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1583675096420"></script>
+<script src="/js/app.js?v=1583675099018"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 

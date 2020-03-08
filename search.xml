@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>/2020/03/08/about/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>一次失败的求职</title>
     <url>/2020/03/08/%E4%B8%80%E6%AC%A1%E5%A4%B1%E8%B4%A5%E7%9A%84%E6%B1%82%E8%81%8C/</url>
     <content><![CDATA[<h2 id="凶祸无损，馀虑无成"><a href="#凶祸无损，馀虑无成" class="headerlink" title="凶祸无损，馀虑无成"></a>凶祸无损，馀虑无成</h2><p>​            因为疫情的原因，我有了名正言顺的理由，赋闲在家学习。但随着离开图书馆的学习效率下降，脱产学习的没钱花和父母的不断涡轮增压的压力。</p>
@@ -1662,147 +1657,6 @@ public class PAT_B1082 {
       </categories>
   </entry>
   <entry>
-    <title>B1080-MOOC期终成绩</title>
-    <url>/2019/12/02/B1080-MOOC%E6%9C%9F%E7%BB%88%E6%88%90%E7%BB%A9/</url>
-    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>对于在中国大学MOOC（<a href="http://www.icourse163.org/" target="_blank" rel="noopener">http://www.icourse163.org/</a> ）学习“数据结构”课程的学生，想要获得一张合格证书，必须首先获得不少于200分的在线编程作业分，然后总评获得不少于60分（满分100）。总评成绩的计算公式为 <em>G</em>=(<em>G<strong>m</strong>i<em>d</em>−<em>t</em>e<em>r</em>m<em>×40%+</em>G<strong>f</strong>i<strong>n</strong>al<em>×60%)，如果 <em>G</em></em>m<strong>i</strong>d<em>−</em>t<strong>e</strong>r**m</em>&gt;<em>G<strong>f</strong>i<strong>n</strong>a*<em>l</em>；否则总评 *G</em> 就是 <em>G*</em>f<strong>i</strong>n<strong>a*l。这里 *G</strong>m<strong>i<em>d</em>−*t</strong>e<strong>r</strong>m和G<strong>f</strong>i<strong>n</strong>a**l 分别为学生的期中和期末成绩。</p>
-<p>现在的问题是，每次考试都产生一张独立的成绩单。本题就请你编写程序，把不同的成绩单合为一张。</p>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p> 输入在第一行给出3个整数，分别是 P（做了在线编程作业的学生数）、M（参加了期中考试的学生数）、N（参加了期末考试的学生数）。每个数都不超过10000。</p>
-<p> 接下来有三块输入。第一块包含 P 个在线编程成绩 Gp；</p>
-<p> 第二块包含 M 个期中考试成绩 Gmid−term；</p>
-<p> 第三块包含 N 个期末考试成绩 Gfinal。</p>
-<p> 每个成绩占一行，格式为：学生学号 分数。其中学生学号为不超过20个字符的英文字母和数字；分数是非负整数（编程总分最高为900分，期中和期末的最高分为100分）。 </p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>打印出获得合格证书的学生名单。每个学生占一行，格式为：</p>
-<p><code>学生学号 Gp Gmid−term Gfinal G</code></p>
-<p>如果有的成绩不存在（例如某人没参加期中考试），则在相应的位置输出“−1”。输出顺序为按照总评分数（四舍五入精确到整数）递减。若有并列，则按学号递增。题目保证学号没有重复，且至少存在1个合格的学生。</p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
-<p>6 6 7<br>01234 880<br>a1903 199<br>ydjh2 200<br>wehu8 300<br>dx86w 220<br>missing 400<br>ydhfu77 99<br>wehu8 55<br>ydjh2 98<br>dx86w 88<br>a1903 86<br>01234 39<br>ydhfu77 88<br>a1903 66<br>01234 58<br>wehu8 84<br>ydjh2 82<br>missing 99<br>dx86w 81</p>
-</blockquote>
-<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
-<p>missing 400 -1 99 99<br>ydjh2 200 98 82 88<br>dx86w 220 88 81 84<br>wehu8 300 55 84 84</p>
-</blockquote>
-<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li>这题硬做的，没啥思路。</li>
-</ul>
-<hr>
-<hr>
-<pre><code>import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.*;
-/**
- * 最后一个测试点超时，又是我最喜欢的再做一题天亮环节。
- * 哎我的认知里必须要用构造体，但是到底要怎么样才能少传参数。
- * 我试过虽然传入参数但不用只对需要的参数使用this，但结果是别的全部初始化了
- * 结果就是大量的重复代码，不过超时应该不是因为这个
- * 听到每个数都不超过10000心里就有点逼数了
- */
-public class PAT_B1080 {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String[] temp = br.readLine().split(&quot; &quot;);
-        int p = Integer.parseInt(temp[0]);
-        int m = Integer.parseInt(temp[1]);
-        int n = Integer.parseInt(temp[2]);
-        Map&lt;String,Score&gt; map = new HashMap&lt;String,Score&gt;();
-        for (int i = 0; i &lt; p; i++) {
-            String[] temp2 = br.readLine().split(&quot; &quot;);
-            int grade = Integer.parseInt(temp2[1]);
-            if (grade &lt; 200){
-                continue;
-            }
-            map.put(temp2[0],new Score(grade));
-        }
-
-        for (int i = 0; i &lt;m ; i++) {
-            String[] temp3 = br.readLine().split(&quot; &quot;);
-            if (map.containsKey(temp3[0])){
-                int grade2 = Integer.parseInt(temp3[1]);
-                int temp3_1 = map.get(temp3[0]).p_score;
-                map.put(temp3[0],new Score(temp3_1,grade2));
-            }
-        }
-
-        for (int i = 0; i &lt;n ; i++) {
-            String[] temp4 = br.readLine().split(&quot; &quot;);
-            if (map.containsKey(temp4[0])){
-                int grade3 = Integer.parseInt(temp4[1]);
-                int temp4_1 = map.get(temp4[0]).p_score;
-                int temp4_2 = map.get(temp4[0]).m_score;
-                map.put(temp4[0], new Score(temp4_1,temp4_2,grade3));
-            }
-        }
-
-        for (Map.Entry&lt;String, Score&gt; entry : map.entrySet()) {
-            int gp = entry.getValue().p_score;
-            double gm = entry.getValue().m_score;
-            double gf = entry.getValue().f_score;
-            if (gm &gt; gf){
-                int total = (int)(gm*0.4+gf*0.6+0.5);
-                map.put(entry.getKey(),new Score(gp,(int)gm,(int)gf,total));
-                continue;
-            }
-            map.put(entry.getKey(),new Score(gp,(int)gm,(int)gf,(int)gf));
-        }
-
-
-        List&lt;Map.Entry&lt;String, Score&gt;&gt; list = new ArrayList&lt;Map.Entry&lt;String, Score&gt;&gt;(map.entrySet());
-        Collections.sort(list, new Comparator&lt;Map.Entry&lt;String, Score&gt;&gt;() {
-            @Override
-            public int compare(Map.Entry&lt;String, Score&gt; o1, Map.Entry&lt;String, Score&gt; o2) {
-                if (o2.getValue().t_score-o1.getValue().t_score ==0){
-                    return o1.getKey().compareTo(o2.getKey());
-                }
-                return o2.getValue().t_score-o1.getValue().t_score;
-            }
-        });
-
-        for(Map.Entry&lt;String,Score&gt; mapping:list){
-            if (mapping.getValue().m_score==0 &amp;&amp; mapping.getValue().t_score&gt;=60){
-                System.out.println(mapping.getKey()+&quot; &quot;+mapping.getValue().p_score+&quot; -1 &quot;+mapping.getValue().f_score+&quot; &quot;+mapping.getValue().t_score);
-            }else if(mapping.getValue().f_score==0 &amp;&amp;mapping.getValue().t_score&gt;=60){
-                System.out.println(mapping.getKey()+&quot; &quot;+mapping.getValue().p_score+&quot; &quot;+mapping.getValue().m_score+&quot; -1&quot;+mapping.getValue().t_score);
-            }else if (mapping.getValue().t_score&gt;=60){
-                System.out.println(mapping.getKey()+&quot; &quot;+mapping.getValue().p_score+&quot; &quot;+mapping.getValue().m_score+&quot; &quot;+mapping.getValue().f_score+&quot; &quot;+mapping.getValue().t_score);
-            }
-        }
-    }
-}
-class Score{
-    int p_score;
-    int m_score ;
-    int f_score ;
-    int t_score ;
-    public Score(int p){
-        this.p_score = p;
-    }
-
-    public Score(int p, int m){
-        this.p_score = p;
-        this.m_score = m;
-    }
-
-    public Score(int p, int m, int f){
-        this.p_score = p;
-        this.m_score = m;
-        this.f_score = f;
-    }
-
-    public Score(int p, int m, int f, int t){
-        this.p_score = p;
-        this.m_score = m;
-        this.f_score = f;
-        this.t_score = t;
-    }
-}</code></pre>]]></content>
-      <categories>
-        <category>PAT练习</category>
-      </categories>
-  </entry>
-  <entry>
     <title>B1081-MOOC期终成绩</title>
     <url>/2019/12/02/B1081-MOOC%E6%9C%9F%E7%BB%88%E6%88%90%E7%BB%A9/</url>
     <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 本题要求你帮助某网站的用户注册模块写一个密码合法性检查的小功能。该网站要求用户设置的密码必须由不少于6个字符组成，并且只能有英文字母、数字和小数点 <code>.</code>，还必须既有字母也有数字。 </p>
@@ -1938,6 +1792,147 @@ public class PAT_B1079 {
 //        }
 //        System.out.println(rs);
 //    }
+}</code></pre>]]></content>
+      <categories>
+        <category>PAT练习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>B1080-MOOC期终成绩</title>
+    <url>/2019/12/02/B1080-MOOC%E6%9C%9F%E7%BB%88%E6%88%90%E7%BB%A9/</url>
+    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>对于在中国大学MOOC（<a href="http://www.icourse163.org/" target="_blank" rel="noopener">http://www.icourse163.org/</a> ）学习“数据结构”课程的学生，想要获得一张合格证书，必须首先获得不少于200分的在线编程作业分，然后总评获得不少于60分（满分100）。总评成绩的计算公式为 <em>G</em>=(<em>G<strong>m</strong>i<em>d</em>−<em>t</em>e<em>r</em>m<em>×40%+</em>G<strong>f</strong>i<strong>n</strong>al<em>×60%)，如果 <em>G</em></em>m<strong>i</strong>d<em>−</em>t<strong>e</strong>r**m</em>&gt;<em>G<strong>f</strong>i<strong>n</strong>a*<em>l</em>；否则总评 *G</em> 就是 <em>G*</em>f<strong>i</strong>n<strong>a*l。这里 *G</strong>m<strong>i<em>d</em>−*t</strong>e<strong>r</strong>m和G<strong>f</strong>i<strong>n</strong>a**l 分别为学生的期中和期末成绩。</p>
+<p>现在的问题是，每次考试都产生一张独立的成绩单。本题就请你编写程序，把不同的成绩单合为一张。</p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p> 输入在第一行给出3个整数，分别是 P（做了在线编程作业的学生数）、M（参加了期中考试的学生数）、N（参加了期末考试的学生数）。每个数都不超过10000。</p>
+<p> 接下来有三块输入。第一块包含 P 个在线编程成绩 Gp；</p>
+<p> 第二块包含 M 个期中考试成绩 Gmid−term；</p>
+<p> 第三块包含 N 个期末考试成绩 Gfinal。</p>
+<p> 每个成绩占一行，格式为：学生学号 分数。其中学生学号为不超过20个字符的英文字母和数字；分数是非负整数（编程总分最高为900分，期中和期末的最高分为100分）。 </p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p>打印出获得合格证书的学生名单。每个学生占一行，格式为：</p>
+<p><code>学生学号 Gp Gmid−term Gfinal G</code></p>
+<p>如果有的成绩不存在（例如某人没参加期中考试），则在相应的位置输出“−1”。输出顺序为按照总评分数（四舍五入精确到整数）递减。若有并列，则按学号递增。题目保证学号没有重复，且至少存在1个合格的学生。</p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
+<p>6 6 7<br>01234 880<br>a1903 199<br>ydjh2 200<br>wehu8 300<br>dx86w 220<br>missing 400<br>ydhfu77 99<br>wehu8 55<br>ydjh2 98<br>dx86w 88<br>a1903 86<br>01234 39<br>ydhfu77 88<br>a1903 66<br>01234 58<br>wehu8 84<br>ydjh2 82<br>missing 99<br>dx86w 81</p>
+</blockquote>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
+<p>missing 400 -1 99 99<br>ydjh2 200 98 82 88<br>dx86w 220 88 81 84<br>wehu8 300 55 84 84</p>
+</blockquote>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
+<li>这题硬做的，没啥思路。</li>
+</ul>
+<hr>
+<hr>
+<pre><code>import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.*;
+/**
+ * 最后一个测试点超时，又是我最喜欢的再做一题天亮环节。
+ * 哎我的认知里必须要用构造体，但是到底要怎么样才能少传参数。
+ * 我试过虽然传入参数但不用只对需要的参数使用this，但结果是别的全部初始化了
+ * 结果就是大量的重复代码，不过超时应该不是因为这个
+ * 听到每个数都不超过10000心里就有点逼数了
+ */
+public class PAT_B1080 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] temp = br.readLine().split(&quot; &quot;);
+        int p = Integer.parseInt(temp[0]);
+        int m = Integer.parseInt(temp[1]);
+        int n = Integer.parseInt(temp[2]);
+        Map&lt;String,Score&gt; map = new HashMap&lt;String,Score&gt;();
+        for (int i = 0; i &lt; p; i++) {
+            String[] temp2 = br.readLine().split(&quot; &quot;);
+            int grade = Integer.parseInt(temp2[1]);
+            if (grade &lt; 200){
+                continue;
+            }
+            map.put(temp2[0],new Score(grade));
+        }
+
+        for (int i = 0; i &lt;m ; i++) {
+            String[] temp3 = br.readLine().split(&quot; &quot;);
+            if (map.containsKey(temp3[0])){
+                int grade2 = Integer.parseInt(temp3[1]);
+                int temp3_1 = map.get(temp3[0]).p_score;
+                map.put(temp3[0],new Score(temp3_1,grade2));
+            }
+        }
+
+        for (int i = 0; i &lt;n ; i++) {
+            String[] temp4 = br.readLine().split(&quot; &quot;);
+            if (map.containsKey(temp4[0])){
+                int grade3 = Integer.parseInt(temp4[1]);
+                int temp4_1 = map.get(temp4[0]).p_score;
+                int temp4_2 = map.get(temp4[0]).m_score;
+                map.put(temp4[0], new Score(temp4_1,temp4_2,grade3));
+            }
+        }
+
+        for (Map.Entry&lt;String, Score&gt; entry : map.entrySet()) {
+            int gp = entry.getValue().p_score;
+            double gm = entry.getValue().m_score;
+            double gf = entry.getValue().f_score;
+            if (gm &gt; gf){
+                int total = (int)(gm*0.4+gf*0.6+0.5);
+                map.put(entry.getKey(),new Score(gp,(int)gm,(int)gf,total));
+                continue;
+            }
+            map.put(entry.getKey(),new Score(gp,(int)gm,(int)gf,(int)gf));
+        }
+
+
+        List&lt;Map.Entry&lt;String, Score&gt;&gt; list = new ArrayList&lt;Map.Entry&lt;String, Score&gt;&gt;(map.entrySet());
+        Collections.sort(list, new Comparator&lt;Map.Entry&lt;String, Score&gt;&gt;() {
+            @Override
+            public int compare(Map.Entry&lt;String, Score&gt; o1, Map.Entry&lt;String, Score&gt; o2) {
+                if (o2.getValue().t_score-o1.getValue().t_score ==0){
+                    return o1.getKey().compareTo(o2.getKey());
+                }
+                return o2.getValue().t_score-o1.getValue().t_score;
+            }
+        });
+
+        for(Map.Entry&lt;String,Score&gt; mapping:list){
+            if (mapping.getValue().m_score==0 &amp;&amp; mapping.getValue().t_score&gt;=60){
+                System.out.println(mapping.getKey()+&quot; &quot;+mapping.getValue().p_score+&quot; -1 &quot;+mapping.getValue().f_score+&quot; &quot;+mapping.getValue().t_score);
+            }else if(mapping.getValue().f_score==0 &amp;&amp;mapping.getValue().t_score&gt;=60){
+                System.out.println(mapping.getKey()+&quot; &quot;+mapping.getValue().p_score+&quot; &quot;+mapping.getValue().m_score+&quot; -1&quot;+mapping.getValue().t_score);
+            }else if (mapping.getValue().t_score&gt;=60){
+                System.out.println(mapping.getKey()+&quot; &quot;+mapping.getValue().p_score+&quot; &quot;+mapping.getValue().m_score+&quot; &quot;+mapping.getValue().f_score+&quot; &quot;+mapping.getValue().t_score);
+            }
+        }
+    }
+}
+class Score{
+    int p_score;
+    int m_score ;
+    int f_score ;
+    int t_score ;
+    public Score(int p){
+        this.p_score = p;
+    }
+
+    public Score(int p, int m){
+        this.p_score = p;
+        this.m_score = m;
+    }
+
+    public Score(int p, int m, int f){
+        this.p_score = p;
+        this.m_score = m;
+        this.f_score = f;
+    }
+
+    public Score(int p, int m, int f, int t){
+        this.p_score = p;
+        this.m_score = m;
+        this.f_score = f;
+        this.t_score = t;
+    }
 }</code></pre>]]></content>
       <categories>
         <category>PAT练习</category>
@@ -2686,8 +2681,8 @@ public class PAT_B1070 {
       </categories>
   </entry>
   <entry>
-    <title>B1068-万绿丛中一点红</title>
-    <url>/2019/11/08/B1068-%E4%B8%87%E7%BB%BF%E4%B8%9B%E4%B8%AD%E4%B8%80%E7%82%B9%E7%BA%A2/</url>
+    <title>B1069-微博转发抽奖</title>
+    <url>/2019/11/08/B1069-%E5%BE%AE%E5%8D%9A%E8%BD%AC%E5%8F%91%E6%8A%BD%E5%A5%96/</url>
     <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 小明 PAT 考了满分，高兴之余决定发起微博转发抽奖活动，从转发的网友中按顺序每隔 N 个人就发出一个红包。请你编写程序帮助他确定中奖名单。 </p>
 <h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
 <p>   输入第一行给出三个正整数 M（≤ 1000）、N 和 S，分别是转发的总量、小明决定的中奖间隔、以及第一位中奖者的序号（编号从 1 开始）。随后 M 行，顺序给出转发微博的网友的昵称（不超过 20 个字符、不包含空格回车的非空字符串）。</p>
@@ -2812,8 +2807,8 @@ public class PAT_B1068 {
       </categories>
   </entry>
   <entry>
-    <title>B1069-微博转发抽奖</title>
-    <url>/2019/11/08/B1069-%E5%BE%AE%E5%8D%9A%E8%BD%AC%E5%8F%91%E6%8A%BD%E5%A5%96/</url>
+    <title>B1068-万绿丛中一点红</title>
+    <url>/2019/11/08/B1068-%E4%B8%87%E7%BB%BF%E4%B8%9B%E4%B8%AD%E4%B8%80%E7%82%B9%E7%BA%A2/</url>
     <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 小明 PAT 考了满分，高兴之余决定发起微博转发抽奖活动，从转发的网友中按顺序每隔 N 个人就发出一个红包。请你编写程序帮助他确定中奖名单。 </p>
 <h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
 <p>   输入第一行给出三个正整数 M（≤ 1000）、N 和 S，分别是转发的总量、小明决定的中奖间隔、以及第一位中奖者的序号（编号从 1 开始）。随后 M 行，顺序给出转发微博的网友的昵称（不超过 20 个字符、不包含空格回车的非空字符串）。</p>
@@ -7194,54 +7189,6 @@ public class Main {
       </categories>
   </entry>
   <entry>
-    <title>B1009-说反话</title>
-    <url>/2019/10/16/B1009-%20%E8%AF%B4%E5%8F%8D%E8%AF%9D/</url>
-    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 给定一句英语，要求你编写程序，将句中所有单词的顺序颠倒输出。 </p>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p> 测试输入包含一个测试用例，在一行内给出总长度不超过 80 的字符串。字符串由若干单词和若干空格组成，其中单词是由英文字母（大小写有区分）组成的字符串，单词之间用 1 个空格分开，输入保证句子末尾没有多余的空格。 </p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p> 每个测试用例的输出占一行，输出倒序后的句子。 </p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
-<p>Hello World Here I Come</p>
-</blockquote>
-<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
-<p>Come I Here World Hello</p>
-</blockquote>
-<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li>从数组末尾开始输出</li>
-<li>list.size()-i</li>
-</ul>
-<hr>
-<hr>
-<pre><code>import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-
-public class PAT_B1009 {
-    public static void main(String[] args) throws IOException {
-        ArrayList&lt;String&gt; list = new ArrayList&lt;String&gt;();
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        String[] s = br.readLine().split(&quot; &quot;);
-        for (String s1 : s) {
-            list.add(s1);
-        }
-        for (int i = 1; i &lt;=list.size() ; i++) { //是要输出零索引的,size是指有多少元素比length来说会+1
-            System.out.print(list.get(list.size()- i));
-            if (i == list.size()){
-                break;
-            }
-            System.out.print(&quot; &quot;);
-        }
-    }
-}</code></pre>]]></content>
-      <categories>
-        <category>PAT练习</category>
-      </categories>
-  </entry>
-  <entry>
     <title>B1008- 数组元素循环右移问题</title>
     <url>/2019/10/16/B1008-%20%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0%E5%BE%AA%E7%8E%AF%E5%8F%B3%E7%A7%BB%E9%97%AE%E9%A2%98%20/</url>
     <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>  一个数组<em>A</em>中存有<em>N</em>（&gt;0）个整数，在不允许使用另外数组的前提下，将每个整数循环向右移<em>M</em>（≥0）个位置，即将<em>A</em>中的数据由（<em>A</em>0<em>A</em>1⋯<em>A*</em>N<em>−1）变换为（</em>A<strong>N<em>−</em>M<em>⋯</em>A</strong>N<em>−1</em>A<em>0</em>A<em>1⋯</em>A*<em>N</em>−<em>M</em>−1）（最后<em>M</em>个数循环移至最前面的<em>M</em>个位置）。如果需要考虑程序移动数据的次数尽量少，要如何设计移动的方法？</p>
@@ -7285,6 +7232,54 @@ public class PAT_B1008 {
         for (int i = 0; i &lt; m ; i++) {
             System.out.print(num[i]);
             if (i == m-1){
+                break;
+            }
+            System.out.print(&quot; &quot;);
+        }
+    }
+}</code></pre>]]></content>
+      <categories>
+        <category>PAT练习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>B1009-说反话</title>
+    <url>/2019/10/16/B1009-%20%E8%AF%B4%E5%8F%8D%E8%AF%9D/</url>
+    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 给定一句英语，要求你编写程序，将句中所有单词的顺序颠倒输出。 </p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p> 测试输入包含一个测试用例，在一行内给出总长度不超过 80 的字符串。字符串由若干单词和若干空格组成，其中单词是由英文字母（大小写有区分）组成的字符串，单词之间用 1 个空格分开，输入保证句子末尾没有多余的空格。 </p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p> 每个测试用例的输出占一行，输出倒序后的句子。 </p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
+<p>Hello World Here I Come</p>
+</blockquote>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
+<p>Come I Here World Hello</p>
+</blockquote>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
+<li>从数组末尾开始输出</li>
+<li>list.size()-i</li>
+</ul>
+<hr>
+<hr>
+<pre><code>import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
+public class PAT_B1009 {
+    public static void main(String[] args) throws IOException {
+        ArrayList&lt;String&gt; list = new ArrayList&lt;String&gt;();
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        String[] s = br.readLine().split(&quot; &quot;);
+        for (String s1 : s) {
+            list.add(s1);
+        }
+        for (int i = 1; i &lt;=list.size() ; i++) { //是要输出零索引的,size是指有多少元素比length来说会+1
+            System.out.print(list.get(list.size()- i));
+            if (i == list.size()){
                 break;
             }
             System.out.print(&quot; &quot;);
@@ -7571,8 +7566,8 @@ public class PAT_B1004 {
       </categories>
   </entry>
   <entry>
-    <title>B1003-我要通过！</title>
-    <url>/2019/10/08/B1003-%E6%88%91%E8%A6%81%E9%80%9A%E8%BF%87/</url>
+    <title>B1002-我要通过！</title>
+    <url>/2019/10/08/B1002-%E6%88%91%E8%A6%81%E9%80%9A%E8%BF%87/</url>
     <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><blockquote>
 <p>“<strong>答案正确</strong>”是自动判题系统给出的最令人欢喜的回复。本题属于 PAT 的“<strong>答案正确</strong>”大派送 —— 只要读入的字符串满足下列条件，系统就输出“<strong>答案正确</strong>”，否则输出“<strong>答案错误</strong>”。</p>
 <p>得到“<strong>答案正确</strong>”的条件是：</p>
@@ -7662,8 +7657,8 @@ public class PAT_B1003 {
       </categories>
   </entry>
   <entry>
-    <title>B1002-我要通过！</title>
-    <url>/2019/10/08/B1002-%E6%88%91%E8%A6%81%E9%80%9A%E8%BF%87/</url>
+    <title>B1003-我要通过！</title>
+    <url>/2019/10/08/B1003-%E6%88%91%E8%A6%81%E9%80%9A%E8%BF%87/</url>
     <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><blockquote>
 <p>“<strong>答案正确</strong>”是自动判题系统给出的最令人欢喜的回复。本题属于 PAT 的“<strong>答案正确</strong>”大派送 —— 只要读入的字符串满足下列条件，系统就输出“<strong>答案正确</strong>”，否则输出“<strong>答案错误</strong>”。</p>
 <p>得到“<strong>答案正确</strong>”的条件是：</p>
@@ -8581,5 +8576,11 @@ class Node {
       <categories>
         <category>生活感悟</category>
       </categories>
+  </entry>
+  <entry>
+    <title>PY.html</title>
+    <url>/2013/07/13/PY.html/</url>
+    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>cover: <a href="https://i.loli.net/2020/03/08/5LxwFtR28aWpC7D.png" target="_blank" rel="noopener">https://i.loli.net/2020/03/08/5LxwFtR28aWpC7D.png</a></p>
+]]></content>
   </entry>
 </search>
