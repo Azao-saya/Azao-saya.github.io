@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_ezdnzsotqc.css">
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1583655251597">
+  <link rel="stylesheet" href="/css/style.css?v=1583655579357">
    <!-- 爆炸红心效果 -->
 
  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
@@ -365,13 +365,11 @@ public class PAT_B1006 {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
 <div id="gitalk"></div>
 <script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
-<script src="/js/src/md5.min.js"></script>
 <script type="text/javascript">
     var gitalk = new Gitalk({
         clientID: 'e499c36d0f44111ba83f',
         clientSecret: '4b6117ffadebcd0f93bef97e4c0ded483e83ed12',
-        # id: window.location.pathname,
-        id : md5(location.pathname),
+        id: decodeURI(window.location.pathname),
         repo: 'comments',
         owner: 'Azao-saya',
         admin: 'Azao-saya'
@@ -395,7 +393,7 @@ public class PAT_B1006 {
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1583655251611"></script>
+<script src="/js/app.js?v=1583655579368"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
