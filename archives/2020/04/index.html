@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="zh-CN">
 
 <head><meta name="generator" content="Hexo 3.9.0">
-
   
   <title>文章归档：2020/4 - 正在建设的小窝</title>
   <meta charset="UTF-8">
   <meta name="description" content>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   
   
 
@@ -19,129 +19,22 @@
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正在建设的小窝">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
-   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
-  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
     <link rel="stylesheet" href="at.alicdn.com/t/font_1440167_ezdnzsotqc.css">
   
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1588151478283">
-   <!-- 爆炸红心效果 -->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1588168013692">-->
 
- <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
- 
-<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
- 
-<script type="text/javascript" src="/js/firework.js"></script>
-
-<script>document.addEventListener('visibilitychange',function(){if(document.visibilityState=='hidden'){normal_title=document.title;document.title='我在这呢~ ';}else{document.title=normal_title;}});</script>
-
-
+   
+    <style>
+      .nexmoe-avatar img:hover {
+        -webkit-transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+      }	
+    </style>
+  
 </head>
-<!--代码放置于</body>上方-->
-
-<script>
-
-!function(){
-
-function n(n,e,t){
-
-return n.getAttribute(e)||t
-
-}
-
-function e(n){
-
-return document.getElementsByTagName(n)
-
-}
-
-function t(){
-
-var t=e("script"),o=t.length,i=t[o-1];
-
-return{
-
-l:o,z:n(i,"zIndex",-1),o:n(i,"opacity",.5),c:n(i,"color","0,0,0"),n:n(i,"count",99)
-
-}
-
-}
-
-function o(){
-
-a=m.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,
-
-c=m.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight
-
-}
-
-function i(){
-
-r.clearRect(0,0,a,c);
-
-var n,e,t,o,m,l;
-
-s.forEach(function(i,x){
-
-for(i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>a||i.x<0?-1:1,i.ya*=i.y>c||i.y<0?-1:1,r.fillRect(i.x-.5,i.y-.5,1,1),e=x+1;e<u.length;e++)n=u[e],
-
-null!==n.x&&null!==n.y&&(o=i.x-n.x,m=i.y-n.y,
-
-l=o*o+m*m,l<n.max&&(n===y&&l>=n.max/2&&(i.x-=.03*o,i.y-=.03*m),
-
-t=(n.max-l)/n.max,r.beginPath(),r.lineWidth=t/2,r.strokeStyle="rgba("+d.c+","+(t+.2)+")",r.moveTo(i.x,i.y),r.lineTo(n.x,n.y),r.stroke()))
-
-}),
-
-x(i)
-
-}
-
-var a,c,u,m=document.createElement("canvas"),
-
-d=t(),l="c_n"+d.l,r=m.getContext("2d"),
-
-x=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||
-
-function(n){
-
-window.setTimeout(n,1e3/45)
-
-},
-
-w=Math.random,y={x:null,y:null,max:2e4};m.id=l,m.style.cssText="position:fixed;top:0;left:0;z-index:"+d.z+";opacity:"+d.o,e("body")[0].appendChild(m),o(),window.onresize=o,
-
-window.onmousemove=function(n){
-
-n=n||window.event,y.x=n.clientX,y.y=n.clientY
-
-},
-
-window.onmouseout=function(){
-
-y.x=null,y.y=null
-
-};
-
-for(var s=[],f=0;d.n>f;f++){
-
-var h=w()*a,g=w()*c,v=2*w()-1,p=2*w()-1;s.push({x:h,y:g,xa:v,ya:p,max:6e3})
-
-}
-
-u=s.concat([y]),
-
-setTimeout(function(){i()},100)
-
-}();
-
-</script>
-
-
 
 <body class="mdui-drawer-body-left">
   
@@ -149,10 +42,10 @@ setTimeout(function(){i()},100)
     <div class="nexmoe-bg" style="background-image: url(https://s2.ax1x.com/2019/12/06/QY5QSK.jpg)"></div>
     <div class="mdui-appbar mdui-shadow-0">
       <div class="mdui-toolbar">
-        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
         <div class="mdui-toolbar-spacer"></div>
         <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
-        <a href="/" title="A_zao" class="mdui-btn mdui-btn-icon"><img src="https://i.loli.net/2019/09/30/57LtVReQg2ANsaX.jpg"></a>
+        <a href="/" title="A_zao" class="mdui-btn mdui-btn-icon"><img src="https://i.loli.net/2019/09/30/57LtVReQg2ANsaX.jpg" alt="A_zao"></a>
        </div>
     </div>
   </div>
@@ -177,10 +70,10 @@ setTimeout(function(){i()},100)
             </div>
         </a>
         
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/archives" title="无实际作用的归档">
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/archives" title="文章归档">
             <i class="mdui-list-item-icon nexmoefont icon-container"></i>
             <div class="mdui-list-item-content">
-                无实际作用的归档
+                文章归档
             </div>
         </a>
         
@@ -191,10 +84,10 @@ setTimeout(function(){i()},100)
             </div>
         </a>
         
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="并不存在的朋友">
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="单向朋友">
             <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
             <div class="mdui-list-item-content">
-                并不存在的朋友
+                单向朋友
             </div>
         </a>
         
@@ -220,26 +113,38 @@ setTimeout(function(){i()},100)
   <div class="nexmoe-widget-wrap">
     <h3 class="nexmoe-widget-title">文章分类</h3>
     <div class="nexmoe-widget">
+
       <ul class="category-list">
+
         
+
+
         
+
         
+
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/PAT练习/">PAT练习</a>
           <span class="category-list-count">105</span>
         </li>
+
         
+
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/小工具/">小工具</a>
           <span class="category-list-count">2</span>
         </li>
+
         
+
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/生活感悟/">生活感悟</a>
           <span class="category-list-count">5</span>
         </li>
+
         
       </ul>
+
     </div>
   </div>
 
@@ -267,86 +172,75 @@ setTimeout(function(){i()},100)
   </div>
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
-        <section class="nexmoe-posts" id="brand-waterfall">
-    
-    <div class="nexmoe-post">
-        <a href="/2020/04/29/目前工作概况和吐槽/">
-            <div class="nexmoe-post-cover mdui-ripple"> 
-                
-                <img src="https://i.loli.net/2020/04/29/g8vXqNekfSpxwT6.jpg" alt="目前的工作概况和吐槽">
-                
-                <h1>目前的工作概况和吐槽</h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2020年04月29日</a>
-            <a><i class="nexmoefont icon-areachart"></i>1,799 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 6 分钟</a>
-            
-                <a class="nexmoefont icon-appstore-fill -link" href="/categories/生活感悟/">生活感悟</a>
-            
-            
-        </div>
-        <article>
-            
-            <p>首先还是非常感谢老板能提供给我这个工作机会，愿意给我一个应聘基层操作员工作都被嫌弃的我，一个工作的机会。</p>
-<p>我现在的工作是市政方面的，老板挺随和而且很有能力，工作7年就成立了自己的工作，而且说是没人带他白手起家吃了很多苦头。</p>
-<p>工作地点离家很近，能让我捡起来自己自行车每天上下班。上班时间和下班时间也很正常，让我感觉到了因祸得福的味道，好事坏事都会带来新的机遇，没必要消极要积极出击。</p>
-<p>刚上班的几天都让我自己学习，我也把上学时候珍藏（没怎么用过的）建筑书籍都搬到办公室里来读。<br>然后在这期间也干了一点盖盖章这种猴子也能做的活，这段时间我还是挺焦虑的，感觉自己是一个局外人如果一直这么下去说真的我都不敢去拿工资了。</p>
-<p>还好这段时间持续的不算长，老板开始带我去工地。告诉了我设计图纸会和实际情况有很大出入，要和多方面协调。有更改的内容，要我在竣工图上也做出修改。</p>
-<p>至此我才真正有了在上班的感觉，虽然感觉怎么上学的时候什么都没学到，但其实我还是记住了一些东西的并快速的在工作运用。</p>
-<p>上手之后就开始发现工作变得永远都做不完了，做完一个下一个任务没有任何间隔。加上每次都是没接触过的新任务，老板也限定工期，搞得我也很紧张。</p>
-<p>老板虽然说过会亲手带新人，会把前因后果讲让我少走弯路。之后约谈几次教我的东西都是连没学过建筑都能听懂的宏图大饼，这时我才发现之前可能是我表现的姿态太低了，面试的时候怕自己胜任不了工作连工资都没谈就来上班了。</p>
-<p>本来想写很多抱怨，想了想出来工作本来就不可能顺遂如意，写出来之后发现也没什么大不了的。</p>
-<p>但是憋着又会给我憋坏了，就在这里尽量不带主观色彩的描述一下我遇到了什么。</p>
-<ol>
-<li><p>首先是我分不清客套话，别人说了有问题随时问，并不是代表我真的可以随时问。我真这么做了对方的态度马上就<code>从认真回复</code>到<code>回的慢</code>到<code>懒得回</code>到<code>不耐烦</code>。</p>
-<details> <summary>展开说明</summary> <pre>之后我也学聪明了，不是需要确认的事情，我都自己动手找答案。并自己发现解决了困扰办公室许久的cad图纸不时清空问题。同事老在隔壁摔键盘说这东西得要另存为按了保存都没用。当时我还不解为何保存没用，实际我出现这个问题时发现确实不单清空了图纸，也把备份给污染了。于是马上就从病毒这方面入手找寻，结果发现了问题是cad特攻病毒。只是我很不解为什么这样一个问题能存在这么久？</pre> </details>  
-</li>
-<li><p>只知道安排工作</p>
-</li>
-</ol>
-<details> <summary>展开说明</summary> <pre>这是我非常生气的地方，不愿意回答我自学没问题，但一次我当着老板的面在百度问题，老板就炸了，语气很不好的说着你这样工作要做到什么时候？并把老板安排了要教我的老板娘也骂了一顿，虽然老板娘说着“在教了的啊”，但实际情况谁都清楚，我问的东西得要不是等半小时之后的随口的回复“你就xxx做啊”“这个我试过了”“（沉默）”，就是根本没有回复。</pre> </details>  
+        
+<section class="nexmoe-archives">
 
-<ol start="3">
-<li>承诺事情没有兑现，入职时候老板说所有都在试图说明他会是一个好老板。但事实是和别人同样他也是一个吃干抹净画大饼的好老板。</li>
-</ol>
-<details> <summary>展开说明</summary> <pre>我理解这些事情非常普遍，我也理解老板招人广告挂了一个月招不到人需要些大饼让人加入这个糟糕的工作，我更理解小公司生存的不易，让良心的老板不是死了就是也被转化了。
-我能理解但我作为一个重视承诺的人，打心底的完全的不想要认同这些事情。也希望我以后可以不要加入他们。</pre> </details>  
+    <article>
+        
 
-<ol start="4">
-<li><p>工作内容混乱</p>
-<details> <summary>展开说明</summary> <pre>老板突然给我安排了设计的活，我心中莫名。在我的认知里设计这块不说是同济出来的大佬，也应该是那些热爱建筑并深入学习过的人才能做的。但老板要求只能我硬着头皮做做看，希望不要给别人添乱。
-结果发现我不但能完全胜任这份工作，而且发现这些图纸有大量的原始错误，在我做前面做设计的甚至是一个在用教育版的傻逼，导致我打印出来的图纸全部带上了水印。
-我确实是又一次妄自菲薄了，这些错误我能分辨一部分，能处理一部分。大多数都无能为力，我也不知道会影响多少，只能让之后接手的自己去擦屁股去，不过这行大概率是将错就错了。</pre> </details>  
-</li>
-<li><p>还有就是接上面的工作内容混乱导致的，经验极其的重要，大量的潜规则需要自己去悟。</p>
-</li>
-</ol>
-<details> <summary>展开说明</summary> <pre>虽然土木有很完善的要求和标准，实际上是没人按照标准一板一眼去做的，特别是市政污水自来水这块，设计的初稿完全就是随手画的。实际会遇到村民拦阻，原有线路的干扰。能完全按照原来的设计才奇了怪了。
-老板如果完全按照招标的内容做的话，很多工程老板不说盈利，能不亏损都难。所以哪里可以偷工减料哪里可以多报，这些东西大家都清楚都默认存在。但是没有哪本书怎么教你做这些，但你做多了肯定懂。</pre> </details>  
-
-<p>我可以找很多的这样依据去佐证坚定我最初的观点，但其实即使现在工资比洗碗都要低，后面证堆上去之后也能拿个在小城市可以体面生活的工资。</p>
-<p>和之前说的一样总还是有点希望，其实也没什么大不了的。</p>
-<p>最大的问题便是我不喜欢这个行业，如果我现在放弃了编程，这将会成为我一辈子的遗憾。</p>
-<p>为此我已经听不进别的任何道理和理由。</p>
-
-            
-        </article>
-    </div>
-    
+        
+    </article>
 </section>
 
+<style>
+.nexmoe-archives article > *:first-child {
+    margin-top: 0;
+}
+.nexmoe-archives article > *:last-child {
+    margin-bottom: 0;
+}
+.nexmoe-archives ul {
+    list-style: none;
+    padding-left: 0!important;
+}
+.nexmoe-archives li {
+    position: relative;
+    padding: 10px 0;
+}
+.nexmoe-archives li::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    background: #ff4e6a;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-right: 11px;
+    border-radius: 100%;
+    border: 3px solid #fff;
+    z-index: 100;
+    position: relative;
+}
+.nexmoe-archives li::after {
+    content: "";
+    height: 100%;
+    width: 2px;
+    background: rgba(255, 78, 106, 0.2);
+    position: absolute;
+    left: 6px;
+    top: 20px;
+}
+.nexmoe-archives li:last-child:after {
+    display: none;
+}
+.nexmoe-archives span {
+    margin-right: 15px;
+}
+</style>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1588151478292"></script>-->
+<!--<script src="/js/app.js?v=1588168013697"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
 
 
+ 
+<script> 
+!function(e,t,a){function n(){c(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"),o(),r()}function r(){for(var e=0;e<d.length;e++)d[e].alpha<=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText="left:"+d[e].x+"px;top:"+d[e].y+"px;opacity:"+d[e].alpha+";transform:scale("+d[e].scale+","+d[e].scale+") rotate(45deg);background:"+d[e].color+";z-index:99999");requestAnimationFrame(r)}function o(){var t="function"==typeof e.onclick&&e.onclick;e.onclick=function(e){t&&t(),i(e)}}function i(e){var a=t.createElement("div");a.className="heart",d.push({el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()}),t.body.appendChild(a)}function c(e){var a=t.createElement("style");a.type="text/css";try{a.appendChild(t.createTextNode(e))}catch(t){a.styleSheet.cssText=e}t.getElementsByTagName("head")[0].appendChild(a)}function s(){return"rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"}var d=[];e.requestAnimationFrame=function(){return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e){setTimeout(e,1e3/60)}}(),n()}(window,document);
+</script>
 
   
 
@@ -354,16 +248,6 @@ setTimeout(function(){i()},100)
 
 
 
-
-  <!-- 音频播放 -->
-  <link rel="stylesheet" href="/dist/APlayer.min.css">
-  <div id="aplayer"></div>
-  <script type="text/javascript" src="/dist/APlayer.min.js"></script>
-  <script type="text/javascript" src="/dist/music.js"></script>
 </body>
-
-
-
-
 
 </html>

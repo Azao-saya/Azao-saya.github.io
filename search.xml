@@ -1706,6 +1706,76 @@ public class PAT_B1082 {
       </categories>
   </entry>
   <entry>
+    <title>B1081-MOOC期终成绩</title>
+    <url>/2019/12/02/B1081-MOOC%E6%9C%9F%E7%BB%88%E6%88%90%E7%BB%A9/</url>
+    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 本题要求你帮助某网站的用户注册模块写一个密码合法性检查的小功能。该网站要求用户设置的密码必须由不少于6个字符组成，并且只能有英文字母、数字和小数点 <code>.</code>，还必须既有字母也有数字。 </p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p> 输入第一行给出一个正整数 N（≤ 100），随后 N 行，每行给出一个用户设置的密码，为不超过 80 个字符的非空字符串，以回车结束。</p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述"></a>输出描述</h2><blockquote>
+<p>对每个用户的密码，在一行中输出系统反馈信息，分以下5种：</p>
+<ul>
+<li>如果密码合法，输出<code>Your password is wan mei.</code>；</li>
+<li>如果密码太短，不论合法与否，都输出<code>Your password is tai duan le.</code>；</li>
+<li>如果密码长度合法，但存在不合法字符，则输出<code>Your password is tai luan le.</code>；</li>
+<li>如果密码长度合法，但只有字母没有数字，则输出<code>Your password needs shu zi.</code>；</li>
+<li>如果密码长度合法，但只有数字没有字母，则输出<code>Your password needs zi mu.</code>。</li>
+</ul>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
+<p>5<br>123s<br>zheshi.wodepw<br>1234.5678<br>WanMei23333<br>pass*word.6</p>
+</blockquote>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
+<p>5<br>123s<br>zheshi.wodepw<br>1234.5678<br>WanMei23333<br>pass*word.6</p>
+</blockquote>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
+<li>设置三个标记，一个记录是否有字母，一个是否有数字，一个是有除了字母和数字加上.之外的其他字符</li>
+<li>有其他字符或者同时没有字母和数字输出太乱了。</li>
+</ul>
+<hr>
+<hr>
+<pre><code>import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class PAT_B1081 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+        for (int i = 0; i &lt;n ; i++) {
+            char[] password = br.readLine().toCharArray();
+            if (password.length &lt;6){
+                System.out.println(&quot;Your password is tai duan le.&quot;);
+                continue;
+            }
+            boolean letter = false, number = false, other = true;
+            for (int j = 0; j &lt;password.length ; j++) {
+                char c = password[j];
+                if (c &gt;=&#39;a&#39; &amp;&amp; c&lt;=&#39;z&#39; || c&gt;=&#39;A&#39; &amp;&amp; c&lt;=&#39;Z&#39;){
+                    letter = true;
+                }else if(c &gt;=&#39;0&#39; &amp;&amp; c&lt;=&#39;9&#39;){
+                    number = true;
+                }else if(c != &#39;.&#39;){
+                    other = false;
+                }
+            }
+            if (!other || letter==false &amp;&amp; number==false){
+                System.out.println(&quot;Your password is tai luan le.&quot;);
+            }else if (!number &amp;&amp; letter){
+                System.out.println(&quot;Your password needs shu zi.&quot;);
+            }else if (number &amp;&amp; !letter){
+                System.out.println(&quot;Your password needs zi mu.&quot;);
+            }else {
+                System.out.println(&quot;Your password is wan mei.&quot;);
+            }
+        }
+    }
+}</code></pre>]]></content>
+      <categories>
+        <category>PAT练习</category>
+      </categories>
+  </entry>
+  <entry>
     <title>B1080-MOOC期终成绩</title>
     <url>/2019/12/02/B1080-MOOC%E6%9C%9F%E7%BB%88%E6%88%90%E7%BB%A9/</url>
     <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>对于在中国大学MOOC（<a href="http://www.icourse163.org/" target="_blank" rel="noopener">http://www.icourse163.org/</a> ）学习“数据结构”课程的学生，想要获得一张合格证书，必须首先获得不少于200分的在线编程作业分，然后总评获得不少于60分（满分100）。总评成绩的计算公式为 <em>G</em>=(<em>G<strong>m</strong>i<em>d</em>−<em>t</em>e<em>r</em>m<em>×40%+</em>G<strong>f</strong>i<strong>n</strong>al<em>×60%)，如果 <em>G</em></em>m<strong>i</strong>d<em>−</em>t<strong>e</strong>r**m</em>&gt;<em>G<strong>f</strong>i<strong>n</strong>a*<em>l</em>；否则总评 *G</em> 就是 <em>G*</em>f<strong>i</strong>n<strong>a*l。这里 *G</strong>m<strong>i<em>d</em>−*t</strong>e<strong>r</strong>m和G<strong>f</strong>i<strong>n</strong>a**l 分别为学生的期中和期末成绩。</p>
@@ -1840,76 +1910,6 @@ class Score{
         this.m_score = m;
         this.f_score = f;
         this.t_score = t;
-    }
-}</code></pre>]]></content>
-      <categories>
-        <category>PAT练习</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>B1081-MOOC期终成绩</title>
-    <url>/2019/12/02/B1081-MOOC%E6%9C%9F%E7%BB%88%E6%88%90%E7%BB%A9/</url>
-    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 本题要求你帮助某网站的用户注册模块写一个密码合法性检查的小功能。该网站要求用户设置的密码必须由不少于6个字符组成，并且只能有英文字母、数字和小数点 <code>.</code>，还必须既有字母也有数字。 </p>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p> 输入第一行给出一个正整数 N（≤ 100），随后 N 行，每行给出一个用户设置的密码，为不超过 80 个字符的非空字符串，以回车结束。</p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述"></a>输出描述</h2><blockquote>
-<p>对每个用户的密码，在一行中输出系统反馈信息，分以下5种：</p>
-<ul>
-<li>如果密码合法，输出<code>Your password is wan mei.</code>；</li>
-<li>如果密码太短，不论合法与否，都输出<code>Your password is tai duan le.</code>；</li>
-<li>如果密码长度合法，但存在不合法字符，则输出<code>Your password is tai luan le.</code>；</li>
-<li>如果密码长度合法，但只有字母没有数字，则输出<code>Your password needs shu zi.</code>；</li>
-<li>如果密码长度合法，但只有数字没有字母，则输出<code>Your password needs zi mu.</code>。</li>
-</ul>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
-<p>5<br>123s<br>zheshi.wodepw<br>1234.5678<br>WanMei23333<br>pass*word.6</p>
-</blockquote>
-<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
-<p>5<br>123s<br>zheshi.wodepw<br>1234.5678<br>WanMei23333<br>pass*word.6</p>
-</blockquote>
-<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li>设置三个标记，一个记录是否有字母，一个是否有数字，一个是有除了字母和数字加上.之外的其他字符</li>
-<li>有其他字符或者同时没有字母和数字输出太乱了。</li>
-</ul>
-<hr>
-<hr>
-<pre><code>import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-public class PAT_B1081 {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(br.readLine());
-        for (int i = 0; i &lt;n ; i++) {
-            char[] password = br.readLine().toCharArray();
-            if (password.length &lt;6){
-                System.out.println(&quot;Your password is tai duan le.&quot;);
-                continue;
-            }
-            boolean letter = false, number = false, other = true;
-            for (int j = 0; j &lt;password.length ; j++) {
-                char c = password[j];
-                if (c &gt;=&#39;a&#39; &amp;&amp; c&lt;=&#39;z&#39; || c&gt;=&#39;A&#39; &amp;&amp; c&lt;=&#39;Z&#39;){
-                    letter = true;
-                }else if(c &gt;=&#39;0&#39; &amp;&amp; c&lt;=&#39;9&#39;){
-                    number = true;
-                }else if(c != &#39;.&#39;){
-                    other = false;
-                }
-            }
-            if (!other || letter==false &amp;&amp; number==false){
-                System.out.println(&quot;Your password is tai luan le.&quot;);
-            }else if (!number &amp;&amp; letter){
-                System.out.println(&quot;Your password needs shu zi.&quot;);
-            }else if (number &amp;&amp; !letter){
-                System.out.println(&quot;Your password needs zi mu.&quot;);
-            }else {
-                System.out.println(&quot;Your password is wan mei.&quot;);
-            }
-        }
     }
 }</code></pre>]]></content>
       <categories>
@@ -7238,54 +7238,6 @@ public class Main {
       </categories>
   </entry>
   <entry>
-    <title>B1009-说反话</title>
-    <url>/2019/10/16/B1009-%20%E8%AF%B4%E5%8F%8D%E8%AF%9D/</url>
-    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 给定一句英语，要求你编写程序，将句中所有单词的顺序颠倒输出。 </p>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p> 测试输入包含一个测试用例，在一行内给出总长度不超过 80 的字符串。字符串由若干单词和若干空格组成，其中单词是由英文字母（大小写有区分）组成的字符串，单词之间用 1 个空格分开，输入保证句子末尾没有多余的空格。 </p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p> 每个测试用例的输出占一行，输出倒序后的句子。 </p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
-<p>Hello World Here I Come</p>
-</blockquote>
-<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
-<p>Come I Here World Hello</p>
-</blockquote>
-<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li>从数组末尾开始输出</li>
-<li>list.size()-i</li>
-</ul>
-<hr>
-<hr>
-<pre><code>import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-
-public class PAT_B1009 {
-    public static void main(String[] args) throws IOException {
-        ArrayList&lt;String&gt; list = new ArrayList&lt;String&gt;();
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        String[] s = br.readLine().split(&quot; &quot;);
-        for (String s1 : s) {
-            list.add(s1);
-        }
-        for (int i = 1; i &lt;=list.size() ; i++) { //是要输出零索引的,size是指有多少元素比length来说会+1
-            System.out.print(list.get(list.size()- i));
-            if (i == list.size()){
-                break;
-            }
-            System.out.print(&quot; &quot;);
-        }
-    }
-}</code></pre>]]></content>
-      <categories>
-        <category>PAT练习</category>
-      </categories>
-  </entry>
-  <entry>
     <title>B1008- 数组元素循环右移问题</title>
     <url>/2019/10/16/B1008-%20%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0%E5%BE%AA%E7%8E%AF%E5%8F%B3%E7%A7%BB%E9%97%AE%E9%A2%98%20/</url>
     <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>  一个数组<em>A</em>中存有<em>N</em>（&gt;0）个整数，在不允许使用另外数组的前提下，将每个整数循环向右移<em>M</em>（≥0）个位置，即将<em>A</em>中的数据由（<em>A</em>0<em>A</em>1⋯<em>A*</em>N<em>−1）变换为（</em>A<strong>N<em>−</em>M<em>⋯</em>A</strong>N<em>−1</em>A<em>0</em>A<em>1⋯</em>A*<em>N</em>−<em>M</em>−1）（最后<em>M</em>个数循环移至最前面的<em>M</em>个位置）。如果需要考虑程序移动数据的次数尽量少，要如何设计移动的方法？</p>
@@ -7329,6 +7281,54 @@ public class PAT_B1008 {
         for (int i = 0; i &lt; m ; i++) {
             System.out.print(num[i]);
             if (i == m-1){
+                break;
+            }
+            System.out.print(&quot; &quot;);
+        }
+    }
+}</code></pre>]]></content>
+      <categories>
+        <category>PAT练习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>B1009-说反话</title>
+    <url>/2019/10/16/B1009-%20%E8%AF%B4%E5%8F%8D%E8%AF%9D/</url>
+    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 给定一句英语，要求你编写程序，将句中所有单词的顺序颠倒输出。 </p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p> 测试输入包含一个测试用例，在一行内给出总长度不超过 80 的字符串。字符串由若干单词和若干空格组成，其中单词是由英文字母（大小写有区分）组成的字符串，单词之间用 1 个空格分开，输入保证句子末尾没有多余的空格。 </p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p> 每个测试用例的输出占一行，输出倒序后的句子。 </p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
+<p>Hello World Here I Come</p>
+</blockquote>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
+<p>Come I Here World Hello</p>
+</blockquote>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
+<li>从数组末尾开始输出</li>
+<li>list.size()-i</li>
+</ul>
+<hr>
+<hr>
+<pre><code>import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
+public class PAT_B1009 {
+    public static void main(String[] args) throws IOException {
+        ArrayList&lt;String&gt; list = new ArrayList&lt;String&gt;();
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        String[] s = br.readLine().split(&quot; &quot;);
+        for (String s1 : s) {
+            list.add(s1);
+        }
+        for (int i = 1; i &lt;=list.size() ; i++) { //是要输出零索引的,size是指有多少元素比length来说会+1
+            System.out.print(list.get(list.size()- i));
+            if (i == list.size()){
                 break;
             }
             System.out.print(&quot; &quot;);

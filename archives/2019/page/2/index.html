@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="zh-CN">
 
 <head><meta name="generator" content="Hexo 3.9.0">
-
   
   <title>文章归档：2019 - 正在建设的小窝</title>
   <meta charset="UTF-8">
   <meta name="description" content>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   
   
 
@@ -19,129 +19,22 @@
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正在建设的小窝">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
-   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
-  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
     <link rel="stylesheet" href="at.alicdn.com/t/font_1440167_ezdnzsotqc.css">
   
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1588151477555">
-   <!-- 爆炸红心效果 -->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1588168012759">-->
 
- <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
- 
-<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
- 
-<script type="text/javascript" src="/js/firework.js"></script>
-
-<script>document.addEventListener('visibilitychange',function(){if(document.visibilityState=='hidden'){normal_title=document.title;document.title='我在这呢~ ';}else{document.title=normal_title;}});</script>
-
-
+   
+    <style>
+      .nexmoe-avatar img:hover {
+        -webkit-transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+      }	
+    </style>
+  
 </head>
-<!--代码放置于</body>上方-->
-
-<script>
-
-!function(){
-
-function n(n,e,t){
-
-return n.getAttribute(e)||t
-
-}
-
-function e(n){
-
-return document.getElementsByTagName(n)
-
-}
-
-function t(){
-
-var t=e("script"),o=t.length,i=t[o-1];
-
-return{
-
-l:o,z:n(i,"zIndex",-1),o:n(i,"opacity",.5),c:n(i,"color","0,0,0"),n:n(i,"count",99)
-
-}
-
-}
-
-function o(){
-
-a=m.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,
-
-c=m.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight
-
-}
-
-function i(){
-
-r.clearRect(0,0,a,c);
-
-var n,e,t,o,m,l;
-
-s.forEach(function(i,x){
-
-for(i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>a||i.x<0?-1:1,i.ya*=i.y>c||i.y<0?-1:1,r.fillRect(i.x-.5,i.y-.5,1,1),e=x+1;e<u.length;e++)n=u[e],
-
-null!==n.x&&null!==n.y&&(o=i.x-n.x,m=i.y-n.y,
-
-l=o*o+m*m,l<n.max&&(n===y&&l>=n.max/2&&(i.x-=.03*o,i.y-=.03*m),
-
-t=(n.max-l)/n.max,r.beginPath(),r.lineWidth=t/2,r.strokeStyle="rgba("+d.c+","+(t+.2)+")",r.moveTo(i.x,i.y),r.lineTo(n.x,n.y),r.stroke()))
-
-}),
-
-x(i)
-
-}
-
-var a,c,u,m=document.createElement("canvas"),
-
-d=t(),l="c_n"+d.l,r=m.getContext("2d"),
-
-x=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||
-
-function(n){
-
-window.setTimeout(n,1e3/45)
-
-},
-
-w=Math.random,y={x:null,y:null,max:2e4};m.id=l,m.style.cssText="position:fixed;top:0;left:0;z-index:"+d.z+";opacity:"+d.o,e("body")[0].appendChild(m),o(),window.onresize=o,
-
-window.onmousemove=function(n){
-
-n=n||window.event,y.x=n.clientX,y.y=n.clientY
-
-},
-
-window.onmouseout=function(){
-
-y.x=null,y.y=null
-
-};
-
-for(var s=[],f=0;d.n>f;f++){
-
-var h=w()*a,g=w()*c,v=2*w()-1,p=2*w()-1;s.push({x:h,y:g,xa:v,ya:p,max:6e3})
-
-}
-
-u=s.concat([y]),
-
-setTimeout(function(){i()},100)
-
-}();
-
-</script>
-
-
 
 <body class="mdui-drawer-body-left">
   
@@ -149,10 +42,10 @@ setTimeout(function(){i()},100)
     <div class="nexmoe-bg" style="background-image: url(https://s2.ax1x.com/2019/12/06/QY5QSK.jpg)"></div>
     <div class="mdui-appbar mdui-shadow-0">
       <div class="mdui-toolbar">
-        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
         <div class="mdui-toolbar-spacer"></div>
         <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
-        <a href="/" title="A_zao" class="mdui-btn mdui-btn-icon"><img src="https://i.loli.net/2019/09/30/57LtVReQg2ANsaX.jpg"></a>
+        <a href="/" title="A_zao" class="mdui-btn mdui-btn-icon"><img src="https://i.loli.net/2019/09/30/57LtVReQg2ANsaX.jpg" alt="A_zao"></a>
        </div>
     </div>
   </div>
@@ -177,10 +70,10 @@ setTimeout(function(){i()},100)
             </div>
         </a>
         
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/archives" title="无实际作用的归档">
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/archives" title="文章归档">
             <i class="mdui-list-item-icon nexmoefont icon-container"></i>
             <div class="mdui-list-item-content">
-                无实际作用的归档
+                文章归档
             </div>
         </a>
         
@@ -191,10 +84,10 @@ setTimeout(function(){i()},100)
             </div>
         </a>
         
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="并不存在的朋友">
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="单向朋友">
             <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
             <div class="mdui-list-item-content">
-                并不存在的朋友
+                单向朋友
             </div>
         </a>
         
@@ -220,26 +113,38 @@ setTimeout(function(){i()},100)
   <div class="nexmoe-widget-wrap">
     <h3 class="nexmoe-widget-title">文章分类</h3>
     <div class="nexmoe-widget">
+
       <ul class="category-list">
+
         
+
+
         
+
         
+
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/PAT练习/">PAT练习</a>
           <span class="category-list-count">105</span>
         </li>
+
         
+
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/小工具/">小工具</a>
           <span class="category-list-count">2</span>
         </li>
+
         
+
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/生活感悟/">生活感悟</a>
           <span class="category-list-count">5</span>
         </li>
+
         
       </ul>
+
     </div>
   </div>
 
@@ -267,280 +172,75 @@ setTimeout(function(){i()},100)
   </div>
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
-        <section class="nexmoe-posts" id="brand-waterfall">
-    
-    <div class="nexmoe-post">
-        <a href="/2019/12/02/B1086-就不告诉你/">
-            <div class="nexmoe-post-cover mdui-ripple"> 
-                
-                <img src="https://i.loli.net/2019/12/20/Lxb8YW1TBdlHyuC.jpg" alt="B1086-就不告诉你">
-                
-                <h1>B1086-就不告诉你</h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2019年12月02日</a>
-            <a><i class="nexmoefont icon-areachart"></i>274 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
-            
-                <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
-            
-            
-        </div>
-        <article>
-            
-            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述
-            
-        </h2></article>
-    </div>
-    
-    <div class="nexmoe-post">
-        <a href="/2019/12/02/B1085-PAT单位排行/">
-            <div class="nexmoe-post-cover mdui-ripple"> 
-                
-                <img src="https://i.loli.net/2019/12/20/Lxb8YW1TBdlHyuC.jpg" alt="B1085-PAT单位排行">
-                
-                <h1>B1085-PAT单位排行</h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2019年12月02日</a>
-            <a><i class="nexmoefont icon-areachart"></i>1,366 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 7 分钟</a>
-            
-                <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
-            
-            
-        </div>
-        <article>
-            
-            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述
-            
-        </h2></article>
-    </div>
-    
-    <div class="nexmoe-post">
-        <a href="/2019/12/02/B1084-外观数列/">
-            <div class="nexmoe-post-cover mdui-ripple"> 
-                
-                <img src="https://i.loli.net/2019/12/20/Lxb8YW1TBdlHyuC.jpg" alt="B1084-外观数列">
-                
-                <h1>B1084-外观数列</h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2019年12月02日</a>
-            <a><i class="nexmoefont icon-areachart"></i>771 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
-            
-                <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
-            
-            
-        </div>
-        <article>
-            
-            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述
-            
-        </h2></article>
-    </div>
-    
-    <div class="nexmoe-post">
-        <a href="/2019/12/02/B1083-是否存在相等的差/">
-            <div class="nexmoe-post-cover mdui-ripple"> 
-                
-                <img src="https://i.loli.net/2019/12/20/Lxb8YW1TBdlHyuC.jpg" alt="B1083-是否存在相等的差">
-                
-                <h1>B1083-是否存在相等的差</h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2019年12月02日</a>
-            <a><i class="nexmoefont icon-areachart"></i>331 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
-            
-                <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
-            
-            
-        </div>
-        <article>
-            
-            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述
-            
-        </h2></article>
-    </div>
-    
-    <div class="nexmoe-post">
-        <a href="/2019/12/02/B1082-射击比赛/">
-            <div class="nexmoe-post-cover mdui-ripple"> 
-                
-                <img src="https://i.loli.net/2019/12/20/Lxb8YW1TBdlHyuC.jpg" alt="B1082-射击比赛">
-                
-                <h1>B1082-射击比赛</h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2019年12月02日</a>
-            <a><i class="nexmoefont icon-areachart"></i>413 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
-            
-                <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
-            
-            
-        </div>
-        <article>
-            
-            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述
-            
-        </h2></article>
-    </div>
-    
-    <div class="nexmoe-post">
-        <a href="/2019/12/02/B1080-MOOC期终成绩/">
-            <div class="nexmoe-post-cover mdui-ripple"> 
-                
-                <img src="https://i.loli.net/2019/12/20/Lxb8YW1TBdlHyuC.jpg" alt="B1080-MOOC期终成绩">
-                
-                <h1>B1080-MOOC期终成绩</h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2019年12月02日</a>
-            <a><i class="nexmoefont icon-areachart"></i>1,117 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 5 分钟</a>
-            
-                <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
-            
-            
-        </div>
-        <article>
-            
-            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述
-            
-        </h2></article>
-    </div>
-    
-    <div class="nexmoe-post">
-        <a href="/2019/12/02/B1081-MOOC期终成绩/">
-            <div class="nexmoe-post-cover mdui-ripple"> 
-                
-                <img src="https://i.loli.net/2019/12/20/Lxb8YW1TBdlHyuC.jpg" alt="B1081-MOOC期终成绩">
-                
-                <h1>B1081-MOOC期终成绩</h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2019年12月02日</a>
-            <a><i class="nexmoefont icon-areachart"></i>524 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
-            
-                <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
-            
-            
-        </div>
-        <article>
-            
-            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述
-            
-        </h2></article>
-    </div>
-    
-    <div class="nexmoe-post">
-        <a href="/2019/12/02/B1079-延迟的回文数/">
-            <div class="nexmoe-post-cover mdui-ripple"> 
-                
-                <img src="https://s2.ax1x.com/2019/12/06/QGLUR1.jpg" alt="B1079-延迟的回文数">
-                
-                <h1>B1079-延迟的回文数</h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2019年12月02日</a>
-            <a><i class="nexmoefont icon-areachart"></i>702 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
-            
-                <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
-            
-            
-        </div>
-        <article>
-            
-            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述
-            
-        </h2></article>
-    </div>
-    
-    <div class="nexmoe-post">
-        <a href="/2019/12/01/博客建站碎碎念/">
-            <div class="nexmoe-post-cover mdui-ripple"> 
-                
-                    <img src="https://s2.ax1x.com/2019/12/06/QY5QSK.jpg" alt="博客建站碎碎念">
-                
-                <h1>博客建站碎碎念</h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2019年12月01日</a>
-            <a><i class="nexmoefont icon-areachart"></i>925 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
-            
-                <a class="nexmoefont icon-appstore-fill -link" href="/categories/生活感悟/">生活感悟</a>
-            
-            
-        </div>
-        <article>
-            
-            <p>在最初的时候因为经常在各大厂商上看到推销1元域名的广告，以为这是创建博客的根本。<br>兴致冲冲的选好名字买下来之后，看到备案啊什么的好像也没有放文件的地方，发现不是这么一回事。<br>重新查了一下资料，认真了解了之后终于在Github上成功的部署了hexo的基本页面。<br>了解到github在访问速度上略慢。之后尝试了在腾讯云开发者平台上部署，遇上了一些挫折。<br>最后我的博客在码云Gitee上安家了。<br>在博客美化上有点被别人带偏了，尝试了一些插件。发现hexo都不能支持。<br>便直接在hexo官网中寻找别人上传的主题，最后选择Nexmoe主题。<br>在了解主题使用方法的时候，发现该主题的作者仅仅只是一位高中生，不禁开始怀疑人生。<br>我在我的圈里笑话那些不求上进的人，整日劝他们多学一点。<br>没想到我自己以为的学习和努力，只是来到了别人高中时代甚至更早以前的起点。<br>让我回想起了那句“不做差的圈子的异类，要做好圈子里的普通人。”<br>对抗这些琐碎事情消耗了我很多不必要的认知，明明我只要为了我自己就可以了。<br>不是做给谁看，也不是什么要打谁的脸，让生活简单点，想法纯粹点。更多的关注关注自己，向内看。<br>更好的迎接更好的自己。</p>
-<p>因为缺乏web知识博客目前只根据配置文件更改了小部分内容。<br>然后添加添加爆炸红心，背景线条加随鼠标移动，和博客不在主标签时显示另外的标题。<br>还有不存在的音乐播放器，网易云自带的有些粗糙。我是想要一个能够设置音量的，之后有机会再实现。<br>都是一些花里胡哨的东西，因为我目前能做也只有添加。要进一步的更改我是完全无能为力。</p>
-<p>写博客时最开始用的是MarkdownPan2，因为标题文件总是无法正确显示需要再用记事本打开改。<br>尝试选择了用Typora来</p>
-<p>使用了一段时间之后发现了主题的问题，就题图无法删除。<br>感觉这个主题更适合那些小清新博主来使用，发题目量太大了没办法很好显示，也没有搜索。<br>加上<code>&lt;!--more--&gt;</code>这个语法不能在文章开头直接写来达到只显示标题的目的。<br>所以我都是在题目描述后加<code>&lt;!--more--&gt;</code>，来让文章不显示全部的内容。<br>效果感觉不尽如人意，虽然现在想来可以用markdown的空格加<code>&lt;!--more--&gt;</code>来实现。<br>50多篇的都这样了，打破原来的格式我还是有点抗拒。<br>还是将错就错，不同文章之间刚好也没有分割线。</p>
-<p>因为一直看着qq用不了全选命令，手动复制typora的内容也总是出现复制不全导致格式出错的情况。<br>关上之后ctrl+a就能正常使用了(不看qq还提高了效率…<br>依旧无法解决，仍然会出现需要微调的情况<br>找到了源代码展示的功能，这下不需要去记事本里改了算是解决了。</p>
-<p>和计划中的理想中的自己差了好远，也只能脚踏实地的继续前进了。</p>
+        
+<section class="nexmoe-archives">
 
-            
-        </article>
-    </div>
-    
-    <div class="nexmoe-post">
-        <a href="/2019/11/12/B1078-字符串压缩与解压/">
-            <div class="nexmoe-post-cover mdui-ripple"> 
-                
-                <img src="https://s2.ax1x.com/2019/12/06/QGLUR1.jpg" alt="B1078-字符串压缩与解压">
-                
-                <h1>B1078-字符串压缩与解压</h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2019年11月12日</a>
-            <a><i class="nexmoefont icon-areachart"></i>601 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
-            
-                <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
-            
-            
-        </div>
-        <article>
-            
-            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述
-            
-        </h2></article>
-    </div>
-    
+    <article>
+        
+
+        
+    </article>
 </section>
 
-    <nav class="nexmoe-page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2019/"><i class="nexmoefont icon-left"></i></a><a class="page-number" href="/archives/2019/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2019/page/3/">3</a><a class="page-number" href="/archives/2019/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2019/page/11/">11</a><a class="extend next" rel="next" href="/archives/2019/page/3/"><i class="nexmoefont icon-right"></i></a>
-    </nav>
-  
+<style>
+.nexmoe-archives article > *:first-child {
+    margin-top: 0;
+}
+.nexmoe-archives article > *:last-child {
+    margin-bottom: 0;
+}
+.nexmoe-archives ul {
+    list-style: none;
+    padding-left: 0!important;
+}
+.nexmoe-archives li {
+    position: relative;
+    padding: 10px 0;
+}
+.nexmoe-archives li::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    background: #ff4e6a;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-right: 11px;
+    border-radius: 100%;
+    border: 3px solid #fff;
+    z-index: 100;
+    position: relative;
+}
+.nexmoe-archives li::after {
+    content: "";
+    height: 100%;
+    width: 2px;
+    background: rgba(255, 78, 106, 0.2);
+    position: absolute;
+    left: 6px;
+    top: 20px;
+}
+.nexmoe-archives li:last-child:after {
+    display: none;
+}
+.nexmoe-archives span {
+    margin-right: 15px;
+}
+</style>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1588151477562"></script>-->
+<!--<script src="/js/app.js?v=1588168012765"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
 
 
+ 
+<script> 
+!function(e,t,a){function n(){c(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"),o(),r()}function r(){for(var e=0;e<d.length;e++)d[e].alpha<=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText="left:"+d[e].x+"px;top:"+d[e].y+"px;opacity:"+d[e].alpha+";transform:scale("+d[e].scale+","+d[e].scale+") rotate(45deg);background:"+d[e].color+";z-index:99999");requestAnimationFrame(r)}function o(){var t="function"==typeof e.onclick&&e.onclick;e.onclick=function(e){t&&t(),i(e)}}function i(e){var a=t.createElement("div");a.className="heart",d.push({el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()}),t.body.appendChild(a)}function c(e){var a=t.createElement("style");a.type="text/css";try{a.appendChild(t.createTextNode(e))}catch(t){a.styleSheet.cssText=e}t.getElementsByTagName("head")[0].appendChild(a)}function s(){return"rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"}var d=[];e.requestAnimationFrame=function(){return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e){setTimeout(e,1e3/60)}}(),n()}(window,document);
+</script>
 
   
 
@@ -548,16 +248,6 @@ setTimeout(function(){i()},100)
 
 
 
-
-  <!-- 音频播放 -->
-  <link rel="stylesheet" href="/dist/APlayer.min.css">
-  <div id="aplayer"></div>
-  <script type="text/javascript" src="/dist/APlayer.min.js"></script>
-  <script type="text/javascript" src="/dist/music.js"></script>
 </body>
-
-
-
-
 
 </html>

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="zh-CN">
 
 <head><meta name="generator" content="Hexo 3.9.0">
-
   
   <title>B1091-N-自守数 - 正在建设的小窝</title>
   <meta charset="UTF-8">
   <meta name="description" content>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   
   
 
@@ -23,129 +23,22 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="B1091-N-自守数">
 <meta name="twitter:description" content="题目描述">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
-   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
-  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
     <link rel="stylesheet" href="at.alicdn.com/t/font_1440167_ezdnzsotqc.css">
   
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1588151476258">
-   <!-- 爆炸红心效果 -->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1588168011448">-->
 
- <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
- 
-<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
- 
-<script type="text/javascript" src="/js/firework.js"></script>
-
-<script>document.addEventListener('visibilitychange',function(){if(document.visibilityState=='hidden'){normal_title=document.title;document.title='我在这呢~ ';}else{document.title=normal_title;}});</script>
-
-
+   
+    <style>
+      .nexmoe-avatar img:hover {
+        -webkit-transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+      }	
+    </style>
+  
 </head>
-<!--代码放置于</body>上方-->
-
-<script>
-
-!function(){
-
-function n(n,e,t){
-
-return n.getAttribute(e)||t
-
-}
-
-function e(n){
-
-return document.getElementsByTagName(n)
-
-}
-
-function t(){
-
-var t=e("script"),o=t.length,i=t[o-1];
-
-return{
-
-l:o,z:n(i,"zIndex",-1),o:n(i,"opacity",.5),c:n(i,"color","0,0,0"),n:n(i,"count",99)
-
-}
-
-}
-
-function o(){
-
-a=m.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,
-
-c=m.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight
-
-}
-
-function i(){
-
-r.clearRect(0,0,a,c);
-
-var n,e,t,o,m,l;
-
-s.forEach(function(i,x){
-
-for(i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>a||i.x<0?-1:1,i.ya*=i.y>c||i.y<0?-1:1,r.fillRect(i.x-.5,i.y-.5,1,1),e=x+1;e<u.length;e++)n=u[e],
-
-null!==n.x&&null!==n.y&&(o=i.x-n.x,m=i.y-n.y,
-
-l=o*o+m*m,l<n.max&&(n===y&&l>=n.max/2&&(i.x-=.03*o,i.y-=.03*m),
-
-t=(n.max-l)/n.max,r.beginPath(),r.lineWidth=t/2,r.strokeStyle="rgba("+d.c+","+(t+.2)+")",r.moveTo(i.x,i.y),r.lineTo(n.x,n.y),r.stroke()))
-
-}),
-
-x(i)
-
-}
-
-var a,c,u,m=document.createElement("canvas"),
-
-d=t(),l="c_n"+d.l,r=m.getContext("2d"),
-
-x=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||
-
-function(n){
-
-window.setTimeout(n,1e3/45)
-
-},
-
-w=Math.random,y={x:null,y:null,max:2e4};m.id=l,m.style.cssText="position:fixed;top:0;left:0;z-index:"+d.z+";opacity:"+d.o,e("body")[0].appendChild(m),o(),window.onresize=o,
-
-window.onmousemove=function(n){
-
-n=n||window.event,y.x=n.clientX,y.y=n.clientY
-
-},
-
-window.onmouseout=function(){
-
-y.x=null,y.y=null
-
-};
-
-for(var s=[],f=0;d.n>f;f++){
-
-var h=w()*a,g=w()*c,v=2*w()-1,p=2*w()-1;s.push({x:h,y:g,xa:v,ya:p,max:6e3})
-
-}
-
-u=s.concat([y]),
-
-setTimeout(function(){i()},100)
-
-}();
-
-</script>
-
-
 
 <body class="mdui-drawer-body-left">
   
@@ -153,10 +46,10 @@ setTimeout(function(){i()},100)
     <div class="nexmoe-bg" style="background-image: url(https://s2.ax1x.com/2019/12/06/QY5QSK.jpg)"></div>
     <div class="mdui-appbar mdui-shadow-0">
       <div class="mdui-toolbar">
-        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
         <div class="mdui-toolbar-spacer"></div>
         <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
-        <a href="/" title="A_zao" class="mdui-btn mdui-btn-icon"><img src="https://i.loli.net/2019/09/30/57LtVReQg2ANsaX.jpg"></a>
+        <a href="/" title="A_zao" class="mdui-btn mdui-btn-icon"><img src="https://i.loli.net/2019/09/30/57LtVReQg2ANsaX.jpg" alt="A_zao"></a>
        </div>
     </div>
   </div>
@@ -181,10 +74,10 @@ setTimeout(function(){i()},100)
             </div>
         </a>
         
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/archives" title="无实际作用的归档">
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/archives" title="文章归档">
             <i class="mdui-list-item-icon nexmoefont icon-container"></i>
             <div class="mdui-list-item-content">
-                无实际作用的归档
+                文章归档
             </div>
         </a>
         
@@ -195,10 +88,10 @@ setTimeout(function(){i()},100)
             </div>
         </a>
         
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="并不存在的朋友">
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="单向朋友">
             <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
             <div class="mdui-list-item-content">
-                并不存在的朋友
+                单向朋友
             </div>
         </a>
         
@@ -224,26 +117,38 @@ setTimeout(function(){i()},100)
   <div class="nexmoe-widget-wrap">
     <h3 class="nexmoe-widget-title">文章分类</h3>
     <div class="nexmoe-widget">
+
       <ul class="category-list">
+
         
+
+
         
+
         
+
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/PAT练习/">PAT练习</a>
           <span class="category-list-count">105</span>
         </li>
+
         
+
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/小工具/">小工具</a>
           <span class="category-list-count">2</span>
         </li>
+
         
+
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/生活感悟/">生活感悟</a>
           <span class="category-list-count">5</span>
         </li>
+
         
       </ul>
+
     </div>
   </div>
 
@@ -272,21 +177,31 @@ setTimeout(function(){i()},100)
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
         <div class="nexmoe-post">
-    <div class="nexmoe-post-cover"> 
-        
-        <img src="https://i.loli.net/2019/12/22/NV4RGwIeSrKH6dl.jpg">
-        
-        <h1>B1091-N-自守数</h1>
-    </div>
-  <div class="nexmoe-post-meta">
+  
+      <div class="nexmoe-post-cover" style="padding-bottom: NaN%;"> 
+          <img data-src="https://i.loli.net/2019/12/22/NV4RGwIeSrKH6dl.jpg" data-sizes="auto" alt="B1091-N-自守数" class="lazyload">
+          <h1>B1091-N-自守数</h1>
+      </div>
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2019年12月03日</a>
     <a><i class="nexmoefont icon-areachart"></i>412 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
+</div>
+
+  <div class="nexmoe-post-right">
     
-      <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
-    
+      <div class="nexmoe-fixed">
+        <div class="nexmoe-valign">
+            <div class="nexmoe-toc">
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述 </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#输入描述"><span class="toc-number">2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#输出描述"><span class="toc-number">3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#示例"><span class="toc-number">4.</span> <span class="toc-text">示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#输入"><span class="toc-number">4.1.</span> <span class="toc-text">输入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#输出"><span class="toc-number">4.2.</span> <span class="toc-text">输出</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解题思路："><span class="toc-number">5.</span> <span class="toc-text">解题思路：</span></a></li></ol>
+            </div>
+        </div>
+      </div>
     
   </div>
+
   <article>
     <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>如果某个数 <em>K</em> 的平方乘以 <em>N</em> 以后，结果的末尾几位数等于 <em>K</em>，那么就称这个数为“<em>N</em>-自守数”。例如 3×922=25392，而 25392 的末尾两位正好是 92，所以 92是一个 3-自守数。</p>
 <p>本题就请你编写程序判断一个给定的数字是否关于某个 <em>N</em> 是 <em>N</em>-自守数。</p>
@@ -349,8 +264,17 @@ public class PAT_B1091 {
     }
 }</code></pre>
   </article>
-  
+
+  <div class="nexmoe-post-meta nexmoe-rainbow">
     
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT练习/">PAT练习</a>
+    
+    
+</div>
+
+  <div class="nexmoe-post-footer">
+    
+      
   <div class="nexmoe-post-copyright">
     <strong>本文作者：</strong>A_zao<br>
     <strong>本文链接：</strong><a href="http://yoursite.com/2019/12/03/B1091-N-自守数/" title="http://yoursite.com/2019/12/03/B1091-N-自守数/" target="_blank" rel="noopener">http://yoursite.com/2019/12/03/B1091-N-自守数/</a><br>
@@ -360,8 +284,8 @@ public class PAT_B1091 {
   </div>
 
 
-  
-  <section class="nexmoe-comment">
+    
+    <section class="nexmoe-comment">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
 <div id="gitalk"></div>
 <script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
@@ -369,7 +293,7 @@ public class PAT_B1091 {
     var gitalk = new Gitalk({
         clientID: 'e499c36d0f44111ba83f',
         clientSecret: '4b6117ffadebcd0f93bef97e4c0ded483e83ed12',
-        id: decodeURI(window.location.pathname),
+        id: window.location.pathname,
         repo: 'comments',
         owner: 'Azao-saya',
         admin: 'Azao-saya'
@@ -377,17 +301,22 @@ public class PAT_B1091 {
     gitalk.render('gitalk')
 </script>
 </section>
+  </div>
 </div>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1588151476269"></script>-->
+<!--<script src="/js/app.js?v=1588168011461"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
 
 
+ 
+<script> 
+!function(e,t,a){function n(){c(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"),o(),r()}function r(){for(var e=0;e<d.length;e++)d[e].alpha<=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText="left:"+d[e].x+"px;top:"+d[e].y+"px;opacity:"+d[e].alpha+";transform:scale("+d[e].scale+","+d[e].scale+") rotate(45deg);background:"+d[e].color+";z-index:99999");requestAnimationFrame(r)}function o(){var t="function"==typeof e.onclick&&e.onclick;e.onclick=function(e){t&&t(),i(e)}}function i(e){var a=t.createElement("div");a.className="heart",d.push({el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()}),t.body.appendChild(a)}function c(e){var a=t.createElement("style");a.type="text/css";try{a.appendChild(t.createTextNode(e))}catch(t){a.styleSheet.cssText=e}t.getElementsByTagName("head")[0].appendChild(a)}function s(){return"rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"}var d=[];e.requestAnimationFrame=function(){return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e){setTimeout(e,1e3/60)}}(),n()}(window,document);
+</script>
 
   
 
@@ -395,16 +324,6 @@ public class PAT_B1091 {
 
 
 
-
-  <!-- 音频播放 -->
-  <link rel="stylesheet" href="/dist/APlayer.min.css">
-  <div id="aplayer"></div>
-  <script type="text/javascript" src="/dist/APlayer.min.js"></script>
-  <script type="text/javascript" src="/dist/music.js"></script>
 </body>
-
-
-
-
 
 </html>
