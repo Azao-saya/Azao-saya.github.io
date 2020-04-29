@@ -1776,6 +1776,77 @@ public class PAT_B1081 {
       </categories>
   </entry>
   <entry>
+    <title>B1079-延迟的回文数</title>
+    <url>/2019/12/02/B1079-%E5%BB%B6%E8%BF%9F%E7%9A%84%E5%9B%9E%E6%96%87%E6%95%B0/</url>
+    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>给定一个 <em>k</em>+1 位的正整数 <em>N</em>，写成 <em>a*<em>k</em>⋯<em>a</em>1<em>a</em>0 的形式，其中对所有 *i</em> 有 0≤<em>a**i</em>&lt;10 且 <em>a**k</em>&gt;0。<em>N</em> 被称为一个<strong>回文数</strong>，当且仅当对所有 <em>i</em> 有 <em>a**i</em>=<em>a*</em>k<em>−</em>i*。零也被定义为一个回文数。</p>
+<p>非回文数也可以通过一系列操作变出回文数。首先将该数字逆转，再将逆转数与该数相加，如果和还不是一个回文数，就重复这个逆转再相加的操作，直到一个回文数出现。如果一个非回文数可以变出回文数，就称这个数为<strong>延迟的回文数</strong>。（定义翻译自 <a href="https://en.wikipedia.org/wiki/Palindromic_number" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Palindromic_number</a> ）</p>
+<p>给定任意一个正整数，本题要求你找到其变出的那个回文数。</p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p> 输入在一行中给出一个不超过1000位的正整数。 </p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p>对给定的整数，一行一行输出其变出回文数的过程。每行格式如下</p>
+<pre><code>A + B = C</code></pre><p>其中 <code>A</code> 是原始的数字，<code>B</code> 是 <code>A</code> 的逆转数，<code>C</code> 是它们的和。<code>A</code> 从输入的整数开始。重复操作直到 <code>C</code> 在 10 步以内变成回文数，这时在一行中输出 <code>C is a palindromic number.</code>；或者如果 10 步都没能得到回文数，最后就在一行中输出 <code>Not found in 10 iterations.</code>。</p>
+</blockquote>
+<h3 id="输入1"><a href="#输入1" class="headerlink" title="输入1"></a>输入1</h3><blockquote>
+<p>97152</p>
+</blockquote>
+<h3 id="输出1"><a href="#输出1" class="headerlink" title="输出1"></a>输出1</h3><blockquote>
+<p>97152 + 25179 = 122331<br>122331 + 133221 = 255552<br>255552 is a palindromic number.</p>
+</blockquote>
+<h3 id="输入2"><a href="#输入2" class="headerlink" title="输入2"></a>输入2</h3><blockquote>
+<p>196</p>
+</blockquote>
+<h3 id="输出2"><a href="#输出2" class="headerlink" title="输出2"></a>输出2</h3><blockquote>
+<p>196 + 691 = 887<br>887 + 788 = 1675<br>1675 + 5761 = 7436<br>7436 + 6347 = 13783<br>13783 + 38731 = 52514<br>52514 + 41525 = 94039<br>94039 + 93049 = 187088<br>187088 + 880781 = 1067869<br>1067869 + 9687601 = 10755470<br>10755470 + 07455701 = 18211171<br>Not found in 10 iterations.</p>
+</blockquote>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
+<li>这是一道真题，听说不小心点进链接里打开游览器超过10秒就算作弊了…..超越题目的坑</li>
+<li>使用reverse来反转原字符串，再新建BigInteger用来计算字符串数字。</li>
+<li>循环执行10次，若出现题目要求的回文数怎打印相应内容后结束程序。</li>
+<li>如果循环完仍没有结束程序则代表没有找到回文数输出Not found in 10 iterations.</li>
+</ul>
+<hr>
+<hr>
+<pre><code>import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.math.BigInteger;
+import java.util.Stack; //最开始尝试过栈反转，发现pop的是原类型一个char。要使用的话还得while(sta.isEmpty)加一个StringBuilder拼接
+
+public class PAT_B1079 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String number = br.readLine();
+        for (int i = 0; i &lt;10 ; i++) {
+            String number2 = new StringBuilder(number).reverse().toString();
+            if (number2.equals(number)){
+                System.out.println(number+&quot; is a palindromic number.&quot;);
+                System.exit(0);
+            }
+            BigInteger num1=new BigInteger(number);
+            BigInteger num2=new BigInteger(number2);
+            BigInteger number3= num1.add(num2);
+            System.out.println(number+&quot; + &quot;+number2+&quot; = &quot;+number3);
+            number = String.valueOf(number3);
+        }
+        System.out.println(&quot;Not found in 10 iterations.&quot;);
+    }
+//    private static void reverse(int a) { //int的反转方法
+//        int rs = 0;
+//        while (a &gt; 0) {
+//            rs *= 10;
+//            rs += a % 10;
+//            a /= 10;
+//        }
+//        System.out.println(rs);
+//    }
+}</code></pre>]]></content>
+      <categories>
+        <category>PAT练习</category>
+      </categories>
+  </entry>
+  <entry>
     <title>B1080-MOOC期终成绩</title>
     <url>/2019/12/02/B1080-MOOC%E6%9C%9F%E7%BB%88%E6%88%90%E7%BB%A9/</url>
     <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>对于在中国大学MOOC（<a href="http://www.icourse163.org/" target="_blank" rel="noopener">http://www.icourse163.org/</a> ）学习“数据结构”课程的学生，想要获得一张合格证书，必须首先获得不少于200分的在线编程作业分，然后总评获得不少于60分（满分100）。总评成绩的计算公式为 <em>G</em>=(<em>G<strong>m</strong>i<em>d</em>−<em>t</em>e<em>r</em>m<em>×40%+</em>G<strong>f</strong>i<strong>n</strong>al<em>×60%)，如果 <em>G</em></em>m<strong>i</strong>d<em>−</em>t<strong>e</strong>r**m</em>&gt;<em>G<strong>f</strong>i<strong>n</strong>a*<em>l</em>；否则总评 *G</em> 就是 <em>G*</em>f<strong>i</strong>n<strong>a*l。这里 *G</strong>m<strong>i<em>d</em>−*t</strong>e<strong>r</strong>m和G<strong>f</strong>i<strong>n</strong>a**l 分别为学生的期中和期末成绩。</p>
@@ -1911,77 +1982,6 @@ class Score{
         this.f_score = f;
         this.t_score = t;
     }
-}</code></pre>]]></content>
-      <categories>
-        <category>PAT练习</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>B1079-延迟的回文数</title>
-    <url>/2019/12/02/B1079-%E5%BB%B6%E8%BF%9F%E7%9A%84%E5%9B%9E%E6%96%87%E6%95%B0/</url>
-    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>给定一个 <em>k</em>+1 位的正整数 <em>N</em>，写成 <em>a*<em>k</em>⋯<em>a</em>1<em>a</em>0 的形式，其中对所有 *i</em> 有 0≤<em>a**i</em>&lt;10 且 <em>a**k</em>&gt;0。<em>N</em> 被称为一个<strong>回文数</strong>，当且仅当对所有 <em>i</em> 有 <em>a**i</em>=<em>a*</em>k<em>−</em>i*。零也被定义为一个回文数。</p>
-<p>非回文数也可以通过一系列操作变出回文数。首先将该数字逆转，再将逆转数与该数相加，如果和还不是一个回文数，就重复这个逆转再相加的操作，直到一个回文数出现。如果一个非回文数可以变出回文数，就称这个数为<strong>延迟的回文数</strong>。（定义翻译自 <a href="https://en.wikipedia.org/wiki/Palindromic_number" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Palindromic_number</a> ）</p>
-<p>给定任意一个正整数，本题要求你找到其变出的那个回文数。</p>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p> 输入在一行中给出一个不超过1000位的正整数。 </p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>对给定的整数，一行一行输出其变出回文数的过程。每行格式如下</p>
-<pre><code>A + B = C</code></pre><p>其中 <code>A</code> 是原始的数字，<code>B</code> 是 <code>A</code> 的逆转数，<code>C</code> 是它们的和。<code>A</code> 从输入的整数开始。重复操作直到 <code>C</code> 在 10 步以内变成回文数，这时在一行中输出 <code>C is a palindromic number.</code>；或者如果 10 步都没能得到回文数，最后就在一行中输出 <code>Not found in 10 iterations.</code>。</p>
-</blockquote>
-<h3 id="输入1"><a href="#输入1" class="headerlink" title="输入1"></a>输入1</h3><blockquote>
-<p>97152</p>
-</blockquote>
-<h3 id="输出1"><a href="#输出1" class="headerlink" title="输出1"></a>输出1</h3><blockquote>
-<p>97152 + 25179 = 122331<br>122331 + 133221 = 255552<br>255552 is a palindromic number.</p>
-</blockquote>
-<h3 id="输入2"><a href="#输入2" class="headerlink" title="输入2"></a>输入2</h3><blockquote>
-<p>196</p>
-</blockquote>
-<h3 id="输出2"><a href="#输出2" class="headerlink" title="输出2"></a>输出2</h3><blockquote>
-<p>196 + 691 = 887<br>887 + 788 = 1675<br>1675 + 5761 = 7436<br>7436 + 6347 = 13783<br>13783 + 38731 = 52514<br>52514 + 41525 = 94039<br>94039 + 93049 = 187088<br>187088 + 880781 = 1067869<br>1067869 + 9687601 = 10755470<br>10755470 + 07455701 = 18211171<br>Not found in 10 iterations.</p>
-</blockquote>
-<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li>这是一道真题，听说不小心点进链接里打开游览器超过10秒就算作弊了…..超越题目的坑</li>
-<li>使用reverse来反转原字符串，再新建BigInteger用来计算字符串数字。</li>
-<li>循环执行10次，若出现题目要求的回文数怎打印相应内容后结束程序。</li>
-<li>如果循环完仍没有结束程序则代表没有找到回文数输出Not found in 10 iterations.</li>
-</ul>
-<hr>
-<hr>
-<pre><code>import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.math.BigInteger;
-import java.util.Stack; //最开始尝试过栈反转，发现pop的是原类型一个char。要使用的话还得while(sta.isEmpty)加一个StringBuilder拼接
-
-public class PAT_B1079 {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String number = br.readLine();
-        for (int i = 0; i &lt;10 ; i++) {
-            String number2 = new StringBuilder(number).reverse().toString();
-            if (number2.equals(number)){
-                System.out.println(number+&quot; is a palindromic number.&quot;);
-                System.exit(0);
-            }
-            BigInteger num1=new BigInteger(number);
-            BigInteger num2=new BigInteger(number2);
-            BigInteger number3= num1.add(num2);
-            System.out.println(number+&quot; + &quot;+number2+&quot; = &quot;+number3);
-            number = String.valueOf(number3);
-        }
-        System.out.println(&quot;Not found in 10 iterations.&quot;);
-    }
-//    private static void reverse(int a) { //int的反转方法
-//        int rs = 0;
-//        while (a &gt; 0) {
-//            rs *= 10;
-//            rs += a % 10;
-//            a /= 10;
-//        }
-//        System.out.println(rs);
-//    }
 }</code></pre>]]></content>
       <categories>
         <category>PAT练习</category>
@@ -3924,72 +3924,6 @@ public class PAT_B1054 {
       </categories>
   </entry>
   <entry>
-    <title>B1053- 住房空置率</title>
-    <url>/2019/11/03/B1053-%20%E4%BD%8F%E6%88%BF%E7%A9%BA%E7%BD%AE%E7%8E%87/</url>
-    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>在不打扰居民的前提下，统计住房空置率的一种方法是根据每户用电量的连续变化规律进行判断。判断方法如下：</p>
-<ul>
-<li>在观察期内，若存在超过一半的日子用电量低于某给定的阈值 <em>e</em>，则该住房为“可能空置”；</li>
-<li>若观察期超过某给定阈值 <em>D</em> 天，且满足上一个条件，则该住房为“空置”。</li>
-</ul>
-<p>现给定某居民区的住户用电量数据，请你统计“可能空置”的比率和“空置”比率，即以上两种状态的住房占居民区住房总套数的百分比。</p>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p>输入第一行给出正整数 <em>N</em>（≤1000），为居民区住房总套数；正实数 <em>e</em>，即低电量阈值；正整数 <em>D</em>，即观察期阈值。随后 <em>N</em> 行，每行按以下格式给出一套住房的用电量数据：</p>
-<p><em>K</em> <em>E</em>1 <em>E</em>2 … <em>E**K</em></p>
-<p>其中 <em>K</em> 为观察的天数，<em>E**i</em> 为第 <em>i</em> 天的用电量。</p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>在一行中输出“可能空置”的比率和“空置”比率的百分比值，其间以一个空格分隔，保留小数点后 1 位。 </p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
-<p>5 0.5 10<br>6 0.3 0.4 0.5 0.2 0.8 0.6<br> 10 0.0 0.1 0.2 0.3 0.0 0.8 0.6 0.7 0.0 0.5<br>5 0.4 0.3 0.5 0.1 0.7<br>11 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1<br>11 2 2 2 1 1 0.1 1 0.1 0.1 0.1 0.1</p>
-</blockquote>
-<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
-<p>40.0% 20.0%</p>
-</blockquote>
-<p> （样例解释：第2、3户为“可能空置”，第4户为“空置”，其他户不是空置。） </p>
-<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li>题目条件是低于不包含等于，判断为空置先要满足第一个条件。</li>
-</ul>
-<hr>
-<hr>
-<pre><code>import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-public class PAT_B1053 {
-    public static void main(String[] args) throws IOException { //提交时出现一次一个测试点超时，再次提交已经全部通过。
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String[] temp = br.readLine().split(&quot; &quot;);
-        int N = Integer.parseInt(temp[0]);
-        double e = Double.parseDouble(temp[1]);
-        int d = Integer.parseInt(temp[2]);
-        int maybeCount = 0,unoccupied = 0;
-        for (int i = 0; i &lt;N ; i++) {
-            String[] temp2 = br.readLine().split(&quot; &quot;);
-            int totalDay = Integer.parseInt(temp2[0]);
-            double[] powers = new double[totalDay];
-            int count = 0;
-            for (int j = 1; j &lt;=totalDay ; j++) {
-                powers[j-1] =Double.parseDouble(temp2[j]);
-                if (powers[j-1]&lt;e){
-                    count++;
-                }
-            }
-            if (count&gt;totalDay/2 &amp;&amp; totalDay&gt;d){
-                unoccupied++;
-            }else if (count&gt;totalDay/2 ){
-                maybeCount++;
-            }
-        }
-        System.out.printf(&quot;%.1f%% &quot;,(double)maybeCount/(double) N*100);
-        System.out.printf(&quot;%.1f%%&quot;,(double)unoccupied/(double) N*100);
-    }
-}</code></pre>]]></content>
-      <categories>
-        <category>PAT练习</category>
-      </categories>
-  </entry>
-  <entry>
     <title>B1052-卖个萌</title>
     <url>/2019/11/03/B1052-%E5%8D%96%E4%B8%AA%E8%90%8C/</url>
     <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>萌萌哒表情符号通常由“手”、“眼”、“口”三个主要部分组成。简单起见，我们假设一个表情符号是按下列格式输出的：</p>
@@ -4079,6 +4013,72 @@ public class PAT_B1052 {
             }
         }
         return list;
+    }
+}</code></pre>]]></content>
+      <categories>
+        <category>PAT练习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>B1053- 住房空置率</title>
+    <url>/2019/11/03/B1053-%20%E4%BD%8F%E6%88%BF%E7%A9%BA%E7%BD%AE%E7%8E%87/</url>
+    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>在不打扰居民的前提下，统计住房空置率的一种方法是根据每户用电量的连续变化规律进行判断。判断方法如下：</p>
+<ul>
+<li>在观察期内，若存在超过一半的日子用电量低于某给定的阈值 <em>e</em>，则该住房为“可能空置”；</li>
+<li>若观察期超过某给定阈值 <em>D</em> 天，且满足上一个条件，则该住房为“空置”。</li>
+</ul>
+<p>现给定某居民区的住户用电量数据，请你统计“可能空置”的比率和“空置”比率，即以上两种状态的住房占居民区住房总套数的百分比。</p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p>输入第一行给出正整数 <em>N</em>（≤1000），为居民区住房总套数；正实数 <em>e</em>，即低电量阈值；正整数 <em>D</em>，即观察期阈值。随后 <em>N</em> 行，每行按以下格式给出一套住房的用电量数据：</p>
+<p><em>K</em> <em>E</em>1 <em>E</em>2 … <em>E**K</em></p>
+<p>其中 <em>K</em> 为观察的天数，<em>E**i</em> 为第 <em>i</em> 天的用电量。</p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p>在一行中输出“可能空置”的比率和“空置”比率的百分比值，其间以一个空格分隔，保留小数点后 1 位。 </p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
+<p>5 0.5 10<br>6 0.3 0.4 0.5 0.2 0.8 0.6<br> 10 0.0 0.1 0.2 0.3 0.0 0.8 0.6 0.7 0.0 0.5<br>5 0.4 0.3 0.5 0.1 0.7<br>11 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1<br>11 2 2 2 1 1 0.1 1 0.1 0.1 0.1 0.1</p>
+</blockquote>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
+<p>40.0% 20.0%</p>
+</blockquote>
+<p> （样例解释：第2、3户为“可能空置”，第4户为“空置”，其他户不是空置。） </p>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
+<li>题目条件是低于不包含等于，判断为空置先要满足第一个条件。</li>
+</ul>
+<hr>
+<hr>
+<pre><code>import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class PAT_B1053 {
+    public static void main(String[] args) throws IOException { //提交时出现一次一个测试点超时，再次提交已经全部通过。
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] temp = br.readLine().split(&quot; &quot;);
+        int N = Integer.parseInt(temp[0]);
+        double e = Double.parseDouble(temp[1]);
+        int d = Integer.parseInt(temp[2]);
+        int maybeCount = 0,unoccupied = 0;
+        for (int i = 0; i &lt;N ; i++) {
+            String[] temp2 = br.readLine().split(&quot; &quot;);
+            int totalDay = Integer.parseInt(temp2[0]);
+            double[] powers = new double[totalDay];
+            int count = 0;
+            for (int j = 1; j &lt;=totalDay ; j++) {
+                powers[j-1] =Double.parseDouble(temp2[j]);
+                if (powers[j-1]&lt;e){
+                    count++;
+                }
+            }
+            if (count&gt;totalDay/2 &amp;&amp; totalDay&gt;d){
+                unoccupied++;
+            }else if (count&gt;totalDay/2 ){
+                maybeCount++;
+            }
+        }
+        System.out.printf(&quot;%.1f%% &quot;,(double)maybeCount/(double) N*100);
+        System.out.printf(&quot;%.1f%%&quot;,(double)unoccupied/(double) N*100);
     }
 }</code></pre>]]></content>
       <categories>
