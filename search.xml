@@ -160,8 +160,351 @@
       </categories>
   </entry>
   <entry>
+    <title>PAT2019年冬季考试(乙级)回顾</title>
+    <url>/2019/12/08/PAT2019%E5%B9%B4%E5%86%AC%E5%AD%A3%E8%80%83%E8%AF%95(%E4%B9%99%E7%BA%A7)%E5%9B%9E%E9%A1%BE/</url>
+    <content><![CDATA[<p>  很有幸和这么多大佬一起陪考了这次2019冬季考试，也很幸运的能有机会见到pat的出题人陈越姥姥，看着陈越姥姥给满分的同学拍照一起面带笑容讨论考研和计算机的未来前景，内心着实是十分欣羡和向往这种生活，却又与67的我显得格格不入。 <a id="more"></a></p>
+<p>  因为程序已经没有提交的入口了，重做也无法知道自己有没有做对。</p>
+<p>  所以这篇博客并不是题解而是给自己与pat短暂的相处画上句号。</p>
+<h1 id="7-1-2019数列"><a href="#7-1-2019数列" class="headerlink" title="7-1 2019数列"></a>7-1 2019数列</h1><p>把 2019 各个数位上的数字 2、0、1、9 作为一个数列的前 4 项，用它们去构造一个无穷数列，其中第 <em>n</em>（&gt;4）项是它前 4 项之和的个位数字。例如第 5 项为 2， 因为 2+0+1+9=12，个位数是 2。</p>
+<p>本题就请你编写程序，列出这个序列的前 <em>n</em> 项。</p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p>  输入给出正整数 <em>n</em>（≤1000）。 </p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p> 在一行中输出数列的前 <em>n</em> 项，数字间不要有空格。 </p>
+</blockquote>
+<h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
+<p>10</p>
+</blockquote>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
+<p>2019224758</p>
+</blockquote>
+<p> <strong>题外话：</strong>这个数列中永远不会出现 <code>2018</code>，你能证明吗？ </p>
+<ul>
+<li>刚上手这道题的时候自己挺紧张的，考试使用的ide Eclipse Oxygen 和我自己使用的版本有所差别。</li>
+<li>在使用惯用的热键写代码时，一度导致屏幕里显示的内容翻转了….</li>
+<li>老师当时离开了教室一会，呼救没人搭理….只能自己小心翼翼的调整了回来。</li>
+<li>加上有规定不能打开游览器否则按作弊处理，而谷歌游览器就在任务栏上…..</li>
+<li>之后的考试时间就格外的小心除了ctrl+c ctrl+v和alt+/没有再使用别的热键了。</li>
+<li>也为之后的超时埋下了伏笔</li>
+<li>言归正传这题没啥难度，注意n&lt;4的能正常输出内容即可。</li>
+</ul>
+<hr>
+<hr>
+<pre><code>import java.io.*;
+
+
+public class Main {
+
+    public static void main(String[] args) throws IOException{
+        // TODO Auto-generated method stub
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+        StringBuilder sb = new StringBuilder();
+        int[] list = new int[1001];
+        list[0]=2;
+        list[1]=0;
+        list[2]=1;
+        list[3]=9;
+        if(n&lt;4) {
+            for(int i =0;i&lt;n;i++) {
+                sb.append(list[i]);
+            }
+            System.out.println(sb.toString().trim());
+            System.exit(0);
+        }
+        sb.append(2019);
+        for(int i =4;i&lt;n;i++) {
+            int sum =0;
+            for(int j =i-4;j&lt;i;j++) {
+                sum +=list[j];
+            }
+            sum = sum%10;
+            list[i] = sum;
+            sb.append(sum);
+        }
+        System.out.println(sb.toString().trim());
+    }
+
+}</code></pre><h1 id="7-2-老鼠爱大米"><a href="#7-2-老鼠爱大米" class="headerlink" title="7-2 老鼠爱大米"></a>7-2 老鼠爱大米</h1><p>翁恺老师曾经设计过一款 Java 挑战游戏，叫“老鼠爱大米”（或许因为他的外号叫“胖胖鼠”）。每个玩家用 Java 代码控制一只鼠，目标是抢吃尽可能多的大米让自己变成胖胖鼠，最胖的那只就是冠军。</p>
+<p>因为游戏时间不能太长，我们把玩家分成 <em>N</em> 组，每组 <em>M</em> 只老鼠同场竞技，然后从 <em>N</em> 个分组冠军中直接选出最胖的冠军胖胖鼠。现在就请你写个程序来得到冠军的体重。</p>
+<h2 id="输入描述-1"><a href="#输入描述-1" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p> 输入在第一行中给出 2 个正整数：N（≤100）为组数，M（≤10）为每组玩家个数。随后 N 行，每行给出一组玩家控制的 M 只老鼠最后的体重，均为不超过 10<br> 4<br>   的非负整数。数字间以空格分隔。</p>
+</blockquote>
+<h2 id="输出描述-1"><a href="#输出描述-1" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p>首先在第一行顺次输出各组冠军的体重，数字间以 1 个空格分隔，行首尾不得有多余空格。随后在第二行输出冠军胖胖鼠的体重。 </p>
+</blockquote>
+<h3 id="输入-1"><a href="#输入-1" class="headerlink" title="输入"></a>输入</h3><blockquote>
+<p>3 5<br>62 53 88 72 81<br>12 31 9 0 2<br>91 42 39 6 48</p>
+</blockquote>
+<h3 id="输出-1"><a href="#输出-1" class="headerlink" title="输出"></a>输出</h3><blockquote>
+<p>88 31 91<br>91</p>
+</blockquote>
+<ul>
+<li>这题设置两个最大值，最近考试姥姥给的运行时间很充裕，程序一遍写下来就能过。</li>
+<li>不过java的话太多输入还是会超时，最后两题都是有超时的测试点。而我最后一题甚至只才写了一个开头就已经超时了。</li>
+</ul>
+<hr>
+<hr>
+<pre><code>import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Main {
+
+    public static void main(String[] args) throws IOException{
+        // TODO Auto-generated method stub
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] temp = br.readLine().split(&quot; &quot;);
+        int n = Integer.parseInt(temp[0]);
+        int m = Integer.parseInt(temp[1]);
+        int[] Fat = new int[n];
+        int maxFat =0;
+        for(int i =0; i&lt;n;i++) {
+            int smallFat =0;
+            String[] str = br.readLine().split(&quot; &quot;);
+            for(int j =0; j&lt;m;j++) {
+                int num = Integer.parseInt(str[j]);
+                if(num &gt; smallFat) {
+                    smallFat = num;
+                }
+            }
+            if(maxFat&lt;smallFat) {
+                maxFat = smallFat;
+            }
+            if(i==0) {
+                System.out.print(smallFat);
+            }else {
+                System.out.print(&quot; &quot;+smallFat);
+            }
+
+        }
+        System.out.println();
+        System.out.println(maxFat);
+
+    }
+
+}</code></pre><h1 id="7-3-String复读机"><a href="#7-3-String复读机" class="headerlink" title="7-3 String复读机"></a>7-3 String复读机</h1><p>给定一个长度不超过 10^4的、仅由英文字母构成的字符串。请将字符重新调整顺序，按 StringString…. （注意区分大小写）这样的顺序输出，并忽略其它字符。当然，六种字符的个数不一定是一样多的，若某种字符已经输出完，则余下的字符仍按 String 的顺序打印，直到所有字符都被输出。例如 gnirtSSs 要调整成 StringS 输出，其中 s 是多余字符被忽略。</p>
+<h2 id="输入描述-2"><a href="#输入描述-2" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p> 输入在一行中给出一个长度不超过 10^4的、仅由英文字母构成的非空字符串。</p>
+</blockquote>
+<h2 id="输出描述-2"><a href="#输出描述-2" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p>在一行中按题目要求输出排序后的字符串。题目保证输出非空。</p>
+</blockquote>
+<h3 id="输入-2"><a href="#输入-2" class="headerlink" title="输入"></a>输入</h3><blockquote>
+<p>sTRidlinSayBingStrropriiSHSiRiagIgtSSr</p>
+</blockquote>
+<h3 id="输出-2"><a href="#输出-2" class="headerlink" title="输出"></a>输出</h3><blockquote>
+<p>StringStringSrigSriSiSii</p>
+</blockquote>
+<ul>
+<li>设置两个数组，一组直接存放“String”的每个字母，一组记录每个字母的出现次数。</li>
+<li>题目感觉稍稍放水了，大小写是区分的不用再加判断了。</li>
+</ul>
+<hr>
+<hr>
+<pre><code>import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Main {
+
+    public static void main(String[] args) throws IOException{
+        // TODO Auto-generated method stub
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String input = br.readLine();
+        int[] string = new int[10];
+        String[] s = {&quot;S&quot;,&quot;t&quot;,&quot;r&quot;,&quot;i&quot;,&quot;n&quot;,&quot;g&quot;};
+        for(int i = 0;i&lt;input.length();i++) {
+            char c = input.charAt(i);
+            if(c ==&#39;S&#39;) {
+                string[0]++;
+            }else if(c ==&#39;t&#39;) {
+                string[1]++;
+            }else if(c ==&#39;r&#39;) {
+                string[2]++;
+            }else if(c == &#39;i&#39;) {
+                string[3]++;
+            }else if(c == &#39;n&#39;) {
+                string[4]++;
+            }else if(c == &#39;g&#39;) {
+                string[5]++;
+            }
+        }
+        StringBuilder sb = new StringBuilder();
+        for(int i =0;i&lt;input.length();i++) {
+            for(int j =0;j&lt;6;j++) {
+                if(string[j]!=0) {
+                    string[j]--;
+                    sb.append(s[j]);
+                }
+            }
+        }
+        System.out.println(sb.toString().trim());
+    }
+
+}</code></pre><h1 id="7-4-擅长C"><a href="#7-4-擅长C" class="headerlink" title="7-4 擅长C"></a>7-4 擅长C</h1><p>当你被面试官要求用 C 写一个“Hello World”时，有本事像下图显示的那样写一个出来吗？</p>
+<p> <img src="https://images.ptausercontent.com/ba3b8678-061d-4fc6-a87e-ce08e1434410.jpg" alt="HWC.jpg"> </p>
+<h2 id="输入描述-3"><a href="#输入描述-3" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p> 输入首先给出 26 个英文大写字母 A-Z，每个字母用一个 7×5 的、由 <code>C</code> 和 <code>.</code> 组成的矩阵构成。最后在一行中给出一个句子，以回车结束。句子是由若干个单词（每个包含不超过 10 个连续的大写英文字母）组成的，单词间以任何非大写英文字母分隔。</p>
+<p> 题目保证至少给出一个单词。</p>
+</blockquote>
+<h2 id="输出描述-3"><a href="#输出描述-3" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p>对每个单词，将其每个字母用矩阵形式在一行中输出，字母间有一列空格分隔。单词的首尾不得有多余空格。</p>
+<p>相邻的两个单词间必须有一空行分隔。输出的首尾不得有多余空行。</p>
+</blockquote>
+<h3 id="输入-3"><a href="#输入-3" class="headerlink" title="输入"></a>输入</h3><blockquote>
+<p>..C..<br>.C.C.<br>C…C<br>CCCCC<br>C…C<br>C…C<br>C…C<br>CCCC.<br>C…C<br>C…C<br>CCCC.<br>C…C<br>C…C<br>CCCC.<br>.CCC.<br>C…C<br>C….<br>C….<br>C….<br>C…C<br>.CCC.<br>CCCC.<br>C…C<br>C…C<br>C…C<br>C…C<br>C…C<br>CCCC.<br>CCCCC<br>C….<br>C….<br>CCCC.<br>C….<br>C….<br>CCCCC<br>CCCCC<br>C….<br>C….<br>CCCC.<br>C….<br>C….<br>C….<br>CCCC.<br>C…C<br>C….<br>C.CCC<br>C…C<br>C…C<br>CCCC.<br>C…C<br>C…C<br>C…C<br>CCCCC<br>C…C<br>C…C<br>C…C<br>CCCCC<br>..C..<br>..C..<br>..C..<br>..C..<br>..C..<br>CCCCC<br>CCCCC<br>….C<br>….C<br>….C<br>….C<br>C…C<br>.CCC.<br>C…C<br>C..C.<br>C.C..<br>CC…<br>C.C..<br>C..C.<br>C…C<br>C….<br>C….<br>C….<br>C….<br>C….<br>C….<br>CCCCC<br>C…C<br>C…C<br>CC.CC<br>C.C.C<br>C…C<br>C…C<br>C…C<br>C…C<br>C…C<br>CC..C<br>C.C.C<br>C..CC<br>C…C<br>C…C<br>.CCC.<br>C…C<br>C…C<br>C…C<br>C…C<br>C…C<br>.CCC.<br>CCCC.<br>C…C<br>C…C<br>CCCC.<br>C….<br>C….<br>C….<br>.CCC.<br>C…C<br>C…C<br>C…C<br>C.C.C<br>C..CC<br>.CCC.<br>CCCC.<br>C…C<br>CCCC.<br>CC…<br>C.C..<br>C..C.<br>C…C<br>.CCC.<br>C…C<br>C….<br>.CCC.<br>….C<br>C…C<br>.CCC.<br>CCCCC<br>..C..<br>..C..<br>..C..<br>..C..<br>..C..<br>..C..<br>C…C<br>C…C<br>C…C<br>C…C<br>C…C<br>C…C<br>.CCC.<br>C…C<br>C…C<br>C…C<br>C…C<br>C…C<br>.C.C.<br>..C..<br>C…C<br>C…C<br>C…C<br>C.C.C<br>CC.CC<br>C…C<br>C…C<br>C…C<br>C…C<br>.C.C.<br>..C..<br>.C.C.<br>C…C<br>C…C<br>C…C<br>C…C<br>.C.C.<br>..C..<br>..C..<br>..C..<br>..C..<br>CCCCC<br>….C<br>…C.<br>..C..<br>.C…<br>C….<br>CCCCC<br>HELLO~WORLD!</p>
+</blockquote>
+<h3 id="输出-3"><a href="#输出-3" class="headerlink" title="输出"></a>输出</h3><blockquote>
+<pre><code class="out">C...C CCCCC C.... C.... .CCC.
+C...C C.... C.... C.... C...C
+C...C C.... C.... C.... C...C
+CCCCC CCCC. C.... C.... C...C
+C...C C.... C.... C.... C...C
+C...C C.... C.... C.... C...C
+C...C CCCCC CCCCC CCCCC .CCC.
+
+C...C .CCC. CCCC. C.... CCCC.
+C...C C...C C...C C.... C...C
+C...C C...C CCCC. C.... C...C
+C.C.C C...C CC... C.... C...C
+CC.CC C...C C.C.. C.... C...C
+C...C C...C C..C. C.... C...C
+C...C .CCC. C...C CCCCC CCCC.</code></pre>
+</blockquote>
+<ul>
+<li>如果说上一题让我有了姥姥放水了能轻松拿个高分的错觉，这题则是直接击碎了我的幻想。</li>
+<li>这么长的输入样例，可以说是生平仅见。我花了非常多的时间理解题目和写代码。</li>
+<li>最后只通过一个测试点，剩下的测试点是两个格式错误一个运行超时和答案错误。</li>
+<li>无法想象在大致做出题目之后，仍有这么多各式各样的错误。</li>
+<li>我果断放弃了这题的完全得分，只想找出格式错误的原因增加判断来达到匹配。</li>
+<li>结果仍是事与愿违，这题没有再多得一分。</li>
+<li>在考试最后的25分钟里我望向了第五道题，却是见到了我之前在博客里白纸黑字写着放弃的题型，链表。</li>
+<li>虽是对解法还有大致思路，不过剩余的时间不足以我拼凑起代码，本次考试只能止步于此。</li>
+<li>人生怕什么就容易来什么，逃避还是得不到真正的解决。</li>
+</ul>
+<hr>
+<hr>
+<pre><code>import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Main {
+
+    public static void main(String[] args) throws IOException{
+        // TODO Auto-generated method stub
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] abc = new String[26];
+        Arrays.fill(abc, &quot;&quot;);
+        for(int i = 0;i &lt;26;i++) {
+            for(int j = 0;j &lt;7;j++) {
+                String temp = br.readLine();
+                abc[i] +=temp;
+
+            }
+        }
+        String end = br.readLine();
+        ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0;i &lt;end.length();i++) {
+            char c = end.charAt(i);
+            if(c&gt;=&#39;A&#39;&amp;&amp; c&lt;=&#39;Z&#39;) {
+                    sb.append(c);
+            }else {
+                list.add(sb.toString());
+                sb.delete(0, sb.length());
+                continue;
+            }
+        }
+
+        for(int i = 0;i &lt;list.size();i++) {
+            String temp = list.get(i);
+//            System.out.println(temp);
+            for(int k=0;k&lt;7;k++) {
+                boolean isFirst = true;
+                for(int j = 0;j &lt;temp.length();j++) {
+                    char ch = temp.charAt(j);
+                    if(isFirst) {
+                        System.out.print(abc[ch-65].substring(k*5,k*5+5));
+                        isFirst = false;
+                    }else {
+                        System.out.print(&quot; &quot;+abc[ch-65].substring(k*5,k*5+5));
+                    }
+
+                }
+                System.out.print(&quot;\n&quot;);
+            }
+            if(i!=list.size()-1) {
+                System.out.println();
+            }
+        }
+    }
+
+}</code></pre><h1 id="7-5-区块反转"><a href="#7-5-区块反转" class="headerlink" title="7-5 区块反转"></a>7-5 区块反转</h1><p> 给定一个单链表 <em>L</em>，我们将每 <em>K</em> 个结点看成一个<strong>区块</strong>（链表最后若不足 <em>K</em> 个结点，也看成一个区块），请编写程序将 <em>L</em> 中所有区块的链接反转。例如：给定 <em>L</em> 为 1→2→3→4→5→6→7→8，<em>K</em> 为 3，则输出应该为 7→8→4→5→6→1→2→3。 </p>
+<h2 id="输入描述-4"><a href="#输入描述-4" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p>每个输入包含 1 个测试用例。每个测试用例第 1 行给出第 1 个结点的地址、结点总个数正整数 <em>N</em> (≤105)、以及正整数 <em>K</em> (≤<em>N</em>)，即区块的大小。结点的地址是 5 位非负整数，NULL 地址用 −1 表示。</p>
+<p>接下来有 <em>N</em> 行，每行格式为：</p>
+<pre><code> Address Data Next</code></pre><p>其中 <code>Address</code> 是结点地址，<code>Data</code> 是该结点保存的整数数据，<code>Next</code> 是下一结点的地址。</p>
+</blockquote>
+<h2 id="输出描述-4"><a href="#输出描述-4" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p> 对每个测试用例，顺序输出反转后的链表，其上每个结点占一行，格式与输入相同。 </p>
+</blockquote>
+<h3 id="输入-4"><a href="#输入-4" class="headerlink" title="输入"></a>输入</h3><blockquote>
+<p>00100 8 3<br>71120 7 88666<br>00000 4 99999<br>00100 1 12309<br>68237 6 71120<br>33218 3 00000<br>99999 5 68237<br>88666 8 -1<br>12309 2 33218</p>
+</blockquote>
+<h3 id="输出-4"><a href="#输出-4" class="headerlink" title="输出"></a>输出</h3><blockquote>
+<p>71120 7 88666<br>88666 8 00000<br>00000 4 99999<br>99999 5 68237<br>68237 6 00100<br>00100 1 12309<br>12309 2 33218<br>33218 3 -1</p>
+</blockquote>
+<hr>
+<hr>
+<pre><code>import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws IOException{
+        // TODO Auto-generated method stub
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[]temp = br.readLine().split(&quot; &quot;);
+        String addr = temp[0];
+        int n = Integer.parseInt(temp[1]);
+        String nex = temp[2];
+        Map&lt;String,Node&gt; map = new HashMap&lt;&gt;();
+        for(int i =0;i&lt; n;i++) {
+            String[]temp2 = br.readLine().split(&quot; &quot;);
+            int d = Integer.parseInt(temp2[1]);
+            map.put(temp2[0],new Node(temp2[0],d,temp2[2]));
+        }
+        for(int i =0;i&lt; n;i++) {
+
+        }
+        System.out.print(-1);
+    }
+
+
+}
+class Node{
+    String add;
+    int data;
+    String next;
+    public Node(String a,int d,String n) {
+        this.add = a;
+        this.data = d;
+        this.next = n;
+    }
+}    </code></pre>]]></content>
+      <categories>
+        <category>生活感悟</category>
+      </categories>
+  </entry>
+  <entry>
     <title>TRPG永夜后日的谈模组（粪作）</title>
-    <url>/2020/01/05/%E4%BC%A0%E9%A2%82%E4%B9%8B%E7%89%A9%E6%A8%A1%E7%BB%84/</url>
+    <url>/2019/12/05/%E4%BC%A0%E9%A2%82%E4%B9%8B%E7%89%A9%E6%A8%A1%E7%BB%84/</url>
     <content><![CDATA[<h1 id="别册的受赞颂者"><a href="#别册的受赞颂者" class="headerlink" title="别册的受赞颂者"></a><strong>别册的受赞颂者</strong></h1><h2 id="故事背景"><a href="#故事背景" class="headerlink" title="故事背景"></a>故事背景</h2><p>推完传颂之物虚伪的假面和二人的白皇之后，紧接着又补了一代的动画。那种怆然若失的感觉还是一直萦绕着我，想再做点什么于是便有了这个。<a id="more"></a></p>
 <p>本模组为魔改的传颂之物世界观，强行的使用了永夜后日谈NECHRONICA战斗设定和规则（想了解的话萌娘百科很详细的记录了），但两个作品的世界观有很多相近的地方，勉强能够自圆其说。</p>
 <p><del>开局PC们roll点选出一个人戴着假面(亚库尔卡)，其余PC均为亚人。</del></p>
@@ -561,349 +904,6 @@
 ]]></content>
       <categories>
         <category>二次元の胡话</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>PAT2019年冬季考试(乙级)回顾</title>
-    <url>/2019/12/08/PAT2019%E5%B9%B4%E5%86%AC%E5%AD%A3%E8%80%83%E8%AF%95(%E4%B9%99%E7%BA%A7)%E5%9B%9E%E9%A1%BE/</url>
-    <content><![CDATA[<p>  很有幸和这么多大佬一起陪考了这次2019冬季考试，也很幸运的能有机会见到pat的出题人陈越姥姥，看着陈越姥姥给满分的同学拍照一起面带笑容讨论考研和计算机的未来前景，内心着实是十分欣羡和向往这种生活，却又与67的我显得格格不入。 <a id="more"></a></p>
-<p>  因为程序已经没有提交的入口了，重做也无法知道自己有没有做对。</p>
-<p>  所以这篇博客并不是题解而是给自己与pat短暂的相处画上句号。</p>
-<h1 id="7-1-2019数列"><a href="#7-1-2019数列" class="headerlink" title="7-1 2019数列"></a>7-1 2019数列</h1><p>把 2019 各个数位上的数字 2、0、1、9 作为一个数列的前 4 项，用它们去构造一个无穷数列，其中第 <em>n</em>（&gt;4）项是它前 4 项之和的个位数字。例如第 5 项为 2， 因为 2+0+1+9=12，个位数是 2。</p>
-<p>本题就请你编写程序，列出这个序列的前 <em>n</em> 项。</p>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p>  输入给出正整数 <em>n</em>（≤1000）。 </p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p> 在一行中输出数列的前 <em>n</em> 项，数字间不要有空格。 </p>
-</blockquote>
-<h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
-<p>10</p>
-</blockquote>
-<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
-<p>2019224758</p>
-</blockquote>
-<p> <strong>题外话：</strong>这个数列中永远不会出现 <code>2018</code>，你能证明吗？ </p>
-<ul>
-<li>刚上手这道题的时候自己挺紧张的，考试使用的ide Eclipse Oxygen 和我自己使用的版本有所差别。</li>
-<li>在使用惯用的热键写代码时，一度导致屏幕里显示的内容翻转了….</li>
-<li>老师当时离开了教室一会，呼救没人搭理….只能自己小心翼翼的调整了回来。</li>
-<li>加上有规定不能打开游览器否则按作弊处理，而谷歌游览器就在任务栏上…..</li>
-<li>之后的考试时间就格外的小心除了ctrl+c ctrl+v和alt+/没有再使用别的热键了。</li>
-<li>也为之后的超时埋下了伏笔</li>
-<li>言归正传这题没啥难度，注意n&lt;4的能正常输出内容即可。</li>
-</ul>
-<hr>
-<hr>
-<pre><code>import java.io.*;
-
-
-public class Main {
-
-    public static void main(String[] args) throws IOException{
-        // TODO Auto-generated method stub
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(br.readLine());
-        StringBuilder sb = new StringBuilder();
-        int[] list = new int[1001];
-        list[0]=2;
-        list[1]=0;
-        list[2]=1;
-        list[3]=9;
-        if(n&lt;4) {
-            for(int i =0;i&lt;n;i++) {
-                sb.append(list[i]);
-            }
-            System.out.println(sb.toString().trim());
-            System.exit(0);
-        }
-        sb.append(2019);
-        for(int i =4;i&lt;n;i++) {
-            int sum =0;
-            for(int j =i-4;j&lt;i;j++) {
-                sum +=list[j];
-            }
-            sum = sum%10;
-            list[i] = sum;
-            sb.append(sum);
-        }
-        System.out.println(sb.toString().trim());
-    }
-
-}</code></pre><h1 id="7-2-老鼠爱大米"><a href="#7-2-老鼠爱大米" class="headerlink" title="7-2 老鼠爱大米"></a>7-2 老鼠爱大米</h1><p>翁恺老师曾经设计过一款 Java 挑战游戏，叫“老鼠爱大米”（或许因为他的外号叫“胖胖鼠”）。每个玩家用 Java 代码控制一只鼠，目标是抢吃尽可能多的大米让自己变成胖胖鼠，最胖的那只就是冠军。</p>
-<p>因为游戏时间不能太长，我们把玩家分成 <em>N</em> 组，每组 <em>M</em> 只老鼠同场竞技，然后从 <em>N</em> 个分组冠军中直接选出最胖的冠军胖胖鼠。现在就请你写个程序来得到冠军的体重。</p>
-<h2 id="输入描述-1"><a href="#输入描述-1" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p> 输入在第一行中给出 2 个正整数：N（≤100）为组数，M（≤10）为每组玩家个数。随后 N 行，每行给出一组玩家控制的 M 只老鼠最后的体重，均为不超过 10<br> 4<br>   的非负整数。数字间以空格分隔。</p>
-</blockquote>
-<h2 id="输出描述-1"><a href="#输出描述-1" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>首先在第一行顺次输出各组冠军的体重，数字间以 1 个空格分隔，行首尾不得有多余空格。随后在第二行输出冠军胖胖鼠的体重。 </p>
-</blockquote>
-<h3 id="输入-1"><a href="#输入-1" class="headerlink" title="输入"></a>输入</h3><blockquote>
-<p>3 5<br>62 53 88 72 81<br>12 31 9 0 2<br>91 42 39 6 48</p>
-</blockquote>
-<h3 id="输出-1"><a href="#输出-1" class="headerlink" title="输出"></a>输出</h3><blockquote>
-<p>88 31 91<br>91</p>
-</blockquote>
-<ul>
-<li>这题设置两个最大值，最近考试姥姥给的运行时间很充裕，程序一遍写下来就能过。</li>
-<li>不过java的话太多输入还是会超时，最后两题都是有超时的测试点。而我最后一题甚至只才写了一个开头就已经超时了。</li>
-</ul>
-<hr>
-<hr>
-<pre><code>import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-public class Main {
-
-    public static void main(String[] args) throws IOException{
-        // TODO Auto-generated method stub
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String[] temp = br.readLine().split(&quot; &quot;);
-        int n = Integer.parseInt(temp[0]);
-        int m = Integer.parseInt(temp[1]);
-        int[] Fat = new int[n];
-        int maxFat =0;
-        for(int i =0; i&lt;n;i++) {
-            int smallFat =0;
-            String[] str = br.readLine().split(&quot; &quot;);
-            for(int j =0; j&lt;m;j++) {
-                int num = Integer.parseInt(str[j]);
-                if(num &gt; smallFat) {
-                    smallFat = num;
-                }
-            }
-            if(maxFat&lt;smallFat) {
-                maxFat = smallFat;
-            }
-            if(i==0) {
-                System.out.print(smallFat);
-            }else {
-                System.out.print(&quot; &quot;+smallFat);
-            }
-
-        }
-        System.out.println();
-        System.out.println(maxFat);
-
-    }
-
-}</code></pre><h1 id="7-3-String复读机"><a href="#7-3-String复读机" class="headerlink" title="7-3 String复读机"></a>7-3 String复读机</h1><p>给定一个长度不超过 10^4的、仅由英文字母构成的字符串。请将字符重新调整顺序，按 StringString…. （注意区分大小写）这样的顺序输出，并忽略其它字符。当然，六种字符的个数不一定是一样多的，若某种字符已经输出完，则余下的字符仍按 String 的顺序打印，直到所有字符都被输出。例如 gnirtSSs 要调整成 StringS 输出，其中 s 是多余字符被忽略。</p>
-<h2 id="输入描述-2"><a href="#输入描述-2" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p> 输入在一行中给出一个长度不超过 10^4的、仅由英文字母构成的非空字符串。</p>
-</blockquote>
-<h2 id="输出描述-2"><a href="#输出描述-2" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>在一行中按题目要求输出排序后的字符串。题目保证输出非空。</p>
-</blockquote>
-<h3 id="输入-2"><a href="#输入-2" class="headerlink" title="输入"></a>输入</h3><blockquote>
-<p>sTRidlinSayBingStrropriiSHSiRiagIgtSSr</p>
-</blockquote>
-<h3 id="输出-2"><a href="#输出-2" class="headerlink" title="输出"></a>输出</h3><blockquote>
-<p>StringStringSrigSriSiSii</p>
-</blockquote>
-<ul>
-<li>设置两个数组，一组直接存放“String”的每个字母，一组记录每个字母的出现次数。</li>
-<li>题目感觉稍稍放水了，大小写是区分的不用再加判断了。</li>
-</ul>
-<hr>
-<hr>
-<pre><code>import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-public class Main {
-
-    public static void main(String[] args) throws IOException{
-        // TODO Auto-generated method stub
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String input = br.readLine();
-        int[] string = new int[10];
-        String[] s = {&quot;S&quot;,&quot;t&quot;,&quot;r&quot;,&quot;i&quot;,&quot;n&quot;,&quot;g&quot;};
-        for(int i = 0;i&lt;input.length();i++) {
-            char c = input.charAt(i);
-            if(c ==&#39;S&#39;) {
-                string[0]++;
-            }else if(c ==&#39;t&#39;) {
-                string[1]++;
-            }else if(c ==&#39;r&#39;) {
-                string[2]++;
-            }else if(c == &#39;i&#39;) {
-                string[3]++;
-            }else if(c == &#39;n&#39;) {
-                string[4]++;
-            }else if(c == &#39;g&#39;) {
-                string[5]++;
-            }
-        }
-        StringBuilder sb = new StringBuilder();
-        for(int i =0;i&lt;input.length();i++) {
-            for(int j =0;j&lt;6;j++) {
-                if(string[j]!=0) {
-                    string[j]--;
-                    sb.append(s[j]);
-                }
-            }
-        }
-        System.out.println(sb.toString().trim());
-    }
-
-}</code></pre><h1 id="7-4-擅长C"><a href="#7-4-擅长C" class="headerlink" title="7-4 擅长C"></a>7-4 擅长C</h1><p>当你被面试官要求用 C 写一个“Hello World”时，有本事像下图显示的那样写一个出来吗？</p>
-<p> <img src="https://images.ptausercontent.com/ba3b8678-061d-4fc6-a87e-ce08e1434410.jpg" alt="HWC.jpg"> </p>
-<h2 id="输入描述-3"><a href="#输入描述-3" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p> 输入首先给出 26 个英文大写字母 A-Z，每个字母用一个 7×5 的、由 <code>C</code> 和 <code>.</code> 组成的矩阵构成。最后在一行中给出一个句子，以回车结束。句子是由若干个单词（每个包含不超过 10 个连续的大写英文字母）组成的，单词间以任何非大写英文字母分隔。</p>
-<p> 题目保证至少给出一个单词。</p>
-</blockquote>
-<h2 id="输出描述-3"><a href="#输出描述-3" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>对每个单词，将其每个字母用矩阵形式在一行中输出，字母间有一列空格分隔。单词的首尾不得有多余空格。</p>
-<p>相邻的两个单词间必须有一空行分隔。输出的首尾不得有多余空行。</p>
-</blockquote>
-<h3 id="输入-3"><a href="#输入-3" class="headerlink" title="输入"></a>输入</h3><blockquote>
-<p>..C..<br>.C.C.<br>C…C<br>CCCCC<br>C…C<br>C…C<br>C…C<br>CCCC.<br>C…C<br>C…C<br>CCCC.<br>C…C<br>C…C<br>CCCC.<br>.CCC.<br>C…C<br>C….<br>C….<br>C….<br>C…C<br>.CCC.<br>CCCC.<br>C…C<br>C…C<br>C…C<br>C…C<br>C…C<br>CCCC.<br>CCCCC<br>C….<br>C….<br>CCCC.<br>C….<br>C….<br>CCCCC<br>CCCCC<br>C….<br>C….<br>CCCC.<br>C….<br>C….<br>C….<br>CCCC.<br>C…C<br>C….<br>C.CCC<br>C…C<br>C…C<br>CCCC.<br>C…C<br>C…C<br>C…C<br>CCCCC<br>C…C<br>C…C<br>C…C<br>CCCCC<br>..C..<br>..C..<br>..C..<br>..C..<br>..C..<br>CCCCC<br>CCCCC<br>….C<br>….C<br>….C<br>….C<br>C…C<br>.CCC.<br>C…C<br>C..C.<br>C.C..<br>CC…<br>C.C..<br>C..C.<br>C…C<br>C….<br>C….<br>C….<br>C….<br>C….<br>C….<br>CCCCC<br>C…C<br>C…C<br>CC.CC<br>C.C.C<br>C…C<br>C…C<br>C…C<br>C…C<br>C…C<br>CC..C<br>C.C.C<br>C..CC<br>C…C<br>C…C<br>.CCC.<br>C…C<br>C…C<br>C…C<br>C…C<br>C…C<br>.CCC.<br>CCCC.<br>C…C<br>C…C<br>CCCC.<br>C….<br>C….<br>C….<br>.CCC.<br>C…C<br>C…C<br>C…C<br>C.C.C<br>C..CC<br>.CCC.<br>CCCC.<br>C…C<br>CCCC.<br>CC…<br>C.C..<br>C..C.<br>C…C<br>.CCC.<br>C…C<br>C….<br>.CCC.<br>….C<br>C…C<br>.CCC.<br>CCCCC<br>..C..<br>..C..<br>..C..<br>..C..<br>..C..<br>..C..<br>C…C<br>C…C<br>C…C<br>C…C<br>C…C<br>C…C<br>.CCC.<br>C…C<br>C…C<br>C…C<br>C…C<br>C…C<br>.C.C.<br>..C..<br>C…C<br>C…C<br>C…C<br>C.C.C<br>CC.CC<br>C…C<br>C…C<br>C…C<br>C…C<br>.C.C.<br>..C..<br>.C.C.<br>C…C<br>C…C<br>C…C<br>C…C<br>.C.C.<br>..C..<br>..C..<br>..C..<br>..C..<br>CCCCC<br>….C<br>…C.<br>..C..<br>.C…<br>C….<br>CCCCC<br>HELLO~WORLD!</p>
-</blockquote>
-<h3 id="输出-3"><a href="#输出-3" class="headerlink" title="输出"></a>输出</h3><blockquote>
-<pre><code class="out">C...C CCCCC C.... C.... .CCC.
-C...C C.... C.... C.... C...C
-C...C C.... C.... C.... C...C
-CCCCC CCCC. C.... C.... C...C
-C...C C.... C.... C.... C...C
-C...C C.... C.... C.... C...C
-C...C CCCCC CCCCC CCCCC .CCC.
-
-C...C .CCC. CCCC. C.... CCCC.
-C...C C...C C...C C.... C...C
-C...C C...C CCCC. C.... C...C
-C.C.C C...C CC... C.... C...C
-CC.CC C...C C.C.. C.... C...C
-C...C C...C C..C. C.... C...C
-C...C .CCC. C...C CCCCC CCCC.</code></pre>
-</blockquote>
-<ul>
-<li>如果说上一题让我有了姥姥放水了能轻松拿个高分的错觉，这题则是直接击碎了我的幻想。</li>
-<li>这么长的输入样例，可以说是生平仅见。我花了非常多的时间理解题目和写代码。</li>
-<li>最后只通过一个测试点，剩下的测试点是两个格式错误一个运行超时和答案错误。</li>
-<li>无法想象在大致做出题目之后，仍有这么多各式各样的错误。</li>
-<li>我果断放弃了这题的完全得分，只想找出格式错误的原因增加判断来达到匹配。</li>
-<li>结果仍是事与愿违，这题没有再多得一分。</li>
-<li>在考试最后的25分钟里我望向了第五道题，却是见到了我之前在博客里白纸黑字写着放弃的题型，链表。</li>
-<li>虽是对解法还有大致思路，不过剩余的时间不足以我拼凑起代码，本次考试只能止步于此。</li>
-<li>人生怕什么就容易来什么，逃避还是得不到真正的解决。</li>
-</ul>
-<hr>
-<hr>
-<pre><code>import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-
-public class Main {
-
-    public static void main(String[] args) throws IOException{
-        // TODO Auto-generated method stub
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String[] abc = new String[26];
-        Arrays.fill(abc, &quot;&quot;);
-        for(int i = 0;i &lt;26;i++) {
-            for(int j = 0;j &lt;7;j++) {
-                String temp = br.readLine();
-                abc[i] +=temp;
-
-            }
-        }
-        String end = br.readLine();
-        ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
-        StringBuilder sb = new StringBuilder();
-        for(int i = 0;i &lt;end.length();i++) {
-            char c = end.charAt(i);
-            if(c&gt;=&#39;A&#39;&amp;&amp; c&lt;=&#39;Z&#39;) {
-                    sb.append(c);
-            }else {
-                list.add(sb.toString());
-                sb.delete(0, sb.length());
-                continue;
-            }
-        }
-
-        for(int i = 0;i &lt;list.size();i++) {
-            String temp = list.get(i);
-//            System.out.println(temp);
-            for(int k=0;k&lt;7;k++) {
-                boolean isFirst = true;
-                for(int j = 0;j &lt;temp.length();j++) {
-                    char ch = temp.charAt(j);
-                    if(isFirst) {
-                        System.out.print(abc[ch-65].substring(k*5,k*5+5));
-                        isFirst = false;
-                    }else {
-                        System.out.print(&quot; &quot;+abc[ch-65].substring(k*5,k*5+5));
-                    }
-
-                }
-                System.out.print(&quot;\n&quot;);
-            }
-            if(i!=list.size()-1) {
-                System.out.println();
-            }
-        }
-    }
-
-}</code></pre><h1 id="7-5-区块反转"><a href="#7-5-区块反转" class="headerlink" title="7-5 区块反转"></a>7-5 区块反转</h1><p> 给定一个单链表 <em>L</em>，我们将每 <em>K</em> 个结点看成一个<strong>区块</strong>（链表最后若不足 <em>K</em> 个结点，也看成一个区块），请编写程序将 <em>L</em> 中所有区块的链接反转。例如：给定 <em>L</em> 为 1→2→3→4→5→6→7→8，<em>K</em> 为 3，则输出应该为 7→8→4→5→6→1→2→3。 </p>
-<h2 id="输入描述-4"><a href="#输入描述-4" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p>每个输入包含 1 个测试用例。每个测试用例第 1 行给出第 1 个结点的地址、结点总个数正整数 <em>N</em> (≤105)、以及正整数 <em>K</em> (≤<em>N</em>)，即区块的大小。结点的地址是 5 位非负整数，NULL 地址用 −1 表示。</p>
-<p>接下来有 <em>N</em> 行，每行格式为：</p>
-<pre><code> Address Data Next</code></pre><p>其中 <code>Address</code> 是结点地址，<code>Data</code> 是该结点保存的整数数据，<code>Next</code> 是下一结点的地址。</p>
-</blockquote>
-<h2 id="输出描述-4"><a href="#输出描述-4" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p> 对每个测试用例，顺序输出反转后的链表，其上每个结点占一行，格式与输入相同。 </p>
-</blockquote>
-<h3 id="输入-4"><a href="#输入-4" class="headerlink" title="输入"></a>输入</h3><blockquote>
-<p>00100 8 3<br>71120 7 88666<br>00000 4 99999<br>00100 1 12309<br>68237 6 71120<br>33218 3 00000<br>99999 5 68237<br>88666 8 -1<br>12309 2 33218</p>
-</blockquote>
-<h3 id="输出-4"><a href="#输出-4" class="headerlink" title="输出"></a>输出</h3><blockquote>
-<p>71120 7 88666<br>88666 8 00000<br>00000 4 99999<br>99999 5 68237<br>68237 6 00100<br>00100 1 12309<br>12309 2 33218<br>33218 3 -1</p>
-</blockquote>
-<hr>
-<hr>
-<pre><code>import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.*;
-
-public class Main {
-
-    public static void main(String[] args) throws IOException{
-        // TODO Auto-generated method stub
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String[]temp = br.readLine().split(&quot; &quot;);
-        String addr = temp[0];
-        int n = Integer.parseInt(temp[1]);
-        String nex = temp[2];
-        Map&lt;String,Node&gt; map = new HashMap&lt;&gt;();
-        for(int i =0;i&lt; n;i++) {
-            String[]temp2 = br.readLine().split(&quot; &quot;);
-            int d = Integer.parseInt(temp2[1]);
-            map.put(temp2[0],new Node(temp2[0],d,temp2[2]));
-        }
-        for(int i =0;i&lt; n;i++) {
-
-        }
-        System.out.print(-1);
-    }
-
-
-}
-class Node{
-    String add;
-    int data;
-    String next;
-    public Node(String a,int d,String n) {
-        this.add = a;
-        this.data = d;
-        this.next = n;
-    }
-}    </code></pre>]]></content>
-      <categories>
-        <category>生活感悟</category>
       </categories>
   </entry>
   <entry>
@@ -2172,6 +2172,147 @@ public class PAT_B1082 {
       </categories>
   </entry>
   <entry>
+    <title>B1081-MOOC期终成绩</title>
+    <url>/2019/12/02/B1081-MOOC%E6%9C%9F%E7%BB%88%E6%88%90%E7%BB%A9/</url>
+    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 本题要求你帮助某网站的用户注册模块写一个密码合法性检查的小功能。该网站要求用户设置的密码必须由不少于6个字符组成，并且只能有英文字母、数字和小数点 <code>.</code>，还必须既有字母也有数字。 </p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p> 输入第一行给出一个正整数 N（≤ 100），随后 N 行，每行给出一个用户设置的密码，为不超过 80 个字符的非空字符串，以回车结束。</p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述"></a>输出描述</h2><blockquote>
+<p>对每个用户的密码，在一行中输出系统反馈信息，分以下5种：</p>
+<ul>
+<li>如果密码合法，输出<code>Your password is wan mei.</code>；</li>
+<li>如果密码太短，不论合法与否，都输出<code>Your password is tai duan le.</code>；</li>
+<li>如果密码长度合法，但存在不合法字符，则输出<code>Your password is tai luan le.</code>；</li>
+<li>如果密码长度合法，但只有字母没有数字，则输出<code>Your password needs shu zi.</code>；</li>
+<li>如果密码长度合法，但只有数字没有字母，则输出<code>Your password needs zi mu.</code>。</li>
+</ul>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
+<p>5<br>123s<br>zheshi.wodepw<br>1234.5678<br>WanMei23333<br>pass*word.6</p>
+</blockquote>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
+<p>5<br>123s<br>zheshi.wodepw<br>1234.5678<br>WanMei23333<br>pass*word.6</p>
+</blockquote>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
+<li>设置三个标记，一个记录是否有字母，一个是否有数字，一个是有除了字母和数字加上.之外的其他字符</li>
+<li>有其他字符或者同时没有字母和数字输出太乱了。</li>
+</ul>
+<hr>
+<hr>
+<pre><code>import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class PAT_B1081 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+        for (int i = 0; i &lt;n ; i++) {
+            char[] password = br.readLine().toCharArray();
+            if (password.length &lt;6){
+                System.out.println(&quot;Your password is tai duan le.&quot;);
+                continue;
+            }
+            boolean letter = false, number = false, other = true;
+            for (int j = 0; j &lt;password.length ; j++) {
+                char c = password[j];
+                if (c &gt;=&#39;a&#39; &amp;&amp; c&lt;=&#39;z&#39; || c&gt;=&#39;A&#39; &amp;&amp; c&lt;=&#39;Z&#39;){
+                    letter = true;
+                }else if(c &gt;=&#39;0&#39; &amp;&amp; c&lt;=&#39;9&#39;){
+                    number = true;
+                }else if(c != &#39;.&#39;){
+                    other = false;
+                }
+            }
+            if (!other || letter==false &amp;&amp; number==false){
+                System.out.println(&quot;Your password is tai luan le.&quot;);
+            }else if (!number &amp;&amp; letter){
+                System.out.println(&quot;Your password needs shu zi.&quot;);
+            }else if (number &amp;&amp; !letter){
+                System.out.println(&quot;Your password needs zi mu.&quot;);
+            }else {
+                System.out.println(&quot;Your password is wan mei.&quot;);
+            }
+        }
+    }
+}</code></pre>]]></content>
+      <categories>
+        <category>PAT练习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>B1079-延迟的回文数</title>
+    <url>/2019/12/02/B1079-%E5%BB%B6%E8%BF%9F%E7%9A%84%E5%9B%9E%E6%96%87%E6%95%B0/</url>
+    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>给定一个 <em>k</em>+1 位的正整数 <em>N</em>，写成 <em>a*<em>k</em>⋯<em>a</em>1<em>a</em>0 的形式，其中对所有 *i</em> 有 0≤<em>a**i</em>&lt;10 且 <em>a**k</em>&gt;0。<em>N</em> 被称为一个<strong>回文数</strong>，当且仅当对所有 <em>i</em> 有 <em>a**i</em>=<em>a*</em>k<em>−</em>i*。零也被定义为一个回文数。</p>
+<p>非回文数也可以通过一系列操作变出回文数。首先将该数字逆转，再将逆转数与该数相加，如果和还不是一个回文数，就重复这个逆转再相加的操作，直到一个回文数出现。如果一个非回文数可以变出回文数，就称这个数为<strong>延迟的回文数</strong>。（定义翻译自 <a href="https://en.wikipedia.org/wiki/Palindromic_number" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Palindromic_number</a> ）</p>
+<p>给定任意一个正整数，本题要求你找到其变出的那个回文数。</p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p> 输入在一行中给出一个不超过1000位的正整数。 </p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p>对给定的整数，一行一行输出其变出回文数的过程。每行格式如下</p>
+<pre><code>A + B = C</code></pre><p>其中 <code>A</code> 是原始的数字，<code>B</code> 是 <code>A</code> 的逆转数，<code>C</code> 是它们的和。<code>A</code> 从输入的整数开始。重复操作直到 <code>C</code> 在 10 步以内变成回文数，这时在一行中输出 <code>C is a palindromic number.</code>；或者如果 10 步都没能得到回文数，最后就在一行中输出 <code>Not found in 10 iterations.</code>。</p>
+</blockquote>
+<h3 id="输入1"><a href="#输入1" class="headerlink" title="输入1"></a>输入1</h3><blockquote>
+<p>97152</p>
+</blockquote>
+<h3 id="输出1"><a href="#输出1" class="headerlink" title="输出1"></a>输出1</h3><blockquote>
+<p>97152 + 25179 = 122331<br>122331 + 133221 = 255552<br>255552 is a palindromic number.</p>
+</blockquote>
+<h3 id="输入2"><a href="#输入2" class="headerlink" title="输入2"></a>输入2</h3><blockquote>
+<p>196</p>
+</blockquote>
+<h3 id="输出2"><a href="#输出2" class="headerlink" title="输出2"></a>输出2</h3><blockquote>
+<p>196 + 691 = 887<br>887 + 788 = 1675<br>1675 + 5761 = 7436<br>7436 + 6347 = 13783<br>13783 + 38731 = 52514<br>52514 + 41525 = 94039<br>94039 + 93049 = 187088<br>187088 + 880781 = 1067869<br>1067869 + 9687601 = 10755470<br>10755470 + 07455701 = 18211171<br>Not found in 10 iterations.</p>
+</blockquote>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
+<li>这是一道真题，听说不小心点进链接里打开游览器超过10秒就算作弊了…..超越题目的坑</li>
+<li>使用reverse来反转原字符串，再新建BigInteger用来计算字符串数字。</li>
+<li>循环执行10次，若出现题目要求的回文数怎打印相应内容后结束程序。</li>
+<li>如果循环完仍没有结束程序则代表没有找到回文数输出Not found in 10 iterations.</li>
+</ul>
+<hr>
+<hr>
+<pre><code>import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.math.BigInteger;
+import java.util.Stack; //最开始尝试过栈反转，发现pop的是原类型一个char。要使用的话还得while(sta.isEmpty)加一个StringBuilder拼接
+
+public class PAT_B1079 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String number = br.readLine();
+        for (int i = 0; i &lt;10 ; i++) {
+            String number2 = new StringBuilder(number).reverse().toString();
+            if (number2.equals(number)){
+                System.out.println(number+&quot; is a palindromic number.&quot;);
+                System.exit(0);
+            }
+            BigInteger num1=new BigInteger(number);
+            BigInteger num2=new BigInteger(number2);
+            BigInteger number3= num1.add(num2);
+            System.out.println(number+&quot; + &quot;+number2+&quot; = &quot;+number3);
+            number = String.valueOf(number3);
+        }
+        System.out.println(&quot;Not found in 10 iterations.&quot;);
+    }
+//    private static void reverse(int a) { //int的反转方法
+//        int rs = 0;
+//        while (a &gt; 0) {
+//            rs *= 10;
+//            rs += a % 10;
+//            a /= 10;
+//        }
+//        System.out.println(rs);
+//    }
+}</code></pre>]]></content>
+      <categories>
+        <category>PAT练习</category>
+      </categories>
+  </entry>
+  <entry>
     <title>B1080-MOOC期终成绩</title>
     <url>/2019/12/02/B1080-MOOC%E6%9C%9F%E7%BB%88%E6%88%90%E7%BB%A9/</url>
     <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>对于在中国大学MOOC（<a href="http://www.icourse163.org/" target="_blank" rel="noopener">http://www.icourse163.org/</a> ）学习“数据结构”课程的学生，想要获得一张合格证书，必须首先获得不少于200分的在线编程作业分，然后总评获得不少于60分（满分100）。总评成绩的计算公式为 <em>G</em>=(<em>G<strong>m</strong>i<em>d</em>−<em>t</em>e<em>r</em>m<em>×40%+</em>G<strong>f</strong>i<strong>n</strong>al<em>×60%)，如果 <em>G</em></em>m<strong>i</strong>d<em>−</em>t<strong>e</strong>r**m</em>&gt;<em>G<strong>f</strong>i<strong>n</strong>a*<em>l</em>；否则总评 *G</em> 就是 <em>G*</em>f<strong>i</strong>n<strong>a*l。这里 *G</strong>m<strong>i<em>d</em>−*t</strong>e<strong>r</strong>m和G<strong>f</strong>i<strong>n</strong>a**l 分别为学生的期中和期末成绩。</p>
@@ -2306,147 +2447,6 @@ class Score{
         this.m_score = m;
         this.f_score = f;
         this.t_score = t;
-    }
-}</code></pre>]]></content>
-      <categories>
-        <category>PAT练习</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>B1079-延迟的回文数</title>
-    <url>/2019/12/02/B1079-%E5%BB%B6%E8%BF%9F%E7%9A%84%E5%9B%9E%E6%96%87%E6%95%B0/</url>
-    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>给定一个 <em>k</em>+1 位的正整数 <em>N</em>，写成 <em>a*<em>k</em>⋯<em>a</em>1<em>a</em>0 的形式，其中对所有 *i</em> 有 0≤<em>a**i</em>&lt;10 且 <em>a**k</em>&gt;0。<em>N</em> 被称为一个<strong>回文数</strong>，当且仅当对所有 <em>i</em> 有 <em>a**i</em>=<em>a*</em>k<em>−</em>i*。零也被定义为一个回文数。</p>
-<p>非回文数也可以通过一系列操作变出回文数。首先将该数字逆转，再将逆转数与该数相加，如果和还不是一个回文数，就重复这个逆转再相加的操作，直到一个回文数出现。如果一个非回文数可以变出回文数，就称这个数为<strong>延迟的回文数</strong>。（定义翻译自 <a href="https://en.wikipedia.org/wiki/Palindromic_number" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Palindromic_number</a> ）</p>
-<p>给定任意一个正整数，本题要求你找到其变出的那个回文数。</p>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p> 输入在一行中给出一个不超过1000位的正整数。 </p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>对给定的整数，一行一行输出其变出回文数的过程。每行格式如下</p>
-<pre><code>A + B = C</code></pre><p>其中 <code>A</code> 是原始的数字，<code>B</code> 是 <code>A</code> 的逆转数，<code>C</code> 是它们的和。<code>A</code> 从输入的整数开始。重复操作直到 <code>C</code> 在 10 步以内变成回文数，这时在一行中输出 <code>C is a palindromic number.</code>；或者如果 10 步都没能得到回文数，最后就在一行中输出 <code>Not found in 10 iterations.</code>。</p>
-</blockquote>
-<h3 id="输入1"><a href="#输入1" class="headerlink" title="输入1"></a>输入1</h3><blockquote>
-<p>97152</p>
-</blockquote>
-<h3 id="输出1"><a href="#输出1" class="headerlink" title="输出1"></a>输出1</h3><blockquote>
-<p>97152 + 25179 = 122331<br>122331 + 133221 = 255552<br>255552 is a palindromic number.</p>
-</blockquote>
-<h3 id="输入2"><a href="#输入2" class="headerlink" title="输入2"></a>输入2</h3><blockquote>
-<p>196</p>
-</blockquote>
-<h3 id="输出2"><a href="#输出2" class="headerlink" title="输出2"></a>输出2</h3><blockquote>
-<p>196 + 691 = 887<br>887 + 788 = 1675<br>1675 + 5761 = 7436<br>7436 + 6347 = 13783<br>13783 + 38731 = 52514<br>52514 + 41525 = 94039<br>94039 + 93049 = 187088<br>187088 + 880781 = 1067869<br>1067869 + 9687601 = 10755470<br>10755470 + 07455701 = 18211171<br>Not found in 10 iterations.</p>
-</blockquote>
-<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li>这是一道真题，听说不小心点进链接里打开游览器超过10秒就算作弊了…..超越题目的坑</li>
-<li>使用reverse来反转原字符串，再新建BigInteger用来计算字符串数字。</li>
-<li>循环执行10次，若出现题目要求的回文数怎打印相应内容后结束程序。</li>
-<li>如果循环完仍没有结束程序则代表没有找到回文数输出Not found in 10 iterations.</li>
-</ul>
-<hr>
-<hr>
-<pre><code>import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.math.BigInteger;
-import java.util.Stack; //最开始尝试过栈反转，发现pop的是原类型一个char。要使用的话还得while(sta.isEmpty)加一个StringBuilder拼接
-
-public class PAT_B1079 {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String number = br.readLine();
-        for (int i = 0; i &lt;10 ; i++) {
-            String number2 = new StringBuilder(number).reverse().toString();
-            if (number2.equals(number)){
-                System.out.println(number+&quot; is a palindromic number.&quot;);
-                System.exit(0);
-            }
-            BigInteger num1=new BigInteger(number);
-            BigInteger num2=new BigInteger(number2);
-            BigInteger number3= num1.add(num2);
-            System.out.println(number+&quot; + &quot;+number2+&quot; = &quot;+number3);
-            number = String.valueOf(number3);
-        }
-        System.out.println(&quot;Not found in 10 iterations.&quot;);
-    }
-//    private static void reverse(int a) { //int的反转方法
-//        int rs = 0;
-//        while (a &gt; 0) {
-//            rs *= 10;
-//            rs += a % 10;
-//            a /= 10;
-//        }
-//        System.out.println(rs);
-//    }
-}</code></pre>]]></content>
-      <categories>
-        <category>PAT练习</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>B1081-MOOC期终成绩</title>
-    <url>/2019/12/02/B1081-MOOC%E6%9C%9F%E7%BB%88%E6%88%90%E7%BB%A9/</url>
-    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 本题要求你帮助某网站的用户注册模块写一个密码合法性检查的小功能。该网站要求用户设置的密码必须由不少于6个字符组成，并且只能有英文字母、数字和小数点 <code>.</code>，还必须既有字母也有数字。 </p>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p> 输入第一行给出一个正整数 N（≤ 100），随后 N 行，每行给出一个用户设置的密码，为不超过 80 个字符的非空字符串，以回车结束。</p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述"></a>输出描述</h2><blockquote>
-<p>对每个用户的密码，在一行中输出系统反馈信息，分以下5种：</p>
-<ul>
-<li>如果密码合法，输出<code>Your password is wan mei.</code>；</li>
-<li>如果密码太短，不论合法与否，都输出<code>Your password is tai duan le.</code>；</li>
-<li>如果密码长度合法，但存在不合法字符，则输出<code>Your password is tai luan le.</code>；</li>
-<li>如果密码长度合法，但只有字母没有数字，则输出<code>Your password needs shu zi.</code>；</li>
-<li>如果密码长度合法，但只有数字没有字母，则输出<code>Your password needs zi mu.</code>。</li>
-</ul>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
-<p>5<br>123s<br>zheshi.wodepw<br>1234.5678<br>WanMei23333<br>pass*word.6</p>
-</blockquote>
-<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
-<p>5<br>123s<br>zheshi.wodepw<br>1234.5678<br>WanMei23333<br>pass*word.6</p>
-</blockquote>
-<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li>设置三个标记，一个记录是否有字母，一个是否有数字，一个是有除了字母和数字加上.之外的其他字符</li>
-<li>有其他字符或者同时没有字母和数字输出太乱了。</li>
-</ul>
-<hr>
-<hr>
-<pre><code>import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-public class PAT_B1081 {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(br.readLine());
-        for (int i = 0; i &lt;n ; i++) {
-            char[] password = br.readLine().toCharArray();
-            if (password.length &lt;6){
-                System.out.println(&quot;Your password is tai duan le.&quot;);
-                continue;
-            }
-            boolean letter = false, number = false, other = true;
-            for (int j = 0; j &lt;password.length ; j++) {
-                char c = password[j];
-                if (c &gt;=&#39;a&#39; &amp;&amp; c&lt;=&#39;z&#39; || c&gt;=&#39;A&#39; &amp;&amp; c&lt;=&#39;Z&#39;){
-                    letter = true;
-                }else if(c &gt;=&#39;0&#39; &amp;&amp; c&lt;=&#39;9&#39;){
-                    number = true;
-                }else if(c != &#39;.&#39;){
-                    other = false;
-                }
-            }
-            if (!other || letter==false &amp;&amp; number==false){
-                System.out.println(&quot;Your password is tai luan le.&quot;);
-            }else if (!number &amp;&amp; letter){
-                System.out.println(&quot;Your password needs shu zi.&quot;);
-            }else if (number &amp;&amp; !letter){
-                System.out.println(&quot;Your password needs zi mu.&quot;);
-            }else {
-                System.out.println(&quot;Your password is wan mei.&quot;);
-            }
-        }
     }
 }</code></pre>]]></content>
       <categories>
