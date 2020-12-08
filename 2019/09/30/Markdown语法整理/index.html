@@ -19,15 +19,15 @@
 <meta property="og:site_name" content="还在建设的避风港">
 <meta property="og:description" content="前言作为一个新进程序员，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-08T11:08:22.240Z">
+<meta property="og:updated_time" content="2020-07-30T15:54:16.033Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown语法整理">
 <meta name="twitter:description" content="前言作为一个新进程序员，">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?v=233" crossorigin>
   
     <link rel="stylesheet" href="at.alicdn.com/t/font_1440167_ezdnzsotqc.css">
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1594542886737">-->
+  <link rel="stylesheet" href="/css/style.css?v=1607432893743">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -89,7 +89,14 @@
     <aside id="nexmoe-sidebar">
   
   <div class="nexmoe-widget-wrap">
-    <h3 class="nexmoe-widget-title">社交按钮</h3>
+    <div class="nexmoe-widget nexmoe-search">
+        <form id="search_form" action_e="https://cn.bing.com/search?q=site:soulflower.gitee.io" onsubmit="return search();">
+            <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
+        </form>
+    </div>
+</div>
+  
+  <div class="nexmoe-widget-wrap">
     <div class="nexmoe-widget nexmoe-social">
         <a class="mdui-ripple" href="https://space.bilibili.com/378156" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
             <i class="nexmoefont icon-bilibili"></i>
@@ -157,7 +164,7 @@
     <div class="nexmoe-copyright">
         &copy; 2020 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
     </div>
 </div><!-- .nexmoe-drawer -->
   </div>
@@ -173,8 +180,8 @@
   
   <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2019年09月30日</a>
-    <a><i class="nexmoefont icon-areachart"></i>117 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+    <a><i class="nexmoefont icon-areachart"></i>974 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
 </div>
 
   <div class="nexmoe-post-right">
@@ -182,7 +189,7 @@
       <div class="nexmoe-fixed">
         <div class="nexmoe-valign">
             <div class="nexmoe-toc">
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-标题"><span class="toc-number">1.1.</span> <span class="toc-text">1.标题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#这是一级标题"><span class="toc-number">2.</span> <span class="toc-text">这是一级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#这是二级标题"><span class="toc-number">2.1.</span> <span class="toc-text">这是二级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#这是三级标题"><span class="toc-number">2.1.1.</span> <span class="toc-text">这是三级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#这是四级标题"><span class="toc-number">2.1.1.1.</span> <span class="toc-text">这是四级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#这是五级标题"><span class="toc-number">2.1.1.1.1.</span> <span class="toc-text">这是五级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#这是六级标题"><span class="toc-number">2.1.1.1.1.1.</span> <span class="toc-text">这是六级标题</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-字体"><span class="toc-number">2.2.</span> <span class="toc-text">2.字体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-分隔线"><span class="toc-number">2.3.</span> <span class="toc-text">3.分隔线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-锚点"><span class="toc-number">2.4.</span> <span class="toc-text">4.锚点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-引用"><span class="toc-number">2.5.</span> <span class="toc-text">5.引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-超链接"><span class="toc-number">2.6.</span> <span class="toc-text">6.超链接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1行内式"><span class="toc-number">2.6.1.</span> <span class="toc-text">6.1行内式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2自动链接"><span class="toc-number">2.6.2.</span> <span class="toc-text">6.2自动链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3脚注"><span class="toc-number">2.6.3.</span> <span class="toc-text">6.3脚注</span></a></li></ol></li></ol></li></ol>
             </div>
         </div>
       </div>
@@ -190,21 +197,104 @@
   </div>
 
   <article>
-    <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>作为一个新进程序员，<a id="more"></a> 使用Markdown写文档的时间还不是很多，对很多语法也不是很熟悉，网上的教程也很纷杂，很多并不是很完整。为了方便自己下次有需求时使用，遂对自己了解到的Markdown语法进行整理。<br><br><strong><em>注</em></strong>:由于编辑器的不同，其对Markdown语法的支持程度也不尽相同，本文所使用的编辑器是Markdownpad2。</p>
-<p># </p>
+    <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>作为一个新进程序员，<a id="more"></a> 使用Markdown写文档的时间还不是很多，对很多语法也不是很熟悉，网上的教程也很纷杂，很多并不是很完整。为了方便自己下次有需求时使用，遂对自己了解到的Markdown语法进行整理。<br><br><strong><em>注</em></strong>:由于编辑器的不同，其对Markdown语法的支持程度也不尽相同，本文所使用的编辑器是Typora。</p>
+<h2 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h2><p>在想要设置为标题的文字前面加#来表示<br>一个#是一级标题，二个#是二级标题，以此类推。支持六级标题。<br>示例</p>
+<pre><code class="bash"># 这是一级标题
+## 这是二级标题
+### 这是三级标题
+#### 这是四级标题
+##### 这是五级标题
+###### 这是六级标题</code></pre>
+<p><u>效果如下：</u></p>
+<h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><p>（多的#似乎是主题的原因）</p>
+<h2 id="2-字体"><a href="#2-字体" class="headerlink" title="2.字体"></a>2.字体</h2><ul>
+<li>加粗</li>
+</ul>
+<p>要加粗的文字左右分别用两个*号包起来</p>
+<ul>
+<li>斜体</li>
+</ul>
+<p>要倾斜的文字左右分别用一个*号包起来</p>
+<ul>
+<li>斜体加粗</li>
+</ul>
+<p>要倾斜和加粗的文字左右分别用三个*号包起来</p>
+<ul>
+<li>删除线</li>
+</ul>
+<p>要加删除线的文字左右分别用两个~~号包起来</p>
+<p>示例：</p>
+<pre><code class="undefined">**这是加粗的文字**
+*这是倾斜的文字*`
+***这是斜体加粗的文字***
+~~这是加删除线的文字~~</code></pre>
+<p><u>效果如下：</u></p>
+<p><strong>这是加粗的文字</strong><br><em>这是倾斜的文字</em><br><strong><em>这是斜体加粗的文字</em></strong><br><del>这是加删除线的文字</del></p>
+<h2 id="3-分隔线"><a href="#3-分隔线" class="headerlink" title="3.分隔线"></a><strong>3.分隔线</strong></h2><p> 可以在一行中用三个以上的星号*、减号-、底线_来建立一个分隔线，行内不能有其他东西，你也可以在星号或减号蹭插入空格。下面这种写法都可以建立分隔线： </p>
+<pre><code class="text">***
+******
+---
+------</code></pre>
+<p><u>效果如下：</u></p>
+<hr>
+<hr>
+<hr>
+<h2 id="4-锚点"><a href="#4-锚点" class="headerlink" title="4.锚点"></a>4.锚点</h2><p>网页中，锚点其实就是页内超链接，也就是链接本文档内部的某些元素，实现当前页面中的跳转。比如我这里写下一个锚点，点击回到目录，就能跳转到目录。 在目录中点击这一节，就能跳过来。还有下一节的注脚。这些根本上都是用锚点来实现的。 </p>
+<pre><code>## 1.标题{#title}
+
+跳转到[标题](#title)</code></pre><p>效果如下：</p>
+<p>无法实现，甚至代码块里的内容出现在文章里,就会导致Error：expected end of comment, got end of file</p>
+<h2 id="5-引用"><a href="#5-引用" class="headerlink" title="5.引用"></a>5.引用</h2><p>在引用的文字前加&gt;即可。 引用也可以嵌套，如加两个&gt;&gt;三个&gt;&gt;&gt;<br>  n个…</p>
+<p>示例：</p>
+<pre><code class="ruby">&gt;这是引用的内容
+&gt;&gt;这是引用的内容
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;这是引用的内容</code></pre>
+<p><u>效果如下：</u></p>
+<blockquote>
+<p>这是引用的内容</p>
+<blockquote>
+<p>这是引用的内容</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>这是引用的内容</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="6-超链接"><a href="#6-超链接" class="headerlink" title="6.超链接"></a>6.超链接</h2><h3 id="6-1行内式"><a href="#6-1行内式" class="headerlink" title="6.1行内式"></a>6.1行内式</h3><ul>
+<li><p>[]里写链接文字，()里写链接地址, ()中的”“中可以为链接指定title属性，title属性可加可不加。title属性的效果是鼠标悬停在链接上会出现指定的 title文字。[链接文字](链接地址 “链接标题”)’这样的形式。链接地址与链接标题前有一个空格。</p>
+<pre><code> 1. `欢迎来到[避风港](https://soulflower.gitee.io)`
+ 2.  `欢迎来到[soulflower](https://soulflower.gitee.io &quot;避风港&quot;)`</code></pre></li>
+</ul>
+<p><u>效果如下：</u></p>
+<p>欢迎来到<a href="https://soulflower.gitee.io" target="_blank" rel="noopener">避风港</a></p>
+<p>欢迎来到<a href="https://soulflower.gitee.io/" title="soulflwoer" target="_blank" rel="noopener">soulflower</a></p>
+<h3 id="6-2自动链接"><a href="#6-2自动链接" class="headerlink" title="6.2自动链接"></a>6.2自动链接</h3><p>Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用&lt;&gt;包起来， Markdown 就会自动把它转成链接。一般网址的链接文字就和链接地址一样，例如： </p>
+<pre><code>&lt;https://soulflower.gitee.io&gt;
+&lt;theyyx@foxmail.com&gt; </code></pre><p><u>效果如下：</u></p>
+<p><a href="https://soulflower.gitee.io" target="_blank" rel="noopener">https://soulflower.gitee.io</a><br><a href="mailto:&#116;&#x68;&#x65;&#x79;&#x79;&#x78;&#64;&#102;&#111;&#x78;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;" target="_blank" rel="noopener">&#116;&#x68;&#x65;&#x79;&#x79;&#x78;&#64;&#102;&#111;&#x78;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a> </p>
+<h3 id="6-3脚注"><a href="#6-3脚注" class="headerlink" title="6.3脚注"></a>6.3脚注</h3><p>脚注是对文本的补充说明。</p>
+<p>Markdown脚注的格式如下：</p>
+<pre><code>[^要注明的文本]：</code></pre><p>效果如下：</p>
+<p>脚注<a href="这里是脚注">^1</a></p>
+<p>生成一个脚注2<a href="这里是**脚注2**的*内容*.">^foot</a>.</p>
 
   </article>
 
-  <div class="nexmoe-post-meta nexmoe-rainbow">
+  
     
-        <a class="nexmoefont icon-appstore-fill -link" href="/categories/小工具/">小工具</a>
-    
-    
-</div>
-
-  <div class="nexmoe-post-footer">
-    
-      
   <div class="nexmoe-post-copyright">
     <strong>本文作者：</strong>A_zao<br>
     <strong>本文链接：</strong><a href="http://yoursite.com/2019/09/30/Markdown语法整理/" title="http://yoursite.com/2019/09/30/Markdown语法整理/" target="_blank" rel="noopener">http://yoursite.com/2019/09/30/Markdown语法整理/</a><br>
@@ -214,7 +304,16 @@
   </div>
 
 
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
     
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/小工具/">小工具</a>
+    
+    
+</div>
+
+  <div class="nexmoe-post-footer">
     <section class="nexmoe-comment">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
 <div id="gitalk"></div>
@@ -236,13 +335,17 @@
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+<script>
+	hljs.initHighlightingOnLoad();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 
-    <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+ <script src="/js/app.js?v=1607432893749"></script>
 
-
-<script src="/js/app.js?v=1594542886741"></script>
   
 
 

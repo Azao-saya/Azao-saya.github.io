@@ -19,15 +19,15 @@
 <meta property="og:site_name" content="还在建设的避风港">
 <meta property="og:description" content="常规类型的格式化 String类的format()方法用于创建格式化的字符串以及连接多个字符串对象。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-08T11:08:38.687Z">
+<meta property="og:updated_time" content="2020-07-12T12:33:33.947Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JAVA字符串格式化-String.format()的使用">
 <meta name="twitter:description" content="常规类型的格式化 String类的format()方法用于创建格式化的字符串以及连接多个字符串对象。">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?v=233" crossorigin>
   
     <link rel="stylesheet" href="at.alicdn.com/t/font_1440167_ezdnzsotqc.css">
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1594542886687">-->
+  <link rel="stylesheet" href="/css/style.css?v=1607432893692">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -89,7 +89,14 @@
     <aside id="nexmoe-sidebar">
   
   <div class="nexmoe-widget-wrap">
-    <h3 class="nexmoe-widget-title">社交按钮</h3>
+    <div class="nexmoe-widget nexmoe-search">
+        <form id="search_form" action_e="https://cn.bing.com/search?q=site:soulflower.gitee.io" onsubmit="return search();">
+            <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
+        </form>
+    </div>
+</div>
+  
+  <div class="nexmoe-widget-wrap">
     <div class="nexmoe-widget nexmoe-social">
         <a class="mdui-ripple" href="https://space.bilibili.com/378156" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
             <i class="nexmoefont icon-bilibili"></i>
@@ -157,7 +164,7 @@
     <div class="nexmoe-copyright">
         &copy; 2020 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
     </div>
 </div><!-- .nexmoe-drawer -->
   </div>
@@ -173,8 +180,8 @@
   
   <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2019年10月02日</a>
-    <a><i class="nexmoefont icon-areachart"></i>798 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
+    <a><i class="nexmoefont icon-areachart"></i>985 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 4 分钟</a>
 </div>
 
   <div class="nexmoe-post-right">
@@ -182,7 +189,7 @@
       <div class="nexmoe-fixed">
         <div class="nexmoe-valign">
             <div class="nexmoe-toc">
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#常规类型的格式化"><span class="toc-number">1.</span> <span class="toc-text">常规类型的格式化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#输入内容"><span class="toc-number">1.1.</span> <span class="toc-text">输入内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#输出结果"><span class="toc-number">1.2.</span> <span class="toc-text">输出结果</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#搭配转换符的标志"><span class="toc-number">2.</span> <span class="toc-text">搭配转换符的标志</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#日期和事件字符串格式化"><span class="toc-number">3.</span> <span class="toc-text">日期和事件字符串格式化</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#常规类型的格式化"><span class="toc-number">1.</span> <span class="toc-text">常规类型的格式化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#搭配转换符的标志"><span class="toc-number">2.</span> <span class="toc-text">搭配转换符的标志</span></a></li></ol>
             </div>
         </div>
       </div>
@@ -272,7 +279,8 @@
 <td align="center"></td>
 </tr>
 </tbody></table>
-<h2 id="输入内容"><a href="#输入内容" class="headerlink" title="输入内容"></a>输入内容</h2><pre><code>public static void main(String[] args) {  
+<p>输入内容:</p>
+<pre><code>public static void main(String[] args) {  
     String str=null;  
     str=String.format(&quot;Hi,%s&quot;, &quot;王力&quot;);  
     System.out.println(str);  
@@ -289,7 +297,8 @@
     System.out.printf(&quot;上面价格的指数和浮点数结果的长度较短的是：%g %n&quot;, 50*0.85);  
     System.out.printf(&quot;上面的折扣是%d%% %n&quot;, 85);  
     System.out.printf(&quot;字母A的散列码是：%h %n&quot;, &#39;A&#39;);  
-}</code></pre><h2 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h2><pre><code>Hi,王力  
+}</code></pre><p>输出结果:</p>
+<pre><code>Hi,王力  
 Hi,王南:王力.王张  
 字母a的大写是：A   
 3&gt;7的结果是：false   
@@ -301,22 +310,98 @@ Hi,王南:王力.王张
 上面价格的指数表示：4.250000e+01   
 上面价格的指数和浮点数结果的长度较短的是：42.5000   
 上面的折扣是85%   
-字母A的散列码是：41</code></pre><h1 id="搭配转换符的标志"><a href="#搭配转换符的标志" class="headerlink" title="搭配转换符的标志"></a>搭配转换符的标志</h1><h1 id="日期和事件字符串格式化"><a href="#日期和事件字符串格式化" class="headerlink" title="日期和事件字符串格式化"></a>日期和事件字符串格式化</h1><blockquote>
-<p>在程序界面中经常需要显示时间和日期，但是其显示的 格式经常不尽人意，需要编写大量的代码经过各种算法才得到理想的日期与时间格式。字符串格式中还有%tx转换符没有详细介绍，它是专门用来格式化日期和时 间的。%tx转换符中的x代表另外的处理日期和时间格式的转换符，它们的组合能够将日期和时间格式化成多种格式。<br>常见日期和时间组合的格式，如图所示。</p>
-</blockquote>
+字母A的散列码是：41</code></pre><h1 id="搭配转换符的标志"><a href="#搭配转换符的标志" class="headerlink" title="搭配转换符的标志"></a>搭配转换符的标志</h1><table>
+<thead>
+<tr>
+<th align="center"><strong>标志</strong></th>
+<th align="center"><strong>说明</strong></th>
+<th align="center"><strong>示例</strong></th>
+<th><strong>结果</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">+</td>
+<td align="center">为正数或者负数添加符号</td>
+<td align="center">（”%+d”,15）</td>
+<td>+15</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">左对齐</td>
+<td align="center">(“%-5d”,15)</td>
+<td>|15 |</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">数字前面补0</td>
+<td align="center">(“%04d”,99)</td>
+<td>0099</td>
+</tr>
+<tr>
+<td align="center">空格</td>
+<td align="center">在整数之前添加指定数量的空格</td>
+<td align="center">（”%04d”,99</td>
+<td>| 99|</td>
+</tr>
+<tr>
+<td align="center">,</td>
+<td align="center">以“,”对数字分组</td>
+<td align="center">(“%,f”,9999.99)</td>
+<td>9,999.990000</td>
+</tr>
+<tr>
+<td align="center">(</td>
+<td align="center">使用括号包含负数</td>
+<td align="center">(“%(f”,-99.99)</td>
+<td>(99.990000)</td>
+</tr>
+<tr>
+<td align="center">#</td>
+<td align="center">如果是浮点数则包含小数点，如果是16进制或8进制则添加0x或0</td>
+<td align="center">(“%#x”,99”)<br>(%#o”,99)</td>
+<td>0x63<br>0143</td>
+</tr>
+<tr>
+<td align="center">&lt;</td>
+<td align="center">格式化前一个转换符所描述的参数</td>
+<td align="center">(“%f和%&lt;3.2f”,99.45)</td>
+<td>99.450000和99.45</td>
+</tr>
+<tr>
+<td align="center">$</td>
+<td align="center">被格式化的参数索引</td>
+<td align="center">(“%1$d,%2$s”,99,”abc”)</td>
+<td>99,abc</td>
+</tr>
+</tbody></table>
+<p>输入内容:</p>
+<pre><code>public static void main(String[] args) {  
+    String str=null;  
+    //$使用  
+    str=String.format(&quot;格式参数$的使用：%1$d,%2$s&quot;, 99,&quot;abc&quot;);             
+    System.out.println(str);                       
+    //+使用  
+    System.out.printf(&quot;显示正负数的符号：%+d与%d%n&quot;, 99,-99);  
+    //补O使用  
+    System.out.printf(&quot;最牛的编号是：%03d%n&quot;, 7);  
+    //空格使用  
+    System.out.printf(&quot;Tab键的效果是：% 8d%n&quot;, 7);  
+    //.使用  
+    System.out.printf(&quot;整数分组的效果是：%,d%n&quot;, 9989997);  
+    //空格和小数点后面个数  
+    System.out.printf(&quot;一本书的价格是：% 50.5f元%n&quot;, 49.8);  
+}  </code></pre><p>输出内容:</p>
+<pre><code>格式参数$的使用：99,abc  
+显示正负数的符号：+99与-99  
+最牛的编号是：007  
+Tab键的效果是：       7  
+整数分组的效果是：9,989,997  
+一本书的价格是：      </code></pre><p>部分转载自：<a href="https://www.cnblogs.com/Dhouse/p/7776780.html" target="_blank" rel="noopener">https://www.cnblogs.com/Dhouse/p/7776780.html</a></p>
 
   </article>
 
-  <div class="nexmoe-post-meta nexmoe-rainbow">
+  
     
-        <a class="nexmoefont icon-appstore-fill -link" href="/categories/小工具/">小工具</a>
-    
-    
-</div>
-
-  <div class="nexmoe-post-footer">
-    
-      
   <div class="nexmoe-post-copyright">
     <strong>本文作者：</strong>A_zao<br>
     <strong>本文链接：</strong><a href="http://yoursite.com/2019/10/02/JAVA字符串格式化-String.format()的使用/" title="http://yoursite.com/2019/10/02/JAVA字符串格式化-String.format()的使用/" target="_blank" rel="noopener">http://yoursite.com/2019/10/02/JAVA字符串格式化-String.format()的使用/</a><br>
@@ -326,7 +411,16 @@ Hi,王南:王力.王张
   </div>
 
 
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
     
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/小工具/">小工具</a>
+    
+    
+</div>
+
+  <div class="nexmoe-post-footer">
     <section class="nexmoe-comment">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
 <div id="gitalk"></div>
@@ -348,13 +442,17 @@ Hi,王南:王力.王张
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+<script>
+	hljs.initHighlightingOnLoad();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 
-    <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+ <script src="/js/app.js?v=1607432893696"></script>
 
-
-<script src="/js/app.js?v=1594542886691"></script>
   
 
 

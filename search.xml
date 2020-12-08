@@ -503,411 +503,7 @@ class Node{
       </categories>
   </entry>
   <entry>
-    <title>TRPG永夜后日的谈模组（粪作）</title>
-    <url>/2019/12/05/%E4%BC%A0%E9%A2%82%E4%B9%8B%E7%89%A9%E6%A8%A1%E7%BB%84/</url>
-    <content><![CDATA[<h1 id="别册的受赞颂者"><a href="#别册的受赞颂者" class="headerlink" title="别册的受赞颂者"></a><strong>别册的受赞颂者</strong></h1><h2 id="故事背景"><a href="#故事背景" class="headerlink" title="故事背景"></a>故事背景</h2><p>推完传颂之物虚伪的假面和二人的白皇之后，紧接着又补了一代的动画。那种怆然若失的感觉还是一直萦绕着我，想再做点什么于是便有了这个。<a id="more"></a></p>
-<p>本模组为魔改的传颂之物世界观，强行的使用了永夜后日谈NECHRONICA战斗设定和规则（想了解的话萌娘百科很详细的记录了），但两个作品的世界观有很多相近的地方，勉强能够自圆其说。</p>
-<p><del>开局PC们roll点选出一个人戴着假面(亚库尔卡)，其余PC均为亚人。</del></p>
-<p><del>假面作为一个部件不可卸除以及不会被破坏，可以在战斗中抵挡一点伤害，战斗胜利后自动修复。</del></p>
-<p><del>假面可使PC像永夜后日谈的人偶一样战斗，只要有一个部件留下就可以继续战斗。并且在战斗后提供全体的修复部件的功能。</del></p>
-<p><del>亚人在没有取得假面的时候受到致命伤会停止行动，可在战斗结束后修复。</del></p>
-<p>实际测试之后修改</p>
-<p>这个设定还是删除了为好，永夜后日谈的战斗方式太过异质，实际跑团中发现如果使用这个设定容易太过于重视假面之人了，导致其他PL体验很差。不过实际上想使用的这个模组话需要全部推倒重做了。但姑且还是记录下来，等啥时候我传颂戒断反应发作了再写写看。</p>
-<p>背景设定改为通过对研究“祟”大和全境的亚人都获得了与之类似的特性，在完全解体前都可以继续行动，全身都能当作大脑一样思考。如果打算去别的国家战斗的话也可以加上，过了数百年没有这种特性的亚人都被大和亚人淘汰了。</p>
-<p>（不得不说传颂之物和永夜后日谈真的太像了，但是这首先是个跑团要先考虑玩家PL的体验，包括永夜的世界观也不是抓着玩家硬灌进去的。在故事中自然而然的显现才好，也不需要全部说清楚。会导致剧情发展生硬的话也大可魔改原设或者直接删除，一切顺势而为。）</p>
-<h2 id="故事开端"><a href="#故事开端" class="headerlink" title="故事开端"></a>故事开端</h2><p> PC们在一个阴暗的遗迹中的冷冻舱里苏醒，叫醒他们的是久远。 </p>
-<p>久远设定性格活泼好奇聪明但不善于算数，喜欢探索。</p>
-<p>本次便是久远在误打误撞中发现了遗迹中尚未被探索过隐藏房间，在完全不了解房间控制面板的操作方法下，幸运的开启了房间并激活里其中的设施。</p>
-<hr>
-<p><strong>导入：</strong></p>
-<p>推荐使用bgm：<a href="http://music.163.com/song?id=408440261&amp;userid=41282089" target="_blank" rel="noopener">http://music.163.com/song?id=408440261&amp;userid=41282089</a></p>
-<p> ……不知过去了多久……就像经过了千百年……终于散碎的意识开始一点一滴聚拢……你感到四肢的实感在慢慢的形成，同时像宿醉一样的头痛也涌向了你的大脑…….渐渐的你听到了他人的声音……似是在呼唤着自己……虽然不适感觉仍没有消除，但你知道自己已经准备好醒来了。</p>
-<p><strong>初始房间基础描述（这段在玩家融入气氛之后直接给）</strong>：</p>
-<p>房间里只提供了最低限度的照明，目视里的大多数东西都只是朦胧的展示出它们的轮廓，但你们仍能感觉到所处空间的有的科技感以及它的宽阔。</p>
-<p>身旁是一整列靠着墙边冷冻舱，除了与你醒来时一同开启的，也有数量不少的依然封闭着的舱门。</p>
-<p>你们身上仅有一件写着编号淡蓝的像是病号服的长袍，除此之外没有携带任何东西。</p>
-<blockquote>
-<p>主动调查房间给出的信息</p>
-<ul>
-<li>​    若总成功数为0</li>
-</ul>
-<p>你们摸黑找了存放武器装备的装置，打开后应该可以恢复角色的武装。虽然设有密码，但似乎是考虑到了应急的状况，装置的外壁使用了容易被打破的材质。</p>
-<ul>
-<li>​    若总成功数为1</li>
-</ul>
-<p>你们摸黑找了存放武器装备的装置，打开后应该可以恢复角色的武装。虽然设有密码，但似乎是考虑到了应急的状况，装置的外壁使用了容易被打破的材质。但使用这个的主人看起来记性并不是很好，写着密码的纸条就放在旁边。</p>
-<ul>
-<li><p>​    若总成功数2+</p>
-<p>你们找到了一个看上去不同寻常的面板，久远认出了上面显示的是神代文字（指远古人类使用的文字），但自己并没有办法阅读。</p>
-<p>（pc在调查面板后会有提示音说“受认证用户，已为您开放本设施内所有权限1的功能”，能使用的功能为 开启主要照明，打开武器库，自由的进出房间）</p>
-</li>
-</ul>
-</blockquote>
-<p><strong>久远会干什么：</strong></p>
-<ul>
-<li><p>久远指出外面天气很冷，pc现有的衣服不够御寒，表示自己在这里找到了一些衣服让pc恢复设定好的着装，如果设定衣物太单薄的话也可以更换。</p>
-</li>
-<li><p>久远会对因为自己一时好奇而唤醒pc表示抱歉，在这样一个陌生的时代醒了可能并不是pc想要的。</p>
-</li>
-</ul>
-<p>若pc在对话中出现“开灯”两字会打开房间里的主要照明，以及使用面板打开主要照明或者pc停留了太久。</p>
-<p>会进入下一阶段：随着一连串嗡鸣声响起，房间内充满了苍白的光线。你们发现这里与你们一同苏醒的不只有你们自己。还有各种体型巨大的凶猛野兽，并发出不详的低声嘶吼声。你们虽然被这突如其来的画面吓了一跳，但仔细观察后发现关着它们的笼子非常结实，至少绝不是一时半刻可以冲破的。正当你们松了一口气的时候，却又感觉到这些野兽并不是在戒备着自己，甚至都没有把脸朝向这里。在你视线的死角里有着更为恐怖的东西存在。</p>
-<p>推荐使用bgm：<a href="http://music.163.com/song?id=442562479&amp;userid=41282089" target="_blank" rel="noopener">http://music.163.com/song?id=442562479&amp;userid=41282089</a></p>
-<p>阴影里涌出了大量酷似史莱姆的生物，扑向了看似坚固的笼子，外侧的金属以肉眼可见的速度在被溶解。无处可逃的野兽像婴儿一样被残杀。同时也有一些史莱姆聚合成了人的头颅的样子并向你们这里靠近着，它张开着夸张的大口，用着人精神无法负担的诅咒一样的声调，似是在讲述着自己的悲苦。</p>
-<p>祟的特性是绝对不会死亡，不管烧、切、打、都会马上复活，不管怎么做都无法消灭，最多只能彻底打到它离开、或者用巨大声音或光亮来驱赶。 </p>
-<p>如此pc必须逃跑，有PC逃跑失败的话。久远则会使用闪光弹击退祟，但失败的pc增加一点狂气和破坏一个部件。</p>
-<p>逃离后给出<strong>业障karma：前往帝都</strong></p>
-<p>久远表示附近不远就有集落，可以让pc去此暂避。</p>
-<p>这次原本打算在村庄里也设定一些剧情的。但除了旅店村长屋和水车再也想不出别的东西了。也想不出这里该怎么设置合适的交互。</p>
-<p>所以设定为pc们靠近村庄后，发现右近在指挥一队人把货物装上马车。准备把货送往帝都</p>
-<p>右近对pc们保有好感很容易就能说服他带着PC们一起前往帝都。如果PC放弃了通过右近前往帝都的话，可以通过在村庄里劳动后获得报酬租借马前往帝都。</p>
-<p>最后不管用什么手段前往帝都，一定会遇到强盗的狙击，强制进入战斗单元。</p>
-<p>战斗单元<strong>业障karma：</strong></p>
-<ul>
-<li>二轮内取得胜利</li>
-<li>放跑濡鵙</li>
-</ul>
-<p><strong>舞台效果：</strong></p>
-<ul>
-<li>战斗中敌方可在奈落区域逃跑</li>
-</ul>
-<p><strong>胜利条件：</strong></p>
-<ul>
-<li>场上全所有敌方单位完全解体</li>
-</ul>
-<p>濡鵙攻击手段单一，加上没防御手段极其脆弱。破坏手臂之后几乎没有任何威胁。所以这场战斗是高恶意值的福利战斗。濡雅在己方人员战死的情况下，会尝试逃跑，撤退时机也可自行定夺。总之这个角色并不会轻易死去。但又不适合增加防御手段，可以更改部件强化韧命纸老虎的设定。</p>
-<p>战斗中途会出现大量军团奇奇利，需要设置合理的预警提示他们的到来。让奇奇利的加入更顺理成章一点，可以加入更强大的恶怖巨型奇奇利，并让怪物阵营存在自相残杀的设定。不如说就应该这样设定，但是我偷懒了。</p>
-<table>
-<thead>
-<tr>
-<th>射手</th>
-<th>类型：恶怖</th>
-<th>恶意：4</th>
-<th>最大行动值：8</th>
-<th>部件数：8</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>长弓</td>
-<td>行动</td>
-<td>2费</td>
-<td>2~3</td>
-<td>射击攻击1，攻击判定+1</td>
-</tr>
-<tr>
-<td>脚骨</td>
-<td>行动</td>
-<td>3费</td>
-<td>自身</td>
-<td>移动1</td>
-</tr>
-<tr>
-<td>肩膀</td>
-<td>行动</td>
-<td>4费</td>
-<td>自身</td>
-<td>移动1</td>
-</tr>
-<tr>
-<td>瞄准</td>
-<td>裁判</td>
-<td>0</td>
-<td>自身</td>
-<td>支援2</td>
-</tr>
-<tr>
-<td>脑浆</td>
-<td>常时</td>
-<td>无</td>
-<td>自身</td>
-<td>最大行动值+2</td>
-</tr>
-<tr>
-<td>死亡之手</td>
-<td>即时</td>
-<td>0</td>
-<td>自身</td>
-<td>任意一个攻击行为当成即时使用</td>
-</tr>
-<tr>
-<td>内脏</td>
-<td>常时</td>
-<td>无</td>
-<td>自身</td>
-<td>无</td>
-</tr>
-<tr>
-<td>内脏</td>
-<td>常时</td>
-<td>无</td>
-<td>自身</td>
-<td>无</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>落败武者</th>
-<th>类型：恶怖</th>
-<th>恶意：8</th>
-<th>最大行动值：13</th>
-<th>部件数：10</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>名刀</td>
-<td>行动</td>
-<td>2</td>
-<td>0</td>
-<td>白刃攻击2+切断，攻击判定骰值+1</td>
-</tr>
-<tr>
-<td>脚骨</td>
-<td>行动</td>
-<td>3</td>
-<td>自身</td>
-<td>移动1</td>
-</tr>
-<tr>
-<td>甲胄</td>
-<td>裁定</td>
-<td>0</td>
-<td>自身</td>
-<td>防御1</td>
-</tr>
-<tr>
-<td>战斗直觉</td>
-<td>常时</td>
-<td>无</td>
-<td>自身</td>
-<td>白刃攻击动作的攻击判定骰值+1</td>
-</tr>
-<tr>
-<td>肾上腺素</td>
-<td>常时</td>
-<td>无</td>
-<td>自身</td>
-<td>最大行动值+1</td>
-</tr>
-<tr>
-<td>肾上腺素</td>
-<td>常时</td>
-<td>无</td>
-<td>自身</td>
-<td>最大行动值+1</td>
-</tr>
-<tr>
-<td>心脏</td>
-<td>常时</td>
-<td>无</td>
-<td>自身</td>
-<td>最大行动值+1</td>
-</tr>
-<tr>
-<td>内脏</td>
-<td>常时</td>
-<td>无</td>
-<td>自身</td>
-<td>无</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>濡鵙</th>
-<th>类型：仆从</th>
-<th>恶意：11.5</th>
-<th>最大行动值：11</th>
-<th>部件数：5/4/6/3</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>头</td>
-<td>大脑</td>
-<td>《常时／无／自身》最大行动值 ＋2</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>头</td>
-<td>眼球</td>
-<td>《常时／无／自身》最大行动值 ＋1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>头</td>
-<td>功夫</td>
-<td>《常时／无／自身》最大行动值 ＋1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>头</td>
-<td>牙齿</td>
-<td>《行动／2／0》肉搏攻击 1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>头</td>
-<td>死 人 指 挥</td>
-<td>《裁定／0／0～1》支援 2，不能 对自身使用</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>臂</td>
-<td>拳头</td>
-<td>行动／2／0》肉搏攻击 1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>臂</td>
-<td>肩膀</td>
-<td>《行动／4／自身》移动 1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>臂</td>
-<td>手腕</td>
-<td>《裁定／1／0》支援 1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>臂</td>
-<td>长斧</td>
-<td>《行动／2／0》白刃攻击 3</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>躯</td>
-<td>突进</td>
-<td>即时/1/效果参照 只能对自身的移动动作使用。移动成功的话， 从移动前或移动后的区域中选择 1 个目标，肉 搏攻击 3。</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>躯</td>
-<td>脊骨</td>
-<td>《行动／1／自身》下一刻所使 用的 1 个动作消费－1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>躯</td>
-<td>庇护</td>
-<td>《伤害／0／0～1》代替目标承 受伤害，1 轮之内可以无限使用</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>躯</td>
-<td>心脏</td>
-<td>《常时／无／自身》最大行动值 ＋1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>躯</td>
-<td>内脏</td>
-<td>《常时／无／无》无</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>躯</td>
-<td>内脏</td>
-<td>《常时／无／无》无</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>足</td>
-<td>腿骨</td>
-<td>《行动／3／自身》移动 1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>足</td>
-<td>腿骨</td>
-<td>《行动／3／自身》移动 1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>足</td>
-<td>脚掌</td>
-<td>《裁定／1／0》妨碍 1</td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th><strong>奇奇利</strong></th>
-<th>恶意0.2</th>
-<th>最大行动值：8</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>钳击</td>
-<td>《行动／2／0》肉搏攻击 2＋连击 [同区域数目÷10]（舍余）</td>
-<td></td>
-</tr>
-<tr>
-<td>移动</td>
-<td>《行动／3／自身》移动 1</td>
-<td></td>
-</tr>
-<tr>
-<td>拥聚</td>
-<td>《即时／3／0》移动妨碍 1</td>
-<td></td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>总恶意47.5</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>炼狱</td>
-<td>濡鵙<em>1，落败武者</em>1</td>
-<td></td>
-</tr>
-<tr>
-<td>地狱</td>
-<td>射手*2</td>
-<td></td>
-</tr>
-<tr>
-<td>奈落</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>出现死亡之后，在剧情中稍微提及异常的产生。2刻之后，在奈落和乐园出现25只奇奇利</td>
-<td>奇奇利50</td>
-<td></td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>二次元の胡话</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>B1095-解码PAT准考证</title>
+    <title>B1095-解码PAT准考证（目前归档和分类都存在问题）</title>
     <url>/2019/12/03/B1095-%E8%A7%A3%E7%A0%81PAT%E5%87%86%E8%80%83%E8%AF%81/</url>
     <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>PAT 准考证号由 4 部分组成：</p>
 <ul>
@@ -2172,147 +1768,6 @@ public class PAT_B1082 {
       </categories>
   </entry>
   <entry>
-    <title>B1080-MOOC期终成绩</title>
-    <url>/2019/12/02/B1080-MOOC%E6%9C%9F%E7%BB%88%E6%88%90%E7%BB%A9/</url>
-    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>对于在中国大学MOOC（<a href="http://www.icourse163.org/" target="_blank" rel="noopener">http://www.icourse163.org/</a> ）学习“数据结构”课程的学生，想要获得一张合格证书，必须首先获得不少于200分的在线编程作业分，然后总评获得不少于60分（满分100）。总评成绩的计算公式为 <em>G</em>=(<em>G<strong>m</strong>i<em>d</em>−<em>t</em>e<em>r</em>m<em>×40%+</em>G<strong>f</strong>i<strong>n</strong>al<em>×60%)，如果 <em>G</em></em>m<strong>i</strong>d<em>−</em>t<strong>e</strong>r**m</em>&gt;<em>G<strong>f</strong>i<strong>n</strong>a*<em>l</em>；否则总评 *G</em> 就是 <em>G*</em>f<strong>i</strong>n<strong>a*l。这里 *G</strong>m<strong>i<em>d</em>−*t</strong>e<strong>r</strong>m和G<strong>f</strong>i<strong>n</strong>a**l 分别为学生的期中和期末成绩。</p>
-<p>现在的问题是，每次考试都产生一张独立的成绩单。本题就请你编写程序，把不同的成绩单合为一张。</p>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p> 输入在第一行给出3个整数，分别是 P（做了在线编程作业的学生数）、M（参加了期中考试的学生数）、N（参加了期末考试的学生数）。每个数都不超过10000。</p>
-<p> 接下来有三块输入。第一块包含 P 个在线编程成绩 Gp；</p>
-<p> 第二块包含 M 个期中考试成绩 Gmid−term；</p>
-<p> 第三块包含 N 个期末考试成绩 Gfinal。</p>
-<p> 每个成绩占一行，格式为：学生学号 分数。其中学生学号为不超过20个字符的英文字母和数字；分数是非负整数（编程总分最高为900分，期中和期末的最高分为100分）。 </p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>打印出获得合格证书的学生名单。每个学生占一行，格式为：</p>
-<p><code>学生学号 Gp Gmid−term Gfinal G</code></p>
-<p>如果有的成绩不存在（例如某人没参加期中考试），则在相应的位置输出“−1”。输出顺序为按照总评分数（四舍五入精确到整数）递减。若有并列，则按学号递增。题目保证学号没有重复，且至少存在1个合格的学生。</p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
-<p>6 6 7<br>01234 880<br>a1903 199<br>ydjh2 200<br>wehu8 300<br>dx86w 220<br>missing 400<br>ydhfu77 99<br>wehu8 55<br>ydjh2 98<br>dx86w 88<br>a1903 86<br>01234 39<br>ydhfu77 88<br>a1903 66<br>01234 58<br>wehu8 84<br>ydjh2 82<br>missing 99<br>dx86w 81</p>
-</blockquote>
-<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
-<p>missing 400 -1 99 99<br>ydjh2 200 98 82 88<br>dx86w 220 88 81 84<br>wehu8 300 55 84 84</p>
-</blockquote>
-<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li>这题硬做的，没啥思路。</li>
-</ul>
-<hr>
-<hr>
-<pre><code>import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.*;
-/**
- * 最后一个测试点超时，又是我最喜欢的再做一题天亮环节。
- * 哎我的认知里必须要用构造体，但是到底要怎么样才能少传参数。
- * 我试过虽然传入参数但不用只对需要的参数使用this，但结果是别的全部初始化了
- * 结果就是大量的重复代码，不过超时应该不是因为这个
- * 听到每个数都不超过10000心里就有点逼数了
- */
-public class PAT_B1080 {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String[] temp = br.readLine().split(&quot; &quot;);
-        int p = Integer.parseInt(temp[0]);
-        int m = Integer.parseInt(temp[1]);
-        int n = Integer.parseInt(temp[2]);
-        Map&lt;String,Score&gt; map = new HashMap&lt;String,Score&gt;();
-        for (int i = 0; i &lt; p; i++) {
-            String[] temp2 = br.readLine().split(&quot; &quot;);
-            int grade = Integer.parseInt(temp2[1]);
-            if (grade &lt; 200){
-                continue;
-            }
-            map.put(temp2[0],new Score(grade));
-        }
-
-        for (int i = 0; i &lt;m ; i++) {
-            String[] temp3 = br.readLine().split(&quot; &quot;);
-            if (map.containsKey(temp3[0])){
-                int grade2 = Integer.parseInt(temp3[1]);
-                int temp3_1 = map.get(temp3[0]).p_score;
-                map.put(temp3[0],new Score(temp3_1,grade2));
-            }
-        }
-
-        for (int i = 0; i &lt;n ; i++) {
-            String[] temp4 = br.readLine().split(&quot; &quot;);
-            if (map.containsKey(temp4[0])){
-                int grade3 = Integer.parseInt(temp4[1]);
-                int temp4_1 = map.get(temp4[0]).p_score;
-                int temp4_2 = map.get(temp4[0]).m_score;
-                map.put(temp4[0], new Score(temp4_1,temp4_2,grade3));
-            }
-        }
-
-        for (Map.Entry&lt;String, Score&gt; entry : map.entrySet()) {
-            int gp = entry.getValue().p_score;
-            double gm = entry.getValue().m_score;
-            double gf = entry.getValue().f_score;
-            if (gm &gt; gf){
-                int total = (int)(gm*0.4+gf*0.6+0.5);
-                map.put(entry.getKey(),new Score(gp,(int)gm,(int)gf,total));
-                continue;
-            }
-            map.put(entry.getKey(),new Score(gp,(int)gm,(int)gf,(int)gf));
-        }
-
-
-        List&lt;Map.Entry&lt;String, Score&gt;&gt; list = new ArrayList&lt;Map.Entry&lt;String, Score&gt;&gt;(map.entrySet());
-        Collections.sort(list, new Comparator&lt;Map.Entry&lt;String, Score&gt;&gt;() {
-            @Override
-            public int compare(Map.Entry&lt;String, Score&gt; o1, Map.Entry&lt;String, Score&gt; o2) {
-                if (o2.getValue().t_score-o1.getValue().t_score ==0){
-                    return o1.getKey().compareTo(o2.getKey());
-                }
-                return o2.getValue().t_score-o1.getValue().t_score;
-            }
-        });
-
-        for(Map.Entry&lt;String,Score&gt; mapping:list){
-            if (mapping.getValue().m_score==0 &amp;&amp; mapping.getValue().t_score&gt;=60){
-                System.out.println(mapping.getKey()+&quot; &quot;+mapping.getValue().p_score+&quot; -1 &quot;+mapping.getValue().f_score+&quot; &quot;+mapping.getValue().t_score);
-            }else if(mapping.getValue().f_score==0 &amp;&amp;mapping.getValue().t_score&gt;=60){
-                System.out.println(mapping.getKey()+&quot; &quot;+mapping.getValue().p_score+&quot; &quot;+mapping.getValue().m_score+&quot; -1&quot;+mapping.getValue().t_score);
-            }else if (mapping.getValue().t_score&gt;=60){
-                System.out.println(mapping.getKey()+&quot; &quot;+mapping.getValue().p_score+&quot; &quot;+mapping.getValue().m_score+&quot; &quot;+mapping.getValue().f_score+&quot; &quot;+mapping.getValue().t_score);
-            }
-        }
-    }
-}
-class Score{
-    int p_score;
-    int m_score ;
-    int f_score ;
-    int t_score ;
-    public Score(int p){
-        this.p_score = p;
-    }
-
-    public Score(int p, int m){
-        this.p_score = p;
-        this.m_score = m;
-    }
-
-    public Score(int p, int m, int f){
-        this.p_score = p;
-        this.m_score = m;
-        this.f_score = f;
-    }
-
-    public Score(int p, int m, int f, int t){
-        this.p_score = p;
-        this.m_score = m;
-        this.f_score = f;
-        this.t_score = t;
-    }
-}</code></pre>]]></content>
-      <categories>
-        <category>PAT练习</category>
-      </categories>
-  </entry>
-  <entry>
     <title>B1081-MOOC期终成绩</title>
     <url>/2019/12/02/B1081-MOOC%E6%9C%9F%E7%BB%88%E6%88%90%E7%BB%A9/</url>
     <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 本题要求你帮助某网站的用户注册模块写一个密码合法性检查的小功能。该网站要求用户设置的密码必须由不少于6个字符组成，并且只能有英文字母、数字和小数点 <code>.</code>，还必须既有字母也有数字。 </p>
@@ -2448,6 +1903,147 @@ public class PAT_B1079 {
 //        }
 //        System.out.println(rs);
 //    }
+}</code></pre>]]></content>
+      <categories>
+        <category>PAT练习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>B1080-MOOC期终成绩</title>
+    <url>/2019/12/02/B1080-MOOC%E6%9C%9F%E7%BB%88%E6%88%90%E7%BB%A9/</url>
+    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>对于在中国大学MOOC（<a href="http://www.icourse163.org/" target="_blank" rel="noopener">http://www.icourse163.org/</a> ）学习“数据结构”课程的学生，想要获得一张合格证书，必须首先获得不少于200分的在线编程作业分，然后总评获得不少于60分（满分100）。总评成绩的计算公式为 <em>G</em>=(<em>G<strong>m</strong>i<em>d</em>−<em>t</em>e<em>r</em>m<em>×40%+</em>G<strong>f</strong>i<strong>n</strong>al<em>×60%)，如果 <em>G</em></em>m<strong>i</strong>d<em>−</em>t<strong>e</strong>r**m</em>&gt;<em>G<strong>f</strong>i<strong>n</strong>a*<em>l</em>；否则总评 *G</em> 就是 <em>G*</em>f<strong>i</strong>n<strong>a*l。这里 *G</strong>m<strong>i<em>d</em>−*t</strong>e<strong>r</strong>m和G<strong>f</strong>i<strong>n</strong>a**l 分别为学生的期中和期末成绩。</p>
+<p>现在的问题是，每次考试都产生一张独立的成绩单。本题就请你编写程序，把不同的成绩单合为一张。</p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p> 输入在第一行给出3个整数，分别是 P（做了在线编程作业的学生数）、M（参加了期中考试的学生数）、N（参加了期末考试的学生数）。每个数都不超过10000。</p>
+<p> 接下来有三块输入。第一块包含 P 个在线编程成绩 Gp；</p>
+<p> 第二块包含 M 个期中考试成绩 Gmid−term；</p>
+<p> 第三块包含 N 个期末考试成绩 Gfinal。</p>
+<p> 每个成绩占一行，格式为：学生学号 分数。其中学生学号为不超过20个字符的英文字母和数字；分数是非负整数（编程总分最高为900分，期中和期末的最高分为100分）。 </p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p>打印出获得合格证书的学生名单。每个学生占一行，格式为：</p>
+<p><code>学生学号 Gp Gmid−term Gfinal G</code></p>
+<p>如果有的成绩不存在（例如某人没参加期中考试），则在相应的位置输出“−1”。输出顺序为按照总评分数（四舍五入精确到整数）递减。若有并列，则按学号递增。题目保证学号没有重复，且至少存在1个合格的学生。</p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
+<p>6 6 7<br>01234 880<br>a1903 199<br>ydjh2 200<br>wehu8 300<br>dx86w 220<br>missing 400<br>ydhfu77 99<br>wehu8 55<br>ydjh2 98<br>dx86w 88<br>a1903 86<br>01234 39<br>ydhfu77 88<br>a1903 66<br>01234 58<br>wehu8 84<br>ydjh2 82<br>missing 99<br>dx86w 81</p>
+</blockquote>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
+<p>missing 400 -1 99 99<br>ydjh2 200 98 82 88<br>dx86w 220 88 81 84<br>wehu8 300 55 84 84</p>
+</blockquote>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
+<li>这题硬做的，没啥思路。</li>
+</ul>
+<hr>
+<hr>
+<pre><code>import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.*;
+/**
+ * 最后一个测试点超时，又是我最喜欢的再做一题天亮环节。
+ * 哎我的认知里必须要用构造体，但是到底要怎么样才能少传参数。
+ * 我试过虽然传入参数但不用只对需要的参数使用this，但结果是别的全部初始化了
+ * 结果就是大量的重复代码，不过超时应该不是因为这个
+ * 听到每个数都不超过10000心里就有点逼数了
+ */
+public class PAT_B1080 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] temp = br.readLine().split(&quot; &quot;);
+        int p = Integer.parseInt(temp[0]);
+        int m = Integer.parseInt(temp[1]);
+        int n = Integer.parseInt(temp[2]);
+        Map&lt;String,Score&gt; map = new HashMap&lt;String,Score&gt;();
+        for (int i = 0; i &lt; p; i++) {
+            String[] temp2 = br.readLine().split(&quot; &quot;);
+            int grade = Integer.parseInt(temp2[1]);
+            if (grade &lt; 200){
+                continue;
+            }
+            map.put(temp2[0],new Score(grade));
+        }
+
+        for (int i = 0; i &lt;m ; i++) {
+            String[] temp3 = br.readLine().split(&quot; &quot;);
+            if (map.containsKey(temp3[0])){
+                int grade2 = Integer.parseInt(temp3[1]);
+                int temp3_1 = map.get(temp3[0]).p_score;
+                map.put(temp3[0],new Score(temp3_1,grade2));
+            }
+        }
+
+        for (int i = 0; i &lt;n ; i++) {
+            String[] temp4 = br.readLine().split(&quot; &quot;);
+            if (map.containsKey(temp4[0])){
+                int grade3 = Integer.parseInt(temp4[1]);
+                int temp4_1 = map.get(temp4[0]).p_score;
+                int temp4_2 = map.get(temp4[0]).m_score;
+                map.put(temp4[0], new Score(temp4_1,temp4_2,grade3));
+            }
+        }
+
+        for (Map.Entry&lt;String, Score&gt; entry : map.entrySet()) {
+            int gp = entry.getValue().p_score;
+            double gm = entry.getValue().m_score;
+            double gf = entry.getValue().f_score;
+            if (gm &gt; gf){
+                int total = (int)(gm*0.4+gf*0.6+0.5);
+                map.put(entry.getKey(),new Score(gp,(int)gm,(int)gf,total));
+                continue;
+            }
+            map.put(entry.getKey(),new Score(gp,(int)gm,(int)gf,(int)gf));
+        }
+
+
+        List&lt;Map.Entry&lt;String, Score&gt;&gt; list = new ArrayList&lt;Map.Entry&lt;String, Score&gt;&gt;(map.entrySet());
+        Collections.sort(list, new Comparator&lt;Map.Entry&lt;String, Score&gt;&gt;() {
+            @Override
+            public int compare(Map.Entry&lt;String, Score&gt; o1, Map.Entry&lt;String, Score&gt; o2) {
+                if (o2.getValue().t_score-o1.getValue().t_score ==0){
+                    return o1.getKey().compareTo(o2.getKey());
+                }
+                return o2.getValue().t_score-o1.getValue().t_score;
+            }
+        });
+
+        for(Map.Entry&lt;String,Score&gt; mapping:list){
+            if (mapping.getValue().m_score==0 &amp;&amp; mapping.getValue().t_score&gt;=60){
+                System.out.println(mapping.getKey()+&quot; &quot;+mapping.getValue().p_score+&quot; -1 &quot;+mapping.getValue().f_score+&quot; &quot;+mapping.getValue().t_score);
+            }else if(mapping.getValue().f_score==0 &amp;&amp;mapping.getValue().t_score&gt;=60){
+                System.out.println(mapping.getKey()+&quot; &quot;+mapping.getValue().p_score+&quot; &quot;+mapping.getValue().m_score+&quot; -1&quot;+mapping.getValue().t_score);
+            }else if (mapping.getValue().t_score&gt;=60){
+                System.out.println(mapping.getKey()+&quot; &quot;+mapping.getValue().p_score+&quot; &quot;+mapping.getValue().m_score+&quot; &quot;+mapping.getValue().f_score+&quot; &quot;+mapping.getValue().t_score);
+            }
+        }
+    }
+}
+class Score{
+    int p_score;
+    int m_score ;
+    int f_score ;
+    int t_score ;
+    public Score(int p){
+        this.p_score = p;
+    }
+
+    public Score(int p, int m){
+        this.p_score = p;
+        this.m_score = m;
+    }
+
+    public Score(int p, int m, int f){
+        this.p_score = p;
+        this.m_score = m;
+        this.f_score = f;
+    }
+
+    public Score(int p, int m, int f, int t){
+        this.p_score = p;
+        this.m_score = m;
+        this.f_score = f;
+        this.t_score = t;
+    }
 }</code></pre>]]></content>
       <categories>
         <category>PAT练习</category>
@@ -4199,6 +3795,410 @@ public class PAT_B1057 {
 }</code></pre>]]></content>
       <categories>
         <category>PAT练习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>TRPG永夜后日的谈模组（粪作）</title>
+    <url>/2019/11/05/%E4%BC%A0%E9%A2%82%E4%B9%8B%E7%89%A9%E6%A8%A1%E7%BB%84/</url>
+    <content><![CDATA[<h1 id="别册的受赞颂者"><a href="#别册的受赞颂者" class="headerlink" title="别册的受赞颂者"></a><strong>别册的受赞颂者</strong></h1><h2 id="故事背景"><a href="#故事背景" class="headerlink" title="故事背景"></a>故事背景</h2><p>推完传颂之物虚伪的假面和二人的白皇之后，紧接着又补了一代的动画。那种怆然若失的感觉还是一直萦绕着我，想再做点什么于是便有了这个。<a id="more"></a></p>
+<p>本模组为魔改的传颂之物世界观，强行的使用了永夜后日谈NECHRONICA战斗设定和规则（想了解的话萌娘百科很详细的记录了），但两个作品的世界观有很多相近的地方，勉强能够自圆其说。</p>
+<p><del>开局PC们roll点选出一个人戴着假面(亚库尔卡)，其余PC均为亚人。</del></p>
+<p><del>假面作为一个部件不可卸除以及不会被破坏，可以在战斗中抵挡一点伤害，战斗胜利后自动修复。</del></p>
+<p><del>假面可使PC像永夜后日谈的人偶一样战斗，只要有一个部件留下就可以继续战斗。并且在战斗后提供全体的修复部件的功能。</del></p>
+<p><del>亚人在没有取得假面的时候受到致命伤会停止行动，可在战斗结束后修复。</del></p>
+<p>实际测试之后修改</p>
+<p>这个设定还是删除了为好，永夜后日谈的战斗方式太过异质，实际跑团中发现如果使用这个设定容易太过于重视假面之人了，导致其他PL体验很差。不过实际上想使用的这个模组话需要全部推倒重做了。但姑且还是记录下来，等啥时候我传颂戒断反应发作了再写写看。</p>
+<p>背景设定改为通过对研究“祟”大和全境的亚人都获得了与之类似的特性，在完全解体前都可以继续行动，全身都能当作大脑一样思考。如果打算去别的国家战斗的话也可以加上，过了数百年没有这种特性的亚人都被大和亚人淘汰了。</p>
+<p>（不得不说传颂之物和永夜后日谈真的太像了，但是这首先是个跑团要先考虑玩家PL的体验，包括永夜的世界观也不是抓着玩家硬灌进去的。在故事中自然而然的显现才好，也不需要全部说清楚。会导致剧情发展生硬的话也大可魔改原设或者直接删除，一切顺势而为。）</p>
+<h2 id="故事开端"><a href="#故事开端" class="headerlink" title="故事开端"></a>故事开端</h2><p> PC们在一个阴暗的遗迹中的冷冻舱里苏醒，叫醒他们的是久远。 </p>
+<p>久远设定性格活泼好奇聪明但不善于算数，喜欢探索。</p>
+<p>本次便是久远在误打误撞中发现了遗迹中尚未被探索过隐藏房间，在完全不了解房间控制面板的操作方法下，幸运的开启了房间并激活里其中的设施。</p>
+<hr>
+<p><strong>导入：</strong></p>
+<p>推荐使用bgm：<a href="http://music.163.com/song?id=408440261&amp;userid=41282089" target="_blank" rel="noopener">http://music.163.com/song?id=408440261&amp;userid=41282089</a></p>
+<p> ……不知过去了多久……就像经过了千百年……终于散碎的意识开始一点一滴聚拢……你感到四肢的实感在慢慢的形成，同时像宿醉一样的头痛也涌向了你的大脑…….渐渐的你听到了他人的声音……似是在呼唤着自己……虽然不适感觉仍没有消除，但你知道自己已经准备好醒来了。</p>
+<p><strong>初始房间基础描述（这段在玩家融入气氛之后直接给）</strong>：</p>
+<p>房间里只提供了最低限度的照明，目视里的大多数东西都只是朦胧的展示出它们的轮廓，但你们仍能感觉到所处空间的有的科技感以及它的宽阔。</p>
+<p>身旁是一整列靠着墙边冷冻舱，除了与你醒来时一同开启的，也有数量不少的依然封闭着的舱门。</p>
+<p>你们身上仅有一件写着编号淡蓝的像是病号服的长袍，除此之外没有携带任何东西。</p>
+<blockquote>
+<p>主动调查房间给出的信息</p>
+<ul>
+<li>​    若总成功数为0</li>
+</ul>
+<p>你们摸黑找了存放武器装备的装置，打开后应该可以恢复角色的武装。虽然设有密码，但似乎是考虑到了应急的状况，装置的外壁使用了容易被打破的材质。</p>
+<ul>
+<li>​    若总成功数为1</li>
+</ul>
+<p>你们摸黑找了存放武器装备的装置，打开后应该可以恢复角色的武装。虽然设有密码，但似乎是考虑到了应急的状况，装置的外壁使用了容易被打破的材质。但使用这个的主人看起来记性并不是很好，写着密码的纸条就放在旁边。</p>
+<ul>
+<li><p>​    若总成功数2+</p>
+<p>你们找到了一个看上去不同寻常的面板，久远认出了上面显示的是神代文字（指远古人类使用的文字），但自己并没有办法阅读。</p>
+<p>（pc在调查面板后会有提示音说“受认证用户，已为您开放本设施内所有权限1的功能”，能使用的功能为 开启主要照明，打开武器库，自由的进出房间）</p>
+</li>
+</ul>
+</blockquote>
+<p><strong>久远会干什么：</strong></p>
+<ul>
+<li><p>久远指出外面天气很冷，pc现有的衣服不够御寒，表示自己在这里找到了一些衣服让pc恢复设定好的着装，如果设定衣物太单薄的话也可以更换。</p>
+</li>
+<li><p>久远会对因为自己一时好奇而唤醒pc表示抱歉，在这样一个陌生的时代醒了可能并不是pc想要的。</p>
+</li>
+</ul>
+<p>若pc在对话中出现“开灯”两字会打开房间里的主要照明，以及使用面板打开主要照明或者pc停留了太久。</p>
+<p>会进入下一阶段：随着一连串嗡鸣声响起，房间内充满了苍白的光线。你们发现这里与你们一同苏醒的不只有你们自己。还有各种体型巨大的凶猛野兽，并发出不详的低声嘶吼声。你们虽然被这突如其来的画面吓了一跳，但仔细观察后发现关着它们的笼子非常结实，至少绝不是一时半刻可以冲破的。正当你们松了一口气的时候，却又感觉到这些野兽并不是在戒备着自己，甚至都没有把脸朝向这里。在你视线的死角里有着更为恐怖的东西存在。</p>
+<p>推荐使用bgm：<a href="http://music.163.com/song?id=442562479&amp;userid=41282089" target="_blank" rel="noopener">http://music.163.com/song?id=442562479&amp;userid=41282089</a></p>
+<p>阴影里涌出了大量酷似史莱姆的生物，扑向了看似坚固的笼子，外侧的金属以肉眼可见的速度在被溶解。无处可逃的野兽像婴儿一样被残杀。同时也有一些史莱姆聚合成了人的头颅的样子并向你们这里靠近着，它张开着夸张的大口，用着人精神无法负担的诅咒一样的声调，似是在讲述着自己的悲苦。</p>
+<p>祟的特性是绝对不会死亡，不管烧、切、打、都会马上复活，不管怎么做都无法消灭，最多只能彻底打到它离开、或者用巨大声音或光亮来驱赶。 </p>
+<p>如此pc必须逃跑，有PC逃跑失败的话。久远则会使用闪光弹击退祟，但失败的pc增加一点狂气和破坏一个部件。</p>
+<p>逃离后给出<strong>业障karma：前往帝都</strong></p>
+<p>久远表示附近不远就有集落，可以让pc去此暂避。</p>
+<p>这次原本打算在村庄里也设定一些剧情的。但除了旅店村长屋和水车再也想不出别的东西了。也想不出这里该怎么设置合适的交互。</p>
+<p>所以设定为pc们靠近村庄后，发现右近在指挥一队人把货物装上马车。准备把货送往帝都</p>
+<p>右近对pc们保有好感很容易就能说服他带着PC们一起前往帝都。如果PC放弃了通过右近前往帝都的话，可以通过在村庄里劳动后获得报酬租借马前往帝都。</p>
+<p>最后不管用什么手段前往帝都，一定会遇到强盗的狙击，强制进入战斗单元。</p>
+<p>战斗单元<strong>业障karma：</strong></p>
+<ul>
+<li>二轮内取得胜利</li>
+<li>放跑濡鵙</li>
+</ul>
+<p><strong>舞台效果：</strong></p>
+<ul>
+<li>战斗中敌方可在奈落区域逃跑</li>
+</ul>
+<p><strong>胜利条件：</strong></p>
+<ul>
+<li>场上全所有敌方单位完全解体</li>
+</ul>
+<p>濡鵙攻击手段单一，加上没防御手段极其脆弱。破坏手臂之后几乎没有任何威胁。所以这场战斗是高恶意值的福利战斗。濡雅在己方人员战死的情况下，会尝试逃跑，撤退时机也可自行定夺。总之这个角色并不会轻易死去。但又不适合增加防御手段，可以更改部件强化韧命纸老虎的设定。</p>
+<p>战斗中途会出现大量军团奇奇利，需要设置合理的预警提示他们的到来。让奇奇利的加入更顺理成章一点，可以加入更强大的恶怖巨型奇奇利，并让怪物阵营存在自相残杀的设定。不如说就应该这样设定，但是我偷懒了。</p>
+<table>
+<thead>
+<tr>
+<th>射手</th>
+<th>类型：恶怖</th>
+<th>恶意：4</th>
+<th>最大行动值：8</th>
+<th>部件数：8</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>长弓</td>
+<td>行动</td>
+<td>2费</td>
+<td>2~3</td>
+<td>射击攻击1，攻击判定+1</td>
+</tr>
+<tr>
+<td>脚骨</td>
+<td>行动</td>
+<td>3费</td>
+<td>自身</td>
+<td>移动1</td>
+</tr>
+<tr>
+<td>肩膀</td>
+<td>行动</td>
+<td>4费</td>
+<td>自身</td>
+<td>移动1</td>
+</tr>
+<tr>
+<td>瞄准</td>
+<td>裁判</td>
+<td>0</td>
+<td>自身</td>
+<td>支援2</td>
+</tr>
+<tr>
+<td>脑浆</td>
+<td>常时</td>
+<td>无</td>
+<td>自身</td>
+<td>最大行动值+2</td>
+</tr>
+<tr>
+<td>死亡之手</td>
+<td>即时</td>
+<td>0</td>
+<td>自身</td>
+<td>任意一个攻击行为当成即时使用</td>
+</tr>
+<tr>
+<td>内脏</td>
+<td>常时</td>
+<td>无</td>
+<td>自身</td>
+<td>无</td>
+</tr>
+<tr>
+<td>内脏</td>
+<td>常时</td>
+<td>无</td>
+<td>自身</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>落败武者</th>
+<th>类型：恶怖</th>
+<th>恶意：8</th>
+<th>最大行动值：13</th>
+<th>部件数：10</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>名刀</td>
+<td>行动</td>
+<td>2</td>
+<td>0</td>
+<td>白刃攻击2+切断，攻击判定骰值+1</td>
+</tr>
+<tr>
+<td>脚骨</td>
+<td>行动</td>
+<td>3</td>
+<td>自身</td>
+<td>移动1</td>
+</tr>
+<tr>
+<td>甲胄</td>
+<td>裁定</td>
+<td>0</td>
+<td>自身</td>
+<td>防御1</td>
+</tr>
+<tr>
+<td>战斗直觉</td>
+<td>常时</td>
+<td>无</td>
+<td>自身</td>
+<td>白刃攻击动作的攻击判定骰值+1</td>
+</tr>
+<tr>
+<td>肾上腺素</td>
+<td>常时</td>
+<td>无</td>
+<td>自身</td>
+<td>最大行动值+1</td>
+</tr>
+<tr>
+<td>肾上腺素</td>
+<td>常时</td>
+<td>无</td>
+<td>自身</td>
+<td>最大行动值+1</td>
+</tr>
+<tr>
+<td>心脏</td>
+<td>常时</td>
+<td>无</td>
+<td>自身</td>
+<td>最大行动值+1</td>
+</tr>
+<tr>
+<td>内脏</td>
+<td>常时</td>
+<td>无</td>
+<td>自身</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>濡鵙</th>
+<th>类型：仆从</th>
+<th>恶意：11.5</th>
+<th>最大行动值：11</th>
+<th>部件数：5/4/6/3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>头</td>
+<td>大脑</td>
+<td>《常时／无／自身》最大行动值 ＋2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>头</td>
+<td>眼球</td>
+<td>《常时／无／自身》最大行动值 ＋1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>头</td>
+<td>功夫</td>
+<td>《常时／无／自身》最大行动值 ＋1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>头</td>
+<td>牙齿</td>
+<td>《行动／2／0》肉搏攻击 1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>头</td>
+<td>死 人 指 挥</td>
+<td>《裁定／0／0～1》支援 2，不能 对自身使用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>臂</td>
+<td>拳头</td>
+<td>行动／2／0》肉搏攻击 1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>臂</td>
+<td>肩膀</td>
+<td>《行动／4／自身》移动 1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>臂</td>
+<td>手腕</td>
+<td>《裁定／1／0》支援 1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>臂</td>
+<td>长斧</td>
+<td>《行动／2／0》白刃攻击 3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>躯</td>
+<td>突进</td>
+<td>即时/1/效果参照 只能对自身的移动动作使用。移动成功的话， 从移动前或移动后的区域中选择 1 个目标，肉 搏攻击 3。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>躯</td>
+<td>脊骨</td>
+<td>《行动／1／自身》下一刻所使 用的 1 个动作消费－1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>躯</td>
+<td>庇护</td>
+<td>《伤害／0／0～1》代替目标承 受伤害，1 轮之内可以无限使用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>躯</td>
+<td>心脏</td>
+<td>《常时／无／自身》最大行动值 ＋1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>躯</td>
+<td>内脏</td>
+<td>《常时／无／无》无</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>躯</td>
+<td>内脏</td>
+<td>《常时／无／无》无</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>足</td>
+<td>腿骨</td>
+<td>《行动／3／自身》移动 1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>足</td>
+<td>腿骨</td>
+<td>《行动／3／自身》移动 1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>足</td>
+<td>脚掌</td>
+<td>《裁定／1／0》妨碍 1</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th><strong>奇奇利</strong></th>
+<th>恶意0.2</th>
+<th>最大行动值：8</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>钳击</td>
+<td>《行动／2／0》肉搏攻击 2＋连击 [同区域数目÷10]（舍余）</td>
+<td></td>
+</tr>
+<tr>
+<td>移动</td>
+<td>《行动／3／自身》移动 1</td>
+<td></td>
+</tr>
+<tr>
+<td>拥聚</td>
+<td>《即时／3／0》移动妨碍 1</td>
+<td></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>总恶意47.5</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>炼狱</td>
+<td>濡鵙<em>1，落败武者</em>1</td>
+<td></td>
+</tr>
+<tr>
+<td>地狱</td>
+<td>射手*2</td>
+<td></td>
+</tr>
+<tr>
+<td>奈落</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>出现死亡之后，在剧情中稍微提及异常的产生。2刻之后，在奈落和乐园出现25只奇奇利</td>
+<td>奇奇利50</td>
+<td></td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>二次元の胡话</category>
       </categories>
   </entry>
   <entry>
@@ -7704,6 +7704,54 @@ public class Main {
       </categories>
   </entry>
   <entry>
+    <title>B1009-说反话</title>
+    <url>/2019/10/16/B1009-%20%E8%AF%B4%E5%8F%8D%E8%AF%9D/</url>
+    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 给定一句英语，要求你编写程序，将句中所有单词的顺序颠倒输出。 </p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p> 测试输入包含一个测试用例，在一行内给出总长度不超过 80 的字符串。字符串由若干单词和若干空格组成，其中单词是由英文字母（大小写有区分）组成的字符串，单词之间用 1 个空格分开，输入保证句子末尾没有多余的空格。 </p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p> 每个测试用例的输出占一行，输出倒序后的句子。 </p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
+<p>Hello World Here I Come</p>
+</blockquote>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
+<p>Come I Here World Hello</p>
+</blockquote>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
+<li>从数组末尾开始输出</li>
+<li>list.size()-i</li>
+</ul>
+<hr>
+<hr>
+<pre><code>import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
+public class PAT_B1009 {
+    public static void main(String[] args) throws IOException {
+        ArrayList&lt;String&gt; list = new ArrayList&lt;String&gt;();
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        String[] s = br.readLine().split(&quot; &quot;);
+        for (String s1 : s) {
+            list.add(s1);
+        }
+        for (int i = 1; i &lt;=list.size() ; i++) { //是要输出零索引的,size是指有多少元素比length来说会+1
+            System.out.print(list.get(list.size()- i));
+            if (i == list.size()){
+                break;
+            }
+            System.out.print(&quot; &quot;);
+        }
+    }
+}</code></pre>]]></content>
+      <categories>
+        <category>PAT练习</category>
+      </categories>
+  </entry>
+  <entry>
     <title>B1008- 数组元素循环右移问题</title>
     <url>/2019/10/16/B1008-%20%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0%E5%BE%AA%E7%8E%AF%E5%8F%B3%E7%A7%BB%E9%97%AE%E9%A2%98%20/</url>
     <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>  一个数组<em>A</em>中存有<em>N</em>（&gt;0）个整数，在不允许使用另外数组的前提下，将每个整数循环向右移<em>M</em>（≥0）个位置，即将<em>A</em>中的数据由（<em>A</em>0<em>A</em>1⋯<em>A*</em>N<em>−1）变换为（</em>A<strong>N<em>−</em>M<em>⋯</em>A</strong>N<em>−1</em>A<em>0</em>A<em>1⋯</em>A*<em>N</em>−<em>M</em>−1）（最后<em>M</em>个数循环移至最前面的<em>M</em>个位置）。如果需要考虑程序移动数据的次数尽量少，要如何设计移动的方法？</p>
@@ -7747,54 +7795,6 @@ public class PAT_B1008 {
         for (int i = 0; i &lt; m ; i++) {
             System.out.print(num[i]);
             if (i == m-1){
-                break;
-            }
-            System.out.print(&quot; &quot;);
-        }
-    }
-}</code></pre>]]></content>
-      <categories>
-        <category>PAT练习</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>B1009-说反话</title>
-    <url>/2019/10/16/B1009-%20%E8%AF%B4%E5%8F%8D%E8%AF%9D/</url>
-    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 给定一句英语，要求你编写程序，将句中所有单词的顺序颠倒输出。 </p>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p> 测试输入包含一个测试用例，在一行内给出总长度不超过 80 的字符串。字符串由若干单词和若干空格组成，其中单词是由英文字母（大小写有区分）组成的字符串，单词之间用 1 个空格分开，输入保证句子末尾没有多余的空格。 </p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p> 每个测试用例的输出占一行，输出倒序后的句子。 </p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
-<p>Hello World Here I Come</p>
-</blockquote>
-<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
-<p>Come I Here World Hello</p>
-</blockquote>
-<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li>从数组末尾开始输出</li>
-<li>list.size()-i</li>
-</ul>
-<hr>
-<hr>
-<pre><code>import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-
-public class PAT_B1009 {
-    public static void main(String[] args) throws IOException {
-        ArrayList&lt;String&gt; list = new ArrayList&lt;String&gt;();
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        String[] s = br.readLine().split(&quot; &quot;);
-        for (String s1 : s) {
-            list.add(s1);
-        }
-        for (int i = 1; i &lt;=list.size() ; i++) { //是要输出零索引的,size是指有多少元素比length来说会+1
-            System.out.print(list.get(list.size()- i));
-            if (i == list.size()){
                 break;
             }
             System.out.print(&quot; &quot;);
@@ -8081,8 +8081,8 @@ public class PAT_B1004 {
       </categories>
   </entry>
   <entry>
-    <title>B1003-我要通过！</title>
-    <url>/2019/10/08/B1003-%E6%88%91%E8%A6%81%E9%80%9A%E8%BF%87/</url>
+    <title>B1002-我要通过！</title>
+    <url>/2019/10/08/B1002-%E6%88%91%E8%A6%81%E9%80%9A%E8%BF%87/</url>
     <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><blockquote>
 <p>“<strong>答案正确</strong>”是自动判题系统给出的最令人欢喜的回复。本题属于 PAT 的“<strong>答案正确</strong>”大派送 —— 只要读入的字符串满足下列条件，系统就输出“<strong>答案正确</strong>”，否则输出“<strong>答案错误</strong>”。</p>
 <p>得到“<strong>答案正确</strong>”的条件是：</p>
@@ -8172,8 +8172,8 @@ public class PAT_B1003 {
       </categories>
   </entry>
   <entry>
-    <title>B1002-我要通过！</title>
-    <url>/2019/10/08/B1002-%E6%88%91%E8%A6%81%E9%80%9A%E8%BF%87/</url>
+    <title>B1003-我要通过！</title>
+    <url>/2019/10/08/B1003-%E6%88%91%E8%A6%81%E9%80%9A%E8%BF%87/</url>
     <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><blockquote>
 <p>“<strong>答案正确</strong>”是自动判题系统给出的最令人欢喜的回复。本题属于 PAT 的“<strong>答案正确</strong>”大派送 —— 只要读入的字符串满足下列条件，系统就输出“<strong>答案正确</strong>”，否则输出“<strong>答案错误</strong>”。</p>
 <p>得到“<strong>答案正确</strong>”的条件是：</p>
@@ -8470,7 +8470,8 @@ public class PAT_B1001 {
 <td align="center"></td>
 </tr>
 </tbody></table>
-<h2 id="输入内容"><a href="#输入内容" class="headerlink" title="输入内容"></a>输入内容</h2><pre><code>public static void main(String[] args) {  
+<p>输入内容:</p>
+<pre><code>public static void main(String[] args) {  
     String str=null;  
     str=String.format(&quot;Hi,%s&quot;, &quot;王力&quot;);  
     System.out.println(str);  
@@ -8487,7 +8488,8 @@ public class PAT_B1001 {
     System.out.printf(&quot;上面价格的指数和浮点数结果的长度较短的是：%g %n&quot;, 50*0.85);  
     System.out.printf(&quot;上面的折扣是%d%% %n&quot;, 85);  
     System.out.printf(&quot;字母A的散列码是：%h %n&quot;, &#39;A&#39;);  
-}</code></pre><h2 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h2><pre><code>Hi,王力  
+}</code></pre><p>输出结果:</p>
+<pre><code>Hi,王力  
 Hi,王南:王力.王张  
 字母a的大写是：A   
 3&gt;7的结果是：false   
@@ -8499,9 +8501,93 @@ Hi,王南:王力.王张
 上面价格的指数表示：4.250000e+01   
 上面价格的指数和浮点数结果的长度较短的是：42.5000   
 上面的折扣是85%   
-字母A的散列码是：41</code></pre><h1 id="搭配转换符的标志"><a href="#搭配转换符的标志" class="headerlink" title="搭配转换符的标志"></a>搭配转换符的标志</h1><h1 id="日期和事件字符串格式化"><a href="#日期和事件字符串格式化" class="headerlink" title="日期和事件字符串格式化"></a>日期和事件字符串格式化</h1><blockquote>
-<p>在程序界面中经常需要显示时间和日期，但是其显示的 格式经常不尽人意，需要编写大量的代码经过各种算法才得到理想的日期与时间格式。字符串格式中还有%tx转换符没有详细介绍，它是专门用来格式化日期和时 间的。%tx转换符中的x代表另外的处理日期和时间格式的转换符，它们的组合能够将日期和时间格式化成多种格式。<br>常见日期和时间组合的格式，如图所示。</p>
-</blockquote>
+字母A的散列码是：41</code></pre><h1 id="搭配转换符的标志"><a href="#搭配转换符的标志" class="headerlink" title="搭配转换符的标志"></a>搭配转换符的标志</h1><table>
+<thead>
+<tr>
+<th align="center"><strong>标志</strong></th>
+<th align="center"><strong>说明</strong></th>
+<th align="center"><strong>示例</strong></th>
+<th><strong>结果</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">+</td>
+<td align="center">为正数或者负数添加符号</td>
+<td align="center">（”%+d”,15）</td>
+<td>+15</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">左对齐</td>
+<td align="center">(“%-5d”,15)</td>
+<td>|15 |</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">数字前面补0</td>
+<td align="center">(“%04d”,99)</td>
+<td>0099</td>
+</tr>
+<tr>
+<td align="center">空格</td>
+<td align="center">在整数之前添加指定数量的空格</td>
+<td align="center">（”%04d”,99</td>
+<td>| 99|</td>
+</tr>
+<tr>
+<td align="center">,</td>
+<td align="center">以“,”对数字分组</td>
+<td align="center">(“%,f”,9999.99)</td>
+<td>9,999.990000</td>
+</tr>
+<tr>
+<td align="center">(</td>
+<td align="center">使用括号包含负数</td>
+<td align="center">(“%(f”,-99.99)</td>
+<td>(99.990000)</td>
+</tr>
+<tr>
+<td align="center">#</td>
+<td align="center">如果是浮点数则包含小数点，如果是16进制或8进制则添加0x或0</td>
+<td align="center">(“%#x”,99”)<br>(%#o”,99)</td>
+<td>0x63<br>0143</td>
+</tr>
+<tr>
+<td align="center">&lt;</td>
+<td align="center">格式化前一个转换符所描述的参数</td>
+<td align="center">(“%f和%&lt;3.2f”,99.45)</td>
+<td>99.450000和99.45</td>
+</tr>
+<tr>
+<td align="center">$</td>
+<td align="center">被格式化的参数索引</td>
+<td align="center">(“%1$d,%2$s”,99,”abc”)</td>
+<td>99,abc</td>
+</tr>
+</tbody></table>
+<p>输入内容:</p>
+<pre><code>public static void main(String[] args) {  
+    String str=null;  
+    //$使用  
+    str=String.format(&quot;格式参数$的使用：%1$d,%2$s&quot;, 99,&quot;abc&quot;);             
+    System.out.println(str);                       
+    //+使用  
+    System.out.printf(&quot;显示正负数的符号：%+d与%d%n&quot;, 99,-99);  
+    //补O使用  
+    System.out.printf(&quot;最牛的编号是：%03d%n&quot;, 7);  
+    //空格使用  
+    System.out.printf(&quot;Tab键的效果是：% 8d%n&quot;, 7);  
+    //.使用  
+    System.out.printf(&quot;整数分组的效果是：%,d%n&quot;, 9989997);  
+    //空格和小数点后面个数  
+    System.out.printf(&quot;一本书的价格是：% 50.5f元%n&quot;, 49.8);  
+}  </code></pre><p>输出内容:</p>
+<pre><code>格式参数$的使用：99,abc  
+显示正负数的符号：+99与-99  
+最牛的编号是：007  
+Tab键的效果是：       7  
+整数分组的效果是：9,989,997  
+一本书的价格是：      </code></pre><p>部分转载自：<a href="https://www.cnblogs.com/Dhouse/p/7776780.html" target="_blank" rel="noopener">https://www.cnblogs.com/Dhouse/p/7776780.html</a></p>
 ]]></content>
       <categories>
         <category>小工具</category>
@@ -8792,8 +8878,99 @@ public class Second_1005_2 {
   <entry>
     <title>Markdown语法整理</title>
     <url>/2019/09/30/Markdown%E8%AF%AD%E6%B3%95%E6%95%B4%E7%90%86/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>作为一个新进程序员，<a id="more"></a> 使用Markdown写文档的时间还不是很多，对很多语法也不是很熟悉，网上的教程也很纷杂，很多并不是很完整。为了方便自己下次有需求时使用，遂对自己了解到的Markdown语法进行整理。<br><br><strong><em>注</em></strong>:由于编辑器的不同，其对Markdown语法的支持程度也不尽相同，本文所使用的编辑器是Markdownpad2。</p>
-<p># </p>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>作为一个新进程序员，<a id="more"></a> 使用Markdown写文档的时间还不是很多，对很多语法也不是很熟悉，网上的教程也很纷杂，很多并不是很完整。为了方便自己下次有需求时使用，遂对自己了解到的Markdown语法进行整理。<br><br><strong><em>注</em></strong>:由于编辑器的不同，其对Markdown语法的支持程度也不尽相同，本文所使用的编辑器是Typora。</p>
+<h2 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h2><p>在想要设置为标题的文字前面加#来表示<br>一个#是一级标题，二个#是二级标题，以此类推。支持六级标题。<br>示例</p>
+<pre><code class="bash"># 这是一级标题
+## 这是二级标题
+### 这是三级标题
+#### 这是四级标题
+##### 这是五级标题
+###### 这是六级标题</code></pre>
+<p><u>效果如下：</u></p>
+<h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><p>（多的#似乎是主题的原因）</p>
+<h2 id="2-字体"><a href="#2-字体" class="headerlink" title="2.字体"></a>2.字体</h2><ul>
+<li>加粗</li>
+</ul>
+<p>要加粗的文字左右分别用两个*号包起来</p>
+<ul>
+<li>斜体</li>
+</ul>
+<p>要倾斜的文字左右分别用一个*号包起来</p>
+<ul>
+<li>斜体加粗</li>
+</ul>
+<p>要倾斜和加粗的文字左右分别用三个*号包起来</p>
+<ul>
+<li>删除线</li>
+</ul>
+<p>要加删除线的文字左右分别用两个~~号包起来</p>
+<p>示例：</p>
+<pre><code class="undefined">**这是加粗的文字**
+*这是倾斜的文字*`
+***这是斜体加粗的文字***
+~~这是加删除线的文字~~</code></pre>
+<p><u>效果如下：</u></p>
+<p><strong>这是加粗的文字</strong><br><em>这是倾斜的文字</em><br><strong><em>这是斜体加粗的文字</em></strong><br><del>这是加删除线的文字</del></p>
+<h2 id="3-分隔线"><a href="#3-分隔线" class="headerlink" title="3.分隔线"></a><strong>3.分隔线</strong></h2><p> 可以在一行中用三个以上的星号*、减号-、底线_来建立一个分隔线，行内不能有其他东西，你也可以在星号或减号蹭插入空格。下面这种写法都可以建立分隔线： </p>
+<pre><code class="text">***
+******
+---
+------</code></pre>
+<p><u>效果如下：</u></p>
+<hr>
+<hr>
+<hr>
+<h2 id="4-锚点"><a href="#4-锚点" class="headerlink" title="4.锚点"></a>4.锚点</h2><p>网页中，锚点其实就是页内超链接，也就是链接本文档内部的某些元素，实现当前页面中的跳转。比如我这里写下一个锚点，点击回到目录，就能跳转到目录。 在目录中点击这一节，就能跳过来。还有下一节的注脚。这些根本上都是用锚点来实现的。 </p>
+<pre><code>## 1.标题{#title}
+
+跳转到[标题](#title)</code></pre><p>效果如下：</p>
+<p>无法实现，甚至代码块里的内容出现在文章里,就会导致Error：expected end of comment, got end of file</p>
+<h2 id="5-引用"><a href="#5-引用" class="headerlink" title="5.引用"></a>5.引用</h2><p>在引用的文字前加&gt;即可。 引用也可以嵌套，如加两个&gt;&gt;三个&gt;&gt;&gt;<br>  n个…</p>
+<p>示例：</p>
+<pre><code class="ruby">&gt;这是引用的内容
+&gt;&gt;这是引用的内容
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;这是引用的内容</code></pre>
+<p><u>效果如下：</u></p>
+<blockquote>
+<p>这是引用的内容</p>
+<blockquote>
+<p>这是引用的内容</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>这是引用的内容</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="6-超链接"><a href="#6-超链接" class="headerlink" title="6.超链接"></a>6.超链接</h2><h3 id="6-1行内式"><a href="#6-1行内式" class="headerlink" title="6.1行内式"></a>6.1行内式</h3><ul>
+<li><p>[]里写链接文字，()里写链接地址, ()中的”“中可以为链接指定title属性，title属性可加可不加。title属性的效果是鼠标悬停在链接上会出现指定的 title文字。[链接文字](链接地址 “链接标题”)’这样的形式。链接地址与链接标题前有一个空格。</p>
+<pre><code> 1. `欢迎来到[避风港](https://soulflower.gitee.io)`
+ 2.  `欢迎来到[soulflower](https://soulflower.gitee.io &quot;避风港&quot;)`</code></pre></li>
+</ul>
+<p><u>效果如下：</u></p>
+<p>欢迎来到<a href="https://soulflower.gitee.io" target="_blank" rel="noopener">避风港</a></p>
+<p>欢迎来到<a href="https://soulflower.gitee.io/" title="soulflwoer" target="_blank" rel="noopener">soulflower</a></p>
+<h3 id="6-2自动链接"><a href="#6-2自动链接" class="headerlink" title="6.2自动链接"></a>6.2自动链接</h3><p>Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用&lt;&gt;包起来， Markdown 就会自动把它转成链接。一般网址的链接文字就和链接地址一样，例如： </p>
+<pre><code>&lt;https://soulflower.gitee.io&gt;
+&lt;theyyx@foxmail.com&gt; </code></pre><p><u>效果如下：</u></p>
+<p><a href="https://soulflower.gitee.io" target="_blank" rel="noopener">https://soulflower.gitee.io</a><br><a href="mailto:&#116;&#x68;&#x65;&#x79;&#x79;&#x78;&#64;&#102;&#111;&#x78;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;" target="_blank" rel="noopener">&#116;&#x68;&#x65;&#x79;&#x79;&#x78;&#64;&#102;&#111;&#x78;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a> </p>
+<h3 id="6-3脚注"><a href="#6-3脚注" class="headerlink" title="6.3脚注"></a>6.3脚注</h3><p>脚注是对文本的补充说明。</p>
+<p>Markdown脚注的格式如下：</p>
+<pre><code>[^要注明的文本]：</code></pre><p>效果如下：</p>
+<p>脚注<a href="这里是脚注">^1</a></p>
+<p>生成一个脚注2<a href="这里是**脚注2**的*内容*.">^foot</a>.</p>
 ]]></content>
       <categories>
         <category>小工具</category>
