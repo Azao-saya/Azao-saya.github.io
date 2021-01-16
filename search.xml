@@ -1772,77 +1772,6 @@ public class PAT_B1082 {
       </categories>
   </entry>
   <entry>
-    <title>B1079-延迟的回文数</title>
-    <url>/2019/12/02/B1079-%E5%BB%B6%E8%BF%9F%E7%9A%84%E5%9B%9E%E6%96%87%E6%95%B0/</url>
-    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>给定一个 <em>k</em>+1 位的正整数 <em>N</em>，写成 <em>a*<em>k</em>⋯<em>a</em>1<em>a</em>0 的形式，其中对所有 *i</em> 有 0≤<em>a**i</em>&lt;10 且 <em>a**k</em>&gt;0。<em>N</em> 被称为一个<strong>回文数</strong>，当且仅当对所有 <em>i</em> 有 <em>a**i</em>=<em>a*</em>k<em>−</em>i*。零也被定义为一个回文数。</p>
-<p>非回文数也可以通过一系列操作变出回文数。首先将该数字逆转，再将逆转数与该数相加，如果和还不是一个回文数，就重复这个逆转再相加的操作，直到一个回文数出现。如果一个非回文数可以变出回文数，就称这个数为<strong>延迟的回文数</strong>。（定义翻译自 <a href="https://en.wikipedia.org/wiki/Palindromic_number" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Palindromic_number</a> ）</p>
-<p>给定任意一个正整数，本题要求你找到其变出的那个回文数。</p>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p> 输入在一行中给出一个不超过1000位的正整数。 </p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>对给定的整数，一行一行输出其变出回文数的过程。每行格式如下</p>
-<pre><code>A + B = C</code></pre><p>其中 <code>A</code> 是原始的数字，<code>B</code> 是 <code>A</code> 的逆转数，<code>C</code> 是它们的和。<code>A</code> 从输入的整数开始。重复操作直到 <code>C</code> 在 10 步以内变成回文数，这时在一行中输出 <code>C is a palindromic number.</code>；或者如果 10 步都没能得到回文数，最后就在一行中输出 <code>Not found in 10 iterations.</code>。</p>
-</blockquote>
-<h3 id="输入1"><a href="#输入1" class="headerlink" title="输入1"></a>输入1</h3><blockquote>
-<p>97152</p>
-</blockquote>
-<h3 id="输出1"><a href="#输出1" class="headerlink" title="输出1"></a>输出1</h3><blockquote>
-<p>97152 + 25179 = 122331<br>122331 + 133221 = 255552<br>255552 is a palindromic number.</p>
-</blockquote>
-<h3 id="输入2"><a href="#输入2" class="headerlink" title="输入2"></a>输入2</h3><blockquote>
-<p>196</p>
-</blockquote>
-<h3 id="输出2"><a href="#输出2" class="headerlink" title="输出2"></a>输出2</h3><blockquote>
-<p>196 + 691 = 887<br>887 + 788 = 1675<br>1675 + 5761 = 7436<br>7436 + 6347 = 13783<br>13783 + 38731 = 52514<br>52514 + 41525 = 94039<br>94039 + 93049 = 187088<br>187088 + 880781 = 1067869<br>1067869 + 9687601 = 10755470<br>10755470 + 07455701 = 18211171<br>Not found in 10 iterations.</p>
-</blockquote>
-<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li>这是一道真题，听说不小心点进链接里打开游览器超过10秒就算作弊了…..超越题目的坑</li>
-<li>使用reverse来反转原字符串，再新建BigInteger用来计算字符串数字。</li>
-<li>循环执行10次，若出现题目要求的回文数怎打印相应内容后结束程序。</li>
-<li>如果循环完仍没有结束程序则代表没有找到回文数输出Not found in 10 iterations.</li>
-</ul>
-<hr>
-<hr>
-<pre><code>import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.math.BigInteger;
-import java.util.Stack; //最开始尝试过栈反转，发现pop的是原类型一个char。要使用的话还得while(sta.isEmpty)加一个StringBuilder拼接
-
-public class PAT_B1079 {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String number = br.readLine();
-        for (int i = 0; i &lt;10 ; i++) {
-            String number2 = new StringBuilder(number).reverse().toString();
-            if (number2.equals(number)){
-                System.out.println(number+&quot; is a palindromic number.&quot;);
-                System.exit(0);
-            }
-            BigInteger num1=new BigInteger(number);
-            BigInteger num2=new BigInteger(number2);
-            BigInteger number3= num1.add(num2);
-            System.out.println(number+&quot; + &quot;+number2+&quot; = &quot;+number3);
-            number = String.valueOf(number3);
-        }
-        System.out.println(&quot;Not found in 10 iterations.&quot;);
-    }
-//    private static void reverse(int a) { //int的反转方法
-//        int rs = 0;
-//        while (a &gt; 0) {
-//            rs *= 10;
-//            rs += a % 10;
-//            a /= 10;
-//        }
-//        System.out.println(rs);
-//    }
-}</code></pre>]]></content>
-      <categories>
-        <category>PAT练习</category>
-      </categories>
-  </entry>
-  <entry>
     <title>B1080-MOOC期终成绩</title>
     <url>/2019/12/02/B1080-MOOC%E6%9C%9F%E7%BB%88%E6%88%90%E7%BB%A9/</url>
     <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>对于在中国大学MOOC（<a href="http://www.icourse163.org/" target="_blank" rel="noopener">http://www.icourse163.org/</a> ）学习“数据结构”课程的学生，想要获得一张合格证书，必须首先获得不少于200分的在线编程作业分，然后总评获得不少于60分（满分100）。总评成绩的计算公式为 <em>G</em>=(<em>G<strong>m</strong>i<em>d</em>−<em>t</em>e<em>r</em>m<em>×40%+</em>G<strong>f</strong>i<strong>n</strong>al<em>×60%)，如果 <em>G</em></em>m<strong>i</strong>d<em>−</em>t<strong>e</strong>r**m</em>&gt;<em>G<strong>f</strong>i<strong>n</strong>a*<em>l</em>；否则总评 *G</em> 就是 <em>G*</em>f<strong>i</strong>n<strong>a*l。这里 *G</strong>m<strong>i<em>d</em>−*t</strong>e<strong>r</strong>m和G<strong>f</strong>i<strong>n</strong>a**l 分别为学生的期中和期末成绩。</p>
@@ -2048,6 +1977,77 @@ public class PAT_B1081 {
             }
         }
     }
+}</code></pre>]]></content>
+      <categories>
+        <category>PAT练习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>B1079-延迟的回文数</title>
+    <url>/2019/12/02/B1079-%E5%BB%B6%E8%BF%9F%E7%9A%84%E5%9B%9E%E6%96%87%E6%95%B0/</url>
+    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>给定一个 <em>k</em>+1 位的正整数 <em>N</em>，写成 <em>a*<em>k</em>⋯<em>a</em>1<em>a</em>0 的形式，其中对所有 *i</em> 有 0≤<em>a**i</em>&lt;10 且 <em>a**k</em>&gt;0。<em>N</em> 被称为一个<strong>回文数</strong>，当且仅当对所有 <em>i</em> 有 <em>a**i</em>=<em>a*</em>k<em>−</em>i*。零也被定义为一个回文数。</p>
+<p>非回文数也可以通过一系列操作变出回文数。首先将该数字逆转，再将逆转数与该数相加，如果和还不是一个回文数，就重复这个逆转再相加的操作，直到一个回文数出现。如果一个非回文数可以变出回文数，就称这个数为<strong>延迟的回文数</strong>。（定义翻译自 <a href="https://en.wikipedia.org/wiki/Palindromic_number" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Palindromic_number</a> ）</p>
+<p>给定任意一个正整数，本题要求你找到其变出的那个回文数。</p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p> 输入在一行中给出一个不超过1000位的正整数。 </p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p>对给定的整数，一行一行输出其变出回文数的过程。每行格式如下</p>
+<pre><code>A + B = C</code></pre><p>其中 <code>A</code> 是原始的数字，<code>B</code> 是 <code>A</code> 的逆转数，<code>C</code> 是它们的和。<code>A</code> 从输入的整数开始。重复操作直到 <code>C</code> 在 10 步以内变成回文数，这时在一行中输出 <code>C is a palindromic number.</code>；或者如果 10 步都没能得到回文数，最后就在一行中输出 <code>Not found in 10 iterations.</code>。</p>
+</blockquote>
+<h3 id="输入1"><a href="#输入1" class="headerlink" title="输入1"></a>输入1</h3><blockquote>
+<p>97152</p>
+</blockquote>
+<h3 id="输出1"><a href="#输出1" class="headerlink" title="输出1"></a>输出1</h3><blockquote>
+<p>97152 + 25179 = 122331<br>122331 + 133221 = 255552<br>255552 is a palindromic number.</p>
+</blockquote>
+<h3 id="输入2"><a href="#输入2" class="headerlink" title="输入2"></a>输入2</h3><blockquote>
+<p>196</p>
+</blockquote>
+<h3 id="输出2"><a href="#输出2" class="headerlink" title="输出2"></a>输出2</h3><blockquote>
+<p>196 + 691 = 887<br>887 + 788 = 1675<br>1675 + 5761 = 7436<br>7436 + 6347 = 13783<br>13783 + 38731 = 52514<br>52514 + 41525 = 94039<br>94039 + 93049 = 187088<br>187088 + 880781 = 1067869<br>1067869 + 9687601 = 10755470<br>10755470 + 07455701 = 18211171<br>Not found in 10 iterations.</p>
+</blockquote>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
+<li>这是一道真题，听说不小心点进链接里打开游览器超过10秒就算作弊了…..超越题目的坑</li>
+<li>使用reverse来反转原字符串，再新建BigInteger用来计算字符串数字。</li>
+<li>循环执行10次，若出现题目要求的回文数怎打印相应内容后结束程序。</li>
+<li>如果循环完仍没有结束程序则代表没有找到回文数输出Not found in 10 iterations.</li>
+</ul>
+<hr>
+<hr>
+<pre><code>import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.math.BigInteger;
+import java.util.Stack; //最开始尝试过栈反转，发现pop的是原类型一个char。要使用的话还得while(sta.isEmpty)加一个StringBuilder拼接
+
+public class PAT_B1079 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String number = br.readLine();
+        for (int i = 0; i &lt;10 ; i++) {
+            String number2 = new StringBuilder(number).reverse().toString();
+            if (number2.equals(number)){
+                System.out.println(number+&quot; is a palindromic number.&quot;);
+                System.exit(0);
+            }
+            BigInteger num1=new BigInteger(number);
+            BigInteger num2=new BigInteger(number2);
+            BigInteger number3= num1.add(num2);
+            System.out.println(number+&quot; + &quot;+number2+&quot; = &quot;+number3);
+            number = String.valueOf(number3);
+        }
+        System.out.println(&quot;Not found in 10 iterations.&quot;);
+    }
+//    private static void reverse(int a) { //int的反转方法
+//        int rs = 0;
+//        while (a &gt; 0) {
+//            rs *= 10;
+//            rs += a % 10;
+//            a /= 10;
+//        }
+//        System.out.println(rs);
+//    }
 }</code></pre>]]></content>
       <categories>
         <category>PAT练习</category>
@@ -2800,82 +2800,6 @@ public class PAT_B1070 {
       </categories>
   </entry>
   <entry>
-    <title>B1069-微博转发抽奖</title>
-    <url>/2019/11/08/B1069-%E5%BE%AE%E5%8D%9A%E8%BD%AC%E5%8F%91%E6%8A%BD%E5%A5%96/</url>
-    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 小明 PAT 考了满分，高兴之余决定发起微博转发抽奖活动，从转发的网友中按顺序每隔 N 个人就发出一个红包。请你编写程序帮助他确定中奖名单。 </p>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p>   输入第一行给出三个正整数 M（≤ 1000）、N 和 S，分别是转发的总量、小明决定的中奖间隔、以及第一位中奖者的序号（编号从 1 开始）。随后 M 行，顺序给出转发微博的网友的昵称（不超过 20 个字符、不包含空格回车的非空字符串）。</p>
-<p>   注意：可能有人转发多次，但不能中奖多次。所以如果处于当前中奖位置的网友已经中过奖，则跳过他顺次取下一位。</p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>   按照输入的顺序输出中奖名单，每个昵称占一行。如果没有人中奖，则输出 <code>Keep going...</code>。 </p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入1"><a href="#输入1" class="headerlink" title="输入1"></a>输入1</h3><blockquote>
-<p>9 3 2<br>Imgonnawin!<br>PickMe<br>PickMeMeMeee<br>LookHere<br>Imgonnawin!<br>TryAgainAgain<br>TryAgainAgain<br>Imgonnawin!<br>TryAgainAgain</p>
-</blockquote>
-<h3 id="输出1"><a href="#输出1" class="headerlink" title="输出1"></a>输出1</h3><blockquote>
-<p>PickMe<br>Imgonnawin!<br>TryAgainAgain</p>
-</blockquote>
-<h3 id="输入2"><a href="#输入2" class="headerlink" title="输入2"></a>输入2</h3><blockquote>
-<p>2 3 5<br>Imgonnawin!<br>PickMe</p>
-</blockquote>
-<h3 id="输出2"><a href="#输出2" class="headerlink" title="输出2"></a>输出2</h3><blockquote>
-<p>Not Unique</p>
-</blockquote>
-<h3 id="输入3"><a href="#输入3" class="headerlink" title="输入3"></a>输入3</h3><blockquote>
-<p>3 3 5<br>1 2 3<br>3 4 5<br>5 6 7</p>
-</blockquote>
-<h3 id="输出3"><a href="#输出3" class="headerlink" title="输出3"></a>输出3</h3><blockquote>
-<p>Keep going…</p>
-</blockquote>
-<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li>已丢失</li>
-</ul>
-<hr>
-<hr>
-<pre><code class="java">import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Map;
-
-public class Main {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String[] temp = br.readLine().split(&quot; &quot;);
-        int n =Integer.parseInt(temp[0]);
-        int s =Integer.parseInt(temp[1]);
-        int first =Integer.parseInt(temp[2]);
-        ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
-        for (int i = 0; i &lt;n ; i++) {
-            list.add(br.readLine());
-        }
-        ArrayList&lt;String&gt; output = new ArrayList&lt;&gt;();
-        int index = first-1;
-        while (index&lt;n){
-            if (!output.contains(list.get(index))){
-                output.add(list.get(index));
-            }else {
-                index++;
-                continue;
-            }
-            index +=s;
-        }
-        if (output.isEmpty()){
-            System.out.println(&quot;Keep going...&quot;);
-        }else {
-            for (String s1 : output) {
-                System.out.println(s1);
-            }
-        }
-    }
-}</code></pre>
-]]></content>
-      <categories>
-        <category>PAT练习</category>
-      </categories>
-  </entry>
-  <entry>
     <title>B1068-万绿丛中一点红</title>
     <url>/2019/11/08/B1068-%E4%B8%87%E7%BB%BF%E4%B8%9B%E4%B8%AD%E4%B8%80%E7%82%B9%E7%BA%A2/</url>
     <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 小明 PAT 考了满分，高兴之余决定发起微博转发抽奖活动，从转发的网友中按顺序每隔 N 个人就发出一个红包。请你编写程序帮助他确定中奖名单。 </p>
@@ -3009,6 +2933,82 @@ public class PAT_B1068 {
       </tags>
   </entry>
   <entry>
+    <title>B1069-微博转发抽奖</title>
+    <url>/2019/11/08/B1069-%E5%BE%AE%E5%8D%9A%E8%BD%AC%E5%8F%91%E6%8A%BD%E5%A5%96/</url>
+    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 小明 PAT 考了满分，高兴之余决定发起微博转发抽奖活动，从转发的网友中按顺序每隔 N 个人就发出一个红包。请你编写程序帮助他确定中奖名单。 </p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p>   输入第一行给出三个正整数 M（≤ 1000）、N 和 S，分别是转发的总量、小明决定的中奖间隔、以及第一位中奖者的序号（编号从 1 开始）。随后 M 行，顺序给出转发微博的网友的昵称（不超过 20 个字符、不包含空格回车的非空字符串）。</p>
+<p>   注意：可能有人转发多次，但不能中奖多次。所以如果处于当前中奖位置的网友已经中过奖，则跳过他顺次取下一位。</p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p>   按照输入的顺序输出中奖名单，每个昵称占一行。如果没有人中奖，则输出 <code>Keep going...</code>。 </p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入1"><a href="#输入1" class="headerlink" title="输入1"></a>输入1</h3><blockquote>
+<p>9 3 2<br>Imgonnawin!<br>PickMe<br>PickMeMeMeee<br>LookHere<br>Imgonnawin!<br>TryAgainAgain<br>TryAgainAgain<br>Imgonnawin!<br>TryAgainAgain</p>
+</blockquote>
+<h3 id="输出1"><a href="#输出1" class="headerlink" title="输出1"></a>输出1</h3><blockquote>
+<p>PickMe<br>Imgonnawin!<br>TryAgainAgain</p>
+</blockquote>
+<h3 id="输入2"><a href="#输入2" class="headerlink" title="输入2"></a>输入2</h3><blockquote>
+<p>2 3 5<br>Imgonnawin!<br>PickMe</p>
+</blockquote>
+<h3 id="输出2"><a href="#输出2" class="headerlink" title="输出2"></a>输出2</h3><blockquote>
+<p>Not Unique</p>
+</blockquote>
+<h3 id="输入3"><a href="#输入3" class="headerlink" title="输入3"></a>输入3</h3><blockquote>
+<p>3 3 5<br>1 2 3<br>3 4 5<br>5 6 7</p>
+</blockquote>
+<h3 id="输出3"><a href="#输出3" class="headerlink" title="输出3"></a>输出3</h3><blockquote>
+<p>Keep going…</p>
+</blockquote>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
+<li>已丢失</li>
+</ul>
+<hr>
+<hr>
+<pre><code class="java">import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Map;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] temp = br.readLine().split(&quot; &quot;);
+        int n =Integer.parseInt(temp[0]);
+        int s =Integer.parseInt(temp[1]);
+        int first =Integer.parseInt(temp[2]);
+        ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
+        for (int i = 0; i &lt;n ; i++) {
+            list.add(br.readLine());
+        }
+        ArrayList&lt;String&gt; output = new ArrayList&lt;&gt;();
+        int index = first-1;
+        while (index&lt;n){
+            if (!output.contains(list.get(index))){
+                output.add(list.get(index));
+            }else {
+                index++;
+                continue;
+            }
+            index +=s;
+        }
+        if (output.isEmpty()){
+            System.out.println(&quot;Keep going...&quot;);
+        }else {
+            for (String s1 : output) {
+                System.out.println(s1);
+            }
+        }
+    }
+}</code></pre>
+]]></content>
+      <categories>
+        <category>PAT练习</category>
+      </categories>
+  </entry>
+  <entry>
     <title>B1067-试密码</title>
     <url>/2019/11/07/B1067-%E8%AF%95%E5%AF%86%E7%A0%81/</url>
     <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 当你试图登录某个系统却忘了密码时，系统一般只会允许你尝试有限多次，当超出允许次数时，账号就会被锁死。本题就请你实现这个小功能。 </p>
@@ -3134,8 +3134,8 @@ public class PAT_B1066 {
         <category>PAT练习</category>
       </categories>
       <tags>
-        <tag>字符串操作</tag>
         <tag>正则表达式</tag>
+        <tag>字符串操作</tag>
         <tag>未AC题目</tag>
       </tags>
   </entry>
@@ -6102,8 +6102,8 @@ public class Main {
         <category>PAT练习</category>
       </categories>
       <tags>
-        <tag>字符串操作</tag>
         <tag>正则表达式</tag>
+        <tag>字符串操作</tag>
       </tags>
   </entry>
   <entry>
@@ -6367,78 +6367,6 @@ public class PAT_B1029 {
       </tags>
   </entry>
   <entry>
-    <title>B1028-人口普查</title>
-    <url>/2019/10/16/B1028-%E4%BA%BA%E5%8F%A3%E6%99%AE%E6%9F%A5/</url>
-    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><ul>
-<li><p>某城镇进行人口普查，得到了全体居民的生日。现请你写个程序，找出镇上最年长和最年轻的人。</p>
-<p>这里确保每个输入的日期都是合法的，但不一定是合理的——假设已知镇上没有超过 200 岁的老人，而今天是 2014 年 9 月 6 日，所以超过 200 岁的生日和未出生的生日都是不合理的，应该被过滤掉。</p>
-</li>
-</ul>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p>   输入在第一行给出正整数 <em>N</em>，取值在(0,105]；随后 <em>N</em> 行，每行给出 1 个人的姓名（由不超过 5 个英文字母组成的字符串）、以及按 <code>yyyy/mm/dd</code>（即年/月/日）格式给出的生日。题目保证最年长和最年轻的人没有并列。 </p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>   在一行中顺序输出有效生日的个数、最年长人和最年轻人的姓名，其间以空格分隔。 </p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
-<p>5<br>John 2001/05/12<br>Tom 1814/09/06<br>Ann 2121/01/30<br>James 1814/09/05<br>Steve 1967/11/20</p>
-</blockquote>
-<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
-<p>3 Tom John</p>
-</blockquote>
-<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li>无法解决的超时</li>
-<li>判断写的挺乱的，因为要完全符合题意，刚好两百岁和刚今天出生都要考虑进去。多写了很多判断</li>
-</ul>
-<hr>
-<hr>
-<pre><code class="java">import java.util.Scanner;
-
-public class PAT_B1027 {
-
-    public static void main(String[] args) {
-        Scanner sc =new Scanner(System.in);
-        String[] firstLine =sc.nextLine().split(&quot; &quot;);
-        int  n =Integer.parseInt(firstLine[0]);
-        char c =firstLine[1].charAt(0);
-
-        int i=1;
-        for(;;i++){
-            if(n&lt;2*(i+1)*(i+1)-1){
-                break;
-            }
-        }
-        for(int j=i;j&gt;0;j--){
-            for(int blank=i-j;blank&gt;0;blank--){
-                System.out.print(&quot; &quot;);
-            }
-            for(int count=j*2-1;count&gt;0;count--){
-                System.out.print(c);
-            }
-            System.out.println();
-        }
-
-        for(int j=2;j&lt;=i;j++){
-            for(int blank=i-j;blank&gt;0;blank--){
-                System.out.print(&quot; &quot;);
-            }
-            for(int count=j*2-1;count&gt;0;count--){
-                System.out.print(c);
-            }
-            System.out.println();
-        }
-        System.out.println(n-(2*i*i-1));
-    }
-}</code></pre>
-]]></content>
-      <categories>
-        <category>PAT练习</category>
-      </categories>
-      <tags>
-        <tag>未AC题目</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>B1027-打印沙漏</title>
     <url>/2019/10/16/B1027-%E6%89%93%E5%8D%B0%E6%B2%99%E6%BC%8F/</url>
     <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><ul>
@@ -6516,6 +6444,78 @@ public class PAT_B1027 {
       <categories>
         <category>PAT练习</category>
       </categories>
+  </entry>
+  <entry>
+    <title>B1028-人口普查</title>
+    <url>/2019/10/16/B1028-%E4%BA%BA%E5%8F%A3%E6%99%AE%E6%9F%A5/</url>
+    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><ul>
+<li><p>某城镇进行人口普查，得到了全体居民的生日。现请你写个程序，找出镇上最年长和最年轻的人。</p>
+<p>这里确保每个输入的日期都是合法的，但不一定是合理的——假设已知镇上没有超过 200 岁的老人，而今天是 2014 年 9 月 6 日，所以超过 200 岁的生日和未出生的生日都是不合理的，应该被过滤掉。</p>
+</li>
+</ul>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p>   输入在第一行给出正整数 <em>N</em>，取值在(0,105]；随后 <em>N</em> 行，每行给出 1 个人的姓名（由不超过 5 个英文字母组成的字符串）、以及按 <code>yyyy/mm/dd</code>（即年/月/日）格式给出的生日。题目保证最年长和最年轻的人没有并列。 </p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p>   在一行中顺序输出有效生日的个数、最年长人和最年轻人的姓名，其间以空格分隔。 </p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
+<p>5<br>John 2001/05/12<br>Tom 1814/09/06<br>Ann 2121/01/30<br>James 1814/09/05<br>Steve 1967/11/20</p>
+</blockquote>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
+<p>3 Tom John</p>
+</blockquote>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
+<li>无法解决的超时</li>
+<li>判断写的挺乱的，因为要完全符合题意，刚好两百岁和刚今天出生都要考虑进去。多写了很多判断</li>
+</ul>
+<hr>
+<hr>
+<pre><code class="java">import java.util.Scanner;
+
+public class PAT_B1027 {
+
+    public static void main(String[] args) {
+        Scanner sc =new Scanner(System.in);
+        String[] firstLine =sc.nextLine().split(&quot; &quot;);
+        int  n =Integer.parseInt(firstLine[0]);
+        char c =firstLine[1].charAt(0);
+
+        int i=1;
+        for(;;i++){
+            if(n&lt;2*(i+1)*(i+1)-1){
+                break;
+            }
+        }
+        for(int j=i;j&gt;0;j--){
+            for(int blank=i-j;blank&gt;0;blank--){
+                System.out.print(&quot; &quot;);
+            }
+            for(int count=j*2-1;count&gt;0;count--){
+                System.out.print(c);
+            }
+            System.out.println();
+        }
+
+        for(int j=2;j&lt;=i;j++){
+            for(int blank=i-j;blank&gt;0;blank--){
+                System.out.print(&quot; &quot;);
+            }
+            for(int count=j*2-1;count&gt;0;count--){
+                System.out.print(c);
+            }
+            System.out.println();
+        }
+        System.out.println(n-(2*i*i-1));
+    }
+}</code></pre>
+]]></content>
+      <categories>
+        <category>PAT练习</category>
+      </categories>
+      <tags>
+        <tag>未AC题目</tag>
+      </tags>
   </entry>
   <entry>
     <title>B1026-程序运行时间</title>
@@ -6658,8 +6658,8 @@ class Node {
         <category>PAT练习</category>
       </categories>
       <tags>
-        <tag>字符串操作</tag>
         <tag>正则表达式</tag>
+        <tag>字符串操作</tag>
         <tag>未AC题目</tag>
         <tag>链表</tag>
         <tag>reverse</tag>
@@ -6985,8 +6985,8 @@ public class PAT_B1020 {
         <category>PAT练习</category>
       </categories>
       <tags>
-        <tag>compare</tag>
         <tag>正则表达式</tag>
+        <tag>compare</tag>
       </tags>
   </entry>
   <entry>
@@ -7082,9 +7082,9 @@ class MyComparator implements Comparator&lt;Integer&gt; {
         <category>PAT练习</category>
       </categories>
       <tags>
+        <tag>正则表达式</tag>
         <tag>字符串操作</tag>
         <tag>compare</tag>
-        <tag>正则表达式</tag>
       </tags>
   </entry>
   <entry>
@@ -7876,8 +7876,60 @@ public class Main {
         <category>PAT练习</category>
       </categories>
       <tags>
-        <tag>字符串操作</tag>
         <tag>正则表达式</tag>
+        <tag>字符串操作</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>B1009-说反话</title>
+    <url>/2019/10/16/B1009-%20%E8%AF%B4%E5%8F%8D%E8%AF%9D/</url>
+    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 给定一句英语，要求你编写程序，将句中所有单词的顺序颠倒输出。 </p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p> 测试输入包含一个测试用例，在一行内给出总长度不超过 80 的字符串。字符串由若干单词和若干空格组成，其中单词是由英文字母（大小写有区分）组成的字符串，单词之间用 1 个空格分开，输入保证句子末尾没有多余的空格。 </p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p> 每个测试用例的输出占一行，输出倒序后的句子。 </p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
+<p>Hello World Here I Come</p>
+</blockquote>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
+<p>Come I Here World Hello</p>
+</blockquote>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
+<li>从数组末尾开始输出</li>
+<li>list.size()-i</li>
+</ul>
+<hr>
+<hr>
+<pre><code class="java">import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
+public class PAT_B1009 {
+    public static void main(String[] args) throws IOException {
+        ArrayList&lt;String&gt; list = new ArrayList&lt;String&gt;();
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        String[] s = br.readLine().split(&quot; &quot;);
+        for (String s1 : s) {
+            list.add(s1);
+        }
+        for (int i = 1; i &lt;=list.size() ; i++) { //是要输出零索引的,size是指有多少元素比length来说会+1
+            System.out.print(list.get(list.size()- i));
+            if (i == list.size()){
+                break;
+            }
+            System.out.print(&quot; &quot;);
+        }
+    }
+}</code></pre>
+]]></content>
+      <categories>
+        <category>PAT练习</category>
+      </categories>
+      <tags>
+        <tag>字符串操作</tag>
       </tags>
   </entry>
   <entry>
@@ -7934,58 +7986,6 @@ public class PAT_B1008 {
       <categories>
         <category>PAT练习</category>
       </categories>
-  </entry>
-  <entry>
-    <title>B1009-说反话</title>
-    <url>/2019/10/16/B1009-%20%E8%AF%B4%E5%8F%8D%E8%AF%9D/</url>
-    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 给定一句英语，要求你编写程序，将句中所有单词的顺序颠倒输出。 </p>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p> 测试输入包含一个测试用例，在一行内给出总长度不超过 80 的字符串。字符串由若干单词和若干空格组成，其中单词是由英文字母（大小写有区分）组成的字符串，单词之间用 1 个空格分开，输入保证句子末尾没有多余的空格。 </p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p> 每个测试用例的输出占一行，输出倒序后的句子。 </p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
-<p>Hello World Here I Come</p>
-</blockquote>
-<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
-<p>Come I Here World Hello</p>
-</blockquote>
-<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li>从数组末尾开始输出</li>
-<li>list.size()-i</li>
-</ul>
-<hr>
-<hr>
-<pre><code class="java">import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-
-public class PAT_B1009 {
-    public static void main(String[] args) throws IOException {
-        ArrayList&lt;String&gt; list = new ArrayList&lt;String&gt;();
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        String[] s = br.readLine().split(&quot; &quot;);
-        for (String s1 : s) {
-            list.add(s1);
-        }
-        for (int i = 1; i &lt;=list.size() ; i++) { //是要输出零索引的,size是指有多少元素比length来说会+1
-            System.out.print(list.get(list.size()- i));
-            if (i == list.size()){
-                break;
-            }
-            System.out.print(&quot; &quot;);
-        }
-    }
-}</code></pre>
-]]></content>
-      <categories>
-        <category>PAT练习</category>
-      </categories>
-      <tags>
-        <tag>字符串操作</tag>
-      </tags>
   </entry>
   <entry>
     <title>B1007-素数对猜想</title>
@@ -8271,6 +8271,97 @@ public class PAT_B1004 {
       </tags>
   </entry>
   <entry>
+    <title>B1002-我要通过！</title>
+    <url>/2019/10/08/B1002-%E6%88%91%E8%A6%81%E9%80%9A%E8%BF%87/</url>
+    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><blockquote>
+<p>“<strong>答案正确</strong>”是自动判题系统给出的最令人欢喜的回复。本题属于 PAT 的“<strong>答案正确</strong>”大派送 —— 只要读入的字符串满足下列条件，系统就输出“<strong>答案正确</strong>”，否则输出“<strong>答案错误</strong>”。</p>
+<p>得到“<strong>答案正确</strong>”的条件是：</p>
+<ol>
+<li><p>字符串中必须仅有 <code>P</code>、 <code>A</code>、 <code>T</code>这三种字符，不可以包含其它字符；</p>
+</li>
+<li><p>任意形如 <code>xPATx</code> 的字符串都可以获得“<strong>答案正确</strong>”，其中 <code>x</code> 或者是空字符串，或者是仅由字母 <code>A</code> 组成的字符串；</p>
+</li>
+<li><p>如果 <code>aPbTc</code> 是正确的，那么 <code>aPbATca</code> 也是正确的，其中 <code>a</code>、 <code>b</code>、 <code>c</code> 均或者是空字符串，或者是仅由字母 <code>A</code> 组成的字符串。</p>
+<p>现在就请你为 PAT 写一个自动裁判程序，判定哪些字符串是可以获得“<strong>答案正确</strong>”的。</p>
+</li>
+</ol>
+</blockquote>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
+<p>每个测试输入包含 1 个测试用例，即给出自然数 <em>n</em> 的值。这里保证 <em>n</em> 小于 10100。</p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p>每个字符串的检测结果占一行，如果该字符串可以获得“<strong>答案正确</strong>”，则输出 <code>YES</code>，否则输出 <code>NO</code>。</p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><blockquote>
+<pre><code class="in">8
+PAT
+PAAT
+AAPATAA
+AAPAATAAAA
+xPATx
+PT
+Whatever
+APAAATAA</code></pre>
+</blockquote>
+<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><blockquote>
+<pre><code class="out">YES
+YES
+YES
+YES
+NO
+NO
+NO
+NO</code></pre>
+<p>解题思路</p>
+</blockquote>
+<blockquote>
+<p>通过看别人的代码了解了正则表达式这个概念，题目很容易就解出来了</p>
+<p>+号为一个或多个，*号为零个或多个</p>
+<p>条件123都是在满足前置条件的扩展，一开始也是没转过弯来</p>
+</blockquote>
+<pre><code>import java.io.BufferedInputStream;
+import java.util.Scanner;
+
+public class PAT_B1003 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(new BufferedInputStream(System.in));
+        int n = Integer.parseInt(sc.nextLine());
+        String[] str = new String[11];
+        for (int i = 0; i &lt; n; i++) {
+            str[i] = sc.next();
+        }
+        for (String s : str) {
+            judge(s);
+        }
+    }
+    public static void judge(String s) {
+        String pattern = &quot;A*PA+TA*&quot;;
+        String pattern1 = &quot;PA+T&quot;;
+        if (s.matches(pattern)) {
+            if (s.matches(pattern1)) {
+                System.out.println(&quot;YES&quot;);
+            } else {
+                String temp[] = s.split(&quot;P|T&quot;);
+                int aLength = temp[0].length();
+                int bLength = temp[1].length();
+                int cLength = temp[2].length();
+                if ((cLength - aLength) / aLength == (bLength - 1)) {
+                    System.out.println(&quot;YES&quot;);
+                } else {
+                    System.out.println(&quot;NO&quot;);
+                }
+
+            }
+        } else {
+            System.out.println(&quot;NO&quot;);
+        }
+    }
+}</code></pre>]]></content>
+      <categories>
+        <category>PAT练习</category>
+      </categories>
+  </entry>
+  <entry>
     <title>B1003-我要通过！</title>
     <url>/2019/10/08/B1003-%E6%88%91%E8%A6%81%E9%80%9A%E8%BF%87/</url>
     <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><blockquote>
@@ -8362,100 +8453,9 @@ public class PAT_B1003 {
         <category>PAT练习</category>
       </categories>
       <tags>
-        <tag>字符串操作</tag>
         <tag>正则表达式</tag>
+        <tag>字符串操作</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>B1002-我要通过！</title>
-    <url>/2019/10/08/B1002-%E6%88%91%E8%A6%81%E9%80%9A%E8%BF%87/</url>
-    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><blockquote>
-<p>“<strong>答案正确</strong>”是自动判题系统给出的最令人欢喜的回复。本题属于 PAT 的“<strong>答案正确</strong>”大派送 —— 只要读入的字符串满足下列条件，系统就输出“<strong>答案正确</strong>”，否则输出“<strong>答案错误</strong>”。</p>
-<p>得到“<strong>答案正确</strong>”的条件是：</p>
-<ol>
-<li><p>字符串中必须仅有 <code>P</code>、 <code>A</code>、 <code>T</code>这三种字符，不可以包含其它字符；</p>
-</li>
-<li><p>任意形如 <code>xPATx</code> 的字符串都可以获得“<strong>答案正确</strong>”，其中 <code>x</code> 或者是空字符串，或者是仅由字母 <code>A</code> 组成的字符串；</p>
-</li>
-<li><p>如果 <code>aPbTc</code> 是正确的，那么 <code>aPbATca</code> 也是正确的，其中 <code>a</code>、 <code>b</code>、 <code>c</code> 均或者是空字符串，或者是仅由字母 <code>A</code> 组成的字符串。</p>
-<p>现在就请你为 PAT 写一个自动裁判程序，判定哪些字符串是可以获得“<strong>答案正确</strong>”的。</p>
-</li>
-</ol>
-</blockquote>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
-<p>每个测试输入包含 1 个测试用例，即给出自然数 <em>n</em> 的值。这里保证 <em>n</em> 小于 10100。</p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>每个字符串的检测结果占一行，如果该字符串可以获得“<strong>答案正确</strong>”，则输出 <code>YES</code>，否则输出 <code>NO</code>。</p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><blockquote>
-<pre><code class="in">8
-PAT
-PAAT
-AAPATAA
-AAPAATAAAA
-xPATx
-PT
-Whatever
-APAAATAA</code></pre>
-</blockquote>
-<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><blockquote>
-<pre><code class="out">YES
-YES
-YES
-YES
-NO
-NO
-NO
-NO</code></pre>
-<p>解题思路</p>
-</blockquote>
-<blockquote>
-<p>通过看别人的代码了解了正则表达式这个概念，题目很容易就解出来了</p>
-<p>+号为一个或多个，*号为零个或多个</p>
-<p>条件123都是在满足前置条件的扩展，一开始也是没转过弯来</p>
-</blockquote>
-<pre><code>import java.io.BufferedInputStream;
-import java.util.Scanner;
-
-public class PAT_B1003 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(new BufferedInputStream(System.in));
-        int n = Integer.parseInt(sc.nextLine());
-        String[] str = new String[11];
-        for (int i = 0; i &lt; n; i++) {
-            str[i] = sc.next();
-        }
-        for (String s : str) {
-            judge(s);
-        }
-    }
-    public static void judge(String s) {
-        String pattern = &quot;A*PA+TA*&quot;;
-        String pattern1 = &quot;PA+T&quot;;
-        if (s.matches(pattern)) {
-            if (s.matches(pattern1)) {
-                System.out.println(&quot;YES&quot;);
-            } else {
-                String temp[] = s.split(&quot;P|T&quot;);
-                int aLength = temp[0].length();
-                int bLength = temp[1].length();
-                int cLength = temp[2].length();
-                if ((cLength - aLength) / aLength == (bLength - 1)) {
-                    System.out.println(&quot;YES&quot;);
-                } else {
-                    System.out.println(&quot;NO&quot;);
-                }
-
-            }
-        } else {
-            System.out.println(&quot;NO&quot;);
-        }
-    }
-}</code></pre>]]></content>
-      <categories>
-        <category>PAT练习</category>
-      </categories>
   </entry>
   <entry>
     <title>B1002-写出这个数</title>
@@ -9162,7 +9162,7 @@ public class Second_1005_2 {
 <h3 id="6-2自动链接"><a href="#6-2自动链接" class="headerlink" title="6.2自动链接"></a>6.2自动链接</h3><p>Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用&lt;&gt;包起来， Markdown 就会自动把它转成链接。一般网址的链接文字就和链接地址一样，例如： </p>
 <pre><code>&lt;https://soulflower.gitee.io&gt;
 &lt;theyyx@foxmail.com&gt; </code></pre><p><u>效果如下：</u></p>
-<p><a href="https://soulflower.gitee.io" target="_blank" rel="noopener">https://soulflower.gitee.io</a><br><a href="mailto:&#x74;&#x68;&#101;&#121;&#x79;&#x78;&#x40;&#102;&#x6f;&#120;&#109;&#x61;&#105;&#108;&#46;&#99;&#111;&#x6d;" target="_blank" rel="noopener">&#x74;&#x68;&#101;&#121;&#x79;&#x78;&#x40;&#102;&#x6f;&#120;&#109;&#x61;&#105;&#108;&#46;&#99;&#111;&#x6d;</a> </p>
+<p><a href="https://soulflower.gitee.io" target="_blank" rel="noopener">https://soulflower.gitee.io</a><br><a href="mailto:&#x74;&#104;&#101;&#x79;&#121;&#120;&#x40;&#x66;&#x6f;&#120;&#109;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;" target="_blank" rel="noopener">&#x74;&#104;&#101;&#x79;&#121;&#120;&#x40;&#x66;&#x6f;&#120;&#109;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;</a> </p>
 <h3 id="6-3脚注"><a href="#6-3脚注" class="headerlink" title="6.3脚注"></a>6.3脚注</h3><p>脚注是对文本的补充说明。</p>
 <p>Markdown脚注的格式如下：</p>
 <pre><code>[^要注明的文本]：</code></pre><p>效果如下：</p>
