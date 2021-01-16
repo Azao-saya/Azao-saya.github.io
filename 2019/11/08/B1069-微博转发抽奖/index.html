@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="还在建设的避风港">
 <meta property="og:description" content="题目描述">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-05T11:49:51.691Z">
+<meta property="og:updated_time" content="2020-08-17T08:59:06.408Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="B1069-微博转发抽奖">
 <meta name="twitter:description" content="题目描述">
@@ -27,7 +27,7 @@
   
     <link rel="stylesheet" href="at.alicdn.com/t/font_1440167_ezdnzsotqc.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1610776985615">
+  <link rel="stylesheet" href="/css/style.css?v=1610789182223">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -52,8 +52,8 @@
     </div>
     <div class="nexmoe-count">
         <div><span>文章</span>114</div>
-        <div><span>标签</span>0</div>
-        <div><span>分类</span>4</div>
+        <div><span>标签</span>21</div>
+        <div><span>分类</span>5</div>
     </div>
     <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
         
@@ -126,7 +126,7 @@
 
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/PAT练习/">PAT练习</a>
-          <span class="category-list-count">105</span>
+          <span class="category-list-count">106</span>
         </li>
 
         
@@ -159,6 +159,13 @@
 
   
   
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/ASCII/" style="font-size: 13.33px;">ASCII</a> <a href="/tags/BigDeciaml-toPlainString/" style="font-size: 10px;">BigDeciaml&toPlainString</a> <a href="/tags/BigInteger/" style="font-size: 10px;">BigInteger</a> <a href="/tags/HashMap/" style="font-size: 10px;">HashMap</a> <a href="/tags/LinkedHashSet/" style="font-size: 11.67px;">LinkedHashSet</a> <a href="/tags/TreeSet/" style="font-size: 10px;">TreeSet</a> <a href="/tags/compare/" style="font-size: 15px;">compare</a> <a href="/tags/implements/" style="font-size: 10px;">implements</a> <a href="/tags/reverse/" style="font-size: 10px;">reverse</a> <a href="/tags/sort/" style="font-size: 11.67px;">sort</a> <a href="/tags/stack数组/" style="font-size: 10px;">stack数组</a> <a href="/tags/try-catch/" style="font-size: 13.33px;">try/catch</a> <a href="/tags/偷学柳神的帅气代码/" style="font-size: 13.33px;">偷学柳神的帅气代码</a> <a href="/tags/参加的考试/" style="font-size: 10px;">参加的考试</a> <a href="/tags/字符串操作/" style="font-size: 18.33px;">字符串操作</a> <a href="/tags/字符串高端操作/" style="font-size: 11.67px;">字符串高端操作</a> <a href="/tags/未AC题目/" style="font-size: 16.67px;">未AC题目</a> <a href="/tags/极其非面向对象/" style="font-size: 10px;">极其非面向对象</a> <a href="/tags/正则表达式/" style="font-size: 20px;">正则表达式</a> <a href="/tags/祖传屎山代码/" style="font-size: 13.33px;">祖传屎山代码</a> <a href="/tags/链表/" style="font-size: 10px;">链表</a>
+    </div>
+    
+  </div>
+
   
 </aside>
     <div class="nexmoe-copyright">
@@ -180,8 +187,8 @@
   
   <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2019年11月08日</a>
-    <a><i class="nexmoefont icon-areachart"></i>1,136 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 5 分钟</a>
+    <a><i class="nexmoefont icon-areachart"></i>426 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
 </div>
 
   <div class="nexmoe-post-right">
@@ -224,98 +231,48 @@
 <p>Keep going…</p>
 </blockquote>
 <h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li><p>看到三个输入样例因为就知道这题很麻烦了，太题目没说的东西了，当时就吐槽了。</p>
-</li>
-<li><pre><code>if (tx &gt;= 0 &amp;&amp; tx &lt; n &amp;&amp; ty &gt;= 0 &amp;&amp; ty &lt; m &amp;&amp; Math.abs(draw[i][j] - draw[tx][ty]) &lt;= tol) return false;</code></pre></li>
-<li><p>tx &gt;= 0 &amp;&amp; tx &lt; n &amp;&amp; ty &gt;= 0 &amp;&amp; ty &lt; m,前面是用来限定要对比的最多8个数，没有超过边界。</p>
-</li>
-<li><p>一种是小于边界一种是大于边界</p>
-</li>
-<li><p>Math.abs(draw[i][j] - draw[tx][ty]) &lt;= tol ，后面是差值小于阈值。限定条件非常多都是与，要全部满足才会判false。</p>
-</li>
-<li><p>也就是如果超过边界的会直接跳过进入下一个循环，让其在边角上相邻不足8个数也能按照题意正常运行。</p>
-</li>
-<li><p>哎这只是一道20分的题，感觉已经是25分都算难了。pat难度幅度着实有点大了。</p>
-</li>
+<li>已丢失</li>
 </ul>
 <hr>
 <hr>
-<pre><code>import java.io.BufferedReader;
+<pre><code class="java">import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.Map;
 
-/**
- * 脏话%&amp;*……&amp;**，测试点4超时
- * 首先是题目要求的这样点不唯一，很容易就理解为这样的点超过两个，实际上它也是这个意思。
- * 然后输入案例1（4,2）处是满足周围色差超过阈值的。但为什么没把他算进去，因为这个不唯一还有一层意思就是不能有另外一个和他一样值的点
- * 这个算我没仔细看案例，解决了之后，提交，全错，再改.
- * 从遗留的try，catch可以看出。一开始我是以为边上一圈相邻不足8个直接就不用判断了。
- * 题目也是这样说的该点的颜色与其周围 8 个相邻像素的颜色差充分大。
- * 但实际上是周围相邻的满足就可以，就算相邻的只有一个点，两个点。只要满足就可以算一点红。
- * 所以呢，这种东西如果不是提交了错误了。到底要怎么发现啊。
- */
-public class PAT_B1068 {
-    static int tol;
-    static int n;
-    static int m;
-    static int[][] draw = new int[1001][1001];
-    static int dir[][] = new int[][]{{-1, -1}, {-1, 0}, {-1, 1}, {0, 1}, {1, 1}, {1, 0}, {1, -1}, {0, -1}};
-                                    //代表了坐标左上，正上，右上，正右，右下，正下，左下，正左
-                                    //dir[]第一个[]表示是除去最外圈的大括号的第几个{}，后一个[]表示{}内的第几个元素
-    private static boolean isRed(int i ,int j){
-        try{
-            for (int k = 0; k &lt; 8; k++) {
-                int tx = i + dir[k][0];
-                int ty = j + dir[k][1];
-                if (tx &gt;= 0 &amp;&amp; tx &lt; n &amp;&amp; ty &gt;= 0 &amp;&amp; ty &lt; m &amp;&amp; Math.abs(draw[i][j] - draw[tx][ty]) &lt;= tol) return false;
-            }
-        }catch (Exception e){
-            return false;
-        }
-        return true;
-    }
+public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] temp = br.readLine().split(&quot; &quot;);
-        m = Integer.parseInt(temp[0]);
-        n = Integer.parseInt(temp[1]);
-        tol = Integer.parseInt(temp[2]);
-        draw = new int[n][m];
-        Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();
+        int n =Integer.parseInt(temp[0]);
+        int s =Integer.parseInt(temp[1]);
+        int first =Integer.parseInt(temp[2]);
+        ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
         for (int i = 0; i &lt;n ; i++) {
-            String[] s =br.readLine().split(&quot;\\s+&quot;);
-            for (int j = 0; j &lt;m ; j++) {
-                draw[i][j]= Integer.parseInt(s[j]);
-                if(map.containsKey(draw[i][j]))
-                    map.put(draw[i][j], 42); //42为随便设置的数，不为1就行，同一个值出现两次该点绝不会为一点红
-                else
-                    map.put(draw[i][j], 1);
-            }
+            list.add(br.readLine());
         }
-        int count = 0;
-        int x=0,y=0;
-        boolean flag = false;
-        boolean flag2 = false;
-        wp:for (int i = 0; i &lt;n ; i++) {
-            for (int j = 0; j &lt;m ; j++) {
-                if (isRed(i,j) &amp;&amp; map.get(draw[i][j])==1){
-                    x = i ;
-                    y = j ;
-                    count++;
-                }
+        ArrayList&lt;String&gt; output = new ArrayList&lt;&gt;();
+        int index = first-1;
+        while (index&lt;n){
+            if (!output.contains(list.get(index))){
+                output.add(list.get(index));
+            }else {
+                index++;
+                continue;
             }
+            index +=s;
         }
-        if (count ==0){
-            System.out.println(&quot;Not Exist&quot;);
-        } else if (count == 1) {
-            System.out.printf(&quot;(%d, %d): %d&quot;, y+1, x+1, draw[x][y]);
+        if (output.isEmpty()){
+            System.out.println(&quot;Keep going...&quot;);
         }else {
-            System.out.println(&quot;Not Unique&quot;);
+            for (String s1 : output) {
+                System.out.println(s1);
+            }
         }
     }
 }</code></pre>
+
   </article>
 
   
@@ -369,7 +326,7 @@ public class PAT_B1068 {
 
 
 <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
- <script src="/js/app.js?v=1610776985619"></script>
+ <script src="/js/app.js?v=1610789182232"></script>
 
   
 
