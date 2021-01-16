@@ -500,7 +500,6 @@ class Node{
     }
 }    </code></pre>]]></content>
       <categories>
-        <category>生活感悟</category>
         <category>PAT练习</category>
       </categories>
       <tags>
@@ -2801,6 +2800,82 @@ public class PAT_B1070 {
       </categories>
   </entry>
   <entry>
+    <title>B1069-微博转发抽奖</title>
+    <url>/2019/11/08/B1069-%E5%BE%AE%E5%8D%9A%E8%BD%AC%E5%8F%91%E6%8A%BD%E5%A5%96/</url>
+    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 小明 PAT 考了满分，高兴之余决定发起微博转发抽奖活动，从转发的网友中按顺序每隔 N 个人就发出一个红包。请你编写程序帮助他确定中奖名单。 </p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p>   输入第一行给出三个正整数 M（≤ 1000）、N 和 S，分别是转发的总量、小明决定的中奖间隔、以及第一位中奖者的序号（编号从 1 开始）。随后 M 行，顺序给出转发微博的网友的昵称（不超过 20 个字符、不包含空格回车的非空字符串）。</p>
+<p>   注意：可能有人转发多次，但不能中奖多次。所以如果处于当前中奖位置的网友已经中过奖，则跳过他顺次取下一位。</p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p>   按照输入的顺序输出中奖名单，每个昵称占一行。如果没有人中奖，则输出 <code>Keep going...</code>。 </p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入1"><a href="#输入1" class="headerlink" title="输入1"></a>输入1</h3><blockquote>
+<p>9 3 2<br>Imgonnawin!<br>PickMe<br>PickMeMeMeee<br>LookHere<br>Imgonnawin!<br>TryAgainAgain<br>TryAgainAgain<br>Imgonnawin!<br>TryAgainAgain</p>
+</blockquote>
+<h3 id="输出1"><a href="#输出1" class="headerlink" title="输出1"></a>输出1</h3><blockquote>
+<p>PickMe<br>Imgonnawin!<br>TryAgainAgain</p>
+</blockquote>
+<h3 id="输入2"><a href="#输入2" class="headerlink" title="输入2"></a>输入2</h3><blockquote>
+<p>2 3 5<br>Imgonnawin!<br>PickMe</p>
+</blockquote>
+<h3 id="输出2"><a href="#输出2" class="headerlink" title="输出2"></a>输出2</h3><blockquote>
+<p>Not Unique</p>
+</blockquote>
+<h3 id="输入3"><a href="#输入3" class="headerlink" title="输入3"></a>输入3</h3><blockquote>
+<p>3 3 5<br>1 2 3<br>3 4 5<br>5 6 7</p>
+</blockquote>
+<h3 id="输出3"><a href="#输出3" class="headerlink" title="输出3"></a>输出3</h3><blockquote>
+<p>Keep going…</p>
+</blockquote>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
+<li>已丢失</li>
+</ul>
+<hr>
+<hr>
+<pre><code class="java">import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Map;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] temp = br.readLine().split(&quot; &quot;);
+        int n =Integer.parseInt(temp[0]);
+        int s =Integer.parseInt(temp[1]);
+        int first =Integer.parseInt(temp[2]);
+        ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
+        for (int i = 0; i &lt;n ; i++) {
+            list.add(br.readLine());
+        }
+        ArrayList&lt;String&gt; output = new ArrayList&lt;&gt;();
+        int index = first-1;
+        while (index&lt;n){
+            if (!output.contains(list.get(index))){
+                output.add(list.get(index));
+            }else {
+                index++;
+                continue;
+            }
+            index +=s;
+        }
+        if (output.isEmpty()){
+            System.out.println(&quot;Keep going...&quot;);
+        }else {
+            for (String s1 : output) {
+                System.out.println(s1);
+            }
+        }
+    }
+}</code></pre>
+]]></content>
+      <categories>
+        <category>PAT练习</category>
+      </categories>
+  </entry>
+  <entry>
     <title>B1068-万绿丛中一点红</title>
     <url>/2019/11/08/B1068-%E4%B8%87%E7%BB%BF%E4%B8%9B%E4%B8%AD%E4%B8%80%E7%82%B9%E7%BA%A2/</url>
     <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 小明 PAT 考了满分，高兴之余决定发起微博转发抽奖活动，从转发的网友中按顺序每隔 N 个人就发出一个红包。请你编写程序帮助他确定中奖名单。 </p>
@@ -2934,82 +3009,6 @@ public class PAT_B1068 {
       </tags>
   </entry>
   <entry>
-    <title>B1069-微博转发抽奖</title>
-    <url>/2019/11/08/B1069-%E5%BE%AE%E5%8D%9A%E8%BD%AC%E5%8F%91%E6%8A%BD%E5%A5%96/</url>
-    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 小明 PAT 考了满分，高兴之余决定发起微博转发抽奖活动，从转发的网友中按顺序每隔 N 个人就发出一个红包。请你编写程序帮助他确定中奖名单。 </p>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p>   输入第一行给出三个正整数 M（≤ 1000）、N 和 S，分别是转发的总量、小明决定的中奖间隔、以及第一位中奖者的序号（编号从 1 开始）。随后 M 行，顺序给出转发微博的网友的昵称（不超过 20 个字符、不包含空格回车的非空字符串）。</p>
-<p>   注意：可能有人转发多次，但不能中奖多次。所以如果处于当前中奖位置的网友已经中过奖，则跳过他顺次取下一位。</p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>   按照输入的顺序输出中奖名单，每个昵称占一行。如果没有人中奖，则输出 <code>Keep going...</code>。 </p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入1"><a href="#输入1" class="headerlink" title="输入1"></a>输入1</h3><blockquote>
-<p>9 3 2<br>Imgonnawin!<br>PickMe<br>PickMeMeMeee<br>LookHere<br>Imgonnawin!<br>TryAgainAgain<br>TryAgainAgain<br>Imgonnawin!<br>TryAgainAgain</p>
-</blockquote>
-<h3 id="输出1"><a href="#输出1" class="headerlink" title="输出1"></a>输出1</h3><blockquote>
-<p>PickMe<br>Imgonnawin!<br>TryAgainAgain</p>
-</blockquote>
-<h3 id="输入2"><a href="#输入2" class="headerlink" title="输入2"></a>输入2</h3><blockquote>
-<p>2 3 5<br>Imgonnawin!<br>PickMe</p>
-</blockquote>
-<h3 id="输出2"><a href="#输出2" class="headerlink" title="输出2"></a>输出2</h3><blockquote>
-<p>Not Unique</p>
-</blockquote>
-<h3 id="输入3"><a href="#输入3" class="headerlink" title="输入3"></a>输入3</h3><blockquote>
-<p>3 3 5<br>1 2 3<br>3 4 5<br>5 6 7</p>
-</blockquote>
-<h3 id="输出3"><a href="#输出3" class="headerlink" title="输出3"></a>输出3</h3><blockquote>
-<p>Keep going…</p>
-</blockquote>
-<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li>已丢失</li>
-</ul>
-<hr>
-<hr>
-<pre><code class="java">import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Map;
-
-public class Main {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String[] temp = br.readLine().split(&quot; &quot;);
-        int n =Integer.parseInt(temp[0]);
-        int s =Integer.parseInt(temp[1]);
-        int first =Integer.parseInt(temp[2]);
-        ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
-        for (int i = 0; i &lt;n ; i++) {
-            list.add(br.readLine());
-        }
-        ArrayList&lt;String&gt; output = new ArrayList&lt;&gt;();
-        int index = first-1;
-        while (index&lt;n){
-            if (!output.contains(list.get(index))){
-                output.add(list.get(index));
-            }else {
-                index++;
-                continue;
-            }
-            index +=s;
-        }
-        if (output.isEmpty()){
-            System.out.println(&quot;Keep going...&quot;);
-        }else {
-            for (String s1 : output) {
-                System.out.println(s1);
-            }
-        }
-    }
-}</code></pre>
-]]></content>
-      <categories>
-        <category>PAT练习</category>
-      </categories>
-  </entry>
-  <entry>
     <title>B1067-试密码</title>
     <url>/2019/11/07/B1067-%E8%AF%95%E5%AF%86%E7%A0%81/</url>
     <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 当你试图登录某个系统却忘了密码时，系统一般只会允许你尝试有限多次，当超出允许次数时，账号就会被锁死。本题就请你实现这个小功能。 </p>
@@ -3135,8 +3134,8 @@ public class PAT_B1066 {
         <category>PAT练习</category>
       </categories>
       <tags>
-        <tag>字符串操作</tag>
         <tag>正则表达式</tag>
+        <tag>字符串操作</tag>
         <tag>未AC题目</tag>
       </tags>
   </entry>
@@ -6103,8 +6102,8 @@ public class Main {
         <category>PAT练习</category>
       </categories>
       <tags>
-        <tag>字符串操作</tag>
         <tag>正则表达式</tag>
+        <tag>字符串操作</tag>
       </tags>
   </entry>
   <entry>
@@ -6659,8 +6658,8 @@ class Node {
         <category>PAT练习</category>
       </categories>
       <tags>
-        <tag>字符串操作</tag>
         <tag>正则表达式</tag>
+        <tag>字符串操作</tag>
         <tag>未AC题目</tag>
         <tag>链表</tag>
         <tag>reverse</tag>
@@ -6986,8 +6985,8 @@ public class PAT_B1020 {
         <category>PAT练习</category>
       </categories>
       <tags>
-        <tag>compare</tag>
         <tag>正则表达式</tag>
+        <tag>compare</tag>
       </tags>
   </entry>
   <entry>
@@ -7083,9 +7082,9 @@ class MyComparator implements Comparator&lt;Integer&gt; {
         <category>PAT练习</category>
       </categories>
       <tags>
+        <tag>正则表达式</tag>
         <tag>字符串操作</tag>
         <tag>compare</tag>
-        <tag>正则表达式</tag>
       </tags>
   </entry>
   <entry>
@@ -7877,59 +7876,7 @@ public class Main {
         <category>PAT练习</category>
       </categories>
       <tags>
-        <tag>字符串操作</tag>
         <tag>正则表达式</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>B1009-说反话</title>
-    <url>/2019/10/16/B1009-%20%E8%AF%B4%E5%8F%8D%E8%AF%9D/</url>
-    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 给定一句英语，要求你编写程序，将句中所有单词的顺序颠倒输出。 </p>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p> 测试输入包含一个测试用例，在一行内给出总长度不超过 80 的字符串。字符串由若干单词和若干空格组成，其中单词是由英文字母（大小写有区分）组成的字符串，单词之间用 1 个空格分开，输入保证句子末尾没有多余的空格。 </p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p> 每个测试用例的输出占一行，输出倒序后的句子。 </p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
-<p>Hello World Here I Come</p>
-</blockquote>
-<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
-<p>Come I Here World Hello</p>
-</blockquote>
-<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li>从数组末尾开始输出</li>
-<li>list.size()-i</li>
-</ul>
-<hr>
-<hr>
-<pre><code class="java">import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-
-public class PAT_B1009 {
-    public static void main(String[] args) throws IOException {
-        ArrayList&lt;String&gt; list = new ArrayList&lt;String&gt;();
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        String[] s = br.readLine().split(&quot; &quot;);
-        for (String s1 : s) {
-            list.add(s1);
-        }
-        for (int i = 1; i &lt;=list.size() ; i++) { //是要输出零索引的,size是指有多少元素比length来说会+1
-            System.out.print(list.get(list.size()- i));
-            if (i == list.size()){
-                break;
-            }
-            System.out.print(&quot; &quot;);
-        }
-    }
-}</code></pre>
-]]></content>
-      <categories>
-        <category>PAT练习</category>
-      </categories>
-      <tags>
         <tag>字符串操作</tag>
       </tags>
   </entry>
@@ -7987,6 +7934,58 @@ public class PAT_B1008 {
       <categories>
         <category>PAT练习</category>
       </categories>
+  </entry>
+  <entry>
+    <title>B1009-说反话</title>
+    <url>/2019/10/16/B1009-%20%E8%AF%B4%E5%8F%8D%E8%AF%9D/</url>
+    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 给定一句英语，要求你编写程序，将句中所有单词的顺序颠倒输出。 </p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p> 测试输入包含一个测试用例，在一行内给出总长度不超过 80 的字符串。字符串由若干单词和若干空格组成，其中单词是由英文字母（大小写有区分）组成的字符串，单词之间用 1 个空格分开，输入保证句子末尾没有多余的空格。 </p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p> 每个测试用例的输出占一行，输出倒序后的句子。 </p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
+<p>Hello World Here I Come</p>
+</blockquote>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
+<p>Come I Here World Hello</p>
+</blockquote>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
+<li>从数组末尾开始输出</li>
+<li>list.size()-i</li>
+</ul>
+<hr>
+<hr>
+<pre><code class="java">import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
+public class PAT_B1009 {
+    public static void main(String[] args) throws IOException {
+        ArrayList&lt;String&gt; list = new ArrayList&lt;String&gt;();
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        String[] s = br.readLine().split(&quot; &quot;);
+        for (String s1 : s) {
+            list.add(s1);
+        }
+        for (int i = 1; i &lt;=list.size() ; i++) { //是要输出零索引的,size是指有多少元素比length来说会+1
+            System.out.print(list.get(list.size()- i));
+            if (i == list.size()){
+                break;
+            }
+            System.out.print(&quot; &quot;);
+        }
+    }
+}</code></pre>
+]]></content>
+      <categories>
+        <category>PAT练习</category>
+      </categories>
+      <tags>
+        <tag>字符串操作</tag>
+      </tags>
   </entry>
   <entry>
     <title>B1007-素数对猜想</title>
@@ -8363,8 +8362,8 @@ public class PAT_B1003 {
         <category>PAT练习</category>
       </categories>
       <tags>
-        <tag>字符串操作</tag>
         <tag>正则表达式</tag>
+        <tag>字符串操作</tag>
       </tags>
   </entry>
   <entry>
@@ -8788,7 +8787,7 @@ Tab键的效果是：       7
 一本书的价格是：      </code></pre><p>部分转载自：<a href="https://www.cnblogs.com/Dhouse/p/7776780.html" target="_blank" rel="noopener">https://www.cnblogs.com/Dhouse/p/7776780.html</a></p>
 ]]></content>
       <categories>
-        <category>小工具</category>
+        <category>云笔记</category>
       </categories>
   </entry>
   <entry>
@@ -9163,7 +9162,7 @@ public class Second_1005_2 {
 <h3 id="6-2自动链接"><a href="#6-2自动链接" class="headerlink" title="6.2自动链接"></a>6.2自动链接</h3><p>Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用&lt;&gt;包起来， Markdown 就会自动把它转成链接。一般网址的链接文字就和链接地址一样，例如： </p>
 <pre><code>&lt;https://soulflower.gitee.io&gt;
 &lt;theyyx@foxmail.com&gt; </code></pre><p><u>效果如下：</u></p>
-<p><a href="https://soulflower.gitee.io" target="_blank" rel="noopener">https://soulflower.gitee.io</a><br><a href="mailto:&#116;&#x68;&#x65;&#121;&#x79;&#x78;&#64;&#102;&#x6f;&#120;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#109;" target="_blank" rel="noopener">&#116;&#x68;&#x65;&#121;&#x79;&#x78;&#64;&#102;&#x6f;&#120;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#109;</a> </p>
+<p><a href="https://soulflower.gitee.io" target="_blank" rel="noopener">https://soulflower.gitee.io</a><br><a href="mailto:&#116;&#x68;&#101;&#x79;&#121;&#x78;&#64;&#102;&#x6f;&#120;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;" target="_blank" rel="noopener">&#116;&#x68;&#101;&#x79;&#121;&#x78;&#64;&#102;&#x6f;&#120;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;</a> </p>
 <h3 id="6-3脚注"><a href="#6-3脚注" class="headerlink" title="6.3脚注"></a>6.3脚注</h3><p>脚注是对文本的补充说明。</p>
 <p>Markdown脚注的格式如下：</p>
 <pre><code>[^要注明的文本]：</code></pre><p>效果如下：</p>
@@ -9171,7 +9170,7 @@ public class Second_1005_2 {
 <p>生成一个脚注2<a href="这里是**脚注2**的*内容*.">^foot</a>.</p>
 ]]></content>
       <categories>
-        <category>小工具</category>
+        <category>云笔记</category>
       </categories>
   </entry>
   <entry>
