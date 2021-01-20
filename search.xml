@@ -11,8 +11,9 @@
 <p><strong>Gitee Pages</strong>（无法使用自定义域名放弃，体感是访问最快的）</p>
 <p><strong>Coding Pages</strong>（访问速度过慢…弃用）</p>
 <p><strong>Github Pages+Vercel</strong>（目前）：兜兜转转还是回到这里，Vercel使用了Amazon Global Accelerator AGA网络用来加速站点国内访问。<a href="https://luotianyi.vc/4801.html" target="_blank" rel="noopener">https://luotianyi.vc/4801.html</a></p>
-<p>上面文章中的博主是用反向代理二级域名作为中间层转发间接访问主域名，我自己则是把二级域名反向代理在Vercel，同时直接连接Github项目把主域名部署在Vercel。不明白是否搞错了什么，但以香港节点进行的测试的话网站性能极佳。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QQ图片20210120143250.4j81vpf938c0.png" alt></p>
+<p>上面文章中的博主是用反向代理二级域名作为中间层转发间接访问主域名，我自己则是把二级域名反向代理在Vercel，同时直接连接Github项目把主域名部署在Vercel。</p>
+<p>可能搞错了什么，但以香港节点进行的测试的话网站性能极佳。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QQ图片20210120143557.2lhpncbf5d20.png" alt></p>
 <p><img src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QQ图片20210120143835.2zu95zm64zg0.png" alt></p>
 <h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><p>nexmoe: <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank" rel="noopener">https://github.com/theme-nexmoe/hexo-theme-nexmoe</a></p>
 <h2 id="评论"><a href="#评论" class="headerlink" title="评论"></a>评论</h2><p>使用了一段时间<strong>Gitalk</strong>： <a href="https://5ime.cn/646.html" target="_blank" rel="noopener">https://5ime.cn/646.html</a> </p>
@@ -3130,6 +3131,427 @@ C=B\log_2(1+\frac{S}{N})</script><p>C=3*10^3*log_2(1+1000) ≈ 30kbit/s</p>
       </categories>
   </entry>
   <entry>
+    <title>TRPG永夜后日的谈模组（粪作）</title>
+    <url>/2020/01/05/%E4%BC%A0%E9%A2%82%E4%B9%8B%E7%89%A9%E6%A8%A1%E7%BB%84/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="别册的受赞颂者"><a href="#别册的受赞颂者" class="headerlink" title="别册的受赞颂者"></a><strong>别册的受赞颂者</strong></h1><h2 id="故事背景"><a href="#故事背景" class="headerlink" title="故事背景"></a>故事背景</h2><p>推完传颂之物虚伪的假面和二人的白皇之后，紧接着又补了一代的动画。那种怆然若失的感觉还是一直萦绕着我，想再做点什么于是便有了这个。<a id="more"></a></p>
+<p>本模组为魔改的传颂之物世界观，强行的使用了永夜后日谈NECHRONICA战斗设定和规则（想了解的话萌娘百科很详细的记录了），但两个作品的世界观有很多相近的地方，勉强能够自圆其说。</p>
+<p><del>开局PC们roll点选出一个人戴着假面(亚库尔卡)，其余PC均为亚人。</del></p>
+<p><del>假面作为一个部件不可卸除以及不会被破坏，可以在战斗中抵挡一点伤害，战斗胜利后自动修复。</del></p>
+<p><del>假面可使PC像永夜后日谈的人偶一样战斗，只要有一个部件留下就可以继续战斗。并且在战斗后提供全体的修复部件的功能。</del></p>
+<p><del>亚人在没有取得假面的时候受到致命伤会停止行动，可在战斗结束后修复。</del></p>
+<p>实际测试之后修改</p>
+<p>这个设定还是删除了为好，永夜后日谈的战斗方式太过异质，实际跑团中发现如果使用这个设定容易太过于重视假面之人了，导致其他PL体验很差。不过实际上想使用的这个模组话需要全部推倒重做了。但姑且还是记录下来，等啥时候我传颂戒断反应发作了再写写看。</p>
+<p>背景设定改为通过对研究“祟”大和全境的亚人都获得了与之类似的特性，在完全解体前都可以继续行动，全身都能当作大脑一样思考。如果打算去别的国家战斗的话也可以加上，过了数百年没有这种特性的亚人都被大和亚人淘汰了。</p>
+<p>（不得不说传颂之物和永夜后日谈真的太像了，但是这首先是个跑团要先考虑玩家PL的体验，包括永夜的世界观也不是抓着玩家硬灌进去的。在故事中自然而然的显现才好，也不需要全部说清楚。会导致剧情发展生硬的话也大可魔改原设或者直接删除，一切顺势而为。）</p>
+<h2 id="故事开端"><a href="#故事开端" class="headerlink" title="故事开端"></a>故事开端</h2><p> PC们在一个阴暗的遗迹中的冷冻舱里苏醒，叫醒他们的是久远。 </p>
+<p>久远设定性格活泼好奇聪明但不善于算数，喜欢探索。</p>
+<p>本次便是久远在误打误撞中发现了遗迹中尚未被探索过隐藏房间，在完全不了解房间控制面板的操作方法下，幸运的开启了房间并激活里其中的设施。</p>
+<hr>
+<p><strong>导入：</strong></p>
+<p>推荐使用bgm：<a href="http://music.163.com/song?id=408440261&amp;userid=41282089" target="_blank" rel="noopener">http://music.163.com/song?id=408440261&amp;userid=41282089</a></p>
+<p> ……不知过去了多久……就像经过了千百年……终于散碎的意识开始一点一滴聚拢……你感到四肢的实感在慢慢的形成，同时像宿醉一样的头痛也涌向了你的大脑…….渐渐的你听到了他人的声音……似是在呼唤着自己……虽然不适感觉仍没有消除，但你知道自己已经准备好醒来了。</p>
+<p><strong>初始房间基础描述（这段在玩家融入气氛之后直接给）</strong>：</p>
+<p>房间里只提供了最低限度的照明，目视里的大多数东西都只是朦胧的展示出它们的轮廓，但你们仍能感觉到所处空间的有的科技感以及它的宽阔。</p>
+<p>身旁是一整列靠着墙边冷冻舱，除了与你醒来时一同开启的，也有数量不少的依然封闭着的舱门。</p>
+<p>你们身上仅有一件写着编号淡蓝的像是病号服的长袍，除此之外没有携带任何东西。</p>
+<blockquote>
+<p>主动调查房间给出的信息</p>
+<ul>
+<li>​    若总成功数为0</li>
+</ul>
+<p>你们摸黑找了存放武器装备的装置，打开后应该可以恢复角色的武装。虽然设有密码，但似乎是考虑到了应急的状况，装置的外壁使用了容易被打破的材质。</p>
+<ul>
+<li>​    若总成功数为1</li>
+</ul>
+<p>你们摸黑找了存放武器装备的装置，打开后应该可以恢复角色的武装。虽然设有密码，但似乎是考虑到了应急的状况，装置的外壁使用了容易被打破的材质。但使用这个的主人看起来记性并不是很好，写着密码的纸条就放在旁边。</p>
+<ul>
+<li><p>​    若总成功数2+</p>
+<p>你们找到了一个看上去不同寻常的面板，久远认出了上面显示的是神代文字（指远古人类使用的文字），但自己并没有办法阅读。</p>
+<p>（pc在调查面板后会有提示音说“受认证用户，已为您开放本设施内所有权限1的功能”，能使用的功能为 开启主要照明，打开武器库，自由的进出房间）</p>
+</li>
+</ul>
+</blockquote>
+<p><strong>久远会干什么：</strong></p>
+<ul>
+<li><p>久远指出外面天气很冷，pc现有的衣服不够御寒，表示自己在这里找到了一些衣服让pc恢复设定好的着装，如果设定衣物太单薄的话也可以更换。</p>
+</li>
+<li><p>久远会对因为自己一时好奇而唤醒pc表示抱歉，在这样一个陌生的时代醒了可能并不是pc想要的。</p>
+</li>
+</ul>
+<p>若pc在对话中出现“开灯”两字会打开房间里的主要照明，以及使用面板打开主要照明或者pc停留了太久。</p>
+<p>会进入下一阶段：随着一连串嗡鸣声响起，房间内充满了苍白的光线。你们发现这里与你们一同苏醒的不只有你们自己。还有各种体型巨大的凶猛野兽，并发出不详的低声嘶吼声。你们虽然被这突如其来的画面吓了一跳，但仔细观察后发现关着它们的笼子非常结实，至少绝不是一时半刻可以冲破的。正当你们松了一口气的时候，却又感觉到这些野兽并不是在戒备着自己，甚至都没有把脸朝向这里。在你视线的死角里有着更为恐怖的东西存在。</p>
+<p>推荐使用bgm：<a href="http://music.163.com/song?id=442562479&amp;userid=41282089" target="_blank" rel="noopener">http://music.163.com/song?id=442562479&amp;userid=41282089</a></p>
+<p>阴影里涌出了大量酷似史莱姆的生物，扑向了看似坚固的笼子，外侧的金属以肉眼可见的速度在被溶解。无处可逃的野兽像婴儿一样被残杀。同时也有一些史莱姆聚合成了人的头颅的样子并向你们这里靠近着，它张开着夸张的大口，用着人精神无法负担的诅咒一样的声调，似是在讲述着自己的悲苦。</p>
+<p>祟的特性是绝对不会死亡，不管烧、切、打、都会马上复活，不管怎么做都无法消灭，最多只能彻底打到它离开、或者用巨大声音或光亮来驱赶。 </p>
+<p>如此pc必须逃跑，有PC逃跑失败的话。久远则会使用闪光弹击退祟，但失败的pc增加一点狂气和破坏一个部件。</p>
+<p>逃离后给出<strong>业障karma：前往帝都</strong></p>
+<p>久远表示附近不远就有集落，可以让pc去此暂避。</p>
+<p>这次原本打算在村庄里也设定一些剧情的。但除了旅店村长屋和水车再也想不出别的东西了。也想不出这里该怎么设置合适的交互。</p>
+<p>所以设定为pc们靠近村庄后，发现右近在指挥一队人把货物装上马车。准备把货送往帝都</p>
+<p>右近对pc们保有好感很容易就能说服他带着PC们一起前往帝都。如果PC放弃了通过右近前往帝都的话，可以通过在村庄里劳动后获得报酬租借马前往帝都。</p>
+<p>最后不管用什么手段前往帝都，一定会遇到强盗的狙击，强制进入战斗单元。</p>
+<p>战斗单元<strong>业障karma：</strong></p>
+<ul>
+<li>二轮内取得胜利</li>
+<li>放跑濡鵙</li>
+</ul>
+<p><strong>舞台效果：</strong></p>
+<ul>
+<li>战斗中敌方可在奈落区域逃跑</li>
+</ul>
+<p><strong>胜利条件：</strong></p>
+<ul>
+<li>场上全所有敌方单位完全解体</li>
+</ul>
+<p>濡鵙攻击手段单一，加上没防御手段极其脆弱。破坏手臂之后几乎没有任何威胁。所以这场战斗是高恶意值的福利战斗。濡雅在己方人员战死的情况下，会尝试逃跑，撤退时机也可自行定夺。总之这个角色并不会轻易死去。但又不适合增加防御手段，可以更改部件强化韧命纸老虎的设定。</p>
+<p>战斗中途会出现大量军团奇奇利，需要设置合理的预警提示他们的到来。让奇奇利的加入更顺理成章一点，可以加入更强大的恶怖巨型奇奇利，并让怪物阵营存在自相残杀的设定。不如说就应该这样设定，但是我偷懒了。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>射手</th>
+<th>类型：恶怖</th>
+<th>恶意：4</th>
+<th>最大行动值：8</th>
+<th>部件数：8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>长弓</td>
+<td>行动</td>
+<td>2费</td>
+<td>2~3</td>
+<td>射击攻击1，攻击判定+1</td>
+</tr>
+<tr>
+<td>脚骨</td>
+<td>行动</td>
+<td>3费</td>
+<td>自身</td>
+<td>移动1</td>
+</tr>
+<tr>
+<td>肩膀</td>
+<td>行动</td>
+<td>4费</td>
+<td>自身</td>
+<td>移动1</td>
+</tr>
+<tr>
+<td>瞄准</td>
+<td>裁判</td>
+<td>0</td>
+<td>自身</td>
+<td>支援2</td>
+</tr>
+<tr>
+<td>脑浆</td>
+<td>常时</td>
+<td>无</td>
+<td>自身</td>
+<td>最大行动值+2</td>
+</tr>
+<tr>
+<td>死亡之手</td>
+<td>即时</td>
+<td>0</td>
+<td>自身</td>
+<td>任意一个攻击行为当成即时使用</td>
+</tr>
+<tr>
+<td>内脏</td>
+<td>常时</td>
+<td>无</td>
+<td>自身</td>
+<td>无</td>
+</tr>
+<tr>
+<td>内脏</td>
+<td>常时</td>
+<td>无</td>
+<td>自身</td>
+<td>无</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>落败武者</th>
+<th>类型：恶怖</th>
+<th>恶意：8</th>
+<th>最大行动值：13</th>
+<th>部件数：10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>名刀</td>
+<td>行动</td>
+<td>2</td>
+<td>0</td>
+<td>白刃攻击2+切断，攻击判定骰值+1</td>
+</tr>
+<tr>
+<td>脚骨</td>
+<td>行动</td>
+<td>3</td>
+<td>自身</td>
+<td>移动1</td>
+</tr>
+<tr>
+<td>甲胄</td>
+<td>裁定</td>
+<td>0</td>
+<td>自身</td>
+<td>防御1</td>
+</tr>
+<tr>
+<td>战斗直觉</td>
+<td>常时</td>
+<td>无</td>
+<td>自身</td>
+<td>白刃攻击动作的攻击判定骰值+1</td>
+</tr>
+<tr>
+<td>肾上腺素</td>
+<td>常时</td>
+<td>无</td>
+<td>自身</td>
+<td>最大行动值+1</td>
+</tr>
+<tr>
+<td>肾上腺素</td>
+<td>常时</td>
+<td>无</td>
+<td>自身</td>
+<td>最大行动值+1</td>
+</tr>
+<tr>
+<td>心脏</td>
+<td>常时</td>
+<td>无</td>
+<td>自身</td>
+<td>最大行动值+1</td>
+</tr>
+<tr>
+<td>内脏</td>
+<td>常时</td>
+<td>无</td>
+<td>自身</td>
+<td>无</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>濡鵙</th>
+<th>类型：仆从</th>
+<th>恶意：11.5</th>
+<th>最大行动值：11</th>
+<th>部件数：5/4/6/3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>头</td>
+<td>大脑</td>
+<td>《常时／无／自身》最大行动值 ＋2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>头</td>
+<td>眼球</td>
+<td>《常时／无／自身》最大行动值 ＋1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>头</td>
+<td>功夫</td>
+<td>《常时／无／自身》最大行动值 ＋1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>头</td>
+<td>牙齿</td>
+<td>《行动／2／0》肉搏攻击 1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>头</td>
+<td>死 人 指 挥</td>
+<td>《裁定／0／0～1》支援 2，不能 对自身使用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>臂</td>
+<td>拳头</td>
+<td>行动／2／0》肉搏攻击 1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>臂</td>
+<td>肩膀</td>
+<td>《行动／4／自身》移动 1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>臂</td>
+<td>手腕</td>
+<td>《裁定／1／0》支援 1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>臂</td>
+<td>长斧</td>
+<td>《行动／2／0》白刃攻击 3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>躯</td>
+<td>突进</td>
+<td>即时/1/效果参照 只能对自身的移动动作使用。移动成功的话， 从移动前或移动后的区域中选择 1 个目标，肉 搏攻击 3。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>躯</td>
+<td>脊骨</td>
+<td>《行动／1／自身》下一刻所使 用的 1 个动作消费－1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>躯</td>
+<td>庇护</td>
+<td>《伤害／0／0～1》代替目标承 受伤害，1 轮之内可以无限使用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>躯</td>
+<td>心脏</td>
+<td>《常时／无／自身》最大行动值 ＋1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>躯</td>
+<td>内脏</td>
+<td>《常时／无／无》无</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>躯</td>
+<td>内脏</td>
+<td>《常时／无／无》无</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>足</td>
+<td>腿骨</td>
+<td>《行动／3／自身》移动 1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>足</td>
+<td>腿骨</td>
+<td>《行动／3／自身》移动 1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>足</td>
+<td>脚掌</td>
+<td>《裁定／1／0》妨碍 1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th><strong>奇奇利</strong></th>
+<th>恶意0.2</th>
+<th>最大行动值：8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>钳击</td>
+<td>《行动／2／0》肉搏攻击 2＋连击 [同区域数目÷10]（舍余）</td>
+<td></td>
+</tr>
+<tr>
+<td>移动</td>
+<td>《行动／3／自身》移动 1</td>
+<td></td>
+</tr>
+<tr>
+<td>拥聚</td>
+<td>《即时／3／0》移动妨碍 1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>总恶意47.5</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>炼狱</td>
+<td>濡鵙<em>1，落败武者</em>1</td>
+<td></td>
+</tr>
+<tr>
+<td>地狱</td>
+<td>射手*2</td>
+<td></td>
+</tr>
+<tr>
+<td>奈落</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>出现死亡之后，在剧情中稍微提及异常的产生。2刻之后，在奈落和乐园出现25只奇奇利</td>
+<td>奇奇利50</td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content>
+      <categories>
+        <category>二次元の胡话</category>
+      </categories>
+  </entry>
+  <entry>
     <title>PAT2019年冬季考试(乙级)回顾</title>
     <url>/2019/12/08/PAT2019%E5%B9%B4%E5%86%AC%E5%AD%A3%E8%80%83%E8%AF%95(%E4%B9%99%E7%BA%A7)%E5%9B%9E%E9%A1%BE/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>  很有幸和这么多大佬一起陪考了这次2019冬季考试，也很幸运的能有机会见到pat的出题人陈越姥姥，看着陈越姥姥给满分的同学拍照一起面带笑容讨论考研和计算机的未来前景，内心着实是十分欣羡和向往这种生活，却又与67的我显得格格不入。 <a id="more"></a></p>
@@ -3483,7 +3905,7 @@ class Node{
       </tags>
   </entry>
   <entry>
-    <title>B1095-解码PAT准考证（目前归档和分类都存在问题）</title>
+    <title>B1095-解码PAT准考证（分类存在问题，标签云是正常的）</title>
     <url>/2019/12/03/B1095-%E8%A7%A3%E7%A0%81PAT%E5%87%86%E8%80%83%E8%AF%81/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>PAT 准考证号由 4 部分组成：</p>
 <ul>
@@ -5854,82 +6276,6 @@ public class PAT_B1070 {
       </categories>
   </entry>
   <entry>
-    <title>B1069-微博转发抽奖</title>
-    <url>/2019/11/08/B1069-%E5%BE%AE%E5%8D%9A%E8%BD%AC%E5%8F%91%E6%8A%BD%E5%A5%96/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 小明 PAT 考了满分，高兴之余决定发起微博转发抽奖活动，从转发的网友中按顺序每隔 N 个人就发出一个红包。请你编写程序帮助他确定中奖名单。 </p>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p>   输入第一行给出三个正整数 M（≤ 1000）、N 和 S，分别是转发的总量、小明决定的中奖间隔、以及第一位中奖者的序号（编号从 1 开始）。随后 M 行，顺序给出转发微博的网友的昵称（不超过 20 个字符、不包含空格回车的非空字符串）。</p>
-<p>   注意：可能有人转发多次，但不能中奖多次。所以如果处于当前中奖位置的网友已经中过奖，则跳过他顺次取下一位。</p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>   按照输入的顺序输出中奖名单，每个昵称占一行。如果没有人中奖，则输出 <code>Keep going...</code>。 </p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入1"><a href="#输入1" class="headerlink" title="输入1"></a>输入1</h3><blockquote>
-<p>9 3 2<br>Imgonnawin!<br>PickMe<br>PickMeMeMeee<br>LookHere<br>Imgonnawin!<br>TryAgainAgain<br>TryAgainAgain<br>Imgonnawin!<br>TryAgainAgain</p>
-</blockquote>
-<h3 id="输出1"><a href="#输出1" class="headerlink" title="输出1"></a>输出1</h3><blockquote>
-<p>PickMe<br>Imgonnawin!<br>TryAgainAgain</p>
-</blockquote>
-<h3 id="输入2"><a href="#输入2" class="headerlink" title="输入2"></a>输入2</h3><blockquote>
-<p>2 3 5<br>Imgonnawin!<br>PickMe</p>
-</blockquote>
-<h3 id="输出2"><a href="#输出2" class="headerlink" title="输出2"></a>输出2</h3><blockquote>
-<p>Not Unique</p>
-</blockquote>
-<h3 id="输入3"><a href="#输入3" class="headerlink" title="输入3"></a>输入3</h3><blockquote>
-<p>3 3 5<br>1 2 3<br>3 4 5<br>5 6 7</p>
-</blockquote>
-<h3 id="输出3"><a href="#输出3" class="headerlink" title="输出3"></a>输出3</h3><blockquote>
-<p>Keep going…</p>
-</blockquote>
-<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li>已丢失</li>
-</ul>
-<hr>
-<hr>
-<pre><code>import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Map;
-
-public class Main {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String[] temp = br.readLine().split(&quot; &quot;);
-        int n =Integer.parseInt(temp[0]);
-        int s =Integer.parseInt(temp[1]);
-        int first =Integer.parseInt(temp[2]);
-        ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
-        for (int i = 0; i &lt;n ; i++) {
-            list.add(br.readLine());
-        }
-        ArrayList&lt;String&gt; output = new ArrayList&lt;&gt;();
-        int index = first-1;
-        while (index&lt;n){
-            if (!output.contains(list.get(index))){
-                output.add(list.get(index));
-            }else {
-                index++;
-                continue;
-            }
-            index +=s;
-        }
-        if (output.isEmpty()){
-            System.out.println(&quot;Keep going...&quot;);
-        }else {
-            for (String s1 : output) {
-                System.out.println(s1);
-            }
-        }
-    }
-}
-</code></pre>]]></content>
-      <categories>
-        <category>PAT练习</category>
-      </categories>
-  </entry>
-  <entry>
     <title>B1068-万绿丛中一点红</title>
     <url>/2019/11/08/B1068-%E4%B8%87%E7%BB%BF%E4%B8%9B%E4%B8%AD%E4%B8%80%E7%82%B9%E7%BA%A2/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 小明 PAT 考了满分，高兴之余决定发起微博转发抽奖活动，从转发的网友中按顺序每隔 N 个人就发出一个红包。请你编写程序帮助他确定中奖名单。 </p>
@@ -6062,6 +6408,82 @@ public class PAT_B1068 {
         <tag>未AC题目</tag>
         <tag>try/catch</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>B1069-微博转发抽奖</title>
+    <url>/2019/11/08/B1069-%E5%BE%AE%E5%8D%9A%E8%BD%AC%E5%8F%91%E6%8A%BD%E5%A5%96/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 小明 PAT 考了满分，高兴之余决定发起微博转发抽奖活动，从转发的网友中按顺序每隔 N 个人就发出一个红包。请你编写程序帮助他确定中奖名单。 </p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p>   输入第一行给出三个正整数 M（≤ 1000）、N 和 S，分别是转发的总量、小明决定的中奖间隔、以及第一位中奖者的序号（编号从 1 开始）。随后 M 行，顺序给出转发微博的网友的昵称（不超过 20 个字符、不包含空格回车的非空字符串）。</p>
+<p>   注意：可能有人转发多次，但不能中奖多次。所以如果处于当前中奖位置的网友已经中过奖，则跳过他顺次取下一位。</p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p>   按照输入的顺序输出中奖名单，每个昵称占一行。如果没有人中奖，则输出 <code>Keep going...</code>。 </p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入1"><a href="#输入1" class="headerlink" title="输入1"></a>输入1</h3><blockquote>
+<p>9 3 2<br>Imgonnawin!<br>PickMe<br>PickMeMeMeee<br>LookHere<br>Imgonnawin!<br>TryAgainAgain<br>TryAgainAgain<br>Imgonnawin!<br>TryAgainAgain</p>
+</blockquote>
+<h3 id="输出1"><a href="#输出1" class="headerlink" title="输出1"></a>输出1</h3><blockquote>
+<p>PickMe<br>Imgonnawin!<br>TryAgainAgain</p>
+</blockquote>
+<h3 id="输入2"><a href="#输入2" class="headerlink" title="输入2"></a>输入2</h3><blockquote>
+<p>2 3 5<br>Imgonnawin!<br>PickMe</p>
+</blockquote>
+<h3 id="输出2"><a href="#输出2" class="headerlink" title="输出2"></a>输出2</h3><blockquote>
+<p>Not Unique</p>
+</blockquote>
+<h3 id="输入3"><a href="#输入3" class="headerlink" title="输入3"></a>输入3</h3><blockquote>
+<p>3 3 5<br>1 2 3<br>3 4 5<br>5 6 7</p>
+</blockquote>
+<h3 id="输出3"><a href="#输出3" class="headerlink" title="输出3"></a>输出3</h3><blockquote>
+<p>Keep going…</p>
+</blockquote>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
+<li>已丢失</li>
+</ul>
+<hr>
+<hr>
+<pre><code>import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Map;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] temp = br.readLine().split(&quot; &quot;);
+        int n =Integer.parseInt(temp[0]);
+        int s =Integer.parseInt(temp[1]);
+        int first =Integer.parseInt(temp[2]);
+        ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
+        for (int i = 0; i &lt;n ; i++) {
+            list.add(br.readLine());
+        }
+        ArrayList&lt;String&gt; output = new ArrayList&lt;&gt;();
+        int index = first-1;
+        while (index&lt;n){
+            if (!output.contains(list.get(index))){
+                output.add(list.get(index));
+            }else {
+                index++;
+                continue;
+            }
+            index +=s;
+        }
+        if (output.isEmpty()){
+            System.out.println(&quot;Keep going...&quot;);
+        }else {
+            for (String s1 : output) {
+                System.out.println(s1);
+            }
+        }
+    }
+}
+</code></pre>]]></content>
+      <categories>
+        <category>PAT练习</category>
+      </categories>
   </entry>
   <entry>
     <title>B1067-试密码</title>
@@ -6854,427 +7276,6 @@ public class PAT_B1057 {
       </tags>
   </entry>
   <entry>
-    <title>TRPG永夜后日的谈模组（粪作）</title>
-    <url>/2019/11/05/%E4%BC%A0%E9%A2%82%E4%B9%8B%E7%89%A9%E6%A8%A1%E7%BB%84/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="别册的受赞颂者"><a href="#别册的受赞颂者" class="headerlink" title="别册的受赞颂者"></a><strong>别册的受赞颂者</strong></h1><h2 id="故事背景"><a href="#故事背景" class="headerlink" title="故事背景"></a>故事背景</h2><p>推完传颂之物虚伪的假面和二人的白皇之后，紧接着又补了一代的动画。那种怆然若失的感觉还是一直萦绕着我，想再做点什么于是便有了这个。<a id="more"></a></p>
-<p>本模组为魔改的传颂之物世界观，强行的使用了永夜后日谈NECHRONICA战斗设定和规则（想了解的话萌娘百科很详细的记录了），但两个作品的世界观有很多相近的地方，勉强能够自圆其说。</p>
-<p><del>开局PC们roll点选出一个人戴着假面(亚库尔卡)，其余PC均为亚人。</del></p>
-<p><del>假面作为一个部件不可卸除以及不会被破坏，可以在战斗中抵挡一点伤害，战斗胜利后自动修复。</del></p>
-<p><del>假面可使PC像永夜后日谈的人偶一样战斗，只要有一个部件留下就可以继续战斗。并且在战斗后提供全体的修复部件的功能。</del></p>
-<p><del>亚人在没有取得假面的时候受到致命伤会停止行动，可在战斗结束后修复。</del></p>
-<p>实际测试之后修改</p>
-<p>这个设定还是删除了为好，永夜后日谈的战斗方式太过异质，实际跑团中发现如果使用这个设定容易太过于重视假面之人了，导致其他PL体验很差。不过实际上想使用的这个模组话需要全部推倒重做了。但姑且还是记录下来，等啥时候我传颂戒断反应发作了再写写看。</p>
-<p>背景设定改为通过对研究“祟”大和全境的亚人都获得了与之类似的特性，在完全解体前都可以继续行动，全身都能当作大脑一样思考。如果打算去别的国家战斗的话也可以加上，过了数百年没有这种特性的亚人都被大和亚人淘汰了。</p>
-<p>（不得不说传颂之物和永夜后日谈真的太像了，但是这首先是个跑团要先考虑玩家PL的体验，包括永夜的世界观也不是抓着玩家硬灌进去的。在故事中自然而然的显现才好，也不需要全部说清楚。会导致剧情发展生硬的话也大可魔改原设或者直接删除，一切顺势而为。）</p>
-<h2 id="故事开端"><a href="#故事开端" class="headerlink" title="故事开端"></a>故事开端</h2><p> PC们在一个阴暗的遗迹中的冷冻舱里苏醒，叫醒他们的是久远。 </p>
-<p>久远设定性格活泼好奇聪明但不善于算数，喜欢探索。</p>
-<p>本次便是久远在误打误撞中发现了遗迹中尚未被探索过隐藏房间，在完全不了解房间控制面板的操作方法下，幸运的开启了房间并激活里其中的设施。</p>
-<hr>
-<p><strong>导入：</strong></p>
-<p>推荐使用bgm：<a href="http://music.163.com/song?id=408440261&amp;userid=41282089" target="_blank" rel="noopener">http://music.163.com/song?id=408440261&amp;userid=41282089</a></p>
-<p> ……不知过去了多久……就像经过了千百年……终于散碎的意识开始一点一滴聚拢……你感到四肢的实感在慢慢的形成，同时像宿醉一样的头痛也涌向了你的大脑…….渐渐的你听到了他人的声音……似是在呼唤着自己……虽然不适感觉仍没有消除，但你知道自己已经准备好醒来了。</p>
-<p><strong>初始房间基础描述（这段在玩家融入气氛之后直接给）</strong>：</p>
-<p>房间里只提供了最低限度的照明，目视里的大多数东西都只是朦胧的展示出它们的轮廓，但你们仍能感觉到所处空间的有的科技感以及它的宽阔。</p>
-<p>身旁是一整列靠着墙边冷冻舱，除了与你醒来时一同开启的，也有数量不少的依然封闭着的舱门。</p>
-<p>你们身上仅有一件写着编号淡蓝的像是病号服的长袍，除此之外没有携带任何东西。</p>
-<blockquote>
-<p>主动调查房间给出的信息</p>
-<ul>
-<li>​    若总成功数为0</li>
-</ul>
-<p>你们摸黑找了存放武器装备的装置，打开后应该可以恢复角色的武装。虽然设有密码，但似乎是考虑到了应急的状况，装置的外壁使用了容易被打破的材质。</p>
-<ul>
-<li>​    若总成功数为1</li>
-</ul>
-<p>你们摸黑找了存放武器装备的装置，打开后应该可以恢复角色的武装。虽然设有密码，但似乎是考虑到了应急的状况，装置的外壁使用了容易被打破的材质。但使用这个的主人看起来记性并不是很好，写着密码的纸条就放在旁边。</p>
-<ul>
-<li><p>​    若总成功数2+</p>
-<p>你们找到了一个看上去不同寻常的面板，久远认出了上面显示的是神代文字（指远古人类使用的文字），但自己并没有办法阅读。</p>
-<p>（pc在调查面板后会有提示音说“受认证用户，已为您开放本设施内所有权限1的功能”，能使用的功能为 开启主要照明，打开武器库，自由的进出房间）</p>
-</li>
-</ul>
-</blockquote>
-<p><strong>久远会干什么：</strong></p>
-<ul>
-<li><p>久远指出外面天气很冷，pc现有的衣服不够御寒，表示自己在这里找到了一些衣服让pc恢复设定好的着装，如果设定衣物太单薄的话也可以更换。</p>
-</li>
-<li><p>久远会对因为自己一时好奇而唤醒pc表示抱歉，在这样一个陌生的时代醒了可能并不是pc想要的。</p>
-</li>
-</ul>
-<p>若pc在对话中出现“开灯”两字会打开房间里的主要照明，以及使用面板打开主要照明或者pc停留了太久。</p>
-<p>会进入下一阶段：随着一连串嗡鸣声响起，房间内充满了苍白的光线。你们发现这里与你们一同苏醒的不只有你们自己。还有各种体型巨大的凶猛野兽，并发出不详的低声嘶吼声。你们虽然被这突如其来的画面吓了一跳，但仔细观察后发现关着它们的笼子非常结实，至少绝不是一时半刻可以冲破的。正当你们松了一口气的时候，却又感觉到这些野兽并不是在戒备着自己，甚至都没有把脸朝向这里。在你视线的死角里有着更为恐怖的东西存在。</p>
-<p>推荐使用bgm：<a href="http://music.163.com/song?id=442562479&amp;userid=41282089" target="_blank" rel="noopener">http://music.163.com/song?id=442562479&amp;userid=41282089</a></p>
-<p>阴影里涌出了大量酷似史莱姆的生物，扑向了看似坚固的笼子，外侧的金属以肉眼可见的速度在被溶解。无处可逃的野兽像婴儿一样被残杀。同时也有一些史莱姆聚合成了人的头颅的样子并向你们这里靠近着，它张开着夸张的大口，用着人精神无法负担的诅咒一样的声调，似是在讲述着自己的悲苦。</p>
-<p>祟的特性是绝对不会死亡，不管烧、切、打、都会马上复活，不管怎么做都无法消灭，最多只能彻底打到它离开、或者用巨大声音或光亮来驱赶。 </p>
-<p>如此pc必须逃跑，有PC逃跑失败的话。久远则会使用闪光弹击退祟，但失败的pc增加一点狂气和破坏一个部件。</p>
-<p>逃离后给出<strong>业障karma：前往帝都</strong></p>
-<p>久远表示附近不远就有集落，可以让pc去此暂避。</p>
-<p>这次原本打算在村庄里也设定一些剧情的。但除了旅店村长屋和水车再也想不出别的东西了。也想不出这里该怎么设置合适的交互。</p>
-<p>所以设定为pc们靠近村庄后，发现右近在指挥一队人把货物装上马车。准备把货送往帝都</p>
-<p>右近对pc们保有好感很容易就能说服他带着PC们一起前往帝都。如果PC放弃了通过右近前往帝都的话，可以通过在村庄里劳动后获得报酬租借马前往帝都。</p>
-<p>最后不管用什么手段前往帝都，一定会遇到强盗的狙击，强制进入战斗单元。</p>
-<p>战斗单元<strong>业障karma：</strong></p>
-<ul>
-<li>二轮内取得胜利</li>
-<li>放跑濡鵙</li>
-</ul>
-<p><strong>舞台效果：</strong></p>
-<ul>
-<li>战斗中敌方可在奈落区域逃跑</li>
-</ul>
-<p><strong>胜利条件：</strong></p>
-<ul>
-<li>场上全所有敌方单位完全解体</li>
-</ul>
-<p>濡鵙攻击手段单一，加上没防御手段极其脆弱。破坏手臂之后几乎没有任何威胁。所以这场战斗是高恶意值的福利战斗。濡雅在己方人员战死的情况下，会尝试逃跑，撤退时机也可自行定夺。总之这个角色并不会轻易死去。但又不适合增加防御手段，可以更改部件强化韧命纸老虎的设定。</p>
-<p>战斗中途会出现大量军团奇奇利，需要设置合理的预警提示他们的到来。让奇奇利的加入更顺理成章一点，可以加入更强大的恶怖巨型奇奇利，并让怪物阵营存在自相残杀的设定。不如说就应该这样设定，但是我偷懒了。</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>射手</th>
-<th>类型：恶怖</th>
-<th>恶意：4</th>
-<th>最大行动值：8</th>
-<th>部件数：8</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>长弓</td>
-<td>行动</td>
-<td>2费</td>
-<td>2~3</td>
-<td>射击攻击1，攻击判定+1</td>
-</tr>
-<tr>
-<td>脚骨</td>
-<td>行动</td>
-<td>3费</td>
-<td>自身</td>
-<td>移动1</td>
-</tr>
-<tr>
-<td>肩膀</td>
-<td>行动</td>
-<td>4费</td>
-<td>自身</td>
-<td>移动1</td>
-</tr>
-<tr>
-<td>瞄准</td>
-<td>裁判</td>
-<td>0</td>
-<td>自身</td>
-<td>支援2</td>
-</tr>
-<tr>
-<td>脑浆</td>
-<td>常时</td>
-<td>无</td>
-<td>自身</td>
-<td>最大行动值+2</td>
-</tr>
-<tr>
-<td>死亡之手</td>
-<td>即时</td>
-<td>0</td>
-<td>自身</td>
-<td>任意一个攻击行为当成即时使用</td>
-</tr>
-<tr>
-<td>内脏</td>
-<td>常时</td>
-<td>无</td>
-<td>自身</td>
-<td>无</td>
-</tr>
-<tr>
-<td>内脏</td>
-<td>常时</td>
-<td>无</td>
-<td>自身</td>
-<td>无</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>落败武者</th>
-<th>类型：恶怖</th>
-<th>恶意：8</th>
-<th>最大行动值：13</th>
-<th>部件数：10</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>名刀</td>
-<td>行动</td>
-<td>2</td>
-<td>0</td>
-<td>白刃攻击2+切断，攻击判定骰值+1</td>
-</tr>
-<tr>
-<td>脚骨</td>
-<td>行动</td>
-<td>3</td>
-<td>自身</td>
-<td>移动1</td>
-</tr>
-<tr>
-<td>甲胄</td>
-<td>裁定</td>
-<td>0</td>
-<td>自身</td>
-<td>防御1</td>
-</tr>
-<tr>
-<td>战斗直觉</td>
-<td>常时</td>
-<td>无</td>
-<td>自身</td>
-<td>白刃攻击动作的攻击判定骰值+1</td>
-</tr>
-<tr>
-<td>肾上腺素</td>
-<td>常时</td>
-<td>无</td>
-<td>自身</td>
-<td>最大行动值+1</td>
-</tr>
-<tr>
-<td>肾上腺素</td>
-<td>常时</td>
-<td>无</td>
-<td>自身</td>
-<td>最大行动值+1</td>
-</tr>
-<tr>
-<td>心脏</td>
-<td>常时</td>
-<td>无</td>
-<td>自身</td>
-<td>最大行动值+1</td>
-</tr>
-<tr>
-<td>内脏</td>
-<td>常时</td>
-<td>无</td>
-<td>自身</td>
-<td>无</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>濡鵙</th>
-<th>类型：仆从</th>
-<th>恶意：11.5</th>
-<th>最大行动值：11</th>
-<th>部件数：5/4/6/3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>头</td>
-<td>大脑</td>
-<td>《常时／无／自身》最大行动值 ＋2</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>头</td>
-<td>眼球</td>
-<td>《常时／无／自身》最大行动值 ＋1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>头</td>
-<td>功夫</td>
-<td>《常时／无／自身》最大行动值 ＋1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>头</td>
-<td>牙齿</td>
-<td>《行动／2／0》肉搏攻击 1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>头</td>
-<td>死 人 指 挥</td>
-<td>《裁定／0／0～1》支援 2，不能 对自身使用</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>臂</td>
-<td>拳头</td>
-<td>行动／2／0》肉搏攻击 1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>臂</td>
-<td>肩膀</td>
-<td>《行动／4／自身》移动 1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>臂</td>
-<td>手腕</td>
-<td>《裁定／1／0》支援 1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>臂</td>
-<td>长斧</td>
-<td>《行动／2／0》白刃攻击 3</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>躯</td>
-<td>突进</td>
-<td>即时/1/效果参照 只能对自身的移动动作使用。移动成功的话， 从移动前或移动后的区域中选择 1 个目标，肉 搏攻击 3。</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>躯</td>
-<td>脊骨</td>
-<td>《行动／1／自身》下一刻所使 用的 1 个动作消费－1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>躯</td>
-<td>庇护</td>
-<td>《伤害／0／0～1》代替目标承 受伤害，1 轮之内可以无限使用</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>躯</td>
-<td>心脏</td>
-<td>《常时／无／自身》最大行动值 ＋1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>躯</td>
-<td>内脏</td>
-<td>《常时／无／无》无</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>躯</td>
-<td>内脏</td>
-<td>《常时／无／无》无</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>足</td>
-<td>腿骨</td>
-<td>《行动／3／自身》移动 1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>足</td>
-<td>腿骨</td>
-<td>《行动／3／自身》移动 1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>足</td>
-<td>脚掌</td>
-<td>《裁定／1／0》妨碍 1</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th><strong>奇奇利</strong></th>
-<th>恶意0.2</th>
-<th>最大行动值：8</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>钳击</td>
-<td>《行动／2／0》肉搏攻击 2＋连击 [同区域数目÷10]（舍余）</td>
-<td></td>
-</tr>
-<tr>
-<td>移动</td>
-<td>《行动／3／自身》移动 1</td>
-<td></td>
-</tr>
-<tr>
-<td>拥聚</td>
-<td>《即时／3／0》移动妨碍 1</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>总恶意47.5</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>炼狱</td>
-<td>濡鵙<em>1，落败武者</em>1</td>
-<td></td>
-</tr>
-<tr>
-<td>地狱</td>
-<td>射手*2</td>
-<td></td>
-</tr>
-<tr>
-<td>奈落</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>出现死亡之后，在剧情中稍微提及异常的产生。2刻之后，在奈落和乐园出现25只奇奇利</td>
-<td>奇奇利50</td>
-</tr>
-</tbody>
-</table>
-</div>
-]]></content>
-      <categories>
-        <category>二次元の胡话</category>
-      </categories>
-  </entry>
-  <entry>
     <title>B1056-组合数的和</title>
     <url>/2019/11/05/B1056-%E7%BB%84%E5%90%88%E6%95%B0%E7%9A%84%E5%92%8C/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 给定 N 个非 0 的个位数字，用其中任意 2 个数字都可以组合成 1 个 2 位的数字。要求所有可能组合出来的 2 位数字的和。例如给定 2、5、8，则可以组合出：25、28、52、58、82、85，它们的和为330。 </p>
@@ -7474,76 +7475,6 @@ public class PAT_B1054 {
       </tags>
   </entry>
   <entry>
-    <title>B1053- 住房空置率</title>
-    <url>/2019/11/03/B1053-%20%E4%BD%8F%E6%88%BF%E7%A9%BA%E7%BD%AE%E7%8E%87/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>在不打扰居民的前提下，统计住房空置率的一种方法是根据每户用电量的连续变化规律进行判断。判断方法如下：</p>
-<ul>
-<li>在观察期内，若存在超过一半的日子用电量低于某给定的阈值 <em>e</em>，则该住房为“可能空置”；</li>
-<li>若观察期超过某给定阈值 <em>D</em> 天，且满足上一个条件，则该住房为“空置”。</li>
-</ul>
-<p>现给定某居民区的住户用电量数据，请你统计“可能空置”的比率和“空置”比率，即以上两种状态的住房占居民区住房总套数的百分比。</p>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p>输入第一行给出正整数 <em>N</em>（≤1000），为居民区住房总套数；正实数 <em>e</em>，即低电量阈值；正整数 <em>D</em>，即观察期阈值。随后 <em>N</em> 行，每行按以下格式给出一套住房的用电量数据：</p>
-<p><em>K</em> <em>E</em>1 <em>E</em>2 … <em>E**K</em></p>
-<p>其中 <em>K</em> 为观察的天数，<em>E**i</em> 为第 <em>i</em> 天的用电量。</p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>在一行中输出“可能空置”的比率和“空置”比率的百分比值，其间以一个空格分隔，保留小数点后 1 位。 </p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
-<p>5 0.5 10<br>6 0.3 0.4 0.5 0.2 0.8 0.6<br> 10 0.0 0.1 0.2 0.3 0.0 0.8 0.6 0.7 0.0 0.5<br>5 0.4 0.3 0.5 0.1 0.7<br>11 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1<br>11 2 2 2 1 1 0.1 1 0.1 0.1 0.1 0.1</p>
-</blockquote>
-<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
-<p>40.0% 20.0%</p>
-</blockquote>
-<p> （样例解释：第2、3户为“可能空置”，第4户为“空置”，其他户不是空置。） </p>
-<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li>题目条件是低于不包含等于，判断为空置先要满足第一个条件。</li>
-</ul>
-<hr>
-<hr>
-<pre><code>import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-public class PAT_B1053 {
-    public static void main(String[] args) throws IOException { //提交时出现一次一个测试点超时，再次提交已经全部通过。
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String[] temp = br.readLine().split(&quot; &quot;);
-        int N = Integer.parseInt(temp[0]);
-        double e = Double.parseDouble(temp[1]);
-        int d = Integer.parseInt(temp[2]);
-        int maybeCount = 0,unoccupied = 0;
-        for (int i = 0; i &lt;N ; i++) {
-            String[] temp2 = br.readLine().split(&quot; &quot;);
-            int totalDay = Integer.parseInt(temp2[0]);
-            double[] powers = new double[totalDay];
-            int count = 0;
-            for (int j = 1; j &lt;=totalDay ; j++) {
-                powers[j-1] =Double.parseDouble(temp2[j]);
-                if (powers[j-1]&lt;e){
-                    count++;
-                }
-            }
-            if (count&gt;totalDay/2 &amp;&amp; totalDay&gt;d){
-                unoccupied++;
-            }else if (count&gt;totalDay/2 ){
-                maybeCount++;
-            }
-        }
-        System.out.printf(&quot;%.1f%% &quot;,(double)maybeCount/(double) N*100);
-        System.out.printf(&quot;%.1f%%&quot;,(double)unoccupied/(double) N*100);
-    }
-}
-</code></pre>]]></content>
-      <categories>
-        <category>PAT练习</category>
-      </categories>
-      <tags>
-        <tag>正则表达式</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>B1052-卖个萌</title>
     <url>/2019/11/03/B1052-%E5%8D%96%E4%B8%AA%E8%90%8C/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>萌萌哒表情符号通常由“手”、“眼”、“口”三个主要部分组成。简单起见，我们假设一个表情符号是按下列格式输出的：</p>
@@ -7644,6 +7575,76 @@ public class PAT_B1052 {
       <tags>
         <tag>正则表达式</tag>
         <tag>未AC题目</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>B1053- 住房空置率</title>
+    <url>/2019/11/03/B1053-%20%E4%BD%8F%E6%88%BF%E7%A9%BA%E7%BD%AE%E7%8E%87/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>在不打扰居民的前提下，统计住房空置率的一种方法是根据每户用电量的连续变化规律进行判断。判断方法如下：</p>
+<ul>
+<li>在观察期内，若存在超过一半的日子用电量低于某给定的阈值 <em>e</em>，则该住房为“可能空置”；</li>
+<li>若观察期超过某给定阈值 <em>D</em> 天，且满足上一个条件，则该住房为“空置”。</li>
+</ul>
+<p>现给定某居民区的住户用电量数据，请你统计“可能空置”的比率和“空置”比率，即以上两种状态的住房占居民区住房总套数的百分比。</p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p>输入第一行给出正整数 <em>N</em>（≤1000），为居民区住房总套数；正实数 <em>e</em>，即低电量阈值；正整数 <em>D</em>，即观察期阈值。随后 <em>N</em> 行，每行按以下格式给出一套住房的用电量数据：</p>
+<p><em>K</em> <em>E</em>1 <em>E</em>2 … <em>E**K</em></p>
+<p>其中 <em>K</em> 为观察的天数，<em>E**i</em> 为第 <em>i</em> 天的用电量。</p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p>在一行中输出“可能空置”的比率和“空置”比率的百分比值，其间以一个空格分隔，保留小数点后 1 位。 </p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
+<p>5 0.5 10<br>6 0.3 0.4 0.5 0.2 0.8 0.6<br> 10 0.0 0.1 0.2 0.3 0.0 0.8 0.6 0.7 0.0 0.5<br>5 0.4 0.3 0.5 0.1 0.7<br>11 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1<br>11 2 2 2 1 1 0.1 1 0.1 0.1 0.1 0.1</p>
+</blockquote>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
+<p>40.0% 20.0%</p>
+</blockquote>
+<p> （样例解释：第2、3户为“可能空置”，第4户为“空置”，其他户不是空置。） </p>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
+<li>题目条件是低于不包含等于，判断为空置先要满足第一个条件。</li>
+</ul>
+<hr>
+<hr>
+<pre><code>import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class PAT_B1053 {
+    public static void main(String[] args) throws IOException { //提交时出现一次一个测试点超时，再次提交已经全部通过。
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] temp = br.readLine().split(&quot; &quot;);
+        int N = Integer.parseInt(temp[0]);
+        double e = Double.parseDouble(temp[1]);
+        int d = Integer.parseInt(temp[2]);
+        int maybeCount = 0,unoccupied = 0;
+        for (int i = 0; i &lt;N ; i++) {
+            String[] temp2 = br.readLine().split(&quot; &quot;);
+            int totalDay = Integer.parseInt(temp2[0]);
+            double[] powers = new double[totalDay];
+            int count = 0;
+            for (int j = 1; j &lt;=totalDay ; j++) {
+                powers[j-1] =Double.parseDouble(temp2[j]);
+                if (powers[j-1]&lt;e){
+                    count++;
+                }
+            }
+            if (count&gt;totalDay/2 &amp;&amp; totalDay&gt;d){
+                unoccupied++;
+            }else if (count&gt;totalDay/2 ){
+                maybeCount++;
+            }
+        }
+        System.out.printf(&quot;%.1f%% &quot;,(double)maybeCount/(double) N*100);
+        System.out.printf(&quot;%.1f%%&quot;,(double)unoccupied/(double) N*100);
+    }
+}
+</code></pre>]]></content>
+      <categories>
+        <category>PAT练习</category>
+      </categories>
+      <tags>
+        <tag>正则表达式</tag>
       </tags>
   </entry>
   <entry>
@@ -10982,6 +10983,58 @@ public class Main {
       </tags>
   </entry>
   <entry>
+    <title>B1009-说反话</title>
+    <url>/2019/10/16/B1009-%20%E8%AF%B4%E5%8F%8D%E8%AF%9D/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 给定一句英语，要求你编写程序，将句中所有单词的顺序颠倒输出。 </p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p> 测试输入包含一个测试用例，在一行内给出总长度不超过 80 的字符串。字符串由若干单词和若干空格组成，其中单词是由英文字母（大小写有区分）组成的字符串，单词之间用 1 个空格分开，输入保证句子末尾没有多余的空格。 </p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p> 每个测试用例的输出占一行，输出倒序后的句子。 </p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
+<p>Hello World Here I Come</p>
+</blockquote>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
+<p>Come I Here World Hello</p>
+</blockquote>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
+<li>从数组末尾开始输出</li>
+<li>list.size()-i</li>
+</ul>
+<hr>
+<hr>
+<pre><code>import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
+public class PAT_B1009 {
+    public static void main(String[] args) throws IOException {
+        ArrayList&lt;String&gt; list = new ArrayList&lt;String&gt;();
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        String[] s = br.readLine().split(&quot; &quot;);
+        for (String s1 : s) {
+            list.add(s1);
+        }
+        for (int i = 1; i &lt;=list.size() ; i++) { //是要输出零索引的,size是指有多少元素比length来说会+1
+            System.out.print(list.get(list.size()- i));
+            if (i == list.size()){
+                break;
+            }
+            System.out.print(&quot; &quot;);
+        }
+    }
+}
+</code></pre>]]></content>
+      <categories>
+        <category>PAT练习</category>
+      </categories>
+      <tags>
+        <tag>字符串操作</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>B1008- 数组元素循环右移问题</title>
     <url>/2019/10/16/B1008-%20%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0%E5%BE%AA%E7%8E%AF%E5%8F%B3%E7%A7%BB%E9%97%AE%E9%A2%98%20/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p>  一个数组<em>A</em>中存有<em>N</em>（&gt;0）个整数，在不允许使用另外数组的前提下，将每个整数循环向右移<em>M</em>（≥0）个位置，即将<em>A</em>中的数据由（<em>A</em>0<em>A</em>1⋯<em>A**N</em>−1）变换为（<em>A**N</em>−<em>M</em>⋯<em>A**N</em>−1<em>A</em>0<em>A</em>1⋯<em>A**N</em>−<em>M</em>−1）（最后<em>M</em>个数循环移至最前面的<em>M</em>个位置）。如果需要考虑程序移动数据的次数尽量少，要如何设计移动的方法？</p>
@@ -11035,58 +11088,6 @@ public class PAT_B1008 {
       <categories>
         <category>PAT练习</category>
       </categories>
-  </entry>
-  <entry>
-    <title>B1009-说反话</title>
-    <url>/2019/10/16/B1009-%20%E8%AF%B4%E5%8F%8D%E8%AF%9D/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><p> 给定一句英语，要求你编写程序，将句中所有单词的顺序颠倒输出。 </p>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
-<p> 测试输入包含一个测试用例，在一行内给出总长度不超过 80 的字符串。字符串由若干单词和若干空格组成，其中单词是由英文字母（大小写有区分）组成的字符串，单词之间用 1 个空格分开，输入保证句子末尾没有多余的空格。 </p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p> 每个测试用例的输出占一行，输出倒序后的句子。 </p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
-<p>Hello World Here I Come</p>
-</blockquote>
-<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
-<p>Come I Here World Hello</p>
-</blockquote>
-<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li>从数组末尾开始输出</li>
-<li>list.size()-i</li>
-</ul>
-<hr>
-<hr>
-<pre><code>import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-
-public class PAT_B1009 {
-    public static void main(String[] args) throws IOException {
-        ArrayList&lt;String&gt; list = new ArrayList&lt;String&gt;();
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        String[] s = br.readLine().split(&quot; &quot;);
-        for (String s1 : s) {
-            list.add(s1);
-        }
-        for (int i = 1; i &lt;=list.size() ; i++) { //是要输出零索引的,size是指有多少元素比length来说会+1
-            System.out.print(list.get(list.size()- i));
-            if (i == list.size()){
-                break;
-            }
-            System.out.print(&quot; &quot;);
-        }
-    }
-}
-</code></pre>]]></content>
-      <categories>
-        <category>PAT练习</category>
-      </categories>
-      <tags>
-        <tag>字符串操作</tag>
-      </tags>
   </entry>
   <entry>
     <title>B1007-素数对猜想</title>
@@ -11377,6 +11378,98 @@ public class PAT_B1004 {
       </tags>
   </entry>
   <entry>
+    <title>B1002-我要通过！</title>
+    <url>/2019/10/08/B1002-%E6%88%91%E8%A6%81%E9%80%9A%E8%BF%87/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><blockquote>
+<p>“<strong>答案正确</strong>”是自动判题系统给出的最令人欢喜的回复。本题属于 PAT 的“<strong>答案正确</strong>”大派送 —— 只要读入的字符串满足下列条件，系统就输出“<strong>答案正确</strong>”，否则输出“<strong>答案错误</strong>”。</p>
+<p>得到“<strong>答案正确</strong>”的条件是：</p>
+<ol>
+<li><p>字符串中必须仅有 <code>P</code>、 <code>A</code>、 <code>T</code>这三种字符，不可以包含其它字符；</p>
+</li>
+<li><p>任意形如 <code>xPATx</code> 的字符串都可以获得“<strong>答案正确</strong>”，其中 <code>x</code> 或者是空字符串，或者是仅由字母 <code>A</code> 组成的字符串；</p>
+</li>
+<li><p>如果 <code>aPbTc</code> 是正确的，那么 <code>aPbATca</code> 也是正确的，其中 <code>a</code>、 <code>b</code>、 <code>c</code> 均或者是空字符串，或者是仅由字母 <code>A</code> 组成的字符串。</p>
+<p>现在就请你为 PAT 写一个自动裁判程序，判定哪些字符串是可以获得“<strong>答案正确</strong>”的。</p>
+</li>
+</ol>
+</blockquote>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
+<p>每个测试输入包含 1 个测试用例，即给出自然数 <em>n</em> 的值。这里保证 <em>n</em> 小于 10100。</p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p>每个字符串的检测结果占一行，如果该字符串可以获得“<strong>答案正确</strong>”，则输出 <code>YES</code>，否则输出 <code>NO</code>。</p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><blockquote>
+<pre class=" language-lang-in"><code class="language-lang-in">8
+PAT
+PAAT
+AAPATAA
+AAPAATAAAA
+xPATx
+PT
+Whatever
+APAAATAA
+</code></pre>
+</blockquote>
+<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><blockquote>
+<pre class=" language-lang-out"><code class="language-lang-out">YES
+YES
+YES
+YES
+NO
+NO
+NO
+NO
+</code></pre>
+<p>解题思路</p>
+<p>通过看别人的代码了解了正则表达式这个概念，题目很容易就解出来了</p>
+<p>+号为一个或多个，*号为零个或多个</p>
+<p>条件123都是在满足前置条件的扩展，一开始也是没转过弯来</p>
+</blockquote>
+<pre><code>import java.io.BufferedInputStream;
+import java.util.Scanner;
+
+public class PAT_B1003 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(new BufferedInputStream(System.in));
+        int n = Integer.parseInt(sc.nextLine());
+        String[] str = new String[11];
+        for (int i = 0; i &lt; n; i++) {
+            str[i] = sc.next();
+        }
+        for (String s : str) {
+            judge(s);
+        }
+    }
+    public static void judge(String s) {
+        String pattern = &quot;A*PA+TA*&quot;;
+        String pattern1 = &quot;PA+T&quot;;
+        if (s.matches(pattern)) {
+            if (s.matches(pattern1)) {
+                System.out.println(&quot;YES&quot;);
+            } else {
+                String temp[] = s.split(&quot;P|T&quot;);
+                int aLength = temp[0].length();
+                int bLength = temp[1].length();
+                int cLength = temp[2].length();
+                if ((cLength - aLength) / aLength == (bLength - 1)) {
+                    System.out.println(&quot;YES&quot;);
+                } else {
+                    System.out.println(&quot;NO&quot;);
+                }
+
+            }
+        } else {
+            System.out.println(&quot;NO&quot;);
+        }
+    }
+}
+</code></pre>]]></content>
+      <categories>
+        <category>PAT练习</category>
+      </categories>
+  </entry>
+  <entry>
     <title>B1003-我要通过！</title>
     <url>/2019/10/08/B1003-%E6%88%91%E8%A6%81%E9%80%9A%E8%BF%87/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><blockquote>
@@ -11471,98 +11564,6 @@ public class PAT_B1003 {
         <tag>正则表达式</tag>
         <tag>字符串操作</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>B1002-我要通过！</title>
-    <url>/2019/10/08/B1002-%E6%88%91%E8%A6%81%E9%80%9A%E8%BF%87/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <a id="more"></a></h2><blockquote>
-<p>“<strong>答案正确</strong>”是自动判题系统给出的最令人欢喜的回复。本题属于 PAT 的“<strong>答案正确</strong>”大派送 —— 只要读入的字符串满足下列条件，系统就输出“<strong>答案正确</strong>”，否则输出“<strong>答案错误</strong>”。</p>
-<p>得到“<strong>答案正确</strong>”的条件是：</p>
-<ol>
-<li><p>字符串中必须仅有 <code>P</code>、 <code>A</code>、 <code>T</code>这三种字符，不可以包含其它字符；</p>
-</li>
-<li><p>任意形如 <code>xPATx</code> 的字符串都可以获得“<strong>答案正确</strong>”，其中 <code>x</code> 或者是空字符串，或者是仅由字母 <code>A</code> 组成的字符串；</p>
-</li>
-<li><p>如果 <code>aPbTc</code> 是正确的，那么 <code>aPbATca</code> 也是正确的，其中 <code>a</code>、 <code>b</code>、 <code>c</code> 均或者是空字符串，或者是仅由字母 <code>A</code> 组成的字符串。</p>
-<p>现在就请你为 PAT 写一个自动裁判程序，判定哪些字符串是可以获得“<strong>答案正确</strong>”的。</p>
-</li>
-</ol>
-</blockquote>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><blockquote>
-<p>每个测试输入包含 1 个测试用例，即给出自然数 <em>n</em> 的值。这里保证 <em>n</em> 小于 10100。</p>
-</blockquote>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
-<p>每个字符串的检测结果占一行，如果该字符串可以获得“<strong>答案正确</strong>”，则输出 <code>YES</code>，否则输出 <code>NO</code>。</p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子:"></a>输入例子:</h3><blockquote>
-<pre class=" language-lang-in"><code class="language-lang-in">8
-PAT
-PAAT
-AAPATAA
-AAPAATAAAA
-xPATx
-PT
-Whatever
-APAAATAA
-</code></pre>
-</blockquote>
-<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><blockquote>
-<pre class=" language-lang-out"><code class="language-lang-out">YES
-YES
-YES
-YES
-NO
-NO
-NO
-NO
-</code></pre>
-<p>解题思路</p>
-<p>通过看别人的代码了解了正则表达式这个概念，题目很容易就解出来了</p>
-<p>+号为一个或多个，*号为零个或多个</p>
-<p>条件123都是在满足前置条件的扩展，一开始也是没转过弯来</p>
-</blockquote>
-<pre><code>import java.io.BufferedInputStream;
-import java.util.Scanner;
-
-public class PAT_B1003 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(new BufferedInputStream(System.in));
-        int n = Integer.parseInt(sc.nextLine());
-        String[] str = new String[11];
-        for (int i = 0; i &lt; n; i++) {
-            str[i] = sc.next();
-        }
-        for (String s : str) {
-            judge(s);
-        }
-    }
-    public static void judge(String s) {
-        String pattern = &quot;A*PA+TA*&quot;;
-        String pattern1 = &quot;PA+T&quot;;
-        if (s.matches(pattern)) {
-            if (s.matches(pattern1)) {
-                System.out.println(&quot;YES&quot;);
-            } else {
-                String temp[] = s.split(&quot;P|T&quot;);
-                int aLength = temp[0].length();
-                int bLength = temp[1].length();
-                int cLength = temp[2].length();
-                if ((cLength - aLength) / aLength == (bLength - 1)) {
-                    System.out.println(&quot;YES&quot;);
-                } else {
-                    System.out.println(&quot;NO&quot;);
-                }
-
-            }
-        } else {
-            System.out.println(&quot;NO&quot;);
-        }
-    }
-}
-</code></pre>]]></content>
-      <categories>
-        <category>PAT练习</category>
-      </categories>
   </entry>
   <entry>
     <title>B1002-写出这个数</title>
@@ -12282,7 +12283,7 @@ public class Second_1005_2 {
 <pre><code>&lt;https://soulflower.gitee.io&gt;
 &lt;theyyx@foxmail.com&gt;
 </code></pre><p><u>效果如下：</u></p>
-<p><a href="https://soulflower.gitee.io" target="_blank" rel="noopener">https://soulflower.gitee.io</a><br><a href="&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#116;&#x68;&#101;&#x79;&#121;&#x78;&#x40;&#x66;&#111;&#x78;&#x6d;&#97;&#105;&#108;&#x2e;&#99;&#x6f;&#109;">&#116;&#x68;&#101;&#x79;&#121;&#x78;&#x40;&#x66;&#111;&#x78;&#x6d;&#97;&#105;&#108;&#x2e;&#99;&#x6f;&#109;</a> </p>
+<p><a href="https://soulflower.gitee.io" target="_blank" rel="noopener">https://soulflower.gitee.io</a><br><a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#x6f;&#58;&#x74;&#104;&#101;&#x79;&#x79;&#120;&#x40;&#x66;&#x6f;&#120;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#x74;&#104;&#101;&#x79;&#x79;&#120;&#x40;&#x66;&#x6f;&#120;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a> </p>
 <h3 id="6-3脚注"><a href="#6-3脚注" class="headerlink" title="6.3脚注"></a>6.3脚注</h3><p>脚注是对文本的补充说明。</p>
 <p>Markdown脚注的格式如下：</p>
 <pre><code>[^要注明的文本]：
