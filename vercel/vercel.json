@@ -1,0 +1,7 @@
+{
+  "name": "blog",
+  "version": 2,
+  "routes": [
+    {"src": "/(.*)","dest": "https://now.shelterz.cn/$1"}
+  ]
+}
