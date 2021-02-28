@@ -3,9 +3,8 @@
 <html lang="zh-CN">
 
 <head><meta name="generator" content="Hexo 3.9.0">
-
   
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><title>Markdown语法整理 - 还在建设的避风港</title>
+  <title>Markdown语法整理 - 还在建设的避风港</title>
   <meta charset="UTF-8">
   <meta name="description" content="null">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -24,13 +23,22 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown语法整理">
 <meta name="twitter:description" content="前言作为一个新进程序员，">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?v=233" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?v=233" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css">
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_ve9ssenvvno.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1611474898144">
+  <link rel="stylesheet" href="/css/style.css?v=1614483386778">
   
-   
+    <script>
+    document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState == 'hidden') {
+        normal_title = document.title;
+        document.title = '我在这呢≥ ω ≤';
+    } else document.title = normal_title;
+});
+
+	 
     <style>
       .nexmoe-avatar img:hover {
         -webkit-transform: rotateZ(360deg);
@@ -39,22 +47,11 @@
       }	
     </style>
   
-  
-  <script>
-    document.addEventListener('visibilitychange', function () {
-    if (document.visibilityState == 'hidden') {
-        normal_title = document.title;
-        document.title = '我在这呢≥ ω ≤';
-    } else document.title = normal_title;
-});
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-
-
 <link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
 
 <body class="mdui-drawer-body-left">
   
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="nexmoe-background">
+  <div id="nexmoe-background">
     <div class="nexmoe-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QY5QSK.512q5xd2mt00.jpg)"></div>
     <div class="mdui-appbar mdui-shadow-0">
       <div class="mdui-toolbar">
@@ -69,7 +66,7 @@
       <div class="nexmoe-drawer mdui-drawer" id="drawer">
     <div class="nexmoe-avatar mdui-ripple">
         <a href="/" title="A_zao">
-            <img src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/57LtVReQg2ANsaX.5sw3t0dqf980.jpg" alt="A_zao">
+            <img src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/57LtVReQg2ANsaX.5sw3t0dqf980.jpg" alt="A_zao" alt="A_zao">
         </a>
     </div>
     <div class="nexmoe-count">
@@ -203,6 +200,7 @@
         &copy; 2021 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        
     </div>
 </div><!-- .nexmoe-drawer -->
   </div>
@@ -227,7 +225,10 @@
       <div class="nexmoe-fixed">
         <div class="nexmoe-valign">
             <div class="nexmoe-toc">
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-标题"><span class="toc-number">1.1.</span> <span class="toc-text">1.标题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#这是一级标题"><span class="toc-number">2.</span> <span class="toc-text">这是一级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#这是二级标题"><span class="toc-number">2.1.</span> <span class="toc-text">这是二级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#这是三级标题"><span class="toc-number">2.1.1.</span> <span class="toc-text">这是三级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#这是四级标题"><span class="toc-number">2.1.1.1.</span> <span class="toc-text">这是四级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#这是五级标题"><span class="toc-number">2.1.1.1.1.</span> <span class="toc-text">这是五级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#这是六级标题"><span class="toc-number">2.1.1.1.1.1.</span> <span class="toc-text">这是六级标题</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-字体"><span class="toc-number">2.2.</span> <span class="toc-text">2.字体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-分隔线"><span class="toc-number">2.3.</span> <span class="toc-text">3.分隔线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">2.4.</span> <span class="toc-text">**</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-锚点"><span class="toc-number">2.5.</span> <span class="toc-text">4.锚点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-引用"><span class="toc-number">2.6.</span> <span class="toc-text">5.引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-超链接"><span class="toc-number">2.7.</span> <span class="toc-text">6.超链接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1行内式"><span class="toc-number">2.7.1.</span> <span class="toc-text">6.1行内式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2自动链接"><span class="toc-number">2.7.2.</span> <span class="toc-text">6.2自动链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3脚注"><span class="toc-number">2.7.3.</span> <span class="toc-text">6.3脚注</span></a></li></ol></li></ol></li></ol>
+                
+                
+                  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-标题"><span class="toc-number">1.1.</span> <span class="toc-text">1.标题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#这是一级标题"><span class="toc-number">2.</span> <span class="toc-text">这是一级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#这是二级标题"><span class="toc-number">2.1.</span> <span class="toc-text">这是二级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#这是三级标题"><span class="toc-number">2.1.1.</span> <span class="toc-text">这是三级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#这是四级标题"><span class="toc-number">2.1.1.1.</span> <span class="toc-text">这是四级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#这是五级标题"><span class="toc-number">2.1.1.1.1.</span> <span class="toc-text">这是五级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#这是六级标题"><span class="toc-number">2.1.1.1.1.1.</span> <span class="toc-text">这是六级标题</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-字体"><span class="toc-number">2.2.</span> <span class="toc-text">2.字体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-分隔线"><span class="toc-number">2.3.</span> <span class="toc-text">3.分隔线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">2.4.</span> <span class="toc-text">**</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-锚点"><span class="toc-number">2.5.</span> <span class="toc-text">4.锚点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-引用"><span class="toc-number">2.6.</span> <span class="toc-text">5.引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-超链接"><span class="toc-number">2.7.</span> <span class="toc-text">6.超链接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1行内式"><span class="toc-number">2.7.1.</span> <span class="toc-text">6.1行内式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2自动链接"><span class="toc-number">2.7.2.</span> <span class="toc-text">6.2自动链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3脚注"><span class="toc-number">2.7.3.</span> <span class="toc-text">6.3脚注</span></a></li></ol></li></ol></li></ol>
+                
             </div>
         </div>
       </div>
@@ -327,7 +328,7 @@
 <pre><code>&lt;https://soulflower.gitee.io&gt;
 &lt;theyyx@foxmail.com&gt;
 </code></pre><p><u>效果如下：</u></p>
-<p><a href="https://soulflower.gitee.io" target="_blank" rel="noopener">https://soulflower.gitee.io</a><br><a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#116;&#x68;&#x65;&#121;&#x79;&#120;&#x40;&#x66;&#x6f;&#x78;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;">&#116;&#x68;&#x65;&#121;&#x79;&#120;&#x40;&#x66;&#x6f;&#x78;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;</a> </p>
+<p><a href="https://soulflower.gitee.io" target="_blank" rel="noopener">https://soulflower.gitee.io</a><br><a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#116;&#104;&#x65;&#121;&#121;&#x78;&#x40;&#x66;&#111;&#120;&#109;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#116;&#104;&#x65;&#121;&#121;&#x78;&#x40;&#x66;&#111;&#120;&#109;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;</a> </p>
 <h3 id="6-3脚注"><a href="#6-3脚注" class="headerlink" title="6.3脚注"></a>6.3脚注</h3><p>脚注是对文本的补充说明。</p>
 <p>Markdown脚注的格式如下：</p>
 <pre><code>[^要注明的文本]：
@@ -341,7 +342,7 @@
 <sup>foot</sup>. 这里是<strong>脚注2</strong>的<em>内容</em>.<a href="#reffn_foot" title="Jump back to footnote [foot] in the text."> &#8617;</a>
 </blockquote>
 
-  </article>
+  
 
   
     
@@ -377,9 +378,18 @@
 </script>
 </section>
   </div>
-</div>
-    </div>
-  </div>
+
+        <div class="nexmoe-post-right">
+          
+            <div class="nexmoe-fixed">
+              <div class="nexmoe-tool">
+                <a href="#"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-top">top</i></button></a>
+              </div>
+            </div>
+          
+        </div>
+    
+  
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
 <script>
 	hljs.initHighlightingOnLoad();
@@ -390,7 +400,15 @@
 
 
 <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
- <script src="/js/app.js?v=1611474898162"></script>
+ <script src="/js/app.js?v=1614483386797"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
+</script>
 
   
 
@@ -414,8 +432,8 @@
 </script>
 <!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
-</body>
 
-</html>
+
+</head></html>

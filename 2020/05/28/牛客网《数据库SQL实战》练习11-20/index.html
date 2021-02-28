@@ -3,9 +3,8 @@
 <html lang="zh-CN">
 
 <head><meta name="generator" content="Hexo 3.9.0">
-
   
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><title>牛客网《数据库SQL实战》练习11-20 - 还在建设的避风港</title>
+  <title>牛客网《数据库SQL实战》练习11-20 - 还在建设的避风港</title>
   <meta charset="UTF-8">
   <meta name="description" content="null">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -25,13 +24,22 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="牛客网《数据库SQL实战》练习11-20">
 <meta name="twitter:description" content="做了10题之后也能够自己动手了，别人讨论还是会看，不同的解法也是继续记录下来学习。">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?v=233" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?v=233" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css">
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_ve9ssenvvno.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1611474895656">
+  <link rel="stylesheet" href="/css/style.css?v=1614483381695">
   
-   
+    <script>
+    document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState == 'hidden') {
+        normal_title = document.title;
+        document.title = '我在这呢≥ ω ≤';
+    } else document.title = normal_title;
+});
+
+	 
     <style>
       .nexmoe-avatar img:hover {
         -webkit-transform: rotateZ(360deg);
@@ -40,22 +48,11 @@
       }	
     </style>
   
-  
-  <script>
-    document.addEventListener('visibilitychange', function () {
-    if (document.visibilityState == 'hidden') {
-        normal_title = document.title;
-        document.title = '我在这呢≥ ω ≤';
-    } else document.title = normal_title;
-});
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-
-
 <link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
 
 <body class="mdui-drawer-body-left">
   
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="nexmoe-background">
+  <div id="nexmoe-background">
     <div class="nexmoe-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QY5QSK.512q5xd2mt00.jpg)"></div>
     <div class="mdui-appbar mdui-shadow-0">
       <div class="mdui-toolbar">
@@ -70,7 +67,7 @@
       <div class="nexmoe-drawer mdui-drawer" id="drawer">
     <div class="nexmoe-avatar mdui-ripple">
         <a href="/" title="A_zao">
-            <img src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/57LtVReQg2ANsaX.5sw3t0dqf980.jpg" alt="A_zao">
+            <img src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/57LtVReQg2ANsaX.5sw3t0dqf980.jpg" alt="A_zao" alt="A_zao">
         </a>
     </div>
     <div class="nexmoe-count">
@@ -204,6 +201,7 @@
         &copy; 2021 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        
     </div>
 </div><!-- .nexmoe-drawer -->
   </div>
@@ -228,7 +226,10 @@
       <div class="nexmoe-fixed">
         <div class="nexmoe-valign">
             <div class="nexmoe-toc">
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#11-获取所有员工当前的manager"><span class="toc-number">1.</span> <span class="toc-text">11.获取所有员工当前的manager</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-获取所有部门中当前员工薪水最高的相关信息"><span class="toc-number">2.</span> <span class="toc-text">12.获取所有部门中当前员工薪水最高的相关信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-从titles表获取按照title进行分组"><span class="toc-number">3.</span> <span class="toc-text">13.从titles表获取按照title进行分组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-从titles表获取按照title进行分组，注意对于重复的emp-no进行忽略"><span class="toc-number">4.</span> <span class="toc-text">14.从titles表获取按照title进行分组，注意对于重复的emp_no进行忽略</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-查找employees表"><span class="toc-number">5.</span> <span class="toc-text">15.查找employees表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-统计出当前各个title类型对应的员工当前薪水对应的平均工资"><span class="toc-number">6.</span> <span class="toc-text">16.统计出当前各个title类型对应的员工当前薪水对应的平均工资</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-获取当前薪水第二多的员工的emp-no以及其对应的薪水salary"><span class="toc-number">7.</span> <span class="toc-text">17.获取当前薪水第二多的员工的emp_no以及其对应的薪水salary</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-获取当前薪水第二多的员工的emp-no以及其对应的薪水salary"><span class="toc-number">8.</span> <span class="toc-text">18.获取当前薪水第二多的员工的emp_no以及其对应的薪水salary</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-查找所有员工的last-name和first-name以及对应的dept-name"><span class="toc-number">9.</span> <span class="toc-text">19.查找所有员工的last_name和first_name以及对应的dept_name</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20-查找员工编号emp-no为10001其自入职以来的薪水salary涨幅-总共涨了多少-growth"><span class="toc-number">10.</span> <span class="toc-text">20.查找员工编号emp_no为10001其自入职以来的薪水salary涨幅(总共涨了多少)growth</span></a></li></ol>
+                
+                
+                  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#11-获取所有员工当前的manager"><span class="toc-number">1.</span> <span class="toc-text">11.获取所有员工当前的manager</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-获取所有部门中当前员工薪水最高的相关信息"><span class="toc-number">2.</span> <span class="toc-text">12.获取所有部门中当前员工薪水最高的相关信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-从titles表获取按照title进行分组"><span class="toc-number">3.</span> <span class="toc-text">13.从titles表获取按照title进行分组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-从titles表获取按照title进行分组，注意对于重复的emp-no进行忽略"><span class="toc-number">4.</span> <span class="toc-text">14.从titles表获取按照title进行分组，注意对于重复的emp_no进行忽略</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-查找employees表"><span class="toc-number">5.</span> <span class="toc-text">15.查找employees表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-统计出当前各个title类型对应的员工当前薪水对应的平均工资"><span class="toc-number">6.</span> <span class="toc-text">16.统计出当前各个title类型对应的员工当前薪水对应的平均工资</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-获取当前薪水第二多的员工的emp-no以及其对应的薪水salary"><span class="toc-number">7.</span> <span class="toc-text">17.获取当前薪水第二多的员工的emp_no以及其对应的薪水salary</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-获取当前薪水第二多的员工的emp-no以及其对应的薪水salary"><span class="toc-number">8.</span> <span class="toc-text">18.获取当前薪水第二多的员工的emp_no以及其对应的薪水salary</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-查找所有员工的last-name和first-name以及对应的dept-name"><span class="toc-number">9.</span> <span class="toc-text">19.查找所有员工的last_name和first_name以及对应的dept_name</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20-查找员工编号emp-no为10001其自入职以来的薪水salary涨幅-总共涨了多少-growth"><span class="toc-number">10.</span> <span class="toc-text">20.查找员工编号emp_no为10001其自入职以来的薪水salary涨幅(总共涨了多少)growth</span></a></li></ol>
+                
             </div>
         </div>
       </div>
@@ -677,7 +678,7 @@
 <p>看到第二种方法查了一下可不可以用limit获取最后一个数据，发现只能用逆序来，那就重新写一遍了</p>
 </blockquote>
 
-  </article>
+  
 
   
     
@@ -715,9 +716,18 @@
 </script>
 </section>
   </div>
-</div>
-    </div>
-  </div>
+
+        <div class="nexmoe-post-right">
+          
+            <div class="nexmoe-fixed">
+              <div class="nexmoe-tool">
+                <a href="#"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-top">top</i></button></a>
+              </div>
+            </div>
+          
+        </div>
+    
+  
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
 <script>
 	hljs.initHighlightingOnLoad();
@@ -728,7 +738,15 @@
 
 
 <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
- <script src="/js/app.js?v=1611474895679"></script>
+ <script src="/js/app.js?v=1614483381718"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
+</script>
 
   
 
@@ -752,8 +770,8 @@
 </script>
 <!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
-</body>
 
-</html>
+
+</head></html>
