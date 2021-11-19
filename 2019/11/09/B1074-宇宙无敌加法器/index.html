@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+    
+    <title>B1074-宇宙无敌加法器 - 还在建设的避风港</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="null">
+    <meta name="keywords" content="null">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    
+    
+
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QQ图片20200309200651.2slbp7k6zx40.jpg" type="image/x-icon" />
+    <meta name="description" content="题目描述">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B1074-宇宙无敌加法器">
+<meta property="og:url" content="https://shelterz.cn/2019/11/09/B1074-%E5%AE%87%E5%AE%99%E6%97%A0%E6%95%8C%E5%8A%A0%E6%B3%95%E5%99%A8/index.html">
+<meta property="og:site_name" content="还在建设的避风港">
+<meta property="og:description" content="题目描述">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-11-09T00:34:12.000Z">
+<meta property="article:modified_time" content="2021-01-18T07:24:40.514Z">
+<meta property="article:author" content="A_zao">
+<meta property="article:tag" content="字符串操作">
+<meta property="article:tag" content="正则表达式">
+<meta name="twitter:card" content="summary">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
+    <link rel="stylesheet" href="/css/style.css?v=1637337896185">
+     
+    
+        <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
+    
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637337896185">
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="mdui-drawer-body-left">
+    
+    <div id="nexmoe-background">
+        <div class="nexmoe-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QY5QSK.512q5xd2mt00.jpg)"></div>
+        <div class="mdui-appbar mdui-shadow-0">
+            <div class="mdui-toolbar">
+                <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+                <div class="mdui-toolbar-spacer"></div>
+                <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+                <a href="/" title="A_zao" class="mdui-btn mdui-btn-icon"><img src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/57LtVReQg2ANsaX.5sw3t0dqf980.jpg" alt="A_zao"></a>
+            </div>
+        </div>
+    </div>
+    <div id="nexmoe-header">
+        <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="A_zao">
+            <img src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/57LtVReQg2ANsaX.5sw3t0dqf980.jpg" alt="A_zao" alt="A_zao">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>124</div>
+        <div><span>标签</span>26</div>
+        <div><span>分类</span>5</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/archive.html" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about.html" title="关于我">
+            <i class="mdui-list-item-icon nexmoefont icon-guanyu"></i>
+            <div class="mdui-list-item-content">
+                关于我
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/PY.html" title="单向朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-menu"></i>
+            <div class="mdui-list-item-content">
+                单向朋友
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        
+            <form id="search_form">
+                <label><input class="st-default-search-input" id="search_value" name="q" type="search" placeholder="搜索" style="
+                    font-size: 15px !important;
+                    height: 56px !important;
+                    background-image: none;
+                "></label>
+            </form>
+         
+    </div>
+</div>
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/378156" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-CN_bilibiliB"></i>
+        </a><a class="mdui-ripple" href="https://github.com/Azao-saya" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a><a class="mdui-ripple" href="https://steamcommunity.com/id/oounit/" target="_blank" mdui-tooltip="{content: 'Steam'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-steam"></i>
+        </a><a class="mdui-ripple" href="https://t.me/shelterz" target="_blank" mdui-tooltip="{content: 'Telegram'}" style="color: rgb(0,191,255);background-color: rgba(0,191,255, .15);">
+            <i class="nexmoefont icon-telegram"></i>
+        </a><a class="mdui-ripple" href="https://music.163.com/#/user/home?id=41282089" target="_blank" mdui-tooltip="{content: 'CloudMusic'}" style="color: rgb(255,106,106);background-color: rgba(255,106,106, .15);">
+            <i class="nexmoefont icon-netease-cloud-music-line"></i>
+        </a>
+    </div>
+</div>
+    
+    
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/PAT练习/">PAT练习</a>
+          <span class="category-list-count">106</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/二次元の胡话/">二次元の胡话</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/云笔记/">云笔记</a>
+          <span class="category-list-count">10</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/折腾/">折腾</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/生活感悟/">生活感悟</a>
+          <span class="category-list-count">4</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+    
+    
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/ASCII/" style="font-size: 15.71px;">ASCII</a> <a href="/tags/BigDeciaml-toPlainString/" style="font-size: 10px;">BigDeciaml&toPlainString</a> <a href="/tags/BigInteger/" style="font-size: 10px;">BigInteger</a> <a href="/tags/HashMap/" style="font-size: 14.29px;">HashMap</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/LinkedHashSet/" style="font-size: 11.43px;">LinkedHashSet</a> <a href="/tags/MySql/" style="font-size: 12.86px;">MySql</a> <a href="/tags/TreeSet/" style="font-size: 10px;">TreeSet</a> <a href="/tags/compare/" style="font-size: 15.71px;">compare</a> <a href="/tags/implements/" style="font-size: 10px;">implements</a> <a href="/tags/reverse/" style="font-size: 12.86px;">reverse</a> <a href="/tags/sort/" style="font-size: 11.43px;">sort</a> <a href="/tags/stack%E6%95%B0%E7%BB%84/" style="font-size: 10px;">stack数组</a> <a href="/tags/try-catch/" style="font-size: 12.86px;">try/catch</a> <a href="/tags/%E5%81%B7%E5%AD%A6%E6%9F%B3%E7%A5%9E%E7%9A%84%E5%B8%85%E6%B0%94%E4%BB%A3%E7%A0%81/" style="font-size: 12.86px;">偷学柳神的帅气代码</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">博客</a> <a href="/tags/%E5%8F%82%E5%8A%A0%E7%9A%84%E8%80%83%E8%AF%95/" style="font-size: 10px;">参加的考试</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/" style="font-size: 18.57px;">字符串操作</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%AB%98%E7%AB%AF%E6%93%8D%E4%BD%9C/" style="font-size: 11.43px;">字符串高端操作</a> <a href="/tags/%E6%9C%AAAC%E9%A2%98%E7%9B%AE/" style="font-size: 17.14px;">未AC题目</a> <a href="/tags/%E6%9E%81%E5%85%B6%E9%9D%9E%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" style="font-size: 10px;">极其非面向对象</a> <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" style="font-size: 20px;">正则表达式</a> <a href="/tags/%E7%A5%96%E4%BC%A0%E5%B1%8E%E5%B1%B1%E4%BB%A3%E7%A0%81/" style="font-size: 14.29px;">祖传屎山代码</a> <a href="/tags/%E8%87%AA%E8%80%83/" style="font-size: 11.43px;">自考</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 11.43px;">计算机网络</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 10px;">链表</a>
+    </div>
+    
+  </div>
+
+    
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2021 A_zao
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        
+    </div>
+</div><!-- .nexmoe-drawer -->
+    </div>
+    <div id="nexmoe-content">
+        <div class="nexmoe-primary">
+            <div class="nexmoe-post">
+
+  <article>
+      
+          <div class="nexmoe-post-cover" style="padding-bottom: NaN%;"> 
+              <img data-src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/id=55325876(loundraw).78z228rx71o0.jpg" data-sizes="auto" alt="B1074-宇宙无敌加法器" class="lazyload">
+              <h1>B1074-宇宙无敌加法器</h1>
+          </div>
+      
+      
+      <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年11月09日</a>
+    <a><i class="nexmoefont icon-areachart"></i>947 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 4 分钟</a>
+</div>
+
+      
+
+      <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <span id="more"></span></h2><p>地球人习惯使用十进制数，并且默认一个数字的每一位都是十进制的。而在 PAT 星人开挂的世界里，每个数字的每一位都是不同进制的，这种神奇的数字称为“PAT数”。每个 PAT 星人都必须熟记各位数字的进制表，例如“……0527”就表示最低位是 7 进制数、第 2 位是 2 进制数、第 3 位是 5 进制数、第 4 位是 10 进制数，等等。每一位的进制 d 或者是 0（表示十进制）、或者是 [2，9] 区间内的整数。理论上这个进制表应该包含无穷多位数字，但从实际应用出发，PAT 星人通常只需要记住前 20 位就够用了，以后各位默认为 10 进制。</p>
+<p>在这样的数字系统中，即使是简单的加法运算也变得不简单。例如对应进制表“0527”，该如何计算“6203 + 415”呢？我们得首先计算最低位：3 + 5 = 8；因为最低位是 7 进制的，所以我们得到 1 和 1 个进位。第 2 位是：0 + 1 + 1（进位）= 2；因为此位是 2 进制的，所以我们得到 0 和 1 个进位。第 3 位是：2 + 4 + 1（进位）= 7；因为此位是 5 进制的，所以我们得到 2 和 1 个进位。第 4 位是：6 + 1（进位）= 7；因为此位是 10 进制的，所以我们就得到 7。最后我们得到：6203 + 415 = 7201。</p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p>输入首先在第一行给出一个 N 位的进制表（0 &lt; N ≤ 20），以回车结束。 随后两行，每行给出一个不超过 N 位的非负的 PAT 数。 </p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p>在一行中输出两个 PAT 数之和。 </p>
+</blockquote>
+<h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
+<p>30527<br>06203<br>415</p>
+</blockquote>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
+<p>7201</p>
+</blockquote>
+<blockquote>
+</blockquote>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
+<li>StringBuilder的.insert()是在某个位置插入输入的内容，为0的话就是一直在前面插入，达到逆序。</li>
+<li>相加时会有三种情况</li>
+<li>第一串数字已经没有数字只加第二串，第二串数字已经没有数字只加第一串，第一串第二串都还有数字两个数字想加</li>
+<li>把和按照进制取余，若有余数则进一位，下次的和额外+1。判断是取余后得到数是否小于原来的和，小于则是有余数。</li>
+<li>这里写的不太严谨，直接拿最初的和来对比了，应该是可能+1后的和来对比。</li>
+<li>不过代码是ac的，好程序和ac确实是两个概念。听说有人是在摸索出测试用例直接特判输出来达到ac。</li>
+<li>只能说太强了。</li>
+<li>最后的正则表达式为删除最前面的所有零，用^0+或者^0*都可以</li>
+<li>最后的最后如果ans是空串了，即和为零但最开始的零全部会被删除。则自行输出零</li>
+</ul>
+<hr>
+<hr>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">import java.io.BufferedReader;<br>import java.io.IOException;<br>import java.io.InputStreamReader;<br><br>public <span class="hljs-keyword">class</span> PAT_B1074 &#123;<br>    public static void main(String<span class="hljs-literal">[]</span> args) throws IOException &#123; <span class="hljs-comment">//以为简单的题坑也太多了</span><br>        BufferedReader br = <span class="hljs-keyword">new</span> <span class="hljs-constructor">BufferedReader(<span class="hljs-params">new</span> InputStreamReader(System.<span class="hljs-params">in</span>)</span>);<br>        String system = br.read<span class="hljs-constructor">Line()</span>;<br>        String num1 = br.read<span class="hljs-constructor">Line()</span>;<br>        String num2 = br.read<span class="hljs-constructor">Line()</span>;<br>        StringBuilder sb = <span class="hljs-keyword">new</span> <span class="hljs-constructor">StringBuilder()</span>;<br>        <span class="hljs-built_in">int</span> increase = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = num1.length<span class="hljs-literal">()</span>-<span class="hljs-number">1</span>, j = system.length<span class="hljs-literal">()</span>-<span class="hljs-number">1</span>,k = num2.length<span class="hljs-literal">()</span>-<span class="hljs-number">1</span>;(i &gt;=<span class="hljs-number">0</span><span class="hljs-operator"> || </span>k&gt;=<span class="hljs-number">0</span>)<span class="hljs-operator"> &amp;&amp; </span>j&gt;=<span class="hljs-number">0</span> ;i--,j--,k--) &#123;<br>            <span class="hljs-built_in">int</span> systemT = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span>parse<span class="hljs-constructor">Int(String.<span class="hljs-params">valueOf</span>(<span class="hljs-params">system</span>.<span class="hljs-params">charAt</span>(<span class="hljs-params">j</span>)</span>));<br>            <span class="hljs-keyword">if</span> (systemT==<span class="hljs-number">0</span>)&#123;<br>                systemT =<span class="hljs-number">10</span>;<br>            &#125;<br>            <span class="hljs-built_in">int</span> sum = <span class="hljs-number">0</span>;<br>            <span class="hljs-keyword">if</span> (k &lt;<span class="hljs-number">0</span>)&#123;<br>                sum = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span>parse<span class="hljs-constructor">Int(String.<span class="hljs-params">valueOf</span>(<span class="hljs-params">num1</span>.<span class="hljs-params">charAt</span>(<span class="hljs-params">i</span>)</span>));<br>            &#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(i &lt;<span class="hljs-number">0</span>) &#123;<br>                sum = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span>parse<span class="hljs-constructor">Int(String.<span class="hljs-params">valueOf</span>(<span class="hljs-params">num2</span>.<span class="hljs-params">charAt</span>(<span class="hljs-params">k</span>)</span>));<br>            &#125;<span class="hljs-keyword">else</span> &#123;<br>                sum = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span>parse<span class="hljs-constructor">Int(String.<span class="hljs-params">valueOf</span>(<span class="hljs-params">num1</span>.<span class="hljs-params">charAt</span>(<span class="hljs-params">i</span>)</span>))+<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span>parse<span class="hljs-constructor">Int(String.<span class="hljs-params">valueOf</span>(<span class="hljs-params">num2</span>.<span class="hljs-params">charAt</span>(<span class="hljs-params">k</span>)</span>));<br>            &#125;<br>            <span class="hljs-built_in">int</span> temp2 = (sum+increase) % systemT;<br>            <span class="hljs-keyword">if</span> (temp2 &lt;sum)&#123;<br>                increase = <span class="hljs-number">1</span>;<br>            &#125;<span class="hljs-keyword">else</span> &#123;<br>                increase = <span class="hljs-number">0</span>;<br>            &#125;<br>            sb.insert(<span class="hljs-number">0</span>,temp2);<br>        &#125;<br>        <span class="hljs-keyword">if</span> (increase==<span class="hljs-number">1</span>)&#123;<br>            sb.insert(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>);<br>        &#125;<br>        String ans = sb.<span class="hljs-keyword">to</span><span class="hljs-constructor">String()</span>.replace<span class="hljs-constructor">All(<span class="hljs-string">&quot;^0*&quot;</span>, <span class="hljs-string">&quot;&quot;</span>)</span>;<br>        <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.println(ans.length<span class="hljs-literal">()</span> &lt; <span class="hljs-number">1</span> ? <span class="hljs-number">0</span> : ans);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>本文作者：</strong>A_zao<br>
+        <strong>本文链接：</strong><a href="https://shelterz.cn/2019/11/09/B1074-%E5%AE%87%E5%AE%99%E6%97%A0%E6%95%8C%E5%8A%A0%E6%B3%95%E5%99%A8/" title="https:&#x2F;&#x2F;shelterz.cn&#x2F;2019&#x2F;11&#x2F;09&#x2F;B1074-%E5%AE%87%E5%AE%99%E6%97%A0%E6%95%8C%E5%8A%A0%E6%B3%95%E5%99%A8&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;shelterz.cn&#x2F;2019&#x2F;11&#x2F;09&#x2F;B1074-%E5%AE%87%E5%AE%99%E6%97%A0%E6%95%8C%E5%8A%A0%E6%B3%95%E5%99%A8&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT%E7%BB%83%E4%B9%A0/">PAT练习</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/" rel="tag">字符串操作</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" rel="tag">正则表达式</a>
+    
+</div>
+
+  
+      <div class="nexmoe-post-footer">
+          <section class="nexmoe-comment">
+    <div class="valine"></div>
+<script src='https://cdn.jsdelivr.net/npm/valine'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: 'Hu82lUrzzotgQle16bso7yt4-gzGzoHsz',
+        appKey: '4pR1jAqK6tEro4BOKFNqRtrH'
+    })
+</script>
+</section>
+      </div>
+  
+</div>
+            <div class="nexmoe-post-right">
+              <div class="nexmoe-fixed">
+                  <div class="nexmoe-tool"> 
+                    
+                      
+                        
+                          
+                          
+                              <button class="mdui-fab catalog" style="overflow:unset;">
+                                  <i class="nexmoefont icon-i-catalog"></i>
+                                  <div class="nexmoe-toc">
+                                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">题目描述 </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0"><span class="toc-number">2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0"><span class="toc-number">3.</span> <span class="toc-text">输出描述:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5"><span class="toc-number">3.1.</span> <span class="toc-text">输入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA"><span class="toc-number">3.2.</span> <span class="toc-text">输出</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF%EF%BC%9A"><span class="toc-number">4.</span> <span class="toc-text">解题思路：</span></a></li></ol>
+                                  </div>
+                              </button>
+                          
+                          
+                      
+                    
+                      <a href="#nexmoe-content" class="toc-link" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+     
+    <div id="nexmoe-search-space">
+        <div class="search-container">
+            <div class="search-header">
+                <div class="search-input-container">
+                    <input class="search-input" type="text" placeholder="搜索" oninput="sinput();">
+                </div>
+                <a class="search-close" onclick="sclose();">×</a>
+            </div>
+            <div class="search-body"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+ 
+
+<script async src="/js/app.js?v=1637337896191"></script>
+
+
+	<script async src="/js/search.js?v=1637337896191"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
+</script>
+
+
+    
+
+
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+
+</html>

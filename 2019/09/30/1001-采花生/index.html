@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+    
+    <title>1001-采花生 - 还在建设的避风港</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="null">
+    <meta name="keywords" content="null">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    
+    
+
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QQ图片20200309200651.2slbp7k6zx40.jpg" type="image/x-icon" />
+    <meta name="description" content="题目描述">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1001-采花生">
+<meta property="og:url" content="https://shelterz.cn/2019/09/30/1001-%E9%87%87%E8%8A%B1%E7%94%9F/index.html">
+<meta property="og:site_name" content="还在建设的避风港">
+<meta property="og:description" content="题目描述">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-09-29T16:53:52.000Z">
+<meta property="article:modified_time" content="2021-01-16T15:26:15.746Z">
+<meta property="article:author" content="A_zao">
+<meta property="article:tag" content="HashMap">
+<meta name="twitter:card" content="summary">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
+    <link rel="stylesheet" href="/css/style.css?v=1637337896775">
+     
+    
+        <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
+    
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637337896775">
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="mdui-drawer-body-left">
+    
+    <div id="nexmoe-background">
+        <div class="nexmoe-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QY5QSK.512q5xd2mt00.jpg)"></div>
+        <div class="mdui-appbar mdui-shadow-0">
+            <div class="mdui-toolbar">
+                <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+                <div class="mdui-toolbar-spacer"></div>
+                <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+                <a href="/" title="A_zao" class="mdui-btn mdui-btn-icon"><img src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/57LtVReQg2ANsaX.5sw3t0dqf980.jpg" alt="A_zao"></a>
+            </div>
+        </div>
+    </div>
+    <div id="nexmoe-header">
+        <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="A_zao">
+            <img src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/57LtVReQg2ANsaX.5sw3t0dqf980.jpg" alt="A_zao" alt="A_zao">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>124</div>
+        <div><span>标签</span>26</div>
+        <div><span>分类</span>5</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/archive.html" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about.html" title="关于我">
+            <i class="mdui-list-item-icon nexmoefont icon-guanyu"></i>
+            <div class="mdui-list-item-content">
+                关于我
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/PY.html" title="单向朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-menu"></i>
+            <div class="mdui-list-item-content">
+                单向朋友
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        
+            <form id="search_form">
+                <label><input class="st-default-search-input" id="search_value" name="q" type="search" placeholder="搜索" style="
+                    font-size: 15px !important;
+                    height: 56px !important;
+                    background-image: none;
+                "></label>
+            </form>
+         
+    </div>
+</div>
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/378156" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-CN_bilibiliB"></i>
+        </a><a class="mdui-ripple" href="https://github.com/Azao-saya" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a><a class="mdui-ripple" href="https://steamcommunity.com/id/oounit/" target="_blank" mdui-tooltip="{content: 'Steam'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-steam"></i>
+        </a><a class="mdui-ripple" href="https://t.me/shelterz" target="_blank" mdui-tooltip="{content: 'Telegram'}" style="color: rgb(0,191,255);background-color: rgba(0,191,255, .15);">
+            <i class="nexmoefont icon-telegram"></i>
+        </a><a class="mdui-ripple" href="https://music.163.com/#/user/home?id=41282089" target="_blank" mdui-tooltip="{content: 'CloudMusic'}" style="color: rgb(255,106,106);background-color: rgba(255,106,106, .15);">
+            <i class="nexmoefont icon-netease-cloud-music-line"></i>
+        </a>
+    </div>
+</div>
+    
+    
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/PAT练习/">PAT练习</a>
+          <span class="category-list-count">106</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/二次元の胡话/">二次元の胡话</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/云笔记/">云笔记</a>
+          <span class="category-list-count">10</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/折腾/">折腾</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/生活感悟/">生活感悟</a>
+          <span class="category-list-count">4</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+    
+    
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/ASCII/" style="font-size: 15.71px;">ASCII</a> <a href="/tags/BigDeciaml-toPlainString/" style="font-size: 10px;">BigDeciaml&toPlainString</a> <a href="/tags/BigInteger/" style="font-size: 10px;">BigInteger</a> <a href="/tags/HashMap/" style="font-size: 14.29px;">HashMap</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/LinkedHashSet/" style="font-size: 11.43px;">LinkedHashSet</a> <a href="/tags/MySql/" style="font-size: 12.86px;">MySql</a> <a href="/tags/TreeSet/" style="font-size: 10px;">TreeSet</a> <a href="/tags/compare/" style="font-size: 15.71px;">compare</a> <a href="/tags/implements/" style="font-size: 10px;">implements</a> <a href="/tags/reverse/" style="font-size: 12.86px;">reverse</a> <a href="/tags/sort/" style="font-size: 11.43px;">sort</a> <a href="/tags/stack%E6%95%B0%E7%BB%84/" style="font-size: 10px;">stack数组</a> <a href="/tags/try-catch/" style="font-size: 12.86px;">try/catch</a> <a href="/tags/%E5%81%B7%E5%AD%A6%E6%9F%B3%E7%A5%9E%E7%9A%84%E5%B8%85%E6%B0%94%E4%BB%A3%E7%A0%81/" style="font-size: 12.86px;">偷学柳神的帅气代码</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">博客</a> <a href="/tags/%E5%8F%82%E5%8A%A0%E7%9A%84%E8%80%83%E8%AF%95/" style="font-size: 10px;">参加的考试</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/" style="font-size: 18.57px;">字符串操作</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%AB%98%E7%AB%AF%E6%93%8D%E4%BD%9C/" style="font-size: 11.43px;">字符串高端操作</a> <a href="/tags/%E6%9C%AAAC%E9%A2%98%E7%9B%AE/" style="font-size: 17.14px;">未AC题目</a> <a href="/tags/%E6%9E%81%E5%85%B6%E9%9D%9E%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" style="font-size: 10px;">极其非面向对象</a> <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" style="font-size: 20px;">正则表达式</a> <a href="/tags/%E7%A5%96%E4%BC%A0%E5%B1%8E%E5%B1%B1%E4%BB%A3%E7%A0%81/" style="font-size: 14.29px;">祖传屎山代码</a> <a href="/tags/%E8%87%AA%E8%80%83/" style="font-size: 11.43px;">自考</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 11.43px;">计算机网络</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 10px;">链表</a>
+    </div>
+    
+  </div>
+
+    
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2021 A_zao
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        
+    </div>
+</div><!-- .nexmoe-drawer -->
+    </div>
+    <div id="nexmoe-content">
+        <div class="nexmoe-primary">
+            <div class="nexmoe-post">
+
+  <article>
+      
+          <div class="nexmoe-post-cover" style="padding-bottom: 66.66666666666666%;"> 
+              <img data-src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QY5QSK.512q5xd2mt00.jpg" data-sizes="auto" alt="1001-采花生" class="lazyload">
+              <h1>1001-采花生</h1>
+          </div>
+      
+      
+      <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年09月30日</a>
+    <a><i class="nexmoefont icon-areachart"></i>1.2k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 5 分钟</a>
+</div>
+
+      
+
+      <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <span id="more"></span></h2><p>鲁宾逊先生有一只宠物猴，名叫多多。这天，他们两个正沿着乡间小路散步，突然发现路边的告示牌上贴着一张小小的纸条：“欢迎免费品尝我种的花生！——熊字”。<br/><br>鲁宾逊先生和多多都很开心，因为花生正是他们的最爱。在告示牌背后，路边真的有一块花生田，花生植株整齐地排列成矩形网格。有经验的多多一眼就能看出，每棵花生植株下的花生有多少。为了训练多多的算术，鲁宾逊先生说:“你先找出花生最多的植株，去采摘它的花生;然后再找出剩下的植株里花生最多的，去采摘它的花生;依此类推，不过你一定要在我限定的时间内回到路边。”<br/><br>我们假定多多在每个单位时间内,可以做下列四件事情中的一件：<br/></p>
+<ol>
+<li>从路边跳到最靠近路边（即第一行）的某棵花生植株；<br/></li>
+<li>从一棵植株跳到前后左右与之相邻的另一棵植株；<br/></li>
+<li>采摘一棵植株下的花生；<br/></li>
+<li>从最靠近路边（即第一行）的某棵花生植株跳回路边。<br/><br>现在给定一块花生田的大小和花生的分布，请问在限定时间内，多多最多可以采到多少个花生？<br/></li>
+</ol>
+<p>注意可能只有部分植株下面长有花生，假设这些植株下的花生个数各不相同。例如花生田里只有位于(2, 5), (3, 7), (4, 2), (5, 4)的植株下长有花生，个数分别为 13, 7, 15, 9。多多在 21 个单位时间内，只能经过(4, 2)、(2, 5)、(5, 4)，最多可以采到 37 个花生。</p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
+<p>输入包含多组数据，每组数据第一行包括三个整数 M（1≤M≤20）、    n（1≤N≤20）和 K（0≤K≤1000），用空格隔开；表示花生田的大小为M * N，多多采花生的限定时间为 K个单位时间。<br>紧接着 M 行，每行包括 N 个自然数 P（0≤P≤500），用空格隔开；表 示花生田里植株下花生的数目，并且除了0（没有花生），其他所有植株下花生的数目都不相同。</p>
+</blockquote>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
+<p>对应每一组数据，输出一个整数，即在限定时间内，多多最多可以采到花生的个数。</p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
+<p>6 7 21<br/><br>0 0 0 0 0 0 0<br/><br>0 0 0 0 13 0 0<br/><br>0 0 0 0 0 0 7<br/><br>0 15 0 0 0 0 0<br/><br>0 0 0 9 0 0 0<br/><br>0 0 0 0 0 0 0<br/></p>
+</blockquote>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
+<p>37</p>
+</blockquote>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
+<li>我傻了<br/><br>&#8195;</li>
+</ul>
+<hr>
+<hr>
+<br/>
+<!-- lang:java-->
+
+<pre><code>import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Scanner;
+import java.io.BufferedInputStream;
+
+public class second_1001_2 &#123;
+    public static void main(String[] args) &#123;
+        Scanner sc = new Scanner(new BufferedInputStream(System.in)); //传说能降低scanner用时
+        while(sc.hasNext())&#123;
+            int y = sc.nextInt(); //竖列
+            int x = sc.nextInt(); //横行
+            int totalTime = sc.nextInt(); //限定时间
+            //创建HashMap，存放花生田里有花生的植株信息
+            HashMap&lt;Integer, Node&gt; map = new HashMap&lt;Integer,Node&gt;();
+            //初始化花生田
+            for (int i = 0; i &lt; y; i++) &#123;
+                for (int j =0;j &lt; x;j++)&#123;
+                    int num = sc.nextInt();
+                    if(num != 0)&#123;
+                        map.put(num,new Node(i,j,num));
+                    &#125;
+                &#125;
+            &#125;
+            //定义排序规则，按照花生数量从多到少降序排序
+            Comparator&lt;Integer&gt; cmp = new Comparator&lt;Integer&gt;() &#123;
+                @Override
+                public int compare(Integer o1, Integer o2) &#123;
+                    return o2 - o1;
+                &#125;
+            &#125;;
+            //从Hashmap集合中取出键-花生数量放入ArrayList数组中
+            ArrayList&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;(map.keySet());
+            if (list.isEmpty()) System.out.println(0);
+            else&#123;
+                Collections.sort(list, cmp); //降序排序list
+                //定义list索引
+                int index = 0;
+                Node node = map.get(list.get(index++)); //获取零list索引的值，map中key对应的value，即y，x，num
+                // 定义移动时间，采摘时间，离开时间
+                int moveTime = node.y + 1;//第一次特化摘花生移动只用计算纵向距离，+1为计算机从零开始计算
+                int takeTime = 1, leavlTime = node.y + 1; //采摘消耗1单位时间，离开与第一次移动一样
+                int sum =0; //记录花生数量总和
+                //判断移动采摘返程是否超时
+                while (totalTime - moveTime - takeTime - leavlTime &gt;= 0) &#123;
+                    //未超时，总时间减去移动和采摘所要花费的时间
+                    totalTime = totalTime - moveTime - takeTime;
+                    //累加花生数量
+                    sum += node.num;
+                    //判断有无下一植株,有则结束循环
+                    if (index &gt;= list.size()) break;
+                    //获取下一植株信息,结束后索引+1
+                    Node nextNode = map.get(list.get(index++));
+                    // 获取移动到下一植株的时间
+                    moveTime = Math.abs(node.y - nextNode.y)
+                            + Math.abs(node.x - nextNode.x); //绝对值
+                    // 获取从下一植株离开的时间
+                    leavlTime = nextNode.y + 1;
+                    node = nextNode; //下个植株标记为这个植株，进入下次循环
+                &#125;
+                System.out.println(sum);
+            &#125;
+        &#125;
+    &#125;
+&#125;
+class Node &#123;
+    int y;
+    int x;
+    int num;
+
+    public Node(int y, int x, int num)&#123;
+        super();
+        this.y = y;
+        this.x = x;
+        this.num = num;
+    &#125;
+&#125;
+</code></pre>
+
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>本文作者：</strong>A_zao<br>
+        <strong>本文链接：</strong><a href="https://shelterz.cn/2019/09/30/1001-%E9%87%87%E8%8A%B1%E7%94%9F/" title="https:&#x2F;&#x2F;shelterz.cn&#x2F;2019&#x2F;09&#x2F;30&#x2F;1001-%E9%87%87%E8%8A%B1%E7%94%9F&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;shelterz.cn&#x2F;2019&#x2F;09&#x2F;30&#x2F;1001-%E9%87%87%E8%8A%B1%E7%94%9F&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/PAT%E7%BB%83%E4%B9%A0/">PAT练习</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/HashMap/" rel="tag">HashMap</a>
+    
+</div>
+
+  
+      <div class="nexmoe-post-footer">
+          <section class="nexmoe-comment">
+    <div class="valine"></div>
+<script src='https://cdn.jsdelivr.net/npm/valine'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: 'Hu82lUrzzotgQle16bso7yt4-gzGzoHsz',
+        appKey: '4pR1jAqK6tEro4BOKFNqRtrH'
+    })
+</script>
+</section>
+      </div>
+  
+</div>
+            <div class="nexmoe-post-right">
+              <div class="nexmoe-fixed">
+                  <div class="nexmoe-tool"> 
+                    
+                      
+                        
+                          
+                          
+                              <button class="mdui-fab catalog" style="overflow:unset;">
+                                  <i class="nexmoefont icon-i-catalog"></i>
+                                  <div class="nexmoe-toc">
+                                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">题目描述 </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0"><span class="toc-number">2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0"><span class="toc-number">3.</span> <span class="toc-text">输出描述:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-number">4.</span> <span class="toc-text">示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5"><span class="toc-number">4.1.</span> <span class="toc-text">输入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA"><span class="toc-number">4.2.</span> <span class="toc-text">输出</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF%EF%BC%9A"><span class="toc-number">5.</span> <span class="toc-text">解题思路：</span></a></li></ol>
+                                  </div>
+                              </button>
+                          
+                          
+                      
+                    
+                      <a href="#nexmoe-content" class="toc-link" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+     
+    <div id="nexmoe-search-space">
+        <div class="search-container">
+            <div class="search-header">
+                <div class="search-input-container">
+                    <input class="search-input" type="text" placeholder="搜索" oninput="sinput();">
+                </div>
+                <a class="search-close" onclick="sclose();">×</a>
+            </div>
+            <div class="search-body"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+ 
+
+<script async src="/js/app.js?v=1637337896782"></script>
+
+
+	<script async src="/js/search.js?v=1637337896782"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
+</script>
+
+
+    
+
+
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+
+</html>

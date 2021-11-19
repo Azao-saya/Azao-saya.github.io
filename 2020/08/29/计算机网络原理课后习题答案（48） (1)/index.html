@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+    
+    <title>04741计算机网络原理课后习题答案（4~6） - 还在建设的避风港</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="null">
+    <meta name="keywords" content="null">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    
+    
+
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QQ图片20200309200651.2slbp7k6zx40.jpg" type="image/x-icon" />
+    <meta name="description" content="死线将至，这里的答案会更追求效率一些">
+<meta property="og:type" content="article">
+<meta property="og:title" content="04741计算机网络原理课后习题答案（4~6）">
+<meta property="og:url" content="https://shelterz.cn/2020/08/29/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E8%AF%BE%E5%90%8E%E4%B9%A0%E9%A2%98%E7%AD%94%E6%A1%88%EF%BC%8848%EF%BC%89%20(1)/index.html">
+<meta property="og:site_name" content="还在建设的避风港">
+<meta property="og:description" content="死线将至，这里的答案会更追求效率一些">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200723154718945.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200723155625926.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjgzNTQwOQ==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/202007231559063.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjgzNTQwOQ==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020072318311844.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjgzNTQwOQ==,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-08-29T04:34:12.000Z">
+<meta property="article:modified_time" content="2021-01-20T08:24:13.785Z">
+<meta property="article:author" content="A_zao">
+<meta property="article:tag" content="计算机网络">
+<meta property="article:tag" content="自考">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200723154718945.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
+    <link rel="stylesheet" href="/css/style.css?v=1637337895874">
+     
+    
+        <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
+    
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637337895874">
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="mdui-drawer-body-left">
+    
+    <div id="nexmoe-background">
+        <div class="nexmoe-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QY5QSK.512q5xd2mt00.jpg)"></div>
+        <div class="mdui-appbar mdui-shadow-0">
+            <div class="mdui-toolbar">
+                <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+                <div class="mdui-toolbar-spacer"></div>
+                <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+                <a href="/" title="A_zao" class="mdui-btn mdui-btn-icon"><img src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/57LtVReQg2ANsaX.5sw3t0dqf980.jpg" alt="A_zao"></a>
+            </div>
+        </div>
+    </div>
+    <div id="nexmoe-header">
+        <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="A_zao">
+            <img src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/57LtVReQg2ANsaX.5sw3t0dqf980.jpg" alt="A_zao" alt="A_zao">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>124</div>
+        <div><span>标签</span>26</div>
+        <div><span>分类</span>5</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/archive.html" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about.html" title="关于我">
+            <i class="mdui-list-item-icon nexmoefont icon-guanyu"></i>
+            <div class="mdui-list-item-content">
+                关于我
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/PY.html" title="单向朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-menu"></i>
+            <div class="mdui-list-item-content">
+                单向朋友
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        
+            <form id="search_form">
+                <label><input class="st-default-search-input" id="search_value" name="q" type="search" placeholder="搜索" style="
+                    font-size: 15px !important;
+                    height: 56px !important;
+                    background-image: none;
+                "></label>
+            </form>
+         
+    </div>
+</div>
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/378156" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-CN_bilibiliB"></i>
+        </a><a class="mdui-ripple" href="https://github.com/Azao-saya" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a><a class="mdui-ripple" href="https://steamcommunity.com/id/oounit/" target="_blank" mdui-tooltip="{content: 'Steam'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-steam"></i>
+        </a><a class="mdui-ripple" href="https://t.me/shelterz" target="_blank" mdui-tooltip="{content: 'Telegram'}" style="color: rgb(0,191,255);background-color: rgba(0,191,255, .15);">
+            <i class="nexmoefont icon-telegram"></i>
+        </a><a class="mdui-ripple" href="https://music.163.com/#/user/home?id=41282089" target="_blank" mdui-tooltip="{content: 'CloudMusic'}" style="color: rgb(255,106,106);background-color: rgba(255,106,106, .15);">
+            <i class="nexmoefont icon-netease-cloud-music-line"></i>
+        </a>
+    </div>
+</div>
+    
+    
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/PAT练习/">PAT练习</a>
+          <span class="category-list-count">106</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/二次元の胡话/">二次元の胡话</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/云笔记/">云笔记</a>
+          <span class="category-list-count">10</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/折腾/">折腾</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/生活感悟/">生活感悟</a>
+          <span class="category-list-count">4</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+    
+    
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/ASCII/" style="font-size: 15.71px;">ASCII</a> <a href="/tags/BigDeciaml-toPlainString/" style="font-size: 10px;">BigDeciaml&toPlainString</a> <a href="/tags/BigInteger/" style="font-size: 10px;">BigInteger</a> <a href="/tags/HashMap/" style="font-size: 14.29px;">HashMap</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/LinkedHashSet/" style="font-size: 11.43px;">LinkedHashSet</a> <a href="/tags/MySql/" style="font-size: 12.86px;">MySql</a> <a href="/tags/TreeSet/" style="font-size: 10px;">TreeSet</a> <a href="/tags/compare/" style="font-size: 15.71px;">compare</a> <a href="/tags/implements/" style="font-size: 10px;">implements</a> <a href="/tags/reverse/" style="font-size: 12.86px;">reverse</a> <a href="/tags/sort/" style="font-size: 11.43px;">sort</a> <a href="/tags/stack%E6%95%B0%E7%BB%84/" style="font-size: 10px;">stack数组</a> <a href="/tags/try-catch/" style="font-size: 12.86px;">try/catch</a> <a href="/tags/%E5%81%B7%E5%AD%A6%E6%9F%B3%E7%A5%9E%E7%9A%84%E5%B8%85%E6%B0%94%E4%BB%A3%E7%A0%81/" style="font-size: 12.86px;">偷学柳神的帅气代码</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">博客</a> <a href="/tags/%E5%8F%82%E5%8A%A0%E7%9A%84%E8%80%83%E8%AF%95/" style="font-size: 10px;">参加的考试</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/" style="font-size: 18.57px;">字符串操作</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%AB%98%E7%AB%AF%E6%93%8D%E4%BD%9C/" style="font-size: 11.43px;">字符串高端操作</a> <a href="/tags/%E6%9C%AAAC%E9%A2%98%E7%9B%AE/" style="font-size: 17.14px;">未AC题目</a> <a href="/tags/%E6%9E%81%E5%85%B6%E9%9D%9E%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" style="font-size: 10px;">极其非面向对象</a> <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" style="font-size: 20px;">正则表达式</a> <a href="/tags/%E7%A5%96%E4%BC%A0%E5%B1%8E%E5%B1%B1%E4%BB%A3%E7%A0%81/" style="font-size: 14.29px;">祖传屎山代码</a> <a href="/tags/%E8%87%AA%E8%80%83/" style="font-size: 11.43px;">自考</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 11.43px;">计算机网络</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 10px;">链表</a>
+    </div>
+    
+  </div>
+
+    
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2021 A_zao
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        
+    </div>
+</div><!-- .nexmoe-drawer -->
+    </div>
+    <div id="nexmoe-content">
+        <div class="nexmoe-primary">
+            <div class="nexmoe-post">
+
+  <article>
+      
+          <div class="nexmoe-post-cover" style="padding-bottom: NaN%;"> 
+              <img data-src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/CG_314 (1).3lv34gvm9rs0.png" data-sizes="auto" alt="04741计算机网络原理课后习题答案（4~6）" class="lazyload">
+              <h1>04741计算机网络原理课后习题答案（4~6）</h1>
+          </div>
+      
+      
+      <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年08月29日</a>
+    <a><i class="nexmoefont icon-areachart"></i>8.8k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 37 分钟</a>
+</div>
+
+      
+
+      <p>死线将至，这里的答案会更追求效率一些<span id="more"></span></p>
+<h2 id="四、网络层"><a href="#四、网络层" class="headerlink" title="四、网络层"></a>四、网络层</h2><h3 id="1-网络层提供的主要功能是什么？"><a href="#1-网络层提供的主要功能是什么？" class="headerlink" title="1.网络层提供的主要功能是什么？"></a><strong>1.网络层提供的主要功能是什么？</strong></h3><ol>
+<li><strong>转发：</strong>当通过一条输入链路接收到一个分组后，路由器需要决策通过哪条输出链路将分组发送出去，并将分组从输入接口转移到输出接口。</li>
+<li><strong>路由选择：</strong>当分组从源主机流向目的主机时，必须通过某种方式决定分组经过的路由或路径，计算分组所经过的路径的算法被称为路由选择算法，或称为路由算法。</li>
+<li><strong>连接建立：</strong>网络层连接是从源主机到目的主机所经过的一条路径，这条路径所经过的每个路由器等网络层设备都要参与网络层连接的建立。</li>
+</ol>
+<h3 id="2-说明转发和路由的含义，有什么区别和联系？-P130"><a href="#2-说明转发和路由的含义，有什么区别和联系？-P130" class="headerlink" title="2.说明转发和路由的含义，有什么区别和联系？ P130"></a><strong>2.说明转发和路由的含义，有什么区别和联系？ P130</strong></h3><ul>
+<li><p>含义</p>
+<ol>
+<li><strong>转发：</strong>当通过一条输入链路接收到一个分组后，路由器需要决策通过哪条输出链路将分组发送出去，并将分组从输入接口转移到输出接口。</li>
+<li><strong>路由：</strong> 分组经过的路径选择。 </li>
+</ol>
+</li>
+<li><p>区别和联系 </p>
+<ol>
+<li>转发是在一个路由中；路由选择则是在一条路径中</li>
+<li>路由选择好之后，会存在转发表中，路由选择相当于预设设置，转发是执行者。</li>
+<li>路由是根据路由表查找到达目标网络的最佳路由表项；转发是根据最佳路由中的出口及下一条IP转发数据包过程。所以，路由是转发的基础，数据转发是路由的结果。</li>
+</ol>
+</li>
+</ul>
+<h3 id="3-对比虚电路网络和数据报网络的优缺点。-P134"><a href="#3-对比虚电路网络和数据报网络的优缺点。-P134" class="headerlink" title="3.对比虚电路网络和数据报网络的优缺点。 P134"></a><strong>3.对比虚电路网络和数据报网络的优缺点。 P134</strong></h3><ul>
+<li>数据报网络<ul>
+<li>优点：<ol>
+<li>无连接-效率高，成本低</li>
+<li>每个分组作为一个独立的数据报进行传送</li>
+<li>路径可能不同-资源利用率高</li>
+</ol>
+</li>
+<li>缺点：<ol>
+<li>无连接-不可靠</li>
+<li>分组可能出现乱序和丢失</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>虚电路网络<ul>
+<li>优点：<ol>
+<li>建立逻辑连接-可靠，传输质量高</li>
+<li>不需要为每个分组携带完整的目的地址，控制信息部分比特数减少，降低了开销。</li>
+<li>按序发送分组，分配内存资源，不会丢失数据</li>
+</ol>
+</li>
+<li>缺点：<ol>
+<li>消耗资源多，成本高</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-虚电路网络如何建立虚电路？虚电路网络分组转发的依据是什么？-P133"><a href="#4-虚电路网络如何建立虚电路？虚电路网络分组转发的依据是什么？-P133" class="headerlink" title="4.虚电路网络如何建立虚电路？虚电路网络分组转发的依据是什么？ P133"></a><strong>4.虚电路网络如何建立虚电路？虚电路网络分组转发的依据是什么？ P133</strong></h3><ul>
+<li><p><strong>建立虚电路：</strong></p>
+<p>虚电路是在源主机目的主机的一条路径上建立的一条网络层逻辑连接，为区分于电路交换中的电路，称之为虚电路</p>
+<p>在建立阶段，指定接收方地址后。网络层决定发送方和接受方之间的路径，即该虚电路的所有分组要通过的一系列链路和路由器。 网络层也为沿着该路径的每条链路决定一个虚电路标识(VCID)</p>
+<p>.最后，网络层沿着路径的每台路由器的转发表中增加一个表项。</p>
+<p>其中一条虚电路(VC)由3个要素构成</p>
+<ul>
+<li><strong>从源主机到目的主机之间的一条路径(即一系列的链路和分组交换机)</strong>        </li>
+<li><strong>该路径上的每条链路各有一个虚电路标识(VCID)</strong></li>
+<li><strong>该路径上每台分组交换机的转发表中记录虚电路标识的接续关系</strong></li>
+</ul>
+</li>
+<li><p><strong>分组转发的依据：</strong></p>
+<p>每条虚电路都有虚电路号，称为虚电路标识(VCID),沿着某条虚电路传输的分组中包含所属虚电路的VCID。虚电路网络设备根据分组所携带的VCID判断其所属的虚电路，从而决策如何转发分组，并确保分组沿对应虚电路送达目的。</p>
+</li>
+</ul>
+<h3 id="5-实现异构网络互联的主要方法有哪些？典型实现异构网络互联的网络设备是什么？-P135"><a href="#5-实现异构网络互联的主要方法有哪些？典型实现异构网络互联的网络设备是什么？-P135" class="headerlink" title="5.实现异构网络互联的主要方法有哪些？典型实现异构网络互联的网络设备是什么？ P135"></a><strong>5.实现异构网络互联的主要方法有哪些？典型实现异构网络互联的网络设备是什么？ P135</strong></h3><p>异构网络主要是指两个网络的通信技术和运行协议的不同</p>
+<ul>
+<li>方法：协议转换和构建虚拟互联网络</li>
+<li>设备：路由器是最典型的网络层设备</li>
+</ul>
+<h3 id="6-路由器有哪些部分组成？各部分主要功能是什么？-P136"><a href="#6-路由器有哪些部分组成？各部分主要功能是什么？-P136" class="headerlink" title="6.路由器有哪些部分组成？各部分主要功能是什么？ P136"></a><strong>6.路由器有哪些部分组成？各部分主要功能是什么？ P136</strong></h3><ol>
+<li><strong>输入端口：</strong>负责从屋里接口接收信号，还原数据链路层帧，提取IP数据报（或其他网络层协议分组），根据IP数据报的目的IP地址检索路由表，决策需要将该IP数据报交换到那个输出端口；</li>
+<li><strong>交换结构：</strong>将输入端口的IP数据报交换到指定的输出端口；</li>
+<li><strong>输出端口：</strong>首先提供一个缓存排队功能，排队交换到该端口的待发送分组，并从队列中不断取出分组进行数据链路层数据帧的封装，通过物理线路端发送出去；</li>
+<li><strong>路由器处理器：</strong>就是路由器的CPU，负责执行路由器的各种指令，包括路由协议的运行、路由运算，以及路由表的更新维护等</li>
+</ol>
+<h3 id="7-网络层出现拥塞的原因是什么？有哪些网络层拥塞控制策略？-P139"><a href="#7-网络层出现拥塞的原因是什么？有哪些网络层拥塞控制策略？-P139" class="headerlink" title="7.网络层出现拥塞的原因是什么？有哪些网络层拥塞控制策略？ P139"></a>7.网络层出现拥塞的原因是什么？有哪些网络层拥塞控制策略？ P139</h3><ul>
+<li><p><strong>原因：</strong></p>
+<ol>
+<li>缓冲区容量有限；</li>
+<li>传输线路的带宽有限；</li>
+<li>网络节点的处理能力有限；</li>
+<li>网络中某些部分发生了故障；</li>
+</ol>
+</li>
+<li><p><strong>策略：</strong></p>
+<ul>
+<li><strong>拥塞预防：</strong><ol>
+<li><strong>流量感知路由：</strong>根据网络负载动态调整，将网络流量引导到不同的链路上，均衡网络负载，从而延迟或避免拥塞的发生。</li>
+<li><strong>准入控制：</strong>对新建虚电路审核，如果新建立的虚电路会导致网络变得拥塞，那么网络拒绝建立该新电路。</li>
+</ol>
+</li>
+<li> <strong>拥塞消除：</strong> </li>
+</ul>
+<ol>
+<li><strong>流量调节：</strong>在网络发生拥塞时，可以通过调整发送方向网络发送数据的速率来消除拥塞</li>
+<li><strong>负载脱落：</strong>通过有选择地主动丢弃一些数据报，来减轻网络负载，从而缓解或消除拥塞</li>
+</ol>
+</li>
+</ul>
+<h3 id="8-请将IP网络183-164-128-0-17划分为等长的8个子网，并分别给出每个子网的子网地址、广播地址、子网掩码、IP地址总数、可分配IP地址数和可分配IP地址范围。-P151"><a href="#8-请将IP网络183-164-128-0-17划分为等长的8个子网，并分别给出每个子网的子网地址、广播地址、子网掩码、IP地址总数、可分配IP地址数和可分配IP地址范围。-P151" class="headerlink" title="8.请将IP网络183.164.128.0/17划分为等长的8个子网，并分别给出每个子网的子网地址、广播地址、子网掩码、IP地址总数、可分配IP地址数和可分配IP地址范围。  P151"></a><strong>8.请将IP网络183.164.128.0/17划分为等长的8个子网，并分别给出每个子网的子网地址、广播地址、子网掩码、IP地址总数、可分配IP地址数和可分配IP地址范围。  P151</strong></h3><p>一片模糊，只知道题目是怎么做的。</p>
+<p>首先183.164.128.0/17 ，/代表网络位占用了17，网络位后面是主机位占用了15.总计32位二进制</p>
+<p>题目要求分为8个子网，2<sup>3</sup>=8,需要三位来划分子网，借用主机3位，网络位20，主机12</p>
+<p>183.164.128.0把128变为二进制 183.164.1&lt;000&gt;0000.0 其中括号内18,19,20三位用来分配子网</p>
+<p>分成8份</p>
+<p>183.164.10000000.0，183.164.10010000.0，183.164.10100000.0，183.164.10110000.0，183.164.11000000.0，183.164.11010000.0，183.164.11100000.0，183.164.11110000.0 </p>
+<p> <strong>广播地址：网络地址不变，主机位全为1</strong> ，第一份举例</p>
+<p>183.164.10001111.11111111转化为十进制后为183.164.143.255</p>
+<p><strong>子网掩码：网络地址全为1，主机地址地址都是0。</strong>所以8个子网的子网掩码是一样的</p>
+<p> 255.255.11110000.0即255.255.240.0 </p>
+<p><strong>IP总数：</strong>2<sup>主机位数量</sup>=2<sup>12</sup>=4096</p>
+<p><strong>可分配IP地址：IP总数-2</strong>=4094</p>
+<p><strong>可分配IP地址范围：子网地址末尾+1——广播地址末尾-1 ，除去两端</strong></p>
+<table>
+<thead>
+<tr>
+<th>子网地址</th>
+<th>广播地址</th>
+<th>子网掩码</th>
+<th>IP总数</th>
+<th>可分配IP</th>
+<th>可分配IP地址范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>183.164.128.0/20</td>
+<td>183.164.143.255</td>
+<td>255.255.240.0</td>
+<td>4096</td>
+<td>4094</td>
+<td>183.64.128.1-183.164.143.254</td>
+</tr>
+<tr>
+<td>183.164.144.0/20</td>
+<td>183.164.159.255</td>
+<td>255.255.240.0</td>
+<td>4096</td>
+<td>4094</td>
+<td>183.164.144.1-183.164.159.254</td>
+</tr>
+<tr>
+<td>183.164.160.0/20</td>
+<td>183.164.175.255</td>
+<td>255.255.240.0</td>
+<td>4096</td>
+<td>4094</td>
+<td>183.164.160.1-183.164.175.254</td>
+</tr>
+<tr>
+<td>183.164.176.0/20</td>
+<td>183.164.191.255</td>
+<td>255.255.240.0</td>
+<td>4096</td>
+<td>4094</td>
+<td>183.164.176.1-183.164.191.254</td>
+</tr>
+<tr>
+<td>183.164.192.0/20</td>
+<td>183.164.207.255</td>
+<td>255.255.240.0</td>
+<td>4096</td>
+<td>4094</td>
+<td>183.164.192.1-183.164.207.254</td>
+</tr>
+<tr>
+<td>183.164.208.0/20</td>
+<td>183.164.223.255</td>
+<td>255.255.240.0</td>
+<td>4096</td>
+<td>4094</td>
+<td>183.164.208.1-183.164.223.254</td>
+</tr>
+<tr>
+<td>183.164.224.0/20</td>
+<td>183.164.239.255</td>
+<td>255.255.240.0</td>
+<td>4096</td>
+<td>4094</td>
+<td>183.164.224.1-183.164.239.254</td>
+</tr>
+<tr>
+<td>183.164.240.0/20</td>
+<td>183.164.255.255</td>
+<td>255.255.240.0</td>
+<td>4096</td>
+<td>4094</td>
+<td>183.164.240.1-183.164.255.254</td>
+</tr>
+</tbody></table>
+<h3 id="9-ISP拥有一个网络地址块201-123-16-0-21，现在该ISP要为4个组织分配IP地址，其需要的地址数量分别为985、486、246以及211，请给出一个合理的分配方案，并说明各组织所分配子网的子网地址、广播地址、子网掩码、IP地址总数、可分配IP地址数和可分配IP地址范围。-P152-153"><a href="#9-ISP拥有一个网络地址块201-123-16-0-21，现在该ISP要为4个组织分配IP地址，其需要的地址数量分别为985、486、246以及211，请给出一个合理的分配方案，并说明各组织所分配子网的子网地址、广播地址、子网掩码、IP地址总数、可分配IP地址数和可分配IP地址范围。-P152-153" class="headerlink" title="9.ISP拥有一个网络地址块201.123.16.0/21，现在该ISP要为4个组织分配IP地址，其需要的地址数量分别为985、486、246以及211，请给出一个合理的分配方案，并说明各组织所分配子网的子网地址、广播地址、子网掩码、IP地址总数、可分配IP地址数和可分配IP地址范围。   P152-153"></a><strong>9.ISP拥有一个网络地址块201.123.16.0/21，现在该ISP要为4个组织分配IP地址，其需要的地址数量分别为985、486、246以及211，请给出一个合理的分配方案，并说明各组织所分配子网的子网地址、广播地址、子网掩码、IP地址总数、可分配IP地址数和可分配IP地址范围。   P152-153</strong></h3><p>不等长划分</p>
+<ul>
+<li><p>201.123.16.0/21先分为2个等长的子网需要1位 主机位</p>
+<p>两个子网的IP为：201.123.00010000.0/22和201.123.00010100.0/22 </p>
+<p>即：201.123.16.0/22和201.123.20.0/22。 </p>
+<p>两个子网可以分配2^10=1022个IP地址<br>所以第一个子网为201.123.16.0/22 </p>
+</li>
+<li><p>201.123.20.0/22先分为2个等长的子网需要1位<br>两个子网的IP为：201.123.00010100.0/23和201.123.00010110.0/23<br>即：201.123.20.0/23和201.123.22.0/23。可以分配2^9=510个IP地址<br>所以第二个子网为：201.123.20.0/23 </p>
+</li>
+<li><p>201.123.22.0/23先分为2个等长的子网需要1位即可。<br>两个子网的IP为：201.123.00010110.0/24和201.123.00010111.0/24<br>即：201.123.22.0/24和201.123.23.0/24。可以分配28-2=254个IP地址<br>所以第三个子网为：201.123.22.0/24<br>第四个子网为：201.123.23.0/24 </p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子网地址</th>
+<th>广播地址</th>
+<th>子网掩码</th>
+<th>IP总数</th>
+<th>可分配IP</th>
+<th>可分配IP地址范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>201.123.16.0/22</td>
+<td>201.123.19.255</td>
+<td>255.255.252.0</td>
+<td>1024</td>
+<td>1022</td>
+<td>201.123.16.1-201.123.19.254</td>
+</tr>
+<tr>
+<td>201.123.20.0/23</td>
+<td>201.123.21.255</td>
+<td>255.255.254.0</td>
+<td>512</td>
+<td>510</td>
+<td>201.123.20.1-201.123.21.254</td>
+</tr>
+<tr>
+<td>201.123.22.0/24</td>
+<td>201.123.22.255</td>
+<td>255.255.255.0</td>
+<td>256</td>
+<td>254</td>
+<td>201.123.22.1-201.123.22.254</td>
+</tr>
+<tr>
+<td>201.123.23.0/24</td>
+<td>201.123.23.255</td>
+<td>255.255.255.0</td>
+<td>256</td>
+<td>254</td>
+<td>201.123.23.1-201.123.23.254</td>
+</tr>
+</tbody></table>
+<h3 id="10-现有一个总长度为3800的IP数据报，要通过MTU为1500的链路传输，在IPv4下应如何分片？每片的DF、MF标志位的值是什么？片偏移的值是什么？-P146"><a href="#10-现有一个总长度为3800的IP数据报，要通过MTU为1500的链路传输，在IPv4下应如何分片？每片的DF、MF标志位的值是什么？片偏移的值是什么？-P146" class="headerlink" title="10.现有一个总长度为3800的IP数据报，要通过MTU为1500的链路传输，在IPv4下应如何分片？每片的DF、MF标志位的值是什么？片偏移的值是什么？   P146"></a><strong>10.现有一个总长度为3800的IP数据报，要通过MTU为1500的链路传输，在IPv4下应如何分片？每片的DF、MF标志位的值是什么？片偏移的值是什么？   P146</strong></h3><p><strong>IP数据报总长度：L=3800</strong></p>
+<p><strong>最大传输单元(MTU)：M=1500</strong></p>
+<p>最大分片刻封装的数据长度(字节)为：<br>$$<br>d={\frac{M-20}{8}}*8<br>$$<br> *<em>最大分片可封装的数据长度： d={(1500-20)/8}<em>8=1480</em></em></p>
+<p> 需要的IP分片总数：<br>$$<br>n={\frac{L-20}{d}}<br>$$<br> <strong>需要的IP分片总数：n=(3800-20)1480 ≈ 2.43，即需要的IP分片总数为3</strong> </p>
+<p>每个IP分片偏移字段取值F<sub>i</sub>位第i个IP分片的偏移量：<br>$$<br>F_i=\frac{d}{8}<em>(i-1),1 \le i  \le n<br>$$<br><em><em>F1=1480/8</em>(1-1)=0</em></em></p>
+<p><em><em>F2=1480/8</em>(2-1)=185</em>*</p>
+<p><em><em>F3=1480/8</em>(3-1)=370</em>*</p>
+<p>每个IP分片的总长度字段为：<br>$$<br>L_i=\begin{equation}<br>  \left{<br>   \begin{array}{c}<br>   d+20, 1\le i &lt; n  \<br>   L-d*(n-1), i=n.<br>   \end{array}<br>  \right.<br>  \end{equation}<br>$$<br><strong>L1=1480+20=1500</strong></p>
+<p><strong>L2=1480+20=1500</strong></p>
+<p><em><em>L3=3800-1480</em>(3-1)=840</em>*</p>
+<p>每个IP分片的MF字段位：<br>$$<br>MF_i=\begin{equation}<br>  \left{<br>   \begin{array}{c}<br>   1, 1\le i &lt; n  \<br>   0, i=n.<br>   \end{array}<br>  \right.<br>  \end{equation}<br>$$<br><strong>MF1=1</strong></p>
+<p><strong>MF2=1</strong></p>
+<p><strong>MF3=0</strong></p>
+<p><strong>DF意为禁止分片,值1为禁止分片，为0位允许分片，路由器在转发DF=1的IP数据报时，若其总长度超过输出链路MTU则会直接丢弃该分组。</strong></p>
+<p><strong>MF意为更多分片标志，MF=1表明该IP数据报一定是一个IP数据报分片(DF的值若为1会产生短路，即MF的值没有意义，已经禁止分片了)，MF=0表示该IP数据报是一个未被分片的IP数据报或是被分片的IP数据报的最后一篇</strong></p>
+<table>
+<thead>
+<tr>
+<th>片序号</th>
+<th>Length(总长度)</th>
+<th>DF</th>
+<th>MF</th>
+<th>片偏移</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>1500</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1500</td>
+<td>0</td>
+<td>1</td>
+<td>185</td>
+</tr>
+<tr>
+<td>3</td>
+<td>840</td>
+<td>0</td>
+<td>0</td>
+<td>370</td>
+</tr>
+</tbody></table>
+<p>话说除8再乘8的意义何在？虽然应该有他的道理，但应付考试应该可以直接记为-20。</p>
+<h3 id="11-一个新加入到网络中的主机需要发送DHCP请求来获取一个可用的IP地址，为什么DHCP请求要以广播的形式发送出去？当某台DHCP服务器接收到了一台主机的DHCP请求会返回一个DHCP响应，为什么DHCP响应也要以广播的形式发送出去？-P155-156"><a href="#11-一个新加入到网络中的主机需要发送DHCP请求来获取一个可用的IP地址，为什么DHCP请求要以广播的形式发送出去？当某台DHCP服务器接收到了一台主机的DHCP请求会返回一个DHCP响应，为什么DHCP响应也要以广播的形式发送出去？-P155-156" class="headerlink" title="11.一个新加入到网络中的主机需要发送DHCP请求来获取一个可用的IP地址，为什么DHCP请求要以广播的形式发送出去？当某台DHCP服务器接收到了一台主机的DHCP请求会返回一个DHCP响应，为什么DHCP响应也要以广播的形式发送出去？     P155-156"></a><strong>11.一个新加入到网络中的主机需要发送DHCP请求来获取一个可用的IP地址，为什么DHCP请求要以广播的形式发送出去？当某台DHCP服务器接收到了一台主机的DHCP请求会返回一个DHCP响应，为什么DHCP响应也要以广播的形式发送出去？     P155-156</strong></h3><ol>
+<li>因为主机不知道DHCP服务器的IP地址，所以主机会在IP数据报的目的IP地址字段中填入255.255.255.255，表明这是一次广播</li>
+<li>当提供DHCP服务的服务器端的发现报文后，会发送一个DHCP提供报文，来响应主机。由于新接入网络中的主机此时仍不具有可用IP地址，因此DHCP提供报文仍是通过广播方式发送出去。</li>
+</ol>
+<h3 id="12-简述ICMP的主要功能。-P158"><a href="#12-简述ICMP的主要功能。-P158" class="headerlink" title="12.简述ICMP的主要功能。 P158"></a>12.简述ICMP的主要功能。 P158</h3><p>主机或路由器在处理或转发IP数据报的过程中，由于种种原因可能导致异常发生，此时主机或路由器就可能需要将这些异常情况及时反馈给其他主机或路由器。而IP本身没有这种功能。</p>
+<p>ICMP的主要目的就是在这种情况下，载主机或路由器间，实现差错信息报告。</p>
+<p>另一方面，通过主动发送ICMP询问请求报文，并通过接收ICMP响应报文，可以实现网络可达性，活特定信息的探询。</p>
+<p>因此，ICMP的主要功能是进行主机或路由器间的网络层差错报告与网络探测。</p>
+<h3 id="13-某网络拓扑图如图所示，路由器R1通过接口E1、E2分别连接局域网1、局域网2，通过接口L0连接路由器R2，并通过路由器R2连接域名服务器与互联网。R1的L0接口的IP地址是202-118-2-1；R2的L0接口的IP地址是202-118-2-2，L1接口的IP地址是130-11-120-1，E0接口的IP地址是202-118-3-1；域名服务器的IP地址是202-118-3-2。-P153"><a href="#13-某网络拓扑图如图所示，路由器R1通过接口E1、E2分别连接局域网1、局域网2，通过接口L0连接路由器R2，并通过路由器R2连接域名服务器与互联网。R1的L0接口的IP地址是202-118-2-1；R2的L0接口的IP地址是202-118-2-2，L1接口的IP地址是130-11-120-1，E0接口的IP地址是202-118-3-1；域名服务器的IP地址是202-118-3-2。-P153" class="headerlink" title="13.某网络拓扑图如图所示，路由器R1通过接口E1、E2分别连接局域网1、局域网2，通过接口L0连接路由器R2，并通过路由器R2连接域名服务器与互联网。R1的L0接口的IP地址是202.118.2.1；R2的L0接口的IP地址是202.118.2.2，L1接口的IP地址是130.11.120.1，E0接口的IP地址是202.118.3.1；域名服务器的IP地址是202.118.3.2。   P153"></a><strong>13.某网络拓扑图如图所示，路由器R1通过接口E1、E2分别连接局域网1、局域网2，通过接口L0连接路由器R2，并通过路由器R2连接域名服务器与互联网。R1的L0接口的IP地址是202.118.2.1；R2的L0接口的IP地址是202.118.2.2，L1接口的IP地址是130.11.120.1，E0接口的IP地址是202.118.3.1；域名服务器的IP地址是202.118.3.2。   P153</strong></h3><p> <strong>（1）将IP地址空间202.118.1.0/24分配给局域网1、局域网2，每个局域网需分配的IP地址不少于120个。请给出分配结果，并分别写出局域网1、局域网2的子网地址、广播地址、子网掩码、IP地址总数、可分配IP地址数和可分配IP地址范围。<br>（2）请给出R1的路由表，使其明确包括局域网1的路由、局域网2的路由、域名服务器的主机路由和互联网的路由。<br>（3）请采用路由聚合技术，给出R2到局域网1、局域网2的路由。</strong> </p>
+<ol>
+<li><table>
+<thead>
+<tr>
+<th></th>
+<th>子网地址</th>
+<th>广播地址</th>
+<th>子网掩码</th>
+<th>IP地址总数</th>
+<th>可分配IP地址数</th>
+<th>可分配IP地址范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>局域网1</td>
+<td>202.118.1.0/25</td>
+<td>202.118.1.127</td>
+<td>255.255.255.128</td>
+<td>128</td>
+<td>126</td>
+<td>202.118.1.1~202.118.126</td>
+</tr>
+<tr>
+<td>局域网2</td>
+<td>202.118.1.128/25</td>
+<td>202.118.1.255</td>
+<td>255.255.255.128</td>
+<td>128</td>
+<td>126</td>
+<td>202.118.1.129~202.118.1.254</td>
+</tr>
+</tbody></table>
+</li>
+<li><table>
+<thead>
+<tr>
+<th>目的网络</th>
+<th>子网掩码</th>
+<th>下一跳</th>
+<th>接口</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>202.118.1.0</td>
+<td>255.255.255.128</td>
+<td>-</td>
+<td>E1</td>
+</tr>
+<tr>
+<td>202.118.1.128</td>
+<td>255.255.255.128</td>
+<td>-</td>
+<td>E2</td>
+</tr>
+<tr>
+<td>202.118.3.2</td>
+<td>255.255.255.255</td>
+<td>202.118.2.2</td>
+<td>L0</td>
+</tr>
+<tr>
+<td>0.0.0.0</td>
+<td>0.0.0.0</td>
+<td>202.118.2.2</td>
+<td>L0</td>
+</tr>
+</tbody></table>
+<p>域名服务器设定了一个特定的路由表项【<strong>域名服务器公有IP，路由转发过程中的目的IP不变</strong>】，因此该路由表项中的子网掩码应为255.255.255.255（<strong>只有和全1的子网掩码相与时才能完全保证目的IP地址一样，从而选择该路由</strong>）</p>
+<p>到互联网的路由实质上相当于一个默认路由（<strong>即当一个目的网络IP地址与路由表中其他任何一项都不匹配时，匹配该路由表项</strong>）， 默认路由一般写为0/0，即目的地址为0.0.0.0，子网掩码为0.0.0.0 </p>
+</li>
+<li><p>局域网1子网地址为202.118.1.0000 0000</p>
+<p>局域网2子网地址为202.118.1.1000 0000</p>
+<p>前24位是相等的，也就是网络位是24</p>
+<p>全0等于0所以聚合地址为202.118.1.0/24</p>
+<table>
+<thead>
+<tr>
+<th>目的网络IP地址</th>
+<th>子网掩码</th>
+<th>下一跳IP地址</th>
+<th>接口</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>202.118.1.0</td>
+<td>255.255.255.0</td>
+<td>202.118.2.1</td>
+<td>L0</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<h3 id="14-解释网络地址转换（NAT-）的工作原理，如何实现NAT穿透？P156"><a href="#14-解释网络地址转换（NAT-）的工作原理，如何实现NAT穿透？P156" class="headerlink" title="*14.解释网络地址转换（NAT***）的工作原理，如何实现NAT穿透？P156"></a>*<em>14.解释网络地址转换（NAT</em>***）的工作原理，如何实现NAT穿透？P156</h3><ul>
+<li><strong>原理：</strong>对于内网出去，进入公共互联网的IP数据报，将其源IP地址替换为NAT服务器拥有的合法的公共IP地址，同时替换源端口号，并将替换关系记录到NAT转换表中；对于从公共互联网返回的IP数据报，依据其目的IP地址与目的端口号检索NAT转换表，并利用检索到的内部私有IP地址与对应的端口号替换目的IP地址和目的端口号，然后将IP数据报转发到内部网络；</li>
+<li><strong>穿透：</strong>所谓NAT穿透技术就是在外网主机主动与内网主机发起通信之前，先在NAT转换表中建立好内网到外网映射，使内网运行的服务以NAT公网地址的“合法”身份暴露出去。这样，在外网主机看来，它们是在与NAT公网地址上运行的服务器进行通信。刻通过静态配置和动态配置的方式事先建立NAT映射。</li>
+</ul>
+<h3 id="15-IPv6提出的动机是什么？IPv6相比于IPv4其数据报格式有什么特点？-P159"><a href="#15-IPv6提出的动机是什么？IPv6相比于IPv4其数据报格式有什么特点？-P159" class="headerlink" title="15.IPv6提出的动机是什么？IPv6相比于IPv4其数据报格式有什么特点？  P159"></a>15.IPv6提出的动机是什么？IPv6相比于IPv4其数据报格式有什么特点？  P159</h3><ul>
+<li><p>动机：IPv4地址耗尽</p>
+</li>
+<li><p>特点：</p>
+<ol>
+<li><p>IPv6地址输了扩张到了2^128，几乎不会被耗尽</p>
+</li>
+<li><p>IPv6基本首部长度为固定的40字节，与IPv4对比，IPv4首部中某些字段在IPv6中已经被删除了，比如分片相关字段，如果IPv6数据报无法通过具有较小MTU的链路时，路由器直接将其丢弃掉，并向该数据报的源发送方发送一个“分组太大”的ICMP差错报文。当发送主机受到ICMP报文后，会以更小的数据长度来重新发送IPv6数据报，这种改进避免了数据报的分片与重组，从而加快了IP转发的速度。</p>
+</li>
+<li><p>首部校验和字段也没有出现在IPv6数据报中，这是因为IPv4的首部校验和每经过一跳都需要进行重新计算，这无疑增加了数据报发送的端到端的时延，带来的益处缺很小</p>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="16、简述链路状态路由选择算法与距离向量路由选择算法的算法过程。P163"><a href="#16、简述链路状态路由选择算法与距离向量路由选择算法的算法过程。P163" class="headerlink" title="16、简述链路状态路由选择算法与距离向量路由选择算法的算法过程。P163"></a><strong>16、简述链路状态路由选择算法与距离向量路由选择算法的算法过程。P163</strong></h3><ul>
+<li>链路状态路由选择算法是一种全局式路由选择算法，每个路由器在计算路由时            需要构建出整个网络的拓扑图。为了构建整个网络的拓扑图，每个路由器周期性检测、手机与其直接相连链路的费用，以及与其直接相连的路由器ID等信息，构造链路状态分组，并向全网广播扩散。于是，网络中每个路由器，都会周期性地受到其他路由器广播的链路状态分组，并将链路状态信息存储到每个路由器的链路状态数据库中。当数据库中收集到足够的链路状态信息后，路由器就可以基于数据库中的链路状态信息，构建出网络拓扑图。接下来，链路状态路由选择算法就转变为网络拓扑图上求最短路径问题。</li>
+<li>距离向量路由选择算法是一种异步的、迭代的分布式路由选择算法。在距离向量路由选择算法中，没有任何一个节点掌握整个网络的完整信息。每个节点可以测得与所有邻居节点之间的直接链路代价，并将其到达每个目的结点的最短距离，目的最短距离的距离向量形式交换给所有的邻居节点。每个结点基于与邻居结点间的直接链路距离，以及邻居交换过来的距离向量，计算并更新其到达每个目的结点的最短距离，然后将新的距离向量通告给其所有邻居，知道距离向量不再改变。                                                                                                                               </li>
+</ul>
+<h3 id="17-请举例说明为什么距离向量路由选择算法可能算法可能产生无穷计数问题，可以采取哪些措施消减这一问题？-P165"><a href="#17-请举例说明为什么距离向量路由选择算法可能算法可能产生无穷计数问题，可以采取哪些措施消减这一问题？-P165" class="headerlink" title="17.请举例说明为什么距离向量路由选择算法可能算法可能产生无穷计数问题，可以采取哪些措施消减这一问题？ P165"></a>17.请举例说明为什么距离向量路由选择算法可能算法可能产生无穷计数问题，可以采取哪些措施消减这一问题？ P165</h3><ul>
+<li>导致无穷计算问题的原因是把从对方获知的，但在对方已不再有效的信息当成有效信息再传送给对方，使对方当成有效信息使用，如此循环下去。</li>
+<li>毒性逆转技术，定义最大有效费用度量值</li>
+</ul>
+<h3 id="18-比较RIP、OSPF、BGP的异同"><a href="#18-比较RIP、OSPF、BGP的异同" class="headerlink" title="18.比较RIP、OSPF、BGP的异同"></a>18.比较RIP、OSPF、BGP的异同</h3><table>
+<thead>
+<tr>
+<th align="center">协议</th>
+<th align="center">RIP</th>
+<th align="center">OSPF</th>
+<th align="center">BGP</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">类型</td>
+<td align="center">内部</td>
+<td align="center">内部</td>
+<td align="center">外部</td>
+</tr>
+<tr>
+<td align="center">路由算法</td>
+<td align="center">距离-向量</td>
+<td align="center">链路状态</td>
+<td align="center">路径-向量</td>
+</tr>
+<tr>
+<td align="center">传递协议</td>
+<td align="center">UDP</td>
+<td align="center">IP</td>
+<td align="center">TCP</td>
+</tr>
+<tr>
+<td align="center">路径选择</td>
+<td align="center">跳数最少</td>
+<td align="center">代价最低</td>
+<td align="center">较好，非最佳</td>
+</tr>
+<tr>
+<td align="center">交换结点</td>
+<td align="center">和本结点相邻的路由器</td>
+<td align="center">网络中的所有路由器</td>
+<td align="center">和本结点相邻的路由器</td>
+</tr>
+<tr>
+<td align="center">交换内容</td>
+<td align="center">当前本路由器知道的全部信息，即自己的路由表</td>
+<td align="center">与本路由器相邻的所有路由器的链路状态</td>
+<td align="center">首次整个路由表；非首次有变化的部分</td>
+</tr>
+</tbody></table>
+<h2 id="五、数据链路层与局域网"><a href="#五、数据链路层与局域网" class="headerlink" title="五、数据链路层与局域网"></a>五、数据链路层与局域网</h2><h3 id="1-链路层协议能够向网络层提供哪些可能的服务？-P177"><a href="#1-链路层协议能够向网络层提供哪些可能的服务？-P177" class="headerlink" title="1.链路层协议能够向网络层提供哪些可能的服务？ P177"></a>1.链路层协议能够向网络层提供哪些可能的服务？ P177</h3><ol>
+<li>组帧</li>
+<li>链路接入</li>
+<li>可靠交付</li>
+<li>差错控制</li>
+</ol>
+<h3 id="2-为什么有些网络用纠错码而不用检错和重传机制？给出2个理由。-P178"><a href="#2-为什么有些网络用纠错码而不用检错和重传机制？给出2个理由。-P178" class="headerlink" title="2.为什么有些网络用纠错码而不用检错和重传机制？给出2个理由。 P178"></a>2.为什么有些网络用纠错码而不用检错和重传机制？给出2个理由。 P178</h3><ol>
+<li>服务的实时性要求，即时发现错误，也没有时间重发一次。但是数据必须连续发送，这里可使用前向纠错。</li>
+<li>如果传输质量比较差，会导致错误率太高而不得不重发所有帧，而重发的帧也可能损坏。为了避免上述情况发送，前向纠错用于提高到达帧的成功率。</li>
+</ol>
+<h3 id="3-差错编码的检错或纠错能力与什么有关？试举例说明。-P179"><a href="#3-差错编码的检错或纠错能力与什么有关？试举例说明。-P179" class="headerlink" title="3.差错编码的检错或纠错能力与什么有关？试举例说明。  P179"></a><strong>3.差错编码的检错或纠错能力与什么有关？试举例说明。  P179</strong></h3><ol>
+<li><p>差错编码的检错或纠错能力跟该差错编码的编码集的汉明距离有关</p>
+</li>
+<li><ul>
+<li><p>对于检错编码，如果编码集的汉明距离名ds=r+1，则该差错编码可以检测r位的差错</p>
+<p>例如，如果差错编码才去一次重复码，即冗余信息是数据的一次复制，则编码集的汉明距离ds=2，因此可以检测一位差错。</p>
+</li>
+<li><p>对于纠错编码，如果编码集的汉明距离ds=2r+1，则该差错编码可以纠正r位的差错</p>
+<p>例如，如果差错编码采取二次重复码，即冗余信息是数据的两次复制，则编码集的汉明距离ds=3，因此可以纠正一位差错。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="4-假设在一个使用CSMA-CD协议的局域网中，两个结点同时经过一个速率为R的广播信道开始发送一个长度为L的帧，d-prop-为两个结点之间的单向传播延迟。如果d-prop-lt-L-R，是否会发生冲突？如果会发生冲突，两个结点能检测到冲突吗？为什么？P194"><a href="#4-假设在一个使用CSMA-CD协议的局域网中，两个结点同时经过一个速率为R的广播信道开始发送一个长度为L的帧，d-prop-为两个结点之间的单向传播延迟。如果d-prop-lt-L-R，是否会发生冲突？如果会发生冲突，两个结点能检测到冲突吗？为什么？P194" class="headerlink" title="4.假设在一个使用CSMA/CD协议的局域网中，两个结点同时经过一个速率为R的广播信道开始发送一个长度为L的帧，d(prop)为两个结点之间的单向传播延迟。如果d(prop)&lt;L/R，是否会发生冲突？如果会发生冲突，两个结点能检测到冲突吗？为什么？P194"></a>4.假设在一个使用CSMA/CD协议的局域网中，两个结点同时经过一个速率为R的广播信道开始发送一个长度为L的帧，d(prop)为两个结点之间的单向传播延迟。如果d(prop)&lt;L/R，是否会发生冲突？如果会发生冲突，两个结点能检测到冲突吗？为什么？P194</h3><ol>
+<li>会发生冲突。d(prop)&lt;L/R <del>意味着传播时延小于传输时延， 一个结点在传输数据的同时，又开始接收数据，故会发生冲突。</del> （另一种说法是因为两个结点中间链路两个结点发送的信号会叠加起来，导致该链路上的其他结点无法识别信号。 ）</li>
+<li>不能检测到冲突。若要检测到冲突需要Lmin/R大于等于2Dmax/v，其中Dmax/v为单向传播延迟，单向传播延迟就大于L/R，双向是肯定大于L/R。所以不能检测到冲突</li>
+</ol>
+<h3 id="5-在一个CDMA网络中，某站点正接收另一码序列为（-1，1，1，-1，-1，-1，1，-1）的站点发送的数据，若该站点收到"><a href="#5-在一个CDMA网络中，某站点正接收另一码序列为（-1，1，1，-1，-1，-1，1，-1）的站点发送的数据，若该站点收到" class="headerlink" title="5.在一个CDMA网络中，某站点正接收另一码序列为（-1，1，1，-1，-1，-1，1，-1）的站点发送的数据，若该站点收到"></a>5.在一个CDMA网络中，某站点正接收另一码序列为（-1，1，1，-1，-1，-1，1，-1）的站点发送的数据，若该站点收到</h3><p>（-111-1-1-11-1 1-1-1111-11 1-1-1111-11 -111-1-1-11-1），则该站点收到的数据是什么？  P189</p>
+<p>太抽象了</p>
+<p>计算方法收到的码片序列，每项依次相乘该站点的码片序列，以该站点的码片序列为一组，上述该站点序列有8个，则8个一组。（不确定）<br>$$<br>{（-1*-1）+1<em>1+1</em>1+（-1*-1）+（-1*-1）+（-1*-1）+1<em>1+（-1</em>-1）}/8=1<br>$$<br>下面每个都这么计算得到1 -1 -1 1</p>
+<p>-1写为0 得到最后答案1001</p>
+<h3 id="6-考虑在低负载情况下，纯ALOHA与时隙ALOHA相比，哪个延迟更小？-P192"><a href="#6-考虑在低负载情况下，纯ALOHA与时隙ALOHA相比，哪个延迟更小？-P192" class="headerlink" title="6.考虑在低负载情况下，纯ALOHA与时隙ALOHA相比，哪个延迟更小？ P192"></a><strong>6.考虑在低负载情况下，纯ALOHA与时隙ALOHA相比，哪个延迟更小？ P192</strong></h3><p>答：时隙ALOHA延迟更小</p>
+<h3 id="7-ARP查询为什么要在广播帧中发送呢？ARP响应为什么要在一个特定目的MAC地址的帧中发送呢？-P200"><a href="#7-ARP查询为什么要在广播帧中发送呢？ARP响应为什么要在一个特定目的MAC地址的帧中发送呢？-P200" class="headerlink" title="7.ARP查询为什么要在广播帧中发送呢？ARP响应为什么要在一个特定目的MAC地址的帧中发送呢？ P200"></a>7.ARP查询为什么要在广播帧中发送呢？ARP响应为什么要在一个特定目的MAC地址的帧中发送呢？ P200</h3><ol>
+<li>ARP查询是向子网中的全部节点发起询问，ARP查询分组的目的是询问子网上所有其他的主机和路由器，以确定对应与要解析的IP地址的MAC地址。</li>
+<li>而ARP响应则是发给询问的人，每个主机的ARP模块，都检查自己的IP地址是否与ARP查询分组中的目的IP地址相匹配，与之匹配的主机则给查询主机发送一个带有所希望映射的ARP响应分组。</li>
+</ol>
+<h3 id="8-试比较10BASE-T、100BASE-T和千兆位以太网的共同点与区别。-P203"><a href="#8-试比较10BASE-T、100BASE-T和千兆位以太网的共同点与区别。-P203" class="headerlink" title="8.试比较10BASE-T、100BASE-T和千兆位以太网的共同点与区别。 P203"></a><strong>8.试比较10BASE-T、100BASE-T和千兆位以太网的共同点与区别。 P203</strong></h3><ul>
+<li><strong>10BASE-T：</strong><ol>
+<li>采用非屏蔽的双绞线（UTP）作为以太网传输介质，</li>
+<li>数据传输速率为10Mbit/s的，</li>
+<li>支持以太网结构化布线方式和集线器设备</li>
+<li>100m传输距离</li>
+<li>具有故障隔离功能</li>
+</ol>
+</li>
+<li><strong>100BASE-T:</strong><ol>
+<li>以太网的帧格式</li>
+<li>定义了3种规范以支持不同的物理传输介质<ol>
+<li>100Base-TX采用两对5类UTP</li>
+<li>100Base-T4采用四对3、4、或5类UTP</li>
+<li>100Base-FX采用光缆</li>
+</ol>
+</li>
+<li>传输速率100Mbit/s</li>
+</ol>
+</li>
+<li><strong>千兆位以太网：</strong><ol>
+<li>同样在以太网标准之上建立</li>
+<li>定义了多种规范以支持不同的物理传输介质</li>
+<li>传输速率1000Mbit/s</li>
+</ol>
+</li>
+</ul>
+<p>同属以太网技术，对最低使用的传输介质要求不同，传输速率不同。</p>
+<h3 id="9-如果10BASE-T以太网中的某个主机在尝试发送帧，连续很多次发生冲突，试问该主机在放弃尝试发送帧之前，可能的等待（退避）时间最长是多少？为什么？P202"><a href="#9-如果10BASE-T以太网中的某个主机在尝试发送帧，连续很多次发生冲突，试问该主机在放弃尝试发送帧之前，可能的等待（退避）时间最长是多少？为什么？P202" class="headerlink" title="9.如果10BASE-T以太网中的某个主机在尝试发送帧，连续很多次发生冲突，试问该主机在放弃尝试发送帧之前，可能的等待（退避）时间最长是多少？为什么？P202"></a><strong>9.如果10BASE-T以太网中的某个主机在尝试发送帧，连续很多次发生冲突，试问该主机在放弃尝试发送帧之前，可能的等待（退避）时间最长是多少？为什么？P202</strong></h3><p> <img data-fancybox="gallery" data-sizes="auto" data-src="https://img-blog.csdnimg.cn/20200723154718945.png" alt="img" class="lazyload"> </p>
+<p> 答：51.2×(2^10-1)=52377.6us≈52ms </p>
+<h3 id="10-一个通过以太网传送的IP数据包总长度为60字节。是否需要在封装到以太网帧中时进行填充？如果需要，试问需要填充多少字节？-P202"><a href="#10-一个通过以太网传送的IP数据包总长度为60字节。是否需要在封装到以太网帧中时进行填充？如果需要，试问需要填充多少字节？-P202" class="headerlink" title="10.一个通过以太网传送的IP数据包总长度为60字节。是否需要在封装到以太网帧中时进行填充？如果需要，试问需要填充多少字节？ P202"></a><strong>10.一个通过以太网传送的IP数据包总长度为60字节。是否需要在封装到以太网帧中时进行填充？如果需要，试问需要填充多少字节？ P202</strong></h3><p>以太网的最短帧长为512位，即64字节。其中目的地址占6字节，源地址占6字节，类型占2字节，数据占46~1500字节，CRC占4字节。</p>
+<p>答：IP数据包总长度60字节大于46字节，不需要填充。</p>
+<h3 id="11-什么是VLAN？划分VLAN主要有几种方法？-P207"><a href="#11-什么是VLAN？划分VLAN主要有几种方法？-P207" class="headerlink" title="11.什么是VLAN？划分VLAN主要有几种方法？ P207"></a><strong>11.什么是VLAN？划分VLAN主要有几种方法？ P207</strong></h3><ul>
+<li>定义：虚拟局域网是一种基于交换机(必须支持VLAN功能的逻辑分割(或限制)广播域的局域网应用形式。</li>
+<li>划分方法：<ol>
+<li>基于交换机端口划分</li>
+<li>基于MAC地址划分</li>
+<li>基于上层协议类型或地址划分</li>
+</ol>
+</li>
+</ul>
+<h3 id="12"><a href="#12" class="headerlink" title="12."></a>12.</h3><p> <img data-fancybox="gallery" data-sizes="auto" data-src="https://img-blog.csdnimg.cn/20200723155625926.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjgzNTQwOQ==,size_16,color_FFFFFF,t_70" alt="img" class="lazyload"> </p>
+<p> <img data-fancybox="gallery" data-sizes="auto" data-src="https://img-blog.csdnimg.cn/202007231559063.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjgzNTQwOQ==,size_16,color_FFFFFF,t_70" alt="img" class="lazyload"> </p>
+<p>补充： 默认网关地址是主机位除最后一位全置1后得到的，比如 193.6.7.0/24 根据网络前缀24可知前24位为网络位，后8位为主机位，因此该网络的默认网关地址就是IP地址193.6.7.<strong>11111110</strong> 得到 193.6.7.254/24 可以记为广播地址-1</p>
+<h2 id="六、物理层"><a href="#六、物理层" class="headerlink" title="六、物理层"></a>六、物理层</h2><h3 id="1-数字通信和数据通信有何不同？-P215"><a href="#1-数字通信和数据通信有何不同？-P215" class="headerlink" title="1.数字通信和数据通信有何不同？ P215"></a><strong>1.数字通信和数据通信有何不同？ P215</strong></h3><ol>
+<li>数字通信系统是指信道中传输的信号是离散的数字信号</li>
+<li>而数据通信系统是指在信源和信宿端处理的是二进制数据</li>
+</ol>
+<h3 id="2-简述单向通信、双向交替通信和双向同时通信的特点，并画出通信系统模型。-P216"><a href="#2-简述单向通信、双向交替通信和双向同时通信的特点，并画出通信系统模型。-P216" class="headerlink" title="2.简述单向通信、双向交替通信和双向同时通信的特点，并画出通信系统模型。  P216"></a>2.简述单向通信、双向交替通信和双向同时通信的特点，并画出通信系统模型。  P216</h3><ol>
+<li>单向通信：又称单工通信，即任何时间都只有一个方向的通信，而没有反方向的交互。无线电广播就属于这种类型。</li>
+<li>双向交替通信又称半双工通信，即通信双方都可以发送信息，但不能双方同时发送或同时接收，这种通信方式往往是一方发送另一方接收，如无限对讲机系统。</li>
+<li>双向同时通信又称全双工通信，即通信双方可以同时发送和接收信息，电话网、计算机网络均属于全双工通信系统。</li>
+</ol>
+<h3 id="3-常见的物理介质有哪些？列举不同的物理介质并说明其主要特性。-P217"><a href="#3-常见的物理介质有哪些？列举不同的物理介质并说明其主要特性。-P217" class="headerlink" title="3.常见的物理介质有哪些？列举不同的物理介质并说明其主要特性。 P217"></a><strong>3.常见的物理介质有哪些？列举不同的物理介质并说明其主要特性。 P217</strong></h3><ul>
+<li><p>引导型传输介质</p>
+<ol>
+<li><p><strong>驾空明线：</strong>传输损耗降低；但易受天气和外界电磁干扰，对外界噪声敏感，带宽有限。</p>
+</li>
+<li><p><strong>双绞线：</strong>可减少相邻导线的电磁干扰。主要用于基带传输，衰落随频率的升高而增大。</p>
+<p>屏蔽双绞线：提高双绞线的抗电磁干扰能力，但成本高</p>
+<p>非屏蔽双绞线：常用于以太网、局域网</p>
+</li>
+<li><p><strong>同轴电缆：</strong>可有效抵抗电磁干扰。主要用于频带传输，如有线电视。</p>
+</li>
+<li><p><strong>光纤</strong>：光纤通信容量非常大，最高可达100兆比特/每秒</p>
+<p>传输损耗小，中继距离长，对最远距离传输特别经济</p>
+<p>抗雷电和电磁干扰性能好</p>
+<p>无串音干扰，保密性好，也不易被窃听或截取数据</p>
+<p>体积小，重量轻</p>
+</li>
+</ol>
+</li>
+<li><p>非引导性传输介质</p>
+<ol>
+<li><strong>地波传输：</strong>低频信号，2MHz以下，沿地球表面传播</li>
+<li><strong>天波传播：</strong>2~30Mhz，利用电离层的传播反射</li>
+<li><strong>视线传播：</strong>高于30MHz，采用视线无障碍的点对点支线传播，中继传输。</li>
+</ol>
+</li>
+</ul>
+<h3 id="4-在无噪声情况下，若某通信链路的带宽为3kHz，采用4个相位，每个相位具有4种振幅的QAM调制技术，则该通信链路的最大数据传输速率是多少？-P224"><a href="#4-在无噪声情况下，若某通信链路的带宽为3kHz，采用4个相位，每个相位具有4种振幅的QAM调制技术，则该通信链路的最大数据传输速率是多少？-P224" class="headerlink" title="4.在无噪声情况下，若某通信链路的带宽为3kHz，采用4个相位，每个相位具有4种振幅的QAM调制技术，则该通信链路的最大数据传输速率是多少？ P224"></a><strong>4.在无噪声情况下，若某通信链路的带宽为3kHz，采用4个相位，每个相位具有4种振幅的QAM调制技术，则该通信链路的最大数据传输速率是多少？ P224</strong></h3><p>$$<br>理想无噪声信道的信道容量为C=2B\log_2M<br>$$</p>
+<p>B=3kHz=3000Hz，M=4*4=16     </p>
+<p>C=2*3000*log2^16=6000*16=24kbit/s</p>
+<p>（对数公式a<sup>b</sup>=N log<sub>a</sub>N=b）</p>
+<h3 id="5-什么是信道？信道有哪几种主要分类？每一类信道的主要特点是什么？-P222"><a href="#5-什么是信道？信道有哪几种主要分类？每一类信道的主要特点是什么？-P222" class="headerlink" title="5.什么是信道？信道有哪几种主要分类？每一类信道的主要特点是什么？ P222"></a><strong>5.什么是信道？信道有哪几种主要分类？每一类信道的主要特点是什么？ P222</strong></h3><ul>
+<li><strong>信道：</strong>信道是通信系统中连续发送端与接收端的通信设备，实现从发送端到接收端的信号传送。<del>信道的定义区分为广义信道和狭义信道。狭义信道即为信号传输介质；广义信道包括信号传输介质和通信系统的一些变换装置，如发送设备、接收设备、天线、调制器等。</del></li>
+<li><strong>分类&amp;特点：</strong></li>
+</ul>
+<ol>
+<li>狭义信道：仅指信号传输介质</li>
+<li>广义信道：包括信号传输介质和通信系统的一些变换装置，如发送设备、接收设备、天线和调制器等(广义信道还有调制信号和编码信号，因为是主要分类就不往下拆分了)</li>
+</ol>
+<h3 id="6-一个用于发送二进制信号的3kHz信道，其信噪比为30dB，试计算其可以获得的最大数据传输率是多少？"><a href="#6-一个用于发送二进制信号的3kHz信道，其信噪比为30dB，试计算其可以获得的最大数据传输率是多少？" class="headerlink" title="6.一个用于发送二进制信号的3kHz信道，其信噪比为30dB，试计算其可以获得的最大数据传输率是多少？"></a>6.一个用于发送二进制信号的3kHz信道，其信噪比为30dB，试计算其可以获得的最大数据传输率是多少？</h3><p>$$<br>（\frac{S}{N})<em>{dB}=10\log</em>{10}（\frac{S}{N})_{功率}<br>$$</p>
+<p><strong>10log_10<em>S/N=30 log_10</em>S/N=3 S/N=1000</strong><br>$$<br>C=B\log_2(1+\frac{S}{N})<br>$$<br>C=3*10^3*log_2(1+1000) ≈ 30kbit/s</p>
+<h3 id="7-数字基带传输系统主要有哪些部分组成？各部分的主要功能是什么？-P226"><a href="#7-数字基带传输系统主要有哪些部分组成？各部分的主要功能是什么？-P226" class="headerlink" title="7.数字基带传输系统主要有哪些部分组成？各部分的主要功能是什么？ P226"></a><strong>7.数字基带传输系统主要有哪些部分组成？各部分的主要功能是什么？ P226</strong></h3><ul>
+<li><strong>信号形成器：</strong>把原始的数字基带信号变换为合适信道传输特性的数字基带信号。</li>
+<li><strong>信道：</strong>实现从发送端到接收端的信号传送。</li>
+<li><strong>接收滤波器：</strong>滤除噪声，得到有利于抽样判决的基带波形。</li>
+<li><strong>抽样判决器：</strong>基于同步提取从信号中提取的定时脉冲，对接收 滤波器输出的基带波形进行抽样判决，再生数字基带信号。</li>
+<li><strong>同步提取：</strong>使抽样判决器从信号中提取定时脉冲。</li>
+</ul>
+<h3 id="8-假设信息码为二进制符号序列10110010，请分别画出对应的单极非归零码（单极不归零）、双极归零码、差分码的信号波形。P226"><a href="#8-假设信息码为二进制符号序列10110010，请分别画出对应的单极非归零码（单极不归零）、双极归零码、差分码的信号波形。P226" class="headerlink" title="8.假设信息码为二进制符号序列10110010，请分别画出对应的单极非归零码（单极不归零）、双极归零码、差分码的信号波形。P226"></a><strong>8.假设信息码为二进制符号序列10110010，请分别画出对应的单极非归零码（单极不归零）、双极归零码、差分码的信号波形。P226</strong></h3><ul>
+<li><p>单极非归零表示要么是<strong>正电平，要不是零电平只有一个极性</strong>。坐标轴上1为E,0为0，波形是不连续的</p>
+</li>
+<li><p>双极归零码表示用<strong>0和1分别代表负电平和正电平</strong>。坐标轴上1为E，0为-E。波形连续，1格内正负极都只占半格，后半格归零所以叫做归零码。</p>
+</li>
+<li><p>差分码的不是用脉冲幅值的绝对电平来表示0和1，相邻脉冲用电平跳变表示1，无跳变表示0。波形连续0为延续直线，1为跳动从1跳0或0跳1。</p>
+<p>特点如上述所说，具体就不画了</p>
+</li>
+</ul>
+<h3 id="9-假设信息码为-100001000011000011，请给出对应的AMI码，并画出相应的信号波形（归零信号）。P228"><a href="#9-假设信息码为-100001000011000011，请给出对应的AMI码，并画出相应的信号波形（归零信号）。P228" class="headerlink" title="9.假设信息码为 100001000011000011，请给出对应的AMI码，并画出相应的信号波形（归零信号）。P228"></a><strong>9.假设信息码为 100001000011000011，请给出对应的AMI码，并画出相应的信号波形（归零信号）。P228</strong></h3><p>AMI码有0(零电平)、+1(正脉冲)和-1(负脉冲)，也就是+1为E，-1为-E，0为0。是归零的，也就是正负占半格。（不画）</p>
+<h3 id="10-设某2PSK传输系统的码元速率为1200Baud，载波频率为2400Hz，发送数字信息为10011101，试画出2PSK信号调制器原理框图，并画出2PSK信号的时间波形。-P234"><a href="#10-设某2PSK传输系统的码元速率为1200Baud，载波频率为2400Hz，发送数字信息为10011101，试画出2PSK信号调制器原理框图，并画出2PSK信号的时间波形。-P234" class="headerlink" title="10.设某2PSK传输系统的码元速率为1200Baud，载波频率为2400Hz，发送数字信息为10011101，试画出2PSK信号调制器原理框图，并画出2PSK信号的时间波形。 P234"></a><strong>10.设某2PSK传输系统的码元速率为1200Baud，载波频率为2400Hz，发送数字信息为10011101，试画出2PSK信号调制器原理框图，并画出2PSK信号的时间波形。 P234</strong></h3><p> <img data-fancybox="gallery" data-sizes="auto" data-src="https://img-blog.csdnimg.cn/2020072318311844.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjgzNTQwOQ==,size_16,color_FFFFFF,t_70" alt="img" class="lazyload"> </p>
+<p>1跳0会在上方画一个m，0跳1会在下方画一个m，m中心就在每格的界线上，一格内拐三次</p>
+<h3 id="11-什么是QAM调制？QAM调制的主要特点是什么？P237"><a href="#11-什么是QAM调制？QAM调制的主要特点是什么？P237" class="headerlink" title="11.什么是QAM调制？QAM调制的主要特点是什么？P237"></a><strong>11.什么是QAM调制？QAM调制的主要特点是什么？P237</strong></h3><ul>
+<li>QAM调制：正交幅值调制(QAM)也称为幅值相位联合键控(APK),是一种具有高频带利用率，且可以自适应调整调制速率的调制技术。</li>
+<li>特点：频带利用率高、抗噪声能力强、调制解调系统简单等。</li>
+</ul>
+<h3 id="12-物理层接口特性有哪些？-P238"><a href="#12-物理层接口特性有哪些？-P238" class="headerlink" title="12.物理层接口特性有哪些？ P238"></a><strong>12.物理层接口特性有哪些？ P238</strong></h3><ol>
+<li><strong>机械特性：</strong>也叫物理特性，指明通信实体间硬件连接接口的机械特点。</li>
+<li><strong>电气特性：</strong>在物理连接上，导线的电气连接及有关电路的特性。</li>
+<li><strong>功能特性：</strong>物理接口各信号线的用途。</li>
+<li><strong>规程特性：</strong>指明利用接口传输比特流的全过程，以及各项用于传输的事件发生的合法顺序。</li>
+</ol>
+
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>本文作者：</strong>A_zao<br>
+        <strong>本文链接：</strong><a href="https://shelterz.cn/2020/08/29/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E8%AF%BE%E5%90%8E%E4%B9%A0%E9%A2%98%E7%AD%94%E6%A1%88%EF%BC%8848%EF%BC%89%20(1)/" title="https:&#x2F;&#x2F;shelterz.cn&#x2F;2020&#x2F;08&#x2F;29&#x2F;%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E8%AF%BE%E5%90%8E%E4%B9%A0%E9%A2%98%E7%AD%94%E6%A1%88%EF%BC%8848%EF%BC%89%20(1)&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;shelterz.cn&#x2F;2020&#x2F;08&#x2F;29&#x2F;%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E8%AF%BE%E5%90%8E%E4%B9%A0%E9%A2%98%E7%AD%94%E6%A1%88%EF%BC%8848%EF%BC%89%20(1)&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E4%BA%91%E7%AC%94%E8%AE%B0/">云笔记</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E8%87%AA%E8%80%83/" rel="tag">自考</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a>
+    
+</div>
+
+  
+      <div class="nexmoe-post-footer">
+          <section class="nexmoe-comment">
+    <div class="valine"></div>
+<script src='https://cdn.jsdelivr.net/npm/valine'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: 'Hu82lUrzzotgQle16bso7yt4-gzGzoHsz',
+        appKey: '4pR1jAqK6tEro4BOKFNqRtrH'
+    })
+</script>
+</section>
+      </div>
+  
+</div>
+            <div class="nexmoe-post-right">
+              <div class="nexmoe-fixed">
+                  <div class="nexmoe-tool"> 
+                    
+                      
+                        
+                          
+                          
+                              <button class="mdui-fab catalog" style="overflow:unset;">
+                                  <i class="nexmoefont icon-i-catalog"></i>
+                                  <div class="nexmoe-toc">
+                                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E7%BD%91%E7%BB%9C%E5%B1%82"><span class="toc-number">1.</span> <span class="toc-text">四、网络层</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%BD%91%E7%BB%9C%E5%B1%82%E6%8F%90%E4%BE%9B%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.1.</span> <span class="toc-text">1.网络层提供的主要功能是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%AF%B4%E6%98%8E%E8%BD%AC%E5%8F%91%E5%92%8C%E8%B7%AF%E7%94%B1%E7%9A%84%E5%90%AB%E4%B9%89%EF%BC%8C%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%E5%92%8C%E8%81%94%E7%B3%BB%EF%BC%9F-P130"><span class="toc-number">1.2.</span> <span class="toc-text">2.说明转发和路由的含义，有什么区别和联系？ P130</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%AF%B9%E6%AF%94%E8%99%9A%E7%94%B5%E8%B7%AF%E7%BD%91%E7%BB%9C%E5%92%8C%E6%95%B0%E6%8D%AE%E6%8A%A5%E7%BD%91%E7%BB%9C%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9%E3%80%82-P134"><span class="toc-number">1.3.</span> <span class="toc-text">3.对比虚电路网络和数据报网络的优缺点。 P134</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%99%9A%E7%94%B5%E8%B7%AF%E7%BD%91%E7%BB%9C%E5%A6%82%E4%BD%95%E5%BB%BA%E7%AB%8B%E8%99%9A%E7%94%B5%E8%B7%AF%EF%BC%9F%E8%99%9A%E7%94%B5%E8%B7%AF%E7%BD%91%E7%BB%9C%E5%88%86%E7%BB%84%E8%BD%AC%E5%8F%91%E7%9A%84%E4%BE%9D%E6%8D%AE%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F-P133"><span class="toc-number">1.4.</span> <span class="toc-text">4.虚电路网络如何建立虚电路？虚电路网络分组转发的依据是什么？ P133</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%AE%9E%E7%8E%B0%E5%BC%82%E6%9E%84%E7%BD%91%E7%BB%9C%E4%BA%92%E8%81%94%E7%9A%84%E4%B8%BB%E8%A6%81%E6%96%B9%E6%B3%95%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F%E5%85%B8%E5%9E%8B%E5%AE%9E%E7%8E%B0%E5%BC%82%E6%9E%84%E7%BD%91%E7%BB%9C%E4%BA%92%E8%81%94%E7%9A%84%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F-P135"><span class="toc-number">1.5.</span> <span class="toc-text">5.实现异构网络互联的主要方法有哪些？典型实现异构网络互联的网络设备是什么？ P135</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E8%B7%AF%E7%94%B1%E5%99%A8%E6%9C%89%E5%93%AA%E4%BA%9B%E9%83%A8%E5%88%86%E7%BB%84%E6%88%90%EF%BC%9F%E5%90%84%E9%83%A8%E5%88%86%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F-P136"><span class="toc-number">1.6.</span> <span class="toc-text">6.路由器有哪些部分组成？各部分主要功能是什么？ P136</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E7%BD%91%E7%BB%9C%E5%B1%82%E5%87%BA%E7%8E%B0%E6%8B%A5%E5%A1%9E%E7%9A%84%E5%8E%9F%E5%9B%A0%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E6%9C%89%E5%93%AA%E4%BA%9B%E7%BD%91%E7%BB%9C%E5%B1%82%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6%E7%AD%96%E7%95%A5%EF%BC%9F-P139"><span class="toc-number">1.7.</span> <span class="toc-text">7.网络层出现拥塞的原因是什么？有哪些网络层拥塞控制策略？ P139</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E8%AF%B7%E5%B0%86IP%E7%BD%91%E7%BB%9C183-164-128-0-17%E5%88%92%E5%88%86%E4%B8%BA%E7%AD%89%E9%95%BF%E7%9A%848%E4%B8%AA%E5%AD%90%E7%BD%91%EF%BC%8C%E5%B9%B6%E5%88%86%E5%88%AB%E7%BB%99%E5%87%BA%E6%AF%8F%E4%B8%AA%E5%AD%90%E7%BD%91%E7%9A%84%E5%AD%90%E7%BD%91%E5%9C%B0%E5%9D%80%E3%80%81%E5%B9%BF%E6%92%AD%E5%9C%B0%E5%9D%80%E3%80%81%E5%AD%90%E7%BD%91%E6%8E%A9%E7%A0%81%E3%80%81IP%E5%9C%B0%E5%9D%80%E6%80%BB%E6%95%B0%E3%80%81%E5%8F%AF%E5%88%86%E9%85%8DIP%E5%9C%B0%E5%9D%80%E6%95%B0%E5%92%8C%E5%8F%AF%E5%88%86%E9%85%8DIP%E5%9C%B0%E5%9D%80%E8%8C%83%E5%9B%B4%E3%80%82-P151"><span class="toc-number">1.8.</span> <span class="toc-text">8.请将IP网络183.164.128.0&#x2F;17划分为等长的8个子网，并分别给出每个子网的子网地址、广播地址、子网掩码、IP地址总数、可分配IP地址数和可分配IP地址范围。  P151</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-ISP%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E5%9D%97201-123-16-0-21%EF%BC%8C%E7%8E%B0%E5%9C%A8%E8%AF%A5ISP%E8%A6%81%E4%B8%BA4%E4%B8%AA%E7%BB%84%E7%BB%87%E5%88%86%E9%85%8DIP%E5%9C%B0%E5%9D%80%EF%BC%8C%E5%85%B6%E9%9C%80%E8%A6%81%E7%9A%84%E5%9C%B0%E5%9D%80%E6%95%B0%E9%87%8F%E5%88%86%E5%88%AB%E4%B8%BA985%E3%80%81486%E3%80%81246%E4%BB%A5%E5%8F%8A211%EF%BC%8C%E8%AF%B7%E7%BB%99%E5%87%BA%E4%B8%80%E4%B8%AA%E5%90%88%E7%90%86%E7%9A%84%E5%88%86%E9%85%8D%E6%96%B9%E6%A1%88%EF%BC%8C%E5%B9%B6%E8%AF%B4%E6%98%8E%E5%90%84%E7%BB%84%E7%BB%87%E6%89%80%E5%88%86%E9%85%8D%E5%AD%90%E7%BD%91%E7%9A%84%E5%AD%90%E7%BD%91%E5%9C%B0%E5%9D%80%E3%80%81%E5%B9%BF%E6%92%AD%E5%9C%B0%E5%9D%80%E3%80%81%E5%AD%90%E7%BD%91%E6%8E%A9%E7%A0%81%E3%80%81IP%E5%9C%B0%E5%9D%80%E6%80%BB%E6%95%B0%E3%80%81%E5%8F%AF%E5%88%86%E9%85%8DIP%E5%9C%B0%E5%9D%80%E6%95%B0%E5%92%8C%E5%8F%AF%E5%88%86%E9%85%8DIP%E5%9C%B0%E5%9D%80%E8%8C%83%E5%9B%B4%E3%80%82-P152-153"><span class="toc-number">1.9.</span> <span class="toc-text">9.ISP拥有一个网络地址块201.123.16.0&#x2F;21，现在该ISP要为4个组织分配IP地址，其需要的地址数量分别为985、486、246以及211，请给出一个合理的分配方案，并说明各组织所分配子网的子网地址、广播地址、子网掩码、IP地址总数、可分配IP地址数和可分配IP地址范围。   P152-153</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-%E7%8E%B0%E6%9C%89%E4%B8%80%E4%B8%AA%E6%80%BB%E9%95%BF%E5%BA%A6%E4%B8%BA3800%E7%9A%84IP%E6%95%B0%E6%8D%AE%E6%8A%A5%EF%BC%8C%E8%A6%81%E9%80%9A%E8%BF%87MTU%E4%B8%BA1500%E7%9A%84%E9%93%BE%E8%B7%AF%E4%BC%A0%E8%BE%93%EF%BC%8C%E5%9C%A8IPv4%E4%B8%8B%E5%BA%94%E5%A6%82%E4%BD%95%E5%88%86%E7%89%87%EF%BC%9F%E6%AF%8F%E7%89%87%E7%9A%84DF%E3%80%81MF%E6%A0%87%E5%BF%97%E4%BD%8D%E7%9A%84%E5%80%BC%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E7%89%87%E5%81%8F%E7%A7%BB%E7%9A%84%E5%80%BC%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F-P146"><span class="toc-number">1.10.</span> <span class="toc-text">10.现有一个总长度为3800的IP数据报，要通过MTU为1500的链路传输，在IPv4下应如何分片？每片的DF、MF标志位的值是什么？片偏移的值是什么？   P146</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-%E4%B8%80%E4%B8%AA%E6%96%B0%E5%8A%A0%E5%85%A5%E5%88%B0%E7%BD%91%E7%BB%9C%E4%B8%AD%E7%9A%84%E4%B8%BB%E6%9C%BA%E9%9C%80%E8%A6%81%E5%8F%91%E9%80%81DHCP%E8%AF%B7%E6%B1%82%E6%9D%A5%E8%8E%B7%E5%8F%96%E4%B8%80%E4%B8%AA%E5%8F%AF%E7%94%A8%E7%9A%84IP%E5%9C%B0%E5%9D%80%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88DHCP%E8%AF%B7%E6%B1%82%E8%A6%81%E4%BB%A5%E5%B9%BF%E6%92%AD%E7%9A%84%E5%BD%A2%E5%BC%8F%E5%8F%91%E9%80%81%E5%87%BA%E5%8E%BB%EF%BC%9F%E5%BD%93%E6%9F%90%E5%8F%B0DHCP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8E%A5%E6%94%B6%E5%88%B0%E4%BA%86%E4%B8%80%E5%8F%B0%E4%B8%BB%E6%9C%BA%E7%9A%84DHCP%E8%AF%B7%E6%B1%82%E4%BC%9A%E8%BF%94%E5%9B%9E%E4%B8%80%E4%B8%AADHCP%E5%93%8D%E5%BA%94%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88DHCP%E5%93%8D%E5%BA%94%E4%B9%9F%E8%A6%81%E4%BB%A5%E5%B9%BF%E6%92%AD%E7%9A%84%E5%BD%A2%E5%BC%8F%E5%8F%91%E9%80%81%E5%87%BA%E5%8E%BB%EF%BC%9F-P155-156"><span class="toc-number">1.11.</span> <span class="toc-text">11.一个新加入到网络中的主机需要发送DHCP请求来获取一个可用的IP地址，为什么DHCP请求要以广播的形式发送出去？当某台DHCP服务器接收到了一台主机的DHCP请求会返回一个DHCP响应，为什么DHCP响应也要以广播的形式发送出去？     P155-156</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-%E7%AE%80%E8%BF%B0ICMP%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD%E3%80%82-P158"><span class="toc-number">1.12.</span> <span class="toc-text">12.简述ICMP的主要功能。 P158</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-%E6%9F%90%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91%E5%9B%BE%E5%A6%82%E5%9B%BE%E6%89%80%E7%A4%BA%EF%BC%8C%E8%B7%AF%E7%94%B1%E5%99%A8R1%E9%80%9A%E8%BF%87%E6%8E%A5%E5%8F%A3E1%E3%80%81E2%E5%88%86%E5%88%AB%E8%BF%9E%E6%8E%A5%E5%B1%80%E5%9F%9F%E7%BD%911%E3%80%81%E5%B1%80%E5%9F%9F%E7%BD%912%EF%BC%8C%E9%80%9A%E8%BF%87%E6%8E%A5%E5%8F%A3L0%E8%BF%9E%E6%8E%A5%E8%B7%AF%E7%94%B1%E5%99%A8R2%EF%BC%8C%E5%B9%B6%E9%80%9A%E8%BF%87%E8%B7%AF%E7%94%B1%E5%99%A8R2%E8%BF%9E%E6%8E%A5%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8E%E4%BA%92%E8%81%94%E7%BD%91%E3%80%82R1%E7%9A%84L0%E6%8E%A5%E5%8F%A3%E7%9A%84IP%E5%9C%B0%E5%9D%80%E6%98%AF202-118-2-1%EF%BC%9BR2%E7%9A%84L0%E6%8E%A5%E5%8F%A3%E7%9A%84IP%E5%9C%B0%E5%9D%80%E6%98%AF202-118-2-2%EF%BC%8CL1%E6%8E%A5%E5%8F%A3%E7%9A%84IP%E5%9C%B0%E5%9D%80%E6%98%AF130-11-120-1%EF%BC%8CE0%E6%8E%A5%E5%8F%A3%E7%9A%84IP%E5%9C%B0%E5%9D%80%E6%98%AF202-118-3-1%EF%BC%9B%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84IP%E5%9C%B0%E5%9D%80%E6%98%AF202-118-3-2%E3%80%82-P153"><span class="toc-number">1.13.</span> <span class="toc-text">13.某网络拓扑图如图所示，路由器R1通过接口E1、E2分别连接局域网1、局域网2，通过接口L0连接路由器R2，并通过路由器R2连接域名服务器与互联网。R1的L0接口的IP地址是202.118.2.1；R2的L0接口的IP地址是202.118.2.2，L1接口的IP地址是130.11.120.1，E0接口的IP地址是202.118.3.1；域名服务器的IP地址是202.118.3.2。   P153</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-%E8%A7%A3%E9%87%8A%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2%EF%BC%88NAT-%EF%BC%89%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%EF%BC%8C%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0NAT%E7%A9%BF%E9%80%8F%EF%BC%9FP156"><span class="toc-number">1.14.</span> <span class="toc-text">*14.解释网络地址转换（NAT***）的工作原理，如何实现NAT穿透？P156</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-IPv6%E6%8F%90%E5%87%BA%E7%9A%84%E5%8A%A8%E6%9C%BA%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9FIPv6%E7%9B%B8%E6%AF%94%E4%BA%8EIPv4%E5%85%B6%E6%95%B0%E6%8D%AE%E6%8A%A5%E6%A0%BC%E5%BC%8F%E6%9C%89%E4%BB%80%E4%B9%88%E7%89%B9%E7%82%B9%EF%BC%9F-P159"><span class="toc-number">1.15.</span> <span class="toc-text">15.IPv6提出的动机是什么？IPv6相比于IPv4其数据报格式有什么特点？  P159</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16%E3%80%81%E7%AE%80%E8%BF%B0%E9%93%BE%E8%B7%AF%E7%8A%B6%E6%80%81%E8%B7%AF%E7%94%B1%E9%80%89%E6%8B%A9%E7%AE%97%E6%B3%95%E4%B8%8E%E8%B7%9D%E7%A6%BB%E5%90%91%E9%87%8F%E8%B7%AF%E7%94%B1%E9%80%89%E6%8B%A9%E7%AE%97%E6%B3%95%E7%9A%84%E7%AE%97%E6%B3%95%E8%BF%87%E7%A8%8B%E3%80%82P163"><span class="toc-number">1.16.</span> <span class="toc-text">16、简述链路状态路由选择算法与距离向量路由选择算法的算法过程。P163</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-%E8%AF%B7%E4%B8%BE%E4%BE%8B%E8%AF%B4%E6%98%8E%E4%B8%BA%E4%BB%80%E4%B9%88%E8%B7%9D%E7%A6%BB%E5%90%91%E9%87%8F%E8%B7%AF%E7%94%B1%E9%80%89%E6%8B%A9%E7%AE%97%E6%B3%95%E5%8F%AF%E8%83%BD%E7%AE%97%E6%B3%95%E5%8F%AF%E8%83%BD%E4%BA%A7%E7%94%9F%E6%97%A0%E7%A9%B7%E8%AE%A1%E6%95%B0%E9%97%AE%E9%A2%98%EF%BC%8C%E5%8F%AF%E4%BB%A5%E9%87%87%E5%8F%96%E5%93%AA%E4%BA%9B%E6%8E%AA%E6%96%BD%E6%B6%88%E5%87%8F%E8%BF%99%E4%B8%80%E9%97%AE%E9%A2%98%EF%BC%9F-P165"><span class="toc-number">1.17.</span> <span class="toc-text">17.请举例说明为什么距离向量路由选择算法可能算法可能产生无穷计数问题，可以采取哪些措施消减这一问题？ P165</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#18-%E6%AF%94%E8%BE%83RIP%E3%80%81OSPF%E3%80%81BGP%E7%9A%84%E5%BC%82%E5%90%8C"><span class="toc-number">1.18.</span> <span class="toc-text">18.比较RIP、OSPF、BGP的异同</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%E4%B8%8E%E5%B1%80%E5%9F%9F%E7%BD%91"><span class="toc-number">2.</span> <span class="toc-text">五、数据链路层与局域网</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E9%93%BE%E8%B7%AF%E5%B1%82%E5%8D%8F%E8%AE%AE%E8%83%BD%E5%A4%9F%E5%90%91%E7%BD%91%E7%BB%9C%E5%B1%82%E6%8F%90%E4%BE%9B%E5%93%AA%E4%BA%9B%E5%8F%AF%E8%83%BD%E7%9A%84%E6%9C%8D%E5%8A%A1%EF%BC%9F-P177"><span class="toc-number">2.1.</span> <span class="toc-text">1.链路层协议能够向网络层提供哪些可能的服务？ P177</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89%E4%BA%9B%E7%BD%91%E7%BB%9C%E7%94%A8%E7%BA%A0%E9%94%99%E7%A0%81%E8%80%8C%E4%B8%8D%E7%94%A8%E6%A3%80%E9%94%99%E5%92%8C%E9%87%8D%E4%BC%A0%E6%9C%BA%E5%88%B6%EF%BC%9F%E7%BB%99%E5%87%BA2%E4%B8%AA%E7%90%86%E7%94%B1%E3%80%82-P178"><span class="toc-number">2.2.</span> <span class="toc-text">2.为什么有些网络用纠错码而不用检错和重传机制？给出2个理由。 P178</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%B7%AE%E9%94%99%E7%BC%96%E7%A0%81%E7%9A%84%E6%A3%80%E9%94%99%E6%88%96%E7%BA%A0%E9%94%99%E8%83%BD%E5%8A%9B%E4%B8%8E%E4%BB%80%E4%B9%88%E6%9C%89%E5%85%B3%EF%BC%9F%E8%AF%95%E4%B8%BE%E4%BE%8B%E8%AF%B4%E6%98%8E%E3%80%82-P179"><span class="toc-number">2.3.</span> <span class="toc-text">3.差错编码的检错或纠错能力与什么有关？试举例说明。  P179</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%81%87%E8%AE%BE%E5%9C%A8%E4%B8%80%E4%B8%AA%E4%BD%BF%E7%94%A8CSMA-CD%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%B1%80%E5%9F%9F%E7%BD%91%E4%B8%AD%EF%BC%8C%E4%B8%A4%E4%B8%AA%E7%BB%93%E7%82%B9%E5%90%8C%E6%97%B6%E7%BB%8F%E8%BF%87%E4%B8%80%E4%B8%AA%E9%80%9F%E7%8E%87%E4%B8%BAR%E7%9A%84%E5%B9%BF%E6%92%AD%E4%BF%A1%E9%81%93%E5%BC%80%E5%A7%8B%E5%8F%91%E9%80%81%E4%B8%80%E4%B8%AA%E9%95%BF%E5%BA%A6%E4%B8%BAL%E7%9A%84%E5%B8%A7%EF%BC%8Cd-prop-%E4%B8%BA%E4%B8%A4%E4%B8%AA%E7%BB%93%E7%82%B9%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8D%95%E5%90%91%E4%BC%A0%E6%92%AD%E5%BB%B6%E8%BF%9F%E3%80%82%E5%A6%82%E6%9E%9Cd-prop-lt-L-R%EF%BC%8C%E6%98%AF%E5%90%A6%E4%BC%9A%E5%8F%91%E7%94%9F%E5%86%B2%E7%AA%81%EF%BC%9F%E5%A6%82%E6%9E%9C%E4%BC%9A%E5%8F%91%E7%94%9F%E5%86%B2%E7%AA%81%EF%BC%8C%E4%B8%A4%E4%B8%AA%E7%BB%93%E7%82%B9%E8%83%BD%E6%A3%80%E6%B5%8B%E5%88%B0%E5%86%B2%E7%AA%81%E5%90%97%EF%BC%9F%E4%B8%BA%E4%BB%80%E4%B9%88%EF%BC%9FP194"><span class="toc-number">2.4.</span> <span class="toc-text">4.假设在一个使用CSMA&#x2F;CD协议的局域网中，两个结点同时经过一个速率为R的广播信道开始发送一个长度为L的帧，d(prop)为两个结点之间的单向传播延迟。如果d(prop)&lt;L&#x2F;R，是否会发生冲突？如果会发生冲突，两个结点能检测到冲突吗？为什么？P194</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%9C%A8%E4%B8%80%E4%B8%AACDMA%E7%BD%91%E7%BB%9C%E4%B8%AD%EF%BC%8C%E6%9F%90%E7%AB%99%E7%82%B9%E6%AD%A3%E6%8E%A5%E6%94%B6%E5%8F%A6%E4%B8%80%E7%A0%81%E5%BA%8F%E5%88%97%E4%B8%BA%EF%BC%88-1%EF%BC%8C1%EF%BC%8C1%EF%BC%8C-1%EF%BC%8C-1%EF%BC%8C-1%EF%BC%8C1%EF%BC%8C-1%EF%BC%89%E7%9A%84%E7%AB%99%E7%82%B9%E5%8F%91%E9%80%81%E7%9A%84%E6%95%B0%E6%8D%AE%EF%BC%8C%E8%8B%A5%E8%AF%A5%E7%AB%99%E7%82%B9%E6%94%B6%E5%88%B0"><span class="toc-number">2.5.</span> <span class="toc-text">5.在一个CDMA网络中，某站点正接收另一码序列为（-1，1，1，-1，-1，-1，1，-1）的站点发送的数据，若该站点收到</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E8%80%83%E8%99%91%E5%9C%A8%E4%BD%8E%E8%B4%9F%E8%BD%BD%E6%83%85%E5%86%B5%E4%B8%8B%EF%BC%8C%E7%BA%AFALOHA%E4%B8%8E%E6%97%B6%E9%9A%99ALOHA%E7%9B%B8%E6%AF%94%EF%BC%8C%E5%93%AA%E4%B8%AA%E5%BB%B6%E8%BF%9F%E6%9B%B4%E5%B0%8F%EF%BC%9F-P192"><span class="toc-number">2.6.</span> <span class="toc-text">6.考虑在低负载情况下，纯ALOHA与时隙ALOHA相比，哪个延迟更小？ P192</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-ARP%E6%9F%A5%E8%AF%A2%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%9C%A8%E5%B9%BF%E6%92%AD%E5%B8%A7%E4%B8%AD%E5%8F%91%E9%80%81%E5%91%A2%EF%BC%9FARP%E5%93%8D%E5%BA%94%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%9C%A8%E4%B8%80%E4%B8%AA%E7%89%B9%E5%AE%9A%E7%9B%AE%E7%9A%84MAC%E5%9C%B0%E5%9D%80%E7%9A%84%E5%B8%A7%E4%B8%AD%E5%8F%91%E9%80%81%E5%91%A2%EF%BC%9F-P200"><span class="toc-number">2.7.</span> <span class="toc-text">7.ARP查询为什么要在广播帧中发送呢？ARP响应为什么要在一个特定目的MAC地址的帧中发送呢？ P200</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E8%AF%95%E6%AF%94%E8%BE%8310BASE-T%E3%80%81100BASE-T%E5%92%8C%E5%8D%83%E5%85%86%E4%BD%8D%E4%BB%A5%E5%A4%AA%E7%BD%91%E7%9A%84%E5%85%B1%E5%90%8C%E7%82%B9%E4%B8%8E%E5%8C%BA%E5%88%AB%E3%80%82-P203"><span class="toc-number">2.8.</span> <span class="toc-text">8.试比较10BASE-T、100BASE-T和千兆位以太网的共同点与区别。 P203</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E5%A6%82%E6%9E%9C10BASE-T%E4%BB%A5%E5%A4%AA%E7%BD%91%E4%B8%AD%E7%9A%84%E6%9F%90%E4%B8%AA%E4%B8%BB%E6%9C%BA%E5%9C%A8%E5%B0%9D%E8%AF%95%E5%8F%91%E9%80%81%E5%B8%A7%EF%BC%8C%E8%BF%9E%E7%BB%AD%E5%BE%88%E5%A4%9A%E6%AC%A1%E5%8F%91%E7%94%9F%E5%86%B2%E7%AA%81%EF%BC%8C%E8%AF%95%E9%97%AE%E8%AF%A5%E4%B8%BB%E6%9C%BA%E5%9C%A8%E6%94%BE%E5%BC%83%E5%B0%9D%E8%AF%95%E5%8F%91%E9%80%81%E5%B8%A7%E4%B9%8B%E5%89%8D%EF%BC%8C%E5%8F%AF%E8%83%BD%E7%9A%84%E7%AD%89%E5%BE%85%EF%BC%88%E9%80%80%E9%81%BF%EF%BC%89%E6%97%B6%E9%97%B4%E6%9C%80%E9%95%BF%E6%98%AF%E5%A4%9A%E5%B0%91%EF%BC%9F%E4%B8%BA%E4%BB%80%E4%B9%88%EF%BC%9FP202"><span class="toc-number">2.9.</span> <span class="toc-text">9.如果10BASE-T以太网中的某个主机在尝试发送帧，连续很多次发生冲突，试问该主机在放弃尝试发送帧之前，可能的等待（退避）时间最长是多少？为什么？P202</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-%E4%B8%80%E4%B8%AA%E9%80%9A%E8%BF%87%E4%BB%A5%E5%A4%AA%E7%BD%91%E4%BC%A0%E9%80%81%E7%9A%84IP%E6%95%B0%E6%8D%AE%E5%8C%85%E6%80%BB%E9%95%BF%E5%BA%A6%E4%B8%BA60%E5%AD%97%E8%8A%82%E3%80%82%E6%98%AF%E5%90%A6%E9%9C%80%E8%A6%81%E5%9C%A8%E5%B0%81%E8%A3%85%E5%88%B0%E4%BB%A5%E5%A4%AA%E7%BD%91%E5%B8%A7%E4%B8%AD%E6%97%B6%E8%BF%9B%E8%A1%8C%E5%A1%AB%E5%85%85%EF%BC%9F%E5%A6%82%E6%9E%9C%E9%9C%80%E8%A6%81%EF%BC%8C%E8%AF%95%E9%97%AE%E9%9C%80%E8%A6%81%E5%A1%AB%E5%85%85%E5%A4%9A%E5%B0%91%E5%AD%97%E8%8A%82%EF%BC%9F-P202"><span class="toc-number">2.10.</span> <span class="toc-text">10.一个通过以太网传送的IP数据包总长度为60字节。是否需要在封装到以太网帧中时进行填充？如果需要，试问需要填充多少字节？ P202</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-%E4%BB%80%E4%B9%88%E6%98%AFVLAN%EF%BC%9F%E5%88%92%E5%88%86VLAN%E4%B8%BB%E8%A6%81%E6%9C%89%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%9F-P207"><span class="toc-number">2.11.</span> <span class="toc-text">11.什么是VLAN？划分VLAN主要有几种方法？ P207</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12"><span class="toc-number">2.12.</span> <span class="toc-text">12.</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E7%89%A9%E7%90%86%E5%B1%82"><span class="toc-number">3.</span> <span class="toc-text">六、物理层</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%95%B0%E5%AD%97%E9%80%9A%E4%BF%A1%E5%92%8C%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1%E6%9C%89%E4%BD%95%E4%B8%8D%E5%90%8C%EF%BC%9F-P215"><span class="toc-number">3.1.</span> <span class="toc-text">1.数字通信和数据通信有何不同？ P215</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%AE%80%E8%BF%B0%E5%8D%95%E5%90%91%E9%80%9A%E4%BF%A1%E3%80%81%E5%8F%8C%E5%90%91%E4%BA%A4%E6%9B%BF%E9%80%9A%E4%BF%A1%E5%92%8C%E5%8F%8C%E5%90%91%E5%90%8C%E6%97%B6%E9%80%9A%E4%BF%A1%E7%9A%84%E7%89%B9%E7%82%B9%EF%BC%8C%E5%B9%B6%E7%94%BB%E5%87%BA%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F%E6%A8%A1%E5%9E%8B%E3%80%82-P216"><span class="toc-number">3.2.</span> <span class="toc-text">2.简述单向通信、双向交替通信和双向同时通信的特点，并画出通信系统模型。  P216</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%B8%B8%E8%A7%81%E7%9A%84%E7%89%A9%E7%90%86%E4%BB%8B%E8%B4%A8%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F%E5%88%97%E4%B8%BE%E4%B8%8D%E5%90%8C%E7%9A%84%E7%89%A9%E7%90%86%E4%BB%8B%E8%B4%A8%E5%B9%B6%E8%AF%B4%E6%98%8E%E5%85%B6%E4%B8%BB%E8%A6%81%E7%89%B9%E6%80%A7%E3%80%82-P217"><span class="toc-number">3.3.</span> <span class="toc-text">3.常见的物理介质有哪些？列举不同的物理介质并说明其主要特性。 P217</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%9C%A8%E6%97%A0%E5%99%AA%E5%A3%B0%E6%83%85%E5%86%B5%E4%B8%8B%EF%BC%8C%E8%8B%A5%E6%9F%90%E9%80%9A%E4%BF%A1%E9%93%BE%E8%B7%AF%E7%9A%84%E5%B8%A6%E5%AE%BD%E4%B8%BA3kHz%EF%BC%8C%E9%87%87%E7%94%A84%E4%B8%AA%E7%9B%B8%E4%BD%8D%EF%BC%8C%E6%AF%8F%E4%B8%AA%E7%9B%B8%E4%BD%8D%E5%85%B7%E6%9C%894%E7%A7%8D%E6%8C%AF%E5%B9%85%E7%9A%84QAM%E8%B0%83%E5%88%B6%E6%8A%80%E6%9C%AF%EF%BC%8C%E5%88%99%E8%AF%A5%E9%80%9A%E4%BF%A1%E9%93%BE%E8%B7%AF%E7%9A%84%E6%9C%80%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E9%80%9F%E7%8E%87%E6%98%AF%E5%A4%9A%E5%B0%91%EF%BC%9F-P224"><span class="toc-number">3.4.</span> <span class="toc-text">4.在无噪声情况下，若某通信链路的带宽为3kHz，采用4个相位，每个相位具有4种振幅的QAM调制技术，则该通信链路的最大数据传输速率是多少？ P224</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E4%BB%80%E4%B9%88%E6%98%AF%E4%BF%A1%E9%81%93%EF%BC%9F%E4%BF%A1%E9%81%93%E6%9C%89%E5%93%AA%E5%87%A0%E7%A7%8D%E4%B8%BB%E8%A6%81%E5%88%86%E7%B1%BB%EF%BC%9F%E6%AF%8F%E4%B8%80%E7%B1%BB%E4%BF%A1%E9%81%93%E7%9A%84%E4%B8%BB%E8%A6%81%E7%89%B9%E7%82%B9%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F-P222"><span class="toc-number">3.5.</span> <span class="toc-text">5.什么是信道？信道有哪几种主要分类？每一类信道的主要特点是什么？ P222</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E4%B8%80%E4%B8%AA%E7%94%A8%E4%BA%8E%E5%8F%91%E9%80%81%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BF%A1%E5%8F%B7%E7%9A%843kHz%E4%BF%A1%E9%81%93%EF%BC%8C%E5%85%B6%E4%BF%A1%E5%99%AA%E6%AF%94%E4%B8%BA30dB%EF%BC%8C%E8%AF%95%E8%AE%A1%E7%AE%97%E5%85%B6%E5%8F%AF%E4%BB%A5%E8%8E%B7%E5%BE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E7%8E%87%E6%98%AF%E5%A4%9A%E5%B0%91%EF%BC%9F"><span class="toc-number">3.6.</span> <span class="toc-text">6.一个用于发送二进制信号的3kHz信道，其信噪比为30dB，试计算其可以获得的最大数据传输率是多少？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E6%95%B0%E5%AD%97%E5%9F%BA%E5%B8%A6%E4%BC%A0%E8%BE%93%E7%B3%BB%E7%BB%9F%E4%B8%BB%E8%A6%81%E6%9C%89%E5%93%AA%E4%BA%9B%E9%83%A8%E5%88%86%E7%BB%84%E6%88%90%EF%BC%9F%E5%90%84%E9%83%A8%E5%88%86%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F-P226"><span class="toc-number">3.7.</span> <span class="toc-text">7.数字基带传输系统主要有哪些部分组成？各部分的主要功能是什么？ P226</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E5%81%87%E8%AE%BE%E4%BF%A1%E6%81%AF%E7%A0%81%E4%B8%BA%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%AC%A6%E5%8F%B7%E5%BA%8F%E5%88%9710110010%EF%BC%8C%E8%AF%B7%E5%88%86%E5%88%AB%E7%94%BB%E5%87%BA%E5%AF%B9%E5%BA%94%E7%9A%84%E5%8D%95%E6%9E%81%E9%9D%9E%E5%BD%92%E9%9B%B6%E7%A0%81%EF%BC%88%E5%8D%95%E6%9E%81%E4%B8%8D%E5%BD%92%E9%9B%B6%EF%BC%89%E3%80%81%E5%8F%8C%E6%9E%81%E5%BD%92%E9%9B%B6%E7%A0%81%E3%80%81%E5%B7%AE%E5%88%86%E7%A0%81%E7%9A%84%E4%BF%A1%E5%8F%B7%E6%B3%A2%E5%BD%A2%E3%80%82P226"><span class="toc-number">3.8.</span> <span class="toc-text">8.假设信息码为二进制符号序列10110010，请分别画出对应的单极非归零码（单极不归零）、双极归零码、差分码的信号波形。P226</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E5%81%87%E8%AE%BE%E4%BF%A1%E6%81%AF%E7%A0%81%E4%B8%BA-100001000011000011%EF%BC%8C%E8%AF%B7%E7%BB%99%E5%87%BA%E5%AF%B9%E5%BA%94%E7%9A%84AMI%E7%A0%81%EF%BC%8C%E5%B9%B6%E7%94%BB%E5%87%BA%E7%9B%B8%E5%BA%94%E7%9A%84%E4%BF%A1%E5%8F%B7%E6%B3%A2%E5%BD%A2%EF%BC%88%E5%BD%92%E9%9B%B6%E4%BF%A1%E5%8F%B7%EF%BC%89%E3%80%82P228"><span class="toc-number">3.9.</span> <span class="toc-text">9.假设信息码为 100001000011000011，请给出对应的AMI码，并画出相应的信号波形（归零信号）。P228</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-%E8%AE%BE%E6%9F%902PSK%E4%BC%A0%E8%BE%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%A0%81%E5%85%83%E9%80%9F%E7%8E%87%E4%B8%BA1200Baud%EF%BC%8C%E8%BD%BD%E6%B3%A2%E9%A2%91%E7%8E%87%E4%B8%BA2400Hz%EF%BC%8C%E5%8F%91%E9%80%81%E6%95%B0%E5%AD%97%E4%BF%A1%E6%81%AF%E4%B8%BA10011101%EF%BC%8C%E8%AF%95%E7%94%BB%E5%87%BA2PSK%E4%BF%A1%E5%8F%B7%E8%B0%83%E5%88%B6%E5%99%A8%E5%8E%9F%E7%90%86%E6%A1%86%E5%9B%BE%EF%BC%8C%E5%B9%B6%E7%94%BB%E5%87%BA2PSK%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%97%B6%E9%97%B4%E6%B3%A2%E5%BD%A2%E3%80%82-P234"><span class="toc-number">3.10.</span> <span class="toc-text">10.设某2PSK传输系统的码元速率为1200Baud，载波频率为2400Hz，发送数字信息为10011101，试画出2PSK信号调制器原理框图，并画出2PSK信号的时间波形。 P234</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-%E4%BB%80%E4%B9%88%E6%98%AFQAM%E8%B0%83%E5%88%B6%EF%BC%9FQAM%E8%B0%83%E5%88%B6%E7%9A%84%E4%B8%BB%E8%A6%81%E7%89%B9%E7%82%B9%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9FP237"><span class="toc-number">3.11.</span> <span class="toc-text">11.什么是QAM调制？QAM调制的主要特点是什么？P237</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-%E7%89%A9%E7%90%86%E5%B1%82%E6%8E%A5%E5%8F%A3%E7%89%B9%E6%80%A7%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F-P238"><span class="toc-number">3.12.</span> <span class="toc-text">12.物理层接口特性有哪些？ P238</span></a></li></ol></li></ol>
+                                  </div>
+                              </button>
+                          
+                          
+                      
+                    
+                      <a href="#nexmoe-content" class="toc-link" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+     
+    <div id="nexmoe-search-space">
+        <div class="search-container">
+            <div class="search-header">
+                <div class="search-input-container">
+                    <input class="search-input" type="text" placeholder="搜索" oninput="sinput();">
+                </div>
+                <a class="search-close" onclick="sclose();">×</a>
+            </div>
+            <div class="search-body"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+ 
+
+<script async src="/js/app.js?v=1637337895911"></script>
+
+
+	<script async src="/js/search.js?v=1637337895911"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
+</script>
+
+
+    
+
+
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+
+</html>

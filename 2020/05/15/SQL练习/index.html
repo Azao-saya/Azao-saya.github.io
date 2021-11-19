@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+    
+    <title>牛客网《数据库SQL实战》练习1-10 - 还在建设的避风港</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="null">
+    <meta name="keywords" content="null">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    
+    
+
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QQ图片20200309200651.2slbp7k6zx40.jpg" type="image/x-icon" />
+    <meta name="description" content="想找些题sql题目练习一下，发现和之前用java刷pat不一样 那就是我看懂题目有了思路之后，却完全不知道要怎么下笔….. 所以此篇前期就直接看别人的答案学习SQL语句 之后应该会买一个leetcode会员，把leetcode的题目也刷完">
+<meta property="og:type" content="article">
+<meta property="og:title" content="牛客网《数据库SQL实战》练习1-10">
+<meta property="og:url" content="https://shelterz.cn/2020/05/15/SQL%E7%BB%83%E4%B9%A0/index.html">
+<meta property="og:site_name" content="还在建设的避风港">
+<meta property="og:description" content="想找些题sql题目练习一下，发现和之前用java刷pat不一样 那就是我看懂题目有了思路之后，却完全不知道要怎么下笔….. 所以此篇前期就直接看别人的答案学习SQL语句 之后应该会买一个leetcode会员，把leetcode的题目也刷完">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20200605105414967.png">
+<meta property="article:published_time" content="2020-05-14T21:34:12.000Z">
+<meta property="article:modified_time" content="2021-01-20T08:25:12.325Z">
+<meta property="article:author" content="A_zao">
+<meta property="article:tag" content="MySql">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20200605105414967.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
+    <link rel="stylesheet" href="/css/style.css?v=1637337895944">
+     
+    
+        <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
+    
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637337895944">
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="mdui-drawer-body-left">
+    
+    <div id="nexmoe-background">
+        <div class="nexmoe-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QY5QSK.512q5xd2mt00.jpg)"></div>
+        <div class="mdui-appbar mdui-shadow-0">
+            <div class="mdui-toolbar">
+                <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+                <div class="mdui-toolbar-spacer"></div>
+                <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+                <a href="/" title="A_zao" class="mdui-btn mdui-btn-icon"><img src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/57LtVReQg2ANsaX.5sw3t0dqf980.jpg" alt="A_zao"></a>
+            </div>
+        </div>
+    </div>
+    <div id="nexmoe-header">
+        <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="A_zao">
+            <img src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/57LtVReQg2ANsaX.5sw3t0dqf980.jpg" alt="A_zao" alt="A_zao">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>124</div>
+        <div><span>标签</span>26</div>
+        <div><span>分类</span>5</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/archive.html" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about.html" title="关于我">
+            <i class="mdui-list-item-icon nexmoefont icon-guanyu"></i>
+            <div class="mdui-list-item-content">
+                关于我
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/PY.html" title="单向朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-menu"></i>
+            <div class="mdui-list-item-content">
+                单向朋友
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        
+            <form id="search_form">
+                <label><input class="st-default-search-input" id="search_value" name="q" type="search" placeholder="搜索" style="
+                    font-size: 15px !important;
+                    height: 56px !important;
+                    background-image: none;
+                "></label>
+            </form>
+         
+    </div>
+</div>
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/378156" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-CN_bilibiliB"></i>
+        </a><a class="mdui-ripple" href="https://github.com/Azao-saya" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a><a class="mdui-ripple" href="https://steamcommunity.com/id/oounit/" target="_blank" mdui-tooltip="{content: 'Steam'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-steam"></i>
+        </a><a class="mdui-ripple" href="https://t.me/shelterz" target="_blank" mdui-tooltip="{content: 'Telegram'}" style="color: rgb(0,191,255);background-color: rgba(0,191,255, .15);">
+            <i class="nexmoefont icon-telegram"></i>
+        </a><a class="mdui-ripple" href="https://music.163.com/#/user/home?id=41282089" target="_blank" mdui-tooltip="{content: 'CloudMusic'}" style="color: rgb(255,106,106);background-color: rgba(255,106,106, .15);">
+            <i class="nexmoefont icon-netease-cloud-music-line"></i>
+        </a>
+    </div>
+</div>
+    
+    
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/PAT练习/">PAT练习</a>
+          <span class="category-list-count">106</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/二次元の胡话/">二次元の胡话</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/云笔记/">云笔记</a>
+          <span class="category-list-count">10</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/折腾/">折腾</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/生活感悟/">生活感悟</a>
+          <span class="category-list-count">4</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+    
+    
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/ASCII/" style="font-size: 15.71px;">ASCII</a> <a href="/tags/BigDeciaml-toPlainString/" style="font-size: 10px;">BigDeciaml&toPlainString</a> <a href="/tags/BigInteger/" style="font-size: 10px;">BigInteger</a> <a href="/tags/HashMap/" style="font-size: 14.29px;">HashMap</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/LinkedHashSet/" style="font-size: 11.43px;">LinkedHashSet</a> <a href="/tags/MySql/" style="font-size: 12.86px;">MySql</a> <a href="/tags/TreeSet/" style="font-size: 10px;">TreeSet</a> <a href="/tags/compare/" style="font-size: 15.71px;">compare</a> <a href="/tags/implements/" style="font-size: 10px;">implements</a> <a href="/tags/reverse/" style="font-size: 12.86px;">reverse</a> <a href="/tags/sort/" style="font-size: 11.43px;">sort</a> <a href="/tags/stack%E6%95%B0%E7%BB%84/" style="font-size: 10px;">stack数组</a> <a href="/tags/try-catch/" style="font-size: 12.86px;">try/catch</a> <a href="/tags/%E5%81%B7%E5%AD%A6%E6%9F%B3%E7%A5%9E%E7%9A%84%E5%B8%85%E6%B0%94%E4%BB%A3%E7%A0%81/" style="font-size: 12.86px;">偷学柳神的帅气代码</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">博客</a> <a href="/tags/%E5%8F%82%E5%8A%A0%E7%9A%84%E8%80%83%E8%AF%95/" style="font-size: 10px;">参加的考试</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/" style="font-size: 18.57px;">字符串操作</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%AB%98%E7%AB%AF%E6%93%8D%E4%BD%9C/" style="font-size: 11.43px;">字符串高端操作</a> <a href="/tags/%E6%9C%AAAC%E9%A2%98%E7%9B%AE/" style="font-size: 17.14px;">未AC题目</a> <a href="/tags/%E6%9E%81%E5%85%B6%E9%9D%9E%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" style="font-size: 10px;">极其非面向对象</a> <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" style="font-size: 20px;">正则表达式</a> <a href="/tags/%E7%A5%96%E4%BC%A0%E5%B1%8E%E5%B1%B1%E4%BB%A3%E7%A0%81/" style="font-size: 14.29px;">祖传屎山代码</a> <a href="/tags/%E8%87%AA%E8%80%83/" style="font-size: 11.43px;">自考</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 11.43px;">计算机网络</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 10px;">链表</a>
+    </div>
+    
+  </div>
+
+    
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2021 A_zao
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        
+    </div>
+</div><!-- .nexmoe-drawer -->
+    </div>
+    <div id="nexmoe-content">
+        <div class="nexmoe-primary">
+            <div class="nexmoe-post">
+
+  <article>
+      
+          <div class="nexmoe-post-cover" style="padding-bottom: NaN%;"> 
+              <img data-src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/61ec1619gy1g0mbfhhm7pj21c00lqwid_看图王.63pc0rpy2uo0.jpg" data-sizes="auto" alt="牛客网《数据库SQL实战》练习1-10" class="lazyload">
+              <h1>牛客网《数据库SQL实战》练习1-10</h1>
+          </div>
+      
+      
+      <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年05月15日</a>
+    <a><i class="nexmoefont icon-areachart"></i>3.3k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 16 分钟</a>
+</div>
+
+      
+
+      <p>想找些题sql题目练习一下，发现和之前用java刷pat不一样</p>
+<p>那就是我看懂题目有了思路之后，却完全不知道要怎么下笔…..</p>
+<p>所以此篇前期就直接看别人的答案学习SQL语句</p>
+<p>之后应该会买一个leetcode会员，把leetcode的题目也刷完<span id="more"></span></p>
+<h2 id="1-查找最晚入职员工的所有信息"><a href="#1-查找最晚入职员工的所有信息" class="headerlink" title="1.查找最晚入职员工的所有信息"></a>1.查找最晚入职员工的所有信息</h2><p><strong>题目描述：</strong><br>查找最晚入职员工的所有信息<br>CREATE TABLE <code>employees</code> (<br><code>emp_no</code> int(11) NOT NULL,<br><code>birth_date</code> date NOT NULL,<br><code>first_name</code> varchar(14) NOT NULL,<br><code>last_name</code> varchar(16) NOT NULL,<br><code>gender</code> char(1) NOT NULL,<br><code>hire_date</code> date NOT NULL,<br>PRIMARY KEY (<code>emp_no</code>));</p>
+<p><strong>输入描述:</strong></p>
+<p>无</p>
+<p><strong>输出描述:</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">emp_no</th>
+<th align="left">birth_date</th>
+<th align="left">first_name</th>
+<th align="left">last_name</th>
+<th align="left">gender</th>
+<th align="left">hire_date</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">10008</td>
+<td align="left">1958-02-19</td>
+<td align="left">Saniya</td>
+<td align="left">Kalloufi</td>
+<td align="left">M</td>
+<td align="left">1994-09-15</td>
+</tr>
+</tbody></table>
+<p><strong>解题代码：</strong></p>
+<blockquote>
+<p>1&gt;select * from employee order by hire_date desc limit 0,1;</p>
+<p>2&gt;select * from employee order by hire_date desc limit 1;</p>
+<p>3&gt;select * from employee where hire_date = (select max(hire_date) from employee);</p>
+</blockquote>
+<p><strong>吐槽：</strong></p>
+<blockquote>
+<p>三种写法均能通过测试用例</p>
+<p>第三条最为严谨，因为<code>hire_date</code>是<code>data</code>日期类型，记录的时间只精确到天</p>
+<p>如果那天有多个人入职的话无法判断出谁是最晚入职的，应该把当天所有的数据给提取出来。</p>
+<p>牛客网的书写规则为：关键字全为小写或者全为大写，不能添加分号，查询内容区别大小写。</p>
+<p><code>order by</code> 语句意为根据指定的列对结果进行排序，默认为升序。</p>
+<p><code>desc</code> 关键字意为调整<code>order by</code>的排序规则为降序</p>
+<p><code>limit</code>则是限制要输出多少条内容或<del>输出一个区间里的内容</del></p>
+<p>此处理解错了，一开始觉得是0≤x≤1。</p>
+<p>下面一题依样画葫芦的时候马上暴露了出来问题，</p>
+<p>真实意思是检索从第n行开始,获取后面的m条数据</p>
+<p><code>select max()</code>是函数返回一列的最大值，null值不包括计算。</p>
+</blockquote>
+<h2 id="2-查找入职员工时间排名倒数第三的员工所有信息"><a href="#2-查找入职员工时间排名倒数第三的员工所有信息" class="headerlink" title="2.查找入职员工时间排名倒数第三的员工所有信息"></a>2.查找入职员工时间排名倒数第三的员工所有信息</h2><p><strong>题目描述：</strong></p>
+<p>查找入职员工时间排名倒数第三的员工所有信息<br>CREATE TABLE <code>employees</code> (<br><code>emp_no</code> int(11) NOT NULL,<br><code>birth_date</code> date NOT NULL,<br><code>first_name</code> varchar(14) NOT NULL,<br><code>last_name</code> varchar(16) NOT NULL,<br><code>gender</code> char(1) NOT NULL,<br><code>hire_date</code> date NOT NULL,<br>PRIMARY KEY (<code>emp_no</code>));</p>
+<p><strong>输入描述:</strong></p>
+<p>无</p>
+<p><strong>输出描述:</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">emp_no</th>
+<th align="left">birth_date</th>
+<th align="left">first_name</th>
+<th align="left">last_name</th>
+<th align="left">gender</th>
+<th align="left">hire_date</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">10005</td>
+<td align="left">1955-01-21</td>
+<td align="left">Kyoichi</td>
+<td align="left">Maliniak</td>
+<td align="left">M</td>
+<td align="left">1989-09-12</td>
+</tr>
+</tbody></table>
+<p><strong>解题代码：</strong></p>
+<blockquote>
+<p>1&gt;</p>
+<p>select * from employees order by hire_date desc limit 2,1</p>
+<p>2&gt;</p>
+<p>select *<br>from<br>employees<br>where hire_date=(</p>
+<p>​    select distinct hire_date from employees order by hire_date desc limit 2,1</p>
+<p>)</p>
+</blockquote>
+<p><strong>吐槽：</strong></p>
+<blockquote>
+<p>两种写法均能通过测试用例</p>
+<p>学习了新的写法感觉更清晰了一点</p>
+<p><code>select distinct</code>用于返回唯一不同的值</p>
+<p>比如得到<code>hire_date</code>列的<del>所有值</del>(唯一不同值)select distinct hire_date from employees</p>
+<p>所有不同的入职日期都会显示出来</p>
+<p>此处的作用是为了去重，如果像pat的测试用例一样刁难你的话就非常重要了。</p>
+<p>因为是<code>data</code>类型同一天入职的人区分不出先后，假如有同天入职的将会全部忽略，取出的是倒数第三天的入职信息。</p>
+<p>其实是和题意不符了</p>
+</blockquote>
+<h2 id="3-查找各个部门当前领导当前薪水详情以及其对应部门编号dept-no"><a href="#3-查找各个部门当前领导当前薪水详情以及其对应部门编号dept-no" class="headerlink" title="3.查找各个部门当前领导当前薪水详情以及其对应部门编号dept_no"></a>3.查找各个部门当前领导当前薪水详情以及其对应部门编号dept_no</h2><p><strong>题目描述:</strong><br>查找各个部门当前(to_date=’9999-01-01’)领导当前薪水详情以及其对应部门编号dept_no<br>CREATE TABLE <code>dept_manager</code> (<br><code>dept_no</code> char(4) NOT NULL,<br><code>emp_no</code> int(11) NOT NULL,<br><code>from_date</code> date NOT NULL,<br><code>to_date</code> date NOT NULL,<br>PRIMARY KEY (<code>emp_no</code>,<code>dept_no</code>));<br>CREATE TABLE <code>salaries</code> (<br><code>emp_no</code> int(11) NOT NULL,<br><code>salary</code> int(11) NOT NULL,<br><code>from_date</code> date NOT NULL,<br><code>to_date</code> date NOT NULL,<br>PRIMARY KEY (<code>emp_no</code>,<code>from_date</code>));</p>
+<p><strong>输入描述:</strong></p>
+<p>无</p>
+<p><strong>输出描述:</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">emp_no</th>
+<th align="center">salary</th>
+<th align="center">from_date</th>
+<th align="center">to_date</th>
+<th align="center">dept_no</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">10002</td>
+<td align="center">72527</td>
+<td align="center">2001-08-02</td>
+<td align="center">999-01-01</td>
+<td align="center">d001</td>
+</tr>
+<tr>
+<td align="center">10004</td>
+<td align="center">74057</td>
+<td align="center">2001-11-27</td>
+<td align="center">9999-01-01</td>
+<td align="center">d004</td>
+</tr>
+<tr>
+<td align="center">10005</td>
+<td align="center">94692</td>
+<td align="center">2001-09-09</td>
+<td align="center">9999-01-01</td>
+<td align="center">d003</td>
+</tr>
+<tr>
+<td align="center">10006</td>
+<td align="center">43311</td>
+<td align="center">2001-08-02</td>
+<td align="center">9999-01-01</td>
+<td align="center">d002</td>
+</tr>
+<tr>
+<td align="center">10010</td>
+<td align="center">94409</td>
+<td align="center">2001-11-23</td>
+<td align="center">9999-01-01</td>
+<td align="center">d006</td>
+</tr>
+</tbody></table>
+<p><strong>解题代码：</strong></p>
+<blockquote>
+<p>1&gt;</p>
+<p>select s.* ,d.dept_no<br>from salaries as s<br>join dept_manager as d<br>on s.emp_no=d.emp_no<br>where s.to_date = ‘9999-01-01’<br>and    d.to_date=’9999-01-01’;</p>
+<p>2&gt;</p>
+<p>select </p>
+<p>salaries.emp_no,</p>
+<p>salaries.salary,</p>
+<p>salaries.from_date,</p>
+<p>salaries.to_date,</p>
+<p>dept_manager.dept_no<br>from salaries inner join dept_manager<br>on dept_manager.emp_no = salaries.emp_no<br>where dept_manager.to_date = ‘9999-01-01’<br>and salaries.to_date = ‘9999-01-01’;</p>
+</blockquote>
+<p><strong>吐槽：</strong></p>
+<blockquote>
+<p>不能把整个表格都复制过来，增加le 好多工作量。但当我手动快输入完了的时候，发现他单行其实是用了markdown语法的…</p>
+<p>第二条是第一条的完整写法。</p>
+<p>最后也可以加上<code>ORDER BY</code> salaries.emp_no;</p>
+<p>因为（以salaries表为主表进行查询，输出结果以salaries.emp_no升序排序）</p>
+<p>不加上的话就不能改变（from salaries inner join dept_manager）这句的salaries和dept_manager的顺序，否则无法通过判例。</p>
+</blockquote>
+<h2 id="4-查找所有已经分配部门的员工的last-name和first-name以及dept-no"><a href="#4-查找所有已经分配部门的员工的last-name和first-name以及dept-no" class="headerlink" title="4.查找所有已经分配部门的员工的last_name和first_name以及dept_no"></a>4.查找所有已经分配部门的员工的last_name和first_name以及dept_no</h2><p><strong>题目描述：</strong></p>
+<p>查找所有已经分配部门的员工的last_name和first_name以及dept_no(请注意输出描述里各个列的前后顺序)<br>CREATE TABLE <code>dept_emp</code> (<br><code>emp_no</code> int(11) NOT NULL,<br><code>dept_no</code> char(4) NOT NULL,<br><code>from_date</code> date NOT NULL,<br><code>to_date</code> date NOT NULL,<br>PRIMARY KEY (<code>emp_no</code>,<code>dept_no</code>));<br>CREATE TABLE <code>employees</code> (<br><code>emp_no</code> int(11) NOT NULL,<br><code>birth_date</code> date NOT NULL,<br><code>first_name</code> varchar(14) NOT NULL,<br><code>last_name</code> varchar(16) NOT NULL,<br><code>gender</code> char(1) NOT NULL,<br><code>hire_date</code> date NOT NULL,<br>PRIMARY KEY (<code>emp_no</code>));</p>
+<p><strong>输入描述:</strong></p>
+<p>无</p>
+<p><strong>输出描述:</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">last_name</th>
+<th align="left">first_name</th>
+<th align="left">dept_no</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Facello</td>
+<td align="left">Georgi</td>
+<td align="left">d001</td>
+</tr>
+<tr>
+<td align="left">省略</td>
+<td align="left">省略</td>
+<td align="left">省略</td>
+</tr>
+<tr>
+<td align="left">Piveteau</td>
+<td align="left">Duangkaew</td>
+<td align="left">d006</td>
+</tr>
+</tbody></table>
+<p><strong>解题代码：</strong></p>
+<blockquote>
+<p>1&gt;</p>
+<p>select employees.last_name, first_name, dept_emp.dept_no<br>from dept_emp inner join employees<br>on dept_emp.emp_no = employees.emp_no;</p>
+<p>2&gt;</p>
+<p>SELECT<br>   e.last_name,<br>   e.first_name,<br>   d.dept_no</p>
+<p>FROM<br>   dept_emp AS d<br>INNER JOIN<br>   employees AS e<br>ON<br>   e.emp_no = d.emp_no;</p>
+</blockquote>
+<h2 id="5-查找所有员工的last-name和first-name以及对应部门编号dept-no"><a href="#5-查找所有员工的last-name和first-name以及对应部门编号dept-no" class="headerlink" title="5.查找所有员工的last_name和first_name以及对应部门编号dept_no"></a>5.查找所有员工的last_name和first_name以及对应部门编号dept_no</h2><p><strong>题目描述:</strong><br>查找所有员工的last_name和first_name以及对应部门编号dept_no，也包括暂时没有分配具体部门的员工(请注意输出描述里各个列的前后顺序)<br>CREATE TABLE <code>dept_emp</code> (<br><code>emp_no</code> int(11) NOT NULL,<br><code>dept_no</code> char(4) NOT NULL,<br><code>from_date</code> date NOT NULL,<br><code>to_date</code> date NOT NULL,<br>PRIMARY KEY (<code>emp_no</code>,<code>dept_no</code>));<br>CREATE TABLE <code>employees</code> (<br><code>emp_no</code> int(11) NOT NULL,<br><code>birth_date</code> date NOT NULL,<br><code>first_name</code> varchar(14) NOT NULL,<br><code>last_name</code> varchar(16) NOT NULL,<br><code>gender</code> char(1) NOT NULL,<br><code>hire_date</code> date NOT NULL,<br>PRIMARY KEY (<code>emp_no</code>));</p>
+<p><strong>输入描述:</strong></p>
+<p>无</p>
+<p><strong>输出描述:</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">last_name</th>
+<th align="center">first_name</th>
+<th align="center">dept_no</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Facello</td>
+<td align="center">Georgi</td>
+<td align="center">d001</td>
+</tr>
+<tr>
+<td align="center">省略</td>
+<td align="center">省略</td>
+<td align="center">省略</td>
+</tr>
+<tr>
+<td align="center">Sluis</td>
+<td align="center">Mary</td>
+<td align="center">NULL(在sqlite中此处为空,MySQL为NULL)</td>
+</tr>
+</tbody></table>
+<p><strong>解题代码：</strong></p>
+<blockquote>
+<p>SELECT e.last_name,e.first_name,d.dept_no<br>FROM employees as e LEFT JOIN dept_emp as d<br>on e.emp_no = d.emp_no;</p>
+</blockquote>
+<p><strong>吐槽：</strong></p>
+<blockquote>
+<p>题目以及输出描述中给出了信息，表示还有暂时没有分配部门的员工。</p>
+<p>INNER JOIN 两边表同时有对应的数据，即任何一边缺失数据就不显示。<br>便无法按照题目要求取出数据。</p>
+<p>Ps：这个牛客网SQL编译器不支持RIGHT/FULL JOIN，所以用LEFT JOIN可以通过，只要把原来的表位置从右换到左即可。</p>
+</blockquote>
+<h2 id="6-查找所有员工入职时候的薪水情况"><a href="#6-查找所有员工入职时候的薪水情况" class="headerlink" title="6.查找所有员工入职时候的薪水情况"></a>6.查找所有员工入职时候的薪水情况</h2><p><strong>题目描述:</strong><br>查找所有员工入职时候的薪水情况，给出emp_no以及salary， 并按照emp_no进行逆序(请注意，一个员工可能有多次涨薪的情况)<br>CREATE TABLE <code>employees</code> (<br><code>emp_no</code> int(11) NOT NULL,<br><code>birth_date</code> date NOT NULL,<br><code>first_name</code> varchar(14) NOT NULL,<br><code>last_name</code> varchar(16) NOT NULL,<br><code>gender</code> char(1) NOT NULL,<br><code>hire_date</code> date NOT NULL,<br>PRIMARY KEY (<code>emp_no</code>));<br>CREATE TABLE <code>salaries</code> (<br><code>emp_no</code> int(11) NOT NULL,<br><code>salary</code> int(11) NOT NULL,<br><code>from_date</code> date NOT NULL,<br><code>to_date</code> date NOT NULL,<br>PRIMARY KEY (<code>emp_no</code>,<code>from_date</code>));</p>
+<p><strong>输入描述:</strong></p>
+<p>无</p>
+<p><strong>输出描述:</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">emp_no</th>
+<th align="center">salary</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">10011</td>
+<td align="center">25828</td>
+</tr>
+<tr>
+<td align="center">省略</td>
+<td align="center">省略</td>
+</tr>
+<tr>
+<td align="center">10001</td>
+<td align="center">60117</td>
+</tr>
+</tbody></table>
+<p><strong>解题代码：</strong></p>
+<blockquote>
+<p>1&gt;</p>
+<p>SELECT e.emp_no,s.salary<br>FROM employees AS e<br>INNER JOIN salaries AS s<br>ON e.emp_no = s.emp_no<br>AND e.hire_date = s.from_date<br>ORDER BY e.emp_no DESC;</p>
+<p>2&gt;</p>
+<p>SELECT e.emp_no, s.salary FROM employees AS e, salaries AS s<br>WHERE e.emp_no = s.emp_no AND e.hire_date = s.from_date<br>ORDER BY e.emp_no DESC</p>
+</blockquote>
+<p><strong>吐槽：</strong></p>
+<blockquote>
+<p>题目要求是要取得入职时的薪水，但一个员工可能有多次涨薪的情况，也就是薪水表中number是不唯一的。</p>
+<p>题目中也用了PRIMARY KEY (<code>emp_no</code>,<code>from_date</code>));应该是叫做组合主键吧，来进一步说明。</p>
+<p>所以需要去找hire_date记录的日期所对应的薪水情况。</p>
+</blockquote>
+<h2 id="7-查找薪水变动超过15次的员工号emp-no以及其对应的变动次数t"><a href="#7-查找薪水变动超过15次的员工号emp-no以及其对应的变动次数t" class="headerlink" title="7.查找薪水变动超过15次的员工号emp_no以及其对应的变动次数t"></a>7.查找薪水变动超过15次的员工号emp_no以及其对应的变动次数t</h2><p><strong>题目描述:</strong><br>查找薪水变动超过15次的员工号emp_no以及其对应的变动次数t<br>CREATE TABLE <code>salaries</code> (<br><code>emp_no</code> int(11) NOT NULL,<br><code>salary</code> int(11) NOT NULL,<br><code>from_date</code> date NOT NULL,<br><code>to_date</code> date NOT NULL,<br>PRIMARY KEY (<code>emp_no</code>,<code>from_date</code>));</p>
+<p><strong>输入描述:</strong></p>
+<p>无</p>
+<p><strong>输出描述:</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">emp_no</th>
+<th align="center">t</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">10001</td>
+<td align="center">17</td>
+</tr>
+<tr>
+<td align="center">10004</td>
+<td align="center">16</td>
+</tr>
+<tr>
+<td align="center">10009</td>
+<td align="center">18</td>
+</tr>
+</tbody></table>
+<p><strong>解题代码：</strong></p>
+<blockquote>
+<p>SELECT emp_no, COUNT(emp_no) AS t FROM salaries<br>GROUP BY emp_no HAVING t &gt; 1</p>
+</blockquote>
+<p><strong>吐槽：</strong></p>
+<blockquote>
+<p>变动次数就是看表里emp_no有多少个</p>
+<p>COUNT(column_name) 函数返回指定列的值的数目（NULL 不计入）：</p>
+<p>GROUP BY 语句用于结合聚合函数，根据一个或多个列对结果集进行分组。</p>
+<p>使用效果就是输出描述那样 emp_no 加上自己命名的</p>
+<p>在 SQL 中增加 HAVING 子句原因是，WHERE 关键字无法与聚合函数一起使用。</p>
+<p>HAVING 子句可以让我们筛选分组后的各组数据。</p>
+<p>WHERE语句在GROUP BY语句之前；SQL会在分组之前计算WHERE语句。  </p>
+<p>HAVING语句在GROUP BY语句之后；SQL会在分组之后计算HAVING语句。</p>
+</blockquote>
+<h2 id="8-找出所有员工当前薪水salary情况"><a href="#8-找出所有员工当前薪水salary情况" class="headerlink" title="8.找出所有员工当前薪水salary情况"></a>8.找出所有员工当前薪水salary情况</h2><p><strong>题目描述:</strong><br>找出所有员工当前(to_date=’9999-01-01’)具体的薪水salary情况，对于相同的薪水只显示一次,并按照逆序显示<br>CREATE TABLE <code>salaries</code> (<br><code>emp_no</code> int(11) NOT NULL,<br><code>salary</code> int(11) NOT NULL,<br><code>from_date</code> date NOT NULL,<br><code>to_date</code> date NOT NULL,<br>PRIMARY KEY (<code>emp_no</code>,<code>from_date</code>));</p>
+<p><strong>输入描述:</strong></p>
+<p>无</p>
+<p><strong>输出描述:</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">salary</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">94692</td>
+</tr>
+<tr>
+<td align="center">94409</td>
+</tr>
+<tr>
+<td align="center">88958</td>
+</tr>
+</tbody></table>
+<p><strong>解题代码：</strong></p>
+<blockquote>
+<p>1&gt;</p>
+<p>SELECT DISTINCT salary FROM salaries<br>WHERE to_date = ‘9999-01-01’ ORDER BY salary DESC</p>
+<p>2&gt;</p>
+<p>select salary from salaries </p>
+<p>where to_date=’9999-01-01’ group by salary order by salary desc</p>
+</blockquote>
+<p><strong>吐槽：</strong></p>
+<blockquote>
+<p>SELECT DISTINCT 语句用于返回唯一不同的值。</p>
+<p>评论说要去重的列数据种类很多时，group by更快，要去重的列数据种类很少时，distinct更快</p>
+<p>大表的话是用group by 解决重复问题</p>
+</blockquote>
+<h2 id="9-获取所有部门当前manager的当前薪水情况，给出dept-no-emp-no以及salary"><a href="#9-获取所有部门当前manager的当前薪水情况，给出dept-no-emp-no以及salary" class="headerlink" title="9.获取所有部门当前manager的当前薪水情况，给出dept_no, emp_no以及salary"></a>9.获取所有部门当前manager的当前薪水情况，给出dept_no, emp_no以及salary</h2><p><strong>题目描述:</strong><br>获取所有部门当前(dept_manager.to_date=’9999-01-01’)manager的当前(salaries.to_date=’9999-01-01’)薪水情况，给出dept_no, emp_no以及salary(请注意，同一个人可能有多条薪水情况记录)<br>CREATE TABLE <code>dept_manager</code> (<br><code>dept_no</code> char(4) NOT NULL,<br><code>emp_no</code> int(11) NOT NULL,<br><code>from_date</code> date NOT NULL,<br><code>to_date</code> date NOT NULL,<br>PRIMARY KEY (<code>emp_no</code>,<code>dept_no</code>));<br>CREATE TABLE <code>salaries</code> (<br><code>emp_no</code> int(11) NOT NULL,<br><code>salary</code> int(11) NOT NULL,<br><code>from_date</code> date NOT NULL,<br><code>to_date</code> date NOT NULL,<br>PRIMARY KEY (<code>emp_no</code>,<code>from_date</code>));</p>
+<p><strong>输入描述:</strong></p>
+<p>无</p>
+<p><strong>输出描述:</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">dept_no</th>
+<th align="left">emp_no</th>
+<th align="left">salary</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">d001</td>
+<td align="left">10002</td>
+<td align="left">72527</td>
+</tr>
+<tr>
+<td align="left">d004</td>
+<td align="left">10004</td>
+<td align="left">74057</td>
+</tr>
+<tr>
+<td align="left">d003</td>
+<td align="left">10005</td>
+<td align="left">94692</td>
+</tr>
+<tr>
+<td align="left">d002</td>
+<td align="left">10006</td>
+<td align="left">43311</td>
+</tr>
+<tr>
+<td align="left">d006</td>
+<td align="left">10010</td>
+<td align="left">94409</td>
+</tr>
+</tbody></table>
+<p><strong>解题代码：</strong></p>
+<blockquote>
+<p>1&gt;</p>
+<p>select d.dept_no,d.emp_no,s.salary<br>from dept_manager d,salaries s<br>where d.emp_no = s.emp_no<br>and d.to_date = s.to_date<br>and s.to_date=’9999-01-01’</p>
+<p>2&gt;</p>
+<p>select d.dept_no,d.emp_no,s.salary<br>from dept_manager as d inner join salaries as s<br>on d.emp_no = s.emp_no<br>and d.to_date = ‘9999-01-01’<br>and s.to_date = ‘9999-01-01’</p>
+</blockquote>
+<p><strong>吐槽：</strong></p>
+<blockquote>
+<p>SELECT DISTINCT 语句用于返回唯一不同的值。</p>
+<p>评论说要去重的列数据种类很多时，group by更快，</p>
+</blockquote>
+<h2 id="10-获取所有非manager的员工emp-no"><a href="#10-获取所有非manager的员工emp-no" class="headerlink" title="10.获取所有非manager的员工emp_no"></a>10.获取所有非manager的员工emp_no</h2><p>**题目描述:**获取所有非manager的员工emp_no<br>CREATE TABLE <code>dept_manager</code> (<br><code>dept_no</code> char(4) NOT NULL,<br><code>emp_no</code> int(11) NOT NULL,<br><code>from_date</code> date NOT NULL,<br><code>to_date</code> date NOT NULL,<br>PRIMARY KEY (<code>emp_no</code>,<code>dept_no</code>));<br>CREATE TABLE <code>employees</code> (<br><code>emp_no</code> int(11) NOT NULL,<br><code>birth_date</code> date NOT NULL,<br><code>first_name</code> varchar(14) NOT NULL,<br><code>last_name</code> varchar(16) NOT NULL,<br><code>gender</code> char(1) NOT NULL,<br><code>hire_date</code> date NOT NULL,</p>
+<p>PRIMARY KEY (<code>emp_no</code>));</p>
+<p>如插入为:</p>
+<p>INSERT INTO dept_manager VALUES(‘d001’,10002,’1996-08-03’,’9999-01-01’);<br>INSERT INTO dept_manager VALUES(‘d002’,10006,’1990-08-05’,’9999-01-01’);<br>INSERT INTO dept_manager VALUES(‘d003’,10005,’1989-09-12’,’9999-01-01’);<br>INSERT INTO dept_manager VALUES(‘d004’,10004,’1986-12-01’,’9999-01-01’);<br>INSERT INTO dept_manager VALUES(‘d005’,10010,’1996-11-24’,’2000-06-26’);<br>INSERT INTO dept_manager VALUES(‘d006’,10010,’2000-06-26’,’9999-01-01’);</p>
+<p>INSERT INTO employees VALUES(10001,’1953-09-02’,’Georgi’,’Facello’,’M’,’1986-06-26’);<br>INSERT INTO employees VALUES(10002,’1964-06-02’,’Bezalel’,’Simmel’,’F’,’1985-11-21’);<br>INSERT INTO employees VALUES(10003,’1959-12-03’,’Parto’,’Bamford’,’M’,’1986-08-28’);<br>INSERT INTO employees VALUES(10004,’1954-05-01’,’Chirstian’,’Koblick’,’M’,’1986-12-01’);<br>INSERT INTO employees VALUES(10005,’1955-01-21’,’Kyoichi’,’Maliniak’,’M’,’1989-09-12’);<br>INSERT INTO employees VALUES(10006,’1953-04-20’,’Anneke’,’Preusig’,’F’,’1989-06-02’);<br>INSERT INTO employees VALUES(10007,’1957-05-23’,’Tzvetan’,’Zielinski’,’F’,’1989-02-10’);<br>INSERT INTO employees VALUES(10008,’1958-02-19’,’Saniya’,’Kalloufi’,’M’,’1994-09-15’);<br>INSERT INTO employees VALUES(10009,’1952-04-19’,’Sumant’,’Peac’,’F’,’1985-02-18’);<br>INSERT INTO employees VALUES(10010,’1963-06-01’,’Duangkaew’,’Piveteau’,’F’,’1989-08-24’);<br>INSERT INTO employees VALUES(10011,’1953-11-07’,’Mary’,’Sluis’,’F’,’1990-01-22’);</p>
+<p><strong>输入描述:</strong></p>
+<p>无</p>
+<p><strong>输出描述:</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">emp_no</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">10001</td>
+</tr>
+<tr>
+<td align="center">10003</td>
+</tr>
+<tr>
+<td align="center">10007</td>
+</tr>
+<tr>
+<td align="center">10008</td>
+</tr>
+<tr>
+<td align="center">10009</td>
+</tr>
+<tr>
+<td align="center">10011</td>
+</tr>
+</tbody></table>
+<p><strong>解题代码：</strong></p>
+<blockquote>
+<p>1&gt;</p>
+<p>SELECT emp_no FROM employees<br>WHERE emp_no NOT IN (SELECT emp_no FROM dept_manager)</p>
+<p>2&gt;</p>
+<p>SELECT emp_no FROM (SELECT * FROM employees LEFT JOIN dept_manager<br>ON employees.emp_no = dept_manager.emp_no)<br>WHERE dept_no IS NULL</p>
+<p>3&gt;</p>
+<p>SELECT employees.emp_no FROM employees LEFT JOIN dept_manager<br>ON employees.emp_no = dept_manager.emp_no<br>WHERE dept_no IS NULL</p>
+<p>4&gt;</p>
+<p>select e.emp_no from employees em<br>where not exists<br>(select distinct d.emp_no from dept_manager d where e.emp_no=d.emp_no)</p>
+<p>5&gt;</p>
+<p>SELECT<br>   e.emp_no<br>FROM<br>   employees e<br>WHERE<br>   NOT EXISTS (SELECT 1 FROM dept_manager d WHERE e.emp_no = d.emp_no)</p>
+</blockquote>
+<p><strong>吐槽：</strong></p>
+<blockquote>
+<p>NOT IN    IN 运算符的对立面，用于把某个值与不在一系列指定列表的值进行比较。</p>
+<p>第二种（SELECT * FROM employees LEFT JOIN dept_manager<br>ON employees.emp_no = dept_manager.emp_no）</p>
+<p>题目说明是获取第一张表不存的员工信息，left join的定义为</p>
+<p>LEFT JOIN 关键字从左表（table1）返回所有的行，即使右表（table2）中没有匹配。如果右表中没有匹配，则结果为 NULL。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200605105414967.png" alt="image-20200605105414967" class="lazyload"></p>
+<p>可以看到右侧是为null的，最后提取出dept_no为null的emp_no即可</p>
+<p>第三种为简化</p>
+<p>第四种为not exists的解法，其中distinct在本题中并不需要。</p>
+<p>第五种为not exists的怪异写法，其中的select 1常用在exists子句中，检测符合条件记录是否存在，返回值永远为1，似乎是用于提升效率。本题中这个1换成任意数字或者 * 都是正确的。</p>
+</blockquote>
+
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>本文作者：</strong>A_zao<br>
+        <strong>本文链接：</strong><a href="https://shelterz.cn/2020/05/15/SQL%E7%BB%83%E4%B9%A0/" title="https:&#x2F;&#x2F;shelterz.cn&#x2F;2020&#x2F;05&#x2F;15&#x2F;SQL%E7%BB%83%E4%B9%A0&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;shelterz.cn&#x2F;2020&#x2F;05&#x2F;15&#x2F;SQL%E7%BB%83%E4%B9%A0&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E4%BA%91%E7%AC%94%E8%AE%B0/">云笔记</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/MySql/" rel="tag">MySql</a>
+    
+</div>
+
+  
+      <div class="nexmoe-post-footer">
+          <section class="nexmoe-comment">
+    <div class="valine"></div>
+<script src='https://cdn.jsdelivr.net/npm/valine'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: 'Hu82lUrzzotgQle16bso7yt4-gzGzoHsz',
+        appKey: '4pR1jAqK6tEro4BOKFNqRtrH'
+    })
+</script>
+</section>
+      </div>
+  
+</div>
+            <div class="nexmoe-post-right">
+              <div class="nexmoe-fixed">
+                  <div class="nexmoe-tool"> 
+                    
+                      
+                        
+                          
+                          
+                              <button class="mdui-fab catalog" style="overflow:unset;">
+                                  <i class="nexmoefont icon-i-catalog"></i>
+                                  <div class="nexmoe-toc">
+                                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%9F%A5%E6%89%BE%E6%9C%80%E6%99%9A%E5%85%A5%E8%81%8C%E5%91%98%E5%B7%A5%E7%9A%84%E6%89%80%E6%9C%89%E4%BF%A1%E6%81%AF"><span class="toc-number">1.</span> <span class="toc-text">1.查找最晚入职员工的所有信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%9F%A5%E6%89%BE%E5%85%A5%E8%81%8C%E5%91%98%E5%B7%A5%E6%97%B6%E9%97%B4%E6%8E%92%E5%90%8D%E5%80%92%E6%95%B0%E7%AC%AC%E4%B8%89%E7%9A%84%E5%91%98%E5%B7%A5%E6%89%80%E6%9C%89%E4%BF%A1%E6%81%AF"><span class="toc-number">2.</span> <span class="toc-text">2.查找入职员工时间排名倒数第三的员工所有信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%9F%A5%E6%89%BE%E5%90%84%E4%B8%AA%E9%83%A8%E9%97%A8%E5%BD%93%E5%89%8D%E9%A2%86%E5%AF%BC%E5%BD%93%E5%89%8D%E8%96%AA%E6%B0%B4%E8%AF%A6%E6%83%85%E4%BB%A5%E5%8F%8A%E5%85%B6%E5%AF%B9%E5%BA%94%E9%83%A8%E9%97%A8%E7%BC%96%E5%8F%B7dept-no"><span class="toc-number">3.</span> <span class="toc-text">3.查找各个部门当前领导当前薪水详情以及其对应部门编号dept_no</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%9F%A5%E6%89%BE%E6%89%80%E6%9C%89%E5%B7%B2%E7%BB%8F%E5%88%86%E9%85%8D%E9%83%A8%E9%97%A8%E7%9A%84%E5%91%98%E5%B7%A5%E7%9A%84last-name%E5%92%8Cfirst-name%E4%BB%A5%E5%8F%8Adept-no"><span class="toc-number">4.</span> <span class="toc-text">4.查找所有已经分配部门的员工的last_name和first_name以及dept_no</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%9F%A5%E6%89%BE%E6%89%80%E6%9C%89%E5%91%98%E5%B7%A5%E7%9A%84last-name%E5%92%8Cfirst-name%E4%BB%A5%E5%8F%8A%E5%AF%B9%E5%BA%94%E9%83%A8%E9%97%A8%E7%BC%96%E5%8F%B7dept-no"><span class="toc-number">5.</span> <span class="toc-text">5.查找所有员工的last_name和first_name以及对应部门编号dept_no</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E6%9F%A5%E6%89%BE%E6%89%80%E6%9C%89%E5%91%98%E5%B7%A5%E5%85%A5%E8%81%8C%E6%97%B6%E5%80%99%E7%9A%84%E8%96%AA%E6%B0%B4%E6%83%85%E5%86%B5"><span class="toc-number">6.</span> <span class="toc-text">6.查找所有员工入职时候的薪水情况</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E6%9F%A5%E6%89%BE%E8%96%AA%E6%B0%B4%E5%8F%98%E5%8A%A8%E8%B6%85%E8%BF%8715%E6%AC%A1%E7%9A%84%E5%91%98%E5%B7%A5%E5%8F%B7emp-no%E4%BB%A5%E5%8F%8A%E5%85%B6%E5%AF%B9%E5%BA%94%E7%9A%84%E5%8F%98%E5%8A%A8%E6%AC%A1%E6%95%B0t"><span class="toc-number">7.</span> <span class="toc-text">7.查找薪水变动超过15次的员工号emp_no以及其对应的变动次数t</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E6%89%BE%E5%87%BA%E6%89%80%E6%9C%89%E5%91%98%E5%B7%A5%E5%BD%93%E5%89%8D%E8%96%AA%E6%B0%B4salary%E6%83%85%E5%86%B5"><span class="toc-number">8.</span> <span class="toc-text">8.找出所有员工当前薪水salary情况</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E9%83%A8%E9%97%A8%E5%BD%93%E5%89%8Dmanager%E7%9A%84%E5%BD%93%E5%89%8D%E8%96%AA%E6%B0%B4%E6%83%85%E5%86%B5%EF%BC%8C%E7%BB%99%E5%87%BAdept-no-emp-no%E4%BB%A5%E5%8F%8Asalary"><span class="toc-number">9.</span> <span class="toc-text">9.获取所有部门当前manager的当前薪水情况，给出dept_no, emp_no以及salary</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E9%9D%9Emanager%E7%9A%84%E5%91%98%E5%B7%A5emp-no"><span class="toc-number">10.</span> <span class="toc-text">10.获取所有非manager的员工emp_no</span></a></li></ol>
+                                  </div>
+                              </button>
+                          
+                          
+                      
+                    
+                      <a href="#nexmoe-content" class="toc-link" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+     
+    <div id="nexmoe-search-space">
+        <div class="search-container">
+            <div class="search-header">
+                <div class="search-input-container">
+                    <input class="search-input" type="text" placeholder="搜索" oninput="sinput();">
+                </div>
+                <a class="search-close" onclick="sclose();">×</a>
+            </div>
+            <div class="search-body"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+ 
+
+<script async src="/js/app.js?v=1637337895951"></script>
+
+
+	<script async src="/js/search.js?v=1637337895951"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
+</script>
+
+
+    
+
+
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+
+</html>
