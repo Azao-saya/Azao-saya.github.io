@@ -25,12 +25,12 @@
 <meta property="article:author" content="A_zao">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797456">
+    <link rel="stylesheet" href="/css/style.css?v=1653321718785">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797456">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718785">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -55,7 +55,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -188,7 +188,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -216,9 +216,10 @@
       
 
       <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <span id="more"></span></h2><ul>
-<li> 编程团体赛的规则为：每个参赛队由若干队员组成；所有队员独立比赛；参赛队的成绩为所有队员的成绩和；成绩最高的队获胜。</li>
+<li><p>编程团体赛的规则为：每个参赛队由若干队员组成；所有队员独立比赛；参赛队的成绩为所有队员的成绩和；成绩最高的队获胜。</p>
+<p>现给定所有队员的比赛成绩，请你编写程序找出冠军队。</p>
+</li>
 </ul>
-<p>  现给定所有队员的比赛成绩，请你编写程序找出冠军队。</p>
 <h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
 <p>输入第一行给出一个正整数 <em>N</em>（≤104），即所有参赛队员总数。随后 <em>N</em> 行，每行给出一位队员的成绩，格式为：<code>队伍编号-队员编号 成绩</code>，其中<code>队伍编号</code>为 1 到 1000 的正整数，<code>队员编号</code>为 1 到 10 的正整数，<code>成绩</code>为 0 到 100 的整数。 </p>
 </blockquote>
@@ -232,14 +233,13 @@
 <p>11 176</p>
 </blockquote>
 <h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li> 读取的 队伍编号-队员编号 成绩 分割条件为 -和空格</li>
-<li> 但是不处理队员编号，只记录队伍编号，队伍总成绩加上个人成绩</li>
-<li> 在遍历数组找到最大值和最大值索引</li>
+<li>读取的 队伍编号-队员编号 成绩 分割条件为 -和空格</li>
+<li>但是不处理队员编号，只记录队伍编号，队伍总成绩加上个人成绩</li>
+<li>在遍历数组找到最大值和最大值索引</li>
 </ul>
 <hr>
 <hr>
 <figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-keyword">import</span> java.io.BufferedReader;<br><span class="hljs-keyword">import</span> java.io.IOException;<br><span class="hljs-keyword">import</span> java.io.InputStreamReader;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PAT_B1047</span> &#123;</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">String</span>[] args)</span> throws IOException </span>&#123;<span class="hljs-comment">//暴力解法，最大用时293ms在要求内</span><br>        BufferedReader br = <span class="hljs-keyword">new</span> <span class="hljs-built_in">BufferedReader</span>(<span class="hljs-keyword">new</span> <span class="hljs-built_in">InputStreamReader</span>(System.in));<br>        <span class="hljs-keyword">int</span> n = Integer.<span class="hljs-built_in">parseInt</span>(br.<span class="hljs-built_in">readLine</span>());<br>        <span class="hljs-keyword">int</span>[] grade = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">10000</span>];<br>        <span class="hljs-keyword">int</span> max =<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">int</span> index = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt;n ; i++) &#123;<br>            <span class="hljs-keyword">String</span>[] temp= br.<span class="hljs-built_in">readLine</span>().<span class="hljs-built_in">split</span>(<span class="hljs-string">&quot;-| &quot;</span>);<br>            <span class="hljs-keyword">int</span> teamNum = Integer.<span class="hljs-built_in">parseInt</span>(temp[<span class="hljs-number">0</span>]);<br>            grade[teamNum] += Integer.<span class="hljs-built_in">parseInt</span>(temp[<span class="hljs-number">2</span>]);<br>            <span class="hljs-keyword">if</span> (max &lt; grade[teamNum])&#123;<br>                max = grade[teamNum];<br>                index = teamNum;<br>            &#125;<br>        &#125;<br>        System.out.<span class="hljs-built_in">println</span>(index+<span class="hljs-string">&quot; &quot;</span>+max);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 
   </article>
 
@@ -323,10 +323,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797462"></script>
+<script async src="/js/app.js?v=1653321718791"></script>
 
 
-	<script async src="/js/search.js?v=1637339797462"></script>
+	<script async src="/js/search.js?v=1653321718791"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

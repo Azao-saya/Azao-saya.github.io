@@ -25,12 +25,12 @@
 <meta property="article:author" content="A_zao">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797520">
+    <link rel="stylesheet" href="/css/style.css?v=1653321718859">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797520">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718859">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -55,7 +55,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -188,7 +188,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -216,16 +216,14 @@
       
 
       <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <span id="more"></span></h2><ul>
-<li>  如果你是哈利·波特迷，你会知道魔法世界有它自己的货币系统 —— 就如海格告诉哈利的：“十七个银西可(Sickle)兑一个加隆(Galleon)，二十九个纳特(Knut)兑一个西可，很容易。”现在，给定哈利应付的价钱 <em>P</em> 和他实付的钱 <em>A</em>，你的任务是写一个程序来计算他应该被找的零钱。 </li>
+<li>如果你是哈利·波特迷，你会知道魔法世界有它自己的货币系统 —— 就如海格告诉哈利的：“十七个银西可(Sickle)兑一个加隆(Galleon)，二十九个纳特(Knut)兑一个西可，很容易。”现在，给定哈利应付的价钱 <em>P</em> 和他实付的钱 <em>A</em>，你的任务是写一个程序来计算他应该被找的零钱。 </li>
 </ul>
 <h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
 <pre><code> 输入在 1 行中分别给出 *P* 和 *A*，格式为 `Galleon.Sickle.Knut`，其间用 1 个空格分隔。这里 `Galleon` 是 [0, 107] 区间内的整数，`Sickle` 是 [0, 17) 区间内的整数，`Knut` 是 [0, 29) 区间内的整数。 
-</code></pre>
-</blockquote>
+</code></pre></blockquote>
 <h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
 <pre><code> 在一行中用与输入同样的格式输出哈利应该被找的零钱。如果他没带够钱，那么输出的应该是负数。  
-</code></pre>
-</blockquote>
+</code></pre></blockquote>
 <h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入1"><a href="#输入1" class="headerlink" title="输入1"></a>输入1</h3><blockquote>
 <p>10.16.27 14.1.28</p>
 </blockquote>
@@ -239,16 +237,15 @@
 <p>-3.2.1</p>
 </blockquote>
 <h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li> 两个分割条件空格和.</li>
-<li> 直接获得6个String数字</li>
-<li> 按照汇率把三种钱转换为最小的单位的钱，把持有的钱减去应该花费的钱</li>
-<li> 如果结果为零先打印-号，把结果的绝对值转换为 Galleon.Sickle.Knut </li>
-<li> 为正则直接转换</li>
+<li>两个分割条件空格和.</li>
+<li>直接获得6个String数字</li>
+<li>按照汇率把三种钱转换为最小的单位的钱，把持有的钱减去应该花费的钱</li>
+<li>如果结果为零先打印-号，把结果的绝对值转换为 Galleon.Sickle.Knut </li>
+<li>为正则直接转换</li>
 </ul>
 <hr>
 <hr>
 <figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">import java.io.BufferedReader;<br>import java.io.IOException;<br>import java.io.InputStreamReader;<br><br>public <span class="hljs-keyword">class</span> PAT_B1037 &#123;<br>    public static void main(String<span class="hljs-literal">[]</span> args) throws IOException &#123;<br>        BufferedReader br = <span class="hljs-keyword">new</span> <span class="hljs-constructor">BufferedReader(<span class="hljs-params">new</span> InputStreamReader(System.<span class="hljs-params">in</span>)</span>);<br>        String<span class="hljs-literal">[]</span> temp = br.read<span class="hljs-constructor">Line()</span>.split(<span class="hljs-string">&quot;[ \\.]&quot;</span>);<br>        <span class="hljs-built_in">int</span> shouldSum = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span>parse<span class="hljs-constructor">Int(<span class="hljs-params">temp</span>[0])</span>*<span class="hljs-number">17</span>*<span class="hljs-number">29</span>+<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span>parse<span class="hljs-constructor">Int(<span class="hljs-params">temp</span>[1])</span>*<span class="hljs-number">29</span>+<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span>parse<span class="hljs-constructor">Int(<span class="hljs-params">temp</span>[2])</span>;<br>        <span class="hljs-built_in">int</span> realitySum = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span>parse<span class="hljs-constructor">Int(<span class="hljs-params">temp</span>[3])</span>*<span class="hljs-number">17</span>*<span class="hljs-number">29</span>+<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span>parse<span class="hljs-constructor">Int(<span class="hljs-params">temp</span>[4])</span>*<span class="hljs-number">29</span>+<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span>parse<span class="hljs-constructor">Int(<span class="hljs-params">temp</span>[5])</span>;<br>        <span class="hljs-built_in">int</span> change = realitySum-shouldSum;<br>        <span class="hljs-keyword">if</span> (change&lt;<span class="hljs-number">0</span>)&#123;<br>            <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.print(<span class="hljs-string">&quot;-&quot;</span>);<br>            <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.print(<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Math</span>.</span></span>abs(change/(<span class="hljs-number">17</span>*<span class="hljs-number">29</span>))+<span class="hljs-string">&quot;.&quot;</span>+<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Math</span>.</span></span>abs((change/<span class="hljs-number">29</span>)%<span class="hljs-number">17</span>)+<span class="hljs-string">&quot;.&quot;</span>+<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Math</span>.</span></span>abs(change%<span class="hljs-number">29</span>));<br>        &#125;<span class="hljs-keyword">else</span> &#123;<br>            <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.println(change/(<span class="hljs-number">17</span>*<span class="hljs-number">29</span>)+<span class="hljs-string">&quot;.&quot;</span>+(change/<span class="hljs-number">29</span>)%<span class="hljs-number">17</span>+<span class="hljs-string">&quot;.&quot;</span>+change%<span class="hljs-number">29</span>);<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 
   </article>
 
@@ -332,10 +329,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797526"></script>
+<script async src="/js/app.js?v=1653321718865"></script>
 
 
-	<script async src="/js/search.js?v=1637339797526"></script>
+	<script async src="/js/search.js?v=1653321718865"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

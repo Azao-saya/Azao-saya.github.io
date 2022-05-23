@@ -26,12 +26,12 @@
 <meta property="article:tag" content="MySql">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797021">
+    <link rel="stylesheet" href="/css/style.css?v=1653321718227">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797021">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718227">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -56,7 +56,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -189,7 +189,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -219,34 +219,38 @@
       <h2 id="21-获取所有员工当前的manager"><a href="#21-获取所有员工当前的manager" class="headerlink" title="21.获取所有员工当前的manager"></a>21.获取所有员工当前的manager<span id="more"></span></h2><p><strong>题目描述：</strong></p>
 <p>查找所有员工自入职以来的薪水涨幅情况，给出员工编号emp_no以及其对应的薪水涨幅growth，并按照growth进行升序</p>
 <p>（注:可能有employees表和salaries表里存在记录的员工，有对应的员工编号和涨薪记录，但是已经离职了，离职的员工salaries表的最新的to_date!=’9999-01-01’，这样的数据不显示在查找结果里面）</p>
-<p>CREATE TABLE <code>employees</code> (<br><code>emp_no</code> int(11) NOT NULL,<br><code>birth_date</code> date NOT NULL,<br><code>first_name</code> varchar(14) NOT NULL,<br><code>last_name</code> varchar(16) NOT NULL,<br><code>gender</code> char(1) NOT NULL,<br><code>hire_date</code> date NOT NULL, – ‘入职时间’<br>PRIMARY KEY (<code>emp_no</code>));<br>CREATE TABLE <code>salaries</code> (<br><code>emp_no</code> int(11) NOT NULL,<br><code>salary</code> int(11) NOT NULL,<br><code>from_date</code> date NOT NULL, – ‘一条薪水记录开始时间’<br><code>to_date</code> date NOT NULL, – ‘一条薪水记录结束时间’<br>PRIMARY KEY (<code>emp_no</code>,<code>from_date</code>));</p>
+<p>CREATE TABLE <code>employees</code> (<br><code>emp_no</code> int(11) NOT NULL,<br><code>birth_date</code> date NOT NULL,<br><code>first_name</code> varchar(14) NOT NULL,<br><code>last_name</code> varchar(16) NOT NULL,<br><code>gender</code> char(1) NOT NULL,<br><code>hire_date</code> date NOT NULL, — ‘入职时间’<br>PRIMARY KEY (<code>emp_no</code>));<br>CREATE TABLE <code>salaries</code> (<br><code>emp_no</code> int(11) NOT NULL,<br><code>salary</code> int(11) NOT NULL,<br><code>from_date</code> date NOT NULL, — ‘一条薪水记录开始时间’<br><code>to_date</code> date NOT NULL, — ‘一条薪水记录结束时间’<br>PRIMARY KEY (<code>emp_no</code>,<code>from_date</code>));</p>
 <p><strong>输入描述:</strong></p>
 <p>无</p>
 <p><strong>输出描述:</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">emp_no</th>
-<th align="center">growth</th>
+<th style="text-align:center">emp_no</th>
+<th style="text-align:center">growth</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">10011</td>
-<td align="center">0</td>
+<tbody>
+<tr>
+<td style="text-align:center">10011</td>
+<td style="text-align:center">0</td>
 </tr>
 <tr>
-<td align="center">省略</td>
-<td align="center">省略</td>
+<td style="text-align:center">省略</td>
+<td style="text-align:center">省略</td>
 </tr>
 <tr>
-<td align="center">10010</td>
-<td align="center">54496</td>
+<td style="text-align:center">10010</td>
+<td style="text-align:center">54496</td>
 </tr>
 <tr>
-<td align="center">10004</td>
-<td align="center">34003</td>
+<td style="text-align:center">10004</td>
+<td style="text-align:center">34003</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p><strong>解题代码：</strong></p>
 <blockquote>
 <p>select a.emp_no, (b.salary - c.salary) as growth<br>from<br>    employees as a<br>    inner join salaries as b<br>    on a.emp_no = b.emp_no and b.to_date = ‘9999-01-01’<br>    inner join salaries as c<br>    on a.emp_no = c.emp_no and a.hire_date = c.from_date<br>order by growth asc</p>
@@ -265,45 +269,49 @@
 <p><strong>输入描述:</strong></p>
 <p>无</p>
 <p><strong>输出描述:</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">dept_no</th>
-<th align="center">dept_name</th>
+<th style="text-align:center">dept_no</th>
+<th style="text-align:center">dept_name</th>
 <th>sum</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">d001</td>
-<td align="center">Marketing0</td>
+<tbody>
+<tr>
+<td style="text-align:center">d001</td>
+<td style="text-align:center">Marketing0</td>
 <td>24</td>
 </tr>
 <tr>
-<td align="center">d002</td>
-<td align="center">Finance省略</td>
+<td style="text-align:center">d002</td>
+<td style="text-align:center">Finance省略</td>
 <td>14</td>
 </tr>
 <tr>
-<td align="center">d003</td>
-<td align="center">Human Resources54496</td>
+<td style="text-align:center">d003</td>
+<td style="text-align:center">Human Resources54496</td>
 <td>13</td>
 </tr>
 <tr>
-<td align="center">d004</td>
-<td align="center">Production34003</td>
+<td style="text-align:center">d004</td>
+<td style="text-align:center">Production34003</td>
 <td>24</td>
 </tr>
 <tr>
-<td align="center">d005</td>
-<td align="center">Development</td>
+<td style="text-align:center">d005</td>
+<td style="text-align:center">Development</td>
 <td>25</td>
 </tr>
 <tr>
-<td align="center">d006</td>
-<td align="center">Quality Management</td>
+<td style="text-align:center">d006</td>
+<td style="text-align:center">Quality Management</td>
 <td>25</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p><strong>解题代码：</strong></p>
 <blockquote>
 <p>select de.dept_no,dp.dept_name,count(s.salary) as sum<br>from salaries as s<br>inner join dept_emp as de on de.emp_no = s.emp_no<br>inner join departments AS dp ON de.dept_no = dp.dept_no<br>group by de.dept_no</p>
@@ -319,45 +327,49 @@
 <p><strong>输入描述:</strong></p>
 <p>无</p>
 <p><strong>输出描述:</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">emp_no</th>
-<th align="center">salary</th>
-<th align="center">rank</th>
+<th style="text-align:center">emp_no</th>
+<th style="text-align:center">salary</th>
+<th style="text-align:center">rank</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">10005</td>
-<td align="center">94692</td>
-<td align="center">1</td>
+<tbody>
+<tr>
+<td style="text-align:center">10005</td>
+<td style="text-align:center">94692</td>
+<td style="text-align:center">1</td>
 </tr>
 <tr>
-<td align="center">10009</td>
-<td align="center">94409</td>
-<td align="center">2</td>
+<td style="text-align:center">10009</td>
+<td style="text-align:center">94409</td>
+<td style="text-align:center">2</td>
 </tr>
 <tr>
-<td align="center">10010</td>
-<td align="center">94409</td>
-<td align="center">2</td>
+<td style="text-align:center">10010</td>
+<td style="text-align:center">94409</td>
+<td style="text-align:center">2</td>
 </tr>
 <tr>
-<td align="center">10001</td>
-<td align="center">88958</td>
-<td align="center">3</td>
+<td style="text-align:center">10001</td>
+<td style="text-align:center">88958</td>
+<td style="text-align:center">3</td>
 </tr>
 <tr>
-<td align="center">10007</td>
-<td align="center">88070</td>
-<td align="center">4</td>
+<td style="text-align:center">10007</td>
+<td style="text-align:center">88070</td>
+<td style="text-align:center">4</td>
 </tr>
 <tr>
-<td align="center">10004</td>
-<td align="center">74057</td>
-<td align="center">5</td>
+<td style="text-align:center">10004</td>
+<td style="text-align:center">74057</td>
+<td style="text-align:center">5</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p><strong>解题代码：</strong></p>
 <blockquote>
 <p>1&gt;</p>
@@ -384,35 +396,39 @@
 <p><strong>输入描述:</strong></p>
 <p>无</p>
 <p><strong>输出描述:</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">dept_no</th>
-<th align="center">emp_no</th>
-<th align="center">salary</th>
+<th style="text-align:center">dept_no</th>
+<th style="text-align:center">emp_no</th>
+<th style="text-align:center">salary</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">d001</td>
-<td align="center">10001</td>
-<td align="center">88958</td>
+<tbody>
+<tr>
+<td style="text-align:center">d001</td>
+<td style="text-align:center">10001</td>
+<td style="text-align:center">88958</td>
 </tr>
 <tr>
-<td align="center">d004</td>
-<td align="center">10003</td>
-<td align="center">43311</td>
+<td style="text-align:center">d004</td>
+<td style="text-align:center">10003</td>
+<td style="text-align:center">43311</td>
 </tr>
 <tr>
-<td align="center">d005</td>
-<td align="center">10007</td>
-<td align="center">88070</td>
+<td style="text-align:center">d005</td>
+<td style="text-align:center">10007</td>
+<td style="text-align:center">88070</td>
 </tr>
 <tr>
-<td align="center">d006</td>
-<td align="center">10009</td>
-<td align="center">95409</td>
+<td style="text-align:center">d006</td>
+<td style="text-align:center">10009</td>
+<td style="text-align:center">95409</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p><strong>解题代码：</strong></p>
 <blockquote>
 <p>1&gt;</p>
@@ -430,28 +446,32 @@
 <p><strong>输入描述:</strong></p>
 <p>无</p>
 <p><strong>输出描述:</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">emp_no</th>
-<th align="center">manager_no</th>
-<th align="center">emp_salary</th>
+<th style="text-align:center">emp_no</th>
+<th style="text-align:center">manager_no</th>
+<th style="text-align:center">emp_salary</th>
 <th>manager_salary</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">10001</td>
-<td align="center">10002</td>
-<td align="center">88958</td>
+<tbody>
+<tr>
+<td style="text-align:center">10001</td>
+<td style="text-align:center">10002</td>
+<td style="text-align:center">88958</td>
 <td>72527</td>
 </tr>
 <tr>
-<td align="center">10009</td>
-<td align="center">10010</td>
-<td align="center">95409</td>
+<td style="text-align:center">10009</td>
+<td style="text-align:center">10010</td>
+<td style="text-align:center">95409</td>
 <td>94409</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p><strong>解题代码：</strong></p>
 <blockquote>
 <p>1&gt;</p>
@@ -472,64 +492,68 @@
 <p><strong>输入描述:</strong></p>
 <p>无</p>
 <p><strong>输出描述:</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">dept_no</th>
-<th align="center">dept_name</th>
-<th align="center">title</th>
+<th style="text-align:center">dept_no</th>
+<th style="text-align:center">dept_name</th>
+<th style="text-align:center">title</th>
 <th>count</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">d001</td>
-<td align="center">Marketing10002</td>
-<td align="center">Senior Engineer88958</td>
+<tbody>
+<tr>
+<td style="text-align:center">d001</td>
+<td style="text-align:center">Marketing10002</td>
+<td style="text-align:center">Senior Engineer88958</td>
 <td>1</td>
 </tr>
 <tr>
-<td align="center">d001</td>
-<td align="center">Marketing10010</td>
-<td align="center">Staff95409</td>
+<td style="text-align:center">d001</td>
+<td style="text-align:center">Marketing10010</td>
+<td style="text-align:center">Staff95409</td>
 <td>1</td>
 </tr>
 <tr>
-<td align="center">d002</td>
-<td align="center">Finance</td>
-<td align="center">Senior Engineer</td>
+<td style="text-align:center">d002</td>
+<td style="text-align:center">Finance</td>
+<td style="text-align:center">Senior Engineer</td>
 <td>1</td>
 </tr>
 <tr>
-<td align="center">d003</td>
-<td align="center">Human Resources</td>
-<td align="center">Senior Staff</td>
+<td style="text-align:center">d003</td>
+<td style="text-align:center">Human Resources</td>
+<td style="text-align:center">Senior Staff</td>
 <td>1</td>
 </tr>
 <tr>
-<td align="center">d004</td>
-<td align="center">Production</td>
-<td align="center">Senior Engineer</td>
+<td style="text-align:center">d004</td>
+<td style="text-align:center">Production</td>
+<td style="text-align:center">Senior Engineer</td>
 <td>2</td>
 </tr>
 <tr>
-<td align="center">d005</td>
-<td align="center">Development</td>
-<td align="center">Senior Staff</td>
+<td style="text-align:center">d005</td>
+<td style="text-align:center">Development</td>
+<td style="text-align:center">Senior Staff</td>
 <td>1</td>
 </tr>
 <tr>
-<td align="center">d006</td>
-<td align="center">Quality Management</td>
-<td align="center">Engineer</td>
+<td style="text-align:center">d006</td>
+<td style="text-align:center">Quality Management</td>
+<td style="text-align:center">Engineer</td>
 <td>2</td>
 </tr>
 <tr>
-<td align="center">d006</td>
-<td align="center">Quality Management</td>
-<td align="center">Senior Engineer</td>
+<td style="text-align:center">d006</td>
+<td style="text-align:center">Quality Management</td>
+<td style="text-align:center">Senior Engineer</td>
 <td>1</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p><strong>解题代码：</strong></p>
 <blockquote>
 <p>1&gt;</p>
@@ -551,20 +575,24 @@
 <p><strong>输入描述:</strong></p>
 <p>无</p>
 <p><strong>输出描述:</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">emp_no</th>
-<th align="center">from_date</th>
-<th align="center">salary_growth</th>
+<th style="text-align:center">emp_no</th>
+<th style="text-align:center">from_date</th>
+<th style="text-align:center">salary_growth</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">10001</td>
-<td align="center">1987-06-26</td>
-<td align="center">9985</td>
+<tbody>
+<tr>
+<td style="text-align:center">10001</td>
+<td style="text-align:center">1987-06-26</td>
+<td style="text-align:center">9985</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p><strong>解题代码：</strong></p>
 <blockquote>
 <p>1&gt;</p>
@@ -579,6 +607,7 @@
 <h2 id="28-查找描述信息中包含robot的电影对应的分类名称以及电影数目，而且还需要该分类对应电影数量-gt-5部"><a href="#28-查找描述信息中包含robot的电影对应的分类名称以及电影数目，而且还需要该分类对应电影数量-gt-5部" class="headerlink" title="28.查找描述信息中包含robot的电影对应的分类名称以及电影数目，而且还需要该分类对应电影数量&gt;=5部"></a>28.查找描述信息中包含robot的电影对应的分类名称以及电影数目，而且还需要该分类对应电影数量&gt;=5部</h2><p><strong>题目描述：</strong></p>
 <blockquote>
 <p>film表</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -586,7 +615,8 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>film_id</td>
 <td>电影id</td>
 </tr>
@@ -598,7 +628,9 @@
 <td>description</td>
 <td>电影描述信息</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <blockquote>
 <p>CREATE TABLE IF NOT EXISTS film (</p>
 <p>film_id smallint(5)  NOT NULL DEFAULT ‘0’,</p>
@@ -607,6 +639,7 @@
 <p>PRIMARY KEY (film_id));</p>
 </blockquote>
 <p>category表</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -614,7 +647,8 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>category_id</td>
 <td>电影分类id</td>
 </tr>
@@ -626,7 +660,9 @@
 <td>last_update</td>
 <td>电影分类最后更新时间</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <blockquote>
 <p>CREATE TABLE category  (</p>
 <p>category_id  tinyint(3)  NOT NULL ,</p>
@@ -634,6 +670,7 @@
 <p>PRIMARY KEY ( category_id ));</p>
 </blockquote>
 <p>film_category表</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -641,7 +678,8 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>film_id</td>
 <td>电影id</td>
 </tr>
@@ -653,7 +691,9 @@
 <td>last_update</td>
 <td>电影id和分类id对应关系的最后更新时间</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <blockquote>
 <p>CREATE TABLE film_category  (</p>
 <p>film_id  smallint(5)  NOT NULL,</p>
@@ -663,18 +703,22 @@
 </blockquote>
 <p>无</p>
 <p><strong>输出描述:</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">分类名称category.name</th>
-<th align="center">电影数目count(film.film_id)</th>
+<th style="text-align:center">分类名称category.name</th>
+<th style="text-align:center">电影数目count(film.film_id)</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">Documentary</td>
-<td align="center">1</td>
+<tbody>
+<tr>
+<td style="text-align:center">Documentary</td>
+<td style="text-align:center">1</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p><strong>解题代码：</strong></p>
 <blockquote>
 <p>1&gt;</p>
@@ -694,6 +738,7 @@
 <h2 id="29-使用join查询方式找出没有分类的电影id以及名称"><a href="#29-使用join查询方式找出没有分类的电影id以及名称" class="headerlink" title="29.使用join查询方式找出没有分类的电影id以及名称"></a>29.使用join查询方式找出没有分类的电影id以及名称</h2><p><strong>题目描述：</strong></p>
 <blockquote>
 <p>film表</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -701,7 +746,8 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>film_id</td>
 <td>电影id</td>
 </tr>
@@ -713,7 +759,9 @@
 <td>description</td>
 <td>电影描述信息</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <blockquote>
 <p>CREATE TABLE IF NOT EXISTS film (</p>
 <p>film_id smallint(5)  NOT NULL DEFAULT ‘0’,</p>
@@ -722,6 +770,7 @@
 <p>PRIMARY KEY (film_id));</p>
 </blockquote>
 <p>category表</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -729,7 +778,8 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>category_id</td>
 <td>电影分类id</td>
 </tr>
@@ -741,7 +791,9 @@
 <td>last_update</td>
 <td>电影分类最后更新时间</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <blockquote>
 <p>CREATE TABLE category  (</p>
 <p>category_id  tinyint(3)  NOT NULL ,</p>
@@ -749,6 +801,7 @@
 <p>PRIMARY KEY ( category_id ));</p>
 </blockquote>
 <p>film_category表</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -756,7 +809,8 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>film_id</td>
 <td>电影id</td>
 </tr>
@@ -768,7 +822,9 @@
 <td>last_update</td>
 <td>电影id和分类id对应关系的最后更新时间</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <blockquote>
 <p>CREATE TABLE film_category  (</p>
 <p>film_id  smallint(5)  NOT NULL,</p>
@@ -778,18 +834,22 @@
 </blockquote>
 <p>无</p>
 <p><strong>输出描述:</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">电影id</th>
-<th align="center">名称</th>
+<th style="text-align:center">电影id</th>
+<th style="text-align:center">名称</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">3</td>
-<td align="center">ADAPTATION HOLES</td>
+<tbody>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">ADAPTATION HOLES</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p><strong>解题代码：</strong></p>
 <blockquote>
 <p>1&gt;</p>
@@ -809,6 +869,7 @@
 <h2 id="30-使用join查询方式找出没有分类的电影id以及名称"><a href="#30-使用join查询方式找出没有分类的电影id以及名称" class="headerlink" title="30.使用join查询方式找出没有分类的电影id以及名称"></a>30.使用join查询方式找出没有分类的电影id以及名称</h2><p><strong>题目描述：</strong></p>
 <blockquote>
 <p>film表</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -816,7 +877,8 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>film_id</td>
 <td>电影id</td>
 </tr>
@@ -828,7 +890,9 @@
 <td>description</td>
 <td>电影描述信息</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <blockquote>
 <p>CREATE TABLE IF NOT EXISTS film (</p>
 <p>film_id smallint(5)  NOT NULL DEFAULT ‘0’,</p>
@@ -837,6 +901,7 @@
 <p>PRIMARY KEY (film_id));</p>
 </blockquote>
 <p>category表</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -844,7 +909,8 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>category_id</td>
 <td>电影分类id</td>
 </tr>
@@ -856,7 +922,9 @@
 <td>last_update</td>
 <td>电影分类最后更新时间</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <blockquote>
 <p>CREATE TABLE category  (</p>
 <p>category_id  tinyint(3)  NOT NULL ,</p>
@@ -864,6 +932,7 @@
 <p>PRIMARY KEY ( category_id ));</p>
 </blockquote>
 <p>film_category表</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -871,7 +940,8 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>film_id</td>
 <td>电影id</td>
 </tr>
@@ -883,7 +953,9 @@
 <td>last_update</td>
 <td>电影id和分类id对应关系的最后更新时间</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <blockquote>
 <p>CREATE TABLE film_category  (</p>
 <p>film_id  smallint(5)  NOT NULL,</p>
@@ -893,22 +965,26 @@
 </blockquote>
 <p>无</p>
 <p><strong>输出描述:</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">title</th>
-<th align="center">description</th>
+<th style="text-align:center">title</th>
+<th style="text-align:center">description</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">ACADEMY DINOSAUR</td>
-<td align="center">A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian RockiesADAPTATION HOLES</td>
+<tbody>
+<tr>
+<td style="text-align:center">ACADEMY DINOSAUR</td>
+<td style="text-align:center">A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian RockiesADAPTATION HOLES</td>
 </tr>
 <tr>
-<td align="center">ACE GOLDFINGER</td>
-<td align="center">A Astounding Epistle of a Database Administrator And a Explorer who must Find a Car in Ancient China</td>
+<td style="text-align:center">ACE GOLDFINGER</td>
+<td style="text-align:center">A Astounding Epistle of a Database Administrator And a Explorer who must Find a Car in Ancient China</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p><strong>解题代码：</strong></p>
 <blockquote>
 <p>1&gt;</p>
@@ -1005,10 +1081,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797030"></script>
+<script async src="/js/app.js?v=1653321718248"></script>
 
 
-	<script async src="/js/search.js?v=1637339797030"></script>
+	<script async src="/js/search.js?v=1653321718248"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

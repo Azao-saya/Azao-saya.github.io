@@ -25,12 +25,12 @@
 <meta property="article:author" content="A_zao">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797338">
+    <link rel="stylesheet" href="/css/style.css?v=1653321718626">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797338">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718626">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -55,7 +55,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -188,7 +188,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -209,7 +209,7 @@
       
       <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2019年11月06日</a>
-    <a><i class="nexmoefont icon-areachart"></i>621 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>494 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
 </div>
 
@@ -240,9 +240,23 @@
 <p>import java.io.BufferedReader;<br>import java.io.IOException;<br>import java.io.InputStreamReader;<br>import java.util.Arrays;<br>import java.util.Set;<br>import java.util.TreeSet;</p>
 </li>
 </ul>
-<p>public class Main {<br>    public static void main(String[] args) throws IOException {<br>        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));<br>        int n = Integer.parseInt(br.readLine());<br>        int couples[] = new int[100000];<br>        Arrays.fill(couples, -1);//数组初始化为-1<br>        for (int i = 0; i &lt;n ; i++) {<br>            String[] temp = br.readLine().split(“ “);<br>            int wife = Integer.parseInt(temp[0]);<br>            int husband = Integer.parseInt(temp[1]);<br>            couples[wife] = husband;<br>            couples[husband] = wife;<br>        }<br>        int m = Integer.parseInt(br.readLine());<br>        String[] guest = br.readLine().split(“ “);<br>        int[] isExist = new int[100000];<br>        for (int i = 0; i &lt;m ; i++) {<br>            int tempN = Integer.parseInt(guest[i]);<br>            if (couples[tempN] != -1){ //自己对应的对象存在<br>                isExist[couples[tempN]] = 1; //标记自己到场<br>            }<br>        }<br>        Set<Integer> set = new TreeSet<Integer>();<br>        for (int i = 0; i &lt;m ; i++) {<br>            int tempN = Integer.parseInt(guest[i]);<br>            if (isExist[tempN] !=1){<br>                set.add(tempN);<br>            }<br>        }<br>        System.out.println(set.size());<br>        boolean isFirst = true;<br>        for (Integer integer : set) {<br>            if (!isFirst) {<br>                System.out.print(“ “);<br>            }<br>            System.out.print(integer);<br>            isFirst = false;<br>        }<br>    }<br>}</p>
-<pre><code>
-</code></pre>
+<p>public class Main {<br>    public static void main(String[] args) throws IOException {<br>        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));<br>        int n = Integer.parseInt(br.readLine());<br>        int couples[] = new int[100000];<br>        Arrays.fill(couples, -1);//数组初始化为-1<br>        for (int i = 0; i <n ; i++) {
+            String[] temp = br.readLine().split(" ");
+            int wife = Integer.parseInt(temp[0]);
+            int husband = Integer.parseInt(temp[1]);
+            couples[wife] = husband;
+            couples[husband] = wife;
+        }
+        int m = Integer.parseInt(br.readLine());
+        String[] guest = br.readLine().split(" ");
+        int[] isExist = new int[100000];
+        for (int i = 0; i <m ; i++) {
+            int tempN = Integer.parseInt(guest[i]);
+            if (couples[tempN] != -1){ //自己对应的对象存在
+                isExist[couples[tempN]] = 1; //标记自己到场
+            }
+        }
+        Set<Integer> set = new TreeSet<Integer>();<br>        for (int i = 0; i &lt;m ; i++) {<br>            int tempN = Integer.parseInt(guest[i]);<br>            if (isExist[tempN] !=1){<br>                set.add(tempN);<br>            }<br>        }<br>        System.out.println(set.size());<br>        boolean isFirst = true;<br>        for (Integer integer : set) {<br>            if (!isFirst) {<br>                System.out.print(“ “);<br>            }<br>            System.out.print(integer);<br>            isFirst = false;<br>        }<br>    }<br>}<br>```</p>
 
   </article>
 
@@ -326,10 +340,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797342"></script>
+<script async src="/js/app.js?v=1653321718632"></script>
 
 
-	<script async src="/js/search.js?v=1637339797342"></script>
+	<script async src="/js/search.js?v=1653321718632"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

@@ -26,12 +26,12 @@
 <meta property="article:tag" content="未AC题目">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797485">
+    <link rel="stylesheet" href="/css/style.css?v=1653321718798">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797485">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718798">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -56,7 +56,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -189,7 +189,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -217,16 +217,17 @@
       
 
       <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <span id="more"></span></h2><ul>
-<li> 著名的快速排序算法里有一个经典的划分过程：我们通常采用某种方法取一个元素作为主元，通过交换，把比主元小的元素放到它的左边，比主元大的元素放到它的右边。 给定划分后的 <em>N</em> 个互不相同的正整数的排列，请问有多少个元素可能是划分前选取的主元？</li>
-</ul>
-<p>  例如给定 $N = 5$, 排列是1、3、2、4、5。则：</p>
+<li><p>著名的快速排序算法里有一个经典的划分过程：我们通常采用某种方法取一个元素作为主元，通过交换，把比主元小的元素放到它的左边，比主元大的元素放到它的右边。 给定划分后的 <em>N</em> 个互不相同的正整数的排列，请问有多少个元素可能是划分前选取的主元？</p>
+<p>例如给定 $N = 5$, 排列是1、3、2、4、5。则：</p>
 <ul>
 <li>1 的左边没有元素，右边的元素都比它大，所以它可能是主元；</li>
 <li>尽管 3 的左边元素都比它小，但其右边的 2 比它小，所以它不能是主元；</li>
 <li>尽管 2 的右边元素都比它大，但其左边的 3 比它大，所以它不能是主元；</li>
 <li>类似原因，4 和 5 都可能是主元。</li>
 </ul>
-<p>  因此，有 3 个元素可能是主元。</p>
+<p>因此，有 3 个元素可能是主元。</p>
+</li>
+</ul>
 <h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
 <p>输入在第 1 行中给出一个正整数 <em>N</em>（≤105）； 第 2 行是空格分隔的 <em>N</em> 个不同的正整数，每个数不超过 109。 </p>
 </blockquote>
@@ -240,15 +241,14 @@
 <p>3<br>1 4 5</p>
 </blockquote>
 <h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li> 主元的定位为左边都比他小，右边都比他大。</li>
-<li> 先定义一个计数器，和一个存放主元的数组</li>
-<li> 假设数为主元，设置一个flag为true。如果其满足主元的定义，他会在循环里一直continue，不进行flag = false的赋值。</li>
-<li> 最后在输出结果</li>
+<li>主元的定位为左边都比他小，右边都比他大。</li>
+<li>先定义一个计数器，和一个存放主元的数组</li>
+<li>假设数为主元，设置一个flag为true。如果其满足主元的定义，他会在循环里一直continue，不进行flag = false的赋值。</li>
+<li>最后在输出结果</li>
 </ul>
 <hr>
 <hr>
 <figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">import</span> java.io.BufferedReader;<br><span class="hljs-keyword">import</span> java.io.IOException;<br><span class="hljs-keyword">import</span> java.io.InputStreamReader;<br><span class="hljs-keyword">import</span> java.util.ArrayList;<br><br><span class="hljs-built_in">public</span> <span class="hljs-keyword">class</span> PAT_B1045 &#123;<br>    <span class="hljs-built_in">public</span> static <span class="hljs-type">void</span> main(String[] args) throws IOException &#123;//就这样了这题没有java解法，优化的话最多再通过一个测试点<br>        BufferedReader br = <span class="hljs-built_in">new</span> BufferedReader(<span class="hljs-built_in">new</span> InputStreamReader(<span class="hljs-keyword">System</span>.<span class="hljs-keyword">in</span>));<br>        <span class="hljs-type">int</span> n = <span class="hljs-type">Integer</span>.parseInt(br.readLine());<br>        String[] <span class="hljs-keyword">temp</span> =br.readLine().split(&quot; &quot;);<br>        <span class="hljs-type">int</span>[] numbers = <span class="hljs-built_in">new</span> <span class="hljs-type">int</span>[n];<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n ; i++) &#123;<br>            numbers[i] = <span class="hljs-type">Integer</span>.parseInt(<span class="hljs-keyword">temp</span>[i]);<br>        &#125;<br>        <span class="hljs-type">int</span> count = <span class="hljs-number">0</span>;<br>        ArrayList&lt;<span class="hljs-type">Integer</span>&gt; <span class="hljs-keyword">index</span> = <span class="hljs-built_in">new</span> ArrayList&lt;&gt;();<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n ; i++) &#123;<br>            <span class="hljs-type">int</span> majorNum = numbers[i];<br>            <span class="hljs-type">boolean</span> flag = <span class="hljs-keyword">true</span>;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &lt;n ; j++) &#123;<br>                <span class="hljs-keyword">if</span> (j==i)&#123;<br>                    <span class="hljs-keyword">continue</span>;<br>                &#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(j&lt;i &amp;&amp; numbers[j]&lt;majorNum)&#123;<br>                    <span class="hljs-keyword">continue</span>;<br>                &#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (j&gt;i &amp;&amp; numbers[j]&gt;majorNum)&#123;<br>                    <span class="hljs-keyword">continue</span>;<br>                &#125;<br>                flag = <span class="hljs-keyword">false</span>;<br>                break;<br>            &#125;<br>            <span class="hljs-keyword">if</span> (flag)&#123;<br>                count++;<br>                <span class="hljs-keyword">index</span>.<span class="hljs-keyword">add</span>(majorNum);<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">System</span>.<span class="hljs-keyword">out</span>.println(count);<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt;<span class="hljs-keyword">index</span>.size()<span class="hljs-number">-1</span> ; i++) &#123;<br>            <span class="hljs-keyword">System</span>.<span class="hljs-keyword">out</span>.print(<span class="hljs-keyword">index</span>.<span class="hljs-keyword">get</span>(i)+&quot; &quot;);<br>        &#125;<br>        <span class="hljs-keyword">System</span>.<span class="hljs-keyword">out</span>.print(<span class="hljs-keyword">index</span>.<span class="hljs-keyword">get</span>(<span class="hljs-keyword">index</span>.size()<span class="hljs-number">-1</span>));<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 
   </article>
 
@@ -334,10 +334,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797491"></script>
+<script async src="/js/app.js?v=1653321718806"></script>
 
 
-	<script async src="/js/search.js?v=1637339797491"></script>
+	<script async src="/js/search.js?v=1653321718806"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

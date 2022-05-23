@@ -26,12 +26,12 @@
 <meta property="article:tag" content="字符串操作">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797624">
+    <link rel="stylesheet" href="/css/style.css?v=1653321718993">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797624">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718993">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -56,7 +56,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -189,7 +189,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -217,7 +217,7 @@
       
 
       <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <span id="more"></span></h2><ul>
-<li> 输入两个非负 10 进制整数 <em>A</em> 和 <em>B</em> (≤230−1)，输出 <em>A</em>+<em>B</em> 的 <em>D</em> (1&lt;<em>D</em>≤10)进制数。 </li>
+<li>输入两个非负 10 进制整数 <em>A</em> 和 <em>B</em> (≤230−1)，输出 <em>A</em>+<em>B</em> 的 <em>D</em> (1&lt;<em>D</em>≤10)进制数。 </li>
 </ul>
 <h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
 <p>   输入在一行中依次给出 3 个整数 <em>A</em>、<em>B</em> 和 <em>D</em>。 </p>
@@ -232,12 +232,11 @@
 <p>1103</p>
 </blockquote>
 <h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li> 看别人的解法发现tostring能直接转换进制</li>
+<li>看别人的解法发现tostring能直接转换进制</li>
 </ul>
 <hr>
 <hr>
 <figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">public <span class="hljs-keyword">class</span> PAT_B1022 &#123;<br><br>    public static void main(String<span class="hljs-literal">[]</span> args) throws IOException &#123;<span class="hljs-comment">//了解toString的用法的话这道题简单的夸张</span><br>        BufferedReader br = <span class="hljs-keyword">new</span> <span class="hljs-constructor">BufferedReader(<span class="hljs-params">new</span> InputStreamReader(System.<span class="hljs-params">in</span>)</span>);<br>        String<span class="hljs-literal">[]</span> temp = br.read<span class="hljs-constructor">Line()</span>.split(<span class="hljs-string">&quot; &quot;</span>);<br>        <span class="hljs-built_in">int</span> a = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span>parse<span class="hljs-constructor">Int(<span class="hljs-params">temp</span>[0])</span>;<br>        <span class="hljs-built_in">int</span> b = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span>parse<span class="hljs-constructor">Int(<span class="hljs-params">temp</span>[1])</span>;<br>        <span class="hljs-built_in">int</span> d = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span>parse<span class="hljs-constructor">Int(<span class="hljs-params">temp</span>[2])</span>;<br><br>        String str = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span><span class="hljs-keyword">to</span><span class="hljs-constructor">String(<span class="hljs-params">a</span>+<span class="hljs-params">b</span>,<span class="hljs-params">d</span>)</span>;<br>        <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.println(str);<br><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 
   </article>
 
@@ -323,10 +322,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797629"></script>
+<script async src="/js/app.js?v=1653321718997"></script>
 
 
-	<script async src="/js/search.js?v=1637339797629"></script>
+	<script async src="/js/search.js?v=1653321718997"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

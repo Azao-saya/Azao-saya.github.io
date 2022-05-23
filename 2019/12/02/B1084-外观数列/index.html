@@ -25,12 +25,12 @@
 <meta property="article:author" content="A_zao">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797206">
+    <link rel="stylesheet" href="/css/style.css?v=1653321718462">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797206">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718462">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -55,7 +55,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -188,7 +188,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -217,7 +217,6 @@
 
       <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <span id="more"></span></h2><p>外观数列是指具有以下特点的整数序列：</p>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">d</span>, d<span class="hljs-number">1</span>, d<span class="hljs-number">111</span>, d<span class="hljs-number">113</span>, d<span class="hljs-number">11231</span>, d<span class="hljs-number">112213111</span>, ...<br></code></pre></td></tr></table></figure>
-
 <p>它从不等于 1 的数字 <code>d</code> 开始，序列的第 n+1 项是对第 n 项的描述。比如第 2 项表示第 1 项有 1 个 <code>d</code>，所以就是 <code>d1</code>；第 2 项是 1 个 <code>d</code>（对应 <code>d1</code>）和 1 个 1（对应 11），所以第 3 项就是 <code>d111</code>。又比如第 4 项是 <code>d113</code>，其描述就是 1 个 <code>d</code>，2 个 1，1 个 3，所以下一项就是 <code>d11231</code>。当然这个定义对 <code>d</code> = 1 也成立。本题要求你推算任意给定数字 <code>d</code> 的外观数列的第 N 项。</p>
 <h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
 <p> 输入第一行给出 [0,9] 范围内的一个整数 d、以及一个正整数 N（≤ 40），用空格分隔。输出描述按照“差值 重复次数”的格式从大到小输出重复的差值及其重复的次数，每行输出一个结果。 </p>
@@ -232,7 +231,7 @@
 <p>1123123111</p>
 </blockquote>
 <h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li>看了<a target="_blank" rel="noopener" href="https://blog.csdn.net/a1552100455/article/details/97403706%E7%9A%84%E5%88%86%E6%9E%90%E6%89%8D%E7%9C%8B%E6%87%82%E9%A2%98%E7%9B%AE">https://blog.csdn.net/a1552100455/article/details/97403706的分析才看懂题目</a></li>
+<li>看了<a target="_blank" rel="noopener" href="https://blog.csdn.net/a1552100455/article/details/97403706的分析才看懂题目">https://blog.csdn.net/a1552100455/article/details/97403706的分析才看懂题目</a></li>
 <li>题目的意思其实很简单…….就是让统计连续数字出现的个数，然后在个数前面加上这个数，怀疑陈姥姥就是故意刁难我们的……</li>
 <li>比如122224333。</li>
 <li>1连续出现了1次，所以是11；2连续出现了4次所以是24，加上前面算出来的11就是1124；4连续出现了1次，所以是41，同理加上前面的1124就是112441；3连续出现了3次，所以是33，结果就是11244133。</li>
@@ -240,11 +239,7 @@
 <hr>
 <hr>
 <figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs processing"><span class="hljs-keyword">import</span> java.io.<span class="hljs-keyword">BufferedReader</span>;<br><span class="hljs-keyword">import</span> java.io.IOException;<br><span class="hljs-keyword">import</span> java.io.InputStreamReader;<br><br><br><span class="hljs-keyword">public</span> class PAT_B1084 &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> main(<span class="hljs-keyword">String</span>[] args) <span class="hljs-keyword">throws</span> IOException &#123; <span class="hljs-comment">//最后一测试点内存超限,能ac的代码为_2，转载自wowpH</span><br>        <span class="hljs-keyword">BufferedReader</span> br = <span class="hljs-keyword">new</span> <span class="hljs-keyword">BufferedReader</span>(<span class="hljs-keyword">new</span> InputStreamReader(System.in));<br>        <span class="hljs-keyword">String</span>[] s = br.readLine().<span class="hljs-built_in">split</span>(<span class="hljs-string">&quot; &quot;</span>);<br>        <span class="hljs-built_in">int</span> n = Integer.parseInt(s[<span class="hljs-number">1</span>]);<br>        <span class="hljs-keyword">String</span> <span class="hljs-built_in">str</span> = s[<span class="hljs-number">0</span>];<br>        <span class="hljs-keyword">while</span>((--n)&gt;<span class="hljs-number">0</span>)&#123;<br>            <span class="hljs-keyword">String</span> temp=<span class="hljs-string">&quot;&quot;</span>;<br>            <span class="hljs-built_in">int</span> count = <span class="hljs-number">1</span>;<br>            <span class="hljs-built_in">char</span> c = <span class="hljs-built_in">str</span>.charAt(<span class="hljs-number">0</span>);<br>            <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">1</span>; i &lt;<span class="hljs-built_in">str</span>.length() ; i++) &#123;<br>                <span class="hljs-keyword">if</span> (c ==<span class="hljs-built_in">str</span>.charAt(i))&#123;<br>                    count++;<br>                &#125;<span class="hljs-keyword">else</span> &#123;<br>                    temp += <span class="hljs-keyword">String</span>.valueOf(c)+count;<br>                    c = <span class="hljs-built_in">str</span>.charAt(i);<br>                    count = <span class="hljs-number">1</span>;<br>                &#125;<br>            &#125;<br>            temp += <span class="hljs-keyword">String</span>.valueOf(c)+count;<br>            <span class="hljs-built_in">str</span> = temp;<br>        &#125;<br>        System.out.<span class="hljs-built_in">println</span>(<span class="hljs-built_in">str</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-
-
 <figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">import java.io.BufferedReader;<br>import java.io.IOException;<br>import java.io.InputStreamReader;<br>import java.util.Arrays;<br><br>public <span class="hljs-keyword">class</span> PAT_B1084_2 &#123;<br>    public static void main(String<span class="hljs-literal">[]</span> args) throws IOException &#123;<br>        BufferedReader br = <span class="hljs-keyword">new</span> <span class="hljs-constructor">BufferedReader(<span class="hljs-params">new</span> InputStreamReader(System.<span class="hljs-params">in</span>)</span>);<br>        String<span class="hljs-literal">[]</span> dn = br.read<span class="hljs-constructor">Line()</span>.split(<span class="hljs-string">&quot; &quot;</span>);<br>        <span class="hljs-built_in">int</span> n = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span>parse<span class="hljs-constructor">Int(<span class="hljs-params">dn</span>[1])</span>;			<span class="hljs-comment">// 需要计算的项数</span><br><br>        <span class="hljs-built_in">char</span><span class="hljs-literal">[]</span> oldArr = dn<span class="hljs-literal">[<span class="hljs-number">0</span>]</span>.<span class="hljs-keyword">to</span><span class="hljs-constructor">CharArray()</span>;		<span class="hljs-comment">// 上一项</span><br>        <span class="hljs-keyword">while</span> ((--n) &gt; <span class="hljs-number">0</span>) &#123;							<span class="hljs-comment">// 循环n-1次</span><br>            <span class="hljs-built_in">char</span><span class="hljs-literal">[]</span> newArr = <span class="hljs-keyword">new</span> <span class="hljs-built_in">char</span><span class="hljs-literal">[<span class="hljs-identifier">oldArr</span>.<span class="hljs-identifier">length</span> <span class="hljs-operator">*</span> <span class="hljs-number">2</span>]</span>;<span class="hljs-comment">// 大小最多为2倍</span><br>            <span class="hljs-built_in">int</span> length = <span class="hljs-number">0</span>;							<span class="hljs-comment">// 当前项的字符个数</span><br>            newArr<span class="hljs-literal">[<span class="hljs-identifier">length</span><span class="hljs-operator">++</span>]</span> = oldArr<span class="hljs-literal">[<span class="hljs-number">0</span>]</span>;			<span class="hljs-comment">// 至少有1个字符</span><br>            <span class="hljs-built_in">int</span> number = <span class="hljs-number">1</span>;							<span class="hljs-comment">// 当前字符的连续的个数，至少1个</span><br>            <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">1</span>; i &lt; oldArr.length; ++i) &#123;<br>                <span class="hljs-keyword">if</span> (oldArr<span class="hljs-literal">[<span class="hljs-identifier">i</span>]</span><span class="hljs-operator"> == </span>newArr<span class="hljs-literal">[<span class="hljs-identifier">length</span> - <span class="hljs-number">1</span>]</span>) &#123;<span class="hljs-comment">// 第i个字符和当前字符相同</span><br>                    ++number;						<span class="hljs-comment">// 当前字符个数加1</span><br>                &#125; <span class="hljs-keyword">else</span> &#123;							<span class="hljs-comment">// 不同</span><br>                    newArr<span class="hljs-literal">[<span class="hljs-identifier">length</span><span class="hljs-operator">++</span>]</span> = (<span class="hljs-built_in">char</span>) (number + <span class="hljs-number">48</span>);<span class="hljs-comment">// 将个数添加到新数组中</span><br>                    newArr<span class="hljs-literal">[<span class="hljs-identifier">length</span><span class="hljs-operator">++</span>]</span> = oldArr<span class="hljs-literal">[<span class="hljs-identifier">i</span>]</span>;	<span class="hljs-comment">// 下一个字符</span><br>                    number = <span class="hljs-number">1</span>;						<span class="hljs-comment">// 初始连续的个数为1</span><br>                &#125;<br>            &#125;<br>            newArr<span class="hljs-literal">[<span class="hljs-identifier">length</span><span class="hljs-operator">++</span>]</span> = (<span class="hljs-built_in">char</span>) (number + <span class="hljs-number">48</span>);<span class="hljs-comment">// 最后1个的个数添加到新数组中</span><br>            oldArr = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Arrays</span>.</span></span>copy<span class="hljs-constructor">Of(<span class="hljs-params">newArr</span>, <span class="hljs-params">length</span>)</span>;	<span class="hljs-comment">// 拷贝新项到oldArr中</span><br>        &#125;<br>        <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.println(<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">String</span>.</span></span>value<span class="hljs-constructor">Of(<span class="hljs-params">oldArr</span>)</span>);	<span class="hljs-comment">// 转成字符串并输出</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 
   </article>
 
@@ -328,10 +323,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797212"></script>
+<script async src="/js/app.js?v=1653321718473"></script>
 
 
-	<script async src="/js/search.js?v=1637339797212"></script>
+	<script async src="/js/search.js?v=1653321718473"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

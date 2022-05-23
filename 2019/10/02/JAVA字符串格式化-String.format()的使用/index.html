@@ -25,12 +25,12 @@
 <meta property="article:author" content="A_zao">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797781">
+    <link rel="stylesheet" href="/css/style.css?v=1653321719172">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797781">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321719172">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -55,7 +55,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -188,7 +188,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -218,85 +218,88 @@
       <h1 id="常规类型的格式化"><a href="#常规类型的格式化" class="headerlink" title="常规类型的格式化"></a>常规类型的格式化</h1><blockquote>
 <p>String类的format()方法用于创建格式化的字符串以及连接多个字符串对象。<span id="more"></span> 熟悉C语言的同学应该记得C语言的sprintf()方法，两者有类似之处。format()方法有两种重载形式。<br/><br>format(String format, Object… args) 新字符串使用本地语言环境，制定字符串格式和参数生成格式化的新字符串。<br/><br>format(Locale locale, String format, Object… args) 使用指定的语言环境，制定字符串格式和参数生成格式化的字符串。<br/><br>显示不同转换符实现不同数据类型到字符串的转换，如图所示<br/></p>
 </blockquote>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center"><strong>转换符</strong></th>
-<th align="center"><strong>说明</strong></th>
-<th align="center"><strong>示例</strong></th>
+<th style="text-align:center"><strong>转换符</strong></th>
+<th style="text-align:center"><strong>说明</strong></th>
+<th style="text-align:center"><strong>示例</strong></th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">%s</td>
-<td align="center">字符串类型</td>
-<td align="center">“mingrisoft”</td>
+<tbody>
+<tr>
+<td style="text-align:center">%s</td>
+<td style="text-align:center">字符串类型</td>
+<td style="text-align:center">“mingrisoft”</td>
 </tr>
 <tr>
-<td align="center">%c</td>
-<td align="center">字符类型</td>
-<td align="center">‘m’</td>
+<td style="text-align:center">%c</td>
+<td style="text-align:center">字符类型</td>
+<td style="text-align:center">‘m’</td>
 </tr>
 <tr>
-<td align="center">%b</td>
-<td align="center">布尔类型</td>
-<td align="center">true</td>
+<td style="text-align:center">%b</td>
+<td style="text-align:center">布尔类型</td>
+<td style="text-align:center">true</td>
 </tr>
 <tr>
-<td align="center">%d</td>
-<td align="center">整数类型（十进制）</td>
-<td align="center">99</td>
+<td style="text-align:center">%d</td>
+<td style="text-align:center">整数类型（十进制）</td>
+<td style="text-align:center">99</td>
 </tr>
 <tr>
-<td align="center">%x</td>
-<td align="center">整数类型（十六进制）</td>
-<td align="center">FF</td>
+<td style="text-align:center">%x</td>
+<td style="text-align:center">整数类型（十六进制）</td>
+<td style="text-align:center">FF</td>
 </tr>
 <tr>
-<td align="center">%o</td>
-<td align="center">整数类型（八进制）</td>
-<td align="center">77</td>
+<td style="text-align:center">%o</td>
+<td style="text-align:center">整数类型（八进制）</td>
+<td style="text-align:center">77</td>
 </tr>
 <tr>
-<td align="center">%f</td>
-<td align="center">浮点类型</td>
-<td align="center">99.99</td>
+<td style="text-align:center">%f</td>
+<td style="text-align:center">浮点类型</td>
+<td style="text-align:center">99.99</td>
 </tr>
 <tr>
-<td align="center">%a</td>
-<td align="center">十六进制浮点类型</td>
-<td align="center">FF.35AE</td>
+<td style="text-align:center">%a</td>
+<td style="text-align:center">十六进制浮点类型</td>
+<td style="text-align:center">FF.35AE</td>
 </tr>
 <tr>
-<td align="center">%e</td>
-<td align="center">指数类型</td>
-<td align="center">9.38e+5</td>
+<td style="text-align:center">%e</td>
+<td style="text-align:center">指数类型</td>
+<td style="text-align:center">9.38e+5</td>
 </tr>
 <tr>
-<td align="center">%g</td>
-<td align="center">通用浮点类型（f和e类型中较短的）</td>
-<td align="center"></td>
+<td style="text-align:center">%g</td>
+<td style="text-align:center">通用浮点类型（f和e类型中较短的）</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center">%h</td>
-<td align="center">散列码</td>
-<td align="center"></td>
+<td style="text-align:center">%h</td>
+<td style="text-align:center">散列码</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center">%%</td>
-<td align="center">百分比类型</td>
-<td align="center">％</td>
+<td style="text-align:center">%%</td>
+<td style="text-align:center">百分比类型</td>
+<td style="text-align:center">％</td>
 </tr>
 <tr>
-<td align="center">%n</td>
-<td align="center">换行符</td>
-<td align="center"></td>
+<td style="text-align:center">%n</td>
+<td style="text-align:center">换行符</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center">%tx</td>
-<td align="center">日期与时间类型（x代表不同的日期与时间转换符</td>
-<td align="center"></td>
+<td style="text-align:center">%tx</td>
+<td style="text-align:center">日期与时间类型（x代表不同的日期与时间转换符</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>输入内容:</p>
 <pre><code>public static void main(String[] args) &#123;  
     String str=null;  
@@ -316,8 +319,7 @@
     System.out.printf(&quot;上面的折扣是%d%% %n&quot;, 85);  
     System.out.printf(&quot;字母A的散列码是：%h %n&quot;, &#39;A&#39;);  
 &#125;
-</code></pre>
-<p>输出结果:</p>
+</code></pre><p>输出结果:</p>
 <pre><code>Hi,王力  
 Hi,王南:王力.王张  
 字母a的大写是：A   
@@ -331,76 +333,79 @@ Hi,王南:王力.王张
 上面价格的指数和浮点数结果的长度较短的是：42.5000   
 上面的折扣是85%   
 字母A的散列码是：41
-</code></pre>
-<h1 id="搭配转换符的标志"><a href="#搭配转换符的标志" class="headerlink" title="搭配转换符的标志"></a>搭配转换符的标志</h1><table>
+</code></pre><h1 id="搭配转换符的标志"><a href="#搭配转换符的标志" class="headerlink" title="搭配转换符的标志"></a>搭配转换符的标志</h1><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="center"><strong>标志</strong></th>
-<th align="center"><strong>说明</strong></th>
-<th align="center"><strong>示例</strong></th>
+<th style="text-align:center"><strong>标志</strong></th>
+<th style="text-align:center"><strong>说明</strong></th>
+<th style="text-align:center"><strong>示例</strong></th>
 <th><strong>结果</strong></th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">+</td>
-<td align="center">为正数或者负数添加符号</td>
-<td align="center">（”%+d”,15）</td>
+<tbody>
+<tr>
+<td style="text-align:center">+</td>
+<td style="text-align:center">为正数或者负数添加符号</td>
+<td style="text-align:center">（”%+d”,15）</td>
 <td>+15</td>
 </tr>
 <tr>
-<td align="center">-</td>
-<td align="center">左对齐</td>
-<td align="center">(“%-5d”,15)</td>
-<td>|15 |</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">左对齐</td>
+<td style="text-align:center">(“%-5d”,15)</td>
+<td>\</td>
+<td>15 \</td>
+<td></td>
 </tr>
 <tr>
-<td align="center">0</td>
-<td align="center">数字前面补0</td>
-<td align="center">(“%04d”,99)</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">数字前面补0</td>
+<td style="text-align:center">(“%04d”,99)</td>
 <td>0099</td>
 </tr>
 <tr>
-<td align="center">空格</td>
-<td align="center">在整数之前添加指定数量的空格</td>
-<td align="center">（”%04d”,99</td>
-<td>| 99|</td>
+<td style="text-align:center">空格</td>
+<td style="text-align:center">在整数之前添加指定数量的空格</td>
+<td style="text-align:center">（”%04d”,99</td>
+<td>\</td>
+<td>99\</td>
+<td></td>
 </tr>
 <tr>
-<td align="center">,</td>
-<td align="center">以“,”对数字分组</td>
-<td align="center">(“%,f”,9999.99)</td>
+<td style="text-align:center">,</td>
+<td style="text-align:center">以“,”对数字分组</td>
+<td style="text-align:center">(“%,f”,9999.99)</td>
 <td>9,999.990000</td>
 </tr>
 <tr>
-<td align="center">(</td>
-<td align="center">使用括号包含负数</td>
-<td align="center">(“%(f”,-99.99)</td>
+<td style="text-align:center">(</td>
+<td style="text-align:center">使用括号包含负数</td>
+<td style="text-align:center">(“%(f”,-99.99)</td>
 <td>(99.990000)</td>
 </tr>
 <tr>
-<td align="center">#</td>
-<td align="center">如果是浮点数则包含小数点，如果是16进制或8进制则添加0x或0</td>
-<td align="center">(“%#x”,99”)<br/>(%#o”,99)</td>
+<td style="text-align:center">#</td>
+<td style="text-align:center">如果是浮点数则包含小数点，如果是16进制或8进制则添加0x或0</td>
+<td style="text-align:center">(“%#x”,99”)<br/>(%#o”,99)</td>
 <td>0x63<br/>0143</td>
 </tr>
 <tr>
-<td align="center">&lt;</td>
-<td align="center">格式化前一个转换符所描述的参数</td>
-<td align="center">(“%f和%&lt;3.2f”,99.45)</td>
+<td style="text-align:center">&lt;</td>
+<td style="text-align:center">格式化前一个转换符所描述的参数</td>
+<td style="text-align:center">(“%f和%&lt;3.2f”,99.45)</td>
 <td>99.450000和99.45</td>
 </tr>
 <tr>
-<td align="center">$</td>
-<td align="center">被格式化的参数索引</td>
-<td align="center">(“%1$d,%2$s”,99,”abc”)</td>
+<td style="text-align:center">$</td>
+<td style="text-align:center">被格式化的参数索引</td>
+<td style="text-align:center">(“%1$d,%2$s”,99,”abc”)</td>
 <td>99,abc</td>
 </tr>
-</tbody></table>
-<p>输入内容:</p>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">public static void main(String<span class="hljs-literal">[]</span> args) &#123;  <br>    String str=null;  <br>    <span class="hljs-comment">//$使用  </span><br>    str=<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">String</span>.</span></span>format(<span class="hljs-string">&quot;格式参数$的使用：%1$d,%2$s&quot;</span>, <span class="hljs-number">99</span>,<span class="hljs-string">&quot;abc&quot;</span>);             <br>    <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.println(str);                       <br>    <span class="hljs-comment">//+使用  </span><br>    <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.printf(<span class="hljs-string">&quot;显示正负数的符号：%+d与%d%n&quot;</span>, <span class="hljs-number">99</span>,-<span class="hljs-number">99</span>);  <br>    <span class="hljs-comment">//补O使用  </span><br>    <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.printf(<span class="hljs-string">&quot;最牛的编号是：%03d%n&quot;</span>, <span class="hljs-number">7</span>);  <br>    <span class="hljs-comment">//空格使用  </span><br>    <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.printf(<span class="hljs-string">&quot;Tab键的效果是：% 8d%n&quot;</span>, <span class="hljs-number">7</span>);  <br>    <span class="hljs-comment">//.使用  </span><br>    <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.printf(<span class="hljs-string">&quot;整数分组的效果是：%,d%n&quot;</span>, <span class="hljs-number">9989997</span>);  <br>    <span class="hljs-comment">//空格和小数点后面个数  </span><br>    <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.printf(<span class="hljs-string">&quot;一本书的价格是：% 50.5f元%n&quot;</span>, <span class="hljs-number">49.8</span>);  <br>&#125;  <br></code></pre></td></tr></table></figure>
-<p>输出内容:</p>
-<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs subunit">格式参数$的使用：99,abc  <br>显示正负数的符号：<span class="hljs-string">+99</span>与<span class="hljs-string">-99</span>  <br>最牛的编号是：007  <br>Tab键的效果是：       7  <br>整数分组的效果是：9,989,997  <br>一本书的价格是：      <br></code></pre></td></tr></table></figure>
-
+</tbody>
+</table>
+</div>
+<p>输入内容:<br><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">public static void main(String<span class="hljs-literal">[]</span> args) &#123;  <br>    String str=null;  <br>    <span class="hljs-comment">//$使用  </span><br>    str=<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">String</span>.</span></span>format(<span class="hljs-string">&quot;格式参数$的使用：%1$d,%2$s&quot;</span>, <span class="hljs-number">99</span>,<span class="hljs-string">&quot;abc&quot;</span>);             <br>    <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.println(str);                       <br>    <span class="hljs-comment">//+使用  </span><br>    <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.printf(<span class="hljs-string">&quot;显示正负数的符号：%+d与%d%n&quot;</span>, <span class="hljs-number">99</span>,-<span class="hljs-number">99</span>);  <br>    <span class="hljs-comment">//补O使用  </span><br>    <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.printf(<span class="hljs-string">&quot;最牛的编号是：%03d%n&quot;</span>, <span class="hljs-number">7</span>);  <br>    <span class="hljs-comment">//空格使用  </span><br>    <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.printf(<span class="hljs-string">&quot;Tab键的效果是：% 8d%n&quot;</span>, <span class="hljs-number">7</span>);  <br>    <span class="hljs-comment">//.使用  </span><br>    <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.printf(<span class="hljs-string">&quot;整数分组的效果是：%,d%n&quot;</span>, <span class="hljs-number">9989997</span>);  <br>    <span class="hljs-comment">//空格和小数点后面个数  </span><br>    <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.printf(<span class="hljs-string">&quot;一本书的价格是：% 50.5f元%n&quot;</span>, <span class="hljs-number">49.8</span>);  <br>&#125;  <br></code></pre></td></tr></table></figure><br>输出内容:<br><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs subunit">格式参数$的使用：99,abc  <br>显示正负数的符号：<span class="hljs-string">+99</span>与<span class="hljs-string">-99</span>  <br>最牛的编号是：007  <br>Tab键的效果是：       7  <br>整数分组的效果是：9,989,997  <br>一本书的价格是：      <br></code></pre></td></tr></table></figure></p>
 <p>部分转载自：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/Dhouse/p/7776780.html">https://www.cnblogs.com/Dhouse/p/7776780.html</a></p>
 
   </article>
@@ -485,10 +490,10 @@ Hi,王南:王力.王张
 
  
 
-<script async src="/js/app.js?v=1637339797790"></script>
+<script async src="/js/app.js?v=1653321719179"></script>
 
 
-	<script async src="/js/search.js?v=1637339797790"></script>
+	<script async src="/js/search.js?v=1653321719179"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

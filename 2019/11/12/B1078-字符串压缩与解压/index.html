@@ -26,12 +26,12 @@
 <meta property="article:tag" content="ASCII">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797255">
+    <link rel="stylesheet" href="/css/style.css?v=1653321718526">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797255">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718526">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -56,7 +56,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -189,7 +189,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -247,7 +247,6 @@
 <hr>
 <hr>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.io.BufferedReader;<br><span class="hljs-keyword">import</span> java.io.IOException;<br><span class="hljs-keyword">import</span> java.io.InputStreamReader;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PAT_B1078</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> IOException </span>&#123;<br>        BufferedReader br = <span class="hljs-keyword">new</span> BufferedReader(<span class="hljs-keyword">new</span> InputStreamReader(System.in));<br>        String mark = br.readLine();<br>        <span class="hljs-keyword">char</span>[] arr = br.readLine().toCharArray();<br>        <span class="hljs-keyword">if</span> (mark.charAt(<span class="hljs-number">0</span>) ==<span class="hljs-string">&#x27;C&#x27;</span>)&#123;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>,j=i+<span class="hljs-number">1</span>; i &lt;arr.length ; i=j) &#123;<br>                <span class="hljs-keyword">for</span> (;j&lt;arr.length &amp;&amp; arr[j]==arr[i];j++) &#123;<br>                &#125;<br>                <span class="hljs-keyword">if</span> (j-i&gt;<span class="hljs-number">1</span>)&#123;<br>                    System.out.print(j-i);<br>                &#125;<br>                System.out.print(arr[i]);<br>            &#125;<br>        &#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(mark.charAt(<span class="hljs-number">0</span>) ==<span class="hljs-string">&#x27;D&#x27;</span>) &#123;<br>            <span class="hljs-keyword">int</span> num = <span class="hljs-number">0</span>;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt;arr.length ; i++) &#123;<br>                <span class="hljs-keyword">char</span> c = arr[i];<br>                <span class="hljs-keyword">if</span> (c &gt;= <span class="hljs-string">&#x27;0&#x27;</span> &amp;&amp; c &lt;= <span class="hljs-string">&#x27;9&#x27;</span>)&#123;<br>                    num = num*<span class="hljs-number">10</span>+c-<span class="hljs-number">48</span>; <span class="hljs-comment">//&#x27;0&#x27;等于48</span><br>                &#125;<span class="hljs-keyword">else</span> &#123;<br>                    <span class="hljs-keyword">if</span> (num ==<span class="hljs-number">0</span>)&#123;<br>                        System.out.print(c);<br>                    &#125;<span class="hljs-keyword">else</span> &#123;<br>                        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt;num ; j++) &#123;<br>                            System.out.print(c);<br>                        &#125;<br>                        num =<span class="hljs-number">0</span>;<br>                    &#125;<br><br>                &#125;<br><br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 
   </article>
 
@@ -333,10 +332,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797259"></script>
+<script async src="/js/app.js?v=1653321718531"></script>
 
 
-	<script async src="/js/search.js?v=1637339797259"></script>
+	<script async src="/js/search.js?v=1653321718531"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

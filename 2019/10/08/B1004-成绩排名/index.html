@@ -26,12 +26,12 @@
 <meta property="article:tag" content="HashMap">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797747">
+    <link rel="stylesheet" href="/css/style.css?v=1653321719130">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797747">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321719130">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -56,7 +56,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -189,7 +189,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -232,17 +232,13 @@
 </blockquote>
 <h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><blockquote>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs out">Mike CS991301<br>Joe Math990112<br></code></pre></td></tr></table></figure>
-
 <p>解题思路</p>
-</blockquote>
-<blockquote>
 <p>这里了解到了不空打一个nextLine()的话下面一个nextLine()会读取到上个nextInt()相同的东西</p>
 <p>这里用了一个HashMap和一个ArraysList，成绩为键，姓名+学号为值。然后在把成绩另存一份到数组中</p>
 <p>因为只需要输出成绩最高和最低的，在对数组进行正序排序之后可以很轻松的得到成绩的最小值和最大值</p>
 <p>把两个成绩作为键直接查找HashMap里的姓名和学号，要输出的空格也已经提前打好了</p>
 </blockquote>
 <figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs processing"><span class="hljs-keyword">import</span> java.util.ArrayList;<br><span class="hljs-keyword">import</span> java.util.Collections;<br><span class="hljs-keyword">import</span> java.util.<span class="hljs-keyword">HashMap</span>;<br><span class="hljs-keyword">import</span> java.util.Scanner;<br><br><span class="hljs-keyword">public</span> class PAT_B1004 &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> main(<span class="hljs-keyword">String</span>[] args) &#123;<br>        Scanner sc = <span class="hljs-keyword">new</span> Scanner(System.in);<br>        <span class="hljs-built_in">int</span> n = sc.nextInt();<br>        <span class="hljs-keyword">HashMap</span>&lt;Integer,<span class="hljs-keyword">String</span>&gt; <span class="hljs-built_in">map</span> = <span class="hljs-keyword">new</span> <span class="hljs-keyword">HashMap</span>&lt;&gt;();<br>        ArrayList&lt;Integer&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>        sc.nextLine();<br>        <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; n ; i++) &#123;<br>            <span class="hljs-keyword">String</span>[] <span class="hljs-built_in">str</span> = sc.nextLine().<span class="hljs-built_in">split</span>(<span class="hljs-string">&quot; &quot;</span>);<br>            <span class="hljs-built_in">map</span>.put(Integer.valueOf(<span class="hljs-keyword">String</span>.valueOf(<span class="hljs-built_in">str</span>[<span class="hljs-number">2</span>])),<span class="hljs-built_in">str</span>[<span class="hljs-number">0</span>]+<span class="hljs-string">&quot; &quot;</span>+<span class="hljs-built_in">str</span>[<span class="hljs-number">1</span>]);<br>            list.<span class="hljs-built_in">add</span>(Integer.valueOf(<span class="hljs-keyword">String</span>.valueOf(<span class="hljs-built_in">str</span>[<span class="hljs-number">2</span>])));<br>            &#125;<br>        Collections.<span class="hljs-built_in">sort</span>(list);<br>        <span class="hljs-built_in">int</span> <span class="hljs-built_in">max</span> = list.<span class="hljs-built_in">get</span>(list.<span class="hljs-built_in">size</span>()<span class="hljs-number">-1</span>);<br>        <span class="hljs-built_in">int</span> <span class="hljs-built_in">min</span> = list.<span class="hljs-built_in">get</span>(<span class="hljs-number">0</span>);<br>        System.out.<span class="hljs-built_in">println</span>(<span class="hljs-built_in">map</span>.<span class="hljs-built_in">get</span>(<span class="hljs-built_in">max</span>));<br>        System.out.<span class="hljs-built_in">println</span>(<span class="hljs-built_in">map</span>.<span class="hljs-built_in">get</span>(<span class="hljs-built_in">min</span>));<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 
   </article>
 
@@ -328,10 +324,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797752"></script>
+<script async src="/js/app.js?v=1653321719138"></script>
 
 
-	<script async src="/js/search.js?v=1637339797752"></script>
+	<script async src="/js/search.js?v=1653321719138"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

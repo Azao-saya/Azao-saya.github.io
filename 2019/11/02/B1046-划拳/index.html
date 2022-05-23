@@ -25,12 +25,12 @@
 <meta property="article:author" content="A_zao">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797463">
+    <link rel="stylesheet" href="/css/style.css?v=1653321718792">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797463">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718792">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -55,7 +55,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -188,7 +188,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -216,13 +216,13 @@
       
 
       <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <span id="more"></span></h2><ul>
-<li> 划拳是古老中国酒文化的一个有趣的组成部分。酒桌上两人划拳的方法为：每人口中喊出一个数字，同时用手比划出一个数字。如果谁比划出的数字正好等于两人喊出的数字之和，谁就赢了，输家罚一杯酒。两人同赢或两人同输则继续下一轮，直到唯一的赢家出现。</li>
+<li><p>划拳是古老中国酒文化的一个有趣的组成部分。酒桌上两人划拳的方法为：每人口中喊出一个数字，同时用手比划出一个数字。如果谁比划出的数字正好等于两人喊出的数字之和，谁就赢了，输家罚一杯酒。两人同赢或两人同输则继续下一轮，直到唯一的赢家出现。</p>
+<p>下面给出甲、乙两人的划拳记录，请你统计他们最后分别喝了多少杯酒。</p>
+</li>
 </ul>
-<p>  下面给出甲、乙两人的划拳记录，请你统计他们最后分别喝了多少杯酒。</p>
 <h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
 <p>输入第一行先给出一个正整数 <em>N</em>（≤100），随后 <em>N</em> 行，每行给出一轮划拳的记录，格式为：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">&gt;</span><span class="bash">甲喊 甲划 乙喊 乙划</span><br></code></pre></td></tr></table></figure>
-
 <p>其中<code>喊</code>是喊出的数字，<code>划</code>是划出的数字，均为不超过 100 的正整数（两只手一起划）。</p>
 </blockquote>
 <h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
@@ -235,14 +235,13 @@
 <p>1 2</p>
 </blockquote>
 <h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li> 存入a喊 a划 b喊 b划</li>
-<li> 胜利条件是a喊 + b喊 等于其中一个人比划的数字，如果没有，或者两个人都比划了则算平手跳过这轮。</li>
-<li> 最后输出的 a b 的负场次数，即为a胜利增加b的count</li>
+<li>存入a喊 a划 b喊 b划</li>
+<li>胜利条件是a喊 + b喊 等于其中一个人比划的数字，如果没有，或者两个人都比划了则算平手跳过这轮。</li>
+<li>最后输出的 a b 的负场次数，即为a胜利增加b的count</li>
 </ul>
 <hr>
 <hr>
 <figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">import java.io.BufferedReader;<br>import java.io.IOException;<br>import java.io.InputStreamReader;<br><br>public <span class="hljs-keyword">class</span> PAT_B1046 &#123;<br>    public static void main(String<span class="hljs-literal">[]</span> args) throws IOException &#123;<br>        BufferedReader br = <span class="hljs-keyword">new</span> <span class="hljs-constructor">BufferedReader(<span class="hljs-params">new</span> InputStreamReader(System.<span class="hljs-params">in</span>)</span>);<br>        <span class="hljs-built_in">int</span> n = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span>parse<span class="hljs-constructor">Int(<span class="hljs-params">br</span>.<span class="hljs-params">readLine</span>()</span>);<br>        <span class="hljs-built_in">int</span><span class="hljs-literal">[]</span> a = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span><span class="hljs-literal">[<span class="hljs-number">2</span>]</span>;<br>        <span class="hljs-built_in">int</span><span class="hljs-literal">[]</span> b = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span><span class="hljs-literal">[<span class="hljs-number">2</span>]</span>;<br>        <span class="hljs-built_in">int</span> aCount=<span class="hljs-number">0</span>,bCount=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt;n ; i++) &#123;<br>            String<span class="hljs-literal">[]</span> temp = br.read<span class="hljs-constructor">Line()</span>.split(<span class="hljs-string">&quot; &quot;</span>);<br>            a<span class="hljs-literal">[<span class="hljs-number">0</span>]</span>=<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span>parse<span class="hljs-constructor">Int(<span class="hljs-params">temp</span>[0])</span>;<br>            a<span class="hljs-literal">[<span class="hljs-number">1</span>]</span>=<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span>parse<span class="hljs-constructor">Int(<span class="hljs-params">temp</span>[1])</span>;<br>            b<span class="hljs-literal">[<span class="hljs-number">0</span>]</span>=<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span>parse<span class="hljs-constructor">Int(<span class="hljs-params">temp</span>[2])</span>;<br>            b<span class="hljs-literal">[<span class="hljs-number">1</span>]</span>=<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span>parse<span class="hljs-constructor">Int(<span class="hljs-params">temp</span>[3])</span>;<br>            <span class="hljs-built_in">int</span> sum = a<span class="hljs-literal">[<span class="hljs-number">0</span>]</span>+b<span class="hljs-literal">[<span class="hljs-number">0</span>]</span>;<br>            <span class="hljs-keyword">if</span> ((a<span class="hljs-literal">[<span class="hljs-number">1</span>]</span>==sum<span class="hljs-operator"> &amp;&amp; </span>b<span class="hljs-literal">[<span class="hljs-number">1</span>]</span>==sum)<span class="hljs-operator"> || </span>(a<span class="hljs-literal">[<span class="hljs-number">1</span>]</span>!=sum<span class="hljs-operator"> &amp;&amp; </span>b<span class="hljs-literal">[<span class="hljs-number">1</span>]</span>!=sum))&#123;<br>                continue;<br>            &#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (a<span class="hljs-literal">[<span class="hljs-number">1</span>]</span>==sum)&#123;<br>                bCount++;<br>            &#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(b<span class="hljs-literal">[<span class="hljs-number">1</span>]</span>==sum)&#123;<br>                aCount++;<br>            &#125;<br>        &#125;<br>        <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.println(aCount+<span class="hljs-string">&quot; &quot;</span>+bCount);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 
   </article>
 
@@ -326,10 +325,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797470"></script>
+<script async src="/js/app.js?v=1653321718797"></script>
 
 
-	<script async src="/js/search.js?v=1637339797471"></script>
+	<script async src="/js/search.js?v=1653321718797"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

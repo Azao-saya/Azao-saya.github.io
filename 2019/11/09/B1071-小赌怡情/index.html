@@ -26,12 +26,12 @@
 <meta property="article:tag" content="正则表达式">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797300">
+    <link rel="stylesheet" href="/css/style.css?v=1653321718581">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797300">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718582">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -56,7 +56,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -189,7 +189,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -221,7 +221,6 @@
 <h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
 <p>   输入在第一行给出 2 个正整数 T 和 K（≤ 100），分别是系统在初始状态下赠送给玩家的筹码数、以及需要处理的游戏次数。随后 K 行，每行对应一次游戏，顺序给出 4 个数字：</p>
    <figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gcode"><span class="hljs-symbol">n1</span> b t <span class="hljs-symbol">n2</span><br></code></pre></td></tr></table></figure>
-
 <p>   其中 <code>n1</code> 和 <code>n2</code> 是计算机先后给出的两个[0, 9]内的整数，保证两个数字不相等。<code>b</code> 为 0 表示玩家赌<code>小</code>，为 1 表示玩家赌<code>大</code>。<code>t</code> 表示玩家下注的筹码数，保证在整型范围内。</p>
 </blockquote>
 <h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
@@ -246,7 +245,7 @@
 <p>Win 100!  Total = 200.<br>Lose 200.  Total = 0.<br>Game Over.</p>
 </blockquote>
 <h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li> 主要就是对持有筹码的判断，如果下注的筹码超过持有的，就continue到下一个循环。</li>
+<li>主要就是对持有筹码的判断，如果下注的筹码超过持有的，就continue到下一个循环。</li>
 <li>有筹码足够就进入下一个判断，两个结果赢或者输。</li>
 <li>最后判断是否还有筹码，若花光了立即结束循环。</li>
 <li>题目并没有设胜利条件…..</li>
@@ -254,7 +253,6 @@
 <hr>
 <hr>
 <figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">import java.io.BufferedReader;<br>import java.io.IOException;<br>import java.io.InputStreamReader;<br><br>public <span class="hljs-keyword">class</span> Main &#123;<br>    public static void main(String<span class="hljs-literal">[]</span> args) throws IOException &#123;<br>        BufferedReader br = <span class="hljs-keyword">new</span> <span class="hljs-constructor">BufferedReader(<span class="hljs-params">new</span> InputStreamReader(System.<span class="hljs-params">in</span>)</span>);<br>        String<span class="hljs-literal">[]</span> temp = br.read<span class="hljs-constructor">Line()</span>.split(<span class="hljs-string">&quot; &quot;</span>);<br>        <span class="hljs-built_in">int</span> tokens = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span>parse<span class="hljs-constructor">Int(<span class="hljs-params">temp</span>[0])</span>;<br>        <span class="hljs-built_in">int</span> n = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span>parse<span class="hljs-constructor">Int(<span class="hljs-params">temp</span>[1])</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt;n ; i++) &#123;<br>            String<span class="hljs-literal">[]</span> s = br.read<span class="hljs-constructor">Line()</span>.split(<span class="hljs-string">&quot; &quot;</span>);<br>            <span class="hljs-built_in">int</span> n1 = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span>parse<span class="hljs-constructor">Int(<span class="hljs-params">s</span>[0])</span>;<br>            <span class="hljs-built_in">int</span> b = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span>parse<span class="hljs-constructor">Int(<span class="hljs-params">s</span>[1])</span>;<br>            <span class="hljs-built_in">int</span> t = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span>parse<span class="hljs-constructor">Int(<span class="hljs-params">s</span>[2])</span>;<br>            <span class="hljs-built_in">int</span> n2 = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span>parse<span class="hljs-constructor">Int(<span class="hljs-params">s</span>[3])</span>;<br>            <span class="hljs-keyword">if</span> (tokens &lt; t)&#123;<br>                <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.printf(<span class="hljs-string">&quot;Not enough tokens.  Total = %d.\n&quot;</span>,tokens);<br>                continue;<br>            &#125;<br>            <span class="hljs-keyword">if</span> ((n1&gt;n2&amp;&amp;b==<span class="hljs-number">0</span>)<span class="hljs-pattern-match"><span class="hljs-operator">||</span>(n1&lt;n2<span class="hljs-operator">&amp;&amp;</span>b<span class="hljs-operator">==</span>1))&#123;</span><br><span class="hljs-pattern-match">                tokens +=t;</span><br><span class="hljs-pattern-match">                <span class="hljs-constructor">System</span>.out.printf(&quot;<span class="hljs-constructor">Win</span> %d!  <span class="hljs-constructor">Total</span> = %d.\n&quot;,t,tokens);</span><br><span class="hljs-pattern-match">            &#125;<span class="hljs-keyword">else</span> &#123;</span><br><span class="hljs-pattern-match">                tokens -=t;</span><br><span class="hljs-pattern-match">                <span class="hljs-constructor">System</span>.out.printf(&quot;<span class="hljs-constructor">Lose</span> %d.  <span class="hljs-constructor">Total</span> = %d.\n&quot;,t,tokens);</span><br><span class="hljs-pattern-match">            &#125;</span><br><span class="hljs-pattern-match">            <span class="hljs-keyword">if</span> (tokens <span class="hljs-operator">==</span>0)&#123;</span><br><span class="hljs-pattern-match">                <span class="hljs-constructor">System</span>.out.println(&quot;<span class="hljs-constructor">Game</span> <span class="hljs-constructor">Over</span>.&quot;);</span><br><span class="hljs-pattern-match">                break;</span><br><span class="hljs-pattern-match">            &#125;</span><br><span class="hljs-pattern-match">        &#125;</span><br><span class="hljs-pattern-match">    &#125;</span><br><span class="hljs-pattern-match">&#125;</span><br></code></pre></td></tr></table></figure>
-
 
   </article>
 
@@ -340,10 +338,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797304"></script>
+<script async src="/js/app.js?v=1653321718590"></script>
 
 
-	<script async src="/js/search.js?v=1637339797304"></script>
+	<script async src="/js/search.js?v=1653321718590"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

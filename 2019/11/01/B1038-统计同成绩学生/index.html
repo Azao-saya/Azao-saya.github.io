@@ -26,12 +26,12 @@
 <meta property="article:tag" content="未AC题目">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797527">
+    <link rel="stylesheet" href="/css/style.css?v=1653321718852">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797527">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718852">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -56,7 +56,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -189,7 +189,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -217,16 +217,14 @@
       
 
       <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <span id="more"></span></h2><ul>
-<li>   本题要求读入 <em>N</em> 名学生的成绩，将获得某一给定分数的学生人数输出。 </li>
+<li>本题要求读入 <em>N</em> 名学生的成绩，将获得某一给定分数的学生人数输出。 </li>
 </ul>
 <h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
 <pre><code> 输入在第 1 行给出不超过 105 的正整数 *N*，即学生总人数。随后一行给出 *N* 名学生的百分制整数成绩，中间以空格分隔。最后一行给出要查询的分数个数 *K*（不超过 *N*的正整数），随后是 *K* 个分数，中间以空格分隔。 
-</code></pre>
-</blockquote>
+</code></pre></blockquote>
 <h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
 <pre><code>在一行中按查询顺序给出得分等于指定分数的学生人数，中间以空格分隔，但行末不得有多余空格。 
-</code></pre>
-</blockquote>
+</code></pre></blockquote>
 <h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
 <p>10<br>60 75 90 55 75 99 82 90 75 50<br>3 75 90 88</p>
 </blockquote>
@@ -234,15 +232,14 @@
 <p>3 2 0</p>
 </blockquote>
 <h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li> 最后一个测试点超时</li>
-<li> 写博客的时候稍微改进了一下代码，前面几组测试大概减了10ms，但果然还是逃不出超时</li>
-<li> 少了一组存储的数组和少了一次遍历还会超时那真是不知道要怎么做了</li>
-<li> 存入一组成绩和一组要检查的成绩</li>
-<li> 嵌套循环外面一层是要检查的成绩，里面一层是所有成绩</li>
+<li>最后一个测试点超时</li>
+<li>写博客的时候稍微改进了一下代码，前面几组测试大概减了10ms，但果然还是逃不出超时</li>
+<li>少了一组存储的数组和少了一次遍历还会超时那真是不知道要怎么做了</li>
+<li>存入一组成绩和一组要检查的成绩</li>
+<li>嵌套循环外面一层是要检查的成绩，里面一层是所有成绩</li>
 </ul>
 <hr>
 <figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs processing"><span class="hljs-keyword">import</span> java.io.<span class="hljs-keyword">BufferedReader</span>;<br><span class="hljs-keyword">import</span> java.io.IOException;<br><span class="hljs-keyword">import</span> java.io.InputStreamReader;<br><br><span class="hljs-keyword">public</span> class PAT_B1038 &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> main(<span class="hljs-keyword">String</span>[] args) <span class="hljs-keyword">throws</span> IOException &#123; <span class="hljs-comment">//最后一组超时，代码还可以优化，但java逃不过超时。</span><br>        <span class="hljs-keyword">BufferedReader</span> br = <span class="hljs-keyword">new</span> <span class="hljs-keyword">BufferedReader</span>(<span class="hljs-keyword">new</span> InputStreamReader(System.in));<br>        <span class="hljs-built_in">int</span> n = Integer.parseInt(br.readLine());<br>        <span class="hljs-keyword">String</span>[] grade = br.readLine().<span class="hljs-built_in">split</span>(<span class="hljs-string">&quot; &quot;</span>);<br>        <span class="hljs-keyword">String</span>[] check = br.readLine().<span class="hljs-built_in">split</span>(<span class="hljs-string">&quot; &quot;</span>);<br>        StringBuilder sb = <span class="hljs-keyword">new</span> StringBuilder();<br><span class="hljs-comment">//        int[] list = new int[Integer.parseInt(check[0])];</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> j = <span class="hljs-number">1</span>; j &lt;check.length ; j++) &#123;<br>            <span class="hljs-built_in">int</span> count = <span class="hljs-number">0</span>;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt;grade.length ; i++) &#123;<br>                <span class="hljs-keyword">if</span> (check[j].equals(grade[i]))&#123;<br><span class="hljs-comment">//                    list[j-1]++;</span><br>                    count++;<br>                &#125;<br>            &#125;<br>            sb.<span class="hljs-built_in">append</span>(count+<span class="hljs-string">&quot; &quot;</span>);<br>        &#125;<br><br><span class="hljs-comment">//        for (int i : list) &#123;</span><br><span class="hljs-comment">//            sb.append(i+&quot; &quot;);</span><br><span class="hljs-comment">//        &#125;</span><br>        System.out.<span class="hljs-built_in">println</span>(sb.substring(<span class="hljs-number">0</span>,sb.length()<span class="hljs-number">-1</span>));<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 
   </article>
 
@@ -328,10 +325,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797532"></script>
+<script async src="/js/app.js?v=1653321718858"></script>
 
 
-	<script async src="/js/search.js?v=1637339797533"></script>
+	<script async src="/js/search.js?v=1653321718858"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

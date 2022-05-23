@@ -25,12 +25,12 @@
 <meta property="article:author" content="A_zao">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797142">
+    <link rel="stylesheet" href="/css/style.css?v=1653321718372">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797142">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718372">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -55,7 +55,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -188,7 +188,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -235,11 +235,7 @@
 <hr>
 <hr>
 <figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs processing"><span class="hljs-keyword">import</span> java.io.<span class="hljs-keyword">BufferedReader</span>;<br><span class="hljs-keyword">import</span> java.io.IOException;<br><span class="hljs-keyword">import</span> java.io.InputStreamReader;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 错误：</span><br><span class="hljs-comment"> * ausdalksjdlaksjkcnxzlkmcalksdjqiowjdmksvhxzckzoc&#x27;;.cz</span><br><span class="hljs-comment"> * qeudpoaiskc;lzx,c;lzxkc;lakfpasd</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * ausdlkjcnxzmqiowvhz&#x27;;.ep,;f</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * 正确：</span><br><span class="hljs-comment"> * ausdalksjdlaksjkcnxzlkmcalksdjqiowjdmksvhxzckzoc&#x27;;.cz</span><br><span class="hljs-comment"> * qeudpoaiskc;lzx,c;lzxkc;lakfpasd</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * ausdlkjcnxzmqiowvh&#x27;;.ep,f</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * 多了一个z不知道咋产生的，除了这个错误还有两个点超时。</span><br><span class="hljs-comment"> * 在用StringBuffer的时候打了d想找找有没有删除的，没想到真的有deleteCharAt()</span><br><span class="hljs-comment"> * ac代码为另一个</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> class PAT_B1093 &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> main(<span class="hljs-keyword">String</span>[] args) <span class="hljs-keyword">throws</span> IOException &#123;<br>        <span class="hljs-keyword">BufferedReader</span> br = <span class="hljs-keyword">new</span> <span class="hljs-keyword">BufferedReader</span>(<span class="hljs-keyword">new</span> InputStreamReader(System.in));<br>        <span class="hljs-keyword">String</span> a = br.readLine();<br>        <span class="hljs-keyword">String</span> b = br.readLine();<br>        StringBuilder sb = <span class="hljs-keyword">new</span> StringBuilder();<br>        sb.<span class="hljs-built_in">append</span>(a);<br>        sb.<span class="hljs-built_in">append</span>(b);<br>        <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt;sb.length() ; i++) &#123;<br>            <span class="hljs-built_in">char</span> c = sb.charAt(i);<br>            <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> j = i+<span class="hljs-number">1</span>; j &lt;sb.length() ; j++) &#123;<br>                <span class="hljs-keyword">if</span> (c == sb.charAt(j))&#123;<br>                    sb.deleteCharAt(j);<br>                &#125;<br>            &#125;<br>        &#125;<br>        System.out.<span class="hljs-built_in">println</span>(sb.toString().<span class="hljs-built_in">trim</span>());<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-
-
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.*;<br><span class="hljs-keyword">import</span> java.io.*;<br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PAT_B1093</span></span>&#123;<br>    <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span>[] ascll =<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">127</span>];<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[]args)</span><span class="hljs-keyword">throws</span> IOException</span>&#123;<br>        BufferedReader br=<span class="hljs-keyword">new</span> BufferedReader(<span class="hljs-keyword">new</span> InputStreamReader(System.in));<br>        String A=br.readLine();<br>        String B=br.readLine();<br>        String C=A+B;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i &lt;C.length();++i)&#123;<br>            ascll[C.charAt(i)]++;<br>            <span class="hljs-keyword">if</span>(ascll[C.charAt(i)]==<span class="hljs-number">1</span>)<br>                System.out.print(C.charAt(i));<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 
   </article>
 
@@ -323,10 +319,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797149"></script>
+<script async src="/js/app.js?v=1653321718379"></script>
 
 
-	<script async src="/js/search.js?v=1637339797149"></script>
+	<script async src="/js/search.js?v=1653321718379"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

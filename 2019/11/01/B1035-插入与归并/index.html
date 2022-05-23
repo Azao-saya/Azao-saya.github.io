@@ -28,12 +28,12 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://s2.ax1x.com/2019/11/25/MXDJPI.gif">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797546">
+    <link rel="stylesheet" href="/css/style.css?v=1653321718876">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797546">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718876">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -58,7 +58,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -191,7 +191,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -219,19 +219,18 @@
       
 
       <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <span id="more"></span></h2><ul>
-<li>  根据维基百科的定义：</li>
+<li><p>根据维基百科的定义：</p>
+<p><strong>插入排序</strong>是迭代算法，逐一获得输入数据，逐步产生有序的输出序列。每步迭代中，算法从输入序列中取出一元素，将之插入有序序列中正确的位置。如此迭代直到全部元素有序。</p>
+<p><strong>归并排序</strong>进行如下迭代操作：首先将原始序列看成 N 个只包含 1 个元素的有序子序列，然后每次迭代归并两个相邻的有序子序列，直到最后只剩下 1 个有序的序列。</p>
+<p>现给定原始序列和由某排序算法产生的中间序列，请你判断该算法究竟是哪种排序算法？ </p>
+</li>
 </ul>
-<p>  <strong>插入排序</strong>是迭代算法，逐一获得输入数据，逐步产生有序的输出序列。每步迭代中，算法从输入序列中取出一元素，将之插入有序序列中正确的位置。如此迭代直到全部元素有序。</p>
-<p>  <strong>归并排序</strong>进行如下迭代操作：首先将原始序列看成 N 个只包含 1 个元素的有序子序列，然后每次迭代归并两个相邻的有序子序列，直到最后只剩下 1 个有序的序列。</p>
-<p>  现给定原始序列和由某排序算法产生的中间序列，请你判断该算法究竟是哪种排序算法？ </p>
 <h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
 <pre><code> 输入在第一行给出正整数 N (≤100)；随后一行给出原始序列的 N 个整数；最后一行给出由某排序算法产生的中间序列。这里假设排序的目标序列是升序。数字间以空格分隔。  
-</code></pre>
-</blockquote>
+</code></pre></blockquote>
 <h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
 <pre><code>首先在第 1 行中输出`Insertion Sort`表示插入排序、或`Merge Sort`表示归并排序；然后在第 2 行中输出用该排序算法再迭代一轮的结果序列。题目保证每组测试的结果是唯一的。数字间以空格分隔，且行首尾不得有多余空格。 
-</code></pre>
-</blockquote>
+</code></pre></blockquote>
 <h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="输入1"><a href="#输入1" class="headerlink" title="输入1"></a>输入1</h3><blockquote>
 <p>10<br>3 1 2 8 7 5 9 4 6 0<br>1 2 3 7 8 5 9 4 6 0</p>
 </blockquote>
@@ -245,19 +244,18 @@
 <p>Merge Sort<br>1 2 3 8 4 5 7 9 0 6</p>
 </blockquote>
 <h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li>  真滴看不懂</li>
-<li> (<img data-fancybox="gallery" data-sizes="auto" data-src="https://s2.ax1x.com/2019/11/25/MXDJPI.gif" alt="img" class="lazyload"> )</li>
-<li> 不应该这样么</li>
-<li> 好吧重新读了之后懂了只再迭代了一轮</li>
-<li> 判断插入排序还是归并排序是条件是</li>
-<li> 插入排序排序到中间序列时，在那一个结束升序之后的数字应该都是和原始数列是相同的</li>
-<li> 插入排序在对i+1位数进行排序就直接输出，</li>
-<li> 归并排序在数组等于题目给出的中间序列之后在进行一次归并操作，k乘2能自己再迭代 (读懂也不会写…..</li>
+<li>真滴看不懂</li>
+<li>(<img data-fancybox="gallery" data-sizes="auto" data-src="https://s2.ax1x.com/2019/11/25/MXDJPI.gif" alt="img" class="lazyload"> )</li>
+<li>不应该这样么</li>
+<li>好吧重新读了之后懂了只再迭代了一轮</li>
+<li>判断插入排序还是归并排序是条件是</li>
+<li>插入排序排序到中间序列时，在那一个结束升序之后的数字应该都是和原始数列是相同的</li>
+<li>插入排序在对i+1位数进行排序就直接输出，</li>
+<li>归并排序在数组等于题目给出的中间序列之后在进行一次归并操作，k乘2能自己再迭代 (读懂也不会写…..</li>
 </ul>
 <hr>
 <hr>
 <figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><code class="hljs gradle"><span class="hljs-keyword">import</span> java.util.Arrays;<br><span class="hljs-keyword">import</span> java.util.Scanner;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> PAT_B1035 &#123;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> main(String[] args) <span class="hljs-keyword">throws</span> Exception &#123; <span class="hljs-comment">//代码转载自熊仙森</span><br>        Scanner inScanner = <span class="hljs-keyword">new</span> Scanner(System.in);<br>        <span class="hljs-keyword">int</span> n =inScanner.nextInt();<br>        <span class="hljs-keyword">int</span> [] a =<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];<br>        <span class="hljs-keyword">int</span> [] b =<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)<br>            a[i]=inScanner.nextInt();<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)<br>            b[i]=inScanner.nextInt();<br>        inScanner.close();<br><br>        <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;<br>        <span class="hljs-comment">//判断排好序的位置</span><br>        <span class="hljs-keyword">for</span> (; b[i] &lt;= b[i + <span class="hljs-number">1</span>] &amp;&amp; i &lt; n; i++);<br>        <span class="hljs-keyword">boolean</span> isInsert = <span class="hljs-keyword">true</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = i + <span class="hljs-number">1</span>; j &lt; n; j++) &#123;<br>            <span class="hljs-comment">//判断排好序的位置的后面开始，a与b是不是每一位都相同，若出现不相同，则不是插入排序</span><br>            <span class="hljs-keyword">if</span> (a[j] != b[j]) &#123;<br>                isInsert = <span class="hljs-keyword">false</span>;<br>                <span class="hljs-keyword">break</span>;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">if</span> (isInsert) &#123;<br>            System.out.<span class="hljs-keyword">println</span>(<span class="hljs-string">&quot;Insertion Sort&quot;</span>);<br>            <span class="hljs-comment">//再加一个数字进行排序</span><br>            <span class="hljs-keyword">sort</span>(a, <span class="hljs-number">0</span>, i + <span class="hljs-number">1</span>);<br>        &#125; <span class="hljs-keyword">else</span> &#123;<br>            System.out.<span class="hljs-keyword">println</span>(<span class="hljs-string">&quot;Merge Sort&quot;</span>);<br>            <span class="hljs-comment">//从a开始执行归并排序，当与b一样时，再执行一次</span><br>            <span class="hljs-keyword">int</span> k = <span class="hljs-number">1</span>;<br>            <span class="hljs-keyword">boolean</span> flag = <span class="hljs-keyword">false</span>;<br>            <span class="hljs-keyword">while</span> (flag == <span class="hljs-keyword">false</span>) &#123;<br>                <span class="hljs-comment">//当a==b时，再执行一次，下一次判断时跳出</span><br>                flag = Arrays.equals(a, b);<br>                k = k * <span class="hljs-number">2</span>;<br>                <span class="hljs-keyword">int</span> p = <span class="hljs-number">0</span>;<br>                <span class="hljs-keyword">for</span> (p = <span class="hljs-number">0</span>; p &lt; n / k; p++)<br>                    <span class="hljs-comment">//p是分成的一个一个小组，k是每个组的成员个数</span><br>                    <span class="hljs-comment">//一组的起始是p * k，结束是下一组的开始位置减一</span><br>                    <span class="hljs-keyword">sort</span>(a, p * k, (p + <span class="hljs-number">1</span>) * k - <span class="hljs-number">1</span>);<br>                <span class="hljs-comment">//分完组后剩下的不够的做一次分组内的归并</span><br>                <span class="hljs-comment">//开始是 n / k * k（组数*长度），结束是到数组的最后</span><br>                <span class="hljs-keyword">sort</span>(a, n / k * k, n - <span class="hljs-number">1</span>);<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> k = <span class="hljs-number">0</span>; k &lt; n ; k++) &#123;<br>            <span class="hljs-keyword">if</span>(k!=<span class="hljs-number">0</span>)<br>                System.out.<span class="hljs-keyword">print</span>(<span class="hljs-string">&quot; &quot;</span>);<br>            System.out.<span class="hljs-keyword">print</span>(a[k]);<br>        &#125;<br>    &#125;<br>    <span class="hljs-comment">//自定义交换排序，也可用Arrays.sort，但是位置限制有点麻烦</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-keyword">sort</span>(<span class="hljs-keyword">int</span>[] a, <span class="hljs-keyword">int</span> <span class="hljs-keyword">from</span>, <span class="hljs-keyword">int</span> to) &#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-keyword">from</span>; i &lt; to; i++) &#123;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = i + <span class="hljs-number">1</span>; j &lt;= to; j++) &#123;<br>                <span class="hljs-keyword">if</span> (a[j] &lt; a[i]) &#123;<br>                    <span class="hljs-keyword">int</span> temp = a[i];<br>                    a[i] = a[j];<br>                    a[j] = temp;<br>                &#125;<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 
   </article>
 
@@ -343,10 +341,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797553"></script>
+<script async src="/js/app.js?v=1653321718887"></script>
 
 
-	<script async src="/js/search.js?v=1637339797553"></script>
+	<script async src="/js/search.js?v=1653321718887"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

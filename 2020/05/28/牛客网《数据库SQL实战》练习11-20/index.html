@@ -26,12 +26,12 @@
 <meta property="article:tag" content="MySql">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797033">
+    <link rel="stylesheet" href="/css/style.css?v=1653321718249">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797033">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718249">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -56,7 +56,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -189,7 +189,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -218,31 +218,35 @@
 
       <p>做了10题之后也能够自己动手了，别人讨论还是会看，不同的解法也是继续记录下来学习。<span id="more"></span></p>
 <h2 id="11-获取所有员工当前的manager"><a href="#11-获取所有员工当前的manager" class="headerlink" title="11.获取所有员工当前的manager"></a>11.获取所有员工当前的manager</h2><p><strong>题目描述：</strong></p>
-<p>获取所有员工当前的(dept_manager.to_date=’9999-01-01’)manager，如果员工是manager的话不显示(也就是如果当前的manager是自己的话结果不显示)。输出结果第一列给出当前员工的emp_no,第二列给出其manager对应的emp_no。<br>CREATE TABLE <code>dept_emp</code> (<br><code>emp_no</code> int(11) NOT NULL, – ‘所有的员工编号’<br><code>dept_no</code> char(4) NOT NULL, – ‘部门编号’<br><code>from_date</code> date NOT NULL,<br><code>to_date</code> date NOT NULL,<br>PRIMARY KEY (<code>emp_no</code>,<code>dept_no</code>));<br>CREATE TABLE <code>dept_manager</code> (<br><code>dept_no</code> char(4) NOT NULL, – ‘部门编号’<br><code>emp_no</code> int(11) NOT NULL, – ‘经理编号’<br><code>from_date</code> date NOT NULL,<br><code>to_date</code> date NOT NULL,</p>
+<p>获取所有员工当前的(dept_manager.to_date=’9999-01-01’)manager，如果员工是manager的话不显示(也就是如果当前的manager是自己的话结果不显示)。输出结果第一列给出当前员工的emp_no,第二列给出其manager对应的emp_no。<br>CREATE TABLE <code>dept_emp</code> (<br><code>emp_no</code> int(11) NOT NULL, — ‘所有的员工编号’<br><code>dept_no</code> char(4) NOT NULL, — ‘部门编号’<br><code>from_date</code> date NOT NULL,<br><code>to_date</code> date NOT NULL,<br>PRIMARY KEY (<code>emp_no</code>,<code>dept_no</code>));<br>CREATE TABLE <code>dept_manager</code> (<br><code>dept_no</code> char(4) NOT NULL, — ‘部门编号’<br><code>emp_no</code> int(11) NOT NULL, — ‘经理编号’<br><code>from_date</code> date NOT NULL,<br><code>to_date</code> date NOT NULL,</p>
 <p>PRIMARY KEY (<code>emp_no</code>,<code>dept_no</code>));</p>
 <p><strong>输入描述:</strong></p>
 <p>无</p>
 <p><strong>输出描述:</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">emp_no</th>
-<th align="center">manager_no</th>
+<th style="text-align:center">emp_no</th>
+<th style="text-align:center">manager_no</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">10001</td>
-<td align="center">10002</td>
+<tbody>
+<tr>
+<td style="text-align:center">10001</td>
+<td style="text-align:center">10002</td>
 </tr>
 <tr>
-<td align="center">10003</td>
-<td align="center">10004</td>
+<td style="text-align:center">10003</td>
+<td style="text-align:center">10004</td>
 </tr>
 <tr>
-<td align="center">10009</td>
-<td align="center">10010</td>
+<td style="text-align:center">10009</td>
+<td style="text-align:center">10010</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p><strong>解题代码：</strong></p>
 <blockquote>
 <p>1&gt;</p>
@@ -260,20 +264,24 @@
 <p><strong>输入描述:</strong></p>
 <p>无</p>
 <p><strong>输出描述:</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">dept_no</th>
-<th align="center">emp_no</th>
+<th style="text-align:center">dept_no</th>
+<th style="text-align:center">emp_no</th>
 <th>salary</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">d001</td>
-<td align="center">10001</td>
+<tbody>
+<tr>
+<td style="text-align:center">d001</td>
+<td style="text-align:center">10001</td>
 <td>88958</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p><strong>解题代码：</strong></p>
 <blockquote>
 <p>1&gt;</p>
@@ -297,30 +305,34 @@
 <p><strong>输入描述:</strong></p>
 <p>无</p>
 <p><strong>输出描述:</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">titlet</th>
-<th align="center">t</th>
+<th style="text-align:center">titlet</th>
+<th style="text-align:center">t</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">Assistant Engineer</td>
-<td align="center">2</td>
+<tbody>
+<tr>
+<td style="text-align:center">Assistant Engineer</td>
+<td style="text-align:center">2</td>
 </tr>
 <tr>
-<td align="center">Engineer</td>
-<td align="center">4</td>
+<td style="text-align:center">Engineer</td>
+<td style="text-align:center">4</td>
 </tr>
 <tr>
-<td align="center">省略</td>
-<td align="center">省略</td>
+<td style="text-align:center">省略</td>
+<td style="text-align:center">省略</td>
 </tr>
 <tr>
-<td align="center">Staff</td>
-<td align="center">3</td>
+<td style="text-align:center">Staff</td>
+<td style="text-align:center">3</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p><strong>解题代码：</strong></p>
 <blockquote>
 <p>1&gt;</p>
@@ -339,30 +351,34 @@
 <p><strong>输入描述:</strong></p>
 <p>无</p>
 <p><strong>输出描述:</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">titlet</th>
-<th align="center">t</th>
+<th style="text-align:center">titlet</th>
+<th style="text-align:center">t</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">Assistant Engineer</td>
-<td align="center">2</td>
+<tbody>
+<tr>
+<td style="text-align:center">Assistant Engineer</td>
+<td style="text-align:center">2</td>
 </tr>
 <tr>
-<td align="center">Engineer</td>
-<td align="center">3</td>
+<td style="text-align:center">Engineer</td>
+<td style="text-align:center">3</td>
 </tr>
 <tr>
-<td align="center">省略</td>
-<td align="center">省略</td>
+<td style="text-align:center">省略</td>
+<td style="text-align:center">省略</td>
 </tr>
 <tr>
-<td align="center">Staff</td>
-<td align="center">3</td>
+<td style="text-align:center">Staff</td>
+<td style="text-align:center">3</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p><strong>解题代码：</strong></p>
 <blockquote>
 <p>select title,count(distinct emp_no) as t<br>from titles<br>group by title having t &gt;=2</p>
@@ -377,66 +393,70 @@
 <p><strong>输入描述:</strong></p>
 <p>无</p>
 <p><strong>输出描述:</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">emp_no</th>
-<th align="center">birth_datet</th>
+<th style="text-align:center">emp_no</th>
+<th style="text-align:center">birth_datet</th>
 <th>first_name</th>
 <th>last_name</th>
 <th>gender</th>
 <th>hire_date</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">10011</td>
-<td align="center">1953-11-07</td>
+<tbody>
+<tr>
+<td style="text-align:center">10011</td>
+<td style="text-align:center">1953-11-07</td>
 <td>Mary</td>
 <td>Sluis</td>
 <td>F</td>
 <td>1990-01-22</td>
 </tr>
 <tr>
-<td align="center">10005</td>
-<td align="center">1955-01-21</td>
+<td style="text-align:center">10005</td>
+<td style="text-align:center">1955-01-21</td>
 <td>Kyoichi</td>
 <td>Maliniak</td>
 <td>M</td>
 <td>1989-09-12</td>
 </tr>
 <tr>
-<td align="center">10007</td>
-<td align="center">1957-05-23</td>
+<td style="text-align:center">10007</td>
+<td style="text-align:center">1957-05-23</td>
 <td>Tzvetan</td>
 <td>Zielinski</td>
 <td>F</td>
 <td>1989-02-10</td>
 </tr>
 <tr>
-<td align="center">10003</td>
-<td align="center">1959-12-03</td>
+<td style="text-align:center">10003</td>
+<td style="text-align:center">1959-12-03</td>
 <td>Parto</td>
 <td>Bamford</td>
 <td>M</td>
 <td>1986-08-28</td>
 </tr>
 <tr>
-<td align="center">10001</td>
-<td align="center">1953-09-02</td>
+<td style="text-align:center">10001</td>
+<td style="text-align:center">1953-09-02</td>
 <td>Georgi</td>
 <td>Facello</td>
 <td>M</td>
 <td>1986-06-26</td>
 </tr>
 <tr>
-<td align="center">10009</td>
-<td align="center">1952-04-19</td>
+<td style="text-align:center">10009</td>
+<td style="text-align:center">1952-04-19</td>
 <td>Sumant</td>
 <td>Peac</td>
 <td>F</td>
 <td>1985-02-18</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p><strong>解题代码：</strong></p>
 <blockquote>
 <p>select * from employees<br>where emp_no % 2 = 1<br>and last_name != ‘mary’<br>order by hire_date desc</p>
@@ -452,22 +472,26 @@
 <p><strong>输入描述:</strong></p>
 <p>无</p>
 <p><strong>输出描述:</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">title</th>
-<th align="center">avg</th>
+<th style="text-align:center">title</th>
+<th style="text-align:center">avg</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">Senior Engineer</td>
-<td align="center">62409.25</td>
+<tbody>
+<tr>
+<td style="text-align:center">Senior Engineer</td>
+<td style="text-align:center">62409.25</td>
 </tr>
 <tr>
-<td align="center">Senior Staff</td>
-<td align="center">88070.0</td>
+<td style="text-align:center">Senior Staff</td>
+<td style="text-align:center">88070.0</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p><strong>解题代码：</strong></p>
 <blockquote>
 <p>select t.title,avg(s.salary)<br>from salaries as s inner join titles as t<br>where s.emp_no = t.emp_no<br>and t.to_date=’9999-01-01’<br>and s.to_date=’9999-01-01’<br>group by title</p>
@@ -481,18 +505,22 @@
 <p><strong>输入描述:</strong></p>
 <p>无</p>
 <p><strong>输出描述:</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">emp_no</th>
-<th align="center">salary</th>
+<th style="text-align:center">emp_no</th>
+<th style="text-align:center">salary</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">10009</td>
-<td align="center">94409</td>
+<tbody>
+<tr>
+<td style="text-align:center">10009</td>
+<td style="text-align:center">94409</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p><strong>解题代码：</strong></p>
 <blockquote>
 <p>1&gt;</p>
@@ -510,22 +538,26 @@
 <p><strong>输入描述:</strong></p>
 <p>无</p>
 <p><strong>输出描述:</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">emp_no</th>
-<th align="center">salary</th>
+<th style="text-align:center">emp_no</th>
+<th style="text-align:center">salary</th>
 <th>last_name</th>
 <th>first_name</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">10009</td>
-<td align="center">94409</td>
+<tbody>
+<tr>
+<td style="text-align:center">10009</td>
+<td style="text-align:center">94409</td>
 <td>Peac</td>
 <td>Sumant</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p><strong>解题代码：</strong></p>
 <blockquote>
 <p>1&gt;</p>
@@ -554,30 +586,34 @@
 <p><strong>输入描述:</strong></p>
 <p>无</p>
 <p><strong>输出描述:</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">last_name</th>
-<th align="center">first_namesalary</th>
+<th style="text-align:center">last_name</th>
+<th style="text-align:center">first_namesalary</th>
 <th>dept_namelast_name</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">Facello</td>
-<td align="center">Georgi94409</td>
+<tbody>
+<tr>
+<td style="text-align:center">Facello</td>
+<td style="text-align:center">Georgi94409</td>
 <td>MarketingPeac</td>
 </tr>
 <tr>
-<td align="center">省略</td>
-<td align="center">省略</td>
+<td style="text-align:center">省略</td>
+<td style="text-align:center">省略</td>
 <td>省略</td>
 </tr>
 <tr>
-<td align="center">Sluis</td>
-<td align="center">Mary</td>
+<td style="text-align:center">Sluis</td>
+<td style="text-align:center">Mary</td>
 <td>NULL</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p><strong>解题代码：</strong></p>
 <blockquote>
 <p>select e.last_name,e.first_name,d.dept_name </p>
@@ -595,16 +631,20 @@
 <p><strong>输入描述:</strong></p>
 <p>无</p>
 <p><strong>输出描述:</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">growth</th>
+<th style="text-align:center">growth</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">28841</td>
+<tbody>
+<tr>
+<td style="text-align:center">28841</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <blockquote>
 <p>1&gt;</p>
 <p>select (max(salary)-min(salary)) as growth<br>from salaries  where emp_no=’10001’ </p>
@@ -701,10 +741,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797042"></script>
+<script async src="/js/app.js?v=1653321718258"></script>
 
 
-	<script async src="/js/search.js?v=1637339797042"></script>
+	<script async src="/js/search.js?v=1653321718258"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

@@ -28,12 +28,12 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://images.ptausercontent.com/b7e2ffa6-8819-436d-ad79-a41263abe914.jpg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797512">
+    <link rel="stylesheet" href="/css/style.css?v=1653321718843">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797512">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718843">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -58,7 +58,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -191,7 +191,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -219,11 +219,12 @@
       
 
       <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <span id="more"></span></h2><ul>
-<li>  小红想买些珠子做一串自己喜欢的珠串。卖珠子的摊主有很多串五颜六色的珠串，但是不肯把任何一串拆散了卖。于是小红要你帮忙判断一下，某串珠子里是否包含了全部自己想要的珠子？如果是，那么告诉她有多少多余的珠子；如果不是，那么告诉她缺了多少珠子。</li>
+<li><p>小红想买些珠子做一串自己喜欢的珠串。卖珠子的摊主有很多串五颜六色的珠串，但是不肯把任何一串拆散了卖。于是小红要你帮忙判断一下，某串珠子里是否包含了全部自己想要的珠子？如果是，那么告诉她有多少多余的珠子；如果不是，那么告诉她缺了多少珠子。</p>
+<p>为方便起见，我们用[0-9]、[a-z]、[A-Z]范围内的字符来表示颜色。例如在图1中，第3串是小红想做的珠串；那么第1串可以买，因为包含了全部她想要的珠子，还多了8颗不需要的珠子；第2串不能买，因为没有黑色珠子，并且少了一颗红色的珠子。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://images.ptausercontent.com/b7e2ffa6-8819-436d-ad79-a41263abe914.jpg" alt="figbuy.jpg" class="lazyload"></p>
+<p>图 1</p>
+</li>
 </ul>
-<p>  为方便起见，我们用[0-9]、[a-z]、[A-Z]范围内的字符来表示颜色。例如在图1中，第3串是小红想做的珠串；那么第1串可以买，因为包含了全部她想要的珠子，还多了8颗不需要的珠子；第2串不能买，因为没有黑色珠子，并且少了一颗红色的珠子。</p>
-<p>  <img data-fancybox="gallery" data-sizes="auto" data-src="https://images.ptausercontent.com/b7e2ffa6-8819-436d-ad79-a41263abe914.jpg" alt="figbuy.jpg" class="lazyload"></p>
-<p>  图 1</p>
 <h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
 <p>每个输入包含 1 个测试用例。每个测试用例分别在 2 行中先后给出摊主的珠串和小红想做的珠串，两串都不超过 1000 个珠子。 </p>
 </blockquote>
@@ -243,18 +244,17 @@
 <p>No 2</p>
 </blockquote>
 <h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li> 大概就是设置两个flag</li>
-<li> 如果店铺里有需要的珠子就使用removeCharAt(shop,j)把j索引位置的珠子删除</li>
-<li> removeCharAt为自己定义的方法截取索引前的所有和索引后的所有，再拼接在一起。</li>
-<li> 写博客时尝试用StringBuilder操作，效果一致</li>
-<li> 一旦isHave被标记为一次false则flag也为false，统计缺少的珠子</li>
-<li> flag为true输出删除完店铺珠子的数量</li>
-<li> false输出缺少珠子的计数值</li>
+<li>大概就是设置两个flag</li>
+<li>如果店铺里有需要的珠子就使用removeCharAt(shop,j)把j索引位置的珠子删除</li>
+<li>removeCharAt为自己定义的方法截取索引前的所有和索引后的所有，再拼接在一起。</li>
+<li>写博客时尝试用StringBuilder操作，效果一致</li>
+<li>一旦isHave被标记为一次false则flag也为false，统计缺少的珠子</li>
+<li>flag为true输出删除完店铺珠子的数量</li>
+<li>false输出缺少珠子的计数值</li>
 </ul>
 <hr>
 <hr>
 <figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs processing"><span class="hljs-keyword">import</span> java.io.<span class="hljs-keyword">BufferedReader</span>;<br><span class="hljs-keyword">import</span> java.io.IOException;<br><span class="hljs-keyword">import</span> java.io.InputStreamReader;<br><br><span class="hljs-keyword">public</span> class PAT_B1039 &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> main(<span class="hljs-keyword">String</span>[] args) <span class="hljs-keyword">throws</span> IOException &#123;<br>        <span class="hljs-keyword">BufferedReader</span> br = <span class="hljs-keyword">new</span> <span class="hljs-keyword">BufferedReader</span>(<span class="hljs-keyword">new</span> InputStreamReader(System.in));<br>        <span class="hljs-keyword">String</span> shop = br.readLine();<br>        <span class="hljs-keyword">String</span> want = br.readLine();<br>        <span class="hljs-built_in">int</span> count = <span class="hljs-number">0</span>;<br>        <span class="hljs-built_in">boolean</span> flag =<span class="hljs-keyword">true</span>;<br>        StringBuilder sb = <span class="hljs-keyword">new</span> StringBuilder();<br>        sb.<span class="hljs-built_in">append</span>(shop);<br>        <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt;want.length() ; i++) &#123;<br>            <span class="hljs-built_in">boolean</span> isHave = <span class="hljs-keyword">false</span>;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> j = <span class="hljs-number">0</span>; j &lt; sb.length() ; j++) &#123;<br>                isHave = <span class="hljs-keyword">false</span>;<br>                <span class="hljs-keyword">if</span> (want.charAt(i)==sb.charAt(j))&#123;<br><span class="hljs-comment">//                    shop = removeCharAt(shop,j);</span><br>                    sb.deleteCharAt(j);<br>                    isHave = <span class="hljs-keyword">true</span>;<br>                    <span class="hljs-keyword">break</span>;<br>                &#125;<br>            &#125;<br>            <span class="hljs-keyword">if</span> (isHave ==<span class="hljs-keyword">false</span>)&#123;<br>                flag = <span class="hljs-keyword">false</span>;<br>                count++;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">if</span> (flag)&#123;<br>            System.out.<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Yes &quot;</span>);<br>            System.out.<span class="hljs-built_in">print</span>(sb.length());<br>        &#125;<span class="hljs-keyword">else</span> &#123;<br>            System.out.<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;No &quot;</span>);<br>            System.out.<span class="hljs-built_in">println</span>(count);<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">String</span> removeCharAt(<span class="hljs-keyword">String</span> s, <span class="hljs-built_in">int</span> pos) &#123;<br>        <span class="hljs-keyword">return</span> s.substring(<span class="hljs-number">0</span>, pos) + s.substring(pos + <span class="hljs-number">1</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 
   </article>
 
@@ -340,10 +340,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797518"></script>
+<script async src="/js/app.js?v=1653321718849"></script>
 
 
-	<script async src="/js/search.js?v=1637339797518"></script>
+	<script async src="/js/search.js?v=1653321718849"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

@@ -26,12 +26,12 @@
 <meta property="article:tag" content="try&#x2F;catch">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797472">
+    <link rel="stylesheet" href="/css/style.css?v=1653321718808">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797472">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718808">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -56,7 +56,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -189,7 +189,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -217,16 +217,15 @@
       
 
       <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <span id="more"></span></h2><ul>
-<li><p> 火星人是以 13 进制计数的：</p>
-</li>
-<li><p>地球人的 0 被火星人称为 tret。</p>
-</li>
-<li><p>地球人数字 1 到 12 的火星文分别为：jan, feb, mar, apr, may, jun, jly, aug, sep, oct, nov, dec。</p>
-</li>
-<li><p>火星人将进位以后的 12 个高位数字分别称为：tam, hel, maa, huh, tou, kes, hei, elo, syy, lok, mer, jou。</p>
+<li><p>火星人是以 13 进制计数的：</p>
+<ul>
+<li>地球人的 0 被火星人称为 tret。</li>
+<li>地球人数字 1 到 12 的火星文分别为：jan, feb, mar, apr, may, jun, jly, aug, sep, oct, nov, dec。</li>
+<li>火星人将进位以后的 12 个高位数字分别称为：tam, hel, maa, huh, tou, kes, hei, elo, syy, lok, mer, jou。</li>
+</ul>
+<p>例如地球人的数字 <code>29</code> 翻译成火星文就是 <code>hel mar</code>；而火星文 <code>elo nov</code> 对应地球数字 <code>115</code>。为了方便交流，请你编写程序实现地球和火星数字之间的互译。</p>
 </li>
 </ul>
-<p>  例如地球人的数字 <code>29</code> 翻译成火星文就是 <code>hel mar</code>；而火星文 <code>elo nov</code> 对应地球数字 <code>115</code>。为了方便交流，请你编写程序实现地球和火星数字之间的互译。</p>
 <h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
 <p>输入第一行给出一个正整数 <em>N</em>（&lt;100），随后 <em>N</em> 行，每行给出一个 [0, 169) 区间内的数字 —— 或者是地球文，或者是火星文。 </p>
 </blockquote>
@@ -240,17 +239,16 @@
 <p>hel mar<br>may<br>115<br>13</p>
 </blockquote>
 <h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li> 题目只输入 [0, 169) 区间内的数字，也就是高位数字不会再进了</li>
-<li> 拿到数字后先判断是地球数字还是火星数字，这里用Integer.parseInt()强转用trycatch捕捉错误</li>
-<li> 如果出现错误代表不是字符串数字也就是火星数字</li>
-<li> 如果是地球数字，需要特殊判断两种情况数字没有进位，直接输出个位。</li>
-<li> 第二种是30，需要输出一个高位和代表零的个位数</li>
-<li> 如果是火星转地球，判断他等于数组中的哪个值，sum增加对应值即可。</li>
+<li>题目只输入 [0, 169) 区间内的数字，也就是高位数字不会再进了</li>
+<li>拿到数字后先判断是地球数字还是火星数字，这里用Integer.parseInt()强转用trycatch捕捉错误</li>
+<li>如果出现错误代表不是字符串数字也就是火星数字</li>
+<li>如果是地球数字，需要特殊判断两种情况数字没有进位，直接输出个位。</li>
+<li>第二种是30，需要输出一个高位和代表零的个位数</li>
+<li>如果是火星转地球，判断他等于数组中的哪个值，sum增加对应值即可。</li>
 </ul>
 <hr>
 <hr>
 <figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><code class="hljs processing"><span class="hljs-keyword">import</span> java.io.<span class="hljs-keyword">BufferedReader</span>;<br><span class="hljs-keyword">import</span> java.io.IOException;<br><span class="hljs-keyword">import</span> java.io.InputStreamReader;<br><span class="hljs-keyword">import</span> java.util.ArrayList;<br><br><span class="hljs-keyword">public</span> class PAT_B1044 &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> main(<span class="hljs-keyword">String</span>[] args) <span class="hljs-keyword">throws</span> IOException &#123;<br>        <span class="hljs-keyword">BufferedReader</span> br = <span class="hljs-keyword">new</span> <span class="hljs-keyword">BufferedReader</span>(<span class="hljs-keyword">new</span> InputStreamReader(System.in));<br>        <span class="hljs-built_in">int</span> n = Integer.parseInt(br.readLine());<br>        <span class="hljs-keyword">String</span>[] digit = &#123;<span class="hljs-string">&quot;tret&quot;</span>,<span class="hljs-string">&quot;jan&quot;</span>, <span class="hljs-string">&quot;feb&quot;</span>, <span class="hljs-string">&quot;mar&quot;</span>, <span class="hljs-string">&quot;apr&quot;</span>, <span class="hljs-string">&quot;may&quot;</span>, <span class="hljs-string">&quot;jun&quot;</span>, <span class="hljs-string">&quot;jly&quot;</span>, <span class="hljs-string">&quot;aug&quot;</span>, <span class="hljs-string">&quot;sep&quot;</span>, <span class="hljs-string">&quot;oct&quot;</span>, <span class="hljs-string">&quot;nov&quot;</span>, <span class="hljs-string">&quot;dec&quot;</span>&#125;;<br>        <span class="hljs-keyword">String</span>[] tens = &#123;<span class="hljs-string">&quot; &quot;</span>,<span class="hljs-string">&quot;tam&quot;</span>, <span class="hljs-string">&quot;hel&quot;</span>, <span class="hljs-string">&quot;maa&quot;</span>, <span class="hljs-string">&quot;huh&quot;</span>, <span class="hljs-string">&quot;tou&quot;</span>,<span class="hljs-string">&quot;kes&quot;</span>, <span class="hljs-string">&quot;hei&quot;</span>, <span class="hljs-string">&quot;elo&quot;</span>, <span class="hljs-string">&quot;syy&quot;</span>, <span class="hljs-string">&quot;lok&quot;</span>, <span class="hljs-string">&quot;mer&quot;</span>, <span class="hljs-string">&quot;jou&quot;</span>&#125;;<br>        ArrayList&lt;<span class="hljs-keyword">String</span>&gt; out = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>        <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt;n ; i++) &#123;<br>            <span class="hljs-keyword">String</span> temp = br.readLine();<br>            <span class="hljs-keyword">if</span> (isInteger(temp))&#123;<br>                <span class="hljs-built_in">int</span> num = Integer.parseInt(temp);<br>                <span class="hljs-keyword">if</span> (num&lt;=<span class="hljs-number">12</span>)&#123;<br>                    out.<span class="hljs-built_in">add</span>(digit[num]);<br>                    <span class="hljs-keyword">continue</span>;<br>                &#125;<br>                <span class="hljs-keyword">if</span>(num%<span class="hljs-number">13</span>==<span class="hljs-number">0</span>)&#123;<br>                    out.<span class="hljs-built_in">add</span>(tens[num/<span class="hljs-number">13</span>]);<span class="hljs-comment">//前错误点，不输出零</span><br>                    <span class="hljs-keyword">continue</span>;<br>                &#125;<br>                out.<span class="hljs-built_in">add</span>(tens[num/<span class="hljs-number">13</span>]+<span class="hljs-string">&quot; &quot;</span>+digit[num%<span class="hljs-number">13</span>]);<br>            &#125;<span class="hljs-keyword">else</span> &#123;<br>                <span class="hljs-keyword">String</span>[] marsNum = temp.<span class="hljs-built_in">split</span>(<span class="hljs-string">&quot; &quot;</span>);<br>                <span class="hljs-built_in">int</span> sum = <span class="hljs-number">0</span>;<br>                <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> j = <span class="hljs-number">0</span>; j &lt;marsNum.length ; j++) &#123;<br>                    <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> k = <span class="hljs-number">0</span>; k &lt;=<span class="hljs-number">12</span> ; k++) &#123;<br>                         <span class="hljs-keyword">if</span> (marsNum[j].equals(digit[k]))&#123;<br>                             sum += k;<br>                         &#125;<br>                         <span class="hljs-keyword">if</span> (marsNum[j].equals(tens[k]))&#123;<br>                             sum += (k)*<span class="hljs-number">13</span>;<br>                         &#125;<br>                    &#125;<br>                &#125;<br>                out.<span class="hljs-built_in">add</span>(<span class="hljs-keyword">String</span>.valueOf(sum));<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">String</span> s : out) &#123;<br>            System.out.<span class="hljs-built_in">println</span>(s);<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-built_in">boolean</span> isInteger(<span class="hljs-keyword">String</span> value) &#123;<br>        <span class="hljs-keyword">try</span> &#123;<br>            Integer.parseInt(value);<br>            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;<br>        &#125; <span class="hljs-keyword">catch</span> (NumberFormatException e) &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 
   </article>
 
@@ -336,10 +334,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797478"></script>
+<script async src="/js/app.js?v=1653321718812"></script>
 
 
-	<script async src="/js/search.js?v=1637339797478"></script>
+	<script async src="/js/search.js?v=1653321718812"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

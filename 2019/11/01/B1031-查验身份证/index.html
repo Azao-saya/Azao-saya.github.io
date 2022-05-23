@@ -28,12 +28,12 @@
 <meta property="article:tag" content="偷学柳神的帅气代码">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797570">
+    <link rel="stylesheet" href="/css/style.css?v=1653321718915">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797570">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718915">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -58,7 +58,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -191,7 +191,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -229,8 +229,7 @@
 </ul>
 <h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
 <pre><code>输入第一行给出正整数*N*（≤100）是输入的身份证号码的个数。随后*N*行，每行给出1个18位身份证号码。 
-</code></pre>
-</blockquote>
+</code></pre></blockquote>
 <h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
 <p>   按照输入的顺序每行输出1个有问题的身份证号码。这里并不检验前17位是否合理，只检查前17位是否全为数字且最后1位校验码计算准确。如果所有号码都正常，则输出<code>All passed</code>。 </p>
 </blockquote>
@@ -247,14 +246,13 @@
 <p>All passed</p>
 </blockquote>
 <h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li> 对权重这个词的概念是占了百分之几，没转过弯题目想了很久</li>
-<li> 读懂了就挺简单一道题，前17位每位数字乘以权重想加。</li>
-<li> 对这个总和取模11，所以得到的数只会是0到10.</li>
-<li> 0到10的Z每个数对应了M的一个值，如果第17位校验码等于这个M值</li>
-<li> 那么号码就是正常的。</li>
+<li>对权重这个词的概念是占了百分之几，没转过弯题目想了很久</li>
+<li>读懂了就挺简单一道题，前17位每位数字乘以权重想加。</li>
+<li>对这个总和取模11，所以得到的数只会是0到10.</li>
+<li>0到10的Z每个数对应了M的一个值，如果第17位校验码等于这个M值</li>
+<li>那么号码就是正常的。</li>
 </ul>
 <figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">import</span> java.io.BufferedReader;<br><span class="hljs-keyword">import</span> java.io.IOException;<br><span class="hljs-keyword">import</span> java.io.InputStreamReader;<br><br><span class="hljs-built_in">public</span> <span class="hljs-keyword">class</span> PAT_B1031 &#123;<br>    <span class="hljs-built_in">public</span> static <span class="hljs-type">void</span> main(String[] args) throws IOException &#123;<br>        BufferedReader br = <span class="hljs-built_in">new</span> BufferedReader(<span class="hljs-built_in">new</span> InputStreamReader(<span class="hljs-keyword">System</span>.<span class="hljs-keyword">in</span>));<br>        <span class="hljs-type">int</span> n = <span class="hljs-type">Integer</span>.parseInt(br.readLine());<br>        <span class="hljs-type">boolean</span> flag = <span class="hljs-keyword">true</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt;n ; i++) &#123;<br>            String <span class="hljs-keyword">temp</span> = br.readLine();<br>            <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">check</span>(<span class="hljs-keyword">temp</span>))&#123;<br>                flag = <span class="hljs-keyword">false</span>;<br>                <span class="hljs-keyword">System</span>.<span class="hljs-keyword">out</span>.println(<span class="hljs-keyword">temp</span>);<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">if</span>(flag)&#123;<br>            <span class="hljs-keyword">System</span>.<span class="hljs-keyword">out</span>.println(&quot;All passed&quot;);<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-built_in">public</span> static <span class="hljs-type">boolean</span> <span class="hljs-keyword">check</span>(String <span class="hljs-keyword">temp</span>)&#123;<br>        <span class="hljs-type">int</span>[] weight = &#123;<span class="hljs-number">7</span>,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>,<span class="hljs-number">5</span>,<span class="hljs-number">8</span>,<span class="hljs-number">4</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">6</span>,<span class="hljs-number">3</span>,<span class="hljs-number">7</span>,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>,<span class="hljs-number">5</span>,<span class="hljs-number">8</span>,<span class="hljs-number">4</span>,<span class="hljs-number">2</span>&#125;; //权重的意思为每个数字要乘以多少，在求和里占多少的比例。<br>        <span class="hljs-type">int</span> sum = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt;<span class="hljs-keyword">temp</span>.length()<span class="hljs-number">-1</span> ; i++) &#123;<br>            sum += weight[i]*(<span class="hljs-keyword">temp</span>.charAt(i)-<span class="hljs-string">&#x27;0&#x27;</span>); //减<span class="hljs-string">&#x27;0&#x27;</span>转换为<span class="hljs-type">int</span>值，因为有X的存在不能直接使用<span class="hljs-type">Integer</span>.parseInt<br>        &#125;<br>        <span class="hljs-type">char</span> nowM = <span class="hljs-keyword">temp</span>.charAt(<span class="hljs-number">17</span>);<br>        <span class="hljs-type">char</span>[] m = &#123;<br>                <span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;0&#x27;</span>, <span class="hljs-string">&#x27;X&#x27;</span>, <span class="hljs-string">&#x27;9&#x27;</span>, <span class="hljs-string">&#x27;8&#x27;</span>, <span class="hljs-string">&#x27;7&#x27;</span>, <span class="hljs-string">&#x27;6&#x27;</span>, <span class="hljs-string">&#x27;5&#x27;</span>, <span class="hljs-string">&#x27;4&#x27;</span>, <span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;2&#x27;</span>   //得到的z意为m数组的索引，z =<span class="hljs-number">3</span> 意为m[<span class="hljs-number">3</span>]等于<span class="hljs-string">&#x27;9&#x27;</span><br>        &#125;;<br>        <span class="hljs-keyword">if</span> (nowM == m[sum % <span class="hljs-number">11</span>])&#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;<br>        &#125;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 
   </article>
 
@@ -340,10 +338,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797575"></script>
+<script async src="/js/app.js?v=1653321718921"></script>
 
 
-	<script async src="/js/search.js?v=1637339797575"></script>
+	<script async src="/js/search.js?v=1653321718921"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

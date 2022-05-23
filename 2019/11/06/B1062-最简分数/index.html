@@ -25,12 +25,12 @@
 <meta property="article:author" content="A_zao">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797356">
+    <link rel="stylesheet" href="/css/style.css?v=1653321718657">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797356">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718657">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -55,7 +55,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -188,7 +188,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -238,7 +238,6 @@
 <hr>
 <hr>
 <figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-keyword">import</span> java.io.BufferedReader;<br><span class="hljs-keyword">import</span> java.io.IOException;<br><span class="hljs-keyword">import</span> java.io.InputStreamReader;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PAT_B1062</span> &#123;</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">String</span>[] args)</span> throws IOException </span>&#123;<br>        BufferedReader br = <span class="hljs-keyword">new</span> <span class="hljs-built_in">BufferedReader</span>(<span class="hljs-keyword">new</span> <span class="hljs-built_in">InputStreamReader</span>(System.in));<br>        <span class="hljs-keyword">String</span>[] temp = br.<span class="hljs-built_in">readLine</span>().<span class="hljs-built_in">split</span>(<span class="hljs-string">&quot; &quot;</span>);<br>        br.<span class="hljs-built_in">close</span>();<br>        <span class="hljs-keyword">String</span>[] temp2 = temp[<span class="hljs-number">0</span>].<span class="hljs-built_in">split</span>(<span class="hljs-string">&quot;/&quot;</span>);<br>        <span class="hljs-keyword">int</span> n1,m1,n2,m2,k;<br>        n1 = Integer.<span class="hljs-built_in">parseInt</span>(temp2[<span class="hljs-number">0</span>]);<br>        m1 = Integer.<span class="hljs-built_in">parseInt</span>(temp2[<span class="hljs-number">1</span>]);<br>        temp2 = temp[<span class="hljs-number">1</span>].<span class="hljs-built_in">split</span>(<span class="hljs-string">&quot;/&quot;</span>);<br>        n2 = Integer.<span class="hljs-built_in">parseInt</span>(temp2[<span class="hljs-number">0</span>]);<br>        m2 = Integer.<span class="hljs-built_in">parseInt</span>(temp2[<span class="hljs-number">1</span>]);<br>        k = Integer.<span class="hljs-built_in">parseInt</span>(temp[<span class="hljs-number">2</span>]);<br><br>        <span class="hljs-keyword">int</span> min, max;										<span class="hljs-comment">// 开区间的范围</span><br>        <span class="hljs-keyword">if</span> (n1 * m2 &lt; n2 * m1) &#123;							<span class="hljs-comment">// 分数1比分数2小</span><br>            min = k * n1 / m1 + <span class="hljs-number">1</span>;							<span class="hljs-comment">// 最小值</span><br>            max = k * n2 / m2;								<span class="hljs-comment">// 最大值</span><br>            <span class="hljs-keyword">if</span> (k * n2 == max * m2) &#123;						<span class="hljs-comment">// 最大值是等于右边界</span><br>                max = max - <span class="hljs-number">1</span>;								<span class="hljs-comment">// 开区间</span><br>            &#125;<br>        &#125; <span class="hljs-keyword">else</span> &#123;											<span class="hljs-comment">// 分数1比分数2大</span><br>            min = k * n2 / m2 + <span class="hljs-number">1</span>;<br>            max = k * n1 / m1;<br>            <span class="hljs-keyword">if</span> (k * n1 == max * m1) &#123;<br>                max = max - <span class="hljs-number">1</span>;<br>            &#125;<br>        &#125;<br><br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = min, count = <span class="hljs-number">0</span>; i &lt;= max; ++i) &#123;<br>            <span class="hljs-keyword">if</span> (<span class="hljs-built_in">prime</span>(k, i)) &#123;							<span class="hljs-comment">// 互质</span><br>                <span class="hljs-keyword">if</span> (count &gt; <span class="hljs-number">0</span>) &#123;							<span class="hljs-comment">// 不是第一个分数</span><br>                    System.out.<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot; &quot;</span>);					<span class="hljs-comment">// 分数前面输出空格</span><br>                &#125;<br>                System.out.<span class="hljs-built_in">print</span>(i + <span class="hljs-string">&quot;/&quot;</span> + k);<br>                ++count;<br>            &#125;<br>        &#125;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">prime</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> b)</span> </span>&#123;<br>        <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) &#123;<br>            a = a % b;<br>            <span class="hljs-keyword">if</span>(a == <span class="hljs-number">0</span>)&#123;<br>                <span class="hljs-keyword">return</span> b==<span class="hljs-number">1</span> ? <span class="hljs-literal">true</span>:<span class="hljs-literal">false</span>;<br>            &#125;<br>            b = b % a;<br>            <span class="hljs-keyword">if</span> (b == <span class="hljs-number">0</span>)&#123;<br>                <span class="hljs-keyword">return</span> a == <span class="hljs-number">1</span> ? <span class="hljs-literal">true</span>:<span class="hljs-literal">false</span>;<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 
   </article>
 
@@ -322,10 +321,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797360"></script>
+<script async src="/js/app.js?v=1653321718668"></script>
 
 
-	<script async src="/js/search.js?v=1637339797360"></script>
+	<script async src="/js/search.js?v=1653321718668"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

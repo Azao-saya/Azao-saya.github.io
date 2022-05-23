@@ -25,12 +25,12 @@
 <meta property="article:author" content="A_zao">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797691">
+    <link rel="stylesheet" href="/css/style.css?v=1653321719062">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797691">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321719062">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -55,7 +55,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -188,7 +188,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -216,7 +216,7 @@
       
 
       <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <span id="more"></span></h2><ul>
-<li> 令 <em>P**i</em> 表示第 <em>i</em> 个素数。现任给两个正整数 <em>M</em>≤<em>N</em>≤104，请输出 <em>P**M</em> 到 <em>P**N</em> 的所有素数。 </li>
+<li>令 <em>P**i</em> 表示第 <em>i</em> 个素数。现任给两个正整数 <em>M</em>≤<em>N</em>≤104，请输出 <em>P**M</em> 到 <em>P**N</em> 的所有素数。 </li>
 </ul>
 <h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
 <p>   输入在一行中给出 <em>M</em> 和 <em>N</em>，其间以空格分隔。 </p>
@@ -239,7 +239,6 @@
 <hr>
 <hr>
 <figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs gradle"><span class="hljs-keyword">import</span> java.util.Scanner;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> PAT_B1013 &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> main(String[] args) &#123;<br>        Scanner sc = <span class="hljs-keyword">new</span> Scanner(System.in);<br>        <span class="hljs-keyword">int</span>[] prime = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">10001</span>];<br>        <span class="hljs-keyword">int</span> primeCount = <span class="hljs-number">2</span>;<br>        prime[<span class="hljs-number">1</span>] = <span class="hljs-number">2</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">3</span>; primeCount&lt;prime.length  ; i++) &#123; <span class="hljs-comment">//测试点4会输入M N 为10000的情况，需要把数组完全填充。</span><br>            <span class="hljs-keyword">boolean</span> isPrime = <span class="hljs-keyword">true</span>;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">2</span>; j &lt;Math.sqrt(i)+<span class="hljs-number">1</span> ; j++) &#123;<br>                <span class="hljs-keyword">if</span> (i % j ==<span class="hljs-number">0</span>)&#123;<br>                    isPrime = <span class="hljs-keyword">false</span>;<br>                    <span class="hljs-keyword">break</span>;<br>                &#125;<br>            &#125;<br>            <span class="hljs-keyword">if</span> (isPrime)&#123;<br>                prime[primeCount] = i;<br>                primeCount++;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">int</span> m = sc.nextInt();<br>        <span class="hljs-keyword">int</span> n = sc.nextInt();<br>        <span class="hljs-keyword">int</span> <span class="hljs-keyword">count</span> = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = m; i &lt;=n ; i++) &#123;<br>            <span class="hljs-keyword">if</span> (<span class="hljs-keyword">count</span> == <span class="hljs-number">9</span> || i ==n)&#123;<br>                System.out.<span class="hljs-keyword">print</span>(prime[i]);<br>                System.out.<span class="hljs-keyword">println</span>(<span class="hljs-string">&quot;&quot;</span>);<br>                <span class="hljs-keyword">count</span> =<span class="hljs-number">0</span>;<br>                <span class="hljs-keyword">continue</span>;<br>            &#125;<br>            System.out.<span class="hljs-keyword">print</span>(prime[i]+<span class="hljs-string">&quot; &quot;</span>);<br>            <span class="hljs-keyword">count</span>++;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 
   </article>
 
@@ -323,10 +322,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797697"></script>
+<script async src="/js/app.js?v=1653321719071"></script>
 
 
-	<script async src="/js/search.js?v=1637339797697"></script>
+	<script async src="/js/search.js?v=1653321719071"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

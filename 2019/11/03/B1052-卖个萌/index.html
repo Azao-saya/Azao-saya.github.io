@@ -27,12 +27,12 @@
 <meta property="article:tag" content="未AC题目">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797416">
+    <link rel="stylesheet" href="/css/style.css?v=1653321718738">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797416">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718738">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -57,7 +57,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -190,7 +190,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -219,7 +219,6 @@
 
       <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <span id="more"></span></h2><p>萌萌哒表情符号通常由“手”、“眼”、“口”三个主要部分组成。简单起见，我们假设一个表情符号是按下列格式输出的：</p>
 <figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs clojure">[左手]([左眼][口][右眼])[右手]<br></code></pre></td></tr></table></figure>
-
 <p>现给出可选用的符号集合，请你按用户的要求输出表情。</p>
 <h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
 <p>输入首先在前三行顺序对应给出手、眼、口的可选符号集。每个符号括在一对方括号 <code>[]</code>内。题目保证每个集合都至少有一个符号，并不超过 10 个符号；每个符号包含 1 到 4 个非空字符。</p>
@@ -232,17 +231,16 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs in">[╮][╭][o][~\][/~]  [&lt;][&gt;]<br> [╯][╰][^][-][=][&gt;][&lt;][@][⊙]<br>[Д][▽][_][ε][^]  ...<br>4<br>1 1 2 2 2<br>6 8 1 5 5<br>3 3 4 3 3<br>2 10 3 9 3<br></code></pre></td></tr></table></figure>
 </blockquote>
 <h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><blockquote>
-<p>╮(╯▽╰)╭<br>&lt;(@Д=)/~<br>o(^ε^)o<br>Are you kidding me? @/@</p>
+<p>╮(╯▽╰)╭<br>&lt;(@Д=)/~<br>o(^ε^)o<br>Are you kidding me? @\/@</p>
 </blockquote>
 <h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li> 只得了4分</li>
-<li> 这题柳神的代码也是错误的网上也没别人的ac代码，想了一下可能是一些转义字符不能通过。</li>
-<li> 试了一下之后发现也是可以的，莫得办法了。</li>
+<li>只得了4分</li>
+<li>这题柳神的代码也是错误的网上也没别人的ac代码，想了一下可能是一些转义字符不能通过。</li>
+<li>试了一下之后发现也是可以的，莫得办法了。</li>
 </ul>
 <hr>
 <hr>
 <figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><code class="hljs processing"><span class="hljs-keyword">import</span> java.io.<span class="hljs-keyword">BufferedReader</span>;<br><span class="hljs-keyword">import</span> java.io.IOException;<br><span class="hljs-keyword">import</span> java.io.InputStreamReader;<br><span class="hljs-keyword">import</span> java.util.ArrayList;<br><span class="hljs-keyword">import</span> java.util.List;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * [左手]([左眼][口][右眼])[右手]</span><br><span class="hljs-comment"> * 前三行顺序对应给出手、眼、口的可选符号集</span><br><span class="hljs-comment"> * a1 b1 c b2 a2</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> class PAT_B1052 &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> main(<span class="hljs-keyword">String</span>[] args) <span class="hljs-keyword">throws</span> IOException &#123; <span class="hljs-comment">//测试点0,1错误未找到网上java解法</span><br>        <span class="hljs-keyword">BufferedReader</span> br = <span class="hljs-keyword">new</span> <span class="hljs-keyword">BufferedReader</span>(<span class="hljs-keyword">new</span> InputStreamReader(System.in));<br>        List&lt;<span class="hljs-keyword">String</span>&gt; hand = parse(br.readLine());<br>        List&lt;<span class="hljs-keyword">String</span>&gt; eye = parse(br.readLine());<br>        List&lt;<span class="hljs-keyword">String</span>&gt; mouth = parse(br.readLine());<br>        <span class="hljs-built_in">int</span> n = Integer.parseInt(br.readLine());<br><br>        <span class="hljs-keyword">String</span>[] datas=<span class="hljs-keyword">new</span> <span class="hljs-keyword">String</span>[n];<br>        <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt;n ; i++) &#123; <span class="hljs-comment">//不这么做会直接显示内容</span><br>            datas[i] = br.readLine();<br>        &#125;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt;n ; i++) &#123;<br>            <span class="hljs-keyword">String</span>[] temp =datas[i].<span class="hljs-built_in">split</span>(<span class="hljs-string">&quot; &quot;</span>);<br>            <span class="hljs-built_in">int</span>[] num = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>[<span class="hljs-number">5</span>];<br>            <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> j = <span class="hljs-number">0</span>; j &lt;<span class="hljs-number">5</span> ; j++) &#123;<br>                num[j] = Integer.parseInt(temp[j]);<br>            &#125;<br>            <span class="hljs-keyword">try</span> &#123;<br>                System.out.printf(<span class="hljs-string">&quot;%s(%s%s%s)%s&quot;</span>,hand.<span class="hljs-built_in">get</span>(num[<span class="hljs-number">0</span>]),eye.<span class="hljs-built_in">get</span>(num[<span class="hljs-number">1</span>]),mouth.<span class="hljs-built_in">get</span>(num[<span class="hljs-number">2</span>]),eye.<span class="hljs-built_in">get</span>(num[<span class="hljs-number">3</span>]),hand.<span class="hljs-built_in">get</span>(num[<span class="hljs-number">4</span>]));<br>            &#125;<span class="hljs-keyword">catch</span>(Exception e) &#123;<br>                System.out.<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Are you kidding me? @\\/@&quot;</span>);<br>            &#125;<br>            <span class="hljs-keyword">if</span>(i!=n<span class="hljs-number">-1</span>) &#123;<br>                System.out.<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\n&quot;</span>);<br>            &#125;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> List&lt;<span class="hljs-keyword">String</span>&gt; parse(<span class="hljs-keyword">String</span> s) &#123;<br>        <span class="hljs-built_in">boolean</span> isStart = <span class="hljs-keyword">false</span>;<br>        List&lt;<span class="hljs-keyword">String</span>&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>        <span class="hljs-keyword">String</span> temp = <span class="hljs-string">&quot;&quot;</span>;<br>        list.<span class="hljs-built_in">add</span>(temp); <span class="hljs-comment">//从1开始</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; s.length(); i++) &#123;<br>            <span class="hljs-keyword">if</span> (s.charAt(i) == <span class="hljs-string">&#x27;[&#x27;</span>) &#123;<br>                isStart = <span class="hljs-keyword">true</span>;<br>            &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (s.charAt(i) == <span class="hljs-string">&#x27;]&#x27;</span>) &#123;<br>                isStart = <span class="hljs-keyword">false</span>;<br>                list.<span class="hljs-built_in">add</span>(temp);<br>                temp = <span class="hljs-string">&quot;&quot;</span>;<br>            &#125; <span class="hljs-keyword">else</span> &#123;<br>                <span class="hljs-keyword">if</span> (isStart) &#123;<br>                    temp += s.charAt(i);<br>                &#125;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> list;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 
   </article>
 
@@ -328,10 +326,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797422"></script>
+<script async src="/js/app.js?v=1653321718743"></script>
 
 
-	<script async src="/js/search.js?v=1637339797422"></script>
+	<script async src="/js/search.js?v=1653321718743"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

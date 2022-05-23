@@ -25,12 +25,12 @@
 <meta property="article:author" content="A_zao">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797754">
+    <link rel="stylesheet" href="/css/style.css?v=1653321719139">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797754">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321719139">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -55,7 +55,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -188,7 +188,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -239,16 +239,12 @@
 </blockquote>
 <h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子:"></a>输出例子:</h3><blockquote>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs out">YES<br>YES<br>YES<br>YES<br>NO<br>NO<br>NO<br>NO<br></code></pre></td></tr></table></figure>
-
 <p>解题思路</p>
-</blockquote>
-<blockquote>
 <p>通过看别人的代码了解了正则表达式这个概念，题目很容易就解出来了</p>
 <p>+号为一个或多个，*号为零个或多个</p>
 <p>条件123都是在满足前置条件的扩展，一开始也是没转过弯来</p>
 </blockquote>
 <figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-keyword">import</span> java.io.BufferedInputStream;<br><span class="hljs-keyword">import</span> java.util.Scanner;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PAT_B1003</span> &#123;</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">String</span>[] args)</span> </span>&#123;<br>        Scanner sc = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Scanner</span>(<span class="hljs-keyword">new</span> <span class="hljs-built_in">BufferedInputStream</span>(System.in));<br>        <span class="hljs-keyword">int</span> n = Integer.<span class="hljs-built_in">parseInt</span>(sc.<span class="hljs-built_in">nextLine</span>());<br>        <span class="hljs-keyword">String</span>[] str = <span class="hljs-keyword">new</span> <span class="hljs-keyword">String</span>[<span class="hljs-number">11</span>];<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) &#123;<br>            str[i] = sc.<span class="hljs-built_in">next</span>();<br>        &#125;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">String</span> s : str) &#123;<br>            <span class="hljs-built_in">judge</span>(s);<br>        &#125;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">judge</span><span class="hljs-params">(<span class="hljs-keyword">String</span> s)</span> </span>&#123;<br>        <span class="hljs-keyword">String</span> pattern = <span class="hljs-string">&quot;A*PA+TA*&quot;</span>;<br>        <span class="hljs-keyword">String</span> pattern1 = <span class="hljs-string">&quot;PA+T&quot;</span>;<br>        <span class="hljs-keyword">if</span> (s.<span class="hljs-built_in">matches</span>(pattern)) &#123;<br>            <span class="hljs-keyword">if</span> (s.<span class="hljs-built_in">matches</span>(pattern1)) &#123;<br>                System.out.<span class="hljs-built_in">println</span>(<span class="hljs-string">&quot;YES&quot;</span>);<br>            &#125; <span class="hljs-keyword">else</span> &#123;<br>                <span class="hljs-keyword">String</span> temp[] = s.<span class="hljs-built_in">split</span>(<span class="hljs-string">&quot;P|T&quot;</span>);<br>                <span class="hljs-keyword">int</span> aLength = temp[<span class="hljs-number">0</span>].<span class="hljs-built_in">length</span>();<br>                <span class="hljs-keyword">int</span> bLength = temp[<span class="hljs-number">1</span>].<span class="hljs-built_in">length</span>();<br>                <span class="hljs-keyword">int</span> cLength = temp[<span class="hljs-number">2</span>].<span class="hljs-built_in">length</span>();<br>                <span class="hljs-keyword">if</span> ((cLength - aLength) / aLength == (bLength - <span class="hljs-number">1</span>)) &#123;<br>                    System.out.<span class="hljs-built_in">println</span>(<span class="hljs-string">&quot;YES&quot;</span>);<br>                &#125; <span class="hljs-keyword">else</span> &#123;<br>                    System.out.<span class="hljs-built_in">println</span>(<span class="hljs-string">&quot;NO&quot;</span>);<br>                &#125;<br><br>            &#125;<br>        &#125; <span class="hljs-keyword">else</span> &#123;<br>            System.out.<span class="hljs-built_in">println</span>(<span class="hljs-string">&quot;NO&quot;</span>);<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 
   </article>
 
@@ -332,10 +328,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797761"></script>
+<script async src="/js/app.js?v=1653321719144"></script>
 
 
-	<script async src="/js/search.js?v=1637339797761"></script>
+	<script async src="/js/search.js?v=1653321719144"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

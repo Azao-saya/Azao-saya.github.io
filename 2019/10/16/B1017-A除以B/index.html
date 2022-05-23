@@ -26,12 +26,12 @@
 <meta property="article:tag" content="BigInteger">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797656">
+    <link rel="stylesheet" href="/css/style.css?v=1653321719030">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797656">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321719030">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -56,7 +56,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -189,7 +189,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -217,7 +217,7 @@
       
 
       <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <span id="more"></span></h2><ul>
-<li> 本题要求计算 <em>A</em>/<em>B</em>，其中 <em>A</em> 是不超过 1000 位的正整数，<em>B</em> 是 1 位正整数。你需要输出商数 <em>Q</em> 和余数 <em>R</em>，使得 <em>A</em>=<em>B</em>×<em>Q</em>+<em>R</em> 成立。 </li>
+<li>本题要求计算 <em>A</em>/<em>B</em>，其中 <em>A</em> 是不超过 1000 位的正整数，<em>B</em> 是 1 位正整数。你需要输出商数 <em>Q</em> 和余数 <em>R</em>，使得 <em>A</em>=<em>B</em>×<em>Q</em>+<em>R</em> 成立。 </li>
 </ul>
 <h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
 <p>   输入在一行中依次给出 <em>A</em> 和 <em>B</em>，中间以 1 空格分隔。 </p>
@@ -232,13 +232,12 @@
 <p>17636684150141093474 3</p>
 </blockquote>
 <h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li> 这题目估计不是出给java的，c和c++处理起来应该会麻烦一点</li>
-<li> 使用BigInteger能够直接进行计算</li>
+<li>这题目估计不是出给java的，c和c++处理起来应该会麻烦一点</li>
+<li>使用BigInteger能够直接进行计算</li>
 </ul>
 <hr>
 <hr>
 <figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs processing"><span class="hljs-keyword">import</span> java.io.*;<br><span class="hljs-keyword">import</span> java.math.BigInteger;<br><br><br><span class="hljs-keyword">public</span> class PAT_B1017 &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> main(<span class="hljs-keyword">String</span>[] args) <span class="hljs-keyword">throws</span> IOException &#123;<br>        <span class="hljs-keyword">BufferedReader</span> br=<span class="hljs-keyword">new</span> <span class="hljs-keyword">BufferedReader</span>(<span class="hljs-keyword">new</span> InputStreamReader(System.in));<br>        BigInteger q,r;<br>        <span class="hljs-keyword">String</span>[] <span class="hljs-built_in">str</span> = br.readLine().<span class="hljs-built_in">split</span>(<span class="hljs-string">&quot; &quot;</span>);<br>        BigInteger a = <span class="hljs-keyword">new</span> BigInteger(<span class="hljs-built_in">str</span>[<span class="hljs-number">0</span>]);<br>        BigInteger b = <span class="hljs-keyword">new</span> BigInteger(<span class="hljs-built_in">str</span>[<span class="hljs-number">1</span>]);<br>        q = a.divide(b);<br>        r = a.mod(b);<br>        System.out.<span class="hljs-built_in">println</span>(q+<span class="hljs-string">&quot; &quot;</span>+r);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 
   </article>
 
@@ -324,10 +323,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797660"></script>
+<script async src="/js/app.js?v=1653321719036"></script>
 
 
-	<script async src="/js/search.js?v=1637339797660"></script>
+	<script async src="/js/search.js?v=1653321719036"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

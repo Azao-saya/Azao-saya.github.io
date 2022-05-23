@@ -26,12 +26,12 @@
 <meta property="article:tag" content="正则表达式">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797386">
+    <link rel="stylesheet" href="/css/style.css?v=1653321718698">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797386">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718698">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -56,7 +56,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -189,7 +189,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -230,7 +230,7 @@
 <p>3<br>6<br>5<br>2 2 3 4</p>
 </blockquote>
 <h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li><p>这个正则表达式是直接拿别人用的 “\)\s*\(“</p>
+<li><p>这个正则表达式是直接拿别人用的 “\)\\s*\(“</p>
 </li>
 <li><p>对(2 a c)  (2 b d)  (2 a c)  (3 a b e)使用效果为</p>
 </li>
@@ -243,19 +243,18 @@
 </li>
 <li><p>最后输出一道题最多错了多少人，加上有着同样该错误数量的题目，可以是多个</p>
 </li>
-<li><p>[^a-zA-Z]是去匹配目标字符串中非a—z也非A—Z的字符 </p>
+<li><p><sup><a href="#fn_a-zA-Z" id="reffn_a-zA-Z">a-zA-Z</a></sup>是去匹配目标字符串中非a—z也非A—Z的字符 </p>
 </li>
 <li><p>匹配非字母替换为空串，然后题目要求字母不区分大小写所以全部变成大写或者小写减去ascll码就行</p>
 </li>
 <li><p>使用Integer.toBinaryString()把数变成二进制，</p>
 </li>
-<li><p> 得到该字符串去除1之后的长度，也就是零的长度，再把原长度减去零的长度就是1的长度。</p>
+<li><p>得到该字符串去除1之后的长度，也就是零的长度，再把原长度减去零的长度就是1的长度。</p>
 </li>
 </ul>
 <hr>
 <hr>
 <figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><code class="hljs processing"><span class="hljs-keyword">import</span> java.io.<span class="hljs-keyword">BufferedReader</span>;<br><span class="hljs-keyword">import</span> java.io.IOException;<br><span class="hljs-keyword">import</span> java.io.InputStreamReader;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 2 2 3 4，第一个2，是错误最多的次数，234是三个不同的题号，搞清这个就明白很多了</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> class PAT_B1058 &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> main(<span class="hljs-keyword">String</span>[] args) <span class="hljs-keyword">throws</span> IOException &#123;<br>        <span class="hljs-keyword">BufferedReader</span> br = <span class="hljs-keyword">new</span> <span class="hljs-keyword">BufferedReader</span>(<span class="hljs-keyword">new</span> InputStreamReader(System.in));<br>        <span class="hljs-keyword">String</span>[] temp = br.readLine().<span class="hljs-built_in">split</span>(<span class="hljs-string">&quot; &quot;</span>);<br>        <span class="hljs-built_in">int</span> n = Integer.parseInt(temp[<span class="hljs-number">0</span>]);<span class="hljs-comment">//学生人数</span><br>        <span class="hljs-built_in">int</span> m = Integer.parseInt(temp[<span class="hljs-number">1</span>]);<span class="hljs-comment">//多选题个数</span><br>        <span class="hljs-built_in">int</span>[] score = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>[m];<span class="hljs-comment">//每道题的总分</span><br>        <span class="hljs-built_in">int</span>[] wrong = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>[m];<span class="hljs-comment">//每道题做错人数</span><br>        <span class="hljs-keyword">String</span>[] right = <span class="hljs-keyword">new</span> <span class="hljs-keyword">String</span>[m];<span class="hljs-comment">//每道题的正确答案</span><br><br>        <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt;m ; i++) &#123;<br>            <span class="hljs-keyword">String</span> <span class="hljs-built_in">str</span> = br.readLine();<br>            score[i] = Integer.parseInt(<span class="hljs-built_in">str</span>.substring(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>));<br>            right[i] = <span class="hljs-built_in">str</span>.substring(<span class="hljs-number">4</span>);<br>        &#125;<br><br>        <span class="hljs-built_in">int</span>[] studentS = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>[n];<br>        <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt;n ; i++) &#123;<br>            <span class="hljs-keyword">String</span> s = br.readLine();<br>            s = s.substring(s.indexOf(<span class="hljs-string">&#x27;(&#x27;</span>) + <span class="hljs-number">1</span>, s.lastIndexOf(<span class="hljs-string">&#x27;)&#x27;</span>));<br>            <span class="hljs-keyword">String</span>[] reset = s.<span class="hljs-built_in">split</span>(<span class="hljs-string">&quot;\\)\\s*\\(&quot;</span>);<br>            <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> j = <span class="hljs-number">0</span>; j &lt;reset.length ; j++) &#123;<br>                <span class="hljs-keyword">if</span> (reset[j].equals(right[j]))&#123;<br>                    studentS[i] += score[j];<br>                &#125;<span class="hljs-keyword">else</span> &#123;<br>                    wrong[j]++;<br>                &#125;<br>            &#125;<br>            System.out.<span class="hljs-built_in">println</span>(studentS[i]);<br>        &#125;<br><br>        <span class="hljs-built_in">int</span> maxIndex = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt;m ; i++) &#123;<br>            <span class="hljs-keyword">if</span> (wrong[i]&gt;wrong[maxIndex])&#123;<br>                maxIndex = i;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">if</span> (wrong[maxIndex]==<span class="hljs-number">0</span>)&#123;<br>            System.out.<span class="hljs-built_in">println</span>(<span class="hljs-string">&quot;Too simple&quot;</span>);<br>        &#125;<span class="hljs-keyword">else</span> &#123;<br>            System.out.<span class="hljs-built_in">print</span>(wrong[maxIndex]);<br>            <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt;m ; i++) &#123;<br>                <span class="hljs-keyword">if</span> (wrong[i] == wrong[maxIndex])&#123;<br>                    System.out.printf(<span class="hljs-string">&quot; %d&quot;</span>,i+<span class="hljs-number">1</span>);<br>                &#125;<br>            &#125;<br><br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 
   </article>
 
@@ -341,10 +340,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797390"></script>
+<script async src="/js/app.js?v=1653321718706"></script>
 
 
-	<script async src="/js/search.js?v=1637339797390"></script>
+	<script async src="/js/search.js?v=1653321718706"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

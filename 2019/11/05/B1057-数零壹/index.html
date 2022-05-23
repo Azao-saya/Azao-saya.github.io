@@ -27,12 +27,12 @@
 <meta property="article:tag" content="字符串高端操作">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797391">
+    <link rel="stylesheet" href="/css/style.css?v=1653321718713">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797391">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718713">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -57,7 +57,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -190,7 +190,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -211,7 +211,7 @@
       
       <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2019年11月05日</a>
-    <a><i class="nexmoefont icon-areachart"></i>463 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>462 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
 </div>
 
@@ -231,16 +231,15 @@
 <p>3 4</p>
 </blockquote>
 <h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li>  ^[a-zA-Z]是去匹配目标字符串中以中括号中的a—z或者A—Z开头的字符 </li>
-<li>  [^a-zA-Z]是去匹配目标字符串中非a—z也非A—Z的字符 </li>
-<li> 匹配非字母替换为空串，然后题目要求字母不区分大小写所以全部变成大写或者小写减去ascll码就行</li>
-<li> 使用Integer.toBinaryString()把数变成二进制，</li>
-<li> 得到该字符串去除1之后的长度，也就是零的长度，再把原长度减去零的长度就是1的长度。</li>
+<li>^[a-zA-Z]是去匹配目标字符串中以中括号中的a—z或者A—Z开头的字符 </li>
+<li><sup><a href="#fn_a-zA-Z" id="reffn_a-zA-Z">a-zA-Z</a></sup>是去匹配目标字符串中非a—z也非A—Z的字符 </li>
+<li>匹配非字母替换为空串，然后题目要求字母不区分大小写所以全部变成大写或者小写减去ascll码就行</li>
+<li>使用Integer.toBinaryString()把数变成二进制，</li>
+<li>得到该字符串去除1之后的长度，也就是零的长度，再把原长度减去零的长度就是1的长度。</li>
 </ul>
 <hr>
 <hr>
 <figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs processing"><span class="hljs-keyword">import</span> java.io.<span class="hljs-keyword">BufferedReader</span>;<br><span class="hljs-keyword">import</span> java.io.IOException;<br><span class="hljs-keyword">import</span> java.io.InputStreamReader;<br><br><span class="hljs-keyword">public</span> class PAT_B1057 &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> main(<span class="hljs-keyword">String</span>[] args) <span class="hljs-keyword">throws</span> IOException &#123; <span class="hljs-comment">//多次提交后未超时</span><br>        <span class="hljs-keyword">BufferedReader</span> br = <span class="hljs-keyword">new</span> <span class="hljs-keyword">BufferedReader</span>(<span class="hljs-keyword">new</span> InputStreamReader(System.in));<br>        <span class="hljs-keyword">String</span> <span class="hljs-built_in">str</span> = br.readLine().replaceAll(<span class="hljs-string">&quot;[^a-zA-Z]&quot;</span>,<span class="hljs-string">&quot;&quot;</span>);<br>        <span class="hljs-built_in">char</span>[] abc = <span class="hljs-built_in">str</span>.toUpperCase().toCharArray();<br>        <span class="hljs-built_in">int</span> sum = abc.length*(<span class="hljs-number">-64</span>);<br>        <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt;abc.length ; i++) &#123;<br>            sum += abc[i];<br>        &#125;<br>        <span class="hljs-keyword">if</span> (sum == <span class="hljs-number">0</span>)&#123;<br>            System.out.<span class="hljs-built_in">println</span>(<span class="hljs-number">0</span>+<span class="hljs-string">&quot; &quot;</span>+<span class="hljs-number">0</span>);<br>            System.<span class="hljs-built_in">exit</span>(<span class="hljs-number">0</span>);<br>        &#125;<br>        <span class="hljs-keyword">String</span> two = Integer.toBinaryString(sum);<br>        <span class="hljs-built_in">int</span> zero = two.replaceAll(<span class="hljs-string">&quot;1&quot;</span>, <span class="hljs-string">&quot;&quot;</span>).length();<span class="hljs-comment">// 去掉&#x27;1&#x27;，得到&#x27;0&#x27;的个数</span><br>        System.out.<span class="hljs-built_in">println</span>(zero + <span class="hljs-string">&quot; &quot;</span> + (two.length() - zero));<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 
   </article>
 
@@ -326,10 +325,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797397"></script>
+<script async src="/js/app.js?v=1653321718720"></script>
 
 
-	<script async src="/js/search.js?v=1637339797397"></script>
+	<script async src="/js/search.js?v=1653321718720"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

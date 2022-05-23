@@ -27,12 +27,12 @@
 <meta property="article:tag" content="try&#x2F;catch">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797411">
+    <link rel="stylesheet" href="/css/style.css?v=1653321718730">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797411">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718730">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -57,7 +57,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -190,7 +190,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -237,15 +237,14 @@
 <p>ERROR: aaa is not a legal number<br>ERROR: -9999 is not a legal number<br>The average of 0 numbers is Undefined</p>
 </blockquote>
 <h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li> 这里用trycatch处理异常来解决，读入的非数字</li>
-<li> 如题意所示7.123也是一个非法输入，指小数超过两位的都是非法输入</li>
-<li> 这里用String.format把数字转换成只保留两位小数的，在与原始数字进行比较。</li>
-<li> 若差值超过0.001意为该数小数部分超过2位，同样抛出异常</li>
+<li>这里用trycatch处理异常来解决，读入的非数字</li>
+<li>如题意所示7.123也是一个非法输入，指小数超过两位的都是非法输入</li>
+<li>这里用String.format把数字转换成只保留两位小数的，在与原始数字进行比较。</li>
+<li>若差值超过0.001意为该数小数部分超过2位，同样抛出异常</li>
 </ul>
 <hr>
 <hr>
 <figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs processing"><span class="hljs-keyword">import</span> java.io.<span class="hljs-keyword">BufferedReader</span>;<br><span class="hljs-keyword">import</span> java.io.IOException;<br><span class="hljs-keyword">import</span> java.io.InputStreamReader;<br><br><span class="hljs-keyword">public</span> class PAT_B1054 &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> main(<span class="hljs-keyword">String</span>[] args) <span class="hljs-keyword">throws</span> IOException &#123;<br>        <span class="hljs-keyword">BufferedReader</span> br = <span class="hljs-keyword">new</span> <span class="hljs-keyword">BufferedReader</span>(<span class="hljs-keyword">new</span> InputStreamReader(System.in));<br>        <span class="hljs-built_in">int</span> n = Integer.parseInt(br.readLine());<br>        <span class="hljs-keyword">String</span>[] <span class="hljs-built_in">str</span> = br.readLine().<span class="hljs-built_in">split</span>(<span class="hljs-string">&quot; &quot;</span>);<br>        <span class="hljs-built_in">int</span> count = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">double</span> total = <span class="hljs-number">0.0</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt;n ; i++) &#123;<br>            <span class="hljs-keyword">try</span>&#123;<br>                <span class="hljs-keyword">double</span> num = Double.parseDouble(<span class="hljs-built_in">str</span>[i]);<br>                <span class="hljs-keyword">double</span> compare = Double.parseDouble(<span class="hljs-keyword">String</span>.format(<span class="hljs-string">&quot;%.02f&quot;</span>,num));<br>                <span class="hljs-keyword">if</span> (num&lt;<span class="hljs-number">-1000</span> || num&gt;<span class="hljs-number">1000</span> || Math.<span class="hljs-built_in">abs</span>(num-compare)&gt;<span class="hljs-number">0.001</span>)&#123;<br>                    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> NumberFormatException();<br>                &#125;<br>                count++;<br>                total += num;<br>            &#125;<span class="hljs-keyword">catch</span> (NumberFormatException e)&#123;<br>                System.out.<span class="hljs-built_in">println</span>(<span class="hljs-string">&quot;ERROR: &quot;</span>+ <span class="hljs-built_in">str</span>[i]+<span class="hljs-string">&quot; is not a legal number&quot;</span>);<br>            &#125;<br>        &#125;<br><br>        <span class="hljs-keyword">if</span> (count == <span class="hljs-number">0</span>)&#123;<br>            System.out.<span class="hljs-built_in">println</span>(<span class="hljs-string">&quot;The average of 0 numbers is Undefined&quot;</span>);<br>        &#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(count ==<span class="hljs-number">1</span>)&#123;<br>            System.out.printf(<span class="hljs-string">&quot;The average of 1 number is %.2f&quot;</span>,total); <span class="hljs-comment">//number少了一个s</span><br>        &#125;<span class="hljs-keyword">else</span> &#123;<br>            System.out.printf(<span class="hljs-string">&quot;The average of %d numbers is %.2f&quot;</span>,count,total/count);<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 
   </article>
 
@@ -331,10 +330,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797415"></script>
+<script async src="/js/app.js?v=1653321718735"></script>
 
 
-	<script async src="/js/search.js?v=1637339797415"></script>
+	<script async src="/js/search.js?v=1653321718735"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

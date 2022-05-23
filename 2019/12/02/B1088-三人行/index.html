@@ -26,12 +26,12 @@
 <meta property="article:tag" content="正则表达式">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797178">
+    <link rel="stylesheet" href="/css/style.css?v=1653321718424">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797178">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718424">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -56,7 +56,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -189,7 +189,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -238,11 +238,11 @@
 <p>No Solution</p>
 </blockquote>
 <h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li> 甲的能力值确定是 2 位正整数；</li>
+<li>甲的能力值确定是 2 位正整数；</li>
 <li>把甲的能力值的 2 个数字调换位置就是乙的能力值；</li>
 <li>甲乙两人能力差是丙的能力值的 X 倍；</li>
 <li>乙的能力值是丙的 Y 倍 </li>
-<li> 如果解不唯一，则以甲的最大解为准进行判断； </li>
+<li>如果解不唯一，则以甲的最大解为准进行判断； </li>
 <li>因为以甲的最大解来判断，加上甲最大为两位数。</li>
 <li>创建一个循环假设甲是99开始，一直向下找符合题目所有条件的解。找到第一个后中断。</li>
 <li>最后判断强弱的方法重载一个传入double参数。</li>
@@ -250,7 +250,6 @@
 <hr>
 <hr>
 <figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-keyword">import</span> java.io.BufferedReader;<br><span class="hljs-keyword">import</span> java.io.IOException;<br><span class="hljs-keyword">import</span> java.io.InputStreamReader;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> &#123;</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">String</span>[] args)</span> throws IOException </span>&#123;<br>        BufferedReader br = <span class="hljs-keyword">new</span> <span class="hljs-built_in">BufferedReader</span>(<span class="hljs-keyword">new</span> <span class="hljs-built_in">InputStreamReader</span>(System.in));<br>        <span class="hljs-keyword">String</span>[] temp = br.<span class="hljs-built_in">readLine</span>().<span class="hljs-built_in">split</span>(<span class="hljs-string">&quot; &quot;</span>);<br>        <span class="hljs-keyword">int</span> me = Integer.<span class="hljs-built_in">parseInt</span>(temp[<span class="hljs-number">0</span>]);<br>        <span class="hljs-keyword">int</span> x = Integer.<span class="hljs-built_in">parseInt</span>(temp[<span class="hljs-number">1</span>]);<br>        <span class="hljs-keyword">int</span> y = Integer.<span class="hljs-built_in">parseInt</span>(temp[<span class="hljs-number">2</span>]);<br>        <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">int</span> jia = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">String</span> a = <span class="hljs-string">&quot;&quot;</span>,b=<span class="hljs-string">&quot;&quot;</span>,c=<span class="hljs-string">&quot;&quot;</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">99</span>; i &gt;=<span class="hljs-number">10</span> ; i--) &#123;<br>            <span class="hljs-keyword">int</span> j = i % <span class="hljs-number">10</span> * <span class="hljs-number">10</span> + i/<span class="hljs-number">10</span>;<br>            <span class="hljs-keyword">double</span> k = Math.<span class="hljs-built_in">abs</span>(i-j)*<span class="hljs-number">1.0</span>/x;<br>            <span class="hljs-keyword">if</span> (j == k * y)&#123;<br>                count++;<br>                jia = i;<br>                a = <span class="hljs-built_in">abc</span>(me,i);<br>                b = <span class="hljs-built_in">abc</span>(me,j);<br>                c = <span class="hljs-built_in">abc</span>(me,k);<br>                <span class="hljs-keyword">break</span>;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">if</span> (count !=<span class="hljs-number">0</span>)&#123;<br>            System.out.<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d %s %s %s&quot;</span>,jia,a,b,c);<br>        &#125;<span class="hljs-keyword">else</span> &#123;<br>            System.out.<span class="hljs-built_in">println</span>(<span class="hljs-string">&quot;No Solution&quot;</span>);<br>        &#125;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">String</span> <span class="hljs-title">abc</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> b)</span></span>&#123;<br>        <span class="hljs-keyword">if</span> (a==b)&#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Ping&quot;</span>;<br>        &#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(a&lt;b)&#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Cong&quot;</span>;<br>        &#125;<span class="hljs-keyword">else</span> &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Gai&quot;</span>;<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">String</span> <span class="hljs-title">abc</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a, <span class="hljs-keyword">double</span> b)</span></span>&#123;<br>        <span class="hljs-keyword">if</span> (a==b)&#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Ping&quot;</span>;<br>        &#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(a&lt;b)&#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Cong&quot;</span>;<br>        &#125;<span class="hljs-keyword">else</span> &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Gai&quot;</span>;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 
   </article>
 
@@ -336,10 +335,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797183"></script>
+<script async src="/js/app.js?v=1653321718429"></script>
 
 
-	<script async src="/js/search.js?v=1637339797183"></script>
+	<script async src="/js/search.js?v=1653321718429"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

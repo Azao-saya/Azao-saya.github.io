@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+    
+    <title>还在建设的避风港</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="null">
+    <meta name="keywords" content="null">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    
+    
+
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QQ图片20200309200651.2slbp7k6zx40.jpg" type="image/x-icon" />
+    <meta name="description" content="实践课被这玩意狠狠滴折磨，还没学过线性代数就提前接触了，不过做都做了还是留下点东西把。 排版中使用了Latex 高斯消元法和其高斯约旦消元法主要是用来解决n元一次线性方程组  \left\{ \begin{aligned} a_1,_1x_1+a_1,_2x_2+ ⋯+a_1,_nx_n&#x3D;b1  \\ a_2,_1x_1+a_2,_2x_2+ ⋯+a_2,_nx_n&#x3D;b2 \\ ⋮ \qquad⋮">
+<meta property="og:type" content="article">
+<meta property="og:title" content="还在建设的避风港">
+<meta property="og:url" content="https://shelterz.cn/2022/05/24/%E9%AB%98%E6%96%AF%E6%B6%88%E5%85%83%E6%B3%95%E5%8F%8A%E7%BA%A6%E6%97%A6%E6%B6%88%E5%85%83%E6%B3%95/index.html">
+<meta property="og:site_name" content="还在建设的避风港">
+<meta property="og:description" content="实践课被这玩意狠狠滴折磨，还没学过线性代数就提前接触了，不过做都做了还是留下点东西把。 排版中使用了Latex 高斯消元法和其高斯约旦消元法主要是用来解决n元一次线性方程组  \left\{ \begin{aligned} a_1,_1x_1+a_1,_2x_2+ ⋯+a_1,_nx_n&#x3D;b1  \\ a_2,_1x_1+a_2,_2x_2+ ⋯+a_2,_nx_n&#x3D;b2 \\ ⋮ \qquad⋮">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-05-23T16:00:34.165Z">
+<meta property="article:modified_time" content="2022-05-23T15:40:11.400Z">
+<meta property="article:author" content="A_zao">
+<meta name="twitter:card" content="summary">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
+    <link rel="stylesheet" href="/css/style.css?v=1653321718027">
+     
+    
+        <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
+    
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718027">
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="mdui-drawer-body-left">
+    
+    <div id="nexmoe-background">
+        <div class="nexmoe-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QY5QSK.512q5xd2mt00.jpg)"></div>
+        <div class="mdui-appbar mdui-shadow-0">
+            <div class="mdui-toolbar">
+                <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+                <div class="mdui-toolbar-spacer"></div>
+                <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+                <a href="/" title="A_zao" class="mdui-btn mdui-btn-icon"><img src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/57LtVReQg2ANsaX.5sw3t0dqf980.jpg" alt="A_zao"></a>
+            </div>
+        </div>
+    </div>
+    <div id="nexmoe-header">
+        <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="A_zao">
+            <img src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/57LtVReQg2ANsaX.5sw3t0dqf980.jpg" alt="A_zao" alt="A_zao">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>125</div>
+        <div><span>标签</span>26</div>
+        <div><span>分类</span>5</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/archive.html" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about.html" title="关于我">
+            <i class="mdui-list-item-icon nexmoefont icon-guanyu"></i>
+            <div class="mdui-list-item-content">
+                关于我
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/PY.html" title="单向朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-menu"></i>
+            <div class="mdui-list-item-content">
+                单向朋友
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        
+            <form id="search_form">
+                <label><input class="st-default-search-input" id="search_value" name="q" type="search" placeholder="搜索" style="
+                    font-size: 15px !important;
+                    height: 56px !important;
+                    background-image: none;
+                "></label>
+            </form>
+         
+    </div>
+</div>
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/378156" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-CN_bilibiliB"></i>
+        </a><a class="mdui-ripple" href="https://github.com/Azao-saya" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a><a class="mdui-ripple" href="https://steamcommunity.com/id/oounit/" target="_blank" mdui-tooltip="{content: 'Steam'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-steam"></i>
+        </a><a class="mdui-ripple" href="https://t.me/shelterz" target="_blank" mdui-tooltip="{content: 'Telegram'}" style="color: rgb(0,191,255);background-color: rgba(0,191,255, .15);">
+            <i class="nexmoefont icon-telegram"></i>
+        </a><a class="mdui-ripple" href="https://music.163.com/#/user/home?id=41282089" target="_blank" mdui-tooltip="{content: 'CloudMusic'}" style="color: rgb(255,106,106);background-color: rgba(255,106,106, .15);">
+            <i class="nexmoefont icon-netease-cloud-music-line"></i>
+        </a>
+    </div>
+</div>
+    
+    
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/PAT练习/">PAT练习</a>
+          <span class="category-list-count">106</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/二次元の胡话/">二次元の胡话</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/云笔记/">云笔记</a>
+          <span class="category-list-count">10</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/折腾/">折腾</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/生活感悟/">生活感悟</a>
+          <span class="category-list-count">4</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+    
+    
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/ASCII/" style="font-size: 15.71px;">ASCII</a> <a href="/tags/BigDeciaml-toPlainString/" style="font-size: 10px;">BigDeciaml&toPlainString</a> <a href="/tags/BigInteger/" style="font-size: 10px;">BigInteger</a> <a href="/tags/HashMap/" style="font-size: 14.29px;">HashMap</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/LinkedHashSet/" style="font-size: 11.43px;">LinkedHashSet</a> <a href="/tags/MySql/" style="font-size: 12.86px;">MySql</a> <a href="/tags/TreeSet/" style="font-size: 10px;">TreeSet</a> <a href="/tags/compare/" style="font-size: 15.71px;">compare</a> <a href="/tags/implements/" style="font-size: 10px;">implements</a> <a href="/tags/reverse/" style="font-size: 12.86px;">reverse</a> <a href="/tags/sort/" style="font-size: 11.43px;">sort</a> <a href="/tags/stack%E6%95%B0%E7%BB%84/" style="font-size: 10px;">stack数组</a> <a href="/tags/try-catch/" style="font-size: 12.86px;">try/catch</a> <a href="/tags/%E5%81%B7%E5%AD%A6%E6%9F%B3%E7%A5%9E%E7%9A%84%E5%B8%85%E6%B0%94%E4%BB%A3%E7%A0%81/" style="font-size: 12.86px;">偷学柳神的帅气代码</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">博客</a> <a href="/tags/%E5%8F%82%E5%8A%A0%E7%9A%84%E8%80%83%E8%AF%95/" style="font-size: 10px;">参加的考试</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/" style="font-size: 18.57px;">字符串操作</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%AB%98%E7%AB%AF%E6%93%8D%E4%BD%9C/" style="font-size: 11.43px;">字符串高端操作</a> <a href="/tags/%E6%9C%AAAC%E9%A2%98%E7%9B%AE/" style="font-size: 17.14px;">未AC题目</a> <a href="/tags/%E6%9E%81%E5%85%B6%E9%9D%9E%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" style="font-size: 10px;">极其非面向对象</a> <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" style="font-size: 20px;">正则表达式</a> <a href="/tags/%E7%A5%96%E4%BC%A0%E5%B1%8E%E5%B1%B1%E4%BB%A3%E7%A0%81/" style="font-size: 14.29px;">祖传屎山代码</a> <a href="/tags/%E8%87%AA%E8%80%83/" style="font-size: 11.43px;">自考</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 11.43px;">计算机网络</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 10px;">链表</a>
+    </div>
+    
+  </div>
+
+    
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2022 A_zao
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        
+    </div>
+</div><!-- .nexmoe-drawer -->
+    </div>
+    <div id="nexmoe-content">
+        <div class="nexmoe-primary">
+            <div class="nexmoe-post">
+
+  <article>
+      
+          <div class="nexmoe-post-cover" style="padding-bottom: 66.66666666666666%;"> 
+              <img data-src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QY5QSK.512q5xd2mt00.jpg" data-sizes="auto" alt="" class="lazyload">
+              <h1></h1>
+          </div>
+      
+      
+      <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2022年05月24日</a>
+    <a><i class="nexmoefont icon-areachart"></i>1.9k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 9 分钟</a>
+</div>
+
+      
+
+      <p>实践课被这玩意狠狠滴折磨，还没学过线性代数就提前接触了，不过做都做了还是留下点东西把。</p>
+<p>排版中使用了Latex</p>
+<p><strong>高斯消元法和其高斯约旦消元法主要是用来解决n元一次线性方程组</strong></p>
+<script type="math/tex; mode=display">
+\left\{
+\begin{aligned}
+a_1,_1x_1+a_1,_2x_2+ ⋯+a_1,_nx_n=b1  \\
+a_2,_1x_1+a_2,_2x_2+ ⋯+a_2,_nx_n=b2 \\
+⋮ \qquad⋮ \qquad⋮\qquad⋮\qquad⋮\qquad⋮\qquad⋮\\
+a_n,_1x_1+a_n,_2x_2+ ⋯+a_n,_nx_n=bn
+\end{aligned}
+\right.</script><p>两个算法的比较为</p>
+<p><strong>高斯消元法</strong>有回代即把运算的结果回代到式子中代码会相对更多一点，但可以分辨是无解还是无穷解。</p>
+<p><strong>高斯约旦消元法</strong>没有回代，无法区分无解还是无穷解</p>
+<h2 id="前置芝士"><a href="#前置芝士" class="headerlink" title="前置芝士"></a>前置芝士</h2><p><strong>初等变换</strong></p>
+<p>一般采用消元法来解线性方程组，而消元法实际上是反复对方程进行变换，而所做的变换也只是以下三种基本的变换所构成：</p>
+<ol>
+<li><p>用一非零的数乘以某一方程</p>
+</li>
+<li><p>把一个方程的倍数加到另一个方程</p>
+</li>
+<li><p>互换两个方程的位置</p>
+</li>
+</ol>
+<p>简单贴一下高斯消元法算法的方程组最终形式</p>
+<p><strong>高斯消元法</strong></p>
+<script type="math/tex; mode=display">
+\left\{
+\begin{aligned}
+5x+y+6z=25 \\
+0x+\frac{13}{5}+\frac{8}{5}z=10\\
+0x+0y-\frac{255}{65}z=-\frac{135}{13}\\
+\end{aligned}
+\right.</script><p>最终为<strong>行阶梯型矩阵</strong>即化简为：</p>
+<ol>
+<li><p>如果它既有零行，又有非零行，则零行在下，非零行在上</p>
+</li>
+<li><p>如果它有非零行，则每个非零行的第一非零元素所在列号自上而下严格单调上升</p>
+</li>
+</ol>
+<p>再进一步可以化简为<strong>行最简形矩阵</strong>即非零行的第一个元素为零，更进一步则是<strong>单位矩阵</strong>，但变换为行阶梯型矩阵已经可以开始回代得出最终解了。</p>
+<p>ps1：可能不能用化简这个说法，总之就是线性方程的系数矩阵通过初等行变换得到行阶梯型矩阵，变化矩阵A与矩阵B等价</p>
+<p>ps2：在解线性方程组时，把系数矩阵主对角线下方元素消零属于消元；把系数矩阵主对角线上方元素消零属于回代。</p>
+<p>回代的过程即③式只剩下z，于是我们可以解出</p>
+<script type="math/tex; mode=display">
+z=3</script><p>然后把z=3代入②式，解得</p>
+<script type="math/tex; mode=display">
+y = 2</script><p>再把它们代入①式，解得</p>
+<script type="math/tex; mode=display">
+x=1</script><p>回代之后在检查无穷解和无解的情况</p>
+<p>若存在某方程系数ai,i=0，但bi≠0则为无解，若ai,i=0且bi=0则有无穷解</p>
+<p>如果需要判断是无解还是无穷解的话是无法使用更方便的高斯约旦消元法的。</p>
+<h2 id="高斯-约旦消元法-Gauss-Jordan-Elimination"><a href="#高斯-约旦消元法-Gauss-Jordan-Elimination" class="headerlink" title="高斯-约旦消元法(Gauss-Jordan Elimination)"></a>高斯-约旦消元法(Gauss-Jordan Elimination)</h2><p>下面即是这篇文章的核心，以上述方程组为例，具体按照实际代码步骤走</p>
+<script type="math/tex; mode=display">
+\left\{
+\begin{aligned}
+3x+2y+z=10 \\
+5x+y+6z=25\\
+2x+3y+4z=20\\
+\end{aligned}
+\right.</script><p>一列一列处理，首先处理的消元的便是第一列x列，对比我们可以得出5是这一列中最大的，把他作为主元</p>
+<p>把①式和②式的位置交换(此举是为了减少消元法时的精度损失直接用3进行消元显然也是可以的)</p>
+<script type="math/tex; mode=display">
+\left\{
+\begin{aligned}
+5x+y+6z=25\\
+3x+2y+z=10 \\
+2x+3y+4z=20\\
+\end{aligned}
+\right.</script><p>首先我们把选出的方程 5x+y+6z=25 的 x 的系数化为 1：</p>
+<script type="math/tex; mode=display">
+x+\frac{1}{5}y+\frac{6}{5}z=5</script><p>然后呢，将它们所在的行减去主元所在的行乘以一定的倍数，具体则是②-①x3，③-①x2，</p>
+<p>使得主元所在的列内、 除主元外的其他元素化为 0，这样就使得主元所在的列化为了单位矩阵的形式</p>
+<script type="math/tex; mode=display">
+\left\{
+\begin{aligned}
+x+15y+65z=5\\
+0x+\frac{13}{5}y+\frac{8}{5}z=10 \\
+3x+2y+z=10\\
+\end{aligned}
+\right.</script><script type="math/tex; mode=display">
+\left\{
+\begin{aligned}
+x+15y+65z=5\\
+0x+\frac{13}{5}y+\frac{8}{5}z=10 \\
+0x+\frac{7}{5}y+(−\frac{13}{5}z)=−5
+\end{aligned}
+\right.</script><p>然后消 y，</p>
+<p>在剩下两行内寻找主元，如果说上一轮循环中矩阵a[i][i] 也就是a[0][0]是主元的话，这一轮的主元也位于矩阵其主对角线a[1][1]上，如果不存在同样需要交换位置移动到主对角线上，这里13/5大于7/5就不用换了。</p>
+<script type="math/tex; mode=display">
+\left\{
+\begin{aligned}
+x+15y+65z=5\\
+0x+y+\frac{8}{13}z=\frac{50}{13} \\
+0x+\frac{7}{5}y+(−\frac{13}{5}z)=−5
+\end{aligned}
+\right.</script><script type="math/tex; mode=display">
+\left\{
+\begin{aligned}
+x+0y+\frac{70}{65}z=\frac{275}{65}\\
+0x+y+\frac{8}{13}z=\frac{50}{13} \\
+0x+\frac{7}{5}y+(−\frac{13}{5}z)=−5
+\end{aligned}
+\right.</script><script type="math/tex; mode=display">
+\left\{
+\begin{aligned}
+x+0y+\frac{70}{65}z=\frac{275}{65}\\
+0x+y+\frac{8}{13}z=\frac{50}{13} \\
+0x+0y+(−\frac{225}{65}z)=−\frac{135}{13}
+\end{aligned}
+\right.</script><p>最后消z：</p>
+<script type="math/tex; mode=display">
+\left\{
+\begin{aligned}
+x+0y+\frac{70}{65}z=\frac{275}{65}\\
+0x+y+\frac{8}{13}z=\frac{50}{13} \\
+0x+0y+z=3
+\end{aligned}
+\right.</script><script type="math/tex; mode=display">
+\left\{
+\begin{aligned}
+x+0y+0z=1\\
+0x+y+0z=2\\
+0x+0y+z=3\\
+\end{aligned}
+\right.</script><p>显然得到答案</p>
+<script type="math/tex; mode=display">
+x=1,y=2,z=3</script><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p>使用了根本不熟悉的c++，所以也没有使用c++太多的独有语法</p>
+<p>题目有很多打印和输入要求，但也有些许关联，主要就是函数void LinearEqs()中就是具体代码了</p>
+<p>文章主要参考内容:<a target="_blank" rel="noopener" href="https://www.cnblogs.com/mk-oi/p/14290455.html">高斯消元法&amp;高斯-约旦消元法-Mine_King</a></p>
+<p><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%AB%98%E6%96%AF-%E8%8B%A5%E5%B0%94%E5%BD%93%E6%B6%88%E5%85%83%E6%B3%95/19969775">高斯-若尔当消元法-百度百科</a></p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><br><span class="hljs-keyword">int</span> m; <span class="hljs-comment">//列</span><br><span class="hljs-keyword">int</span> n; <span class="hljs-comment">//行</span><br><span class="hljs-keyword">double</span> matrix[<span class="hljs-number">100</span>][<span class="hljs-number">100</span>];<br><span class="hljs-keyword">double</span> ans[<span class="hljs-number">100</span>][<span class="hljs-number">100</span>];<br><span class="hljs-keyword">double</span> eps=<span class="hljs-number">1e-20</span>; <span class="hljs-comment">//小量</span><br><span class="hljs-keyword">bool</span> flag = <span class="hljs-literal">true</span>;<br><span class="hljs-keyword">int</span> countt =<span class="hljs-number">1</span>;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">()</span></span>&#123;<br>    cout&lt;&lt;<span class="hljs-string">&quot;Please enter number of equations(m):&quot;</span>;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;m);<br>    cout&lt;&lt;<span class="hljs-string">&quot;Please enter number of equations(n):&quot;</span>;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;n);<br>    cout&lt;&lt; <span class="hljs-string">&quot;Input:m=&quot;</span>&lt;&lt; m &lt;&lt;<span class="hljs-string">&quot;,n=&quot;</span>&lt;&lt; n &lt;&lt; endl; <br>    cout&lt;&lt;<span class="hljs-string">&quot;Please enter equations(x1 x2 xn a)&quot;</span>&lt;&lt;endl;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i&lt;n;i++)&#123;<br>        cout&lt;&lt; <span class="hljs-string">&quot;Equation&quot;</span>&lt;&lt;<span class="hljs-string">&quot; &quot;</span>&lt;&lt;<span class="hljs-string">&quot;#&quot;</span>&lt;&lt; i+<span class="hljs-number">1</span> &lt;&lt;<span class="hljs-string">&quot;: &quot;</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;j&lt;=m;j++) &#123;<br>            <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lf&quot;</span>, &amp;matrix[i][j]);<br>        &#125;<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printMatrix</span><span class="hljs-params">()</span></span>&#123;<br><br>    <span class="hljs-keyword">if</span>(countt == <span class="hljs-number">0</span>)&#123;<br>        cout&lt;&lt;<span class="hljs-string">&quot;matrix before the transformation:&quot;</span>&lt;&lt;endl&lt;&lt;endl;<br>        countt++;<br>    &#125;<span class="hljs-keyword">else</span>&#123;<br>        cout&lt;&lt;<span class="hljs-string">&quot;matrix after the transformation:&quot;</span>&lt;&lt;endl&lt;&lt;endl;<br>    &#125;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)&#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>;j&lt;=m;j++)&#123;<br>            cout.<span class="hljs-built_in">setf</span>(ios::fixed);<br>            cout&lt;&lt; <span class="hljs-string">&quot;      &quot;</span>;<br>            cout&lt;&lt;<span class="hljs-built_in">setw</span>(<span class="hljs-number">8</span>);<br>            cout&lt;&lt;<span class="hljs-built_in">setprecision</span>(<span class="hljs-number">6</span>);<br>            cout&lt;&lt;matrix[i][j];<br>        &#125;<br>        cout&lt;&lt;endl;<br>    &#125;<br><br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printSolution</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-keyword">if</span>(!flag)&#123;<br>        <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;No Solution&quot;</span>);<br>        <span class="hljs-keyword">return</span>;<br>    &#125;<br>    <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;The only solution is:\n&quot;</span>);<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)&#123;<br>        cout&lt;&lt;<span class="hljs-string">&quot;x&quot;</span>&lt;&lt;i+<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-string">&quot;=&quot;</span>;<br>        cout&lt;&lt;<span class="hljs-built_in">setprecision</span>(<span class="hljs-number">6</span>);<br>        cout&lt;&lt;matrix[i][m]/matrix[i][i]&lt;&lt;endl;<br>    &#125;<br>    <br>&#125;<br><br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">LinearEqs</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;++i)&#123;  <br>        <span class="hljs-keyword">int</span> max = i;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=i+<span class="hljs-number">1</span>;j&lt;n;j++ )&#123;<br>            <span class="hljs-keyword">if</span>(<span class="hljs-built_in">fabs</span>(matrix[j][i])&gt;<span class="hljs-built_in">fabs</span>(matrix[max][i])) &#123;	<span class="hljs-comment">//fabs取浮点数的绝对值</span><br>                max=j;<br>			&#125;   <br>        &#125;<br><br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j =<span class="hljs-number">0</span>;j&lt;=m;j++)&#123;<br>            <span class="hljs-built_in">swap</span>(matrix[i][j],matrix[max][j]);<br>        &#125;<br><br><br>        <span class="hljs-keyword">if</span>(<span class="hljs-built_in">fabs</span>(matrix[i][i]) &lt; eps )&#123; <span class="hljs-comment">//最大值小于eps无解</span><br>            flag = <span class="hljs-literal">false</span>;<br>        &#125;<br><br>        <span class="hljs-comment">// for(int j=0;j&lt;n;j++)&#123;   //未化为单位矩阵但是结果也正确</span><br>    <br>        <span class="hljs-comment">//     if(j!=i)&#123;  </span><br>        <span class="hljs-comment">//         double temp = matrix[j][i] /matrix[i][i];    </span><br>        <span class="hljs-comment">//         for(int k=i+1;k&lt;=m;k++)&#123;</span><br>        <span class="hljs-comment">//         matrix[j][k] -= matrix[i][k]*temp; //减消元</span><br>        <span class="hljs-comment">//         &#125;</span><br>        <span class="hljs-comment">//     &#125; </span><br>        <span class="hljs-comment">// &#125;</span><br><br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=i+<span class="hljs-number">1</span>;j&lt;m+<span class="hljs-number">1</span>;j++)&#123;<br>            matrix[i][j] /=matrix[i][i];<br>        &#125;<br>        matrix[i][i]=<span class="hljs-number">1</span>;<br><br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>;j&lt;n;j++)&#123;<br>            <span class="hljs-keyword">if</span>(j!=i)&#123; <br>                <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> k=i+<span class="hljs-number">1</span>;k&lt;=m;k++)&#123;<br>                    matrix[j][k] -= matrix[j][i]*matrix[i][k];<br>                &#125;<br>                matrix[j][i]=<span class="hljs-number">0</span>;<br>            &#125;<br>        &#125;<br>        <br><br><br>    &#125;<br>&#125;<br><br><br><br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-built_in">init</span>();<br>    <span class="hljs-built_in">printMatrix</span>();<br>    <span class="hljs-built_in">LinearEqs</span>();<br>    <span class="hljs-built_in">printMatrix</span>();<br>    <span class="hljs-built_in">printSolution</span>();<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>本文作者：</strong>A_zao<br>
+        <strong>本文链接：</strong><a href="https://shelterz.cn/2022/05/24/%E9%AB%98%E6%96%AF%E6%B6%88%E5%85%83%E6%B3%95%E5%8F%8A%E7%BA%A6%E6%97%A6%E6%B6%88%E5%85%83%E6%B3%95/" title="https:&#x2F;&#x2F;shelterz.cn&#x2F;2022&#x2F;05&#x2F;24&#x2F;%E9%AB%98%E6%96%AF%E6%B6%88%E5%85%83%E6%B3%95%E5%8F%8A%E7%BA%A6%E6%97%A6%E6%B6%88%E5%85%83%E6%B3%95&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;shelterz.cn&#x2F;2022&#x2F;05&#x2F;24&#x2F;%E9%AB%98%E6%96%AF%E6%B6%88%E5%85%83%E6%B3%95%E5%8F%8A%E7%BA%A6%E6%97%A6%E6%B6%88%E5%85%83%E6%B3%95&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+    
+</div>
+
+  
+      <div class="nexmoe-post-footer">
+          <section class="nexmoe-comment">
+    <div class="valine"></div>
+<script src='https://cdn.jsdelivr.net/npm/valine'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: 'Hu82lUrzzotgQle16bso7yt4-gzGzoHsz',
+        appKey: '4pR1jAqK6tEro4BOKFNqRtrH'
+    })
+</script>
+</section>
+      </div>
+  
+</div>
+            <div class="nexmoe-post-right">
+              <div class="nexmoe-fixed">
+                  <div class="nexmoe-tool"> 
+                    
+                      
+                        
+                          
+                          
+                              <button class="mdui-fab catalog" style="overflow:unset;">
+                                  <i class="nexmoefont icon-i-catalog"></i>
+                                  <div class="nexmoe-toc">
+                                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E8%8A%9D%E5%A3%AB"><span class="toc-number">1.</span> <span class="toc-text">前置芝士</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E6%96%AF-%E7%BA%A6%E6%97%A6%E6%B6%88%E5%85%83%E6%B3%95-Gauss-Jordan-Elimination"><span class="toc-number">2.</span> <span class="toc-text">高斯-约旦消元法(Gauss-Jordan Elimination)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="toc-number">3.</span> <span class="toc-text">代码实现</span></a></li></ol>
+                                  </div>
+                              </button>
+                          
+                          
+                      
+                    
+                      <a href="#nexmoe-content" class="toc-link" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+     
+    <div id="nexmoe-search-space">
+        <div class="search-container">
+            <div class="search-header">
+                <div class="search-input-container">
+                    <input class="search-input" type="text" placeholder="搜索" oninput="sinput();">
+                </div>
+                <a class="search-close" onclick="sclose();">×</a>
+            </div>
+            <div class="search-body"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+ 
+
+<script async src="/js/app.js?v=1653321718050"></script>
+
+
+	<script async src="/js/search.js?v=1653321718051"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
+</script>
+
+
+    
+
+
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+
+</html>

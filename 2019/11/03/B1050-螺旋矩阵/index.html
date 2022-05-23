@@ -29,12 +29,12 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://s2.ax1x.com/2019/11/26/MxwktA.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797436">
+    <link rel="stylesheet" href="/css/style.css?v=1653321718758">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797436">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718758">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -59,7 +59,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -192,7 +192,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -233,20 +233,19 @@
 <p>98 95 93<br>42 37 81<br>53 20 76<br>58 60 76</p>
 </blockquote>
 <h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><ul>
-<li> 超时</li>
-<li> 这题挺晕的，大概就是先把拿到了数升序排序了。</li>
-<li>  因为 矩阵的规模为 <em>m</em> 行 <em>n</em> 列 ，<em>m</em>−<em>n</em> 取所有可能值中的最小值</li>
-<li> N的开方乘N的开方就能得到这个最小值，矩阵的容量没有达到N再把m+1即可。</li>
-<li> 然后创建一个二维数组，控制i和j来完成上下左右移动</li>
-<li> 4个循环每个循环完会自增的那个数会越界，也就有各种加加减减。</li>
-<li> 遍历输出时，先直接输出一个不加空格的。</li>
-<li> 常态为17分，偶尔能通过一个测试点加两分</li>
-<li> <img data-fancybox="gallery" data-sizes="auto" data-src="https://s2.ax1x.com/2019/11/26/MxwktA.png" alt="薛定谔" class="lazyload"></li>
+<li>超时</li>
+<li>这题挺晕的，大概就是先把拿到了数升序排序了。</li>
+<li>因为 矩阵的规模为 <em>m</em> 行 <em>n</em> 列 ，<em>m</em>−<em>n</em> 取所有可能值中的最小值</li>
+<li>N的开方乘N的开方就能得到这个最小值，矩阵的容量没有达到N再把m+1即可。</li>
+<li>然后创建一个二维数组，控制i和j来完成上下左右移动</li>
+<li>4个循环每个循环完会自增的那个数会越界，也就有各种加加减减。</li>
+<li>遍历输出时，先直接输出一个不加空格的。</li>
+<li>常态为17分，偶尔能通过一个测试点加两分</li>
+<li><img data-fancybox="gallery" data-sizes="auto" data-src="https://s2.ax1x.com/2019/11/26/MxwktA.png" alt="薛定谔" class="lazyload"></li>
 </ul>
 <hr>
 <hr>
 <figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">import</span> java.io.BufferedReader;<br><span class="hljs-keyword">import</span> java.io.IOException;<br><span class="hljs-keyword">import</span> java.io.InputStreamReader;<br><span class="hljs-keyword">import</span> java.util.Arrays;<br><br><span class="hljs-built_in">public</span> <span class="hljs-keyword">class</span> PAT_B1050 &#123;<br>    <span class="hljs-built_in">public</span> static <span class="hljs-type">void</span> main(String[] args) throws IOException &#123;//超时 得分<span class="hljs-number">17</span><br>        BufferedReader br = <span class="hljs-built_in">new</span> BufferedReader(<span class="hljs-built_in">new</span> InputStreamReader(<span class="hljs-keyword">System</span>.<span class="hljs-keyword">in</span>));<br>        <span class="hljs-type">int</span> N = <span class="hljs-type">Integer</span>.parseInt(br.readLine());<br>        String[] <span class="hljs-keyword">temp</span> = br.readLine().split(&quot; &quot;);<br>        <span class="hljs-type">int</span>[] numbers = <span class="hljs-built_in">new</span> <span class="hljs-type">int</span>[<span class="hljs-keyword">temp</span>.length];<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt;<span class="hljs-keyword">temp</span>.length ; i++) &#123;<br>            numbers[i] = <span class="hljs-type">Integer</span>.parseInt(<span class="hljs-keyword">temp</span>[i]);<br>        &#125;<br>        Arrays.sort(numbers);<br>        <span class="hljs-type">int</span> m,n;<br>        <span class="hljs-keyword">if</span> (Math.sqrt(N)*(Math.sqrt(N)) &lt; N)&#123;<br>            m = (<span class="hljs-type">int</span>)Math.sqrt(N)+<span class="hljs-number">1</span>;<br>            n = (<span class="hljs-type">int</span>)Math.sqrt(N);<br>        &#125;<span class="hljs-keyword">else</span> &#123;<br>            m = (<span class="hljs-type">int</span>)Math.sqrt(N);<br>            n = (<span class="hljs-type">int</span>)Math.sqrt(N);<br>        &#125;<br>        <span class="hljs-type">int</span>[][] arr = <span class="hljs-built_in">new</span> <span class="hljs-type">int</span>[m][n];<br>        <span class="hljs-type">int</span> <span class="hljs-keyword">index</span> = numbers.length<span class="hljs-number">-1</span>;<br>        <span class="hljs-type">int</span> i=<span class="hljs-number">0</span>,j=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">while</span> (<span class="hljs-keyword">index</span> &gt;= <span class="hljs-number">0</span>) &#123;<br>            // right.<br>            <span class="hljs-keyword">for</span> (; <span class="hljs-keyword">index</span> &gt;= <span class="hljs-number">0</span> &amp;&amp; j &lt; n &amp;&amp; arr[i][j] == <span class="hljs-number">0</span>; j++) &#123;<br>                arr[i][j] = numbers[<span class="hljs-keyword">index</span><span class="hljs-comment">--];</span><br>            &#125;<br>            i++;<br>            j<span class="hljs-comment">--;//最后一个j++溢出了</span><br><br>            // down.<br>            <span class="hljs-keyword">for</span> (; <span class="hljs-keyword">index</span> &gt;= <span class="hljs-number">0</span> &amp;&amp; i &lt; m &amp;&amp; arr[i][j] == <span class="hljs-number">0</span>; i++) &#123;<br>                arr[i][j] = numbers[<span class="hljs-keyword">index</span><span class="hljs-comment">--];</span><br>            &#125;<br><br>            i<span class="hljs-comment">--;</span><br>            j<span class="hljs-comment">--;</span><br><br>            // left.<br>            <span class="hljs-keyword">for</span> (; <span class="hljs-keyword">index</span> &gt;= <span class="hljs-number">0</span> &amp;&amp; j &gt;= <span class="hljs-number">0</span> &amp;&amp; arr[i][j] == <span class="hljs-number">0</span>; j<span class="hljs-comment">--) &#123;</span><br>                arr[i][j] = numbers[<span class="hljs-keyword">index</span><span class="hljs-comment">--];</span><br>            &#125;<br>            i<span class="hljs-comment">--;</span><br>            j++;<br><br>            // up.<br>            <span class="hljs-keyword">for</span> (; <span class="hljs-keyword">index</span> &gt;= <span class="hljs-number">0</span> &amp;&amp; i &gt;= <span class="hljs-number">0</span> &amp;&amp; arr[i][j] == <span class="hljs-number">0</span>; i<span class="hljs-comment">--) &#123;</span><br>                arr[i][j] = numbers[<span class="hljs-keyword">index</span><span class="hljs-comment">--];</span><br>            &#125;<br>            i++;<br>            j++;<br>        &#125;<br><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> p = <span class="hljs-number">0</span>; p &lt; m; p++) &#123;<br>            <span class="hljs-keyword">System</span>.<span class="hljs-keyword">out</span>.print(arr[p][<span class="hljs-number">0</span>]);<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> q = <span class="hljs-number">1</span>; q &lt; n; q++) &#123;<br>                <span class="hljs-keyword">System</span>.<span class="hljs-keyword">out</span>.print(&quot; &quot; + arr[p][q]);<br>            &#125;<br><br>            <span class="hljs-keyword">System</span>.<span class="hljs-keyword">out</span>.println();<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 
   </article>
 
@@ -332,10 +331,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797442"></script>
+<script async src="/js/app.js?v=1653321718764"></script>
 
 
-	<script async src="/js/search.js?v=1637339797442"></script>
+	<script async src="/js/search.js?v=1653321718764"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

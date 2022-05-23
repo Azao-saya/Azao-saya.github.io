@@ -27,12 +27,12 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://images.ptausercontent.com/3b1d9f4a-778b-4942-a9e2-836262f363aa.JPG">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797295">
+    <link rel="stylesheet" href="/css/style.css?v=1653321718576">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797295">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718576">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -57,7 +57,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -190,7 +190,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -222,12 +222,10 @@
 <p>本题要求你写个程序帮助这所学校的老师检查所有学生的物品，以助其成大器。</p>
 <h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
 <pre><code>输入第一行给出两个正整数 N（≤ 1000）和 M（≤ 6），分别是学生人数和需要被查缴的物品种类数。第二行给出 M 个需要被查缴的物品编号，其中编号为 4 位数字。随后 N 行，每行给出一位学生的姓名缩写（由 1-4 个大写英文字母组成）、个人物品数量 K（0 ≤ K ≤ 10）、以及 K 个物品的编号。 
-</code></pre>
-</blockquote>
+</code></pre></blockquote>
 <h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><blockquote>
 <p>   顺次检查每个学生携带的物品，如果有需要被查缴的物品存在，则按以下格式输出该生的信息和其需要被查缴的物品的信息（注意行末不得有多余空格）：</p>
    <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs makefile"><span class="hljs-section">姓名缩写: 物品编号1 物品编号2 ……</span><br></code></pre></td></tr></table></figure>
-
 <p>   最后一行输出存在问题的学生的总人数和被查缴物品的总数。</p>
 </blockquote>
 <h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
@@ -243,7 +241,6 @@
 <hr>
 <hr>
 <figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">import</span> java.io.BufferedReader;<br><span class="hljs-keyword">import</span> java.io.IOException;<br><span class="hljs-keyword">import</span> java.io.InputStreamReader;<br><br><span class="hljs-built_in">public</span> <span class="hljs-keyword">class</span> PAT_B1072 &#123;<br>    <span class="hljs-built_in">public</span> static <span class="hljs-type">void</span> main(String[] args) throws IOException &#123; //StringBuilder会在测试点<span class="hljs-number">1</span>报格式错误，不知道是怎么产生的。全程用String不需要补全<span class="hljs-number">4</span>位数。<br>        BufferedReader br = <span class="hljs-built_in">new</span> BufferedReader(<span class="hljs-built_in">new</span> InputStreamReader(<span class="hljs-keyword">System</span>.<span class="hljs-keyword">in</span>));<br>        String[] <span class="hljs-keyword">temp</span> = br.readLine().split(&quot; &quot;);<br>        <span class="hljs-type">int</span> n = <span class="hljs-type">Integer</span>.parseInt(<span class="hljs-keyword">temp</span>[<span class="hljs-number">0</span>]);<br>        <span class="hljs-type">int</span> m = <span class="hljs-type">Integer</span>.parseInt(<span class="hljs-keyword">temp</span>[<span class="hljs-number">1</span>]);<br>        String[] submit = br.readLine().split(&quot; &quot;);<br>//        StringBuilder sb = <span class="hljs-built_in">new</span> StringBuilder();<br>        <span class="hljs-type">int</span> member=<span class="hljs-number">0</span>,count=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt;n ; i++) &#123;<br>            String[] s = br.readLine().split(&quot; &quot;);<br>            String <span class="hljs-type">name</span> = s[<span class="hljs-number">0</span>];<br>            <span class="hljs-type">int</span> k = <span class="hljs-type">Integer</span>.parseInt(s[<span class="hljs-number">1</span>]);<br>            <span class="hljs-type">boolean</span> flag = <span class="hljs-keyword">true</span>;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">2</span>; j &lt;k+<span class="hljs-number">2</span> ; j++) &#123;<br>                <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> l = <span class="hljs-number">0</span>; l &lt;m ; l++) &#123;<br>                    <span class="hljs-keyword">if</span> (s[j].equals(submit[l]) &amp;&amp; flag==<span class="hljs-keyword">true</span>)&#123;<br>//                        sb.append(<span class="hljs-type">name</span>+&quot;: &quot;+s[j]);<br>                        <span class="hljs-keyword">System</span>.<span class="hljs-keyword">out</span>.print(<span class="hljs-type">name</span>+&quot;: &quot;+s[j]);<br>                        flag = <span class="hljs-keyword">false</span>;<br>                        count++;<br>                    &#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (s[j].equals(submit[l]))&#123;<br>//                        sb.append(&quot; &quot;+s[j]);<br>                        <span class="hljs-keyword">System</span>.<span class="hljs-keyword">out</span>.print(&quot; &quot;+s[j]);<br>                        count++;<br>                    &#125;<br>                &#125;<br>            &#125;<br>            <span class="hljs-keyword">if</span> (!flag)&#123;<br>//                sb.append(&quot;\n&quot;);<br>                <span class="hljs-keyword">System</span>.<span class="hljs-keyword">out</span>.println();<br>                member++;<br>            &#125;<br>        &#125;<br>//        <span class="hljs-keyword">System</span>.<span class="hljs-keyword">out</span>.println(sb.toString().trim());<br>        <span class="hljs-keyword">System</span>.<span class="hljs-keyword">out</span>.println(member+&quot; &quot;+count);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 
   </article>
 
@@ -327,10 +324,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797299"></script>
+<script async src="/js/app.js?v=1653321718580"></script>
 
 
-	<script async src="/js/search.js?v=1637339797299"></script>
+	<script async src="/js/search.js?v=1653321718580"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>

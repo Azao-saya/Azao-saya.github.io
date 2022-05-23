@@ -25,12 +25,12 @@
 <meta property="article:author" content="A_zao">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1637339797769">
+    <link rel="stylesheet" href="/css/style.css?v=1653321719152">
      
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1637339797769">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321719152">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -55,7 +55,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>124</div>
+        <div><span>文章</span>125</div>
         <div><span>标签</span>26</div>
         <div><span>分类</span>5</div>
     </div>
@@ -188,7 +188,7 @@
     
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2021 A_zao
+        &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -234,11 +234,6 @@
 <p>因为缺乏数学思维一时间没读懂，计算其各位数字之和是啥意思<br>想通了就是个位十位百位就是把每一个单个数字相加<br>就算不是因为数字非常庞大10^100,也是应该用字符串接受，不然读取挺麻烦的</p>
 </blockquote>
 <figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-keyword">import</span> java.io.BufferedReader;<br><span class="hljs-keyword">import</span> java.io.IOException;<br><span class="hljs-keyword">import</span> java.io.InputStreamReader;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PAT_B1002</span> &#123;</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">String</span>[] args)</span> throws IOException </span>&#123;<br>        BufferedReader bufferedReader = <span class="hljs-keyword">new</span> <span class="hljs-built_in">BufferedReader</span>(<span class="hljs-keyword">new</span> <span class="hljs-built_in">InputStreamReader</span>(System.in));<br>        <span class="hljs-keyword">String</span> n = bufferedReader.<span class="hljs-built_in">readLine</span>();<br>        <span class="hljs-keyword">int</span> sum =<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n.<span class="hljs-built_in">length</span>() ; i++) &#123;<br>            sum += Integer.<span class="hljs-built_in">valueOf</span>(<span class="hljs-keyword">String</span>.<span class="hljs-built_in">valueOf</span>(n.<span class="hljs-built_in">charAt</span>(i)));<br>        &#125;<br><span class="hljs-comment">//        int num = (sum+&quot;&quot;).length();</span><br>        <span class="hljs-keyword">String</span> as = <span class="hljs-keyword">String</span>.<span class="hljs-built_in">valueOf</span>(sum);<br>        <span class="hljs-keyword">char</span>[] m = as.<span class="hljs-built_in">toCharArray</span>();<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;m.length;i++)&#123;<br>            <span class="hljs-keyword">if</span> (i == m.length<span class="hljs-number">-1</span>)&#123;<br>                System.out.<span class="hljs-built_in">print</span>(<span class="hljs-built_in">getSplitResult</span>(Integer.<span class="hljs-built_in">parseInt</span>(<span class="hljs-keyword">String</span>.<span class="hljs-built_in">valueOf</span>(m[i]))));<br>                <span class="hljs-keyword">break</span>;<br>            &#125;<br>            System.out.<span class="hljs-built_in">print</span>(<span class="hljs-built_in">getSplitResult</span>(Integer.<span class="hljs-built_in">parseInt</span>(<span class="hljs-keyword">String</span>.<span class="hljs-built_in">valueOf</span>(m[i])))+<span class="hljs-string">&quot; &quot;</span>);<br>        &#125;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">String</span> <span class="hljs-title">getSplitResult</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span> </span>&#123;<br>        <span class="hljs-built_in"><span class="hljs-keyword">switch</span></span> (i) &#123;<br>            <span class="hljs-keyword">case</span> <span class="hljs-number">0</span>:<br>                <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;ling&quot;</span>;<br>            <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:<br>                <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;yi&quot;</span>;<br>            <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:<br>                <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;er&quot;</span>;<br>            <span class="hljs-keyword">case</span> <span class="hljs-number">3</span>:<br>                <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;san&quot;</span>;<br>            <span class="hljs-keyword">case</span> <span class="hljs-number">4</span>:<br>                <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;si&quot;</span>;<br>            <span class="hljs-keyword">case</span> <span class="hljs-number">5</span>:<br>                <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;wu&quot;</span>;<br>            <span class="hljs-keyword">case</span> <span class="hljs-number">6</span>:<br>                <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;liu&quot;</span>;<br>            <span class="hljs-keyword">case</span> <span class="hljs-number">7</span>:<br>                <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;qi&quot;</span>;<br>            <span class="hljs-keyword">case</span> <span class="hljs-number">8</span>:<br>                <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;ba&quot;</span>;<br>            <span class="hljs-keyword">case</span> <span class="hljs-number">9</span>:<br>                <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;jiu&quot;</span>;<br>        &#125;<br>        <span class="hljs-keyword">return</span> null;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-
-
-
-
 
   </article>
 
@@ -322,10 +317,10 @@
 
  
 
-<script async src="/js/app.js?v=1637339797775"></script>
+<script async src="/js/app.js?v=1653321719157"></script>
 
 
-	<script async src="/js/search.js?v=1637339797775"></script>
+	<script async src="/js/search.js?v=1653321719157"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
