@@ -29,11 +29,11 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653400022033">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653400945529">
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/css/style.css?v=1653400022033">
+    <link rel="stylesheet" href="/css/style.css?v=1653400945529">
     
     
     
@@ -310,15 +310,13 @@ public class Second_1007 &#123;
   
       <div class="nexmoe-post-footer">
           <section class="nexmoe-comment">
-    <div class="valine"></div>
-<script src='https://cdn.jsdelivr.net/npm/valine'></script>
+    <div id="waline"></div>
+<script src='https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js'></script>
 <script>
-    // 使用方法 https://valine.js.org/quickstart.html
-    new Valine({
-        el: '.valine',
-        appId: 'Hu82lUrzzotgQle16bso7yt4-gzGzoHsz',
-        appKey: '4pR1jAqK6tEro4BOKFNqRtrH'
-    })
+    Waline({
+        el: '#waline',
+        serverURL: 'https://your-domain.vercel.app',
+    });
 </script>
 </section>
       </div>
@@ -370,10 +368,10 @@ public class Second_1007 &#123;
 
  
 
-<script async src="/js/app.js?v=1653400022037"></script>
+<script async src="/js/app.js?v=1653400945536"></script>
 
 
-	<script async src="/js/search.js?v=1653400022037"></script>
+	<script async src="/js/search.js?v=1653400945536"></script>
 
 
 <script>
