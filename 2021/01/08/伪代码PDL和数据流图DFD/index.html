@@ -6,7 +6,6 @@
     
     <title>伪代码PDL、数据流图DFD、模块结构图 - 还在建设的避风港</title>
     <meta charset="UTF-8">
-    <meta name="description" content="null">
     <meta name="keywords" content="null">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     
@@ -29,13 +28,40 @@
 <meta property="article:author" content="A_zao">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QQ图片20210318162748.3j415j0uuui0.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1653321718089">
-     
+    
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+<link rel="stylesheet" href="/lib/justifiedGallery/justifiedGallery.min.css">
+<link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
+
+
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653399892385">
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718089">
+    <link rel="stylesheet" href="/css/style.css?v=1653399892385">
+    
+    
+    
+    
+      <style>
+        .nexmoe-avatar img:hover {
+          -webkit-transform: rotateZ(360deg);
+          -moz-transform: rotateZ(360deg);
+          transform: rotateZ(360deg);
+        }
+      </style>
+	
+
+    <script>
+        document.addEventListener('visibilitychange', function () {
+        if (document.visibilityState == 'hidden') {
+            normal_title = document.title;
+            document.title = '我在这呢≥ ω ≤';
+        } else document.title = normal_title;
+    });
+    </script>
+    
+    
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -196,7 +222,7 @@
         &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
-        
+        <br><a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src="https://i.dawnlab.me/c0268c1e6cfd0863d6ba35be1575941a.png" width="150px"></a><script data-ad-client="ca-pub-2058306854838448" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     </div>
 </div><!-- .nexmoe-drawer -->
     </div>
@@ -207,34 +233,34 @@
   <article>
       
           <div class="nexmoe-post-cover" style="padding-bottom: NaN%;"> 
-              <img data-src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/CX[D@T6{UF)YQJ8GR5XSGP1.2ztd9jthqia0.jpg" data-sizes="auto" alt="伪代码PDL、数据流图DFD、模块结构图" class="lazyload">
+              <img src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/CX[D@T6{UF)YQJ8GR5XSGP1.2ztd9jthqia0.jpg" alt="伪代码PDL、数据流图DFD、模块结构图" loading="lazy">
               <h1>伪代码PDL、数据流图DFD、模块结构图</h1>
           </div>
       
       
       <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2021年01月08日</a>
-    <a><i class="nexmoefont icon-areachart"></i>534 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
 </div>
 
-      
+      <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    
+</div>
 
       <p>题目做到相关内容的，答案信息比较少没看出是个什么思路。查了伪代码是什么，网上的讨论都是十几年前的，也比较懵逼。</p>
 <p>了解之后发现，虽然在编程前老老实实写伪码的很少。但类似效果的更加直观的流程图，PAD图还是经常有使用的。 <span id="more"></span></p>
 <p>下面把题目贴上来:</p>
 <h2 id="画出对应的事务型数据流图-代码前数字只作标号用，不参与程序执行"><a href="#画出对应的事务型数据流图-代码前数字只作标号用，不参与程序执行" class="headerlink" title="画出对应的事务型数据流图(代码前数字只作标号用，不参与程序执行)"></a>画出对应的事务型数据流图(代码前数字只作标号用，不参与程序执行)</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs elixir">START<br><span class="hljs-number">1</span><span class="hljs-symbol">:INPUT</span>(A,B,C,D)<br><span class="hljs-number">2</span><span class="hljs-symbol">:IF</span>(A&gt;0)AND(B&gt;0)<br>THEN<br><span class="hljs-number">3</span><span class="hljs-symbol">:X=A+B</span><br>ELSE<br><span class="hljs-number">4</span><span class="hljs-symbol">:X=A-B</span><br><span class="hljs-number">5</span><span class="hljs-symbol">:END</span><br><span class="hljs-number">6</span><span class="hljs-symbol">:IF</span>(C&gt;A)OR(D&lt;B)<br><span class="hljs-number">7</span><span class="hljs-symbol">:Y=C-D</span><br>ELSE<br><span class="hljs-number">8</span><span class="hljs-symbol">:Y=C+D</span><br><span class="hljs-number">9</span><span class="hljs-symbol">:END</span><br><span class="hljs-number">10</span><span class="hljs-symbol">:PPRINT</span>(X,Y)<br>STOP<br></code></pre></td></tr></table></figure>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QQ图片20210318162748.3j415j0uuui0.png" alt="" class="lazyload"></p>
+<p><img data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QQ图片20210318162748.3j415j0uuui0.png" alt="" data-caption="" loading="lazy"></p>
 <p>用了亿图图示，连接线有点乱，总的来说就是一个自上而下的关系。</p>
 <p>3和4，6和7是平级的关系选择一个进入下一步</p>
 <p>因为是事务型数据流图，没有加别的信息，其实把IF、ELSE那些都写在旁边就一目了然了。</p>
 <hr>
-<h2 id="变换形数据流图-amp-amp-模块结构图"><a href="#变换形数据流图-amp-amp-模块结构图" class="headerlink" title="变换形数据流图&amp;&amp;模块结构图"></a>变换形数据流图&amp;&amp;模块结构图</h2><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QQ图片20210318203620.2gczs9kd77fo.jpg" alt="" class="lazyload"></p>
+<h2 id="变换形数据流图-amp-amp-模块结构图"><a href="#变换形数据流图-amp-amp-模块结构图" class="headerlink" title="变换形数据流图&amp;&amp;模块结构图"></a>变换形数据流图&amp;&amp;模块结构图</h2><p><img data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QQ图片20210318203620.2gczs9kd77fo.jpg" alt="" data-caption="" loading="lazy"></p>
 <p>上述图片为变换形数据流图，虚线是输入或输出与变换之间的界面</p>
 <p>左侧第一条为输入与变换的界面，第二条为变换与输出的界面。</p>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/asdas.4it6mr9vk2a0.png" alt="" class="lazyload"></p>
+<p><img data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/asdas.4it6mr9vk2a0.png" alt="" data-caption="" loading="lazy"></p>
 <p>其实直线表示调用(简单起见，也可以用带箭头的线)，应该另起一条尾部空心圆的箭头线来传递数据信息(尾部为实心圆为控制信息)，图中无控制信息。</p>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QQ图片20210318230239.2twaixpc88s0.jpg" alt="" class="lazyload"></p>
+<p><img data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QQ图片20210318230239.2twaixpc88s0.jpg" alt="" data-caption="" loading="lazy"></p>
 <p>原谅字丑，这应该是完整的。感觉软件整不明白还是手写了。</p>
 <p>题目中写了用圆十字表示或者，但没打印出来我查了别的资料是在g1和g2上有这个符号。</p>
 <p>A1调用A2和A3是通过一个多出来的菱形连接的，表示条件调用。应该也可以多调用一个判断模块来完成条件调用。</p>
@@ -316,19 +342,21 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+<script src="/lib/mdui_043tiny/mdui.js"></script>
+<script src="/lib/jquery.min.js"></script>
+<script src="/lib/justifiedGallery/jquery.justifiedGallery.min.js"></script>
+<script src="/lib/fancybox/fancybox.umd.js"></script>
+
 
  
 
-<script async src="/js/app.js?v=1653321718095"></script>
+<script async src="/js/app.js?v=1653399892391"></script>
 
 
-	<script async src="/js/search.js?v=1653321718095"></script>
+	<script async src="/js/search.js?v=1653399892391"></script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
 	$(".justified-gallery").justifiedGallery({
 		rowHeight: 160,

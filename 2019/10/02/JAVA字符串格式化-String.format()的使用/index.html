@@ -6,7 +6,6 @@
     
     <title>JAVA字符串格式化-String.format()的使用 - 还在建设的避风港</title>
     <meta charset="UTF-8">
-    <meta name="description" content="null">
     <meta name="keywords" content="null">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     
@@ -24,13 +23,40 @@
 <meta property="article:modified_time" content="2021-01-16T09:33:24.398Z">
 <meta property="article:author" content="A_zao">
 <meta name="twitter:card" content="summary">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1653321719172">
-     
+    
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+<link rel="stylesheet" href="/lib/justifiedGallery/justifiedGallery.min.css">
+<link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
+
+
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653399893493">
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321719172">
+    <link rel="stylesheet" href="/css/style.css?v=1653399893493">
+    
+    
+    
+    
+      <style>
+        .nexmoe-avatar img:hover {
+          -webkit-transform: rotateZ(360deg);
+          -moz-transform: rotateZ(360deg);
+          transform: rotateZ(360deg);
+        }
+      </style>
+	
+
+    <script>
+        document.addEventListener('visibilitychange', function () {
+        if (document.visibilityState == 'hidden') {
+            normal_title = document.title;
+            document.title = '我在这呢≥ ω ≤';
+        } else document.title = normal_title;
+    });
+    </script>
+    
+    
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -191,7 +217,7 @@
         &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
-        
+        <br><a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src="https://i.dawnlab.me/c0268c1e6cfd0863d6ba35be1575941a.png" width="150px"></a><script data-ad-client="ca-pub-2058306854838448" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     </div>
 </div><!-- .nexmoe-drawer -->
     </div>
@@ -202,18 +228,18 @@
   <article>
       
           <div class="nexmoe-post-cover" style="padding-bottom: 66.66666666666666%;"> 
-              <img data-src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QY5QSK.512q5xd2mt00.jpg" data-sizes="auto" alt="JAVA字符串格式化-String.format()的使用" class="lazyload">
+              <img data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QY5QSK.512q5xd2mt00.jpg" alt="JAVA字符串格式化-String.format()的使用" loading="lazy">
               <h1>JAVA字符串格式化-String.format()的使用</h1>
           </div>
       
       
       <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2019年10月02日</a>
-    <a><i class="nexmoefont icon-areachart"></i>1.1k 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 5 分钟</a>
 </div>
 
-      
+      <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    
+</div>
 
       <h1 id="常规类型的格式化"><a href="#常规类型的格式化" class="headerlink" title="常规类型的格式化"></a>常规类型的格式化</h1><blockquote>
 <p>String类的format()方法用于创建格式化的字符串以及连接多个字符串对象。<span id="more"></span> 熟悉C语言的同学应该记得C语言的sprintf()方法，两者有类似之处。format()方法有两种重载形式。<br/><br>format(String format, Object… args) 新字符串使用本地语言环境，制定字符串格式和参数生成格式化的新字符串。<br/><br>format(Locale locale, String format, Object… args) 使用指定的语言环境，制定字符串格式和参数生成格式化的字符串。<br/><br>显示不同转换符实现不同数据类型到字符串的转换，如图所示<br/></p>
@@ -484,19 +510,21 @@ Hi,王南:王力.王张
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+<script src="/lib/mdui_043tiny/mdui.js"></script>
+<script src="/lib/jquery.min.js"></script>
+<script src="/lib/justifiedGallery/jquery.justifiedGallery.min.js"></script>
+<script src="/lib/fancybox/fancybox.umd.js"></script>
+
 
  
 
-<script async src="/js/app.js?v=1653321719179"></script>
+<script async src="/js/app.js?v=1653399893500"></script>
 
 
-	<script async src="/js/search.js?v=1653321719179"></script>
+	<script async src="/js/search.js?v=1653399893500"></script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
 	$(".justified-gallery").justifiedGallery({
 		rowHeight: 160,

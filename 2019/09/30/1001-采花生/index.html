@@ -6,7 +6,6 @@
     
     <title>1001-采花生 - 还在建设的避风港</title>
     <meta charset="UTF-8">
-    <meta name="description" content="null">
     <meta name="keywords" content="null">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     
@@ -25,13 +24,40 @@
 <meta property="article:author" content="A_zao">
 <meta property="article:tag" content="HashMap">
 <meta name="twitter:card" content="summary">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1653321719242">
-     
+    
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+<link rel="stylesheet" href="/lib/justifiedGallery/justifiedGallery.min.css">
+<link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
+
+
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653399893576">
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321719242">
+    <link rel="stylesheet" href="/css/style.css?v=1653399893576">
+    
+    
+    
+    
+      <style>
+        .nexmoe-avatar img:hover {
+          -webkit-transform: rotateZ(360deg);
+          -moz-transform: rotateZ(360deg);
+          transform: rotateZ(360deg);
+        }
+      </style>
+	
+
+    <script>
+        document.addEventListener('visibilitychange', function () {
+        if (document.visibilityState == 'hidden') {
+            normal_title = document.title;
+            document.title = '我在这呢≥ ω ≤';
+        } else document.title = normal_title;
+    });
+    </script>
+    
+    
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -192,7 +218,7 @@
         &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
-        
+        <br><a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src="https://i.dawnlab.me/c0268c1e6cfd0863d6ba35be1575941a.png" width="150px"></a><script data-ad-client="ca-pub-2058306854838448" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     </div>
 </div><!-- .nexmoe-drawer -->
     </div>
@@ -203,18 +229,18 @@
   <article>
       
           <div class="nexmoe-post-cover" style="padding-bottom: 66.66666666666666%;"> 
-              <img data-src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QY5QSK.512q5xd2mt00.jpg" data-sizes="auto" alt="1001-采花生" class="lazyload">
+              <img data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/QY5QSK.512q5xd2mt00.jpg" alt="1001-采花生" loading="lazy">
               <h1>1001-采花生</h1>
           </div>
       
       
       <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2019年09月30日</a>
-    <a><i class="nexmoefont icon-areachart"></i>1.2k 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 5 分钟</a>
 </div>
 
-      
+      <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    
+</div>
 
       <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <span id="more"></span></h2><p>鲁宾逊先生有一只宠物猴，名叫多多。这天，他们两个正沿着乡间小路散步，突然发现路边的告示牌上贴着一张小小的纸条：“欢迎免费品尝我种的花生！——熊字”。<br/><br>鲁宾逊先生和多多都很开心，因为花生正是他们的最爱。在告示牌背后，路边真的有一块花生田，花生植株整齐地排列成矩形网格。有经验的多多一眼就能看出，每棵花生植株下的花生有多少。为了训练多多的算术，鲁宾逊先生说:“你先找出花生最多的植株，去采摘它的花生;然后再找出剩下的植株里花生最多的，去采摘它的花生;依此类推，不过你一定要在我限定的时间内回到路边。”<br/><br>我们假定多多在每个单位时间内,可以做下列四件事情中的一件：<br/></p>
 <ol>
@@ -397,19 +423,21 @@ class Node &#123;
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+<script src="/lib/mdui_043tiny/mdui.js"></script>
+<script src="/lib/jquery.min.js"></script>
+<script src="/lib/justifiedGallery/jquery.justifiedGallery.min.js"></script>
+<script src="/lib/fancybox/fancybox.umd.js"></script>
+
 
  
 
-<script async src="/js/app.js?v=1653321719248"></script>
+<script async src="/js/app.js?v=1653399893585"></script>
 
 
-	<script async src="/js/search.js?v=1653321719248"></script>
+	<script async src="/js/search.js?v=1653399893585"></script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
 	$(".justified-gallery").justifiedGallery({
 		rowHeight: 160,

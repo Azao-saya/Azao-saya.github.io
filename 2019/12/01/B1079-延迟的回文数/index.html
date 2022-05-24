@@ -6,7 +6,6 @@
     
     <title>B1079-延迟的回文数 - 还在建设的避风港</title>
     <meta charset="UTF-8">
-    <meta name="description" content="null">
     <meta name="keywords" content="null">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     
@@ -26,13 +25,40 @@
 <meta property="article:tag" content="字符串操作">
 <meta property="article:tag" content="reverse">
 <meta name="twitter:card" content="summary">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1653321718520">
-     
+    
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+<link rel="stylesheet" href="/lib/justifiedGallery/justifiedGallery.min.css">
+<link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
+
+
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653399892822">
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718520">
+    <link rel="stylesheet" href="/css/style.css?v=1653399892822">
+    
+    
+    
+    
+      <style>
+        .nexmoe-avatar img:hover {
+          -webkit-transform: rotateZ(360deg);
+          -moz-transform: rotateZ(360deg);
+          transform: rotateZ(360deg);
+        }
+      </style>
+	
+
+    <script>
+        document.addEventListener('visibilitychange', function () {
+        if (document.visibilityState == 'hidden') {
+            normal_title = document.title;
+            document.title = '我在这呢≥ ω ≤';
+        } else document.title = normal_title;
+    });
+    </script>
+    
+    
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -193,7 +219,7 @@
         &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
-        
+        <br><a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src="https://i.dawnlab.me/c0268c1e6cfd0863d6ba35be1575941a.png" width="150px"></a><script data-ad-client="ca-pub-2058306854838448" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     </div>
 </div><!-- .nexmoe-drawer -->
     </div>
@@ -204,18 +230,18 @@
   <article>
       
           <div class="nexmoe-post-cover" style="padding-bottom: NaN%;"> 
-              <img data-src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/id=55325876(loundraw).78z228rx71o0.jpg" data-sizes="auto" alt="B1079-延迟的回文数" class="lazyload">
+              <img src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/id=55325876(loundraw).78z228rx71o0.jpg" alt="B1079-延迟的回文数" loading="lazy">
               <h1>B1079-延迟的回文数</h1>
           </div>
       
       
       <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2019年12月01日</a>
-    <a><i class="nexmoefont icon-areachart"></i>713 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
 </div>
 
-      
+      <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    
+</div>
 
       <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <span id="more"></span></h2><p>给定一个 <em>k</em>+1 位的正整数 <em>N</em>，写成 <em>a**k</em>⋯<em>a</em>1<em>a</em>0 的形式，其中对所有 <em>i</em> 有 0≤<em>a**i</em><10 且 *a**k*>0。<em>N</em> 被称为一个<strong>回文数</strong>，当且仅当对所有 <em>i</em> 有 <em>a**i</em>=<em>a**k</em>−<em>i</em>。零也被定义为一个回文数。</p>
 <p>非回文数也可以通过一系列操作变出回文数。首先将该数字逆转，再将逆转数与该数相加，如果和还不是一个回文数，就重复这个逆转再相加的操作，直到一个回文数出现。如果一个非回文数可以变出回文数，就称这个数为<strong>延迟的回文数</strong>。（定义翻译自 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Palindromic_number">https://en.wikipedia.org/wiki/Palindromic_number</a> ）</p>
@@ -328,19 +354,21 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+<script src="/lib/mdui_043tiny/mdui.js"></script>
+<script src="/lib/jquery.min.js"></script>
+<script src="/lib/justifiedGallery/jquery.justifiedGallery.min.js"></script>
+<script src="/lib/fancybox/fancybox.umd.js"></script>
+
 
  
 
-<script async src="/js/app.js?v=1653321718525"></script>
+<script async src="/js/app.js?v=1653399892826"></script>
 
 
-	<script async src="/js/search.js?v=1653321718525"></script>
+	<script async src="/js/search.js?v=1653399892826"></script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
 	$(".justified-gallery").justifiedGallery({
 		rowHeight: 160,

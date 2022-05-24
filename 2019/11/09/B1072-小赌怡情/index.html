@@ -6,7 +6,6 @@
     
     <title>B1072-开学寄语 - 还在建设的避风港</title>
     <meta charset="UTF-8">
-    <meta name="description" content="null">
     <meta name="keywords" content="null">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     
@@ -26,13 +25,40 @@
 <meta property="article:author" content="A_zao">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://images.ptausercontent.com/3b1d9f4a-778b-4942-a9e2-836262f363aa.JPG">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1653321718576">
-     
+    
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+<link rel="stylesheet" href="/lib/justifiedGallery/justifiedGallery.min.css">
+<link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
+
+
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653399892859">
     
         <link rel="stylesheet" href="//at.alicdn.com/t/font_1440167_9egge2d2pgp.css">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1653321718576">
+    <link rel="stylesheet" href="/css/style.css?v=1653399892859">
+    
+    
+    
+    
+      <style>
+        .nexmoe-avatar img:hover {
+          -webkit-transform: rotateZ(360deg);
+          -moz-transform: rotateZ(360deg);
+          transform: rotateZ(360deg);
+        }
+      </style>
+	
+
+    <script>
+        document.addEventListener('visibilitychange', function () {
+        if (document.visibilityState == 'hidden') {
+            normal_title = document.title;
+            document.title = '我在这呢≥ ω ≤';
+        } else document.title = normal_title;
+    });
+    </script>
+    
+    
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -193,7 +219,7 @@
         &copy; 2022 A_zao
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
-        
+        <br><a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src="https://i.dawnlab.me/c0268c1e6cfd0863d6ba35be1575941a.png" width="150px"></a><script data-ad-client="ca-pub-2058306854838448" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     </div>
 </div><!-- .nexmoe-drawer -->
     </div>
@@ -204,21 +230,21 @@
   <article>
       
           <div class="nexmoe-post-cover" style="padding-bottom: NaN%;"> 
-              <img data-src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/id=55325876(loundraw).78z228rx71o0.jpg" data-sizes="auto" alt="B1072-开学寄语" class="lazyload">
+              <img src="https://cdn.jsdelivr.net/gh/Azao-saya/image-blog@master/20210102/id=55325876(loundraw).78z228rx71o0.jpg" alt="B1072-开学寄语" loading="lazy">
               <h1>B1072-开学寄语</h1>
           </div>
       
       
       <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2019年11月09日</a>
-    <a><i class="nexmoefont icon-areachart"></i>670 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
 </div>
 
-      
+      <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    
+</div>
 
       <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述 "></a>题目描述 <span id="more"></span></h2><p>下图是上海某校的新学期开学寄语：天将降大任于斯人也，必先删其微博，卸其 QQ，封其电脑，夺其手机，收其 ipad，断其 wifi，使其百无聊赖，然后，净面、理发、整衣，然后思过、读书、锻炼、明智、开悟、精进。而后必成大器也！</p>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://images.ptausercontent.com/3b1d9f4a-778b-4942-a9e2-836262f363aa.JPG" alt="jiyu.JPG" class="lazyload"></p>
+<p><img data-fancybox="gallery" src="https://images.ptausercontent.com/3b1d9f4a-778b-4942-a9e2-836262f363aa.JPG" alt="jiyu.JPG" data-caption="jiyu.JPG" loading="lazy"></p>
 <p>本题要求你写个程序帮助这所学校的老师检查所有学生的物品，以助其成大器。</p>
 <h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><blockquote>
 <pre><code>输入第一行给出两个正整数 N（≤ 1000）和 M（≤ 6），分别是学生人数和需要被查缴的物品种类数。第二行给出 M 个需要被查缴的物品编号，其中编号为 4 位数字。随后 N 行，每行给出一位学生的姓名缩写（由 1-4 个大写英文字母组成）、个人物品数量 K（0 ≤ K ≤ 10）、以及 K 个物品的编号。 
@@ -318,19 +344,21 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+<script src="/lib/mdui_043tiny/mdui.js"></script>
+<script src="/lib/jquery.min.js"></script>
+<script src="/lib/justifiedGallery/jquery.justifiedGallery.min.js"></script>
+<script src="/lib/fancybox/fancybox.umd.js"></script>
+
 
  
 
-<script async src="/js/app.js?v=1653321718580"></script>
+<script async src="/js/app.js?v=1653399892867"></script>
 
 
-	<script async src="/js/search.js?v=1653321718580"></script>
+	<script async src="/js/search.js?v=1653399892867"></script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
 	$(".justified-gallery").justifiedGallery({
 		rowHeight: 160,
