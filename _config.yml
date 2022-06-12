@@ -103,7 +103,7 @@ theme: hexo-theme-nexmoe-3.2.13 #hexo-theme-nexmoe-3.2.13 #hexo-theme-nexmoe-3.1
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git      
-  repo: https://github.com/Azao-saya/Azao-saya.github.io
+  repo: https://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@github.com/Azao-saya/Azao-saya.github.io
   #git@github.com:Azao-saya/Azao-saya.github.io
    # gitee: https://gitee.com/soulflower/soulflower.git
    # coding: https://e.coding.net/shelterq/blog/blog.git
